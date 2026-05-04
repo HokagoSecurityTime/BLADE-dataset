@@ -7,12 +7,12 @@ assignees: ''
 
 ---
 
-**Description**
+### Description
 - 작업할 내용 간단하게 작성
 
-**TO DO**
+### TO DO
 - [ ]
 - [ ]
 
-**Others**
+### Others
 - 기타 참고 자료나 비고 작성
