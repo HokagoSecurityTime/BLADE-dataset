@@ -1,3 +1,16 @@
+.venv/
+venv/
+env/
+
+.env
+
+__pycache__/
+*.pyc
+
+chroma_db/
+.vscode/
+.DS_Store
+Thumbs.db
 # ChromaDB — regenerate with scripts/load_to_chromadb.py
 dataset/chroma_db/
 
