@@ -1,0 +1,5 @@
+requests
+chromadb
+python-dotenv
+tqdm
+sentence-transformers
