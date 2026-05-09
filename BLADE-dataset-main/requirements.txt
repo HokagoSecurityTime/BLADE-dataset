@@ -1,0 +1,18 @@
+# BLADE — 통합 의존성
+
+# === Core ===
+requests>=2.31
+chromadb>=0.4.22
+python-dotenv>=1.0
+pyyaml>=6.0
+
+# === LLM / 임베딩 ===
+# Ollama HTTP API (nomic-embed-text 768d, llama3.2:3b enrichment, qwen2.5:7b 정책 생성)
+# 데몬 따로 실행: `ollama serve`
+# 모델 설치: `ollama pull nomic-embed-text llama3.2:3b qwen2.5:7b`
+ollama>=0.1.7
+
+# === 보조 fetcher (옵션) ===
+# HackerOne 스크래퍼만 필요. NVD/CISA/CAPEC/WSTG 만 쓸 거면 두 패키지 생략 가능.
+beautifulsoup4>=4.12
+selenium>=4.15
