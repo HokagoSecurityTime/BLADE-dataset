@@ -1,0 +1,150 @@
+{
+  "data_version": "data-v3a/data-v3b",
+  "data_v3_sources": {
+    "train_v3a.jsonl": "1f5d1055ac3d8d407e555c774183acf4c52ceb03ea508391ee5d508484446e66",
+    "train_v3b.jsonl": "723e3b3a784e624033379dce5e46b243c2c3444c34db7efb5032ea2436a696dd",
+    "val_v3.jsonl": "69536f8b10e99538673a1beaf96411aba2b18f341e04f9429f717d9d84cbc109",
+    "test_v30.jsonl": "9bd47216575afc602b03afa20e617308dd9a97476c94e67a117eb17009afd5e2",
+    "policy_label_v3.0.1.md": "d0913c27b5de185e7dd5734c111cb731f45e28ebca81fed787ff3914d02833ef"
+  },
+  "generated": {
+    "train_sft_v3a.jsonl": "ff931f5e944e23ef7d9249465d174ab809f32c9a77d79dc93638b4353389e9d1",
+    "train_sft_v3b.jsonl": "85e634a170c83a9bbe209514fa268dc35dc16b9842dbb58dc8aaa0dfac5f92ab",
+    "val_sft_v3.jsonl": "4de0188e9e6fd73e8f4cefb7e931c9f09e66efb4d1a8e0e86b2843555515ab06",
+    "test_v30_inputs.jsonl": "d65f25b966f61131c0ba5a2341798e56dcd2d3b8da73e9f5d03eb3cd6b0f119a",
+    "policy_label_v3.0.1.md": "d0913c27b5de185e7dd5734c111cb731f45e28ebca81fed787ff3914d02833ef"
+  },
+  "counts": {
+    "train_v3a": {
+      "records": 929,
+      "by_condition": {
+        "oas": 411,
+        "oas_code": 518
+      },
+      "by_source": {
+        "apisguru": 411,
+        "gitea": 239,
+        "opensource_v3": 108,
+        "synthetic": 171
+      },
+      "manual": 222
+    },
+    "train_v3b": {
+      "records": 786,
+      "by_condition": {
+        "oas": 338,
+        "oas_code": 448
+      },
+      "by_source": {
+        "apisguru": 338,
+        "gitea": 197,
+        "opensource_v3": 108,
+        "synthetic": 143
+      },
+      "manual": 79
+    },
+    "val_v3": {
+      "records": 126,
+      "by_condition": {
+        "oas": 52,
+        "oas_code": 74
+      },
+      "by_source": {
+        "apisguru": 52,
+        "gitea": 28,
+        "opensource_v3": 28,
+        "synthetic": 18
+      },
+      "manual": 33
+    },
+    "test": 269,
+    "test_with_code": 265
+  },
+  "excluded_over_4096": [
+    {
+      "id": "v3s1b-01a377f65a6b-orig",
+      "tokens": 4673,
+      "split": "train_v3a"
+    },
+    {
+      "id": "v3s1b-01a377f65a6b-orig",
+      "tokens": 4673,
+      "split": "train_v3b"
+    }
+  ],
+  "v2_rows_sft_changed": 152,
+  "v2_rows_rewritten_but_sft_unchanged": 38,
+  "rationale_sources": {
+    "train_v3a": {
+      "human_review_v2": 5,
+      "intended_labels": 146,
+      "model_v301": 542,
+      "rule_authonly_intended_policy": 19,
+      "rule_gitea_relabel_template": 80,
+      "rule_gitea_relabel_template_hold_stripped": 1,
+      "rule_security_declared_public": 7,
+      "rule_subscription_relabel": 6,
+      "rule_v3_form_request_owner": 3,
+      "rule_v3_owner_compare": 21,
+      "rule_v3_owner_filter": 3,
+      "rule_v3_owner_filter_unless_admin": 3,
+      "rule_v3_owner_or_instance_admin": 1,
+      "rule_v3_owner_or_parent_owner": 2,
+      "rule_v3_role_annotation": 14,
+      "rule_v3_self_only": 8,
+      "rule_v3_self_or_admin": 6,
+      "rule_v3_variant_intended_policy": 47,
+      "rule_visibility_dependent": 15
+    },
+    "train_v3b": {
+      "human_review_v2": 5,
+      "intended_labels": 121,
+      "model_v301": 436,
+      "rule_authonly_intended_policy": 19,
+      "rule_gitea_relabel_template": 80,
+      "rule_gitea_relabel_template_hold_stripped": 1,
+      "rule_security_declared_public": 4,
+      "rule_subscription_relabel": 3,
+      "rule_v3_form_request_owner": 3,
+      "rule_v3_owner_compare": 21,
+      "rule_v3_owner_filter": 3,
+      "rule_v3_owner_filter_unless_admin": 3,
+      "rule_v3_owner_or_instance_admin": 1,
+      "rule_v3_owner_or_parent_owner": 2,
+      "rule_v3_role_annotation": 14,
+      "rule_v3_self_only": 8,
+      "rule_v3_self_or_admin": 6,
+      "rule_v3_variant_intended_policy": 47,
+      "rule_visibility_dependent": 9
+    },
+    "val_v3": {
+      "intended_labels": 18,
+      "model_v301": 67,
+      "rule_gitea_relabel_template": 5,
+      "rule_v3_owner_compare": 6,
+      "rule_v3_owner_filter": 2,
+      "rule_v3_owner_or_superuser": 3,
+      "rule_v3_self_or_superuser": 1,
+      "rule_v3_superuser_dependency": 6,
+      "rule_v3_variant_intended_policy": 10,
+      "rule_visibility_dependent": 8
+    }
+  },
+  "token_stats": {
+    "train_v3a": {
+      "max": 4050,
+      "median": 3104
+    },
+    "train_v3b": {
+      "max": 4050,
+      "median": 3118
+    },
+    "val_v3": {
+      "max": 4015,
+      "median": 3114
+    }
+  },
+  "format": "system=prompt v3.0.1; user=\"Return JSON.\\n\"+payload JSON; assistant=label JSON one line; val carries condition",
+  "prompt_version": "policy-label-v3.0.1",
+  "max_seq_len": 4096
+}

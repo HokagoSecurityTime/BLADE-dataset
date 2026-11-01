@@ -1,0 +1,40 @@
+390|manual_review_required|0.55|OAuth audience membership creation is self-scoped but audience-to-caller authorization is unspecified.
+393|manual_review_required|0.55|Conversation search has read permission without a verified owner or group-access rule.
+396|manual_review_required|0.55|Station opening times do not affirm unrestricted access; security is unknown.
+399|public|0.76|Anonymous security and page-content retrieval support unrestricted reading without conflicting ownership signals.
+402|role_required|0.76|Delete-user operation explicitly carries Admin tag and admin route, indicating administrator access.
+405|role_required|0.76|Forcing user logout explicitly carries Admin tag and admin route without a self-service alternative.
+408|manual_review_required|0.55|Category read_restricted and group_permissions prevent assuming unrestricted reading.
+411|manual_review_required|0.55|Config inspection exposes identifiers/data without a caller-role or owner requirement.
+414|manual_review_required|0.55|Connecting containers and networks supplies no authorized actor or required role.
+417|manual_review_required|0.55|Deleted-domain feed accepts api_key but gives no affirmative unrestricted-access rule.
+420|manual_review_required|0.55|API-authenticated template update lacks owner or tenant evidence.
+423|manual_review_required|0.55|Group creator and groupRoles are subject attributes without a defined caller requirement.
+426|manual_review_required|0.55|room_manager is a node-list filter, not an evidenced caller-role requirement.
+429|manual_review_required|0.55|Upload status includes inherited permissions and nested creator data, preventing simple owner-only inference.
+432|manual_review_required|0.55|Care-team patient/user relations and clinical scopes leave the authorization subject unresolved.
+435|manual_review_required|0.55|Communication log author, doctor and patient identify competing subjects without an access rule.
+438|manual_review_required|0.55|Marketplace policy listing scopes do not establish a verified caller-account relationship.
+441|manual_review_required|0.55|Station variable update returns generic result fields without station-owner evidence.
+444|manual_review_required|0.55|Voice editing fields do not specify ownership or authentication requirements.
+447|manual_review_required|0.55|Log-message user represents logged context rather than necessarily its authorized reader.
+450|manual_review_required|0.55|Product payment/access-token metadata gives no public or concrete subscription rule.
+453|manual_review_required|0.55|Pad diff has API authentication and padID but no owner authorization binding.
+456|manual_review_required|0.55|appProvider describes a package supplier, not a verified tenant relationship.
+459|manual_review_required|0.55|Authenticated audit-category options lack an evidenced role, tier or unrestricted policy.
+462|manual_review_required|0.55|Private article account_id and group_id suggest ownership but caller/account semantics remain unverified.
+465|manual_review_required|0.55|Private-article taxonomy fields cannot resolve article-account ownership.
+468|manual_review_required|0.55|API-key user_id identifies its subject without proving caller authority over that secret.
+471|manual_review_required|0.55|Automation user_id, user_ids and group_ids leave shared-versus-single ownership ambiguous.
+474|manual_review_required|0.55|Direct-debit payee/originator fields do not bind the bearer caller to the object.
+477|manual_review_required|0.55|Collection collaborators, ACLs and sharingKey cannot be reduced to an unverified owner rule.
+480|manual_review_required|0.55|Score collaborator ACLs and organization objects lack a concrete caller-access condition.
+483|manual_review_required|0.55|Score revision user attribution and sharing-key access do not prove owner-only reading.
+486|public|0.74|Favorites-context retrieval is explicitly tagged Public; photo owner fields express attribution.
+489|public|0.72|Topic reading is explicitly tagged Public; author/edit metadata does not impose owner-only reading.
+492|public|0.74|Group-pool neighboring photos are explicitly tagged Public without a conflicting read restriction.
+495|public|0.74|Photostream-context reading is explicitly tagged Public; owner metadata alone is not a restriction.
+498|manual_review_required|0.55|Authenticated folder deletion lacks a verified folder-owner relationship.
+501|manual_review_required|0.55|oms scope and Partners tag do not specify an application role or order owner.
+504|manual_review_required|0.55|Admin route suggests privilege but API-key game context does not specify a concrete administrator role.
+507|manual_review_required|0.55|Business-group collaborator scope is not a membership tier and group authorization is unverified.

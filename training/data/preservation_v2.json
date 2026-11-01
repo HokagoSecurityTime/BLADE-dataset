@@ -1,0 +1,9 @@
+{
+  "datasets\\blade\\raw\\apisguru_candidates.jsonl": "0bdf3b5b6a82063e4aba32e53cd149d263c2bcf070dcb5243a4a769debba1bcb",
+  "datasets\\blade\\processed\\apisguru_filtered.jsonl": "ce7ec1526be311ec8e61f93cc4b90c2e61bc4df46f6362f3593292f354f9d996",
+  "datasets\\blade\\processed\\apisguru_agent_labeled.jsonl": "008bd84fe2e569580517598b5e5c6cc9a365f8d8380a31e0461285ef7883e647",
+  "training\\data\\review_sample.md": "8f9e1213cd1963338b0016e4b554d17cb6b1a58c1a12bc8508af90165e541a2a",
+  "training\\data\\BC_REPORT.md": "4304ef2165e3f3c2ea1552bc6931c9259a35e013135341e37b253fa191898751",
+  "prompts\\v2.0.md": "c3c774e3907207a3b4e10d6800078ce9c5c604b39cb7b5be884e1c8d8ba7d3e4",
+  "prompts\\v2.1.md": "0bb2849a3d4dea025c27cccb2ccf9e7039af585d89af6504a0ce502d8236d2a4"
+}

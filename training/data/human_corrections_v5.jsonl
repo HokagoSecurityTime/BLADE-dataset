@@ -1,0 +1,61 @@
+{"id": "apisguru:amazonaws.com:get:/workspaces/{workspaceId}/rulegroupsnamespaces", "original_label": "public", "corrected_label": "tenant_match", "reason": "AWS 계정 소유 workspace 리소스, 공개 카탈로그 아님"}
+{"id": "apisguru:figshare.com:get:/account/articles/{article_id}/authors", "original_label": "public", "corrected_label": "owner_match", "reason": "/account/ 경로 = 호출자 본인 계정의 article"}
+{"id": "apisguru:slack.com:get:/admin.conversations.getConversationPrefs", "original_label": "public", "corrected_label": "role_required", "reason": "admin.* API, 관리자 전용"}
+{"id": "apisguru:visma.net:get:/api/v3/SalesOrders/{type}/{orderId}/discounts", "original_label": "public", "corrected_label": "tenant_match", "reason": "ERP 회사 단위 판매주문 데이터, 공개 아님"}
+{"id": "apisguru:gerermesaffaires.com:get:/hub/business-groups/{Id}/menus", "original_label": "public", "corrected_label": "tenant_match", "reason": "business group(조직) 단위 Hub 데이터"}
+{"id": "apisguru:twinehealth.com:get:/oauth/token/{id}/groups", "original_label": "public", "corrected_label": "manual_review_required", "reason": "토큰 소유자 본인 조회인지 그룹 권한인지 description만으로 불명확"}
+{"id": "apisguru:velopayments.com:get:/v1/webhooks", "original_label": "public", "corrected_label": "tenant_match", "reason": "payor(조직) 단위 webhook 설정"}
+{"id": "apisguru:shutterstock.com:get:/v2/audio/collections/{id}/items", "original_label": "public", "corrected_label": "owner_match", "reason": "사용자 본인 collection 항목"}
+{"id": "apisguru:aiception.com:get:/face/{taskId}", "original_label": "public", "corrected_label": "owner_match", "reason": "사용자가 생성한 task 결과 조회"}
+{"id": "apisguru:aiception.com:get:/adult_content/{taskId}", "original_label": "public", "corrected_label": "owner_match", "reason": "사용자가 생성한 task 결과 조회"}
+{"id": "apisguru:amazonaws.com:get:/workspaces/{workspaceId}/alertmanager/definition", "original_label": "public", "corrected_label": "tenant_match", "reason": "AWS 계정 소유 workspace 리소스"}
+{"id": "apisguru:codat.io:get:/data/companies/{companyId}/assess/dataTypes/{dataType}/dataIntegrity/status", "original_label": "public", "corrected_label": "tenant_match", "reason": "companyId 단위 데이터, 공개 아님"}
+{"id": "apisguru:openbankingproject.ch:get:/v1/accounts/{account-id}/transactions/{transactionId}", "original_label": "public", "corrected_label": "owner_match", "reason": "PSU 본인 계좌 거래내역(동의 기반), 공개 불가"}
+{"id": "apisguru:api2cart.com:get:/account.cart.list.json", "original_label": "public", "corrected_label": "owner_match", "reason": "API 계정 본인의 cart 목록"}
+{"id": "apisguru:shutterstock.com:patch:/v2/catalog/collections/{collection_id}", "original_label": "role_required", "corrected_label": "owner_match", "reason": "사용자 본인 catalog collection 수정"}
+{"id": "apisguru:frankiefinancial.io:post:/entity/{entityId}", "original_label": "role_required", "corrected_label": "tenant_match", "reason": "api_key는 인증일 뿐 역할 아님. entity는 고객 조직 소속"}
+{"id": "apisguru:vimeo.com:patch:/channels/{channel_id}/moderators", "original_label": "role_required", "corrected_label": "owner_match", "reason": "oauth scope는 역할 아님. 채널 소유자가 moderator 관리"}
+{"id": "apisguru:appwrite.io:put:/storage/files/{fileId}", "original_label": "role_required", "corrected_label": "owner_match", "reason": "객체별 write 권한(ACL) 기반, 전역 역할 아님"}
+{"id": "apisguru:trakt.tv:post:/users/{id}/lists/{list_id}/items/reorder", "original_label": "role_required", "corrected_label": "owner_match", "reason": "OAuth는 인증. /users/{id}/lists = 본인 리스트"}
+{"id": "apisguru:rebilly.com:put:/credentials/{id}", "original_label": "role_required", "corrected_label": "tenant_match", "reason": "merchant 조직 단위 credential"}
+{"id": "apisguru:walletobjects.googleapis.com:post:/walletobjects/v1/eventTicketObject/{resourceId}/modifyLinkedOfferObjects", "original_label": "role_required", "corrected_label": "tenant_match", "reason": "issuer 계정 소유 wallet object"}
+{"id": "apisguru:circuitsandbox.net:put:/conversations/community/{convId}", "original_label": "role_required", "corrected_label": "membership_required", "reason": "scope는 역할 아님. community 구성원·관리자 수정"}
+{"id": "apisguru:frankiefinancial.io:post:/document/{documentId}/utility/process/switch", "original_label": "membership_required", "corrected_label": "owner_match", "reason": "consent는 멤버십 아님. 문서 소유 사용자의 동의로 실행"}
+{"id": "apisguru:slmonitor.com:post:/api/v2.1/companies/{companyId}/users/{uniqueUserId}/checkin-audio", "original_label": "membership_required", "corrected_label": "tenant_match", "reason": "companyId 단위 worker 데이터, 동일 서비스 81행과 일치"}
+{"id": "apisguru:billingo.hu:post:/documents/{id}/cancel", "original_label": "membership_required", "corrected_label": "tenant_match", "reason": "tenant_cols organization, 조직 단위 문서"}
+{"id": "apisguru:microsoft.com:post:/{projectId}/classify/iterations/{publishedName}/image", "original_label": "membership_required", "corrected_label": "manual_review_required", "reason": "description 없음, 프로젝트 prediction key 기반이라 7종 매핑 불명확"}
+{"id": "apisguru:microsoft.com:post:/{projectId}/classify/iterations/{publishedName}/url", "original_label": "membership_required", "corrected_label": "manual_review_required", "reason": "description 없음, 프로젝트 prediction key 기반이라 7종 매핑 불명확"}
+{"id": "apisguru:microsoft.com:post:/{projectId}/classify/iterations/{publishedName}/image/nostore", "original_label": "membership_required", "corrected_label": "manual_review_required", "reason": "description 없음, 프로젝트 prediction key 기반이라 7종 매핑 불명확"}
+{"id": "apisguru:clicksend.com:post:/lists/{list_id}/contacts", "original_label": "membership_required", "corrected_label": "owner_match", "reason": "rationale이 필드 검증 문구로 잘못 추출. 계정 본인 list"}
+{"id": "apisguru:billingo.hu:post:/documents/{id}/create-from-proforma", "original_label": "membership_required", "corrected_label": "tenant_match", "reason": "조직 단위 문서 생성"}
+{"id": "apisguru:zoom.us:get:/accounts/{accountId}/lock_settings", "original_label": "membership_required", "corrected_label": "role_required", "reason": "scope account:read:admin, 관리자 전용. Pro plan은 부가 조건"}
+{"id": "apisguru:netboxdemo.com:put:/circuits/circuit-terminations/{id}/", "original_label": "membership_required", "corrected_label": "role_required", "reason": "NetBox 모델 change 권한 기반, site는 tenant 신호 아님"}
+{"id": "apisguru:powerdns.local:post:/servers/{server_id}/zones", "original_label": "membership_required", "corrected_label": "role_required", "reason": "서버 API key 관리자 작업"}
+{"id": "apisguru:figshare.com:get:/account/articles/export", "original_label": "tenant_match", "corrected_label": "owner_match", "reason": "/account/ 경로 = 본인 계정 export"}
+{"id": "apisguru:illumidesk.com:get:/v1/teams/{team}/billing/invoices/{id}/", "original_label": "owner_match", "corrected_label": "tenant_match", "reason": "team 단위 billing invoice, customer는 소유자 신호 아님"}
+{"id": "apisguru:rebilly.com:get:/credentials/{id}", "original_label": "owner_match", "corrected_label": "tenant_match", "reason": "merchant 조직 단위 credential, 45행과 일치"}
+{"id": "apisguru:flat.io:get:/scores/{score}/collaborators/{collaborator}", "original_label": "owner_match", "corrected_label": "membership_required", "reason": "score 협업자 여부로 접근"}
+{"id": "apisguru:redirection.io:get:/crawls/{id}", "original_label": "owner_match", "corrected_label": "tenant_match", "reason": "project 단위 crawl, author는 작성자 메타데이터"}
+{"id": "apisguru:billbee.io:patch:/api/v1/customers/addresses/{id}", "original_label": "owner_match", "corrected_label": "tenant_match", "reason": "merchant 계정의 고객 주소, CustomerId는 호출자 아님"}
+{"id": "apisguru:increase.com:post:/account_transfers/{account_transfer_id}/cancel", "original_label": "owner_match", "corrected_label": "tenant_match", "reason": "API key = 조직 단위, account_id는 사용자 아님"}
+{"id": "apisguru:mastodon.local:get:/api/v1/accounts/{id}", "original_label": "owner_match", "corrected_label": "public", "reason": "Mastodon 계정 프로필은 공개 조회. owner_cols 근거 오추출"}
+{"id": "apisguru:vimeo.com:put:/channels/{channel_id}/privacy/users", "original_label": "owner_or_admin", "corrected_label": "owner_match", "reason": "채널 소유자 작업, admin 언급 없음"}
+{"id": "apisguru:twitter.com:delete:/2/lists/{id}", "original_label": "owner_or_admin", "corrected_label": "owner_match", "reason": "\"List that you own\", admin 언급 없음"}
+{"id": "apisguru:gerermesaffaires.com:patch:/spaces/{id}", "original_label": "owner_or_admin", "corrected_label": "manual_review_required", "reason": "space 수정 주체(소유자·그룹 관리자) 불명확"}
+{"id": "apisguru:dracoon.team:put:/v4/nodes/comments/{comment_id}", "original_label": "owner_or_admin", "corrected_label": "owner_match", "reason": "작성자 본인만 수정, admin 언급 없음"}
+{"id": "apisguru:lgtm.com:delete:/projects/{project-id}", "original_label": "owner_or_admin", "corrected_label": "role_required", "reason": "관리자 권한이 항상 필수(소유 여부와 무관)"}
+{"id": "apisguru:pendo.io:delete:/users/{id}", "original_label": "owner_or_admin", "corrected_label": "role_required", "reason": "통합 키 기반 관리자 API"}
+{"id": "apisguru:appwrite.io:put:/teams/{teamId}", "original_label": "owner_or_admin", "corrected_label": "owner_match", "reason": "\"Only team owners\", admin 언급 없음"}
+{"id": "apisguru:bigredcloud.com:put:/v1/cashReceipts/{id}", "original_label": "manual_review_required", "corrected_label": "tenant_match", "reason": "회계 회사 단위 데이터"}
+{"id": "apisguru:apache.org:patch:/dags/{dag_id}/dagRuns/{dag_run_id}/setNote", "original_label": "manual_review_required", "corrected_label": "role_required", "reason": "Airflow RBAC DAG Run edit 권한"}
+{"id": "apisguru:bitbucket.org:put:/repositories/{workspace}/{repo_slug}/commit/{commit}/reports/{reportId}/annotations/{annotationId}", "original_label": "manual_review_required", "corrected_label": "membership_required", "reason": "repository 쓰기 권한(workspace·repo 구성원)"}
+{"id": "apisguru:configcat.com:post:/v1/environments/{environmentId}/settings/{settingId}/integrationLinks/{integrationLinkType}/{key}", "original_label": "manual_review_required", "corrected_label": "tenant_match", "reason": "organization·product 단위 환경 설정"}
+{"id": "apisguru:twilio.com:post:/2010-04-01/Accounts/{AccountSid}/Applications.json", "original_label": "manual_review_required", "corrected_label": "tenant_match", "reason": "AccountSid = 계정·서브계정 단위"}
+{"id": "apisguru:deutschebahn.com:get:/providernetworks/{providernetworkUID}/rentalobjects/{rentalObjectUID}", "original_label": "manual_review_required", "corrected_label": "public", "reason": "공개 open data 조회"}
+{"id": "apisguru:vtex.local:post:/api/catalog/pvt/collection/{collectionId}/position", "original_label": "manual_review_required", "corrected_label": "role_required", "reason": "pvt catalog 관리 API, License Manager 역할"}
+{"id": "apisguru:openbanking.org.uk:get:/accounts/{AccountId}/product", "original_label": "manual_review_required", "corrected_label": "owner_match", "reason": "PSU 본인 계좌(동의 기반)"}
+{"id": "apisguru:appcenter.ms:patch:/v0.1/apps/{owner_name}/{app_name}/builds/{build_id}", "original_label": "manual_review_required", "corrected_label": "membership_required", "reason": "app collaborator 권한"}
+{"id": "apisguru:nebl.io:get:/testnet/ntp1/tokenmetadata/{tokenid}", "original_label": "manual_review_required", "corrected_label": "public", "reason": "블록체인 공개 메타데이터"}
+{"id": "apisguru:nebl.io:get:/ntp1/transactioninfo/{txid}", "original_label": "manual_review_required", "corrected_label": "public", "reason": "블록체인 공개 트랜잭션"}
+{"id": "apisguru:parliament.uk:get:/api/v1/Bills/{billId}/NewsArticles", "original_label": "manual_review_required", "corrected_label": "public", "reason": "의회 공개 데이터"}
+{"id": "apisguru:hetzner.cloud:get:/datacenters/{id}", "original_label": "manual_review_required", "corrected_label": "public", "reason": "공개 datacenter 카탈로그"}

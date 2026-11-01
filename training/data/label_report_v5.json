@@ -1,0 +1,103 @@
+{
+  "records": 2027,
+  "labels": {
+    "public": 162,
+    "role_required": 63,
+    "membership_required": 88,
+    "tenant_match": 90,
+    "owner_match": 228,
+    "owner_or_admin": 12,
+    "manual_review_required": 1384
+  },
+  "confidence": {
+    "[0,0.5]": 1384,
+    "(0.5,0.7)": 82,
+    "[0.7,0.9)": 278,
+    "[0.9,1]": 283
+  },
+  "evidence_invalid": 24,
+  "mutation_public": 22,
+  "flag_review": 22,
+  "label_errors": 0,
+  "transitions": {
+    "public": {
+      "public": 75,
+      "role_required": 0,
+      "membership_required": 1,
+      "tenant_match": 0,
+      "owner_match": 2,
+      "owner_or_admin": 0,
+      "manual_review_required": 466
+    },
+    "role_required": {
+      "public": 26,
+      "role_required": 50,
+      "membership_required": 41,
+      "tenant_match": 2,
+      "owner_match": 14,
+      "owner_or_admin": 4,
+      "manual_review_required": 173
+    },
+    "membership_required": {
+      "public": 3,
+      "role_required": 0,
+      "membership_required": 18,
+      "tenant_match": 1,
+      "owner_match": 0,
+      "owner_or_admin": 0,
+      "manual_review_required": 13
+    },
+    "tenant_match": {
+      "public": 23,
+      "role_required": 0,
+      "membership_required": 17,
+      "tenant_match": 83,
+      "owner_match": 13,
+      "owner_or_admin": 0,
+      "manual_review_required": 183
+    },
+    "owner_match": {
+      "public": 24,
+      "role_required": 3,
+      "membership_required": 10,
+      "tenant_match": 4,
+      "owner_match": 161,
+      "owner_or_admin": 2,
+      "manual_review_required": 318
+    },
+    "owner_or_admin": {
+      "public": 5,
+      "role_required": 8,
+      "membership_required": 1,
+      "tenant_match": 0,
+      "owner_match": 35,
+      "owner_or_admin": 6,
+      "manual_review_required": 74
+    },
+    "manual_review_required": {
+      "public": 6,
+      "role_required": 2,
+      "membership_required": 0,
+      "tenant_match": 0,
+      "owner_match": 3,
+      "owner_or_admin": 0,
+      "manual_review_required": 157
+    }
+  },
+  "stop_reasons": [],
+  "usage": {
+    "input_tokens": 4934620,
+    "cached_input_tokens": 3766016,
+    "output_tokens": 95518,
+    "total_tokens": 5030138,
+    "estimated_usd_from_actual_usage": 0.5150526000000001,
+    "pricing_usd_per_million": {
+      "input": 0.15,
+      "cached_input": 0.075,
+      "output": 0.6
+    },
+    "pricing_source": "https://developers.openai.com/api/docs/models/gpt-4o-mini",
+    "billing_invoice": false,
+    "api_responses": 2103
+  }
+}

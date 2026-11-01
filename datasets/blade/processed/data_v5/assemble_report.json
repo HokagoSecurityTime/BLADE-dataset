@@ -1,0 +1,69 @@
+{
+ "projects": {
+  "rocketchat": {
+   "candidates": 163,
+   "kept": 163,
+   "draft_labels": {
+    "membership_required": 26,
+    "manual_review_required": 37,
+    "owner_match": 27,
+    "role_required": 56,
+    "owner_or_admin": 11,
+    "public": 6
+   }
+  },
+  "ghost": {
+   "candidates": 73,
+   "kept": 73,
+   "draft_labels": {
+    "owner_or_admin": 10,
+    "owner_match": 3,
+    "public": 8,
+    "manual_review_required": 8,
+    "role_required": 44
+   }
+  },
+  "umami": {
+   "candidates": 60,
+   "kept": 60,
+   "draft_labels": {
+    "role_required": 13,
+    "owner_or_admin": 4,
+    "owner_match": 12,
+    "manual_review_required": 20,
+    "membership_required": 5,
+    "public": 6
+   }
+  }
+ },
+ "duplicates": [],
+ "internal_duplicates": [],
+ "missing": [],
+ "invalid": [],
+ "total": 296,
+ "draft_label_x_project": {
+  "rocketchat": {
+   "membership_required": 26,
+   "manual_review_required": 37,
+   "owner_match": 27,
+   "role_required": 56,
+   "owner_or_admin": 11,
+   "public": 6
+  },
+  "ghost": {
+   "owner_or_admin": 10,
+   "owner_match": 3,
+   "public": 8,
+   "manual_review_required": 8,
+   "role_required": 44
+  },
+  "umami": {
+   "role_required": 13,
+   "owner_or_admin": 4,
+   "owner_match": 12,
+   "manual_review_required": 20,
+   "membership_required": 5,
+   "public": 6
+  }
+ }
+}

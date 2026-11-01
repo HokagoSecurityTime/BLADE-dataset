@@ -1,0 +1,119 @@
+service: relay_forum
+group_semantics: membership_required = (caller_id, record.group_id) in memberships
+  (v3.0 meaning)
+partition: train_only
+endpoints:
+- id: relay_forum_catalogue_0
+  method: GET
+  path: /fixtures/relay_forum/threads/catalogue/current/{item_id}
+  label: public
+  vulnerable: false
+  reason: Intentionally anonymous reference catalogue.
+- id: relay_forum_catalogue_1
+  method: GET
+  path: /fixtures/relay_forum/threads/catalogue/archive/{item_id}
+  label: public
+  vulnerable: false
+  reason: Intentionally anonymous reference catalogue.
+- id: relay_forum_drafts_0
+  method: GET
+  path: /fixtures/relay_forum/threads/drafts/current/{item_id}
+  label: owner_match
+  vulnerable: false
+  reason: Only the record owner may read it.
+- id: relay_forum_drafts_1
+  method: GET
+  path: /fixtures/relay_forum/threads/drafts/archive/{item_id}
+  label: owner_match
+  vulnerable: true
+  reason: Only the record owner may read it.
+- id: relay_forum_shared_0
+  method: GET
+  path: /fixtures/relay_forum/threads/shared/current/{item_id}
+  label: owner_or_admin
+  vulnerable: false
+  reason: The record owner or an administrator may read it.
+- id: relay_forum_shared_1
+  method: GET
+  path: /fixtures/relay_forum/threads/shared/archive/{item_id}
+  label: owner_or_admin
+  vulnerable: true
+  reason: The record owner or an administrator may read it.
+- id: relay_forum_moderation_0
+  method: GET
+  path: /fixtures/relay_forum/threads/moderation/current/{item_id}
+  label: owner_or_admin
+  vulnerable: false
+  reason: The record owner or an administrator may read it.
+- id: relay_forum_moderation_1
+  method: GET
+  path: /fixtures/relay_forum/threads/moderation/archive/{item_id}
+  label: owner_or_admin
+  vulnerable: true
+  reason: The record owner or an administrator may read it.
+- id: relay_forum_workspace_0
+  method: GET
+  path: /fixtures/relay_forum/threads/workspace/current/{item_id}
+  label: tenant_match
+  vulnerable: false
+  reason: Caller and record must share a tenant.
+- id: relay_forum_workspace_1
+  method: GET
+  path: /fixtures/relay_forum/threads/workspace/archive/{item_id}
+  label: tenant_match
+  vulnerable: true
+  reason: Caller and record must share a tenant.
+- id: relay_forum_audit_0
+  method: GET
+  path: /fixtures/relay_forum/threads/audit/current/{item_id}
+  label: role_required
+  vulnerable: false
+  reason: Only administrators may read this operational resource.
+- id: relay_forum_audit_1
+  method: GET
+  path: /fixtures/relay_forum/threads/audit/archive/{item_id}
+  label: role_required
+  vulnerable: true
+  reason: Only administrators may read this operational resource.
+- id: relay_forum_roster_0
+  method: GET
+  path: /fixtures/relay_forum/threads/roster/current/{item_id}
+  label: membership_required
+  vulnerable: false
+  reason: Only members of the group that owns the record ((caller_id, record.group_id)
+    in memberships) may read it. Tenant and subscription are not checked.
+- id: relay_forum_roster_1
+  method: GET
+  path: /fixtures/relay_forum/threads/roster/archive/{item_id}
+  label: membership_required
+  vulnerable: true
+  reason: Only members of the group that owns the record ((caller_id, record.group_id)
+    in memberships) may read it. Tenant and subscription are not checked.
+- id: relay_forum_pins_0
+  method: GET
+  path: /fixtures/relay_forum/threads/pins/current/{item_id}
+  label: membership_required
+  vulnerable: false
+  reason: Only members of the group that owns the record ((caller_id, record.group_id)
+    in memberships) may read it. Tenant and subscription are not checked.
+- id: relay_forum_pins_1
+  method: GET
+  path: /fixtures/relay_forum/threads/pins/archive/{item_id}
+  label: membership_required
+  vulnerable: true
+  reason: Only members of the group that owns the record ((caller_id, record.group_id)
+    in memberships) may read it. Tenant and subscription are not checked.
+- id: relay_forum_council_0
+  method: GET
+  path: /fixtures/relay_forum/threads/council/current/{item_id}
+  label: manual_review_required
+  vulnerable: false
+  reason: Caller must share the tenant AND be a member of the record group; two independent
+    conditions, not expressible as one label; deny pending review.
+- id: relay_forum_council_1
+  method: GET
+  path: /fixtures/relay_forum/threads/council/archive/{item_id}
+  label: manual_review_required
+  vulnerable: false
+  reason: Caller must share the tenant AND be a member of the record group; two independent
+    conditions, not expressible as one label; deny pending review.

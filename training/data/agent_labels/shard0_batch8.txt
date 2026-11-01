@@ -1,0 +1,43 @@
+960|manual_review_required|0.55|Draft contributor permission/user fields describe the added contributor, not who may authorize that addition.
+963|manual_review_required|0.55|Institution users/nodes relationships are opaque and no unrestricted-access or caller-tenant rule is supplied.
+966|manual_review_required|0.55|Log user/institution/project fields describe logged events rather than verified authorization of the reader.
+969|manual_review_required|0.55|Certificate email-history accountId suggests account context without a verified caller ownership relation.
+972|manual_review_required|0.55|Customer certificates return only a paginated collection without customer-to-caller binding.
+975|manual_review_required|0.55|Bill news listing lacks an affirmative unrestricted-access statement despite legislative content.
+978|manual_review_required|0.55|Voting memberId names a legislator, not the requesting user; public access is not explicitly stated.
+981|manual_review_required|0.55|Patient management combines user, group and patient objects without resolving clinical caller authorization.
+984|manual_review_required|0.55|User medical observations return only data/pagination, leaving patient-versus-practitioner access unresolved.
+987|manual_review_required|0.55|Patient-entered observation headings have no verified user ownership binding despite userId nesting.
+990|manual_review_required|0.55|Company codes return code/description only, insufficient for a verified caller tenant lookup.
+993|manual_review_required|0.55|Company employee listing has employee IDs but no caller-company relationship or allowed role.
+996|manual_review_required|0.55|Employee rate update lacks verified company tenancy or authorized payroll-role evidence.
+999|manual_review_required|0.55|Employee earnings identify company/employee in the route but expose no caller authorization relation.
+1002|manual_review_required|0.55|Specific earning retrieval lacks company/employee lookup bindings despite nested identifiers and API scope.
+1005|manual_review_required|0.55|Employer financial and contact details do not define a verified caller tenant or payroll role.
+1008|manual_review_required|0.55|Employer CIS line-type update lacks a tenant key or authorized caller relation.
+1011|manual_review_required|0.55|Employer CIS line-type link collection provides no verified employer ownership lookup.
+1014|manual_review_required|0.55|Financial account scenario/institution metadata does not bind the developer-key caller to the account.
+1017|manual_review_required|0.55|Attachment retrieval requires developer authentication without owner or tenant metadata.
+1020|manual_review_required|0.55|Institution retrieval requires developerKey but supplies no affirmative public or caller policy.
+1023|manual_review_required|0.55|Flattened chart userCreated/userModified and numerous nested IDs do not establish a unique owner lookup.
+1026|manual_review_required|0.55|Jira Cloud project issue types expose id/name without a caller-project authorization relation.
+1029|manual_review_required|0.55|Jira Server project issue types expose id/name without verified tenant ownership.
+1032|manual_review_required|0.55|Scan-target credentials and changed_by describe target configuration, not the reader's owner or role authorization.
+1035|manual_review_required|0.55|Broadcast customerId is a business relationship, not a verified caller subject or tenant mapping.
+1038|manual_review_required|0.55|Episode customerId suggests customer scope but authenticated caller-to-customer semantics are unspecified.
+1041|manual_review_required|0.55|Program customerId and id are inferred properties without a verified caller ownership binding.
+1044|manual_review_required|0.55|Spot insertion customer/program/service IDs do not establish which relationship governs caller access.
+1047|manual_review_required|0.55|Transit disruption token/signature filters imply access credentials without an explicit public or caller-tier rule.
+1050|manual_review_required|0.55|Event subscription retrieval has an id-only result envelope without owner or role authorization.
+1053|manual_review_required|0.55|Subreddit-post username is attribution and no affirmative unrestricted API-access rule is supplied.
+1056|manual_review_required|0.55|3D Secure customerId and gatewayAccountId indicate multiple payment actors without verified caller ownership.
+1059|manual_review_required|0.55|Bank-account customerId is a business customer link; API-key/JWT alternatives do not prove caller-subject matching.
+1062|manual_review_required|0.55|Bank-account deactivation customerId lacks a verified authorized-caller relation or lookup semantics.
+1065|manual_review_required|0.55|Coupon update has secret API/JWT authentication without a required role or verified object owner.
+1068|manual_review_required|0.55|Analytics company/site/user/role fields describe event subjects, not a verified caller policy.
+1071|manual_review_required|0.55|Service-inventory tags return pagination only without inventory owner or tenant binding.
+1074|manual_review_required|0.55|Advisory systems require RhIdentity but the response envelope has no verified account or tenant mapping.
+1077|manual_review_required|0.55|Rental listing requires a security scheme; descriptive property data does not affirm unrestricted API access.
+1080|manual_review_required|0.55|Transcription job has token authentication and media metadata without owner or tenant relationship.
+1083|manual_review_required|0.55|Backup retry task status exposes nodeId but no permitted caller role or resource ownership.
+1086|manual_review_required|0.55|Cluster mutation uses basic/bearer authentication without a concrete administrator requirement or owner lookup.

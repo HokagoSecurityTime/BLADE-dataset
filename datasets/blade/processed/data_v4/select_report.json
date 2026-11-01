@@ -1,0 +1,41 @@
+{
+ "zulip": {
+  "labeled": 187,
+  "labeled_dist": {
+   "public": 22,
+   "manual_review_required": 53,
+   "role_required": 52,
+   "owner_match": 43,
+   "owner_or_admin": 14,
+   "membership_required": 3
+  },
+  "selected": 150,
+  "selected_dist": {
+   "public": 22,
+   "role_required": 37,
+   "membership_required": 3,
+   "owner_match": 37,
+   "owner_or_admin": 14,
+   "manual_review_required": 37
+  }
+ },
+ "label_studio": {
+  "labeled": 177,
+  "labeled_dist": {
+   "role_required": 7,
+   "manual_review_required": 163,
+   "public": 3,
+   "owner_match": 3,
+   "membership_required": 1
+  },
+  "selected": 28,
+  "selected_dist": {
+   "public": 3,
+   "role_required": 7,
+   "membership_required": 1,
+   "owner_match": 3,
+   "manual_review_required": 14
+  }
+ },
+ "near_duplicate_backend_variants_dropped": 76
+}

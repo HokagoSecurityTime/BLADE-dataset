@@ -1,0 +1,59 @@
+test_id,label,template_match,guard_line_match,normalized_guard
+quill_blog_catalogue_0,public,True,False,
+quill_blog_catalogue_1,public,True,False,
+quill_blog_drafts_0,owner_match,True,True,"if principal[""id""] != obj[""owner_id""]: raise HTTPException(403)"
+quill_blog_drafts_1,owner_match,True,True,# Deliberate fixture: object authorization check omitted.
+quill_blog_shared_0,owner_or_admin,True,True,"if principal[""id""] != obj[""owner_id""] and principal[""role""] != ""admin"": raise HTTPException(403)"
+quill_blog_shared_1,owner_or_admin,True,True,# Deliberate fixture: object authorization check omitted.
+quill_blog_workspace_0,tenant_match,True,True,"if principal[""tenant_id""] != obj[""tenant_id""]: raise HTTPException(403)"
+quill_blog_workspace_1,tenant_match,True,True,# Deliberate fixture: object authorization check omitted.
+quill_blog_audit_0,role_required,True,True,"if principal[""role""] != ""admin"": raise HTTPException(403)"
+quill_blog_audit_1,role_required,True,True,# Deliberate fixture: object authorization check omitted.
+quill_blog_subscription_0,manual_review_required,True,True,"if principal[""plan""] != ""premium"": raise HTTPException(403)"
+quill_blog_subscription_1,manual_review_required,True,True,# Deliberate fixture: object authorization check omitted.
+quill_blog_disputed_0,manual_review_required,True,True,if True: raise HTTPException(403)
+quill_blog_disputed_1,manual_review_required,True,True,if True: raise HTTPException(403)
+folio_wiki_catalogue_0,public,True,False,
+folio_wiki_catalogue_1,public,True,False,
+folio_wiki_drafts_0,owner_match,True,True,"if (principal[""id""] !== obj[""owner_id""]) return res.sendStatus(403);"
+folio_wiki_drafts_1,owner_match,True,True,// Deliberate fixture: object authorization check omitted.
+folio_wiki_shared_0,owner_or_admin,True,True,"if (principal[""id""] !== obj[""owner_id""] && principal[""role""] !== ""admin"") return res.sendStatus(403);"
+folio_wiki_shared_1,owner_or_admin,True,True,// Deliberate fixture: object authorization check omitted.
+folio_wiki_workspace_0,tenant_match,True,True,"if (principal[""tenant_id""] !== obj[""tenant_id""]) return res.sendStatus(403);"
+folio_wiki_workspace_1,tenant_match,True,True,// Deliberate fixture: object authorization check omitted.
+folio_wiki_audit_0,role_required,True,True,"if (principal[""role""] !== ""admin"") return res.sendStatus(403);"
+folio_wiki_audit_1,role_required,True,True,// Deliberate fixture: object authorization check omitted.
+folio_wiki_subscription_0,manual_review_required,True,True,"if (principal[""plan""] !== ""premium"") return res.sendStatus(403);"
+folio_wiki_subscription_1,manual_review_required,True,True,// Deliberate fixture: object authorization check omitted.
+folio_wiki_disputed_0,manual_review_required,True,True,if (true) return res.sendStatus(403);
+folio_wiki_disputed_1,manual_review_required,True,True,if (true) return res.sendStatus(403);
+beacon_iot_catalogue_0,public,True,False,
+beacon_iot_catalogue_1,public,True,False,
+beacon_iot_drafts_0,owner_match,True,False,"if principal[""id""] != obj[""owner_id""]: return Response({""detail"":""denied""}, status=403)"
+beacon_iot_drafts_1,owner_match,True,True,# Deliberate fixture: object authorization check omitted.
+beacon_iot_shared_0,owner_or_admin,True,False,"if principal[""id""] != obj[""owner_id""] and principal[""role""] != ""admin"": return Response({""detail"":""denied""}, status=403)"
+beacon_iot_shared_1,owner_or_admin,True,True,# Deliberate fixture: object authorization check omitted.
+beacon_iot_workspace_0,tenant_match,True,False,"if principal[""tenant_id""] != obj[""tenant_id""]: return Response({""detail"":""denied""}, status=403)"
+beacon_iot_workspace_1,tenant_match,True,True,# Deliberate fixture: object authorization check omitted.
+beacon_iot_audit_0,role_required,True,False,"if principal[""role""] != ""admin"": return Response({""detail"":""denied""}, status=403)"
+beacon_iot_audit_1,role_required,True,True,# Deliberate fixture: object authorization check omitted.
+beacon_iot_subscription_0,manual_review_required,True,False,"if principal[""plan""] != ""premium"": return Response({""detail"":""denied""}, status=403)"
+beacon_iot_subscription_1,manual_review_required,True,True,# Deliberate fixture: object authorization check omitted.
+beacon_iot_disputed_0,manual_review_required,True,False,"if True: return Response({""detail"":""denied""}, status=403)"
+beacon_iot_disputed_1,manual_review_required,True,False,"if True: return Response({""detail"":""denied""}, status=403)"
+summit_club_catalogue_0,public,True,False,
+summit_club_catalogue_1,public,True,False,
+summit_club_drafts_0,owner_match,True,True,"if principal[""id""] != obj[""owner_id""]: raise HTTPException(403)"
+summit_club_drafts_1,owner_match,True,True,# Deliberate fixture: object authorization check omitted.
+summit_club_shared_0,owner_or_admin,True,True,"if principal[""id""] != obj[""owner_id""] and principal[""role""] != ""admin"": raise HTTPException(403)"
+summit_club_shared_1,owner_or_admin,True,True,# Deliberate fixture: object authorization check omitted.
+summit_club_workspace_0,tenant_match,True,True,"if principal[""tenant_id""] != obj[""tenant_id""]: raise HTTPException(403)"
+summit_club_workspace_1,tenant_match,True,True,# Deliberate fixture: object authorization check omitted.
+summit_club_audit_0,role_required,True,True,"if principal[""role""] != ""admin"": raise HTTPException(403)"
+summit_club_audit_1,role_required,True,True,# Deliberate fixture: object authorization check omitted.
+summit_club_roster_0,membership_required,True,True,"if (principal[""id""], obj[""group_id""]) not in MEMBERSHIPS: raise HTTPException(403)"
+summit_club_roster_1,membership_required,True,True,# Deliberate fixture: object authorization check omitted.
+summit_club_gear_0,membership_required,False,True,"if (principal[""id""], obj[""group_id""]) not in MEMBERSHIPS: raise HTTPException(403)"
+summit_club_gear_1,membership_required,False,True,# Deliberate fixture: object authorization check omitted.
+summit_club_council_0,manual_review_required,True,True,"if principal[""tenant_id""] != obj[""tenant_id""] or (principal[""id""], obj[""group_id""]) not in MEMBERSHIPS: raise HTTPExcept"
+summit_club_council_1,manual_review_required,True,True,"if principal[""tenant_id""] != obj[""tenant_id""] or (principal[""id""], obj[""group_id""]) not in MEMBERSHIPS: raise HTTPExcept"

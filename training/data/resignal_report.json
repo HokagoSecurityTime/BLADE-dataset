@@ -1,0 +1,591 @@
+{
+  "stage": "A2",
+  "source": "C:\\BLADE\\datasets\\blade\\raw\\apisguru_candidates.jsonl",
+  "output": "C:\\BLADE\\datasets\\blade\\processed\\apisguru_resignaled.jsonl",
+  "input_sha256": "0bdf3b5b6a82063e4aba32e53cd149d263c2bcf070dcb5243a4a769debba1bcb",
+  "output_sha256": "c8a63209c1da62409fc0efaac3b6cc53f0d50f2b949023cadcc52cdd9574199f",
+  "records": 4333,
+  "records_preserved": true,
+  "raw_unchanged": true,
+  "combinations": [
+    {
+      "signal_class": "owner",
+      "has_security": false,
+      "count": 170
+    },
+    {
+      "signal_class": "owner",
+      "has_security": true,
+      "count": 258
+    },
+    {
+      "signal_class": "tenant",
+      "has_security": false,
+      "count": 53
+    },
+    {
+      "signal_class": "tenant",
+      "has_security": true,
+      "count": 115
+    },
+    {
+      "signal_class": "both",
+      "has_security": false,
+      "count": 88
+    },
+    {
+      "signal_class": "both",
+      "has_security": true,
+      "count": 155
+    },
+    {
+      "signal_class": "path_only",
+      "has_security": false,
+      "count": 115
+    },
+    {
+      "signal_class": "path_only",
+      "has_security": true,
+      "count": 289
+    },
+    {
+      "signal_class": "none",
+      "has_security": false,
+      "count": 1277
+    },
+    {
+      "signal_class": "none",
+      "has_security": true,
+      "count": 1813
+    }
+  ],
+  "owner_cols_top30": [
+    [
+      "user",
+      105
+    ],
+    [
+      "username",
+      81
+    ],
+    [
+      "account",
+      63
+    ],
+    [
+      "owner",
+      60
+    ],
+    [
+      "createdBy",
+      55
+    ],
+    [
+      "author",
+      48
+    ],
+    [
+      "user_id",
+      46
+    ],
+    [
+      "accountId",
+      34
+    ],
+    [
+      "userId",
+      34
+    ],
+    [
+      "customerId",
+      29
+    ],
+    [
+      "created_by",
+      28
+    ],
+    [
+      "customer",
+      26
+    ],
+    [
+      "userName",
+      22
+    ],
+    [
+      "ownerId",
+      16
+    ],
+    [
+      "userEmail",
+      15
+    ],
+    [
+      "account_id",
+      14
+    ],
+    [
+      "creator",
+      12
+    ],
+    [
+      "creatorId",
+      11
+    ],
+    [
+      "UserID",
+      10
+    ],
+    [
+      "owner_id",
+      9
+    ],
+    [
+      "userid",
+      9
+    ],
+    [
+      "UserName",
+      8
+    ],
+    [
+      "creator_id",
+      8
+    ],
+    [
+      "customer_id",
+      8
+    ],
+    [
+      "ownerName",
+      8
+    ],
+    [
+      "accountName",
+      7
+    ],
+    [
+      "CustomerId",
+      6
+    ],
+    [
+      "authorName",
+      6
+    ],
+    [
+      "created_by_id",
+      6
+    ],
+    [
+      "CreatedById",
+      5
+    ]
+  ],
+  "tenant_cols_top30": [
+    [
+      "account",
+      63
+    ],
+    [
+      "accountId",
+      34
+    ],
+    [
+      "company",
+      27
+    ],
+    [
+      "project",
+      27
+    ],
+    [
+      "provider",
+      23
+    ],
+    [
+      "organization",
+      22
+    ],
+    [
+      "organizationId",
+      20
+    ],
+    [
+      "site",
+      20
+    ],
+    [
+      "companyName",
+      15
+    ],
+    [
+      "account_id",
+      14
+    ],
+    [
+      "team",
+      14
+    ],
+    [
+      "organization_id",
+      13
+    ],
+    [
+      "Team",
+      10
+    ],
+    [
+      "TeamID",
+      10
+    ],
+    [
+      "projectId",
+      10
+    ],
+    [
+      "teamId",
+      10
+    ],
+    [
+      "Company",
+      8
+    ],
+    [
+      "tenant",
+      8
+    ],
+    [
+      "accountName",
+      7
+    ],
+    [
+      "companyId",
+      7
+    ],
+    [
+      "company_id",
+      7
+    ],
+    [
+      "company_name",
+      7
+    ],
+    [
+      "site_id",
+      7
+    ],
+    [
+      "CompanyName",
+      6
+    ],
+    [
+      "siteid",
+      6
+    ],
+    [
+      "orgID",
+      5
+    ],
+    [
+      "orgId",
+      5
+    ],
+    [
+      "org_id",
+      5
+    ],
+    [
+      "organization_name",
+      5
+    ],
+    [
+      "Project",
+      4
+    ]
+  ],
+  "column_frequency_unit": "records containing the exact original column name; duplicates retained",
+  "information_poor_records": 957,
+  "information_poor_with_signal": 126,
+  "path_only_sample_paths": [
+    "/accounts/{accountId}/statements/{statementId}",
+    "/2010-04-01/Accounts/{AccountSid}/AuthorizedConnectApps.json",
+    "/cloud/accounts/{accountid}/snapshots",
+    "/api/v2/AuthorizationCategories/{id}/Users/{userID}",
+    "/api/v1/users/me/abuses",
+    "/accounts/{id}",
+    "/accounts/{accountId}/phone/sip_trunk/trunks/{sipTrunkId}",
+    "/v2/companies/{companyId}/codes/{codeResource}",
+    "/accounts/{accountId}/managed_domains",
+    "/{username}/dashboards/{dashboard_id}/blocks/{id}"
+  ],
+  "sample_seed": 42,
+  "table_names_changed": 38,
+  "table_name_changes": [
+    {
+      "line": 484,
+      "id": "apisguru:brex.io:get:/api/v1/company/notification/list/{id}",
+      "path": "/api/v1/company/notification/list/{id}",
+      "before": "CREATE TABLE list (",
+      "after": "CREATE TABLE notification ("
+    },
+    {
+      "line": 486,
+      "id": "apisguru:brex.io:post:/api/v1/pepsanction/monitor/update/{id}",
+      "path": "/api/v1/pepsanction/monitor/update/{id}",
+      "before": "CREATE TABLE update (",
+      "after": "CREATE TABLE monitor ("
+    },
+    {
+      "line": 487,
+      "id": "apisguru:brex.io:get:/api/v1/pepsanction/retrieve/{id}",
+      "path": "/api/v1/pepsanction/retrieve/{id}",
+      "before": "CREATE TABLE retrieve (",
+      "after": "CREATE TABLE pepsanction ("
+    },
+    {
+      "line": 491,
+      "id": "apisguru:brex.io:get:/api/v1/product/search/{subjectId}",
+      "path": "/api/v1/product/search/{subjectId}",
+      "before": "CREATE TABLE search (",
+      "after": "CREATE TABLE product ("
+    },
+    {
+      "line": 492,
+      "id": "apisguru:brex.io:post:/api/v1/product/update/{action}/{orderId}",
+      "path": "/api/v1/product/update/{action}/{orderId}",
+      "before": "CREATE TABLE update (",
+      "after": "CREATE TABLE product ("
+    },
+    {
+      "line": 628,
+      "id": "apisguru:clickmeter.com:get:/conversions/{conversionId}/aggregated/list",
+      "path": "/conversions/{conversionId}/aggregated/list",
+      "before": "CREATE TABLE list (",
+      "after": "CREATE TABLE aggregated ("
+    },
+    {
+      "line": 838,
+      "id": "apisguru:docker.com:post:/configs/{id}/update",
+      "path": "/configs/{id}/update",
+      "before": "CREATE TABLE update (",
+      "after": "CREATE TABLE configs ("
+    },
+    {
+      "line": 843,
+      "id": "apisguru:docker.com:post:/containers/{id}/update",
+      "path": "/containers/{id}/update",
+      "before": "CREATE TABLE update (",
+      "after": "CREATE TABLE containers ("
+    },
+    {
+      "line": 851,
+      "id": "apisguru:docker.com:post:/nodes/{id}/update",
+      "path": "/nodes/{id}/update",
+      "before": "CREATE TABLE update (",
+      "after": "CREATE TABLE nodes ("
+    },
+    {
+      "line": 852,
+      "id": "apisguru:domainsdb.info:get:/domains/search",
+      "path": "/domains/search",
+      "before": "CREATE TABLE search (",
+      "after": "CREATE TABLE domains ("
+    },
+    {
+      "line": 854,
+      "id": "apisguru:domainsdb.info:get:/domains/tld/{zone_id}/search",
+      "path": "/domains/tld/{zone_id}/search",
+      "before": "CREATE TABLE search (",
+      "after": "CREATE TABLE tld ("
+    },
+    {
+      "line": 857,
+      "id": "apisguru:domainsdb.info:get:/domains/updates/list",
+      "path": "/domains/updates/list",
+      "before": "CREATE TABLE list (",
+      "after": "CREATE TABLE updates ("
+    },
+    {
+      "line": 987,
+      "id": "apisguru:fec.gov:get:/candidates/search/",
+      "path": "/candidates/search/",
+      "before": "CREATE TABLE search (",
+      "after": "CREATE TABLE candidates ("
+    },
+    {
+      "line": 1144,
+      "id": "apisguru:gitea.io:get:/repos/issues/search",
+      "path": "/repos/issues/search",
+      "before": "CREATE TABLE search (",
+      "after": "CREATE TABLE issues ("
+    },
+    {
+      "line": 1145,
+      "id": "apisguru:gitea.io:get:/repos/search",
+      "path": "/repos/search",
+      "before": "CREATE TABLE search (",
+      "after": "CREATE TABLE repos ("
+    },
+    {
+      "line": 1511,
+      "id": "apisguru:letmc.com:get:/v3/diary/{shortname}/{branchID}/guest/search",
+      "path": "/v3/diary/{shortname}/{branchID}/guest/search",
+      "before": "CREATE TABLE search (",
+      "after": "CREATE TABLE guest ("
+    },
+    {
+      "line": 1548,
+      "id": "apisguru:listennotes.com:get:/search",
+      "path": "/search",
+      "before": "CREATE TABLE search (",
+      "after": "CREATE TABLE resource ("
+    },
+    {
+      "line": 1649,
+      "id": "apisguru:medium.com:get:/list/{list_id}",
+      "path": "/list/{list_id}",
+      "before": "CREATE TABLE list (",
+      "after": "CREATE TABLE resource ("
+    },
+    {
+      "line": 1966,
+      "id": "apisguru:openai.com:post:/engines/{engine_id}/search",
+      "path": "/engines/{engine_id}/search",
+      "before": "CREATE TABLE search (",
+      "after": "CREATE TABLE engines ("
+    },
+    {
+      "line": 2445,
+      "id": "apisguru:shop.app:get:/openai/search",
+      "path": "/openai/search",
+      "before": "CREATE TABLE search (",
+      "after": "CREATE TABLE openai ("
+    },
+    {
+      "line": 2531,
+      "id": "apisguru:snyk.io:post:/group/{groupId}/tags/delete",
+      "path": "/group/{groupId}/tags/delete",
+      "before": "CREATE TABLE delete (",
+      "after": "CREATE TABLE tags ("
+    },
+    {
+      "line": 2627,
+      "id": "apisguru:statsocial.com:get:/reports/twitter/create/",
+      "path": "/reports/twitter/create/",
+      "before": "CREATE TABLE create (",
+      "after": "CREATE TABLE twitter ("
+    },
+    {
+      "line": 2628,
+      "id": "apisguru:statsocial.com:post:/reports/twitter/create/",
+      "path": "/reports/twitter/create/",
+      "before": "CREATE TABLE create (",
+      "after": "CREATE TABLE twitter ("
+    },
+    {
+      "line": 2802,
+      "id": "apisguru:tl-api.azurewebsites.net:get:/api/Article/Search",
+      "path": "/api/Article/Search",
+      "before": "CREATE TABLE Search (",
+      "after": "CREATE TABLE Article ("
+    },
+    {
+      "line": 2808,
+      "id": "apisguru:tl-api.azurewebsites.net:get:/api/Package/Search",
+      "path": "/api/Package/Search",
+      "before": "CREATE TABLE Search (",
+      "after": "CREATE TABLE Package ("
+    },
+    {
+      "line": 2813,
+      "id": "apisguru:tokenjay.app:get:/mosaik/tokenburn/get/{uuid}",
+      "path": "/mosaik/tokenburn/get/{uuid}",
+      "before": "CREATE TABLE get (",
+      "after": "CREATE TABLE tokenburn ("
+    },
+    {
+      "line": 2844,
+      "id": "apisguru:trashnothing.com:get:/users/{user_id}/posts/search",
+      "path": "/users/{user_id}/posts/search",
+      "before": "CREATE TABLE search (",
+      "after": "CREATE TABLE posts ("
+    },
+    {
+      "line": 3101,
+      "id": "apisguru:vtex.local:get:/api/addon/pvt/giftlist/get/{listId}",
+      "path": "/api/addon/pvt/giftlist/get/{listId}",
+      "before": "CREATE TABLE get (",
+      "after": "CREATE TABLE giftlist ("
+    },
+    {
+      "line": 3245,
+      "id": "apisguru:zeno.fm:post:/api/v2/podcasts/{podcastKey}/episodes/create",
+      "path": "/api/v2/podcasts/{podcastKey}/episodes/create",
+      "before": "CREATE TABLE create (",
+      "after": "CREATE TABLE episodes ("
+    },
+    {
+      "line": 3400,
+      "id": "apisguru:browshot.com:get:/screenshot/create",
+      "path": "/screenshot/create",
+      "before": "CREATE TABLE create (",
+      "after": "CREATE TABLE screenshot ("
+    },
+    {
+      "line": 3401,
+      "id": "apisguru:browshot.com:get:/screenshot/delete",
+      "path": "/screenshot/delete",
+      "before": "CREATE TABLE delete (",
+      "after": "CREATE TABLE screenshot ("
+    },
+    {
+      "line": 3480,
+      "id": "apisguru:core.ac.uk:get:/articles/get/{coreId}",
+      "path": "/articles/get/{coreId}",
+      "before": "CREATE TABLE get (",
+      "after": "CREATE TABLE articles ("
+    },
+    {
+      "line": 3482,
+      "id": "apisguru:core.ac.uk:get:/repositories/get/{repositoryId}",
+      "path": "/repositories/get/{repositoryId}",
+      "before": "CREATE TABLE get (",
+      "after": "CREATE TABLE repositories ("
+    },
+    {
+      "line": 3684,
+      "id": "apisguru:instagram.com:get:/locations/search",
+      "path": "/locations/search",
+      "before": "CREATE TABLE search (",
+      "after": "CREATE TABLE locations ("
+    },
+    {
+      "line": 3893,
+      "id": "apisguru:osisoft.com:get:/analyses/search",
+      "path": "/analyses/search",
+      "before": "CREATE TABLE search (",
+      "after": "CREATE TABLE analyses ("
+    },
+    {
+      "line": 3906,
+      "id": "apisguru:osisoft.com:get:/analysistemplates/search",
+      "path": "/analysistemplates/search",
+      "before": "CREATE TABLE search (",
+      "after": "CREATE TABLE analysistemplates ("
+    },
+    {
+      "line": 3924,
+      "id": "apisguru:pendo.io:get:/users/search",
+      "path": "/users/search",
+      "before": "CREATE TABLE search (",
+      "after": "CREATE TABLE users ("
+    },
+    {
+      "line": 4228,
+      "id": "apisguru:visagecloud.com:get:/rest/v1.1/analysis/retrieve",
+      "path": "/rest/v1.1/analysis/retrieve",
+      "before": "CREATE TABLE retrieve (",
+      "after": "CREATE TABLE analysis ("
+    }
+  ]
+}

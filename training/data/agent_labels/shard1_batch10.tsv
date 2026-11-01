@@ -1,0 +1,50 @@
+1351	manual_review_required	0.55	Summary binds authorized apps to the requesting account, but pagination-only ERD cannot express a verified ownership lookup.
+1354	manual_review_required	0.55	Available-phone-number metadata uses account authentication without a verified caller-account or unrestricted-access policy.
+1357	manual_review_required	0.50	Health action update has plan relationships but unknown security and no verified patient-owner binding.
+1360	manual_review_required	0.50	Coach detail retrieval has unknown security and no explicit unrestricted-access or caller-role statement.
+1363	manual_review_required	0.55	Token group listing has group and organization OAuth permissions but wrappers provide no verified tenant lookup.
+1366	manual_review_required	0.55	List owner_id and private fields describe conditional access, but no verified binding determines owner-only versus broader retrieval.
+1369	manual_review_required	0.55	Removing a list member requires list.write permission but response membership status does not establish the caller's ownership.
+1372	manual_review_required	0.55	Account retrieval requires bearer authentication but only a data wrapper is supplied for authorization analysis.
+1375	manual_review_required	0.55	Payment-change listing filters payorId without a verified caller-payor relationship in the response.
+1378	manual_review_required	0.55	Webhook payorId is an inferred business relation rather than a verified owner or tenant lookup.
+1381	manual_review_required	0.55	Deployment-check update accepts teamId but response status fields cannot establish caller-tenant authorization.
+1384	manual_review_required	0.55	Edge-config creation has teamId context but no verified team mapping or required caller role.
+1387	manual_review_required	0.55	Edge-config item retrieval has teamId query context without any tenant relation in item fields.
+1390	manual_review_required	0.55	Travel taxonomy uses API-key alternatives without affirmative unrestricted-access evidence.
+1393	manual_review_required	0.55	Channel user and moderation interactions are inferred metadata; edit permission does not establish a single owner policy.
+1396	manual_review_required	0.55	Replacing channel moderators targets privilege assignments but does not state the calling user's required role or owner lookup.
+1399	manual_review_required	0.55	Permitting private-channel viewers changes an ACL, and no verified caller authorization relation is supplied.
+1402	manual_review_required	0.55	Activity ownerUser, createdBy and projectOwnerGuid imply multiple possible subjects without a verified lookup binding.
+1405	manual_review_required	0.55	Activity participant detail requires read permission but participantGuid does not prove the caller owns the participant record.
+1408	manual_review_required	0.55	Activity-type createdBy is provenance; settings:write permission does not establish owner-only update or an admin role.
+1411	manual_review_required	0.55	Summary scopes bank accounts to the current organization, but flattened company and businessUnit fields do not verify the tenant lookup.
+1414	manual_review_required	0.55	Sales order includes owner, customer and project metadata without a verified caller authorization relationship.
+1417	manual_review_required	0.55	Sales-order discounts require OAuth read permission but no ownership or tenant lookup fields are supplied.
+1420	manual_review_required	0.55	Environment ownerId and organizationId are competing inferred subjects without verified binding or an explicit access rule.
+1423	manual_review_required	0.55	Environment archive has owner and organization hints but no verified authorization mapping for archive retrieval.
+1426	manual_review_required	0.55	Environment folder mutation includes ownerId and organizationId without a proved choice of individual versus tenant access.
+1429	manual_review_required	0.55	Environment shutdown is bearer-authenticated but inferred owner and organization metadata do not verify its policy binding.
+1432	manual_review_required	0.55	Switch username is a datasource credential rather than a caller owner; API-key authentication gives no specific policy.
+1435	manual_review_required	0.55	SNMP username and passwords configure a switch, not the caller's role or ownership relation.
+1438	manual_review_required	0.55	Brocade SNMP configuration retrieval has an API key but no explicit caller privilege or verified object binding.
+1441	manual_review_required	0.55	Firewall datasource credentials describe the target connection without identifying the caller's authorization policy.
+1444	manual_review_required	0.55	Cisco SNMP credentials are target configuration; no verified owner or concrete caller role is supplied.
+1447	manual_review_required	0.50	Activity entry userId filter and result wrappers do not establish owner-only or unrestricted access.
+1450	manual_review_required	0.50	Album-comment author fields describe created content but no caller authorization or album lookup is supplied.
+1453	manual_review_required	0.50	Album user-collections mix user and purchase metadata with unknown security, leaving access restrictions unresolved.
+1456	manual_review_required	0.50	Artist-comment author is attribution and no affirmative unrestricted-access statement or owner binding is present.
+1459	manual_review_required	0.55	Account location listing has bearer authentication but only wrappers and no verified caller-account relationship.
+1462	manual_review_required	0.55	Extension user metadata and account path context do not establish a verified ownership or tenant lookup.
+1465	manual_review_required	0.55	Account user detail has nested account/user IDs but no verified caller-to-account or self-access mapping.
+1468	manual_review_required	0.55	Self-call answer suggests caller scope but accountId and userId are inferred fields without verified lookup semantics.
+1471	manual_review_required	0.55	Self-call transfer has personal context yet inferred userId and accountId do not establish a verified authorization binding.
+1474	manual_review_required	0.55	Catalog attachment retrieval requires app key and token without a concrete caller authorization policy.
+1477	manual_review_required	0.55	Collection SKU repositioning uses app credentials but has no owner, tenant or explicit caller-role evidence.
+1480	manual_review_required	0.55	Wallet issuer OAuth permission does not establish an application role or ticket-holder ownership; inferred holder data is not a lookup.
+1483	manual_review_required	0.55	App-client createdBy is provenance and appclients:write does not prove creator-only mutation or an admin role.
+1486	manual_review_required	0.55	Asset createdBy and assetId are inferred without verified caller ownership or key binding.
+1489	manual_review_required	0.55	Dataset createdBy is metadata; datasets:write permission does not establish an owner-only authorization relationship.
+1492	manual_review_required	0.55	Document createdBy and datasetId are inferred provenance/context without a verified caller-access mapping.
+1495	manual_review_required	0.50	Application information has unknown security and only descriptive fields, not an ownership or public-access policy.
+1498	manual_review_required	0.50	Adding a job task has unknown security and only error-like response fields, leaving authorization unresolved.

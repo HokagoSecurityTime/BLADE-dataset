@@ -1,0 +1,3 @@
+# relay_forum
+
+v3.0 group-membership synthetic fixture (train-only). Bearer tokens: alice (north, member of g_north_hikers), bob (south, member of g_south_riders), carol (north, member of g_south_riders), admin (north, admin, no memberships). Objects 1/alice/north/g_north_hikers, 2/bob/south/g_south_riders, 3/carol/north/g_south_riders (cross-tenant group). membership_required routes check (caller_id, record.group_id) in MEMBERSHIPS — not a plan, tier or tenant. council routes require tenant match AND group membership (two independent conditions → manual_review_required). archive variants omit the indicated authorization check. OpenAPI is exported by FastAPI (app.openapi()), not hand-written.

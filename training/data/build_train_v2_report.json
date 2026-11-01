@@ -1,0 +1,43 @@
+{
+  "records": 971,
+  "sources": {
+    "train_v30": 471,
+    "synthetic_v2": 129,
+    "gitea": 371
+  },
+  "gitea_share": 0.3821,
+  "cap_40_applied": false,
+  "gitea_visibility_override": 96,
+  "gitea_owner_or_admin_pooled": 84,
+  "gitea_label_dist": {
+    "public": 12,
+    "role_required": 37,
+    "membership_required": 8,
+    "tenant_match": 0,
+    "owner_match": 36,
+    "owner_or_admin": 0,
+    "manual_review_required": 278
+  },
+  "train_label_dist": {
+    "public": 47,
+    "role_required": 161,
+    "membership_required": 55,
+    "tenant_match": 52,
+    "owner_match": 182,
+    "owner_or_admin": 32,
+    "manual_review_required": 442
+  },
+  "manual_share": 0.4552,
+  "val": "val_v30.jsonl (unchanged, 52)",
+  "outputs_sha256": {
+    "train_v2_draft.jsonl": "20e706143ef517b65077eaaf47fded8cc63ff993b5ace715f112fe0d61f9c612",
+    "gitea_train_pool_v2.jsonl": "ea69b95c29ee758e4c2226644b5b98a8fda280012312445f04e2d1bf49195401"
+  },
+  "inputs_sha256": {
+    "train_v30.jsonl": "a99d30da2d29907e8e3fc2d1b8ef313c3d2aa24b1539251130bd08cf96b829e2",
+    "data_v2_synthetic_additions.jsonl": "3e6cee803968a5a062f5b834648f143560b46ed48f1ad707dd6c66d3f138c81c",
+    "gitea_v28.2.0_labeled_v301.jsonl": "3aac8843315d30dc473bae38409f83866b7c077aa0591ab6285470d335e274fc"
+  },
+  "services": 186,
+  "status": "draft until data-v2 freeze (human review of review_sample_gitea / public_candidate pending)"
+}

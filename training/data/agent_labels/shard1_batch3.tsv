@@ -1,0 +1,50 @@
+301	manual_review_required	0.50	Organization addons expose provider and plan descriptions but no verified tenant authorization relationship.
+304	manual_review_required	0.55	School district retrieval authenticates with OAuth without specifying a caller-to-school access relation.
+307	manual_review_required	0.55	Aggregated datapoint statistics require an API key but provide only pagination and result wrappers.
+310	manual_review_required	0.55	Contact organization_name is address-book metadata, not a verified tenant lookup for contact update.
+313	manual_review_required	0.55	Company balance-sheet accounts have a company path but report metadata cannot establish caller tenancy.
+316	manual_review_required	0.55	Company profit-and-loss report requires authentication without a verified company authorization mapping.
+319	manual_review_required	0.55	Company integrity summaries have only a summaries wrapper and no tenant lookup fields.
+322	manual_review_required	0.55	Company marketing metrics include connection context but no verified caller access rule.
+325	manual_review_required	0.55	Account category lookup has company and connection IDs but inferred accountRef does not establish ownership or tenancy.
+328	manual_review_required	0.55	Advanced game box scores require API-key authentication without explicit unrestricted-access evidence.
+331	manual_review_required	0.55	Football team identifies sporting data rather than an authorization tenant, and API access policy is unspecified.
+334	manual_review_required	0.55	Player season statistics include team data but no explicit unrestricted access or caller membership requirement.
+337	manual_review_required	0.50	Provisioning-job detail has unknown security and no resource owner relationship.
+340	manual_review_required	0.55	Config organization and permission-group links are inferred metadata without a verified tenant lookup.
+343	manual_review_required	0.55	Setting-values response includes organizationId but no verified company-to-caller mapping or lookup key.
+346	manual_review_required	0.55	Environment update includes organization metadata but Basic authentication does not establish tenant authorization.
+349	manual_review_required	0.55	Setting creatorEmail is provenance, not evidence of creator-only mutation or an ownership lookup.
+352	manual_review_required	0.55	JWT authentication endpoint explicitly requires a JWT to obtain a token; empty security alone does not prove an unrestricted policy.
+355	manual_review_required	0.55	Account authentication-service status requires conjurAuth and is not an explicitly unrestricted liveness probe.
+358	manual_review_required	0.55	Inbox API-key roles and user are response attributes without a stated caller role or ownership binding.
+361	manual_review_required	0.55	Editing an API key uses Basic or token authentication, while returned roles do not define the caller's required role.
+364	manual_review_required	0.50	Assignment allowsAnonymousContributions and open flags are data values, not affirmative authorization for this read.
+367	manual_review_required	0.50	Contribution moderation suggests privileged action but does not identify a concrete role or verified object authorization rule.
+370	manual_review_required	0.50	Form ownedBy is inferred with no specified caller relationship or verified lookup binding.
+373	manual_review_required	0.50	Linked user-profile retrieval has unknown security and no verified owner-only access evidence.
+376	manual_review_required	0.55	My-user import listing is explicitly self-scoped but has no object lookup fields; OAuth user scope is not an application role.
+379	manual_review_required	0.55	User adminFlags and role fields do not prove an administrator requirement or owner lookup for this update.
+382	manual_review_required	0.50	User two-factor request has unknown security and token-response fields without an ownership binding.
+385	manual_review_required	0.50	PropertyOwnership describes a registry-check result, not API caller authorization, and security is unspecified.
+388	manual_review_required	0.55	Screenshot comparison's public_url field does not make this Basic-authenticated comparison operation unrestricted.
+391	manual_review_required	0.55	Summary restricts conversations to a token bubble, but pagination-only ERD cannot map that access boundary to a supported lookup.
+394	manual_review_required	0.55	Same-bubble conversation access involves user_a and user_b without a single verified owner lookup or tenant mapping.
+397	public	0.80	Published-article listing explicitly permits anonymous authentication with security=[]; user and organization fields are article attribution rather than an owner-only restriction.
+400	manual_review_required	0.55	Record creator and copyright describe collection metadata; API-key security does not establish unrestricted API access.
+403	manual_review_required	0.55	Admin user inspection suggests privilege but the object branch lacks a verified subject binding and explicit allowed caller roles.
+406	manual_review_required	0.55	Admin user silencing is privileged-looking but supplied text does not resolve the role-versus-object policy or lookup.
+409	manual_review_required	0.50	Category-topic listing has unknown security and can_create_topic is response data, not unrestricted-read evidence.
+412	manual_review_required	0.50	Container User denotes process configuration rather than API ownership, and caller authorization is unspecified.
+415	manual_review_required	0.50	Node Role is a node attribute rather than a required caller role; security is unknown.
+418	manual_review_required	0.50	API-license lookup returns customer metadata but no verified subject relationship or explicit required membership tier.
+421	manual_review_required	0.55	System-event listing requires OAuth, while user_id filtering does not establish owner-only access or an administrator role.
+424	manual_review_required	0.55	Group-member removal exposes groupRoles and createdBy but does not identify the caller's required role or ownership mapping.
+427	manual_review_required	0.55	Node-comment createdBy is flattened authorship data with no verified owner-only edit rule or lookup binding.
+430	manual_review_required	0.55	Amendment access is explicitly limited to the creating API application, but no application ownership column is supplied.
+433	manual_review_required	0.55	Billing-note created_by is inferred and billing OAuth scopes do not establish owner-only access.
+436	manual_review_required	0.55	Custom policy retrieval has seller-account OAuth permissions but no supplied account ownership binding.
+439	manual_review_required	0.55	Fulfillment policy marketplaceId denotes marketplace context rather than caller tenant identity.
+442	manual_review_required	0.55	Organization update uses OAuth but inferred id and contact fields do not verify tenant lookup semantics.
+445	manual_review_required	0.55	Deployment createdBy and userEmail are provenance hints without a verified caller-owner relationship.
+448	manual_review_required	0.50	Changing order shipping details has unknown security and only address fields, not an order ownership lookup.

@@ -1,0 +1,451 @@
+{
+ "data_version": "data-v3-stage1b",
+ "built_by": "training/data/build_data_v3_pairs_1b.py",
+ "seed": 42,
+ "frozen": false,
+ "stage1_inputs": {
+  "pairs_train_v3s1.jsonl": "fddf09bf1b046cea83a2227e98870831f0df58ad0ba3e6011a27cb6d83fb6418",
+  "pairs_val_v3s1.jsonl": "b3816655df0d01f6a9c2e248ffc443a48229644eca080b5ef02b1b98c4553265"
+ },
+ "stage1_reproduced": {
+  "pairs_train_v3s1.jsonl": "fddf09bf1b046cea83a2227e98870831f0df58ad0ba3e6011a27cb6d83fb6418",
+  "pairs_val_v3s1.jsonl": "b3816655df0d01f6a9c2e248ffc443a48229644eca080b5ef02b1b98c4553265"
+ },
+ "variant_rules": [
+  {
+   "rule": "drop_owner_or_admin",
+   "keep": false,
+   "reason": "소유자 부분은 경로로 보이지만 관리자 우회는 경로·스키마·본문으로 알 수 없음"
+  },
+  {
+   "rule": "drop_check_in_sql",
+   "keep": false,
+   "reason": "검사가 SQL 문자열 안에 있어 줄 단위로 제거할 수 없음"
+  },
+  {
+   "rule": "keep_realworld_article_comment_write",
+   "keep": true,
+   "reason": "RealWorld 게시글·댓글 수정/삭제: 경로·메서드로 작성자 정책이 드러남"
+  },
+  {
+   "rule": "keep_reference_data_write",
+   "keep": true,
+   "reason": "공용 기준 데이터(pettypes·specialties·vets) 생성/수정/삭제 = 관리 역할"
+  },
+  {
+   "rule": "drop_reference_data_read",
+   "keep": false,
+   "reason": "기준 데이터 조회는 경로상 일반 조회로 보임"
+  },
+  {
+   "rule": "drop_owner_pet_visit",
+   "keep": false,
+   "reason": "owners·pets·visits는 소유자 관점(owner_match)으로 읽혀 직원 역할 의도를 알 수 없음"
+  },
+  {
+   "rule": "keep_user_create_or_list",
+   "keep": true,
+   "reason": "사용자 생성·전체 목록 = 관리자 기능(가입은 별도 엔드포인트)"
+  },
+  {
+   "rule": "drop_user_by_id_write",
+   "keep": false,
+   "reason": "/users/{id} 수정·삭제는 본인 수정·탈퇴로도 읽힘"
+  },
+  {
+   "rule": "keep_user_self_subresource",
+   "keep": true,
+   "reason": "본인만(관리자 경로 없음) 쓰는 /users/{id} 하위 보안 자원(webhooks·토큰·연동 계정): 경로로 owner_match 의도가 드러남"
+  },
+  {
+   "rule": "drop_user_subresource",
+   "keep": false,
+   "reason": "/users/{id} 하위 자원의 관리자 우회(self_or_admin)는 경로로 알 수 없음"
+  },
+  {
+   "rule": "drop_utility_endpoint",
+   "keep": false,
+   "reason": "유틸 엔드포인트는 경로로 관리자 의도를 알 수 없음"
+  }
+ ],
+ "petclinic_cap": 24,
+ "petclinic_capped_pairs": [
+  "v3s1-09802dac9fe4",
+  "v3s1-0defe464c415",
+  "v3s1-13547c6063bc",
+  "v3s1-2293ae988865",
+  "v3s1-3057ccccf2ea",
+  "v3s1-412615549611",
+  "v3s1-45b813bc2d44",
+  "v3s1-54ae16e6763a",
+  "v3s1-5b2b92621d2d",
+  "v3s1-73189440afda",
+  "v3s1-731efbb971e7",
+  "v3s1-84cf72d4ca91",
+  "v3s1-876f97ce1364",
+  "v3s1-89e131a9f056",
+  "v3s1-95bfd64d7913",
+  "v3s1-9912d711f9cb",
+  "v3s1-a6d715ef6e8c",
+  "v3s1-aef763073a7e",
+  "v3s1-c1c330f93949",
+  "v3s1-c98e266be0a2",
+  "v3s1-cd0141e56d21",
+  "v3s1-e99388b585bd"
+ ],
+ "new_repositories": {
+  "rw_nest": {
+   "repo": "adr1enbe4udou1n/nestjs-realworld-example-app",
+   "commit": "d4ddf3fd9ebd9112f117c0c6b2c5de3a76815c0c",
+   "lang": "typescript",
+   "framework": "NestJS",
+   "license": "none declared",
+   "stars": 24,
+   "split": "train",
+   "oas": "generated",
+   "why": "RealWorld NestJS: first by stars with explicit owner checks (lujakob 3364, mikro-orm 344, mutoe 44, neo4j-examples 48: no check in update/delete)",
+   "clone_dir": "datasets/blade/raw/opensource/adr1enbe4udou1n_nestjs-realworld-example-app"
+  },
+  "rw_laravel": {
+   "repo": "gothinkster/laravel-realworld-example-app",
+   "commit": "e45c37c8a5f57131c9d239f1fc104c227e66b6ee",
+   "lang": "php",
+   "framework": "Laravel",
+   "license": "MIT",
+   "stars": 1200,
+   "split": "train",
+   "oas": "generated",
+   "why": "RealWorld Laravel, most stars (FormRequest::authorize owner check)",
+   "clone_dir": "datasets/blade/raw/opensource/gothinkster_laravel-realworld-example-app"
+  },
+  "rw_aspnet": {
+   "repo": "realworld-apps/aspnetcore-realworld-example-app",
+   "commit": "8aa617abed5dd645f8f9d99578a3e07b4e2e52e7",
+   "lang": "csharp",
+   "framework": "ASP.NET Core",
+   "license": "MIT",
+   "stars": 2094,
+   "split": "val",
+   "oas": "generated",
+   "why": "RealWorld ASP.NET Core, most stars; val (C#)",
+   "clone_dir": "datasets/blade/raw/opensource/realworld-apps_aspnetcore-realworld-example-app"
+  },
+  "rw_kotlin": {
+   "repo": "gothinkster/kotlin-spring-realworld-example-app",
+   "commit": "848c29e3abfe1bd72001cc7d7a3227aebec96e9b",
+   "lang": "kotlin",
+   "framework": "Spring Boot (Kotlin)",
+   "license": "none declared",
+   "stars": 476,
+   "split": "train",
+   "oas": "generated",
+   "why": "RealWorld Kotlin Spring, most stars",
+   "clone_dir": "datasets/blade/raw/opensource/gothinkster_kotlin-spring-realworld-example-app"
+  },
+  "rw_koa": {
+   "repo": "gothinkster/koa-knex-realworld-example",
+   "commit": "602e234139c453825eb3939cf24bdf00fc164e0e",
+   "lang": "javascript",
+   "framework": "Koa",
+   "license": "none declared",
+   "stars": 232,
+   "split": "train",
+   "oas": "generated",
+   "why": "RealWorld Koa, most stars (comment delete has no check)",
+   "clone_dir": "datasets/blade/raw/opensource/gothinkster_koa-knex-realworld-example"
+  },
+  "rw_fastify": {
+   "repo": "avanelli/fastify-realworld-example-app",
+   "commit": "bdb8ce4e130916a76970d8df1bf1a3291d0f5227",
+   "lang": "javascript",
+   "framework": "Fastify",
+   "license": "MIT",
+   "stars": 25,
+   "split": "val",
+   "oas": "generated",
+   "why": "RealWorld Fastify, most stars; val (JS)",
+   "clone_dir": "datasets/blade/raw/opensource/avanelli_fastify-realworld-example-app"
+  },
+  "rw_fastapi": {
+   "repo": "nsidnev/fastapi-realworld-example-app",
+   "commit": "029eb7781c60d5f563ee8990a0cbfb79b244538c",
+   "lang": "python",
+   "framework": "FastAPI",
+   "license": "MIT",
+   "stars": 3100,
+   "split": "train",
+   "oas": "generated",
+   "why": "RealWorld FastAPI, most stars (permission dependency)",
+   "clone_dir": "datasets/blade/raw/opensource/nsidnev_fastapi-realworld-example-app"
+  },
+  "memos": {
+   "repo": "usememos/memos",
+   "commit": "6387991fdd1d1ae491b8435708357fa334e19f3a",
+   "lang": "go",
+   "framework": "Connect/gRPC-gateway",
+   "license": "MIT",
+   "stars": 64084,
+   "split": "train",
+   "oas": "repository_spec",
+   "oas_file": "proto/gen/openapi.yaml",
+   "why": "owner_or_admin source: \"self or admin\" checks on user resources, reaction \"creator or admin\"",
+   "clone_dir": "datasets/blade/raw/opensource/usememos_memos"
+  },
+  "kutt": {
+   "repo": "thedevs-network/kutt",
+   "commit": "029da42b2459693681886665589fd9512d6b473c",
+   "lang": "javascript",
+   "framework": "Express",
+   "license": "MIT",
+   "stars": 11172,
+   "split": "train",
+   "oas": "generated",
+   "why": "owner_or_admin source: link lookup scoped to the requester unless admin",
+   "clone_dir": "datasets/blade/raw/opensource/thedevs-network_kutt"
+  }
+ },
+ "new_source_files": [
+  {
+   "repo": "kutt",
+   "file": "server/handlers/links.handler.js",
+   "sha256": "c5896c86661285f9e75af74300da48ee76afb7d2a88343505dfba23db37ad53c"
+  },
+  {
+   "repo": "memos",
+   "file": "server/api/reaction_service.go",
+   "sha256": "010449e8dd087bd74f01a061e46a968161fb5f007bb85e060c399cabe8aabc2b"
+  },
+  {
+   "repo": "memos",
+   "file": "server/api/user_service.go",
+   "sha256": "d5a2f8396274fcefc58e1363e4a813136e174715960429b562dd97e53891e2eb"
+  },
+  {
+   "repo": "memos",
+   "file": "server/api/user_service_access_tokens.go",
+   "sha256": "34d60e14ce3adb3f6c9b66c3f330a261bb807db9f5731024ecd77c6294454514"
+  },
+  {
+   "repo": "memos",
+   "file": "server/api/user_service_identities.go",
+   "sha256": "79ef1be469284e790a9c36fd461e324d283fe4fbed5ea898313e2c463f201815"
+  },
+  {
+   "repo": "memos",
+   "file": "server/api/user_service_settings.go",
+   "sha256": "984fa2029d4e93b4108a08e3ba3b9a81ecb86c56bc2612735324ebb83ed23023"
+  },
+  {
+   "repo": "memos",
+   "file": "server/api/user_service_usage.go",
+   "sha256": "1c14fa151fc21de9f7073a3479f54088e3864c3fb1361790715452e5d92dea10"
+  },
+  {
+   "repo": "memos",
+   "file": "server/api/user_service_webhooks.go",
+   "sha256": "2024418438a0dfb102abff9f46f7e445e920c61c0160cc646ef65181263390a2"
+  },
+  {
+   "repo": "rw_aspnet",
+   "file": "src/Conduit/Features/Articles/ArticlesController.cs",
+   "sha256": "37e5234194d8ac1c95ef2713f88a996eac31d5577dc33620288bfb97e81291c1"
+  },
+  {
+   "repo": "rw_aspnet",
+   "file": "src/Conduit/Features/Articles/Delete.cs",
+   "sha256": "191678666de36efe17533041c66c794991cacbd41ed263654722c3b075d48aca"
+  },
+  {
+   "repo": "rw_aspnet",
+   "file": "src/Conduit/Features/Articles/Edit.cs",
+   "sha256": "c1668ffe9730e72f65db427b03ea4372b6744c1cfe2a3e7ac805218b53404634"
+  },
+  {
+   "repo": "rw_aspnet",
+   "file": "src/Conduit/Features/Comments/CommentsController.cs",
+   "sha256": "53902975e478182b9ea20605c68f234c2676e207ed106df04ad1fdae1044f6af"
+  },
+  {
+   "repo": "rw_aspnet",
+   "file": "src/Conduit/Features/Comments/Delete.cs",
+   "sha256": "7fcda1a086c68ddb266034603e7e3841f7d5ea048eb65b2a31881a78b304ae8f"
+  },
+  {
+   "repo": "rw_fastapi",
+   "file": "app/api/dependencies/articles.py",
+   "sha256": "4a995cb6ac79b24e9e9a78b75af913cee0e9726d29d99f4da1ca811a3ab4a992"
+  },
+  {
+   "repo": "rw_fastapi",
+   "file": "app/api/dependencies/comments.py",
+   "sha256": "da134fe220078c78a4e8a53a52c8206c2d4e45f054e0a945dbf896da676bf111"
+  },
+  {
+   "repo": "rw_fastapi",
+   "file": "app/api/routes/articles/articles_resource.py",
+   "sha256": "198de715ad140af5318bfb031f15ffe50bba2457b050d32bef50c0e271f34fa5"
+  },
+  {
+   "repo": "rw_fastapi",
+   "file": "app/api/routes/comments.py",
+   "sha256": "fd955adf65f4fe98f22e24ab5d0e4b77e82109a3eb81c21219638599abc56ef2"
+  },
+  {
+   "repo": "rw_fastapi",
+   "file": "app/services/articles.py",
+   "sha256": "88bf9e7081e7354085f6cd22d5a4b589968dfe4a9a27626c3fd3cdaa0950c434"
+  },
+  {
+   "repo": "rw_fastapi",
+   "file": "app/services/comments.py",
+   "sha256": "7eb23db8d72a537be4a4a69749424f57e7adf52208687d5579c1e2614fcb6abb"
+  },
+  {
+   "repo": "rw_fastify",
+   "file": "lib/models/articles.js",
+   "sha256": "5394048788d5bff6de114e5d6197583f5c40a59b6b3104751df8deb81c35efcb"
+  },
+  {
+   "repo": "rw_fastify",
+   "file": "lib/models/comments.js",
+   "sha256": "e22354077bd4fb70153ed6807d66a149df1a1594f7e49ac7fa40ccde542404e0"
+  },
+  {
+   "repo": "rw_fastify",
+   "file": "lib/routes/articles/index.js",
+   "sha256": "f23278aa3c3f808780fd2bee748f357579217439af31699a271955995bf48f8c"
+  },
+  {
+   "repo": "rw_fastify",
+   "file": "lib/routes/comments/index.js",
+   "sha256": "5252735f39cb773d5d3940c5adf2817ec01cc4075e976c1a4d5c2003e8a04405"
+  },
+  {
+   "repo": "rw_koa",
+   "file": "src/controllers/articles-controller.js",
+   "sha256": "071d19995ba37ac2a2a4c9608358f3525e857f5f07893fd34901753d89dfab89"
+  },
+  {
+   "repo": "rw_kotlin",
+   "file": "src/main/kotlin/io/realworld/web/ArticleHandler.kt",
+   "sha256": "04fb657eeb9273e030c9ddae1c3d2bd5a9b4bb81b864c1caca6519cdc6eabdf6"
+  },
+  {
+   "repo": "rw_laravel",
+   "file": "app/Http/Controllers/Api/ArticleController.php",
+   "sha256": "1e39d882f8a7daa6627b92581a2d4275ad81201f7df9bc78c457ed67870cfc76"
+  },
+  {
+   "repo": "rw_laravel",
+   "file": "app/Http/Controllers/Api/CommentController.php",
+   "sha256": "5800a058edb444226e41307c1b833fa4b923a73b37a60eddee536a7122271a6d"
+  },
+  {
+   "repo": "rw_laravel",
+   "file": "app/Http/Requests/Api/DeleteArticle.php",
+   "sha256": "8ea8f1cf4fb3d8981865742044247b83490d2d50edf4da1a093cbee5e7083c8a"
+  },
+  {
+   "repo": "rw_laravel",
+   "file": "app/Http/Requests/Api/DeleteComment.php",
+   "sha256": "1a3dd045e943875d2dead4368f55b1135d1f3aef8c6118409ad9cfe8ad6ba838"
+  },
+  {
+   "repo": "rw_laravel",
+   "file": "app/Http/Requests/Api/UpdateArticle.php",
+   "sha256": "389b77923b9b55c039eb5a21eb88053506c9b8548811cdfd07c3aaa22e2d36a4"
+  },
+  {
+   "repo": "rw_nest",
+   "file": "src/articles/articles.controller.ts",
+   "sha256": "c089ac892682afb5e44c0a657b57d25158f61cf5db1ec57172d1881da0dbe518"
+  },
+  {
+   "repo": "rw_nest",
+   "file": "src/articles/articles.service.ts",
+   "sha256": "50622d81a51c3f58a6e0a9d007296258f37f2bd5eecd5c8ca4dc593e2b8135d9"
+  },
+  {
+   "repo": "rw_nest",
+   "file": "src/articles/comments/comments.controller.ts",
+   "sha256": "c3a09c1552f2962ac03c76842f2f7a59b85e2d88ddba51fb53749b646bc15f7e"
+  },
+  {
+   "repo": "rw_nest",
+   "file": "src/articles/comments/comments.service.ts",
+   "sha256": "d8a20a0248e5ebff68cadffcb340d0b1658aa884b9750a812df4956d97dc389e"
+  }
+ ],
+ "outputs": {
+  "datasets/blade/processed/data_v3_stage1b/pairs_train_v3s1b.jsonl": {
+   "records": 109,
+   "sha256": "cc34308a149dee2d92998087002e6f63ab771d083cae07f5604d6828fdfab303"
+  },
+  "datasets/blade/processed/data_v3_stage1b/pairs_val_v3s1b.jsonl": {
+   "records": 28,
+   "sha256": "f1826e1c24957e42abbf4d60b6bc5aaeabbf99bd0b60893d1b9014bc8ccf7138"
+  }
+ },
+ "detection_new": {
+  "hits": 85,
+  "adopted": 67,
+  "excluded": 18
+ },
+ "excluded_new": [],
+ "exclusion_rules_new": [
+  {
+   "repo": "rw_nest",
+   "file": "src/articles/comments/comments.service.ts",
+   "pattern": "article\\.id !== comment\\.articleId",
+   "reason": "comment-belongs-to-article integrity check, not authorization"
+  },
+  {
+   "repo": "rw_fastapi",
+   "file": null,
+   "pattern": "^from |^\\s+check_(article|comment)_modification_permissions,$|^\\s+check_user_can_modify_(article|comment),$|^import ",
+   "reason": "import line"
+  },
+  {
+   "repo": "rw_aspnet",
+   "file": null,
+   "pattern": "^using ",
+   "reason": "using line"
+  },
+  {
+   "repo": "rw_kotlin",
+   "file": "src/main/kotlin/io/realworld/web/ArticleHandler.kt",
+   "pattern": "^import ",
+   "reason": "import line"
+  },
+  {
+   "repo": "memos",
+   "file": "server/api/user_service.go",
+   "pattern": ".",
+   "reason": "other user_service handlers (admin-only create/list/role change, self-delete flags): not selected in this stage"
+  },
+  {
+   "repo": "memos",
+   "file": "server/api/user_service_access_tokens.go",
+   "pattern": "authorizeUserResourceAccess\\(ctx, userID, (true|false)\\)|PermissionDenied",
+   "reason": "helper call / denial inside an adopted handler span is counted there; outside spans none"
+  },
+  {
+   "repo": "memos",
+   "file": null,
+   "pattern": "^import |^\\s+\"google\\.golang\\.org/grpc/codes\"$",
+   "reason": "import line"
+  },
+  {
+   "repo": "memos",
+   "file": "server/api/reaction_service.go",
+   "pattern": "ErrReactionPermissionDenied|codes\\.PermissionDenied, \"permission denied\"\\)$",
+   "reason": "mapReactionMutationError: store error -> status mapping, not a check"
+  },
+  {
+   "repo": "kutt",
+   "file": "server/handlers/links.handler.js",
+   "pattern": ".",
+   "reason": "other link handlers (admin table, ban, report, create): not selected in this stage"
+  }
+ ]
+}

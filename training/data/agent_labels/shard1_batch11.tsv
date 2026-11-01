@@ -1,0 +1,50 @@
+1501	manual_review_required	0.55	Connections are for this user but tenantId and authEventId do not supply a verified user lookup.
+1504	manual_review_required	0.55	Invoice customerId identifies a billing subject without a verified relation to the caller.
+1507	manual_review_required	0.55	Adding invoice payment requires authentication but payment fields lack invoice-owner mapping.
+1510	manual_review_required	0.50	Account listing has only an account wrapper and unknown security.
+1513	manual_review_required	0.50	Financial-account update has no verified caller identity relationship.
+1516	manual_review_required	0.50	Provider wrapper gives no affirmative unrestricted-access or caller-policy statement.
+1519	manual_review_required	0.55	Budget account creation lacks a verified budget-owner relationship.
+1522	manual_review_required	0.55	Budget-category wrappers lack a verified budget-owner lookup.
+1525	manual_review_required	0.55	Webhook ownerId and teamId leave personal versus team authorization ambiguous.
+1528	manual_review_required	0.55	Podcast ownerEmail and author are publication attribution, not a caller-owner rule.
+1531	manual_review_required	0.55	Episode author is attribution and API-key authentication does not establish public access.
+1534	manual_review_required	0.55	Billing contact data lacks verified account-to-caller mapping.
+1537	manual_review_required	0.55	Invoice retrieval has account context but no account relationship in inferred invoice fields.
+1540	manual_review_required	0.55	Managed-domains wrappers cannot establish account authorization lookup.
+1543	manual_review_required	0.55	BYOC mutation has OAuth but only configuration flags, not a caller relationship.
+1546	manual_review_required	0.55	SIP carrier_account is provider configuration, not verified caller ownership.
+1549	manual_review_required	0.50	Event-trigger update has unknown security and no caller authorization relationship.
+1552	manual_review_required	0.50	Task accountId, createdBy and tenantId leave authorization subject ambiguous.
+1555	manual_review_required	0.50	Job CreatedById is inferred provenance without verified owner binding.
+1558	manual_review_required	0.50	Record CreatedById does not establish owner-only mutation.
+1561	manual_review_required	0.55	Block creation has username context but layout fields lack ownership binding.
+1564	manual_review_required	0.55	Block replacement lacks verified username-to-dashboard lookup.
+1567	manual_review_required	0.55	Dashboard metadata lacks the owner relationship implied by username path.
+1570	manual_review_required	0.55	Feed visibility and shared_with suggest multiple access modes without verified ownership.
+1573	manual_review_required	0.55	Feed-data feed_id and group_id lack verified caller-user mapping.
+1576	manual_review_required	0.55	Content-analysis task result has authentication but no owner relationship.
+1579	manual_review_required	0.55	Face-analysis task result lacks supplied task-owner relation.
+1582	manual_review_required	0.55	Empty security does not alone establish unrestricted build-artifact object access.
+1585	manual_review_required	0.55	Deployment/project wrappers do not establish authorization binding.
+1588	manual_review_required	0.50	Appointment creatorResourceID and resourceID have unspecified caller relationship.
+1591	manual_review_required	0.50	Attachment company, project and creator relations lack verified authorization choice.
+1594	manual_review_required	0.55	CompanyIDFK is a response-property name, not verified database FK or caller-tenant evidence.
+1597	manual_review_required	0.55	Financial-read scope and pagination do not specify payment authorization.
+1600	manual_review_required	0.50	Support plans are products rather than required caller membership tiers.
+1603	manual_review_required	0.50	Subscription support-plan update lacks verified tenant lookup or required role.
+1606	manual_review_required	0.50	Artist events and app_id do not affirm unrestricted API access.
+1609	manual_review_required	0.50	My favorites suggest personal scope but wrappers provide no owner lookup.
+1612	manual_review_required	0.50	Preauthorization completion lacks caller-to-transaction mapping.
+1615	manual_review_required	0.50	Dictionary word retrieval has no affirmative unrestricted-access statement.
+1618	manual_review_required	0.55	Browser information requires API key without a specified authorization policy.
+1621	manual_review_required	0.50	Social-profile user_id and team_members leave shared versus owner access unresolved.
+1624	manual_review_required	0.50	Social-update user_id lacks explicit owner-only rule and verified key mapping.
+1627	manual_review_required	0.55	Namespace retrieval has user credentials but no namespace-user relation.
+1630	manual_review_required	0.50	Organizer groupId and products do not define caller authorization.
+1633	manual_review_required	0.50	Admin audit path and system owner are hints without explicit caller role or verified lookup.
+1636	manual_review_required	0.50	Bulk-job status has unknown security and no ownership fields.
+1639	manual_review_required	0.50	Customer-order association does not map the API caller to the customer.
+1642	manual_review_required	0.50	Product editable-fields description specifies no caller authorization rule.
+1645	manual_review_required	0.50	CRM attachment relations do not identify authorized caller or verified lookup.
+1648	manual_review_required	0.50	CRM case account, project and user links lack a specified access rule.

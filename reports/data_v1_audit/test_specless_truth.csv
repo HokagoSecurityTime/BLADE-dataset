@@ -1,0 +1,6 @@
+group,N,public,role_required,membership_required,tenant_match,owner_match,owner_or_admin,manual_review_required,manual_ratio,code_ratio
+vuln route_only(명세 없음),109,24,29,0,0,52,3,1,0.9%,100.0%
+vuln repository_spec,102,34,14,0,0,54,0,0,0.0%,96.1%
+synthetic(설명=설계 사유 포함),58,8,8,4,8,8,8,14,24.1%,100.0%
+security_state=unknown 전체,205,49,43,4,6,83,9,11,5.4%,98.0%
+description 비어 있음 전체,142,32,32,0,0,74,3,1,0.7%,100.0%

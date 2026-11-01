@@ -1,0 +1,98 @@
+field,type,in_files,missing_ratio,empty_ratio,unique,categorical,text_stats,examples,list_stats,usage,evidence
+confidence,float,"train_v30,val_v30,train_v2_draft,gitea_labeled_455,synthetic_v2_129,apisguru_labeled_2027",0.0615,0.0,6,True,,,,정답,training/lora/prepare_lora_inputs.py:31
+controller_signals,null/dict,"train_v30,val_v30,train_v2_draft,apisguru_labeled_2027",0.3368,1.0,2,True,,,,메타,빌드·프롬프트 코드에서 읽지 않음
+controller_signals.admin_bypass,bool/null,"train_v30,test_v30,train_v2_draft,synthetic_v2_129",0.8521,0.0912,3,True,,,,메타,빌드·프롬프트 코드에서 읽지 않음
+controller_signals.auth_outside_handler,bool,"train_v2_draft,synthetic_v2_129",0.941,0.0,2,True,,,,메타,빌드·프롬프트 코드에서 읽지 않음
+controller_signals.authz_lines_in_handler,int,"train_v2_draft,gitea_labeled_455",0.8112,0.0,14,True,,,,메타,빌드·프롬프트 코드에서 읽지 않음
+controller_signals.binders,list,"train_v2_draft,gitea_labeled_455",0.8112,0.7567,84,False,,,len median 0 max 1,메타,빌드·프롬프트 코드에서 읽지 않음
+controller_signals.handler,str,"train_v2_draft,gitea_labeled_455",0.8112,0.0,453,False,chars median 19 p95 30 max 37; tokens median 4 p95 6 max 7,misc.Version ‖ user.ListEmails ‖ repo.TopicSearch,,메타,빌드·프롬프트 코드에서 읽지 않음
+controller_signals.handler_resolved,bool,"train_v2_draft,gitea_labeled_455",0.8112,0.0,1,True,,,,메타,빌드·프롬프트 코드에서 읽지 않음
+controller_signals.has_auth_check,bool/null,"train_v30,test_v30,train_v2_draft,synthetic_v2_129",0.8521,0.0912,3,True,,,,메타,빌드·프롬프트 코드에서 읽지 않음
+controller_signals.membership_check,bool,"train_v30,test_v30,train_v2_draft,synthetic_v2_129",0.9291,0.0,2,True,,,,메타,빌드·프롬프트 코드에서 읽지 않음
+controller_signals.middleware,list,"train_v2_draft,gitea_labeled_455",0.8112,0.0,109,False,,,len median 6 max 9,메타,빌드·프롬프트 코드에서 읽지 않음
+controller_signals.owner_filter,bool/null,"train_v30,test_v30,train_v2_draft,synthetic_v2_129",0.8521,0.0912,3,True,,,,메타,빌드·프롬프트 코드에서 읽지 않음
+controller_signals.raw_snippet,str,"train_v30,train_v2_draft,synthetic_v2_129",0.9136,0.0,189,False,chars median 527 p95 769 max 844; tokens median 124 p95 176 max 194,"campus_records_audit_0(@PathVariable(""item_id"") String item_id, @RequestHeader(value=""Authorization"",defaultValue="""") String authorization) {⏎  var obj=objects.get(item_id);⏎  if(obj==null) throw new ResponseStatusException(HttpStatus.NOT_FOUND);⏎  var principal=principals.get(authorization.replaceF ‖ # DRF: @permission_classes([IsAuthenticated]) -> 401 for anonymous; IsAdminUser -> request.user.is_staff; AllowAny -> no authentication.⏎⏎@api_view([""GET""])⏎@permission_classes([IsAuthenticated])⏎def harbor_manifests_roster_0(request, item_id):⏎    """"""Only members of the group that owns the record ( ‖ # before_action :authenticate!, except: [:atlas_leases_catalogue_0, :atlas_leases_catalogue_1] | before_action :require_admin!, only: [:atlas_leases_audit_0]⏎# authenticate!: Bearer -> current_user or 401 (authentication only); require_admin!: 403 unless current_user.admin?⏎⏎  # Caller must share th",,"입력(oas_code, 합성)",training/data/label_v30.py:47
+controller_signals.route_authentication,bool,"train_v2_draft,gitea_labeled_455",0.8112,0.0,2,True,,,,메타,빌드·프롬프트 코드에서 읽지 않음
+controller_signals.route_authorization,list,"train_v2_draft,gitea_labeled_455",0.8112,0.4528,29,True,,,len median 1 max 2,메타,빌드·프롬프트 코드에서 읽지 않음
+controller_signals.tenant_check,bool/null,"train_v30,test_v30,train_v2_draft,synthetic_v2_129",0.8521,0.0912,3,True,,,,메타,빌드·프롬프트 코드에서 읽지 않음
+controller_text,str,"test_v30,train_v2_draft,gitea_labeled_455",0.7497,0.0037,669,False,chars median 1484 p95 2540 max 3775; tokens median 353 p95 636 max 962,"def delete_user(username):⏎    resp = token_validator(request.headers.get('Authorization'))⏎    if ""error"" in resp:⏎        return Response(error_message_helper(resp), 401, mimetype=""application/json"")⏎    else:⏎        user = User.query.filter_by(username=resp['sub']).first()⏎        if user.admin: ‖ // ---- route middleware chain (api.go): sudo(), tokenRequiresScopes(auth_model.AccessTokenScopeCategoryIssue), repoAssignment(), checkTokenPublicOnly()⏎⏎// sudo(): site admins may impersonate another user via ?sudo=; non-admins get 403 only when they try to sudo. Not an authorization rule for the e ‖ // ---- route middleware chain (api.go): sudo(), tokenRequiresScopes(auth_model.AccessTokenScopeCategoryRepository)⏎⏎// sudo(): site admins may impersonate another user via ?sudo=; non-admins get 403 only when they try to sudo. Not an authorization rule for the endpoint.⏎⏎// tokenRequiresScopes(cate",,"입력(oas_code, test·Gitea·취약 API)",training/data/label_gitea_v30.py:19
+description,str,"train_v30,train_v2_draft,synthetic_v2_129",0.9136,0.0,16,True,,,,메타,빌드·프롬프트 코드에서 읽지 않음
+enrichment.source_file,str,"train_v30,val_v30,train_v2_draft,apisguru_labeled_2027",0.3368,0.0,397,False,chars median 31 p95 47 max 78; tokens median 12 p95 18 max 38,ably.net/control/1.0.14/openapi.yaml ‖ hetzner.cloud/1.0.0/openapi.yaml ‖ zoomconnect.com/1/swagger.yaml,,메타,빌드·프롬프트 코드에서 읽지 않음
+enrichment.source_sha256,str,"train_v30,val_v30,train_v2_draft,apisguru_labeled_2027",0.3368,0.0,397,False,chars median 64 p95 64 max 64; tokens median 57 p95 60 max 62,3531ad015f47bbbc12bb362528693631dcc754a1a727a3ec885142290b693505 ‖ 25e971a72f6abadcfda11c893dd5ef20a55ceeffc12f7a631575df40512e2980 ‖ bdb1f86477e3e9d27685752ac6c03edf456786cf7306c83d55f017f670886056,,메타,빌드·프롬프트 코드에서 읽지 않음
+enrichment.spec_version,str,"train_v30,val_v30,train_v2_draft,apisguru_labeled_2027",0.3368,0.0,6,True,,,,메타,빌드·프롬프트 코드에서 읽지 않음
+enrichment.status,str,"train_v30,val_v30,train_v2_draft,apisguru_labeled_2027",0.3368,0.0,1,True,,,,메타,빌드·프롬프트 코드에서 읽지 않음
+erd_snippet,str,"train_v30,val_v30,test_v30,train_v2_draft,gitea_labeled_455,synthetic_v2_129,apisguru_labeled_2027",0.0,0.2371,1665,False,chars median 154 p95 948 max 3852; tokens median 38 p95 231 max 973,"CREATE TABLE apps (⏎  _links TEXT,⏎  accountId TEXT -- owner candidate,⏎  apnsUseSandboxEndpoint BOOLEAN,⏎  id TEXT,⏎  name TEXT,⏎  status TEXT,⏎  tlsOnly BOOLEAN⏎); ‖  ‖ CREATE TABLE voice (⏎  audioFileUrl TEXT,⏎  campaign TEXT,⏎  dateTimeSent TEXT,⏎  deleted BOOLEAN,⏎  language TEXT,⏎  links TEXT,⏎  message TEXT,⏎  messageStatus TEXT,⏎  toNumber TEXT,⏎  userDataField TEXT,⏎  voiceMessageId TEXT⏎);",,입력,training/data/label_v30.py:59
+evidence_fields,list,"train_v30,val_v30,train_v2_draft,gitea_labeled_455,apisguru_labeled_2027",0.1479,0.0,658,False,,,len median 2 max 6,정답,training/lora/prepare_lora_inputs.py:29
+id,str,"train_v30,val_v30,test_v30,train_v2_draft,gitea_labeled_455,synthetic_v2_129,apisguru_labeled_2027",0.0,0.0,2940,False,chars median 50 p95 88 max 148; tokens median 16 p95 26 max 38,apisguru:ably.net:get:/accounts/{account_id}/apps ‖ gitea:get:/admin/packages ‖ apisguru:zoomconnect.com:get:/api/rest/v1/voice/{messageId},,메타,빌드·프롬프트 코드에서 읽지 않음
+inference_ms,float,"train_v30,val_v30,train_v2_draft,gitea_labeled_455,apisguru_labeled_2027",0.1479,0.0,2110,False,,,,메타,빌드·프롬프트 코드에서 읽지 않음
+label,str,"train_v30,val_v30,test_v30,train_v2_draft,gitea_labeled_455,synthetic_v2_129,apisguru_labeled_2027",0.0,0.0,7,True,,,,정답,training/lora/prepare_lora_inputs.py:31
+label_reference_only,bool,"train_v2_draft,gitea_labeled_455",0.8112,0.0,1,True,,,,메타,빌드·프롬프트 코드에서 읽지 않음
+labeled_at,str,"train_v30,val_v30,train_v2_draft,gitea_labeled_455,apisguru_labeled_2027",0.1479,0.0,2482,False,chars median 32 p95 32 max 32; tokens median 32 p95 32 max 32,2026-10-21T08:26:36.087592+00:00 ‖ 2026-10-21T08:27:34.132518+00:00 ‖ 2026-10-21T08:39:25.852089+00:00,,메타,빌드·프롬프트 코드에서 읽지 않음
+lookup_status,str,"train_v30,val_v30,train_v2_draft,apisguru_labeled_2027",0.3368,0.0,2,True,,,,메타,빌드·프롬프트 코드에서 읽지 않음
+meta.added,str,test_v30,0.9963,0.0,1,True,,,,메타,빌드·프롬프트 코드에서 읽지 않음
+meta.api_go_line,int,"train_v2_draft,gitea_labeled_455",0.8112,0.0,455,False,,,,메타,빌드·프롬프트 코드에서 읽지 않음
+meta.api_original_label,str,"train_v30,val_v30,train_v2_draft,gitea_labeled_455,apisguru_labeled_2027",0.1479,0.0,7,True,,,,메타,빌드·프롬프트 코드에서 읽지 않음
+meta.commit,str,"train_v2_draft,gitea_labeled_455",0.8112,0.0,1,True,,,,메타,빌드·프롬프트 코드에서 읽지 않음
+meta.confidence_label_overridden,bool,"train_v30,val_v30,train_v2_draft,apisguru_labeled_2027",0.3368,0.0,1,True,,,,메타,빌드·프롬프트 코드에서 읽지 않음
+meta.confidence_provenance,str,"train_v30,train_v2_draft,synthetic_v2_129",0.9136,0.0,1,True,,,,메타,빌드·프롬프트 코드에서 읽지 않음
+meta.controller_status,str,"test_v30,train_v2_draft,gitea_labeled_455",0.7497,0.0,2,True,,,,메타,빌드·프롬프트 코드에서 읽지 않음
+meta.data_version,str,"train_v2_draft,gitea_labeled_455,synthetic_v2_129",0.7522,0.0,2,True,,,,메타,빌드·프롬프트 코드에서 읽지 않음
+meta.erd_status,str,"test_v30,train_v2_draft,gitea_labeled_455",0.7497,0.0,2,True,,,,메타,빌드·프롬프트 코드에서 읽지 않음
+meta.evidence_correction_requested,bool,"train_v30,val_v30,train_v2_draft,gitea_labeled_455,apisguru_labeled_2027",0.1479,0.0,2,True,,,,메타,빌드·프롬프트 코드에서 읽지 않음
+meta.evidence_invalid,bool,"train_v30,val_v30,train_v2_draft,gitea_labeled_455,synthetic_v2_129,apisguru_labeled_2027",0.0615,0.0,2,True,,,,메타,빌드·프롬프트 코드에서 읽지 않음
+meta.extraction_rules,str,"train_v2_draft,gitea_labeled_455",0.8112,0.0,1,True,,,,메타,빌드·프롬프트 코드에서 읽지 않음
+meta.flag_review,bool,"train_v30,val_v30,train_v2_draft,gitea_labeled_455,synthetic_v2_129,apisguru_labeled_2027",0.0615,0.0,2,True,,,,메타,빌드·프롬프트 코드에서 읽지 않음
+meta.framework,str,"train_v2_draft,synthetic_v2_129",0.941,0.0,7,True,,,,메타,빌드·프롬프트 코드에서 읽지 않음
+meta.group_membership_semantics,str,"train_v30,test_v30,train_v2_draft,synthetic_v2_129",0.9291,0.0,1,True,,,,메타,빌드·프롬프트 코드에서 읽지 않음
+meta.has_admin_scope,bool,"train_v30,val_v30,train_v2_draft,apisguru_labeled_2027",0.3368,0.0,2,True,,,,메타,빌드·프롬프트 코드에서 읽지 않음
+meta.has_owner_col,bool,"train_v30,val_v30,train_v2_draft,apisguru_labeled_2027",0.3368,0.0,2,True,,,,메타,빌드·프롬프트 코드에서 읽지 않음
+meta.has_security,bool,"train_v30,val_v30,train_v2_draft,apisguru_labeled_2027",0.3368,0.0,2,True,,,,메타,빌드·프롬프트 코드에서 읽지 않음
+meta.has_tenant_col,bool,"train_v30,val_v30,train_v2_draft,apisguru_labeled_2027",0.3368,0.0,2,True,,,,메타,빌드·프롬프트 코드에서 읽지 않음
+meta.human_confirmed,bool,"train_v30,train_v2_draft,synthetic_v2_129",0.9136,0.0,1,True,,,,메타,빌드·프롬프트 코드에서 읽지 않음
+meta.incomplete,bool,"train_v30,val_v30,train_v2_draft,apisguru_labeled_2027",0.3368,0.0,2,True,,,,메타,빌드·프롬프트 코드에서 읽지 않음
+meta.intended_label_original,str,"train_v30,train_v2_draft",0.9973,0.0,1,True,,,,메타,빌드·프롬프트 코드에서 읽지 않음
+meta.invalid_evidence_fields,list,"train_v30,val_v30,train_v2_draft,gitea_labeled_455,apisguru_labeled_2027",0.1479,0.9989,4,True,,,len median 0 max 2,메타,빌드·프롬프트 코드에서 읽지 않음
+meta.known_vulnerable,bool,"train_v30,test_v30,train_v2_draft,synthetic_v2_129",0.8521,0.0,2,True,,,,메타,빌드·프롬프트 코드에서 읽지 않음
+meta.label_before_override,str,"train_v30,train_v2_draft",0.9749,0.0,5,True,,,,메타,빌드·프롬프트 코드에서 읽지 않음
+meta.label_before_v30,str,test_v30,0.9986,0.0,1,True,,,,메타,빌드·프롬프트 코드에서 읽지 않음
+meta.label_error,bool,"train_v30,val_v30,train_v2_draft,gitea_labeled_455,apisguru_labeled_2027",0.1479,0.0,1,True,,,,메타,빌드·프롬프트 코드에서 읽지 않음
+meta.label_source,str,"train_v30,val_v30,test_v30,train_v2_draft,gitea_labeled_455,synthetic_v2_129,apisguru_labeled_2027",0.0,0.0,5,True,,,,메타,빌드·프롬프트 코드에서 읽지 않음
+meta.license,str,"train_v2_draft,gitea_labeled_455",0.8112,0.0,1,True,,,,메타,빌드·프롬프트 코드에서 읽지 않음
+meta.low_conf,bool,"train_v30,val_v30,train_v2_draft,gitea_labeled_455,apisguru_labeled_2027",0.1479,0.0,1,True,,,,메타,빌드·프롬프트 코드에서 읽지 않음
+meta.oas_file,str,"train_v2_draft,gitea_labeled_455",0.8112,0.0,1,True,,,,메타,빌드·프롬프트 코드에서 읽지 않음
+meta.oas_status,str,"test_v30,train_v2_draft,gitea_labeled_455,synthetic_v2_129",0.6907,0.0,5,True,,,,메타,빌드·프롬프트 코드에서 읽지 않음
+meta.object_param_candidates,list,"train_v30,val_v30,train_v2_draft,apisguru_labeled_2027",0.3368,0.0,644,False,,,len median 1 max 10,메타,빌드·프롬프트 코드에서 읽지 않음
+meta.owner_cols,list,"train_v30,val_v30,train_v2_draft,apisguru_labeled_2027",0.3368,0.6391,116,False,,,len median 0 max 5,입력,training/data/label_v3.py:71
+meta.partition,str,"train_v2_draft,gitea_labeled_455",0.8112,0.0,2,True,,,,메타,빌드·프롬프트 코드에서 읽지 않음
+meta.path_owner_signal,bool,"train_v30,val_v30,train_v2_draft,apisguru_labeled_2027",0.3368,0.0,2,True,,,,메타,빌드·프롬프트 코드에서 읽지 않음
+meta.path_resource_depth,int,"train_v30,val_v30,train_v2_draft,apisguru_labeled_2027",0.3368,0.0,5,True,,,,메타,빌드·프롬프트 코드에서 읽지 않음
+meta.path_tenant_signal,bool,"train_v30,val_v30,train_v2_draft,apisguru_labeled_2027",0.3368,0.0,2,True,,,,메타,빌드·프롬프트 코드에서 읽지 않음
+meta.project,str,"train_v2_draft,gitea_labeled_455",0.8112,0.0,1,True,,,,메타,빌드·프롬프트 코드에서 읽지 않음
+meta.public_candidate,bool,"train_v2_draft,gitea_labeled_455",0.8112,0.0,2,True,,,,메타,빌드·프롬프트 코드에서 읽지 않음
+meta.repository,str,"train_v2_draft,gitea_labeled_455",0.8112,0.0,1,True,,,,메타,빌드·프롬프트 코드에서 읽지 않음
+meta.security_scopes,list,"train_v30,val_v30,train_v2_draft,apisguru_labeled_2027",0.3368,0.8087,110,False,,,len median 0 max 13,메타,빌드·프롬프트 코드에서 읽지 않음
+meta.signal_class,str,"train_v30,val_v30,train_v2_draft,apisguru_labeled_2027",0.3368,0.0,5,True,,,,메타,빌드·프롬프트 코드에서 읽지 않음
+meta.source,str,"train_v30,val_v30,train_v2_draft,gitea_labeled_455,synthetic_v2_129",0.5249,0.0,3,True,,,,메타,빌드·프롬프트 코드에서 읽지 않음
+meta.source_file,str,"train_v30,val_v30,train_v2_draft,synthetic_v2_129,apisguru_labeled_2027",0.2503,0.0,409,False,chars median 32 p95 68 max 94; tokens median 13 p95 20 max 39,ably.net\control\1.0.14\openapi.yaml ‖ credas.co.uk\pi\v1\openapi.yaml ‖ zoomconnect.com\1\swagger.yaml,,입력(코드 위치 표시),training/data/label_v30.py:62
+meta.source_locations,list[dict]/list,"test_v30,train_v2_draft,gitea_labeled_455",0.7497,0.042,659,False,,,"len median 2 max 6; subkeys ['end_line', 'file', 'file_sha256', 'start_line']","입력(코드 위치 표시, test)",training/lora/prepare_lora_inputs.py:75
+meta.tag,str,"train_v2_draft,gitea_labeled_455",0.8112,0.0,1,True,,,,메타,빌드·프롬프트 코드에서 읽지 않음
+meta.tenant_cols,list,"train_v30,val_v30,train_v2_draft,apisguru_labeled_2027",0.3368,0.788,69,False,,,len median 0 max 3,입력,training/data/label_v3.py:71
+meta.v30_override_reason,str,"train_v30,train_v2_draft",0.9749,0.0,2,True,,,,메타,빌드·프롬프트 코드에서 읽지 않음
+meta.v30_override_trigger,list,"train_v30,train_v2_draft",0.9968,0.0,1,True,,,len median 1 max 1,메타,빌드·프롬프트 코드에서 읽지 않음
+meta.v30_relabel_reason,str,"train_v30,test_v30,train_v2_draft",0.9959,0.0,2,True,,,,메타,빌드·프롬프트 코드에서 읽지 않음
+meta.variant_kind,null/str,"train_v2_draft,synthetic_v2_129",0.941,0.5581,4,True,,,,메타,빌드·프롬프트 코드에서 읽지 않음
+meta.variant_of,null/str,"train_v2_draft,synthetic_v2_129",0.941,0.5581,5,True,,,,메타,빌드·프롬프트 코드에서 읽지 않음
+meta.visibility_dependent,bool,"train_v2_draft,gitea_labeled_455",0.8112,0.0,2,True,,,,메타,빌드·프롬프트 코드에서 읽지 않음
+method,str,"train_v30,val_v30,test_v30,train_v2_draft,gitea_labeled_455,synthetic_v2_129,apisguru_labeled_2027",0.0,0.0,5,True,,,,입력,training/data/label_v3.py:67
+model_id,str,"train_v30,val_v30,train_v2_draft,gitea_labeled_455,apisguru_labeled_2027",0.1479,0.0,1,True,,,,메타,빌드·프롬프트 코드에서 읽지 않음
+model_id_returned,str,"train_v30,val_v30,train_v2_draft,gitea_labeled_455,apisguru_labeled_2027",0.1479,0.0,1,True,,,,메타,빌드·프롬프트 코드에서 읽지 않음
+oas_snippet,str,"train_v30,val_v30,test_v30,train_v2_draft,gitea_labeled_455,synthetic_v2_129,apisguru_labeled_2027",0.0,0.0,2911,False,chars median 234 p95 2214 max 4349; tokens median 62 p95 618 max 1477,"{""summary"": ""Lists apps"", ""operationId"": null, ""tags"": [""apps""], ""security"": [{""bearer_auth"": []}], ""path_params"": [""account_id""], ""query_params"": []} ‖ {""openapi"": ""3.0.3"", ""security"": [{""BasicAuth"": []}, {""Token"": []}, {""AccessToken"": []}, {""AuthorizationHeaderToken"": []}, {""SudoParam"": []}, {""SudoHeader"": []}, {""TOTPHeader"": []}], ""paths"": {""/admin/packages"": {""get"": {""operationId"": ""adminListPackages"", ""parameters"": [{""description"": ""page number ‖ {""summary"": ""get"", ""operationId"": null, ""tags"": [""voice""], ""security"": null, ""path_params"": [""messageId""], ""query_params"": []}",,입력,training/data/label_v3.py:48
+path,str,"train_v30,val_v30,test_v30,train_v2_draft,gitea_labeled_455,synthetic_v2_129,apisguru_labeled_2027",0.0,0.0,2369,False,chars median 32 p95 63 max 122; tokens median 8 p95 17 max 28,/accounts/{account_id}/apps ‖ /admin/packages ‖ /api/rest/v1/voice/{messageId},,입력,training/data/label_v3.py:67
+prompt_version,str,"train_v30,val_v30,train_v2_draft,gitea_labeled_455,apisguru_labeled_2027",0.1479,0.0,1,True,,,,메타,빌드·프롬프트 코드에서 읽지 않음
+provider,str,"train_v30,val_v30,train_v2_draft,gitea_labeled_455,apisguru_labeled_2027",0.1479,0.0,1,True,,,,메타,빌드·프롬프트 코드에서 읽지 않음
+rationale,str,"train_v30,val_v30,train_v2_draft,gitea_labeled_455,synthetic_v2_129,apisguru_labeled_2027",0.0615,0.0,2003,False,chars median 89 p95 135 max 245; tokens median 40 p95 61 max 87,"description: 요청된 account_id에 대한 애플리케이션 목록을 반환하며, owner_cols에 accountId가 포함되어 있어 요청자가 해당 계정의 소유자여야 함; 판단: 단일 소유자 조건이므로 owner_match ‖ Only administrators may read this operational resource. ‖ path_params:messageId; 판단: 요청자와 객체의 관계를 확인할 수 있는 조건이 없으며, security_state가 unknown이므로 접근 조건을 확정할 수 없음",,정답,training/lora/prepare_lora_inputs.py:31
+security_state,str,"train_v30,val_v30,train_v2_draft,gitea_labeled_455,synthetic_v2_129,apisguru_labeled_2027",0.0615,0.0,3,True,,,,파생 입력(저장값은 메타; 입력 시 OAS에서 재계산),training/data/label_v5.py:33
+service,str,"train_v30,val_v30,test_v30,train_v2_draft,gitea_labeled_455,synthetic_v2_129,apisguru_labeled_2027",0.0,0.0,392,False,chars median 10 p95 19 max 34; tokens median 3 p95 5 max 9,ably.net ‖ gitea ‖ zoomconnect.com,,메타,빌드·프롬프트 코드에서 읽지 않음
+source,str,"test_v30,train_v2_draft,gitea_labeled_455",0.7497,0.0,3,True,,,,메타,빌드·프롬프트 코드에서 읽지 않음
+training_target_fields,list,"train_v30,val_v30,train_v2_draft,synthetic_v2_129,apisguru_labeled_2027",0.2503,0.0,1,True,,,len median 2 max 2,메타,빌드·프롬프트 코드에서 읽지 않음
+usage_attempts,list[dict],"train_v30,val_v30,train_v2_draft,gitea_labeled_455,apisguru_labeled_2027",0.1479,0.0,2370,False,,,"len median 1 max 2; subkeys ['input_tokens', 'input_tokens_details', 'output_tokens', 'output_tokens_details', 'total_tokens']",메타,빌드·프롬프트 코드에서 읽지 않음

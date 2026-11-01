@@ -1,0 +1,46 @@
+{
+ "rows": 296,
+ "per_reviewer": {
+  "검수자A": {
+   "manual_review_required": 22,
+   "owner_match": 14,
+   "owner_or_admin": 8,
+   "public": 7,
+   "role_required": 38,
+   "membership_required": 10
+  },
+  "검수자B": {
+   "manual_review_required": 22,
+   "owner_match": 14,
+   "owner_or_admin": 8,
+   "public": 7,
+   "role_required": 38,
+   "membership_required": 10
+  },
+  "검수자C": {
+   "manual_review_required": 21,
+   "owner_match": 14,
+   "owner_or_admin": 9,
+   "public": 6,
+   "role_required": 37,
+   "membership_required": 11
+  }
+ },
+ "per_reviewer_project": {
+  "검수자A": {
+   "ghost": 25,
+   "rocketchat": 54,
+   "umami": 20
+  },
+  "검수자B": {
+   "ghost": 24,
+   "rocketchat": 55,
+   "umami": 20
+  },
+  "검수자C": {
+   "ghost": 24,
+   "rocketchat": 54,
+   "umami": 20
+  }
+ }
+}

@@ -1,0 +1,34 @@
+{
+  "collected": 275,
+  "retained": 214,
+  "excluded": 61,
+  "services": {
+    "VAmPI": 12,
+    "crAPI": 54,
+    "juice-shop": 70,
+    "Pixi": 53,
+    "DVWS-node": 25
+  },
+  "proposals": {
+    "role_required": 8,
+    "manual_review_required": 133,
+    "owner_match": 52,
+    "public": 21
+  },
+  "known_vulnerable": 9,
+  "unresolved": 136,
+  "source_mapped": 209,
+  "concrete_policy_code_evidence": 78,
+  "confirmed": 0,
+  "code_review_status": {
+    "available_no_recognized_local_auth_hint": 186,
+    "available_static_auth_hints": 21,
+    "handler_code_unavailable": 68
+  },
+  "retained_code_review_status": {
+    "available_no_recognized_local_auth_hint": 140,
+    "available_static_auth_hints": 20,
+    "handler_code_unavailable": 54
+  },
+  "previous_grounded_proposals": 68
+}

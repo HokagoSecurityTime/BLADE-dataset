@@ -1,0 +1,8 @@
+{
+  "seed": 42,
+  "selection": "random.Random(42).choice for each lexicographically sorted framework group, in FastAPI, Express, Spring/Django order",
+  "groups": [["orbit_tickets", "quill_blog"], ["copper_wallet", "folio_wiki"], ["beacon_iot", "campus_records"]],
+  "train_services": ["orbit_tickets", "copper_wallet", "campus_records"],
+  "test_services": ["quill_blog", "folio_wiki", "beacon_iot"],
+  "test_vuln_services": ["VAmPI", "crAPI", "juice-shop", "Pixi", "DVWS-node"]
+}

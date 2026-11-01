@@ -1,0 +1,100 @@
+{
+  "records": 455,
+  "label_errors": 0,
+  "labels": {
+    "public": 61,
+    "role_required": 37,
+    "membership_required": 9,
+    "tenant_match": 2,
+    "owner_match": 36,
+    "owner_or_admin": 85,
+    "manual_review_required": 225
+  },
+  "manual_ratio": 0.4945,
+  "public_candidate": {
+    "count": 28,
+    "labels": {
+      "public": 15,
+      "role_required": 1,
+      "membership_required": 0,
+      "tenant_match": 0,
+      "owner_match": 0,
+      "owner_or_admin": 0,
+      "manual_review_required": 12
+    }
+  },
+  "visibility_dependent": {
+    "count": 96,
+    "labels": {
+      "public": 49,
+      "role_required": 0,
+      "membership_required": 1,
+      "tenant_match": 2,
+      "owner_match": 0,
+      "owner_or_admin": 1,
+      "manual_review_required": 43
+    }
+  },
+  "by_package": {
+    "misc": {
+      "manual_review_required": 10,
+      "public": 4
+    },
+    "settings": {
+      "role_required": 1,
+      "manual_review_required": 3
+    },
+    "token": {
+      "manual_review_required": 2
+    },
+    "notify": {
+      "manual_review_required": 6,
+      "public": 1
+    },
+    "user": {
+      "manual_review_required": 59,
+      "owner_or_admin": 2,
+      "public": 2,
+      "owner_match": 13
+    },
+    "shared": {
+      "manual_review_required": 1
+    },
+    "repo": {
+      "manual_review_required": 120,
+      "public": 53,
+      "owner_or_admin": 81,
+      "role_required": 3,
+      "tenant_match": 2
+    },
+    "org": {
+      "membership_required": 9,
+      "manual_review_required": 17,
+      "public": 1,
+      "owner_match": 23
+    },
+    "packages": {
+      "manual_review_required": 7,
+      "owner_or_admin": 2
+    },
+    "admin": {
+      "role_required": 33
+    }
+  },
+  "usage": {
+    "api_responses": 462,
+    "input_tokens": 1443823,
+    "cached_input_tokens": 799232,
+    "output_tokens": 33220,
+    "estimated_usd": 0.17656,
+    "billing_invoice": false
+  },
+  "output_sha256": "3aac8843315d30dc473bae38409f83866b7c077aa0591ab6285470d335e274fc",
+  "confidence_bins": {
+    "[0,0.5]": 0,
+    "(0.5,0.7)": 0,
+    "[0.7,0.9)": 226,
+    "[0.9,1]": 229
+  },
+  "mean_inference_ms": 1633.1
+}

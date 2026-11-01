@@ -1,0 +1,68 @@
+{
+ "name": "test_v5",
+ "frozen": "2026-10-31",
+ "records": 283,
+ "excluded": 13,
+ "sha256": {
+  "datasets/blade/processed/test_v5.jsonl": "7b8e4a940967ec474e0d5dbf6dcdbd6b7e04be439599c2a684664d6b9393fd9c",
+  "datasets/blade/processed/data_v5/test_v5_excluded.jsonl": "56161a35cda3c7d487eecc16266a185a6f0cf9c09ac4c62e6542ca29488a839f",
+  "training/lora/data_v5/test_v5_inputs.jsonl": "9103cd3d5276ab425f577a2866291bf8e27e7a06a18bd725701989673dbe5d82"
+ },
+ "label_x_project": {
+  "rocketchat": {
+   "manual_review_required": 39,
+   "membership_required": 28,
+   "owner_match": 21,
+   "owner_or_admin": 9,
+   "public": 6,
+   "role_required": 54
+  },
+  "ghost": {
+   "manual_review_required": 8,
+   "owner_match": 2,
+   "owner_or_admin": 8,
+   "public": 7,
+   "role_required": 44
+  },
+  "umami": {
+   "manual_review_required": 18,
+   "membership_required": 5,
+   "owner_match": 11,
+   "owner_or_admin": 4,
+   "public": 6,
+   "role_required": 13
+  }
+ },
+ "label_total": {
+  "manual_review_required": 65,
+  "owner_match": 34,
+  "owner_or_admin": 21,
+  "public": 19,
+  "role_required": 111,
+  "membership_required": 33
+ },
+ "changed_from_draft": 5,
+ "sources": {
+  "rocketchat": {
+   "repository": "https://github.com/RocketChat/Rocket.Chat",
+   "commit": "057a927d903c83b5d61cf236d650c4500ebb4b66",
+   "tag": "8.9.0",
+   "license": "MIT"
+  },
+  "ghost": {
+   "repository": "https://github.com/TryGhost/Ghost",
+   "commit": "5794cfd8daca61fd60cd8659acd6591ece3b7956",
+   "tag": "v6.73.0",
+   "license": "MIT"
+  },
+  "umami": {
+   "repository": "https://github.com/umami-software/umami",
+   "commit": "559e3c607c23d2c72d9bd4f6481bda428255323c",
+   "tag": "v3.4.1",
+   "license": "MIT"
+  }
+ },
+ "review_sheet": "review/test_v5_review_reviewed.xlsx",
+ "rules": "AGENTS.md data-v4 검수 규약 G1~G8 + 작업 C 절",
+ "eval": "eval-def v2 별도 조건(보조 구간); 주지표 불변"
+}

@@ -1,0 +1,642 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "orbit_tickets_variants",
+    "version": "0.1.0"
+  },
+  "paths": {
+    "/fixtures/orbit_tickets/reservations/drafts/authonly/{item_id}": {
+      "get": {
+        "summary": "Orbit Tickets Drafts Authonly",
+        "description": "Authentication only; no requester-object relationship or role check is implemented, so no concrete label is supported.",
+        "operationId": "orbit_tickets_drafts_authonly_fixtures_orbit_tickets_reservations_drafts_authonly__item_id__get",
+        "parameters": [
+          {
+            "name": "item_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Item Id"
+            }
+          },
+          {
+            "name": "authorization",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "default": "",
+              "title": "Authorization"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/fixtures/orbit_tickets/reservations/drafts/extauth/{item_id}": {
+      "get": {
+        "summary": "Orbit Tickets Drafts Extauth",
+        "description": "Authentication only; no requester-object relationship or role check is implemented, so no concrete label is supported. Authentication is enforced outside the handler.",
+        "operationId": "orbit_tickets_drafts_extauth_fixtures_orbit_tickets_reservations_drafts_extauth__item_id__get",
+        "parameters": [
+          {
+            "name": "item_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Item Id"
+            }
+          },
+          {
+            "name": "authorization",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "default": "",
+              "title": "Authorization"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/fixtures/orbit_tickets/reservations/drafts/extguard/{item_id}": {
+      "get": {
+        "summary": "Orbit Tickets Drafts Extguard",
+        "description": "Only the record owner may read it. Authentication is enforced outside the handler; the authorization check is inside.",
+        "operationId": "orbit_tickets_drafts_extguard_fixtures_orbit_tickets_reservations_drafts_extguard__item_id__get",
+        "parameters": [
+          {
+            "name": "item_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Item Id"
+            }
+          },
+          {
+            "name": "authorization",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "default": "",
+              "title": "Authorization"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/fixtures/orbit_tickets/reservations/shared/authonly/{item_id}": {
+      "get": {
+        "summary": "Orbit Tickets Shared Authonly",
+        "description": "Authentication only; no requester-object relationship or role check is implemented, so no concrete label is supported.",
+        "operationId": "orbit_tickets_shared_authonly_fixtures_orbit_tickets_reservations_shared_authonly__item_id__get",
+        "parameters": [
+          {
+            "name": "item_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Item Id"
+            }
+          },
+          {
+            "name": "authorization",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "default": "",
+              "title": "Authorization"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/fixtures/orbit_tickets/reservations/shared/extauth/{item_id}": {
+      "get": {
+        "summary": "Orbit Tickets Shared Extauth",
+        "description": "Authentication only; no requester-object relationship or role check is implemented, so no concrete label is supported. Authentication is enforced outside the handler.",
+        "operationId": "orbit_tickets_shared_extauth_fixtures_orbit_tickets_reservations_shared_extauth__item_id__get",
+        "parameters": [
+          {
+            "name": "item_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Item Id"
+            }
+          },
+          {
+            "name": "authorization",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "default": "",
+              "title": "Authorization"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/fixtures/orbit_tickets/reservations/shared/extguard/{item_id}": {
+      "get": {
+        "summary": "Orbit Tickets Shared Extguard",
+        "description": "The record owner or an administrator may read it. Authentication is enforced outside the handler; the authorization check is inside.",
+        "operationId": "orbit_tickets_shared_extguard_fixtures_orbit_tickets_reservations_shared_extguard__item_id__get",
+        "parameters": [
+          {
+            "name": "item_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Item Id"
+            }
+          },
+          {
+            "name": "authorization",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "default": "",
+              "title": "Authorization"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/fixtures/orbit_tickets/reservations/workspace/authonly/{item_id}": {
+      "get": {
+        "summary": "Orbit Tickets Workspace Authonly",
+        "description": "Authentication only; no requester-object relationship or role check is implemented, so no concrete label is supported.",
+        "operationId": "orbit_tickets_workspace_authonly_fixtures_orbit_tickets_reservations_workspace_authonly__item_id__get",
+        "parameters": [
+          {
+            "name": "item_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Item Id"
+            }
+          },
+          {
+            "name": "authorization",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "default": "",
+              "title": "Authorization"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/fixtures/orbit_tickets/reservations/workspace/extauth/{item_id}": {
+      "get": {
+        "summary": "Orbit Tickets Workspace Extauth",
+        "description": "Authentication only; no requester-object relationship or role check is implemented, so no concrete label is supported. Authentication is enforced outside the handler.",
+        "operationId": "orbit_tickets_workspace_extauth_fixtures_orbit_tickets_reservations_workspace_extauth__item_id__get",
+        "parameters": [
+          {
+            "name": "item_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Item Id"
+            }
+          },
+          {
+            "name": "authorization",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "default": "",
+              "title": "Authorization"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/fixtures/orbit_tickets/reservations/workspace/extguard/{item_id}": {
+      "get": {
+        "summary": "Orbit Tickets Workspace Extguard",
+        "description": "Caller and record must share a tenant. Authentication is enforced outside the handler; the authorization check is inside.",
+        "operationId": "orbit_tickets_workspace_extguard_fixtures_orbit_tickets_reservations_workspace_extguard__item_id__get",
+        "parameters": [
+          {
+            "name": "item_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Item Id"
+            }
+          },
+          {
+            "name": "authorization",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "default": "",
+              "title": "Authorization"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/fixtures/orbit_tickets/reservations/audit/authonly/{item_id}": {
+      "get": {
+        "summary": "Orbit Tickets Audit Authonly",
+        "description": "Authentication only; no requester-object relationship or role check is implemented, so no concrete label is supported.",
+        "operationId": "orbit_tickets_audit_authonly_fixtures_orbit_tickets_reservations_audit_authonly__item_id__get",
+        "parameters": [
+          {
+            "name": "item_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Item Id"
+            }
+          },
+          {
+            "name": "authorization",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "default": "",
+              "title": "Authorization"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/fixtures/orbit_tickets/reservations/audit/extauth/{item_id}": {
+      "get": {
+        "summary": "Orbit Tickets Audit Extauth",
+        "description": "Authentication only; no requester-object relationship or role check is implemented, so no concrete label is supported. Authentication is enforced outside the handler.",
+        "operationId": "orbit_tickets_audit_extauth_fixtures_orbit_tickets_reservations_audit_extauth__item_id__get",
+        "parameters": [
+          {
+            "name": "item_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Item Id"
+            }
+          },
+          {
+            "name": "authorization",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "default": "",
+              "title": "Authorization"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/fixtures/orbit_tickets/reservations/audit/extguard/{item_id}": {
+      "get": {
+        "summary": "Orbit Tickets Audit Extguard",
+        "description": "Only administrators may read this operational resource. Authentication is enforced outside the handler; the authorization check is inside.",
+        "operationId": "orbit_tickets_audit_extguard_fixtures_orbit_tickets_reservations_audit_extguard__item_id__get",
+        "parameters": [
+          {
+            "name": "item_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Item Id"
+            }
+          },
+          {
+            "name": "authorization",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "default": "",
+              "title": "Authorization"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "HTTPValidationError": {
+        "properties": {
+          "detail": {
+            "items": {
+              "$ref": "#/components/schemas/ValidationError"
+            },
+            "type": "array",
+            "title": "Detail"
+          }
+        },
+        "type": "object",
+        "title": "HTTPValidationError"
+      },
+      "ValidationError": {
+        "properties": {
+          "loc": {
+            "items": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "integer"
+                }
+              ]
+            },
+            "type": "array",
+            "title": "Location"
+          },
+          "msg": {
+            "type": "string",
+            "title": "Message"
+          },
+          "type": {
+            "type": "string",
+            "title": "Error Type"
+          },
+          "input": {
+            "title": "Input"
+          },
+          "ctx": {
+            "type": "object",
+            "title": "Context"
+          }
+        },
+        "type": "object",
+        "required": [
+          "loc",
+          "msg",
+          "type"
+        ],
+        "title": "ValidationError"
+      }
+    }
+  }
+}

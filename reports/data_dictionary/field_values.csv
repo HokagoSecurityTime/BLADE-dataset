@@ -1,0 +1,230 @@
+field,value,train_v30,val_v30,test_v30,train_v2_draft,gitea_labeled_455,synthetic_v2_129,apisguru_labeled_2027
+confidence,0.9,300,38,0,446,229,0,478
+confidence,0.85,50,4,0,275,226,0,518
+confidence,0.7,44,8,0,44,0,0,682
+confidence,0.8,17,1,0,17,0,0,344
+confidence,1.0,60,0,0,189,0,129,0
+confidence,0.75,0,1,0,0,0,0,5
+controller_signals,null,0,0,0,0,0,0,2027
+controller_signals,{},411,52,0,411,0,0,0
+controller_signals.admin_bypass,false,55,0,204,171,0,116,0
+controller_signals.admin_bypass,null,0,0,59,0,0,0,0
+controller_signals.admin_bypass,true,5,0,6,18,0,13,0
+controller_signals.auth_outside_handler,true,0,0,0,102,0,102,0
+controller_signals.auth_outside_handler,false,0,0,0,27,0,27,0
+controller_signals.authz_lines_in_handler,0,0,0,0,171,204,0,0
+controller_signals.authz_lines_in_handler,1,0,0,0,102,128,0,0
+controller_signals.authz_lines_in_handler,2,0,0,0,41,49,0,0
+controller_signals.authz_lines_in_handler,3,0,0,0,23,30,0,0
+controller_signals.authz_lines_in_handler,4,0,0,0,11,16,0,0
+controller_signals.authz_lines_in_handler,5,0,0,0,8,9,0,0
+controller_signals.authz_lines_in_handler,6,0,0,0,5,7,0,0
+controller_signals.authz_lines_in_handler,7,0,0,0,3,3,0,0
+controller_signals.authz_lines_in_handler,8,0,0,0,3,3,0,0
+controller_signals.authz_lines_in_handler,9,0,0,0,2,2,0,0
+controller_signals.authz_lines_in_handler,16,0,0,0,1,1,0,0
+controller_signals.authz_lines_in_handler,11,0,0,0,1,1,0,0
+controller_signals.authz_lines_in_handler,13,0,0,0,0,1,0,0
+controller_signals.authz_lines_in_handler,18,0,0,0,0,1,0,0
+controller_signals.handler_resolved,true,0,0,0,371,455,0,0
+controller_signals.has_auth_check,true,52,0,58,173,0,121,0
+controller_signals.has_auth_check,false,8,0,152,16,0,8,0
+controller_signals.has_auth_check,null,0,0,59,0,0,0,0
+controller_signals.membership_check,false,14,0,12,125,0,111,0
+controller_signals.membership_check,true,4,0,4,22,0,18,0
+controller_signals.owner_filter,false,51,0,202,159,0,108,0
+controller_signals.owner_filter,true,9,0,8,30,0,21,0
+controller_signals.owner_filter,null,0,0,59,0,0,0,0
+controller_signals.route_authentication,true,0,0,0,257,341,0,0
+controller_signals.route_authentication,false,0,0,0,114,114,0,0
+controller_signals.route_authorization,[],0,0,0,184,190,0,0
+controller_signals.route_authorization,"[""reqRepoReader(unit.TypeCode)""]",0,0,0,57,60,0,0
+controller_signals.route_authorization,"[""reqSiteAdmin()""]",0,0,0,33,33,0,0
+controller_signals.route_authorization,"[""reqAdmin()""]",0,0,0,7,44,0,0
+controller_signals.route_authorization,"[""reqOrgOwnership()""]",0,0,0,19,19,0,0
+controller_signals.route_authorization,"[""reqRepoReader(unit.TypeActions)""]",0,0,0,13,15,0,0
+controller_signals.route_authorization,"[""reqAnyRepoReader()""]",0,0,0,8,9,0,0
+controller_signals.route_authorization,"[""reqRepoReader(unit.TypeActions)"", ""reqRepoWriter(unit.TypeActions)""]",0,0,0,4,11,0,0
+controller_signals.route_authorization,"[""reqRepoReader(unit.TypeReleases)""]",0,0,0,6,6,0,0
+controller_signals.route_authorization,"[""reqOrgVisible()""]",0,0,0,6,6,0,0
+controller_signals.route_authorization,"[""reqPackageAccess(perm.AccessModeRead)""]",0,0,0,5,5,0,0
+controller_signals.route_authorization,"[""reqOrgVisible()"", ""reqOrgOwnership()""]",0,0,0,4,4,0,0
+controller_signals.route_authorization,"[""reqTeamReadAccess()""]",0,0,0,4,4,0,0
+controller_signals.route_authorization,"[""reqRepoReader(unit.TypeReleases)"", ""reqRepoWriter(unit.TypeReleases)""]",0,0,0,1,7,0,0
+controller_signals.route_authorization,"[""reqRepoWriter(unit.TypeIssues, unit.TypePullRequests)""]",0,0,0,2,6,0,0
+controller_signals.route_authorization,"[""reqRepoReader(unit.TypeCode)"", ""reqRepoWriter(unit.TypeCode)""]",0,0,0,1,7,0,0
+controller_signals.route_authorization,"[""reqPackageAccess(perm.AccessModeRead)"", ""reqPackageAccess(perm.AccessModeWrite)""]",0,0,0,2,4,0,0
+controller_signals.route_authorization,"[""reqTeamMembership()""]",0,0,0,2,2,0,0
+controller_signals.route_authorization,"[""reqOrgMembership()""]",0,0,0,2,2,0,0
+controller_signals.route_authorization,"[""reqOrgVisible()"", ""reqOrgMembership()""]",0,0,0,2,2,0,0
+controller_signals.route_authorization,"[""reqRepoReader(unit.TypeIssues)""]",0,0,0,2,2,0,0
+controller_signals.route_authorization,"[""reqSelfOrAdmin()""]",0,0,0,1,3,0,0
+controller_signals.route_authorization,"[""reqTeamReadAccess()"", ""reqOrgMembership()""]",0,0,0,2,2,0,0
+controller_signals.route_authorization,"[""reqAnyRepoReader()"", ""reqAdmin()""]",0,0,0,0,3,0,0
+controller_signals.route_authorization,"[""reqRepoWriter(unit.TypeCode)""]",0,0,0,1,2,0,0
+controller_signals.route_authorization,"[""reqRepoDangerZone()""]",0,0,0,1,2,0,0
+controller_signals.route_authorization,"[""reqRepoWriter(unit.TypeWiki)""]",0,0,0,0,3,0,0
+controller_signals.route_authorization,"[""reqProjectsUnitAccess(perm.AccessModeRead)""]",0,0,0,1,1,0,0
+controller_signals.route_authorization,"[""reqOrgMembership()"", ""reqOrgOwnership()""]",0,0,0,1,1,0,0
+controller_signals.tenant_check,false,54,0,204,167,0,113,0
+controller_signals.tenant_check,null,0,0,59,0,0,0,0
+controller_signals.tenant_check,true,6,0,6,22,0,16,0
+description,The record owner or an administrator may read it.,10,0,0,26,0,16,0
+description,"Only members of the group that owns the record ((caller_id, record.group_id) in memberships) may read it. Tenant and sub",4,0,0,20,0,16,0
+description,"Authentication only; no requester-object relationship or role check is implemented, so no concrete label is supported.",0,0,0,19,0,19,0
+description,"Authentication only; no requester-object relationship or role check is implemented, so no concrete label is supported. A",0,0,0,19,0,19,0
+description,Only administrators may read this operational resource.,8,0,0,16,0,8,0
+description,Only the record owner may read it.,8,0,0,16,0,8,0
+description,Caller and record must share a tenant.,8,0,0,16,0,8,0
+description,Intentionally anonymous reference catalogue.,8,0,0,16,0,8,0
+description,"Caller must share the tenant AND be a member of the record group; two independent conditions, not expressible as one lab",2,0,0,10,0,8,0
+description,Conflicting owner and tenant requirements are deliberately unresolved; deny pending review.,6,0,0,6,0,0,0
+description,A premium plan is required.,6,0,0,6,0,0,0
+description,The record owner or an administrator may read it. Authentication is enforced outside the handler; the authorization chec,0,0,0,5,0,5,0
+description,Only the record owner may read it. Authentication is enforced outside the handler; the authorization check is inside.,0,0,0,4,0,4,0
+description,Caller and record must share a tenant. Authentication is enforced outside the handler; the authorization check is inside,0,0,0,4,0,4,0
+description,Only administrators may read this operational resource. Authentication is enforced outside the handler; the authorizatio,0,0,0,4,0,4,0
+description,"Only members of the group that owns the record ((caller_id, record.group_id) in memberships) may read it. Tenant and sub",0,0,0,2,0,2,0
+enrichment.spec_version,3.0.0,207,22,0,207,0,0,940
+enrichment.spec_version,2.0,72,14,0,72,0,0,467
+enrichment.spec_version,3.0.1,72,12,0,72,0,0,293
+enrichment.spec_version,3.0.3,25,3,0,25,0,0,163
+enrichment.spec_version,3.0.2,30,1,0,30,0,0,116
+enrichment.spec_version,3.1.0,5,0,0,5,0,0,48
+enrichment.status,recovered,411,52,0,411,0,0,2027
+label,manual_review_required,118,13,15,442,225,46,1530
+label,owner_match,134,12,114,182,36,12,138
+label,role_required,112,20,51,161,37,12,124
+label,public,27,3,66,47,61,8,173
+label,owner_or_admin,11,0,11,32,85,21,1
+label,tenant_match,40,3,8,52,2,12,35
+label,membership_required,29,1,4,55,9,18,26
+label_reference_only,false,0,0,0,371,455,0,0
+lookup_status,not_applicable,252,37,0,252,0,0,1853
+lookup_status,unresolved,159,15,0,159,0,0,174
+meta.added,test_v30 2026-10-21,0,0,16,0,0,0,0
+meta.api_original_label,manual_review_required,97,13,0,322,225,0,1530
+meta.api_original_label,owner_match,126,12,0,162,36,0,138
+meta.api_original_label,role_required,104,20,0,141,37,0,124
+meta.api_original_label,public,26,3,0,87,61,0,173
+meta.api_original_label,tenant_match,32,3,0,34,2,0,35
+meta.api_original_label,membership_required,25,1,0,34,9,0,26
+meta.api_original_label,owner_or_admin,1,0,0,2,85,0,1
+meta.commit,829b49c1ae96015e345f9d2a0eb1ea7acd5f31e1,0,0,0,371,455,0,0
+meta.confidence_label_overridden,false,411,52,0,411,0,0,2027
+meta.confidence_provenance,design_intent_not_model_probability,60,0,0,189,0,129,0
+meta.controller_status,available,0,0,265,371,455,0,0
+meta.controller_status,unavailable,0,0,4,0,0,0,0
+meta.data_version,data-v2,0,0,0,500,0,129,0
+meta.data_version,data-v2-candidate,0,0,0,0,455,0,0
+meta.erd_status,unknown,0,0,211,371,455,0,0
+meta.erd_status,available,0,0,58,0,0,0,0
+meta.evidence_correction_requested,false,408,51,0,773,448,0,2011
+meta.evidence_correction_requested,true,3,1,0,9,7,0,16
+meta.evidence_invalid,false,471,52,0,970,454,129,2025
+meta.evidence_invalid,true,0,0,0,1,1,0,2
+meta.extraction_rules,R1-R5 gitea_extract.py,0,0,0,371,455,0,0
+meta.flag_review,false,471,52,0,970,454,129,2022
+meta.flag_review,true,0,0,0,1,1,0,5
+meta.framework,fastapi,0,0,0,33,0,33,0
+meta.framework,rails,0,0,0,18,0,18,0
+meta.framework,django,0,0,0,18,0,18,0
+meta.framework,gin,0,0,0,18,0,18,0
+meta.framework,nestjs,0,0,0,18,0,18,0
+meta.framework,express,0,0,0,12,0,12,0
+meta.framework,spring,0,0,0,12,0,12,0
+meta.group_membership_semantics,v3.0,18,0,16,147,0,129,0
+meta.has_admin_scope,false,380,50,0,380,0,0,1964
+meta.has_admin_scope,true,31,2,0,31,0,0,63
+meta.has_owner_col,false,327,38,0,327,0,0,1735
+meta.has_owner_col,true,84,14,0,84,0,0,292
+meta.has_security,true,338,38,0,338,0,0,1259
+meta.has_security,false,73,14,0,73,0,0,768
+meta.has_tenant_col,false,389,45,0,389,0,0,1927
+meta.has_tenant_col,true,22,7,0,22,0,0,100
+meta.human_confirmed,false,60,0,0,189,0,129,0
+meta.incomplete,false,395,48,0,395,0,0,1902
+meta.incomplete,true,16,4,0,16,0,0,125
+meta.intended_label_original,membership_required,6,0,0,6,0,0,0
+meta.invalid_evidence_fields,[],411,52,0,781,454,0,2025
+meta.invalid_evidence_fields,"[""path_params:id,org,repo""]",0,0,0,1,1,0,0
+meta.invalid_evidence_fields,"[""owner_cols:user,userId""]",0,0,0,0,0,0,1
+meta.invalid_evidence_fields,"[""owner_cols:account,accountId"", ""tenant_cols:account,accountId""]",0,0,0,0,0,0,1
+meta.known_vulnerable,false,38,0,239,101,0,63,0
+meta.known_vulnerable,true,22,0,30,88,0,66,0
+meta.label_before_override,public,7,0,0,56,0,0,0
+meta.label_before_override,manual_review_required,0,0,0,43,0,0,0
+meta.label_before_override,tenant_match,0,0,0,2,0,0,0
+meta.label_before_override,membership_required,0,0,0,1,0,0,0
+meta.label_before_override,owner_or_admin,0,0,0,1,0,0,0
+meta.label_before_v30,membership_required,0,0,6,0,0,0,0
+meta.label_error,false,411,52,0,782,455,0,2027
+meta.label_source,model_api,411,52,0,782,455,0,2027
+meta.label_source,intended_labels,60,0,0,189,0,129,0
+meta.label_source,workbook_confirmed,0,0,211,0,0,0,0
+meta.label_source,user_approved_intended_labels,0,0,42,0,0,0,0
+meta.label_source,intended_labels_v30_design,0,0,16,0,0,0,0
+meta.license,MIT,0,0,0,371,455,0,0
+meta.low_conf,false,411,52,0,782,455,0,2027
+meta.oas_file,templates/swagger/v1-openapi3.generated.json,0,0,0,371,455,0,0
+meta.oas_status,repo_generated_openapi3,0,0,0,371,455,0,0
+meta.oas_status,script_projection,0,0,0,96,0,96,0
+meta.oas_status,original_export,0,0,58,33,0,33,0
+meta.oas_status,route_only,0,0,109,0,0,0,0
+meta.oas_status,repository_spec,0,0,102,0,0,0,0
+meta.partition,undecided_until_heldout_policy,0,0,0,0,455,0,0
+meta.partition,train,0,0,0,371,0,0,0
+meta.path_owner_signal,false,318,42,0,318,0,0,1644
+meta.path_owner_signal,true,93,10,0,93,0,0,383
+meta.path_resource_depth,1,281,38,0,281,0,0,1403
+meta.path_resource_depth,2,72,10,0,72,0,0,329
+meta.path_resource_depth,0,46,4,0,46,0,0,248
+meta.path_resource_depth,3,10,0,0,10,0,0,41
+meta.path_resource_depth,4,2,0,0,2,0,0,6
+meta.path_tenant_signal,false,330,48,0,330,0,0,1695
+meta.path_tenant_signal,true,81,4,0,81,0,0,332
+meta.project,gitea,0,0,0,371,455,0,0
+meta.public_candidate,false,0,0,0,343,427,0,0
+meta.public_candidate,true,0,0,0,28,28,0,0
+meta.repository,https://github.com/go-gitea/gitea,0,0,0,371,455,0,0
+meta.signal_class,none,102,17,0,102,0,0,800
+meta.signal_class,owner,128,13,0,128,0,0,427
+meta.signal_class,path_only,66,7,0,66,0,0,398
+meta.signal_class,both,74,9,0,74,0,0,242
+meta.signal_class,tenant,41,6,0,41,0,0,160
+meta.source,apisguru,411,52,0,411,0,0,0
+meta.source,opensource,0,0,0,371,455,0,0
+meta.source,synthetic,60,0,0,189,0,129,0
+meta.tag,v28.2.0,0,0,0,371,455,0,0
+meta.v30_override_reason,visibility_dependent,0,0,0,96,0,0,0
+meta.v30_override_reason,security_declared_public,7,0,0,7,0,0,0
+meta.v30_override_trigger,"[""security_declared""]",7,0,0,7,0,0,0
+meta.v30_relabel_reason,intended membership_required means premium plan (subscription tier); v3.0 defines membership_required as target group/te,6,0,0,6,0,0,0
+meta.v30_relabel_reason,intended membership_required means premium plan (subscription tier); v3.0 defines membership_required as target group/te,0,0,6,0,0,0,0
+meta.variant_kind,null,0,0,0,72,0,72,0
+meta.variant_kind,extguard,0,0,0,19,0,19,0
+meta.variant_kind,authonly,0,0,0,19,0,19,0
+meta.variant_kind,extauth,0,0,0,19,0,19,0
+meta.variant_of,null,0,0,0,72,0,72,0
+meta.variant_of,relay_forum,0,0,0,21,0,21,0
+meta.variant_of,campus_records,0,0,0,12,0,12,0
+meta.variant_of,orbit_tickets,0,0,0,12,0,12,0
+meta.variant_of,copper_wallet,0,0,0,12,0,12,0
+meta.visibility_dependent,false,0,0,0,275,359,0,0
+meta.visibility_dependent,true,0,0,0,96,96,0,0
+method,GET,305,31,159,650,228,129,1304
+method,POST,69,4,79,145,97,0,290
+method,PUT,40,9,17,57,23,0,218
+method,DELETE,23,7,13,69,77,0,84
+method,PATCH,34,1,1,50,30,0,131
+model_id,gpt-4o-mini,411,52,0,782,455,0,2027
+model_id_returned,gpt-4o-mini-2024-07-18,411,52,0,782,455,0,2027
+prompt_version,policy-label-v3.0.1,411,52,0,782,455,0,2027
+provider,openai,411,52,0,782,455,0,2027
+security_state,declared,339,38,0,710,455,0,1267
+security_state,unknown,128,12,0,257,0,129,754
+security_state,explicitly_anonymous,4,2,0,4,0,0,6
+source,opensource,0,0,0,371,455,0,0
+source,vuln,0,0,211,0,0,0,0
+source,synthetic,0,0,58,0,0,0,0
+training_target_fields,"[""label"", ""rationale""]",471,52,0,600,0,129,2027

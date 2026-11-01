@@ -1,0 +1,50 @@
+1710|manual_review_required|0.55|Artist artwork route includes AccessToken but no affirmative public-access or concrete subscription requirement.
+1713|manual_review_required|0.55|Podcast episodes require API key and partner ID without an evidenced owner or caller-role policy.
+1716|manual_review_required|0.55|User modification returns code/message without self/admin rules or a verified user binding.
+1719|manual_review_required|0.55|Team invoice customer field is billing data without verified team-to-caller authorization.
+1722|manual_review_required|0.55|Team subscription object plan describes the purchased product, not a required caller membership tier.
+1725|manual_review_required|0.55|Email user field suggests ownership but route user/email linkage and authenticated subject mapping are unverified.
+1728|manual_review_required|0.55|Namespace card replacement has customer metadata without resolving personal-versus-team authorization.
+1731|manual_review_required|0.55|Extractor schedule ownerId suggests ownership but inferred fields do not verify a caller-subject comparison or lookup.
+1734|manual_review_required|0.55|Risk-factor reference data does not affirm unrestricted API access; security is unspecified.
+1737|manual_review_required|0.55|Media public_content scope and user attribution do not prove unrestricted visibility of every media object.
+1740|manual_review_required|0.55|User profile API-key/OAuth access lacks an explicit public or self-only rule.
+1743|manual_review_required|0.55|Relay config creator roles/customRoles describe creator metadata, not a required caller administrator role.
+1746|manual_review_required|0.55|Project/environment destination update lacks a tenant identifier or caller authorization binding.
+1749|manual_review_required|0.55|Feature-flag maintainer and project context do not prove maintainer-only or tenant-based reading.
+1752|manual_review_required|0.55|External project has createdBy and orgId without a verified governing owner or tenant relation.
+1755|manual_review_required|0.55|Organization-unit update returns error fields only without caller-tenant mapping.
+1758|manual_review_required|0.55|Organization project deletion has nested IDs but error-only schema lacks authorization binding.
+1761|manual_review_required|0.55|Project participants expose userId/projectId but not who may list participants or a verified project tenancy rule.
+1764|manual_review_required|0.55|Area Branch and ShowOnSites properties do not specify caller ownership or unrestricted access.
+1767|manual_review_required|0.55|Client genetic SNP dataset has no client ownership relation in variant fields despite bearer authentication.
+1770|manual_review_required|0.55|Authorization result-file upload identifies product/authorization but lacks a verified permitted actor or owner lookup.
+1773|manual_review_required|0.55|Ride receipt read permission lacks rider-to-caller lookup in charge metadata.
+1776|manual_review_required|0.55|Geographic administrative divisions are not application administrator roles; UserSecurity gives no concrete access policy.
+1779|manual_review_required|0.55|Merchant transfer mixes sender, recipient and partner actors without a verified caller-authorized relationship.
+1782|manual_review_required|0.55|Vehicle-body reference data does not explicitly establish unrestricted API access.
+1785|manual_review_required|0.55|Vehicle paint image URLs provide content metadata without an affirmative public authorization statement.
+1788|manual_review_required|0.55|Track restricted flag and API-key access prevent inferring unrestricted access or a specific caller tier.
+1791|manual_review_required|0.55|Server account userid hints ownership, but optional role_id authentication does not define required role or subject binding.
+1794|manual_review_required|0.55|Session accountid/userid indicate session subjects without a verified caller identity relation or owner lookup.
+1797|manual_review_required|0.55|Creating a user's role returns opaque role data; optional role_id scheme does not identify a concrete authorized caller role.
+1800|manual_review_required|0.55|Account holdings update returns holdings only, lacking caller account ownership evidence.
+1803|manual_review_required|0.55|Account savings strategy list has an opaque collection without a verified caller relation.
+1806|manual_review_required|0.55|Savings strategy accountId suggests financial linkage without caller-subject or tenant semantics.
+1809|manual_review_required|0.55|Account cancellation accountMembership tag names a resource area, not a required subscription tier or verified owner rule.
+1812|manual_review_required|0.55|Audit account_id scopes events while actor fields describe logged subjects, not the authorized reader.
+1815|manual_review_required|0.55|Account/site environment deletion returns errors without a verified tenant or owner lookup.
+1818|manual_review_required|0.55|Environment updated_by is provenance, not proof the caller owns the account/site variable.
+1821|manual_review_required|0.55|Organization content recommendations have read scope but no organization-to-caller binding.
+1824|manual_review_required|0.55|Dataset reuse user attribution does not establish owner-only reading or an explicit unrestricted policy.
+1827|manual_review_required|0.55|Exchanger organization is an opaque business relationship, not a verified caller tenant.
+1830|manual_review_required|0.55|Payment-method reference metadata has no affirmative public or caller authorization rule.
+1833|manual_review_required|0.55|FDA application organisation is an applicant/sponsor, not a caller tenant; public API access is not stated.
+1836|role_required|0.87|Summary explicitly authorizes admins and editors to list device tags, providing a direct caller-role rule.
+1839|manual_review_required|0.55|Child analysis-rule listing has pagination only without object owner or role requirements.
+1842|manual_review_required|0.55|CompetitorPremiumAPI names a product but does not explicitly state a required caller subscription tier.
+1845|manual_review_required|0.55|Payment provider is a processor and cardholder data does not verify caller ownership or merchant tenancy.
+1848|manual_review_required|0.55|Account is_paying/monthly_value describe the target customer, not a required caller plan or verified owner relation.
+1851|manual_review_required|0.55|User deletion target roles/account fields do not specify who is authorized to delete the user.
+1854|manual_review_required|0.55|Vote user_id filter and returned voter identity do not establish owner-only visibility or a verified access rule.
+1857|manual_review_required|0.55|Event category uses basic authentication without a caller owner, role or public-access rule.

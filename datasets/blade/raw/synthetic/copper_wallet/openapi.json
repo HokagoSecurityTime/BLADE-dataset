@@ -1,0 +1,291 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "copper_wallet",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/fixtures/copper_wallet/transfers/catalogue/current/{item_id}": {
+      "get": {
+        "description": "Intentionally anonymous reference catalogue.",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "item_id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Fixture record"
+          }
+        }
+      }
+    },
+    "/fixtures/copper_wallet/transfers/catalogue/archive/{item_id}": {
+      "get": {
+        "description": "Intentionally anonymous reference catalogue.",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "item_id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Fixture record"
+          }
+        }
+      }
+    },
+    "/fixtures/copper_wallet/transfers/drafts/current/{item_id}": {
+      "get": {
+        "description": "Only the record owner may read it.",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "item_id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Fixture record"
+          }
+        }
+      }
+    },
+    "/fixtures/copper_wallet/transfers/drafts/archive/{item_id}": {
+      "get": {
+        "description": "Only the record owner may read it.",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "item_id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Fixture record"
+          }
+        }
+      }
+    },
+    "/fixtures/copper_wallet/transfers/shared/current/{item_id}": {
+      "get": {
+        "description": "The record owner or an administrator may read it.",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "item_id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Fixture record"
+          }
+        }
+      }
+    },
+    "/fixtures/copper_wallet/transfers/shared/archive/{item_id}": {
+      "get": {
+        "description": "The record owner or an administrator may read it.",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "item_id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Fixture record"
+          }
+        }
+      }
+    },
+    "/fixtures/copper_wallet/transfers/workspace/current/{item_id}": {
+      "get": {
+        "description": "Caller and record must share a tenant.",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "item_id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Fixture record"
+          }
+        }
+      }
+    },
+    "/fixtures/copper_wallet/transfers/workspace/archive/{item_id}": {
+      "get": {
+        "description": "Caller and record must share a tenant.",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "item_id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Fixture record"
+          }
+        }
+      }
+    },
+    "/fixtures/copper_wallet/transfers/audit/current/{item_id}": {
+      "get": {
+        "description": "Only administrators may read this operational resource.",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "item_id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Fixture record"
+          }
+        }
+      }
+    },
+    "/fixtures/copper_wallet/transfers/audit/archive/{item_id}": {
+      "get": {
+        "description": "Only administrators may read this operational resource.",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "item_id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Fixture record"
+          }
+        }
+      }
+    },
+    "/fixtures/copper_wallet/transfers/subscription/current/{item_id}": {
+      "get": {
+        "description": "A premium plan is required.",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "item_id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Fixture record"
+          }
+        }
+      }
+    },
+    "/fixtures/copper_wallet/transfers/subscription/archive/{item_id}": {
+      "get": {
+        "description": "A premium plan is required.",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "item_id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Fixture record"
+          }
+        }
+      }
+    },
+    "/fixtures/copper_wallet/transfers/disputed/current/{item_id}": {
+      "get": {
+        "description": "Conflicting owner and tenant requirements are deliberately unresolved; deny pending review.",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "item_id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Fixture record"
+          }
+        }
+      }
+    },
+    "/fixtures/copper_wallet/transfers/disputed/archive/{item_id}": {
+      "get": {
+        "description": "Conflicting owner and tenant requirements are deliberately unresolved; deny pending review.",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "item_id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Fixture record"
+          }
+        }
+      }
+    }
+  },
+  "components": {},
+  "tags": []
+}

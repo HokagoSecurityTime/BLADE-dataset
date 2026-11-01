@@ -1,0 +1,125 @@
+service: orbit_tickets
+variant_of: orbit_tickets
+partition: train_only
+oas_status: original_export
+endpoints:
+- id: orbit_tickets_drafts_authonly
+  method: GET
+  path: /fixtures/orbit_tickets/reservations/drafts/authonly/{item_id}
+  label: manual_review_required
+  vulnerable: true
+  reason: Authentication only; no requester-object relationship or role check is implemented,
+    so no concrete label is supported.
+  variant_kind: authonly
+  base_label: owner_match
+  auth_style: inline
+- id: orbit_tickets_drafts_extauth
+  method: GET
+  path: /fixtures/orbit_tickets/reservations/drafts/extauth/{item_id}
+  label: manual_review_required
+  vulnerable: true
+  reason: Authentication only; no requester-object relationship or role check is implemented,
+    so no concrete label is supported. Authentication is enforced outside the handler.
+  variant_kind: extauth
+  base_label: owner_match
+  auth_style: external
+- id: orbit_tickets_drafts_extguard
+  method: GET
+  path: /fixtures/orbit_tickets/reservations/drafts/extguard/{item_id}
+  label: owner_match
+  vulnerable: false
+  reason: Only the record owner may read it. Authentication is enforced outside the
+    handler; the authorization check is inside.
+  variant_kind: extguard
+  base_label: owner_match
+  auth_style: external
+- id: orbit_tickets_shared_authonly
+  method: GET
+  path: /fixtures/orbit_tickets/reservations/shared/authonly/{item_id}
+  label: manual_review_required
+  vulnerable: true
+  reason: Authentication only; no requester-object relationship or role check is implemented,
+    so no concrete label is supported.
+  variant_kind: authonly
+  base_label: owner_or_admin
+  auth_style: inline
+- id: orbit_tickets_shared_extauth
+  method: GET
+  path: /fixtures/orbit_tickets/reservations/shared/extauth/{item_id}
+  label: manual_review_required
+  vulnerable: true
+  reason: Authentication only; no requester-object relationship or role check is implemented,
+    so no concrete label is supported. Authentication is enforced outside the handler.
+  variant_kind: extauth
+  base_label: owner_or_admin
+  auth_style: external
+- id: orbit_tickets_shared_extguard
+  method: GET
+  path: /fixtures/orbit_tickets/reservations/shared/extguard/{item_id}
+  label: owner_or_admin
+  vulnerable: false
+  reason: The record owner or an administrator may read it. Authentication is enforced
+    outside the handler; the authorization check is inside.
+  variant_kind: extguard
+  base_label: owner_or_admin
+  auth_style: external
+- id: orbit_tickets_workspace_authonly
+  method: GET
+  path: /fixtures/orbit_tickets/reservations/workspace/authonly/{item_id}
+  label: manual_review_required
+  vulnerable: true
+  reason: Authentication only; no requester-object relationship or role check is implemented,
+    so no concrete label is supported.
+  variant_kind: authonly
+  base_label: tenant_match
+  auth_style: inline
+- id: orbit_tickets_workspace_extauth
+  method: GET
+  path: /fixtures/orbit_tickets/reservations/workspace/extauth/{item_id}
+  label: manual_review_required
+  vulnerable: true
+  reason: Authentication only; no requester-object relationship or role check is implemented,
+    so no concrete label is supported. Authentication is enforced outside the handler.
+  variant_kind: extauth
+  base_label: tenant_match
+  auth_style: external
+- id: orbit_tickets_workspace_extguard
+  method: GET
+  path: /fixtures/orbit_tickets/reservations/workspace/extguard/{item_id}
+  label: tenant_match
+  vulnerable: false
+  reason: Caller and record must share a tenant. Authentication is enforced outside
+    the handler; the authorization check is inside.
+  variant_kind: extguard
+  base_label: tenant_match
+  auth_style: external
+- id: orbit_tickets_audit_authonly
+  method: GET
+  path: /fixtures/orbit_tickets/reservations/audit/authonly/{item_id}
+  label: manual_review_required
+  vulnerable: true
+  reason: Authentication only; no requester-object relationship or role check is implemented,
+    so no concrete label is supported.
+  variant_kind: authonly
+  base_label: role_required
+  auth_style: inline
+- id: orbit_tickets_audit_extauth
+  method: GET
+  path: /fixtures/orbit_tickets/reservations/audit/extauth/{item_id}
+  label: manual_review_required
+  vulnerable: true
+  reason: Authentication only; no requester-object relationship or role check is implemented,
+    so no concrete label is supported. Authentication is enforced outside the handler.
+  variant_kind: extauth
+  base_label: role_required
+  auth_style: external
+- id: orbit_tickets_audit_extguard
+  method: GET
+  path: /fixtures/orbit_tickets/reservations/audit/extguard/{item_id}
+  label: role_required
+  vulnerable: false
+  reason: Only administrators may read this operational resource. Authentication is
+    enforced outside the handler; the authorization check is inside.
+  variant_kind: extguard
+  base_label: role_required
+  auth_style: external

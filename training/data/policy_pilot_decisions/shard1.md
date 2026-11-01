@@ -1,0 +1,40 @@
+# Blind policy review shard 1
+
+33 individually inspected records; no old labels, API calls, local model, or classification rules used. Confidence is uncalibrated. All proposals require human review.
+The Python companion only serializes the explicit authored table and checks source quotations. It does not infer labels.
+
+| id | proposed label | rationale |
+|---|---|---|
+| apisguru:autodealerdata.com:get:/valuation | membership_required | The valuation endpoint is explicitly Premium and date access depends on subscription tier; no object-owner check is described. |
+| apisguru:discourse.local:delete:/admin/users/{id}.json | manual_review_required | Deleting a user under /admin suggests elevated privileges, but the recovered summary supplies no actual role restriction. |
+| apisguru:discourse.local:put:/admin/users/{id}/suspend.json | manual_review_required | Suspend-user naming and suspended_by response data do not establish which caller role may suspend users. |
+| apisguru:flickr.com:get:/rest?method=flickr.groups.discuss.topics.getInfo | manual_review_required | Discussion topic details and author/can_edit response fields do not establish access policy for this GET; missing security does not prove public. |
+| apisguru:flickr.com:get:/rest?method=flickr.photos.getContext | manual_review_required | Photostream navigation description does not specify visibility or caller restrictions; owner response data alone cannot establish owner-only reads. |
+| apisguru:slack.com:get:/admin.conversations.getConversationPrefs | manual_review_required | The required admin.conversations:read OAuth permission is explicit, but no application role or channel relationship rule is supplied. |
+| apisguru:hillbillysoftware.com:get:/Magnets/ByIMDB/{AccessToken}/{imdbID} | membership_required | The operation expressly excludes free-plan users and requires donation qualification, which is a membership condition rather than object ownership. |
+| apisguru:bigoven.com:get:/recipe/steps/{id} | owner_match | The operation explicitly returns 403 for recipes owned by someone else, establishing caller ownership independently of any physical DB lookup. |
+| apisguru:circuitsandbox.net:post:/conversations/{convId}/messages | manual_review_required | Conversation participation is explicitly required, but arbitrary conversation membership is outside the subscription/qualification membership label and is not owner or tenant equality. |
+| apisguru:mastodon.local:get:/api/v1/accounts/{id}/following | manual_review_required | The read depends on whether the account owner hides their network; authentication and visibility conditions do not reduce to unconditional public or owner-only access. |
+| apisguru:contribly.com:get:/form-responses/{id} | manual_review_required | The response user field and response ID identify data but the summary gives no caller-to-response authorization relation. |
+| apisguru:illumidesk.com:patch:/v1/users/{user}/emails/{email_id}/ | manual_review_required | JWT authentication and a user-scoped email path are documented; neither says callers can update only their own emails or names an authorized role. |
+| apisguru:tyk.com:get:/tyk/apis/{apiID} | manual_review_required | A gateway shared secret protects the management call, but this does not identify an application role or caller-organization equality check. |
+| apisguru:adyen.com:get:/paymentInstruments/{id} | manual_review_required | Basic/API-key authentication and generic insufficient-permissions errors do not specify the policy for a particular payment instrument. |
+| apisguru:mist.com:post:/api/v1/installer/orgs/{org_id}/sites/{site_name}/maps/import | manual_review_required | Token privileges can be admin-derived and Org/Site-scoped, with Basic Auth as an alternative; the import operation does not state a specific required role or target-org equality. |
+| apisguru:adyen.com:patch:/legalEntities/{id} | manual_review_required | Legal-entity associations and capability fields describe the entity being edited, not the API caller authorization for this PATCH. |
+| apisguru:openfintech.io:get:/organizations/{id} | manual_review_required | The organization directory response appears informational but its description does not affirm unrestricted access; no caller-tenant check is documented. |
+| apisguru:telnyx.com:patch:/authentication_providers/{id} | manual_review_required | Bearer authentication and organization_id response data do not establish tenant equality or an administrator role for updating an authentication provider. |
+| apisguru:learnifier.com:patch:/orgunits/{orgid}/projects/{projectid} | manual_review_required | Organization/project nesting and createdBy/orgId fields suggest relationships, but the update description defines no caller authorization condition. |
+| apisguru:data2crm.com:get:/application/entity/comment/{comment_id} | manual_review_required | User and Application Keys authenticate the CRM request; a comment relation.user field does not prove the caller must be its author. |
+| apisguru:yodlee.com:put:/accounts/{accountId} | manual_review_required | Supported financial account containers and update restrictions are described, but ownership or delegated access is not specified. |
+| apisguru:flat.io:get:/scores/{score} | manual_review_required | Read permission, collaboration and private-link sharing describe a document ACL. This is neither owner-only access nor an application role or subscription tier. |
+| apisguru:openbankingproject.ch:get:/v1/accounts/{account-id}/transactions | manual_review_required | AIS consent enables delegated account access; an optional bearer security branch does not make it public, and consent is not caller-is-owner equality. |
+| apisguru:noosh.com:get:/1.1/workgroups/{workgroup_id}/projects/{project_id}/fileTags | manual_review_required | The workgroup/project path scopes the tag listing, but no caller-workgroup authorization relation is given. |
+| apisguru:mist.com:post:/api/v1/installer/orgs/{org_id}/devices/{device_mac}/{image_name} | manual_review_required | Admin-derived API token privileges and alternate Basic Auth do not define whether this particular installer upload requires a role, an org grant or tenant equality. |
+| apisguru:apigee.local:post:/v1/projects/{project}/locations/{location}/apis/{api}/versions | manual_review_required | Project/location/API resource names identify the creation parent, but the recovered description contains no IAM role or caller-project authorization rule. |
+| apisguru:trakt.tv:put:/users/{id}/lists/{list_id} | manual_review_required | OAuth and personal-list wording suggest owner updates, but the explicit privacy rules govern who can see the list, not who may PUT it. |
+| apisguru:appwrite.io:put:/teams/{teamId} | owner_match | The operation expressly limits write access to team owners, establishing object-relative ownership even though the backing ownership mapping is unavailable. |
+| apisguru:evetech.net:get:/characters/{character_id}/attributes/ | manual_review_required | An EVE character ID and read_skills OAuth scope are present, but this source does not establish that the token subject must own the requested character. |
+| apisguru:zuora.com:get:/events/event-triggers/{id} | manual_review_required | OAuth can authorize multiple entities and the header selects an authorized entity. This is a multi-entity grant, not demonstrated equality with a single caller tenant. |
+| apisguru:billingo.hu:get:/documents/{id}/online-szamla | manual_review_required | API-key authentication and a document status ID are specified; no caller-owner, tenant or role restriction is described. |
+| apisguru:ideal-postcodes.co.uk:post:/keys/{key}/configs/{config} | manual_review_required | A user token for sensitive account/API-key operations suggests self-service, but the text does not explicitly bind the supplied key/configuration to that caller. |
+| apisguru:box.com:delete:/device_pinners/{device_pinner_id} | manual_review_required | Deleting a device pin requires OAuth, but the operation describes no required enterprise role or ownership check; generic global scopes cannot supply one. |

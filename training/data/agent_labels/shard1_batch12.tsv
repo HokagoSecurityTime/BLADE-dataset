@@ -1,0 +1,50 @@
+1651	manual_review_required	0.50	Email recipient and entity relations do not establish caller access or verified ownership.
+1654	manual_review_required	0.50	Provider-network categories lack verified tenant mapping and security requirements.
+1657	manual_review_required	0.50	Provider network provider is resource metadata, not verified caller tenancy.
+1660	manual_review_required	0.50	Assay reference search has no affirmative unrestricted-access statement.
+1663	manual_review_required	0.50	Enforcement-case report describes public-looking records but supplies no affirmative API-access policy.
+1666	manual_review_required	0.50	Collection-record retrieval has wskey input and unknown security without explicit unrestricted access.
+1669	public	0.85	Summary explicitly states character public information and supplied character attributes contain no conflicting private-access rule.
+1672	manual_review_required	0.55	Character bookmarks require OAuth permission but creator_id is unverified and not necessarily the character-owner lookup.
+1675	manual_review_required	0.55	Utility document comparison includes billing account data without a verified caller ownership relation.
+1678	manual_review_required	0.55	Entity ownershipResolved concerns corporate identity data, not the API caller's authority to update it.
+1681	manual_review_required	0.55	Named-entity recognition requires a user key without a concrete supported caller authorization rule.
+1684	manual_review_required	0.50	Account-organizer listing has no verified caller-account relationship or specified security.
+1687	manual_review_required	0.50	Organizer-session report lacks an owner lookup and has unknown security.
+1690	manual_review_required	0.55	Group access requests require a token but no explicit caller role or group authorization relation is given.
+1693	manual_review_required	0.55	Group issues mix author, assignee and project_id with confidential flags without verified authorization binding.
+1696	manual_review_required	0.55	Member access_level describes the returned member rather than the caller's required role.
+1699	role_required	0.85	Summary explicitly states that transferring a project to the group namespace is available only for admin.
+1702	manual_review_required	0.50	Volunteer retrieval has unknown security and no affirmative unrestricted-access or ownership evidence.
+1705	manual_review_required	0.50	Reservation customer_id and company_id imply several subjects without a verified caller binding.
+1708	manual_review_required	0.50	Episode lookup embeds AccessToken but supplies no explicit unrestricted access or required subscription tier.
+1711	manual_review_required	0.50	Album lyrics lookup embeds AccessToken without defining a supported caller authorization policy.
+1714	manual_review_required	0.55	User deletion requires a token but only code/message response fields and no owner or role rule are supplied.
+1717	manual_review_required	0.55	Functionality device metadata has token authentication without a verified caller-resource relation.
+1720	manual_review_required	0.55	Team invoice items lack a team field or verified caller-tenant lookup.
+1723	manual_review_required	0.55	Email user and public fields are inferred variable data without a verified owner-only or unrestricted-access policy.
+1726	manual_review_required	0.55	Card customer identifies billing subject, not verified namespace ownership of the caller.
+1729	manual_review_required	0.55	Invoice customer and subscription are billing relations without verified caller authorization.
+1732	manual_review_required	0.50	Concept metadata has unknown security and no affirmative unrestricted-access statement.
+1735	manual_review_required	0.55	public_content OAuth permission does not itself prove unrestricted location API access.
+1738	manual_review_required	0.55	Comment removal has authentication and comments permission but only result wrappers, not ownership binding.
+1741	manual_review_required	0.55	Assigning loyalty points exposes user_id but does not prove self-service ownership or a required caller role.
+1744	manual_review_required	0.55	Relay-secret reset includes creator roles and policy data without specifying authorized caller roles or lookup.
+1747	manual_review_required	0.55	Project feature-flag status listing has token security but wrappers cannot establish tenant binding.
+1750	manual_review_required	0.55	Feature maintainer and role metadata do not specify caller authorization for updating the flag.
+1753	manual_review_required	0.50	External-user lookup has authorizationPossible and homeOrg attributes without verified caller access semantics.
+1756	manual_review_required	0.50	Organization projects expose createdBy and orgId without verified authorization subject or key binding.
+1759	manual_review_required	0.50	Project information has owner and organization hints but no verified caller-to-project authorization relation.
+1762	manual_review_required	0.50	Adding a project participant has only error fields and no verified org or caller-role rule.
+1765	manual_review_required	0.50	Branch company name is address metadata, not verified caller tenancy, and security is unknown.
+1768	manual_review_required	0.55	Client SNP retrieval has bearer security but genotype fields do not establish caller-dataset ownership.
+1771	manual_review_required	0.55	Ride passenger user_id is flattened inferred data without verified owner lookup or explicit passenger-only access.
+1774	manual_review_required	0.55	Administrative division means geography, not an admin role; API authorization beyond UserSecurity is unspecified.
+1777	manual_review_required	0.55	Nearby-city lookup has UserSecurity without affirmative unrestricted access or a supported caller policy.
+1780	manual_review_required	0.50	Funding reversal specifies transaction conditions and refund destination, not verified caller ownership or role authorization.
+1783	manual_review_required	0.50	Market-class reference metadata has unknown security and no affirmative unrestricted-access evidence.
+1786	manual_review_required	0.55	Album lookup requires a key but only result wrappers, with no explicit unrestricted-access statement.
+1789	manual_review_required	0.55	Server owner is inferred and role_id is an optional authentication scheme, not a concrete caller role.
+1792	manual_review_required	0.55	Account userid is inferred and optional role_id scheme does not prove a role or ownership authorization rule.
+1795	manual_review_required	0.55	User-account listing has server context but wrapper-only ERD cannot establish verified ownership.
+1798	manual_review_required	0.50	Account holdings supplies only a holdings wrapper and unknown security, leaving caller-account authorization unresolved.

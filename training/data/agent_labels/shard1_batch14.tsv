@@ -1,0 +1,26 @@
+1951	manual_review_required	0.50	Location listing has key input and unknown security without affirmative unrestricted access.
+1954	manual_review_required	0.55	Zone audit changes have API-key security but no caller-zone authorization relationship.
+1957	manual_review_required	0.50	API-definition update has only action/key/status fields and no explicit caller privilege.
+1960	manual_review_required	0.50	Refresh-token invalidation has unknown security and no token-owner lookup.
+1963	manual_review_required	0.50	Invitation user, group and inviter fields do not select a verified authorized caller.
+1966	manual_review_required	0.50	Comment user is inferred without explicit owner-only editing or verified binding.
+1969	manual_review_required	0.50	Event owner_id is an inferred hint with no verified key or specified update policy.
+1972	manual_review_required	0.50	Map owner_id and visibility lack verified caller ownership semantics.
+1975	manual_review_required	0.50	Collaborator is_admin describes a member, not the caller's required role or bypass.
+1978	manual_review_required	0.50	Maintenance companyId is inferred and api-public path does not establish unrestricted access.
+1981	manual_review_required	0.50	Override team and user assignments are objects being changed, not verified authorization rules.
+1984	manual_review_required	0.50	User contact-device deletion lacks owner fields or verified user-contact lookup.
+1987	manual_review_required	0.50	Contact-email deletion has user path context but no verified ownership relation.
+1990	manual_review_required	0.50	Contact-phone retrieval has user context without a verified caller-subject binding.
+1993	manual_review_required	0.50	Classifier deletion has accessKey and secretKey inputs but no specified caller ownership rule.
+1996	manual_review_required	0.55	Order customer contact fields describe shipping data rather than a verified caller-owner relationship.
+1999	manual_review_required	0.50	Site backup canBackup flag is resource data, not caller authorization or verified ownership.
+2002	manual_review_required	0.50	Site-extension retrieval has unknown security and no caller-site binding.
+2005	manual_review_required	0.50	Site tag mutation has admin_url and capability fields without explicit caller roles or ownership.
+2008	manual_review_required	0.50	Weather alerts require a key parameter and no affirmative unrestricted API-access statement.
+2011	manual_review_required	0.50	Air-quality forecast has key input and unknown security, not explicit public authorization.
+2014	manual_review_required	0.50	Competition isPublished describes data visibility rather than unrestricted API access.
+2017	manual_review_required	0.50	Article-review summaries have unknown security and only pagination/content wrappers.
+2020	manual_review_required	0.50	Category hidden flag implies variable visibility and no affirmative unrestricted-access evidence.
+2023	manual_review_required	0.50	Marking a message read lacks verified recipient or owner lookup and specified security.
+2026	manual_review_required	0.50	Voice-message recipient number is contact data, not a verified caller authorization binding.

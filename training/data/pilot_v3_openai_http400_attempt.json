@@ -1,0 +1,21 @@
+{
+  "records": 50,
+  "successful": 8,
+  "label_error": 42,
+  "labels": {
+    "public": 0,
+    "role_required": 4,
+    "membership_required": 0,
+    "tenant_match": 1,
+    "owner_match": 2,
+    "owner_or_admin": 1,
+    "manual_review_required": 0
+  },
+  "manual_review_rate": 0.0,
+  "confidence": {
+    "below_0.6": 0,
+    "0.6_to_0.7": 0,
+    "0.7_to_0.9": 6,
+    "0.9_plus": 2
+  }
+}

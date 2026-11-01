@@ -1,0 +1,32 @@
+{
+  "data_version": "data-v4",
+  "sources": {
+    "train_v31b.jsonl": "8ca09e29ec00d7816e933f5b6e6bf92a36743d4c41ac2c72a1f66e8639d26543",
+    "val_v31.jsonl": "5b359e736f34edc176de62f4fea1f985aa7e09652bb3151b78a35e0c94f9d024",
+    "train_sft_v31b.jsonl": "712efacacbff010fa4d2a10129a345c7cad43e8bcf4ca4633be64d155bbbe0ec",
+    "val_sft_v31.jsonl": "0d6a1e58dc8d1a741bade9b92311170746b949fc16e50c5e5fc535495e9220cd",
+    "test_v30_inputs.jsonl": "d65f25b966f61131c0ba5a2341798e56dcd2d3b8da73e9f5d03eb3cd6b0f119a",
+    "test_v31_supp.jsonl": "803d914902c7ca2042fd15d4a7852d42e71828e58d4ae4d3ac791fb868e63395",
+    "test_v31_supp_inputs.jsonl": "97e618e770bbf9950d6846869901819db36fce486d8999d69eb73e286e2a056c",
+    "candidates_train_v4.jsonl": "291933c2b0b6fe9811df697b139b894d2d29399119cdd2aa81cda60c40b96376",
+    "policy_label_v3.0.1.md": "d0913c27b5de185e7dd5734c111cb731f45e28ebca81fed787ff3914d02833ef"
+  },
+  "generated": {
+    "train_sft_v4.jsonl": "5178c35e7c6bd66e7dfcc44ca603c26bb2319edc85b86abe4679646a3b93a593",
+    "val_sft_v4.jsonl": "52d0187e8f1d048ddae8bbb2c24b39c14d2e1a65b2519cdb1b934b10b9884bff",
+    "test_v30_inputs.jsonl": "d65f25b966f61131c0ba5a2341798e56dcd2d3b8da73e9f5d03eb3cd6b0f119a",
+    "test_v31_supp_inputs.jsonl": "97e618e770bbf9950d6846869901819db36fce486d8999d69eb73e286e2a056c",
+    "policy_label_v3.0.1.md": "d0913c27b5de185e7dd5734c111cb731f45e28ebca81fed787ff3914d02833ef"
+  },
+  "counts": {
+    "train": 978,
+    "val": 147
+  },
+  "format": "same as data_v3 (system=prompt v3.0.1; user=\"Return JSON.\\n\"+payload; assistant=label JSON)",
+  "max_seq_len": 4096,
+  "datasets": {
+    "train_v4_rule_labeled.jsonl": "3ce32a737c71d9433b1c7ddf31a93a04328d783d3a4db8e92fff0d092e16ae2d",
+    "train_v4.jsonl": "1729f79dd1c06408846e4083b2e82fdace113166c0f92fea32e293441791966c",
+    "val_v4.jsonl": "2b3362b6adcc6da13b0d1c71fcf671b9700f54fedcd57bb6f55010f3c63c9105"
+  }
+}

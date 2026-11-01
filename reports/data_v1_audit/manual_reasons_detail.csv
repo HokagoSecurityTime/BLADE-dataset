@@ -1,0 +1,574 @@
+split,id,source,category,subtype,evidence_field,label_before_or_original
+train_v1,apisguru:alertersystem.com:patch:/api/monitor/{id},apisguru,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+train_v1,apisguru:apache.org:patch:/dags/{dag_id}/dagRuns/{dag_run_id}/setNote,apisguru,가,접근 조건 미명시(일반),"rationale(모델 문장, 정규식)",manual_review_required
+train_v1,apisguru:api2cart.com:get:/attribute.group.list.json,apisguru,가,override: security 선언 public→manual,meta.v30_override_reason,public
+train_v1,apisguru:apideck.com:delete:/accounting/customers/{id},apisguru,가,API 키만 요구,"rationale(모델 문장, 정규식)",manual_review_required
+train_v1,apisguru:apigee.net:get:/dealer/heavy-equipment/{id},apisguru,가,override: security 선언 public→manual,meta.v30_override_reason,public
+train_v1,apisguru:apple.com:patch:/v1/appInfos/{id},apisguru,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+train_v1,apisguru:bbc.com:get:/services,apisguru,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+train_v1,apisguru:bbc.com:get:/v1/brands/{pid}/franchises/,apisguru,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+train_v1,apisguru:bigoven.com:post:/recipe/{recipeId}/note,apisguru,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+train_v1,apisguru:bigredcloud.com:get:/v1/customers/{itemId}/openingBalance,apisguru,가,객체 ID만 있음,"rationale(모델 문장, 정규식)",manual_review_required
+train_v1,apisguru:bigredcloud.com:get:/v1/customers/{itemId}/openingBalanceList,apisguru,가,객체 ID만 있음,"rationale(모델 문장, 정규식)",manual_review_required
+train_v1,apisguru:bigredcloud.com:get:/v1/customers/{itemId}/quotes,apisguru,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+train_v1,apisguru:bigredcloud.com:put:/v1/cashReceipts/{id},apisguru,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+train_v1,apisguru:bitbucket.org:get:/repositories/{workspace}/{repo_slug}/commit/{commit}/reports/{reportId}/annotations,apisguru,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+train_v1,apisguru:bkk.hu:get:/{dialect}/api/where/route-details-for-stop,apisguru,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+train_v1,apisguru:brex.io:get:/api/v1/company/announcement/{id},apisguru,가,override: security 선언 public→manual,meta.v30_override_reason,public
+train_v1,campus_records_disputed_0,synthetic,나,합성: 복합/충돌 조건(설계 manual),rationale(intended),
+train_v1,campus_records_disputed_1,synthetic,나,합성: 복합/충돌 조건(설계 manual),rationale(intended),
+train_v1,campus_records_subscription_0,synthetic,나,relabel: 합성 subscription(구독 조건),meta.v30_relabel_reason,membership_required
+train_v1,campus_records_subscription_1,synthetic,나,relabel: 합성 subscription(구독 조건),meta.v30_relabel_reason,membership_required
+train_v1,apisguru:citrixonline.com:get:/organizers/{organizerKey},apisguru,가,접근 조건 미명시(일반),"rationale(모델 문장, 정규식)",manual_review_required
+train_v1,apisguru:clearblade.com:get:/admin/v/4/session/{systemKey}/user,apisguru,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+train_v1,apisguru:clever-cloud.com:get:/organisations/{id}/addonproviders/{providerId}/plans/{planId},apisguru,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+train_v1,apisguru:clever.com:get:/contacts/{id},apisguru,가,인증만 확인·인가 조건 없음,"rationale(모델 문장, 정규식)",manual_review_required
+train_v1,apisguru:clickmeter.com:post:/account/guests/{guestId},apisguru,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+train_v1,apisguru:codat.io:get:/data/companies/{companyId}/connections/{connectionId}/assess/accounts/{accountId}/categories,apisguru,가,override: security 선언 public→manual,meta.v30_override_reason,public
+train_v1,apisguru:contribly.com:get:/exports/{id},apisguru,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+train_v1,copper_wallet_disputed_0,synthetic,나,합성: 복합/충돌 조건(설계 manual),rationale(intended),
+train_v1,copper_wallet_disputed_1,synthetic,나,합성: 복합/충돌 조건(설계 manual),rationale(intended),
+train_v1,copper_wallet_subscription_0,synthetic,나,relabel: 합성 subscription(구독 조건),meta.v30_relabel_reason,membership_required
+train_v1,copper_wallet_subscription_1,synthetic,나,relabel: 합성 subscription(구독 조건),meta.v30_relabel_reason,membership_required
+train_v1,apisguru:deutschebahn.com:get:/areas/{areaUID},apisguru,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+train_v1,apisguru:deutschebahn.com:get:/providernetworks/{uid},apisguru,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+train_v1,apisguru:docker.com:get:/containers/{id}/json,apisguru,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+train_v1,apisguru:edrv.io:patch:/v1/commands/{id}/variables,apisguru,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+train_v1,apisguru:files.com:get:/api_keys,apisguru,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+train_v1,apisguru:frankiefinancial.io:post:/document/{documentId}/utility/process/compare,apisguru,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+train_v1,apisguru:gitea.io:get:/repos/{owner}/{repo}/hooks/{id},apisguru,가,접근 조건 미명시(일반),"rationale(모델 문장, 정규식)",manual_review_required
+train_v1,apisguru:gitea.io:patch:/orgs/{org}/hooks/{id},apisguru,가,접근 조건 미명시(일반),"rationale(모델 문장, 정규식)",manual_review_required
+train_v1,apisguru:github.com:get:/app/hook/deliveries/{delivery_id},apisguru,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+train_v1,apisguru:gsmtasks.com:post:/accounts/{id}/managers/,apisguru,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+train_v1,apisguru:here.com:get:/aliases/v2/{trackingId},apisguru,가,인증만 확인·인가 조건 없음,"rationale(모델 문장, 정규식)",manual_review_required
+train_v1,apisguru:hetras-certification.net:post:/api/booking/v0/bookings/{confirmationId}/reservations/{reservationNumber}/cancel,apisguru,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+train_v1,apisguru:id4i.de:get:/api/v1/apikeys/{key}/privileges,apisguru,가,인증만 확인·인가 조건 없음,"rationale(모델 문장, 정규식)",manual_review_required
+train_v1,apisguru:influxdata.com:get:/buckets/{bucketID},apisguru,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+train_v1,apisguru:intellifi.nl:put:/kvpairs/{id},apisguru,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+train_v1,apisguru:interactivebrokers.com:put:/accounts/{account}/orders/{CustomerOrderId},apisguru,가,접근 조건 미명시(일반),"rationale(모델 문장, 정규식)",manual_review_required
+train_v1,apisguru:ix-api.net:patch:/accounts/{id},apisguru,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+train_v1,apisguru:jellyfin.local:get:/Artists/{itemId}/Similar,apisguru,가,설명 없음·비어 있음,"rationale(모델 문장, 정규식)",manual_review_required
+train_v1,apisguru:jellyfin.local:get:/Artists/{name},apisguru,가,설명 없음·비어 있음,"rationale(모델 문장, 정규식)",manual_review_required
+train_v1,apisguru:jumpseller.com:post:/customer_categories/{id}/customers.json,apisguru,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+train_v1,apisguru:learnifier.com:patch:/orgunits/{orgid},apisguru,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+train_v1,apisguru:learnifier.com:post:/orgunits/{orgid}/projects/{projectid}/participants,apisguru,가,접근 조건 미명시(일반),"rationale(모델 문장, 정규식)",manual_review_required
+train_v1,apisguru:lgtm.com:delete:/projects/{project-id},apisguru,가,접근 조건 미명시(일반),"rationale(모델 문장, 정규식)",manual_review_required
+train_v1,apisguru:lgtm.com:get:/queryjobs/{queryjob-id}/results/{project-id},apisguru,가,접근 조건 미명시(일반),"rationale(모델 문장, 정규식)",manual_review_required
+train_v1,apisguru:listennotes.com:get:/podcasts/{id},apisguru,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+train_v1,apisguru:loket.nl:delete:/providers/employers/benefitinkindtypes/{benefitInKindTypeId},apisguru,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+train_v1,apisguru:loket.nl:put:/providers/employers/benefitinkindtypes/{benefitInKindTypeId},apisguru,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+train_v1,apisguru:magento.com:put:/V1/carts/{cartId},apisguru,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+train_v1,apisguru:mailchimp.com:get:/automations/{workflow_id},apisguru,가,override: security 선언 public→manual,meta.v30_override_reason,public
+train_v1,apisguru:mastodon.local:post:/api/v1/accounts/{id}/block,apisguru,가,인증만 확인·인가 조건 없음,"rationale(모델 문장, 정규식)",manual_review_required
+train_v1,apisguru:mastodon.local:post:/api/v1/accounts/{id}/mute,apisguru,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+train_v1,apisguru:mastodon.local:post:/api/v1/accounts/{id}/note,apisguru,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+train_v1,apisguru:mcw.edu:get:/annotations/reference/{refRgdId},apisguru,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+train_v1,apisguru:mcw.edu:get:/annotations/{accId}/{speciesTypeKey}/{includeChildren},apisguru,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+train_v1,apisguru:mcw.edu:get:/genes/annotation/{accId}/{speciesTypeKey},apisguru,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+train_v1,apisguru:meraki.com:get:/networks/{networkId}/clients,apisguru,가,override: security 선언 public→manual,meta.v30_override_reason,public
+train_v1,apisguru:mercedes-benz.com:get:/markets/{marketId}/classes/{classId},apisguru,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+train_v1,apisguru:mercedes-benz.com:get:/markets/{marketId}/models/{modelId}/configurations/{configurationId}/images/components/paint,apisguru,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+train_v1,apisguru:microsoft.com:post:/{projectId}/classify/iterations/{publishedName}/image/nostore,apisguru,가,접근 조건 미명시(일반),"rationale(모델 문장, 정규식)",manual_review_required
+train_v1,apisguru:mist.com:get:/api/v1/installer/orgs/{org_id}/devices,apisguru,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+train_v1,apisguru:nbg.gr:get:/accounts/{accountId}/scheduled-payments,apisguru,가,인증만 확인·인가 조건 없음,"rationale(모델 문장, 정규식)",manual_review_required
+train_v1,apisguru:netlify.com:delete:/accounts/{account_id}/env/{key},apisguru,가,접근 조건 미명시(일반),"rationale(모델 문장, 정규식)",manual_review_required
+train_v1,apisguru:noosh.com:post:/1.1/workgroups/{workgroup_id}/projects/{project_id}/files,apisguru,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+train_v1,apisguru:noosh.com:post:/1.1/workgroups/{workgroup_id}/projects/{project_id}/teammembers,apisguru,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+train_v1,apisguru:noosh.com:put:/1.1/workgroups/{workgroup_id}/projects/{project_id}/specs/{spec_id},apisguru,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+train_v1,apisguru:openbanking.org.uk:get:/accounts/{AccountId}/offers,apisguru,가,override: security 선언 public→manual,meta.v30_override_reason,public
+train_v1,apisguru:openfintech.io:get:/payment-providers/{id},apisguru,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+train_v1,apisguru:opentrials.local:get:/documents/{id},apisguru,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+train_v1,apisguru:opentrials.local:get:/trials/{trialId}/records/{id},apisguru,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+train_v1,orbit_tickets_disputed_0,synthetic,나,합성: 복합/충돌 조건(설계 manual),rationale(intended),
+train_v1,orbit_tickets_disputed_1,synthetic,나,합성: 복합/충돌 조건(설계 manual),rationale(intended),
+train_v1,orbit_tickets_subscription_0,synthetic,나,relabel: 합성 subscription(구독 조건),meta.v30_relabel_reason,membership_required
+train_v1,orbit_tickets_subscription_1,synthetic,나,relabel: 합성 subscription(구독 조건),meta.v30_relabel_reason,membership_required
+train_v1,apisguru:paylocity.com:get:/v2/companies/{companyId}/employees/{employeeId},apisguru,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+train_v1,apisguru:paylocity.com:get:/v2/companies/{companyId}/employees/{employeeId}/earnings/{earningCode},apisguru,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+train_v1,apisguru:payrun.io:get:/Employer/{EmployerId}/CisLineTypes,apisguru,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+train_v1,apisguru:pendo.io:delete:/accounts/{id},apisguru,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+train_v1,apisguru:presalytics.io:get:/Charts/AxisDataTypes/TypeId/{type_id},apisguru,가,객체 ID만 있음,"rationale(모델 문장, 정규식)",manual_review_required
+train_v1,apisguru:presalytics.io:get:/Charts/ChartUpdate/{id},apisguru,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+train_v1,relay_forum_council_0,synthetic,나,합성: 복합/충돌 조건(설계 manual),rationale(intended),
+train_v1,relay_forum_council_1,synthetic,나,합성: 복합/충돌 조건(설계 manual),rationale(intended),
+train_v1,apisguru:roaring.io:get:/company-credit-decision,apisguru,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+train_v1,apisguru:rudder.example.local:post:/changeRequests/{changeRequestId}/accept,apisguru,가,접근 조건 미명시(일반),"rationale(모델 문장, 정규식)",manual_review_required
+train_v1,apisguru:rumble.run:get:/account/orgs/{org_id},apisguru,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+train_v1,apisguru:rumble.run:patch:/account/users/{user_id},apisguru,가,인증만 확인·인가 조건 없음,"rationale(모델 문장, 정규식)",manual_review_required
+train_v1,apisguru:semantria.com:get:/document/processed.{content_type},apisguru,가,접근 조건 미명시(일반),"rationale(모델 문장, 정규식)",manual_review_required
+train_v1,apisguru:setlist.fm:get:/1.0/user/{userId}/edited,apisguru,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+train_v1,apisguru:shipengine.com:get:/v1/connections/carriers/{carrier_name}/{carrier_id}/settings,apisguru,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+train_v1,apisguru:snyk.io:post:/group/{groupId}/tags/delete,apisguru,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+train_v1,apisguru:snyk.io:post:/org/{orgId}/integrations/{integrationId}/clone,apisguru,가,접근 조건 미명시(일반),"rationale(모델 문장, 정규식)",manual_review_required
+train_v1,apisguru:spacetraders.io:post:/my/contracts/{contractId}/deliver,apisguru,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+train_v1,apisguru:stackexchange.com:get:/users/{id}/top-question-tags,apisguru,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+train_v1,apisguru:stream-io-api.com:post:/channels/{type}/{id}/call,apisguru,나,복합 조건(AND)·단일 라벨 불가,"rationale(모델 문장, 정규식)",manual_review_required
+train_v1,apisguru:stripe.com:delete:/v1/accounts/{account}/bank_accounts/{id},apisguru,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+train_v1,apisguru:stripe.com:delete:/v1/accounts/{account}/external_accounts/{id},apisguru,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+train_v1,apisguru:theracingapi.com:get:/v1/damsires/{damsire_id}/results,apisguru,나,구독·플랜·등급 조건,"rationale(모델 문장, 정규식)",manual_review_required
+train_v1,apisguru:truora.com:put:/v1/continuous-checks/{continuous_check_id},apisguru,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+train_v1,apisguru:turbinelabs.io:delete:/listener/{listenerKey},apisguru,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+train_v1,apisguru:twilio.com:get:/2010-04-01/Accounts/{AccountSid}/AvailablePhoneNumbers/{CountryCode}.json,apisguru,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+train_v1,apisguru:uebermaps.com:delete:/comments/{id},apisguru,가,객체 ID만 있음,"rationale(모델 문장, 정규식)",manual_review_required
+train_v1,apisguru:vmware.local:put:/data-sources/arista-switches/{id},apisguru,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+train_v1,apisguru:vmware.local:put:/data-sources/arista-switches/{id}/snmp-config,apisguru,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+train_v1,apisguru:vmware.local:put:/data-sources/brocade-switches/{id},apisguru,가,접근 조건 미명시(일반),"rationale(모델 문장, 정규식)",manual_review_required
+train_v1,apisguru:vmware.local:put:/data-sources/brocade-switches/{id}/snmp-config,apisguru,가,접근 조건 미명시(일반),"rationale(모델 문장, 정규식)",manual_review_required
+train_v1,apisguru:watchful.li:get:/sites/{id}/extensions,apisguru,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+train_v1,apisguru:zeno.fm:put:/api/v2/podcasts/{podcastKey},apisguru,가,API 키만 요구,"rationale(모델 문장, 정규식)",manual_review_required
+train_v1,apisguru:zoomconnect.com:put:/api/rest/v1/messages/{messageId}/markUnread,apisguru,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+val_v1,apisguru:ebi.ac.uk:get:/assays,apisguru,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+val_v1,apisguru:iqualify.com:get:/offerings/{offeringId}/analytics/channels/{channelId}/comments,apisguru,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+val_v1,apisguru:notion.com:patch:/v1/databases/{id},apisguru,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+val_v1,apisguru:patientview.org:get:/patient/{userId}/basic,apisguru,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+val_v1,apisguru:pay1.de:put:/v1/payment-links/{linkId},apisguru,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+val_v1,apisguru:svix.com:get:/api/v1/app/{app_id}/attempt/endpoint/{endpoint_id}/,apisguru,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+val_v1,apisguru:victorops.com:delete:/api-public/v1/overrides/{publicId}/assignments/{policySlug},apisguru,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+val_v1,apisguru:victorops.com:delete:/api-public/v1/user/{user}/contact-methods/emails/{contactId},apisguru,가,접근 조건 미명시(일반),"rationale(모델 문장, 정규식)",manual_review_required
+val_v1,apisguru:victorops.com:put:/api-public/v1/maintenancemode/{maintenancemodeid}/end,apisguru,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+val_v1,apisguru:wowza.com:get:/live_streams/{id}/stats,apisguru,나,역할·권한 조건 불명확,"rationale(모델 문장, 정규식)",manual_review_required
+val_v1,apisguru:zalando.com:get:/articles/{articleId},apisguru,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+val_v1,apisguru:zuora.com:get:/notifications/history/tasks/{id},apisguru,분류불가,패턴 미일치,rationale(모델 문장),manual_review_required
+val_v1,apisguru:zuora.com:put:/events/event-triggers/{id},apisguru,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,apisguru:alertersystem.com:patch:/api/monitor/{id},apisguru,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,apisguru:apache.org:patch:/dags/{dag_id}/dagRuns/{dag_run_id}/setNote,apisguru,가,접근 조건 미명시(일반),"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,apisguru:api2cart.com:get:/attribute.group.list.json,apisguru,가,override: security 선언 public→manual,meta.v30_override_reason,public
+train_v2_draft,apisguru:apideck.com:delete:/accounting/customers/{id},apisguru,가,API 키만 요구,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,apisguru:apigee.net:get:/dealer/heavy-equipment/{id},apisguru,가,override: security 선언 public→manual,meta.v30_override_reason,public
+train_v2_draft,apisguru:apple.com:patch:/v1/appInfos/{id},apisguru,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,apisguru:bbc.com:get:/services,apisguru,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,apisguru:bbc.com:get:/v1/brands/{pid}/franchises/,apisguru,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,apisguru:bigoven.com:post:/recipe/{recipeId}/note,apisguru,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,apisguru:bigredcloud.com:get:/v1/customers/{itemId}/openingBalance,apisguru,가,객체 ID만 있음,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,apisguru:bigredcloud.com:get:/v1/customers/{itemId}/openingBalanceList,apisguru,가,객체 ID만 있음,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,apisguru:bigredcloud.com:get:/v1/customers/{itemId}/quotes,apisguru,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,apisguru:bigredcloud.com:put:/v1/cashReceipts/{id},apisguru,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,apisguru:bitbucket.org:get:/repositories/{workspace}/{repo_slug}/commit/{commit}/reports/{reportId}/annotations,apisguru,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,apisguru:bkk.hu:get:/{dialect}/api/where/route-details-for-stop,apisguru,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,apisguru:brex.io:get:/api/v1/company/announcement/{id},apisguru,가,override: security 선언 public→manual,meta.v30_override_reason,public
+train_v2_draft,campus_records_disputed_0,synthetic,나,합성: 복합/충돌 조건(설계 manual),rationale(intended),
+train_v2_draft,campus_records_disputed_1,synthetic,나,합성: 복합/충돌 조건(설계 manual),rationale(intended),
+train_v2_draft,campus_records_subscription_0,synthetic,나,relabel: 합성 subscription(구독 조건),meta.v30_relabel_reason,membership_required
+train_v2_draft,campus_records_subscription_1,synthetic,나,relabel: 합성 subscription(구독 조건),meta.v30_relabel_reason,membership_required
+train_v2_draft,apisguru:citrixonline.com:get:/organizers/{organizerKey},apisguru,가,접근 조건 미명시(일반),"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,apisguru:clearblade.com:get:/admin/v/4/session/{systemKey}/user,apisguru,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,apisguru:clever-cloud.com:get:/organisations/{id}/addonproviders/{providerId}/plans/{planId},apisguru,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,apisguru:clever.com:get:/contacts/{id},apisguru,가,인증만 확인·인가 조건 없음,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,apisguru:clickmeter.com:post:/account/guests/{guestId},apisguru,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,apisguru:codat.io:get:/data/companies/{companyId}/connections/{connectionId}/assess/accounts/{accountId}/categories,apisguru,가,override: security 선언 public→manual,meta.v30_override_reason,public
+train_v2_draft,apisguru:contribly.com:get:/exports/{id},apisguru,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,copper_wallet_disputed_0,synthetic,나,합성: 복합/충돌 조건(설계 manual),rationale(intended),
+train_v2_draft,copper_wallet_disputed_1,synthetic,나,합성: 복합/충돌 조건(설계 manual),rationale(intended),
+train_v2_draft,copper_wallet_subscription_0,synthetic,나,relabel: 합성 subscription(구독 조건),meta.v30_relabel_reason,membership_required
+train_v2_draft,copper_wallet_subscription_1,synthetic,나,relabel: 합성 subscription(구독 조건),meta.v30_relabel_reason,membership_required
+train_v2_draft,apisguru:deutschebahn.com:get:/areas/{areaUID},apisguru,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,apisguru:deutschebahn.com:get:/providernetworks/{uid},apisguru,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,apisguru:docker.com:get:/containers/{id}/json,apisguru,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,apisguru:edrv.io:patch:/v1/commands/{id}/variables,apisguru,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,apisguru:files.com:get:/api_keys,apisguru,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,apisguru:frankiefinancial.io:post:/document/{documentId}/utility/process/compare,apisguru,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,apisguru:gitea.io:get:/repos/{owner}/{repo}/hooks/{id},apisguru,가,접근 조건 미명시(일반),"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,apisguru:gitea.io:patch:/orgs/{org}/hooks/{id},apisguru,가,접근 조건 미명시(일반),"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,apisguru:github.com:get:/app/hook/deliveries/{delivery_id},apisguru,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,apisguru:gsmtasks.com:post:/accounts/{id}/managers/,apisguru,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,apisguru:here.com:get:/aliases/v2/{trackingId},apisguru,가,인증만 확인·인가 조건 없음,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,apisguru:hetras-certification.net:post:/api/booking/v0/bookings/{confirmationId}/reservations/{reservationNumber}/cancel,apisguru,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,apisguru:id4i.de:get:/api/v1/apikeys/{key}/privileges,apisguru,가,인증만 확인·인가 조건 없음,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,apisguru:influxdata.com:get:/buckets/{bucketID},apisguru,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,apisguru:intellifi.nl:put:/kvpairs/{id},apisguru,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,apisguru:interactivebrokers.com:put:/accounts/{account}/orders/{CustomerOrderId},apisguru,가,접근 조건 미명시(일반),"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,apisguru:ix-api.net:patch:/accounts/{id},apisguru,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,apisguru:jellyfin.local:get:/Artists/{itemId}/Similar,apisguru,가,설명 없음·비어 있음,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,apisguru:jellyfin.local:get:/Artists/{name},apisguru,가,설명 없음·비어 있음,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,apisguru:jumpseller.com:post:/customer_categories/{id}/customers.json,apisguru,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,apisguru:learnifier.com:patch:/orgunits/{orgid},apisguru,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,apisguru:learnifier.com:post:/orgunits/{orgid}/projects/{projectid}/participants,apisguru,가,접근 조건 미명시(일반),"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,apisguru:lgtm.com:delete:/projects/{project-id},apisguru,가,접근 조건 미명시(일반),"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,apisguru:lgtm.com:get:/queryjobs/{queryjob-id}/results/{project-id},apisguru,가,접근 조건 미명시(일반),"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,apisguru:listennotes.com:get:/podcasts/{id},apisguru,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,apisguru:loket.nl:delete:/providers/employers/benefitinkindtypes/{benefitInKindTypeId},apisguru,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,apisguru:loket.nl:put:/providers/employers/benefitinkindtypes/{benefitInKindTypeId},apisguru,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,apisguru:magento.com:put:/V1/carts/{cartId},apisguru,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,apisguru:mailchimp.com:get:/automations/{workflow_id},apisguru,가,override: security 선언 public→manual,meta.v30_override_reason,public
+train_v2_draft,apisguru:mastodon.local:post:/api/v1/accounts/{id}/block,apisguru,가,인증만 확인·인가 조건 없음,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,apisguru:mastodon.local:post:/api/v1/accounts/{id}/mute,apisguru,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,apisguru:mastodon.local:post:/api/v1/accounts/{id}/note,apisguru,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,apisguru:mcw.edu:get:/annotations/reference/{refRgdId},apisguru,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,apisguru:mcw.edu:get:/annotations/{accId}/{speciesTypeKey}/{includeChildren},apisguru,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,apisguru:mcw.edu:get:/genes/annotation/{accId}/{speciesTypeKey},apisguru,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,apisguru:meraki.com:get:/networks/{networkId}/clients,apisguru,가,override: security 선언 public→manual,meta.v30_override_reason,public
+train_v2_draft,apisguru:mercedes-benz.com:get:/markets/{marketId}/classes/{classId},apisguru,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,apisguru:mercedes-benz.com:get:/markets/{marketId}/models/{modelId}/configurations/{configurationId}/images/components/paint,apisguru,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,apisguru:microsoft.com:post:/{projectId}/classify/iterations/{publishedName}/image/nostore,apisguru,가,접근 조건 미명시(일반),"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,apisguru:mist.com:get:/api/v1/installer/orgs/{org_id}/devices,apisguru,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,apisguru:nbg.gr:get:/accounts/{accountId}/scheduled-payments,apisguru,가,인증만 확인·인가 조건 없음,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,apisguru:netlify.com:delete:/accounts/{account_id}/env/{key},apisguru,가,접근 조건 미명시(일반),"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,apisguru:noosh.com:post:/1.1/workgroups/{workgroup_id}/projects/{project_id}/files,apisguru,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,apisguru:noosh.com:post:/1.1/workgroups/{workgroup_id}/projects/{project_id}/teammembers,apisguru,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,apisguru:noosh.com:put:/1.1/workgroups/{workgroup_id}/projects/{project_id}/specs/{spec_id},apisguru,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,apisguru:openbanking.org.uk:get:/accounts/{AccountId}/offers,apisguru,가,override: security 선언 public→manual,meta.v30_override_reason,public
+train_v2_draft,apisguru:openfintech.io:get:/payment-providers/{id},apisguru,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,apisguru:opentrials.local:get:/documents/{id},apisguru,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,apisguru:opentrials.local:get:/trials/{trialId}/records/{id},apisguru,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,orbit_tickets_disputed_0,synthetic,나,합성: 복합/충돌 조건(설계 manual),rationale(intended),
+train_v2_draft,orbit_tickets_disputed_1,synthetic,나,합성: 복합/충돌 조건(설계 manual),rationale(intended),
+train_v2_draft,orbit_tickets_subscription_0,synthetic,나,relabel: 합성 subscription(구독 조건),meta.v30_relabel_reason,membership_required
+train_v2_draft,orbit_tickets_subscription_1,synthetic,나,relabel: 합성 subscription(구독 조건),meta.v30_relabel_reason,membership_required
+train_v2_draft,apisguru:paylocity.com:get:/v2/companies/{companyId}/employees/{employeeId},apisguru,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,apisguru:paylocity.com:get:/v2/companies/{companyId}/employees/{employeeId}/earnings/{earningCode},apisguru,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,apisguru:payrun.io:get:/Employer/{EmployerId}/CisLineTypes,apisguru,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,apisguru:pendo.io:delete:/accounts/{id},apisguru,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,apisguru:presalytics.io:get:/Charts/AxisDataTypes/TypeId/{type_id},apisguru,가,객체 ID만 있음,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,apisguru:presalytics.io:get:/Charts/ChartUpdate/{id},apisguru,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,relay_forum_council_0,synthetic,나,합성: 복합/충돌 조건(설계 manual),rationale(intended),
+train_v2_draft,relay_forum_council_1,synthetic,나,합성: 복합/충돌 조건(설계 manual),rationale(intended),
+train_v2_draft,apisguru:roaring.io:get:/company-credit-decision,apisguru,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,apisguru:rudder.example.local:post:/changeRequests/{changeRequestId}/accept,apisguru,가,접근 조건 미명시(일반),"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,apisguru:rumble.run:get:/account/orgs/{org_id},apisguru,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,apisguru:rumble.run:patch:/account/users/{user_id},apisguru,가,인증만 확인·인가 조건 없음,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,apisguru:semantria.com:get:/document/processed.{content_type},apisguru,가,접근 조건 미명시(일반),"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,apisguru:setlist.fm:get:/1.0/user/{userId}/edited,apisguru,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,apisguru:shipengine.com:get:/v1/connections/carriers/{carrier_name}/{carrier_id}/settings,apisguru,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,apisguru:snyk.io:post:/group/{groupId}/tags/delete,apisguru,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,apisguru:snyk.io:post:/org/{orgId}/integrations/{integrationId}/clone,apisguru,가,접근 조건 미명시(일반),"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,apisguru:spacetraders.io:post:/my/contracts/{contractId}/deliver,apisguru,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,apisguru:stackexchange.com:get:/users/{id}/top-question-tags,apisguru,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,apisguru:stream-io-api.com:post:/channels/{type}/{id}/call,apisguru,나,복합 조건(AND)·단일 라벨 불가,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,apisguru:stripe.com:delete:/v1/accounts/{account}/bank_accounts/{id},apisguru,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,apisguru:stripe.com:delete:/v1/accounts/{account}/external_accounts/{id},apisguru,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,apisguru:theracingapi.com:get:/v1/damsires/{damsire_id}/results,apisguru,나,구독·플랜·등급 조건,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,apisguru:truora.com:put:/v1/continuous-checks/{continuous_check_id},apisguru,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,apisguru:turbinelabs.io:delete:/listener/{listenerKey},apisguru,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,apisguru:twilio.com:get:/2010-04-01/Accounts/{AccountSid}/AvailablePhoneNumbers/{CountryCode}.json,apisguru,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,apisguru:uebermaps.com:delete:/comments/{id},apisguru,가,객체 ID만 있음,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,apisguru:vmware.local:put:/data-sources/arista-switches/{id},apisguru,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,apisguru:vmware.local:put:/data-sources/arista-switches/{id}/snmp-config,apisguru,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,apisguru:vmware.local:put:/data-sources/brocade-switches/{id},apisguru,가,접근 조건 미명시(일반),"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,apisguru:vmware.local:put:/data-sources/brocade-switches/{id}/snmp-config,apisguru,가,접근 조건 미명시(일반),"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,apisguru:watchful.li:get:/sites/{id}/extensions,apisguru,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,apisguru:zeno.fm:put:/api/v2/podcasts/{podcastKey},apisguru,가,API 키만 요구,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,apisguru:zoomconnect.com:put:/api/rest/v1/messages/{messageId}/markUnread,apisguru,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,orbit_tickets_drafts_authonly,synthetic_v2,가,합성 변형: 인증만·인가 제거(설계 manual),rationale(intended),
+train_v2_draft,orbit_tickets_drafts_extauth,synthetic_v2,가,합성 변형: 인증만·인가 제거(설계 manual),rationale(intended),
+train_v2_draft,orbit_tickets_shared_authonly,synthetic_v2,가,합성 변형: 인증만·인가 제거(설계 manual),rationale(intended),
+train_v2_draft,orbit_tickets_shared_extauth,synthetic_v2,가,합성 변형: 인증만·인가 제거(설계 manual),rationale(intended),
+train_v2_draft,orbit_tickets_workspace_authonly,synthetic_v2,가,합성 변형: 인증만·인가 제거(설계 manual),rationale(intended),
+train_v2_draft,orbit_tickets_workspace_extauth,synthetic_v2,가,합성 변형: 인증만·인가 제거(설계 manual),rationale(intended),
+train_v2_draft,orbit_tickets_audit_authonly,synthetic_v2,가,합성 변형: 인증만·인가 제거(설계 manual),rationale(intended),
+train_v2_draft,orbit_tickets_audit_extauth,synthetic_v2,가,합성 변형: 인증만·인가 제거(설계 manual),rationale(intended),
+train_v2_draft,copper_wallet_drafts_authonly,synthetic_v2,가,합성 변형: 인증만·인가 제거(설계 manual),rationale(intended),
+train_v2_draft,copper_wallet_drafts_extauth,synthetic_v2,가,합성 변형: 인증만·인가 제거(설계 manual),rationale(intended),
+train_v2_draft,copper_wallet_shared_authonly,synthetic_v2,가,합성 변형: 인증만·인가 제거(설계 manual),rationale(intended),
+train_v2_draft,copper_wallet_shared_extauth,synthetic_v2,가,합성 변형: 인증만·인가 제거(설계 manual),rationale(intended),
+train_v2_draft,copper_wallet_workspace_authonly,synthetic_v2,가,합성 변형: 인증만·인가 제거(설계 manual),rationale(intended),
+train_v2_draft,copper_wallet_workspace_extauth,synthetic_v2,가,합성 변형: 인증만·인가 제거(설계 manual),rationale(intended),
+train_v2_draft,copper_wallet_audit_authonly,synthetic_v2,가,합성 변형: 인증만·인가 제거(설계 manual),rationale(intended),
+train_v2_draft,copper_wallet_audit_extauth,synthetic_v2,가,합성 변형: 인증만·인가 제거(설계 manual),rationale(intended),
+train_v2_draft,campus_records_drafts_authonly,synthetic_v2,가,합성 변형: 인증만·인가 제거(설계 manual),rationale(intended),
+train_v2_draft,campus_records_drafts_extauth,synthetic_v2,가,합성 변형: 인증만·인가 제거(설계 manual),rationale(intended),
+train_v2_draft,campus_records_shared_authonly,synthetic_v2,가,합성 변형: 인증만·인가 제거(설계 manual),rationale(intended),
+train_v2_draft,campus_records_shared_extauth,synthetic_v2,가,합성 변형: 인증만·인가 제거(설계 manual),rationale(intended),
+train_v2_draft,campus_records_workspace_authonly,synthetic_v2,가,합성 변형: 인증만·인가 제거(설계 manual),rationale(intended),
+train_v2_draft,campus_records_workspace_extauth,synthetic_v2,가,합성 변형: 인증만·인가 제거(설계 manual),rationale(intended),
+train_v2_draft,campus_records_audit_authonly,synthetic_v2,가,합성 변형: 인증만·인가 제거(설계 manual),rationale(intended),
+train_v2_draft,campus_records_audit_extauth,synthetic_v2,가,합성 변형: 인증만·인가 제거(설계 manual),rationale(intended),
+train_v2_draft,relay_forum_drafts_authonly,synthetic_v2,가,합성 변형: 인증만·인가 제거(설계 manual),rationale(intended),
+train_v2_draft,relay_forum_drafts_extauth,synthetic_v2,가,합성 변형: 인증만·인가 제거(설계 manual),rationale(intended),
+train_v2_draft,relay_forum_shared_authonly,synthetic_v2,가,합성 변형: 인증만·인가 제거(설계 manual),rationale(intended),
+train_v2_draft,relay_forum_shared_extauth,synthetic_v2,가,합성 변형: 인증만·인가 제거(설계 manual),rationale(intended),
+train_v2_draft,relay_forum_moderation_authonly,synthetic_v2,가,합성 변형: 인증만·인가 제거(설계 manual),rationale(intended),
+train_v2_draft,relay_forum_moderation_extauth,synthetic_v2,가,합성 변형: 인증만·인가 제거(설계 manual),rationale(intended),
+train_v2_draft,relay_forum_workspace_authonly,synthetic_v2,가,합성 변형: 인증만·인가 제거(설계 manual),rationale(intended),
+train_v2_draft,relay_forum_workspace_extauth,synthetic_v2,가,합성 변형: 인증만·인가 제거(설계 manual),rationale(intended),
+train_v2_draft,relay_forum_audit_authonly,synthetic_v2,가,합성 변형: 인증만·인가 제거(설계 manual),rationale(intended),
+train_v2_draft,relay_forum_audit_extauth,synthetic_v2,가,합성 변형: 인증만·인가 제거(설계 manual),rationale(intended),
+train_v2_draft,relay_forum_roster_authonly,synthetic_v2,가,합성 변형: 인증만·인가 제거(설계 manual),rationale(intended),
+train_v2_draft,relay_forum_roster_extauth,synthetic_v2,가,합성 변형: 인증만·인가 제거(설계 manual),rationale(intended),
+train_v2_draft,relay_forum_pins_authonly,synthetic_v2,가,합성 변형: 인증만·인가 제거(설계 manual),rationale(intended),
+train_v2_draft,relay_forum_pins_extauth,synthetic_v2,가,합성 변형: 인증만·인가 제거(설계 manual),rationale(intended),
+train_v2_draft,harbor_manifests_council_0,synthetic_v2,나,합성: 복합/충돌 조건(설계 manual),rationale(intended),
+train_v2_draft,harbor_manifests_council_1,synthetic_v2,나,합성: 복합/충돌 조건(설계 manual),rationale(intended),
+train_v2_draft,pixel_gallery_council_0,synthetic_v2,나,합성: 복합/충돌 조건(설계 manual),rationale(intended),
+train_v2_draft,pixel_gallery_council_1,synthetic_v2,나,합성: 복합/충돌 조건(설계 manual),rationale(intended),
+train_v2_draft,meadow_plots_council_0,synthetic_v2,나,합성: 복합/충돌 조건(설계 manual),rationale(intended),
+train_v2_draft,meadow_plots_council_1,synthetic_v2,나,합성: 복합/충돌 조건(설계 manual),rationale(intended),
+train_v2_draft,atlas_leases_council_0,synthetic_v2,나,합성: 복합/충돌 조건(설계 manual),rationale(intended),
+train_v2_draft,atlas_leases_council_1,synthetic_v2,나,합성: 복합/충돌 조건(설계 manual),rationale(intended),
+train_v2_draft,gitea:get:/version,gitea,가,인증만 확인·인가 조건 없음,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:get:/signing-key.gpg,gitea,가,인증만 확인·인가 조건 없음,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:get:/signing-key.pub,gitea,가,인증만 확인·인가 조건 없음,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:post:/markup,gitea,가,인증만 확인·인가 조건 없음,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:post:/markdown/raw,gitea,가,인증만 확인·인가 조건 없음,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:get:/gitignore/templates/{name},gitea,가,인증만 확인·인가 조건 없음,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:get:/licenses,gitea,가,인증만 확인·인가 조건 없음,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:get:/licenses/{name},gitea,가,인증만 확인·인가 조건 없음,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:get:/label/templates,gitea,가,인증만 확인·인가 조건 없음,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:get:/label/templates/{name},gitea,나,복합 조건(AND)·단일 라벨 불가,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:get:/settings/api,gitea,가,인증만 확인·인가 조건 없음,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:get:/settings/attachment,gitea,가,접근 조건 미명시(일반),"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:get:/settings/repository,gitea,가,인증만 확인·인가 조건 없음,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:get:/token,gitea,가,인증만 확인·인가 조건 없음,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:delete:/token,gitea,가,인증만 확인·인가 조건 없음,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:get:/notifications,gitea,가,인증만 확인·인가 조건 없음,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:put:/notifications,gitea,가,인증만 확인·인가 조건 없음,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:get:/notifications/new,gitea,가,인증만 확인·인가 조건 없음,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:get:/notifications/threads/{id},gitea,가,인증만 확인·인가 조건 없음,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:patch:/notifications/threads/{id},gitea,가,인증만 확인·인가 조건 없음,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:get:/users/search,gitea,분류불가,패턴 미일치,rationale(모델 문장),manual_review_required
+train_v2_draft,gitea:get:/users/{username},gitea,나,복합 조건(AND)·단일 라벨 불가,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:get:/users/{username}/heatmap,gitea,나,복합 조건(AND)·단일 라벨 불가,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:get:/users/{username}/repos,gitea,나,복합 조건(AND)·단일 라벨 불가,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:get:/users/{username}/projects,gitea,나,복합 조건(AND)·단일 라벨 불가,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:post:/users/{username}/tokens,gitea,나,복합 조건(AND)·단일 라벨 불가,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:get:/users/{username}/activities/feeds,gitea,나,복합 조건(AND)·단일 라벨 불가,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:get:/users/{username}/gpg_keys,gitea,나,복합 조건(AND)·단일 라벨 불가,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:get:/users/{username}/followers,gitea,나,복합 조건(AND)·단일 라벨 불가,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:get:/users/{username}/following,gitea,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:get:/users/{username}/following/{target},gitea,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:get:/users/{username}/subscriptions,gitea,가,인증만 확인·인가 조건 없음,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:get:/user,gitea,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:get:/user/settings,gitea,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:patch:/user/settings,gitea,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:get:/user/emails,gitea,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:post:/user/emails,gitea,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:put:/user/actions/secrets/{secretname},gitea,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:delete:/user/actions/secrets/{secretname},gitea,가,접근 조건 미명시(일반),"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:post:/user/actions/variables/{variablename},gitea,가,인증만 확인·인가 조건 없음,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:get:/user/actions/runners,gitea,가,인증만 확인·인가 조건 없음,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:post:/user/actions/runners/registration-token,gitea,가,인증만 확인·인가 조건 없음,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:get:/user/actions/runners/{runner_id},gitea,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:patch:/user/actions/runners/{runner_id},gitea,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:get:/user/actions/runs,gitea,가,인증만 확인·인가 조건 없음,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:get:/user/actions/jobs,gitea,가,인증만 확인·인가 조건 없음,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:get:/user/followers,gitea,가,인증만 확인·인가 조건 없음,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:get:/user/following,gitea,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:get:/user/following/{username},gitea,가,인증만 확인·인가 조건 없음,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:put:/user/following/{username},gitea,가,인증만 확인·인가 조건 없음,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:delete:/user/following/{username},gitea,가,인증만 확인·인가 조건 없음,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:post:/user/keys,gitea,가,인증만 확인·인가 조건 없음,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:get:/user/keys/{id},gitea,나,복합 조건(AND)·단일 라벨 불가,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:delete:/user/keys/{id},gitea,나,복합 조건(AND)·단일 라벨 불가,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:post:/user/applications/oauth2,gitea,나,역할·권한 조건 불명확,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:delete:/user/applications/oauth2/{id},gitea,나,역할·권한 조건 불명확,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:patch:/user/applications/oauth2/{id},gitea,나,역할·권한 조건 불명확,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:get:/user/gpg_keys,gitea,가,인증만 확인·인가 조건 없음,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:post:/user/gpg_keys,gitea,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:get:/user/gpg_keys/{id},gitea,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:delete:/user/gpg_keys/{id},gitea,나,역할·권한 조건 불명확,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:get:/user/gpg_key_token,gitea,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:post:/user/gpg_key_verify,gitea,나,역할·권한 조건 불명확,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:post:/user/repos,gitea,나,역할·권한 조건 불명확,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:get:/user/starred,gitea,나,역할·권한 조건 불명확,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:put:/user/starred/{owner}/{repo},gitea,나,복합 조건(AND)·단일 라벨 불가,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:delete:/user/starred/{owner}/{repo},gitea,나,복합 조건(AND)·단일 라벨 불가,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:get:/user/times,gitea,나,역할·권한 조건 불명확,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:get:/user/stopwatches,gitea,가,인증만 확인·인가 조건 없음,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:get:/user/subscriptions,gitea,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:get:/user/hooks,gitea,나,복합 조건(AND)·단일 라벨 불가,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:post:/user/hooks,gitea,가,인증만 확인·인가 조건 없음,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:patch:/user/hooks/{id},gitea,가,인증만 확인·인가 조건 없음,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:delete:/user/hooks/{id},gitea,나,복합 조건(AND)·단일 라벨 불가,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:post:/user/avatar,gitea,가,인증만 확인·인가 조건 없음,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:delete:/user/avatar,gitea,나,역할·권한 조건 불명확,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:get:/user/blocks,gitea,나,역할·권한 조건 불명확,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:get:/user/blocks/{username},gitea,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:put:/user/blocks/{username},gitea,가,인증만 확인·인가 조건 없음,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:delete:/user/blocks/{username},gitea,가,인증만 확인·인가 조건 없음,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:post:/org/{org}/repos,gitea,가,인증만 확인·인가 조건 없음,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:get:/repositories/{id},gitea,가,인증만 확인·인가 조건 없음,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:get:/repos/search,gitea,나,override: visibility_dependent(조건부 접근),meta.v30_override_reason,manual_review_required
+train_v2_draft,gitea:post:/repos/migrate,gitea,나,복합 조건(AND)·단일 라벨 불가,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:get:/repos/{owner}/{repo}/compare/{basehead},gitea,나,override: visibility_dependent(조건부 접근),meta.v30_override_reason,public
+train_v2_draft,gitea:get:/repos/{owner}/{repo},gitea,나,override: visibility_dependent(조건부 접근),meta.v30_override_reason,public
+train_v2_draft,gitea:post:/repos/{template_owner}/{template_repo}/generate,gitea,나,복합 조건(AND)·단일 라벨 불가,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:post:/repos/{owner}/{repo}/transfer,gitea,나,복합 조건(AND)·단일 라벨 불가,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:post:/repos/{owner}/{repo}/transfer/accept,gitea,나,복합 조건(AND)·단일 라벨 불가,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:post:/repos/{owner}/{repo}/transfer/reject,gitea,가,인증만 확인·인가 조건 없음,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:get:/repos/{owner}/{repo}/actions/workflows,gitea,나,복합 조건(AND)·단일 라벨 불가,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:get:/repos/{owner}/{repo}/actions/workflows/{workflow_id}/runs,gitea,나,복합 조건(AND)·단일 라벨 불가,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:put:/repos/{owner}/{repo}/actions/workflows/{workflow_id}/enable,gitea,나,복합 조건(AND)·단일 라벨 불가,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:post:/repos/{owner}/{repo}/actions/workflows/{workflow_id}/dispatches,gitea,나,복합 조건(AND)·단일 라벨 불가,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:get:/repos/{owner}/{repo}/hooks/git,gitea,나,복합 조건(AND)·단일 라벨 불가,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:get:/repos/{owner}/{repo}/hooks,gitea,나,복합 조건(AND)·단일 라벨 불가,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:post:/repos/{owner}/{repo}/hooks,gitea,나,복합 조건(AND)·단일 라벨 불가,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:get:/repos/{owner}/{repo}/hooks/{id},gitea,나,복합 조건(AND)·단일 라벨 불가,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:get:/repos/{owner}/{repo}/assignees,gitea,나,복합 조건(AND)·단일 라벨 불가,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:get:/repos/{owner}/{repo}/assignees/{assignee},gitea,나,복합 조건(AND)·단일 라벨 불가,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:get:/repos/{owner}/{repo}/reviewers,gitea,나,복합 조건(AND)·단일 라벨 불가,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:get:/repos/{owner}/{repo}/teams/{team},gitea,가,인증만 확인·인가 조건 없음,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:get:/repos/{owner}/{repo}/raw/{filepath},gitea,나,override: visibility_dependent(조건부 접근),meta.v30_override_reason,public
+train_v2_draft,gitea:get:/repos/{owner}/{repo}/media/{filepath},gitea,나,override: visibility_dependent(조건부 접근),meta.v30_override_reason,public
+train_v2_draft,gitea:get:/repos/{owner}/{repo}/forks,gitea,나,override: visibility_dependent(조건부 접근),meta.v30_override_reason,public
+train_v2_draft,gitea:post:/repos/{owner}/{repo}/forks,gitea,가,인증만 확인·인가 조건 없음,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:get:/repos/{owner}/{repo}/branches,gitea,나,override: visibility_dependent(조건부 접근),meta.v30_override_reason,public
+train_v2_draft,gitea:get:/repos/{owner}/{repo}/branches/{branch},gitea,나,override: visibility_dependent(조건부 접근),meta.v30_override_reason,manual_review_required
+train_v2_draft,gitea:put:/repos/{owner}/{repo}/branches/{branch},gitea,나,복합 조건(AND)·단일 라벨 불가,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:get:/repos/{owner}/{repo}/branch_protections,gitea,나,역할·권한 조건 불명확,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:get:/repos/{owner}/{repo}/tags,gitea,나,override: visibility_dependent(조건부 접근),meta.v30_override_reason,public
+train_v2_draft,gitea:get:/repos/{owner}/{repo}/tags/{tag},gitea,나,override: visibility_dependent(조건부 접근),meta.v30_override_reason,public
+train_v2_draft,gitea:get:/repos/{owner}/{repo}/actions/tasks,gitea,나,override: visibility_dependent(조건부 접근),meta.v30_override_reason,public
+train_v2_draft,gitea:get:/repos/{owner}/{repo}/actions/runs/{run},gitea,나,override: visibility_dependent(조건부 접근),meta.v30_override_reason,manual_review_required
+train_v2_draft,gitea:get:/repos/{owner}/{repo}/actions/runs/{run}/attempts/{attempt},gitea,나,override: visibility_dependent(조건부 접근),meta.v30_override_reason,manual_review_required
+train_v2_draft,gitea:get:/repos/{owner}/{repo}/actions/runs/{run}/attempts/{attempt}/jobs,gitea,나,override: visibility_dependent(조건부 접근),meta.v30_override_reason,manual_review_required
+train_v2_draft,gitea:post:/repos/{owner}/{repo}/actions/runs/{run}/force-cancel,gitea,나,복합 조건(AND)·단일 라벨 불가,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:get:/repos/{owner}/{repo}/actions/runs/{run}/jobs,gitea,나,override: visibility_dependent(조건부 접근),meta.v30_override_reason,tenant_match
+train_v2_draft,gitea:get:/repos/{owner}/{repo}/actions/runs/{run}/logs,gitea,나,복합 조건(AND)·단일 라벨 불가,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:get:/repos/{owner}/{repo}/actions/runs/{run}/artifacts,gitea,나,override: visibility_dependent(조건부 접근),meta.v30_override_reason,manual_review_required
+train_v2_draft,gitea:get:/repos/{owner}/{repo}/actions/artifacts,gitea,나,override: visibility_dependent(조건부 접근),meta.v30_override_reason,public
+train_v2_draft,gitea:get:/repos/{owner}/{repo}/actions/artifacts/{artifact_id},gitea,나,override: visibility_dependent(조건부 접근),meta.v30_override_reason,manual_review_required
+train_v2_draft,gitea:delete:/repos/{owner}/{repo}/actions/artifacts/{artifact_id},gitea,나,override: visibility_dependent(조건부 접근),meta.v30_override_reason,owner_or_admin
+train_v2_draft,gitea:get:/repos/{owner}/{repo}/actions/artifacts/{artifact_id}/zip,gitea,나,override: visibility_dependent(조건부 접근),meta.v30_override_reason,manual_review_required
+train_v2_draft,gitea:get:/repos/{owner}/{repo}/wiki/page/{pageName},gitea,나,override: visibility_dependent(조건부 접근),meta.v30_override_reason,public
+train_v2_draft,gitea:get:/repos/{owner}/{repo}/wiki/revisions/{pageName},gitea,나,override: visibility_dependent(조건부 접근),meta.v30_override_reason,public
+train_v2_draft,gitea:get:/repos/{owner}/{repo}/wiki/pages,gitea,나,override: visibility_dependent(조건부 접근),meta.v30_override_reason,public
+train_v2_draft,gitea:get:/repos/{owner}/{repo}/stargazers,gitea,나,override: visibility_dependent(조건부 접근),meta.v30_override_reason,public
+train_v2_draft,gitea:get:/repos/{owner}/{repo}/subscribers,gitea,나,override: visibility_dependent(조건부 접근),meta.v30_override_reason,public
+train_v2_draft,gitea:put:/repos/{owner}/{repo}/subscription,gitea,나,복합 조건(AND)·단일 라벨 불가,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:delete:/repos/{owner}/{repo}/subscription,gitea,가,인증만 확인·인가 조건 없음,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:get:/repos/{owner}/{repo}/releases,gitea,나,override: visibility_dependent(조건부 접근),meta.v30_override_reason,public
+train_v2_draft,gitea:post:/repos/{owner}/{repo}/releases,gitea,나,복합 조건(AND)·단일 라벨 불가,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:get:/repos/{owner}/{repo}/releases/latest,gitea,나,override: visibility_dependent(조건부 접근),meta.v30_override_reason,public
+train_v2_draft,gitea:get:/repos/{owner}/{repo}/releases/{id},gitea,나,override: visibility_dependent(조건부 접근),meta.v30_override_reason,manual_review_required
+train_v2_draft,gitea:get:/repos/{owner}/{repo}/releases/{id}/assets,gitea,나,override: visibility_dependent(조건부 접근),meta.v30_override_reason,manual_review_required
+train_v2_draft,gitea:get:/repos/{owner}/{repo}/releases/{id}/assets/{attachment_id},gitea,나,override: visibility_dependent(조건부 접근),meta.v30_override_reason,manual_review_required
+train_v2_draft,gitea:get:/repos/{owner}/{repo}/releases/tags/{tag},gitea,나,override: visibility_dependent(조건부 접근),meta.v30_override_reason,manual_review_required
+train_v2_draft,gitea:get:/repos/{owner}/{repo}/push_mirrors,gitea,나,복합 조건(AND)·단일 라벨 불가,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:get:/repos/{owner}/{repo}/editorconfig/{filepath},gitea,나,override: visibility_dependent(조건부 접근),meta.v30_override_reason,public
+train_v2_draft,gitea:get:/repos/{owner}/{repo}/pulls,gitea,나,override: visibility_dependent(조건부 접근),meta.v30_override_reason,manual_review_required
+train_v2_draft,gitea:post:/repos/{owner}/{repo}/pulls,gitea,나,복합 조건(AND)·단일 라벨 불가,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:get:/repos/{owner}/{repo}/pulls/pinned,gitea,나,override: visibility_dependent(조건부 접근),meta.v30_override_reason,tenant_match
+train_v2_draft,gitea:post:/repos/{owner}/{repo}/pulls/comments/{id}/resolve,gitea,나,복합 조건(AND)·단일 라벨 불가,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:post:/repos/{owner}/{repo}/pulls/comments/{id}/unresolve,gitea,나,복합 조건(AND)·단일 라벨 불가,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:get:/repos/{owner}/{repo}/pulls/{index},gitea,나,override: visibility_dependent(조건부 접근),meta.v30_override_reason,manual_review_required
+train_v2_draft,gitea:get:/repos/{owner}/{repo}/pulls/{index}.{diffType},gitea,나,override: visibility_dependent(조건부 접근),meta.v30_override_reason,manual_review_required
+train_v2_draft,gitea:post:/repos/{owner}/{repo}/pulls/{index}/update,gitea,나,복합 조건(AND)·단일 라벨 불가,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:get:/repos/{owner}/{repo}/pulls/{index}/commits,gitea,나,override: visibility_dependent(조건부 접근),meta.v30_override_reason,manual_review_required
+train_v2_draft,gitea:get:/repos/{owner}/{repo}/pulls/{index}/files,gitea,나,override: visibility_dependent(조건부 접근),meta.v30_override_reason,manual_review_required
+train_v2_draft,gitea:get:/repos/{owner}/{repo}/pulls/{index}/merge,gitea,나,override: visibility_dependent(조건부 접근),meta.v30_override_reason,manual_review_required
+train_v2_draft,gitea:post:/repos/{owner}/{repo}/pulls/{index}/merge,gitea,나,복합 조건(AND)·단일 라벨 불가,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:get:/repos/{owner}/{repo}/pulls/{index}/reviews,gitea,나,override: visibility_dependent(조건부 접근),meta.v30_override_reason,manual_review_required
+train_v2_draft,gitea:post:/repos/{owner}/{repo}/pulls/{index}/reviews,gitea,나,복합 조건(AND)·단일 라벨 불가,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:get:/repos/{owner}/{repo}/pulls/{index}/reviews/{id},gitea,나,override: visibility_dependent(조건부 접근),meta.v30_override_reason,manual_review_required
+train_v2_draft,gitea:post:/repos/{owner}/{repo}/pulls/{index}/reviews/{id},gitea,가,인증만 확인·인가 조건 없음,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:get:/repos/{owner}/{repo}/pulls/{index}/reviews/{id}/comments,gitea,나,override: visibility_dependent(조건부 접근),meta.v30_override_reason,manual_review_required
+train_v2_draft,gitea:post:/repos/{owner}/{repo}/pulls/{index}/reviews/{id}/dismissals,gitea,나,복합 조건(AND)·단일 라벨 불가,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:post:/repos/{owner}/{repo}/pulls/{index}/reviews/{id}/undismissals,gitea,나,복합 조건(AND)·단일 라벨 불가,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:delete:/repos/{owner}/{repo}/pulls/{index}/requested_reviewers,gitea,나,복합 조건(AND)·단일 라벨 불가,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:post:/repos/{owner}/{repo}/pulls/{index}/requested_reviewers,gitea,나,복합 조건(AND)·단일 라벨 불가,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:post:/repos/{owner}/{repo}/pulls/{index}/comments/{id}/replies,gitea,나,역할·권한 조건 불명확,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:get:/repos/{owner}/{repo}/pulls/{base}/{head},gitea,나,override: visibility_dependent(조건부 접근),meta.v30_override_reason,manual_review_required
+train_v2_draft,gitea:get:/repos/{owner}/{repo}/statuses/{sha},gitea,나,override: visibility_dependent(조건부 접근),meta.v30_override_reason,manual_review_required
+train_v2_draft,gitea:get:/repos/{owner}/{repo}/commits,gitea,나,override: visibility_dependent(조건부 접근),meta.v30_override_reason,public
+train_v2_draft,gitea:get:/repos/{owner}/{repo}/git/commits/{sha},gitea,나,override: visibility_dependent(조건부 접근),meta.v30_override_reason,manual_review_required
+train_v2_draft,gitea:get:/repos/{owner}/{repo}/git/commits/{sha}.{diffType},gitea,나,override: visibility_dependent(조건부 접근),meta.v30_override_reason,manual_review_required
+train_v2_draft,gitea:get:/repos/{owner}/{repo}/git/refs,gitea,나,override: visibility_dependent(조건부 접근),meta.v30_override_reason,manual_review_required
+train_v2_draft,gitea:get:/repos/{owner}/{repo}/git/refs/{ref},gitea,나,override: visibility_dependent(조건부 접근),meta.v30_override_reason,manual_review_required
+train_v2_draft,gitea:get:/repos/{owner}/{repo}/git/trees/{sha},gitea,나,override: visibility_dependent(조건부 접근),meta.v30_override_reason,manual_review_required
+train_v2_draft,gitea:get:/repos/{owner}/{repo}/git/blobs/{sha},gitea,나,override: visibility_dependent(조건부 접근),meta.v30_override_reason,public
+train_v2_draft,gitea:get:/repos/{owner}/{repo}/git/tags/{sha},gitea,나,override: visibility_dependent(조건부 접근),meta.v30_override_reason,manual_review_required
+train_v2_draft,gitea:get:/repos/{owner}/{repo}/git/notes/{sha},gitea,나,override: visibility_dependent(조건부 접근),meta.v30_override_reason,manual_review_required
+train_v2_draft,gitea:post:/repos/{owner}/{repo}/diffpatch,gitea,나,복합 조건(AND)·단일 라벨 불가,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:get:/repos/{owner}/{repo}/contents,gitea,나,override: visibility_dependent(조건부 접근),meta.v30_override_reason,manual_review_required
+train_v2_draft,gitea:get:/repos/{owner}/{repo}/contents/{filepath},gitea,나,override: visibility_dependent(조건부 접근),meta.v30_override_reason,manual_review_required
+train_v2_draft,gitea:post:/repos/{owner}/{repo}/contents,gitea,나,복합 조건(AND)·단일 라벨 불가,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:post:/repos/{owner}/{repo}/contents/{filepath},gitea,나,복합 조건(AND)·단일 라벨 불가,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:put:/repos/{owner}/{repo}/contents/{filepath},gitea,나,복합 조건(AND)·단일 라벨 불가,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:delete:/repos/{owner}/{repo}/contents/{filepath},gitea,나,복합 조건(AND)·단일 라벨 불가,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:get:/repos/{owner}/{repo}/contents-ext/{filepath},gitea,나,override: visibility_dependent(조건부 접근),meta.v30_override_reason,manual_review_required
+train_v2_draft,gitea:get:/repos/{owner}/{repo}/file-contents,gitea,나,override: visibility_dependent(조건부 접근),meta.v30_override_reason,public
+train_v2_draft,gitea:post:/repos/{owner}/{repo}/file-contents,gitea,나,override: visibility_dependent(조건부 접근),meta.v30_override_reason,manual_review_required
+train_v2_draft,gitea:get:/repos/{owner}/{repo}/signing-key.gpg,gitea,나,override: visibility_dependent(조건부 접근),meta.v30_override_reason,public
+train_v2_draft,gitea:get:/repos/{owner}/{repo}/signing-key.pub,gitea,나,override: visibility_dependent(조건부 접근),meta.v30_override_reason,public
+train_v2_draft,gitea:get:/repos/{owner}/{repo}/topics,gitea,나,override: visibility_dependent(조건부 접근),meta.v30_override_reason,public
+train_v2_draft,gitea:get:/repos/{owner}/{repo}/issue_templates,gitea,나,override: visibility_dependent(조건부 접근),meta.v30_override_reason,public
+train_v2_draft,gitea:get:/repos/{owner}/{repo}/issue_config,gitea,나,override: visibility_dependent(조건부 접근),meta.v30_override_reason,manual_review_required
+train_v2_draft,gitea:get:/repos/{owner}/{repo}/issue_config/validate,gitea,나,override: visibility_dependent(조건부 접근),meta.v30_override_reason,manual_review_required
+train_v2_draft,gitea:get:/repos/{owner}/{repo}/languages,gitea,나,override: visibility_dependent(조건부 접근),meta.v30_override_reason,public
+train_v2_draft,gitea:get:/repos/{owner}/{repo}/licenses,gitea,나,override: visibility_dependent(조건부 접근),meta.v30_override_reason,public
+train_v2_draft,gitea:get:/repos/{owner}/{repo}/activities/feeds,gitea,나,override: visibility_dependent(조건부 접근),meta.v30_override_reason,public
+train_v2_draft,gitea:get:/repos/{owner}/{repo}/new_pin_allowed,gitea,나,override: visibility_dependent(조건부 접근),meta.v30_override_reason,manual_review_required
+train_v2_draft,gitea:put:/repos/{owner}/{repo}/notifications,gitea,가,인증만 확인·인가 조건 없음,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:get:/repos/issues/search,gitea,나,복합 조건(AND)·단일 라벨 불가,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:get:/repos/{owner}/{repo}/issues,gitea,나,override: visibility_dependent(조건부 접근),meta.v30_override_reason,public
+train_v2_draft,gitea:post:/repos/{owner}/{repo}/issues,gitea,나,역할·권한 조건 불명확,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:get:/repos/{owner}/{repo}/issues/pinned,gitea,나,override: visibility_dependent(조건부 접근),meta.v30_override_reason,public
+train_v2_draft,gitea:get:/repos/{owner}/{repo}/issues/comments,gitea,나,override: visibility_dependent(조건부 접근),meta.v30_override_reason,public
+train_v2_draft,gitea:get:/repos/{owner}/{repo}/issues/comments/{id},gitea,나,override: visibility_dependent(조건부 접근),meta.v30_override_reason,public
+train_v2_draft,gitea:patch:/repos/{owner}/{repo}/issues/comments/{id},gitea,가,인증만 확인·인가 조건 없음,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:delete:/repos/{owner}/{repo}/issues/comments/{id},gitea,나,복합 조건(AND)·단일 라벨 불가,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:get:/repos/{owner}/{repo}/issues/comments/{id}/reactions,gitea,나,override: visibility_dependent(조건부 접근),meta.v30_override_reason,public
+train_v2_draft,gitea:post:/repos/{owner}/{repo}/issues/comments/{id}/reactions,gitea,가,인증만 확인·인가 조건 없음,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:delete:/repos/{owner}/{repo}/issues/comments/{id}/reactions,gitea,나,복합 조건(AND)·단일 라벨 불가,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:get:/repos/{owner}/{repo}/issues/comments/{id}/assets,gitea,나,override: visibility_dependent(조건부 접근),meta.v30_override_reason,public
+train_v2_draft,gitea:post:/repos/{owner}/{repo}/issues/comments/{id}/assets,gitea,나,복합 조건(AND)·단일 라벨 불가,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:get:/repos/{owner}/{repo}/issues/comments/{id}/assets/{attachment_id},gitea,나,override: visibility_dependent(조건부 접근),meta.v30_override_reason,public
+train_v2_draft,gitea:patch:/repos/{owner}/{repo}/issues/comments/{id}/assets/{attachment_id},gitea,나,복합 조건(AND)·단일 라벨 불가,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:delete:/repos/{owner}/{repo}/issues/comments/{id}/assets/{attachment_id},gitea,나,복합 조건(AND)·단일 라벨 불가,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:get:/repos/{owner}/{repo}/issues/{index},gitea,나,override: visibility_dependent(조건부 접근),meta.v30_override_reason,public
+train_v2_draft,gitea:post:/repos/{owner}/{repo}/issues/{index}/assignees,gitea,가,인증만 확인·인가 조건 없음,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:delete:/repos/{owner}/{repo}/issues/{index}/assignees,gitea,나,복합 조건(AND)·단일 라벨 불가,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:get:/repos/{owner}/{repo}/issues/{index}/assignees/{assignee},gitea,나,override: visibility_dependent(조건부 접근),meta.v30_override_reason,manual_review_required
+train_v2_draft,gitea:get:/repos/{owner}/{repo}/issues/{index}/comments,gitea,나,override: visibility_dependent(조건부 접근),meta.v30_override_reason,public
+train_v2_draft,gitea:post:/repos/{owner}/{repo}/issues/{index}/comments,gitea,나,복합 조건(AND)·단일 라벨 불가,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:patch:/repos/{owner}/{repo}/issues/{index}/comments/{id},gitea,가,인증만 확인·인가 조건 없음,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:delete:/repos/{owner}/{repo}/issues/{index}/comments/{id},gitea,가,인증만 확인·인가 조건 없음,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:get:/repos/{owner}/{repo}/issues/{index}/timeline,gitea,나,override: visibility_dependent(조건부 접근),meta.v30_override_reason,public
+train_v2_draft,gitea:get:/repos/{owner}/{repo}/issues/{index}/labels,gitea,나,override: visibility_dependent(조건부 접근),meta.v30_override_reason,public
+train_v2_draft,gitea:post:/repos/{owner}/{repo}/issues/{index}/labels,gitea,가,인증만 확인·인가 조건 없음,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:put:/repos/{owner}/{repo}/issues/{index}/labels,gitea,나,복합 조건(AND)·단일 라벨 불가,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:get:/repos/{owner}/{repo}/issues/{index}/times,gitea,나,복합 조건(AND)·단일 라벨 불가,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:post:/repos/{owner}/{repo}/issues/{index}/times,gitea,나,복합 조건(AND)·단일 라벨 불가,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:delete:/repos/{owner}/{repo}/issues/{index}/times,gitea,나,복합 조건(AND)·단일 라벨 불가,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:post:/repos/{owner}/{repo}/issues/{index}/deadline,gitea,나,역할·권한 조건 불명확,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:post:/repos/{owner}/{repo}/issues/{index}/stopwatch/start,gitea,나,복합 조건(AND)·단일 라벨 불가,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:post:/repos/{owner}/{repo}/issues/{index}/stopwatch/stop,gitea,나,복합 조건(AND)·단일 라벨 불가,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:delete:/repos/{owner}/{repo}/issues/{index}/stopwatch/delete,gitea,나,복합 조건(AND)·단일 라벨 불가,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:get:/repos/{owner}/{repo}/issues/{index}/subscriptions,gitea,나,override: visibility_dependent(조건부 접근),meta.v30_override_reason,public
+train_v2_draft,gitea:get:/repos/{owner}/{repo}/issues/{index}/subscriptions/check,gitea,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:put:/repos/{owner}/{repo}/issues/{index}/subscriptions/{user},gitea,나,복합 조건(AND)·단일 라벨 불가,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:delete:/repos/{owner}/{repo}/issues/{index}/subscriptions/{user},gitea,나,복합 조건(AND)·단일 라벨 불가,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:get:/repos/{owner}/{repo}/issues/{index}/reactions,gitea,나,override: visibility_dependent(조건부 접근),meta.v30_override_reason,public
+train_v2_draft,gitea:post:/repos/{owner}/{repo}/issues/{index}/reactions,gitea,나,복합 조건(AND)·단일 라벨 불가,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:delete:/repos/{owner}/{repo}/issues/{index}/reactions,gitea,가,인증만 확인·인가 조건 없음,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:get:/repos/{owner}/{repo}/issues/{index}/assets,gitea,나,override: visibility_dependent(조건부 접근),meta.v30_override_reason,public
+train_v2_draft,gitea:post:/repos/{owner}/{repo}/issues/{index}/assets,gitea,나,복합 조건(AND)·단일 라벨 불가,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:get:/repos/{owner}/{repo}/issues/{index}/assets/{attachment_id},gitea,나,override: visibility_dependent(조건부 접근),meta.v30_override_reason,public
+train_v2_draft,gitea:patch:/repos/{owner}/{repo}/issues/{index}/assets/{attachment_id},gitea,나,복합 조건(AND)·단일 라벨 불가,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:delete:/repos/{owner}/{repo}/issues/{index}/assets/{attachment_id},gitea,나,복합 조건(AND)·단일 라벨 불가,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:get:/repos/{owner}/{repo}/issues/{index}/dependencies,gitea,나,override: visibility_dependent(조건부 접근),meta.v30_override_reason,public
+train_v2_draft,gitea:post:/repos/{owner}/{repo}/issues/{index}/dependencies,gitea,나,복합 조건(AND)·단일 라벨 불가,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:delete:/repos/{owner}/{repo}/issues/{index}/dependencies,gitea,가,인증만 확인·인가 조건 없음,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:get:/repos/{owner}/{repo}/issues/{index}/blocks,gitea,나,override: visibility_dependent(조건부 접근),meta.v30_override_reason,public
+train_v2_draft,gitea:post:/repos/{owner}/{repo}/issues/{index}/blocks,gitea,나,복합 조건(AND)·단일 라벨 불가,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:delete:/repos/{owner}/{repo}/issues/{index}/blocks,gitea,나,복합 조건(AND)·단일 라벨 불가,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:get:/repos/{owner}/{repo}/labels,gitea,나,override: visibility_dependent(조건부 접근),meta.v30_override_reason,public
+train_v2_draft,gitea:get:/repos/{owner}/{repo}/labels/{id},gitea,나,override: visibility_dependent(조건부 접근),meta.v30_override_reason,public
+train_v2_draft,gitea:get:/repos/{owner}/{repo}/milestones,gitea,나,override: visibility_dependent(조건부 접근),meta.v30_override_reason,public
+train_v2_draft,gitea:get:/repos/{owner}/{repo}/milestones/{id},gitea,나,override: visibility_dependent(조건부 접근),meta.v30_override_reason,public
+train_v2_draft,gitea:get:/packages/{owner}/{type}/{name},gitea,나,복합 조건(AND)·단일 라벨 불가,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:get:/packages/{owner}/{type}/{name}/{version},gitea,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:get:/packages/{owner}/{type}/{name}/{version}/files,gitea,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:get:/packages/{owner}/{type}/{name}/-/latest,gitea,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:post:/packages/{owner}/{type}/{name}/-/link/{repo_name},gitea,나,복합 조건(AND)·단일 라벨 불가,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:post:/packages/{owner}/{type}/{name}/-/unlink,gitea,나,복합 조건(AND)·단일 라벨 불가,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:get:/packages/{owner},gitea,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:get:/user/orgs,gitea,가,인증만 확인·인가 조건 없음,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:get:/users/{username}/orgs,gitea,나,복합 조건(AND)·단일 라벨 불가,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:get:/users/{username}/orgs/{org}/permissions,gitea,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:post:/orgs,gitea,나,복합 조건(AND)·단일 라벨 불가,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:get:/orgs/{org},gitea,나,override: visibility_dependent(조건부 접근),meta.v30_override_reason,manual_review_required
+train_v2_draft,gitea:get:/orgs/{org}/repos,gitea,나,override: visibility_dependent(조건부 접근),meta.v30_override_reason,manual_review_required
+train_v2_draft,gitea:post:/orgs/{org}/repos,gitea,나,복합 조건(AND)·단일 라벨 불가,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:get:/orgs/{org}/members/{username},gitea,나,복합 조건(AND)·단일 라벨 불가,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:get:/orgs/{org}/public_members,gitea,나,override: visibility_dependent(조건부 접근),meta.v30_override_reason,manual_review_required
+train_v2_draft,gitea:get:/orgs/{org}/public_members/{username},gitea,나,override: visibility_dependent(조건부 접근),meta.v30_override_reason,manual_review_required
+train_v2_draft,gitea:put:/orgs/{org}/public_members/{username},gitea,분류불가,패턴 미일치,rationale(모델 문장),manual_review_required
+train_v2_draft,gitea:post:/orgs/{org}/teams,gitea,나,복합 조건(AND)·단일 라벨 불가,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:get:/orgs/{org}/labels,gitea,나,override: visibility_dependent(조건부 접근),meta.v30_override_reason,manual_review_required
+train_v2_draft,gitea:get:/orgs/{org}/labels/{id},gitea,나,복합 조건(AND)·단일 라벨 불가,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:get:/orgs/{org}/activities/feeds,gitea,나,override: visibility_dependent(조건부 접근),meta.v30_override_reason,membership_required
+train_v2_draft,gitea:get:/teams/{id},gitea,가,요청자-객체 관계 미확인,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:get:/teams/{id}/members/{username},gitea,나,복합 조건(AND)·단일 라벨 불가,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:get:/teams/{id}/repos,gitea,가,접근 조건 미명시(일반),"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:get:/teams/{id}/repos/{org}/{repo},gitea,나,구독·플랜·등급 조건,"rationale(모델 문장, 정규식)",manual_review_required
+train_v2_draft,gitea:get:/teams/{id}/activities/feeds,gitea,가,접근 조건 미명시(일반),"rationale(모델 문장, 정규식)",manual_review_required

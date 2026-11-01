@@ -1,0 +1,50 @@
+1051	manual_review_required	0.50	Game creator detail is descriptive content but unknown security is not affirmative unrestricted access.
+1054	manual_review_required	0.50	Genre detail has no explicit public-access statement or caller authorization evidence.
+1057	manual_review_required	0.55	Attachment relatedId and relatedType are opaque relations; secret-key or JWT authentication does not establish ownership.
+1060	manual_review_required	0.55	Bank account customerId is an inferred relation without a verified caller-customer lookup or owner-only rule.
+1063	manual_review_required	0.55	Creating a blocklist uses authentication alternatives but no specified caller role or object-owner policy.
+1066	manual_review_required	0.55	Credential customerId and username identify data subjects without verified authorization mapping to the caller.
+1069	manual_review_required	0.55	Service instance retrieval uses UserSecurity but supplies no owner or tenant authorization relationship.
+1072	manual_review_required	0.55	Offering service-instance list has authentication but only pagination wrappers, not a verified object access rule.
+1075	manual_review_required	0.55	System inventory detail requires RhIdentity without a supplied caller organization or owner binding.
+1078	manual_review_required	0.55	Sale-listing metadata requires a security scheme and does not explicitly guarantee unrestricted API access.
+1081	manual_review_required	0.55	My selling-order shipment suggests seller access but shipping-only fields cannot support a verified order-owner lookup.
+1084	manual_review_required	0.55	Certificate export has Basic or bearer authentication and no concrete caller role or ownership evidence.
+1087	manual_review_required	0.55	Campaign event detail requires an API token and only result wrappers are available to infer authorization.
+1090	manual_review_required	0.55	Accepting a change request has no explicit approver role or owner relationship in the supplied result fields.
+1093	manual_review_required	0.55	Account-key created_by and organization_id are competing inferred authorization hints without verified lookup semantics.
+1096	manual_review_required	0.55	Organization update has inferred id and client_id but no verified caller-tenant relation.
+1099	manual_review_required	0.55	Scan template ACL, creator and organization fields imply multiple possible access paths without a verified policy binding.
+1102	manual_review_required	0.55	User client_admin and org_roles are response attributes, not proof of an administrator requirement or self-access lookup.
+1105	manual_review_required	0.55	Sending a user's reset email uses bearer authentication but role fields do not establish caller authorization.
+1108	manual_review_required	0.55	Deletion organizationId is inferred response metadata without a verified tenant identity or lookup mapping.
+1111	manual_review_required	0.50	CRM account owner and creator describe sales assignments, not a verified API caller authorization relationship.
+1114	manual_review_required	0.50	Call instructions have unknown security and no owner or tenant lookup fields.
+1117	manual_review_required	0.50	Call user is activity metadata and user_guid filtering does not establish owner-only access.
+1120	manual_review_required	0.50	Email user and recipient fields describe participants without a verified authorized caller relationship.
+1123	manual_review_required	0.55	Shipping batch retrieval requires an API key but lacks any supplied batch ownership relation.
+1126	manual_review_required	0.55	Carrier settings are account configuration without a verified caller-account authorization mapping.
+1129	manual_review_required	0.55	Inline-script account_id is inferred; read_inline_script_tags scope does not establish personal or tenant ownership.
+1132	manual_review_required	0.55	Render owner and plan are response-derived fields, not a verified owner lookup or required membership tier.
+1135	manual_review_required	0.55	Audio-license listing uses licenses.view permission and team-history filters without a specific owner or membership policy.
+1138	manual_review_required	0.55	Alert report includes userId and teamId without a verified choice of individual versus team authorization.
+1141	manual_review_required	0.55	Alert annotation userId describes annotation authorship, not a verified alert-owner access rule.
+1144	manual_review_required	0.55	Notification userId identifies a recipient without proving that only that user may retrieve the alert notifications.
+1147	manual_review_required	0.55	Reopening an alert has inferred teamId and lifecycle metadata but no verified tenant authorization lookup.
+1150	manual_review_required	0.55	admin.conversations:read is a permission scope rather than proof of a required app role; channel-to-enterprise binding is absent.
+1153	manual_review_required	0.55	CompanyAdministrator and CompanyMonitor occur as scopes with a Pin alternative, not verified application roles or tenant lookup evidence.
+1156	manual_review_required	0.55	CompanyMonitor scope and Pin authentication do not establish a verified user-self or company authorization rule for check-in.
+1159	manual_review_required	0.55	Emergency reporting has company/user context but no verified caller identity mapping; scope names alone are not roles.
+1162	manual_review_required	0.55	Ending monitoring uses authentication alternatives without a verified user ownership or company-tenant binding.
+1165	manual_review_required	0.55	Location reporting identifies company and user but inferred company data does not verify authorization lookup semantics.
+1168	manual_review_required	0.50	Device configuration includes sensitive keys but no supplied owner binding or concrete caller authorization policy.
+1171	manual_review_required	0.50	Group audit filter projectId and userId are query-like metadata rather than verified tenant or owner lookup evidence.
+1174	manual_review_required	0.50	Group-tag deletion has unknown security and no verified group access relationship.
+1177	manual_review_required	0.50	Adding an organization integration provides credential configuration without a verified tenant or caller-role policy.
+1180	manual_review_required	0.50	Import target owner identifies a source repository owner rather than the API caller's authorization subject.
+1183	manual_review_required	0.50	Organization integration-setting update has no verified organization binding or concrete caller role.
+1186	manual_review_required	0.55	Authenticated-user following retrieval concerns a relationship to another user, not ownership of that target user's profile.
+1189	manual_review_required	0.55	My-track retrieval has user and sharing fields but no verified flattened ownership lookup.
+1192	manual_review_required	0.55	Playlist-track access uses authentication and sharing metadata without a verified playlist authorization relationship.
+1195	manual_review_required	0.55	Comment user_id denotes authorship while ClientId authentication does not imply owner-only or unrestricted read access.
+1198	manual_review_required	0.55	Accepting my contract uses AgentToken but agent/contract wrappers do not provide a verified ownership lookup.

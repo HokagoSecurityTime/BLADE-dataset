@@ -1,0 +1,50 @@
+1801	manual_review_required	0.50	Holding accountId is a business relationship without verified caller-account identity mapping.
+1804	manual_review_required	0.50	Savings strategy accountId lacks verified ownership and specified security.
+1807	manual_review_required	0.50	Account owner and ownerDependentId imply alternative subjects without verified binding.
+1810	manual_review_required	0.55	Account owner_ids and roles_allowed are opaque data, not explicit caller authorization.
+1813	manual_review_required	0.55	Summary equates account with team but environment fields lack verified team lookup.
+1816	manual_review_required	0.55	Environment-variable retrieval has account context without a verified tenant relation.
+1819	manual_review_required	0.55	Variable-value deletion has only error response fields and no verified account access mapping.
+1822	manual_review_required	0.55	Organization audio recommendations use listening scope without tenant lookup or public-access evidence.
+1825	manual_review_required	0.50	Bank organization relation is inferred and security is unknown.
+1828	manual_review_required	0.50	Merchant-industry metadata lacks affirmative unrestricted API-access evidence.
+1831	manual_review_required	0.50	Payment-provider organization relationship does not establish caller tenancy.
+1834	manual_review_required	0.50	Organization details have inferred id without verified tenant binding or explicit public access.
+1837	manual_review_required	0.50	Security-entry rights describe an ACL object, not the caller's authority to retrieve it.
+1840	manual_review_required	0.50	Analysis-template security links and GroupId lack verified authorization semantics.
+1843	manual_review_required	0.55	Company_id identifies corporate reference data rather than a verified caller tenant.
+1846	manual_review_required	0.55	Payment refund has authentication but no caller-payment ownership relation.
+1849	manual_review_required	0.55	Comment user_id and is_private indicate conditional access without verified owner binding.
+1852	manual_review_required	0.55	User account and roles are returned attributes, not proof of required caller roles or self access.
+1855	manual_review_required	0.55	Category retrieval requires Basic authentication without a specific caller policy.
+1858	manual_review_required	0.55	Event ticket counts have Basic authentication but no owner, tenant or required role evidence.
+1861	manual_review_required	0.50	DNS verification concerns domain control but provides no caller authorization or ownership lookup.
+1864	manual_review_required	0.55	Server configuration requires API key without a concrete caller role or owner relation.
+1867	manual_review_required	0.55	DNS-zone account is inferred metadata and does not establish caller ownership.
+1870	manual_review_required	0.55	Sending transaction receipt has Basic authentication but no transaction-owner mapping.
+1873	manual_review_required	0.55	Rule author is provenance and projectId filtering does not verify tenant authorization.
+1876	manual_review_required	0.55	Crawl author is inferred and cancel path conflicts with generic create summary, requiring clarification.
+1879	manual_review_required	0.55	Import author and project are inferred relations without a verified access-policy binding.
+1882	manual_review_required	0.55	Channel userId identifies membership data rather than a proved owner-only read rule.
+1885	manual_review_required	0.55	Updating channel credentials has no verified caller-channel relationship or explicit admin requirement.
+1888	manual_review_required	0.50	Credit-check companyId denotes the checked company, not an authorization tenant.
+1891	manual_review_required	0.50	Signatory companyId identifies business data without verified caller tenancy or public access.
+1894	manual_review_required	0.55	Test created_by is provenance and test:write scope does not prove owner-only mutation.
+1897	manual_review_required	0.50	District reference data has app-key inputs but no affirmative unrestricted API-access statement.
+1900	manual_review_required	0.50	School-listing appID/appKey and unknown security do not establish public authorization.
+1903	manual_review_required	0.50	User entities have unknown security and no verified user ownership relation.
+1906	manual_review_required	0.50	Setlist search has no affirmative unrestricted-access statement in supplied facts.
+1909	manual_review_required	0.50	User profile id is inferred without verified subject binding or explicit public-access guarantee.
+1912	manual_review_required	0.55	Property ownerName is real-estate metadata rather than API ownership; Basic authentication gives no specific policy.
+1915	manual_review_required	0.55	Listing ownerName and privateRemarks do not establish caller-owner or unrestricted-access policy.
+1918	manual_review_required	0.50	Received medical-image retrieval has unknown security and no patient or caller authorization mapping.
+1921	manual_review_required	0.50	DICOM image metadata lacks specified authorization and verified subject ownership.
+1924	manual_review_required	0.55	Project owner path and members wrapper cannot establish verified owner or tenant lookup.
+1927	manual_review_required	0.55	Template published flag does not authorize this token-protected lifecycle retrieval; owner binding is absent.
+1930	manual_review_required	0.50	Tax transaction customer_id and sub_account_id have unspecified caller relations.
+1933	manual_review_required	0.50	Unconfirming transaction has customer/subaccount hints but no verified ownership or required role.
+1936	manual_review_required	0.55	Episode thumbAuthor is attribution and JWT authentication does not establish unrestricted access.
+1939	manual_review_required	0.55	Series image summary requires JWT without a supported caller authorization rule.
+1942	manual_review_required	0.55	User createdby and userid are inferred without verified self-access or creator-owner binding.
+1945	manual_review_required	0.55	Account equity snapshots have no account-owner relation in supplied financial fields.
+1948	manual_review_required	0.55	Airport proximity lookup requires API key without affirmative unrestricted-access evidence.

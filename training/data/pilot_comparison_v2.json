@@ -1,0 +1,68 @@
+{
+  "records": 100,
+  "labels": {
+    "public": 1,
+    "role_required": 2,
+    "membership_required": 2,
+    "tenant_match": 1,
+    "owner_match": 5,
+    "owner_or_admin": 0,
+    "manual_review_required": 89
+  },
+  "transitions": [
+    {
+      "old": "manual_review_required",
+      "new": "manual_review_required",
+      "count": 73
+    },
+    {
+      "old": "manual_review_required",
+      "new": "owner_match",
+      "count": 5
+    },
+    {
+      "old": "manual_review_required",
+      "new": "tenant_match",
+      "count": 1
+    },
+    {
+      "old": "membership_required",
+      "new": "manual_review_required",
+      "count": 1
+    },
+    {
+      "old": "membership_required",
+      "new": "membership_required",
+      "count": 2
+    },
+    {
+      "old": "public",
+      "new": "manual_review_required",
+      "count": 8
+    },
+    {
+      "old": "public",
+      "new": "public",
+      "count": 1
+    },
+    {
+      "old": "role_required",
+      "new": "manual_review_required",
+      "count": 7
+    },
+    {
+      "old": "role_required",
+      "new": "role_required",
+      "count": 2
+    }
+  ],
+  "previous_manual": 79,
+  "agent_proposed_promotions": 6,
+  "human_confirmed_promotions": null,
+  "human_error_rate": null,
+  "lookup_unresolved": 6,
+  "low_conf": 73,
+  "api_calls": 0,
+  "human_reviewed": 0,
+  "selection_bias": "21 prior concrete labels plus 79 stratified prior manual, including mandatory BigOven cases; not population-random"
+}

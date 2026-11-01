@@ -1,0 +1,4 @@
+split,info_gap,unknown,known_dist
+train_v1,102,95,public 7
+val_v1,11,11,
+train_v2_draft,220,175,variant base:owner_or_admin 10 / variant base:owner_match 8 / variant base:tenant_match 8 / variant base:role_required 8 / public 7 / variant base:membership_required 4

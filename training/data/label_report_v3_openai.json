@@ -1,0 +1,32 @@
+{
+  "records": 2027,
+  "successful": 2027,
+  "label_error": 0,
+  "labels": {
+    "public": 544,
+    "role_required": 310,
+    "membership_required": 35,
+    "tenant_match": 319,
+    "owner_match": 522,
+    "owner_or_admin": 129,
+    "manual_review_required": 168
+  },
+  "manual_review_rate": 0.08288110508140109,
+  "confidence": {
+    "below_0.6": 168,
+    "0.6_to_0.7": 0,
+    "0.7_to_0.9": 1472,
+    "0.9_plus": 387
+  },
+  "v22_comparison_records": 100,
+  "v22_matches": 11,
+  "v22_agreement": 0.11,
+  "review_records": 140,
+  "tests_passed": 243,
+  "tests_skipped": 1,
+  "gemma_available": false,
+  "models_returned": {
+    "gpt-4o-mini-2024-07-18": 2027
+  },
+  "output_sha256": "52e41e56b06f1bc2d116070a254b5caca43a30e5d0e5f2e2ae70a1aae9daf796"
+}

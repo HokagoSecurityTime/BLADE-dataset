@@ -1,0 +1,31 @@
+{
+  "records": 56,
+  "label_errors": 0,
+  "reference_labels": {
+    "manual_review_required": 40,
+    "public": 3,
+    "role_required": 11,
+    "owner_match": 2
+  },
+  "usage": {
+    "api_responses": 56,
+    "input_tokens": 159667,
+    "cached_input_tokens": 104704,
+    "output_tokens": 3619,
+    "estimated_usd": 0.01827,
+    "billing_invoice": false
+  },
+  "output_sha256": "992891fda3f52419c5358274874d7a8474cc90d3ef2e336993a0e8bd5776fdec",
+  "by_priority": null,
+  "by_project": {
+    "DVRestaurant": {
+      "role_required": 11,
+      "manual_review_required": 11,
+      "owner_match": 2
+    },
+    "vAPI": {
+      "manual_review_required": 29,
+      "public": 3
+    }
+  }
+}

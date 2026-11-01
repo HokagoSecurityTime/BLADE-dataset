@@ -1,0 +1,10 @@
+field_a,field_b,meaning,status
+controller_signals.raw_snippet,controller_text,"핸들러 원문 발췌(train 합성·synthetic_v2 ↔ test·Gitea·취약 API). train은 함수 전체, test는 403 검사 근처 2~3줄, Gitea는 미들웨어 정의+핸들러 60줄 상한","추정(의미 동일, 범위 다름)"
+meta.source_file,meta.source_locations[].file,"코드 위치. train 합성은 파일 경로 문자열, test·Gitea·NetBox는 {file,start_line,end_line} 리스트",추정
+enrichment.operation.description (apisguru 2027·enriched),description (합성 train) / OAS op.description (test·Gitea oas_snippet 내),OAS operation 설명. train_v30 APIs.guru 레코드는 slim 저장이라 enriched_v2에서 다시 읽음,추정
+rationale (APIs.guru·Gitea: 모델 문장),rationale (합성: intended reason 영어 문장),같은 필드명이지만 출처가 다름(LLM 생성 vs 설계 사유),확인
+label (train: LLM/설계 라벨),label (test: 사람 확정·설계 라벨) / llm_reference_label (NetBox·test_v2_extra 후보),정답 지위가 다름. meta.label_source로 구분,확인
+meta.known_vulnerable,intended_labels.yaml vulnerable,합성 취약 변형 표시,확인
+security_state (train 저장값),test_v30_inputs.security_state (OAS에서 계산),label_v5.security_state 규칙 동일; test 레코드에는 저장돼 있지 않음,확인
+meta.v30_override_reason / meta.label_before_override,meta.v30_relabel_reason / meta.intended_label_original,빌드 시 라벨 변경 기록(APIs.guru·Gitea override vs 합성 relabel),확인
+service,meta.project (Gitea·NetBox) / source (test: vuln|synthetic),출처 식별자 계층이 다름,추정

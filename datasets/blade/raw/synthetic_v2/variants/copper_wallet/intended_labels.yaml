@@ -1,0 +1,125 @@
+service: copper_wallet
+variant_of: copper_wallet
+partition: train_only
+oas_status: script_projection
+endpoints:
+- id: copper_wallet_drafts_authonly
+  method: GET
+  path: /fixtures/copper_wallet/transfers/drafts/authonly/{item_id}
+  label: manual_review_required
+  vulnerable: true
+  reason: Authentication only; no requester-object relationship or role check is implemented,
+    so no concrete label is supported.
+  variant_kind: authonly
+  base_label: owner_match
+  auth_style: inline
+- id: copper_wallet_drafts_extauth
+  method: GET
+  path: /fixtures/copper_wallet/transfers/drafts/extauth/{item_id}
+  label: manual_review_required
+  vulnerable: true
+  reason: Authentication only; no requester-object relationship or role check is implemented,
+    so no concrete label is supported. Authentication is enforced outside the handler.
+  variant_kind: extauth
+  base_label: owner_match
+  auth_style: external
+- id: copper_wallet_drafts_extguard
+  method: GET
+  path: /fixtures/copper_wallet/transfers/drafts/extguard/{item_id}
+  label: owner_match
+  vulnerable: false
+  reason: Only the record owner may read it. Authentication is enforced outside the
+    handler; the authorization check is inside.
+  variant_kind: extguard
+  base_label: owner_match
+  auth_style: external
+- id: copper_wallet_shared_authonly
+  method: GET
+  path: /fixtures/copper_wallet/transfers/shared/authonly/{item_id}
+  label: manual_review_required
+  vulnerable: true
+  reason: Authentication only; no requester-object relationship or role check is implemented,
+    so no concrete label is supported.
+  variant_kind: authonly
+  base_label: owner_or_admin
+  auth_style: inline
+- id: copper_wallet_shared_extauth
+  method: GET
+  path: /fixtures/copper_wallet/transfers/shared/extauth/{item_id}
+  label: manual_review_required
+  vulnerable: true
+  reason: Authentication only; no requester-object relationship or role check is implemented,
+    so no concrete label is supported. Authentication is enforced outside the handler.
+  variant_kind: extauth
+  base_label: owner_or_admin
+  auth_style: external
+- id: copper_wallet_shared_extguard
+  method: GET
+  path: /fixtures/copper_wallet/transfers/shared/extguard/{item_id}
+  label: owner_or_admin
+  vulnerable: false
+  reason: The record owner or an administrator may read it. Authentication is enforced
+    outside the handler; the authorization check is inside.
+  variant_kind: extguard
+  base_label: owner_or_admin
+  auth_style: external
+- id: copper_wallet_workspace_authonly
+  method: GET
+  path: /fixtures/copper_wallet/transfers/workspace/authonly/{item_id}
+  label: manual_review_required
+  vulnerable: true
+  reason: Authentication only; no requester-object relationship or role check is implemented,
+    so no concrete label is supported.
+  variant_kind: authonly
+  base_label: tenant_match
+  auth_style: inline
+- id: copper_wallet_workspace_extauth
+  method: GET
+  path: /fixtures/copper_wallet/transfers/workspace/extauth/{item_id}
+  label: manual_review_required
+  vulnerable: true
+  reason: Authentication only; no requester-object relationship or role check is implemented,
+    so no concrete label is supported. Authentication is enforced outside the handler.
+  variant_kind: extauth
+  base_label: tenant_match
+  auth_style: external
+- id: copper_wallet_workspace_extguard
+  method: GET
+  path: /fixtures/copper_wallet/transfers/workspace/extguard/{item_id}
+  label: tenant_match
+  vulnerable: false
+  reason: Caller and record must share a tenant. Authentication is enforced outside
+    the handler; the authorization check is inside.
+  variant_kind: extguard
+  base_label: tenant_match
+  auth_style: external
+- id: copper_wallet_audit_authonly
+  method: GET
+  path: /fixtures/copper_wallet/transfers/audit/authonly/{item_id}
+  label: manual_review_required
+  vulnerable: true
+  reason: Authentication only; no requester-object relationship or role check is implemented,
+    so no concrete label is supported.
+  variant_kind: authonly
+  base_label: role_required
+  auth_style: inline
+- id: copper_wallet_audit_extauth
+  method: GET
+  path: /fixtures/copper_wallet/transfers/audit/extauth/{item_id}
+  label: manual_review_required
+  vulnerable: true
+  reason: Authentication only; no requester-object relationship or role check is implemented,
+    so no concrete label is supported. Authentication is enforced outside the handler.
+  variant_kind: extauth
+  base_label: role_required
+  auth_style: external
+- id: copper_wallet_audit_extguard
+  method: GET
+  path: /fixtures/copper_wallet/transfers/audit/extguard/{item_id}
+  label: role_required
+  vulnerable: false
+  reason: Only administrators may read this operational resource. Authentication is
+    enforced outside the handler; the authorization check is inside.
+  variant_kind: extguard
+  base_label: role_required
+  auth_style: external

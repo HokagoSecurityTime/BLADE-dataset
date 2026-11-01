@@ -1,0 +1,117 @@
+{
+  "total": 317,
+  "retained": 256,
+  "excluded": 61,
+  "services": {
+    "VAmPI": {
+      "total": 14,
+      "retained": 12,
+      "excluded": 2,
+      "proposed_labels_all": {
+        "role_required": 1,
+        "manual_review_required": 6,
+        "owner_match": 5,
+        "public": 2
+      },
+      "known_vulnerable_all": 1
+    },
+    "crAPI": {
+      "total": 54,
+      "retained": 54,
+      "excluded": 0,
+      "proposed_labels_all": {
+        "role_required": 4,
+        "manual_review_required": 36,
+        "public": 10,
+        "owner_match": 4
+      },
+      "known_vulnerable_all": 3
+    },
+    "juice-shop": {
+      "total": 109,
+      "retained": 70,
+      "excluded": 39,
+      "proposed_labels_all": {
+        "owner_match": 24,
+        "manual_review_required": 78,
+        "public": 5,
+        "role_required": 2
+      },
+      "known_vulnerable_all": 5
+    },
+    "Pixi": {
+      "total": 64,
+      "retained": 53,
+      "excluded": 11,
+      "proposed_labels_all": {
+        "manual_review_required": 54,
+        "owner_match": 6,
+        "public": 4
+      },
+      "known_vulnerable_all": 0
+    },
+    "DVWS-node": {
+      "total": 34,
+      "retained": 25,
+      "excluded": 9,
+      "proposed_labels_all": {
+        "owner_match": 13,
+        "manual_review_required": 20,
+        "role_required": 1
+      },
+      "known_vulnerable_all": 0
+    },
+    "quill_blog": {
+      "total": 14,
+      "retained": 14,
+      "excluded": 0,
+      "proposed_labels_all": {
+        "public": 2,
+        "owner_match": 2,
+        "owner_or_admin": 2,
+        "tenant_match": 2,
+        "role_required": 2,
+        "membership_required": 2,
+        "manual_review_required": 2
+      },
+      "known_vulnerable_all": 5
+    },
+    "folio_wiki": {
+      "total": 14,
+      "retained": 14,
+      "excluded": 0,
+      "proposed_labels_all": {
+        "public": 2,
+        "owner_match": 2,
+        "owner_or_admin": 2,
+        "tenant_match": 2,
+        "role_required": 2,
+        "membership_required": 2,
+        "manual_review_required": 2
+      },
+      "known_vulnerable_all": 5
+    },
+    "beacon_iot": {
+      "total": 14,
+      "retained": 14,
+      "excluded": 0,
+      "proposed_labels_all": {
+        "public": 2,
+        "owner_match": 2,
+        "owner_or_admin": 2,
+        "tenant_match": 2,
+        "role_required": 2,
+        "membership_required": 2,
+        "manual_review_required": 2
+      },
+      "known_vulnerable_all": 5
+    }
+  },
+  "confirmed": 0,
+  "test_jsonl_created": false,
+  "grounded_proposals": 120,
+  "unresolved_retained": 136,
+  "grounded_fraction_of_retained": 0.46875,
+  "known_vulnerable": 24,
+  "target_150_200_met_for_all_retained": false
+}

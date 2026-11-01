@@ -1,0 +1,70 @@
+// services/context/api.go:324
+func (ctx *APIContext) IsUserSiteAdmin() bool {
+	return ctx.IsSigned && ctx.Doer.IsAdmin
+}
+
+// services/context/api.go:329
+func (ctx *APIContext) IsUserRepoAdmin() bool {
+	return ctx.Repo.Permission.IsAdmin()
+}
+
+// services/context/api.go:334
+func (ctx *APIContext) IsUserRepoWriter(unitTypes []unit.Type) bool {
+	return slices.ContainsFunc(unitTypes, ctx.Repo.Permission.CanWrite)
+}
+
+// models/perm/access/repo_permission.go:529
+func IsUserRepoAdmin(ctx context.Context, repo *repo_model.Repository, user *user_model.User) bool {
+	return (user != nil && user.IsAdmin) || IsUserRealRepoAdmin(ctx, repo, user)
+}
+
+// models/perm/access/repo_permission.go:134
+func (p *Permission) CanRead(unitType unit.Type) bool {
+	return p.CanAccess(perm_model.AccessModeRead, unitType)
+}
+
+// models/perm/access/repo_permission.go:153
+func (p *Permission) CanWrite(unitType unit.Type) bool {
+	return p.CanAccess(perm_model.AccessModeWrite, unitType)
+}
+
+// models/perm/access/repo_permission.go:119
+func (p *Permission) CanAccess(mode perm_model.AccessMode, unitType unit.Type) bool {
+	return p.UnitAccessMode(unitType) >= mode
+}
+
+// models/perm/access/repo_permission.go:145
+func (p *Permission) CanReadIssuesOrPulls(isPull bool) bool {
+	if isPull {
+		return p.CanRead(unit.TypePullRequests)
+	}
+	return p.CanRead(unit.TypeIssues)
+}
+
+// models/perm/access/repo_permission.go:159
+func (p *Permission) CanWriteIssuesOrPulls(isPull bool) bool {
+	if isPull {
+		return p.CanWrite(unit.TypePullRequests)
+	}
+	return p.CanWrite(unit.TypeIssues)
+}
+
+// models/perm/access/repo_permission.go:54
+func (p *Permission) HasAnyUnitAccess() bool {
+	for _, v := range p.unitsMode {
+		if v >= perm_model.AccessModeRead {
+			return true
+		}
+	}
+	return p.AccessMode >= perm_model.AccessModeRead
+}
+
+// models/perm/access/repo_permission.go:42
+func (p *Permission) IsOwner() bool {
+	return p.AccessMode >= perm_model.AccessModeOwner
+}
+
+// models/perm/access/repo_permission.go:47
+func (p *Permission) IsAdmin() bool {
+	return p.AccessMode >= perm_model.AccessModeAdmin
+}

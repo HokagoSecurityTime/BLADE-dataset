@@ -1,0 +1,26 @@
+{
+  "repository": "nsidnev/fastapi-realworld-example-app",
+  "commit": "029eb7781c60d5f563ee8990a0cbfb79b244538c",
+  "files": [
+    {
+      "path": "app/db/queries/sql/articles.sql",
+      "sha256": "6f64a55f1ec2146898f5443129f02c2379866f8b1143fd6e064d35d9adb96958"
+    },
+    {
+      "path": "app/db/queries/sql/comments.sql",
+      "sha256": "a4a52a192e1f5cd41d92a9fd0627280af8d339dec4bd586cfd483caf3d1ec159"
+    },
+    {
+      "path": "app/db/queries/sql/profiles.sql",
+      "sha256": "e6fbd7b0b5334ea13aa7f271ab940dc885ff0137f9ed7936a7ebdf0b53c4064a"
+    },
+    {
+      "path": "app/db/queries/sql/tags.sql",
+      "sha256": "8712ae9bf21512cafd7c8e7f1dcd63b26b6a72a89b19df73c56e3e8b131e8f8c"
+    },
+    {
+      "path": "app/db/queries/sql/users.sql",
+      "sha256": "a58f4dd300eb3b68e72d2b9329fd055d8b40be86a170a78cb18d39bbd72fb17e"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+ "projects": {
+  "dendrite": {
+   "candidates": 136,
+   "kept": 136
+  },
+  "nodebb": {
+   "candidates": 146,
+   "kept": 146
+  },
+  "taiga": {
+   "candidates": 150,
+   "kept": 150
+  }
+ },
+ "duplicates": [],
+ "internal_duplicates": [],
+ "missing": [],
+ "invalid": [],
+ "total": 432
+}

@@ -1,0 +1,700 @@
+{
+  "repository": "WebFuzzing/Dataset",
+  "commit": "915859080da033fc36feae54bab3ad4a7b04e872",
+  "services": [
+    "blogapi",
+    "features-service",
+    "user-management"
+  ],
+  "files": [
+    {
+      "path": "LICENSE",
+      "sha256": "b40930bbcf80744c86c46a12bc9da056641d722716c378f5659b9e555ef833e1"
+    },
+    {
+      "path": "README.md",
+      "sha256": "28e39183e51f132ebba475b9451f492f597f47e0b20e3d1c0e93479b546be185"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/blogapi/LICENSE",
+      "sha256": "8486a10c4393cee1c25392769ddd3b2d6c242d6ec7928e1414efff7dfb2f07ef"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/blogapi/README.md",
+      "sha256": "420c87d7a455e4d63dcca95c48d838b6eb69f7f951ee591b16a86350f19545a2"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/blogapi/src/main/java/com/sopromadze/blogapi/BlogApiApplication.java",
+      "sha256": "2c2a27d5120b7249599261959bbafd4edfbcc3b2a9cc0a63874752ee906ab087"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/blogapi/src/main/java/com/sopromadze/blogapi/config/AuditingConfig.java",
+      "sha256": "78324bccf20a6bfce65b4535578e4d3c325b89c0ed44773ee3770decd689cfe2"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/blogapi/src/main/java/com/sopromadze/blogapi/config/SecutiryConfig.java",
+      "sha256": "86e68e2131f18abc72d0364c8a595b6f2b1ab2fbd13b9a5fa7493e49f508c980"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/blogapi/src/main/java/com/sopromadze/blogapi/config/WebMvcConfig.java",
+      "sha256": "b9f6b7c9ee3e4fbb3a33f8dabc4b079c7900474f699e87fb9a2704024e305c15"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/blogapi/src/main/java/com/sopromadze/blogapi/controller/AlbumController.java",
+      "sha256": "d5fba5baeef7ac81caba974bb808757c270b3cac67589a75fcabc68ffc41722a"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/blogapi/src/main/java/com/sopromadze/blogapi/controller/AuthController.java",
+      "sha256": "bd9f2b6a9211ca908628235793e237fef848b9b385c264ead9d10e8a9d9e5a04"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/blogapi/src/main/java/com/sopromadze/blogapi/controller/CategoryController.java",
+      "sha256": "1bef4d4b0b5c4ea659a8f447a600fc93b33db3932e570001dda743fe2c81610b"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/blogapi/src/main/java/com/sopromadze/blogapi/controller/CommentController.java",
+      "sha256": "8b47a7f4954159c71462bf9bf82147a903f0cdad018cdb4c0a046e744b0a6591"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/blogapi/src/main/java/com/sopromadze/blogapi/controller/PhotoController.java",
+      "sha256": "e7b5f1979e35ae20ac5fba6b92c8de36d462cf9920702eac9e34aaaf94b52968"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/blogapi/src/main/java/com/sopromadze/blogapi/controller/PostController.java",
+      "sha256": "7489c650c3974568b72bc6c1674a5eee6326cceec8a84c8be50501be7a63d8d8"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/blogapi/src/main/java/com/sopromadze/blogapi/controller/TagController.java",
+      "sha256": "5dea929169cd0a3c16066afd1226aa854da17d7b94efa08363a40c6afb9d7939"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/blogapi/src/main/java/com/sopromadze/blogapi/controller/TodoController.java",
+      "sha256": "d44af31917851d4bc0acea2001c4bb7c9174aaa07df65d7c6f9c6bb2bef75afe"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/blogapi/src/main/java/com/sopromadze/blogapi/controller/UserController.java",
+      "sha256": "d6cb716fa0f25ef55436c575b1f0b9922dcb009c87b74964a4e9498457577815"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/blogapi/src/main/java/com/sopromadze/blogapi/exception/AccessDeniedException.java",
+      "sha256": "60802006dd818cfae0ab386a26c4de3727ca160f232874f681d27a6b5e3bea76"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/blogapi/src/main/java/com/sopromadze/blogapi/exception/AppException.java",
+      "sha256": "ba3baba6116c350eb6d94c2c7642c3eb97a4a26a2fb529bb5ee5dc9c7778a8f6"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/blogapi/src/main/java/com/sopromadze/blogapi/exception/BadRequestException.java",
+      "sha256": "d69ae42fd28ccb3dffcbc1ee45af6c0ce73b50571d500b4282a18fd77c94c9f4"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/blogapi/src/main/java/com/sopromadze/blogapi/exception/BlogapiException.java",
+      "sha256": "d0da2fe2b5a8c72d3f3f4a1ec7692bda8bb353ae36925485669fb80a3e46ae7e"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/blogapi/src/main/java/com/sopromadze/blogapi/exception/ResourceNotFoundException.java",
+      "sha256": "11aeef9276bcce250dbec18f2f947a5bf1f57d797b91653af6b9dc6baf399260"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/blogapi/src/main/java/com/sopromadze/blogapi/exception/ResponseEntityErrorException.java",
+      "sha256": "59456108e63bf4b0d5da2b977286a20c4abcce010fd5cf088c6c173262fbc98d"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/blogapi/src/main/java/com/sopromadze/blogapi/exception/RestControllerExceptionHandler.java",
+      "sha256": "73f26c4e02a60e4af52833b2724ba2ef4ac9712427d459ea6b3f1206bbc126a3"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/blogapi/src/main/java/com/sopromadze/blogapi/exception/UnauthorizedException.java",
+      "sha256": "20ff28c8c70359635c0a0b372847a303604c18b08f7048cd71790d2aa5ce3029"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/blogapi/src/main/java/com/sopromadze/blogapi/model/Album.java",
+      "sha256": "0e0fb3e552b1b8e3f59c95c3403a66465f4b98dfea5b77c87e2b043a7bcaa3fe"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/blogapi/src/main/java/com/sopromadze/blogapi/model/Category.java",
+      "sha256": "40e0d579e0479aca56aaab2cda327a2a5d4f2d26d17a7b24ffb496981027f1de"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/blogapi/src/main/java/com/sopromadze/blogapi/model/Comment.java",
+      "sha256": "642a24be431d6a596751987820d167678c3c5032f691c0f09d37f0331c25694d"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/blogapi/src/main/java/com/sopromadze/blogapi/model/Photo.java",
+      "sha256": "0664641e4669c425ef1a279f6fac432eba9da50b91a0e861a8a46bdc0c922f5e"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/blogapi/src/main/java/com/sopromadze/blogapi/model/Post.java",
+      "sha256": "37c1de20c4985dd0aaaab4d50a82ee5eb860f6ec35eba4db7870103a0e15f8f1"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/blogapi/src/main/java/com/sopromadze/blogapi/model/Tag.java",
+      "sha256": "5ca2cf1057f8cecc98cf92e4a496cfcde14a542a45ea73ffb29b7b002ea3b71c"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/blogapi/src/main/java/com/sopromadze/blogapi/model/Todo.java",
+      "sha256": "f10f48e0ff027258bd324fd4b55d90ac93b649fc16517a4f388d83872d0afe45"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/blogapi/src/main/java/com/sopromadze/blogapi/model/audit/DateAudit.java",
+      "sha256": "ff3d850452b94e3db32b7cac95b53627f35ec84a179e513722f7c9c74d48f038"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/blogapi/src/main/java/com/sopromadze/blogapi/model/audit/UserDateAudit.java",
+      "sha256": "eefb0c8eb4e802ea8c601713082e611be63e1b1a2fa9b3772916bdd1c7c37165"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/blogapi/src/main/java/com/sopromadze/blogapi/model/role/Role.java",
+      "sha256": "04b554c86fde474ba5e72fda0b2ea26d4a8cda0e4c9a181f909eb735dc8f54d4"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/blogapi/src/main/java/com/sopromadze/blogapi/model/role/RoleName.java",
+      "sha256": "aceb4f69cbe4c821b40adcf1d8553fee31a62e2e9e8e8bebb83441b34f584d0c"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/blogapi/src/main/java/com/sopromadze/blogapi/model/user/Address.java",
+      "sha256": "f25fffde245efaa1eeddf3484df33d961fc0d4ceb26d5cdb20580fc588376be7"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/blogapi/src/main/java/com/sopromadze/blogapi/model/user/Company.java",
+      "sha256": "4e96860d78b343c1a2787c27115eb6dcd1afcbc4fef805d0a7c5b8f4aa5a77b3"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/blogapi/src/main/java/com/sopromadze/blogapi/model/user/Geo.java",
+      "sha256": "3de16f96e25cdf40ef9006a2572f79d3d19aadf0e241d95fd406c147020008d8"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/blogapi/src/main/java/com/sopromadze/blogapi/model/user/User.java",
+      "sha256": "645b0eab1eaf3d5c28d8277b39395d3be2a796f93d523f307cc7ec7fca763dfb"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/blogapi/src/main/java/com/sopromadze/blogapi/payload/AlbumResponse.java",
+      "sha256": "79d3ac0e898a417377c034b0b18b4433c7fccbe4af2bfbff827dcbb26ebbb72d"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/blogapi/src/main/java/com/sopromadze/blogapi/payload/ApiResponse.java",
+      "sha256": "9c81a06b627f794645152b4ebcc0b1d9e78b37f58467ab92b6f0ce530e2003e3"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/blogapi/src/main/java/com/sopromadze/blogapi/payload/CommentRequest.java",
+      "sha256": "9fd7417b01352623a70e74fe5d78f6fc6f43c92322dedc9b46c0620eb7953666"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/blogapi/src/main/java/com/sopromadze/blogapi/payload/DateAuditPayload.java",
+      "sha256": "bbdc0f4e1c593c18087a80df4695ae7ef49851863a22888cd7bf1317e72db3e9"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/blogapi/src/main/java/com/sopromadze/blogapi/payload/ExceptionResponse.java",
+      "sha256": "be97cbae87c2922e944fa425d0c9b418fd247fc05f6192e20af12ae815e37bb4"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/blogapi/src/main/java/com/sopromadze/blogapi/payload/InfoRequest.java",
+      "sha256": "dc45f309fa49cd695de97dc76174a2dae2f5649880a567977102b584a4ea036d"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/blogapi/src/main/java/com/sopromadze/blogapi/payload/JwtAuthenticationResponse.java",
+      "sha256": "67bb66cf8a0028e315f4a53dde81fe40fea9473268813f8e18dc208a2424e962"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/blogapi/src/main/java/com/sopromadze/blogapi/payload/LoginRequest.java",
+      "sha256": "3c2ab7cf4116b900ff572329b48b1ccc520f508ea5276b4f96be11d755d60d00"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/blogapi/src/main/java/com/sopromadze/blogapi/payload/PagedResponse.java",
+      "sha256": "9fe4d5cc0e3169789f1c973c64163b5d5fb9b8ba78169ce4753d9b7e853c6c95"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/blogapi/src/main/java/com/sopromadze/blogapi/payload/PhotoRequest.java",
+      "sha256": "64b3efff384f39fee0e9f82ab8eac3ee19f1cd0a27a19a5a14534e1ede41ba3a"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/blogapi/src/main/java/com/sopromadze/blogapi/payload/PhotoResponse.java",
+      "sha256": "14de71eb3107fe43c74f72bd28496f0e6b847b203e36998fe11510fd0f437141"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/blogapi/src/main/java/com/sopromadze/blogapi/payload/PostRequest.java",
+      "sha256": "f5898cb5386aa55f2ccaae9c7c64365bd86a7e524bc7cbc9e0ff6a83469de75f"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/blogapi/src/main/java/com/sopromadze/blogapi/payload/PostResponse.java",
+      "sha256": "230eef683e2fa0e685b30cca1a70e4c74894790a81868a220e4e6784670c6b16"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/blogapi/src/main/java/com/sopromadze/blogapi/payload/SignUpRequest.java",
+      "sha256": "9e55d9896e2047a33fbaba88987640f08046927227ea5d47bd7e7bcbafb8e0e1"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/blogapi/src/main/java/com/sopromadze/blogapi/payload/UserDateAuditPayload.java",
+      "sha256": "7d5e4c1386da08cbae2c690fdfae973997b4f80ecb69f13f942473c1c6df89fb"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/blogapi/src/main/java/com/sopromadze/blogapi/payload/UserIdentityAvailability.java",
+      "sha256": "e1726e7eef10c69bb43e2d77231d9aea2518bb612606933d462d59818251c011"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/blogapi/src/main/java/com/sopromadze/blogapi/payload/UserProfile.java",
+      "sha256": "468ba0516fb4d3b8f38fb8554e1e3e4f1ef247d8a0d17507fc47d636e0652d64"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/blogapi/src/main/java/com/sopromadze/blogapi/payload/UserSummary.java",
+      "sha256": "b4ea9081630e7f7a4263433ef7fed4fd447aba596d773eaf534648cf4181cff2"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/blogapi/src/main/java/com/sopromadze/blogapi/payload/request/AlbumRequest.java",
+      "sha256": "494d082c38a889f1247a7f17bb5682934836bf67096f83ef915fcef902dd413a"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/blogapi/src/main/java/com/sopromadze/blogapi/repository/AlbumRepository.java",
+      "sha256": "728dc82b66d7c5db110e88f26b9b6b8e8fce735edfac6e7447523981d075ddac"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/blogapi/src/main/java/com/sopromadze/blogapi/repository/CategoryRepository.java",
+      "sha256": "75ef806e4c2254d99a214af6bbb12e1bf65255d5623bbad9986cd11632899e7f"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/blogapi/src/main/java/com/sopromadze/blogapi/repository/CommentRepository.java",
+      "sha256": "8e2d5cc564d531089bca01b21c410123120c65ff3ff65c174048b6e139adc8e0"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/blogapi/src/main/java/com/sopromadze/blogapi/repository/PhotoRepository.java",
+      "sha256": "de121e9a8f685765ee7b7f1eb59b3d5f982cb93bc43920d63ad96d3e912a7685"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/blogapi/src/main/java/com/sopromadze/blogapi/repository/PostRepository.java",
+      "sha256": "2556fdc5484962c99031c0ae8984668b031d0d5beb94363f7b29520d1e358886"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/blogapi/src/main/java/com/sopromadze/blogapi/repository/RoleRepository.java",
+      "sha256": "5e8ff23a6cb7cfba3008fb76cce36c7cf945e492c0bb4a4dba3c3a6040c5377c"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/blogapi/src/main/java/com/sopromadze/blogapi/repository/TagRepository.java",
+      "sha256": "f9b6d81bb16ea11de29cfb161435e8ee9301ee89fc402b4d1e35440c807649d5"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/blogapi/src/main/java/com/sopromadze/blogapi/repository/TodoRepository.java",
+      "sha256": "fd6dacd491db99cd992d8aad58bc323120f994c32b42425db525cae3f0d2a87a"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/blogapi/src/main/java/com/sopromadze/blogapi/repository/UserRepository.java",
+      "sha256": "e2803ea2c4efd37a5d3c7bfba385a2efa499092c25350e092df390448a3b3157"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/blogapi/src/main/java/com/sopromadze/blogapi/security/CurrentUser.java",
+      "sha256": "7c95eca237ba4e8671c1e58c1d3b3723fc071b923a607752c5d104084ca0a8ac"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/blogapi/src/main/java/com/sopromadze/blogapi/security/JwtAuthenticationEntryPoint.java",
+      "sha256": "86af418dc18c19df5f42cb991149c89a27c06203df47c0064d874655b34e93b6"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/blogapi/src/main/java/com/sopromadze/blogapi/security/JwtAuthenticationFilter.java",
+      "sha256": "751080d71dae04e02cbe6eefae02312803f208141784ebc4c0c9e8caec410b9e"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/blogapi/src/main/java/com/sopromadze/blogapi/security/JwtTokenProvider.java",
+      "sha256": "943f0a7a05906002ee2194b9d0bdf6c229f92f712f6a8d9c0f1092bd703e9442"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/blogapi/src/main/java/com/sopromadze/blogapi/security/UserPrincipal.java",
+      "sha256": "77fbe950ebee484b8105ccbe7a32a2de1fc8c12ea068d713e9cf204fc468ff43"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/blogapi/src/main/java/com/sopromadze/blogapi/service/AlbumService.java",
+      "sha256": "fc3d4bac7ef70b30450f56acc6936a6479b99a8532c106fb46d137b415bf7adf"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/blogapi/src/main/java/com/sopromadze/blogapi/service/CategoryService.java",
+      "sha256": "b5a3c9421466815c70631301d2714a85e86efafa663f06eb2528113b3d6ca015"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/blogapi/src/main/java/com/sopromadze/blogapi/service/CommentService.java",
+      "sha256": "f8aa7eba8ba7f1c774d6acd51fc8b9dd1cd3edcb0ef0f0b89745424c3ecca6a8"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/blogapi/src/main/java/com/sopromadze/blogapi/service/CustomUserDetailsService.java",
+      "sha256": "5a7728e4200e48a82f8890bc8e5b19087e2ca889c0247cf68fd14e0b10c190fb"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/blogapi/src/main/java/com/sopromadze/blogapi/service/PhotoService.java",
+      "sha256": "9d29ebc1b48242f205e650bea7d820788b94a809f598b98c93c024c128c90734"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/blogapi/src/main/java/com/sopromadze/blogapi/service/PostService.java",
+      "sha256": "ca50175d88649072873983e91a430be4be2e4a53c90a53b706b1c4f8642e49c0"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/blogapi/src/main/java/com/sopromadze/blogapi/service/TagService.java",
+      "sha256": "157cdcca4cda08a5c7f4ff12ff9774fb8a91d3b54a1bdeae9071d89e60570f58"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/blogapi/src/main/java/com/sopromadze/blogapi/service/TodoService.java",
+      "sha256": "40b84efb9917b2a2d71094bc93a8f08dcf7cdabe6f0aa7cfa4ca155d81c6d151"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/blogapi/src/main/java/com/sopromadze/blogapi/service/UserService.java",
+      "sha256": "3e3ee43419ee1d741990b781bcd2220df9edf01af3f14c39a021f44f8ddbe08d"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/blogapi/src/main/java/com/sopromadze/blogapi/service/impl/AlbumServiceImpl.java",
+      "sha256": "f11a21101a895beb07ea39604c314dee0752b59bd28e58c1ac213dffb40f3edd"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/blogapi/src/main/java/com/sopromadze/blogapi/service/impl/CategoryServiceImpl.java",
+      "sha256": "e5f7fbe7914282ba36871879e8b284c09232f183553a0b6454278346110fd4cf"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/blogapi/src/main/java/com/sopromadze/blogapi/service/impl/CommentServiceImpl.java",
+      "sha256": "e053acac29dc49a84d2792d83b649e1e24349e58e2167e56cf34d1f8b04d0502"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/blogapi/src/main/java/com/sopromadze/blogapi/service/impl/CustomUserDetailsServiceImpl.java",
+      "sha256": "2412a6d88df94cda1780ef5f68a3404fc68fce23409084e09dbb5cade944f9bf"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/blogapi/src/main/java/com/sopromadze/blogapi/service/impl/PhotoServiceImpl.java",
+      "sha256": "3f0ea4dc84c82b8d554d7ff2a59afb11798521aeac190335ae75a82dd1c23534"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/blogapi/src/main/java/com/sopromadze/blogapi/service/impl/PostServiceImpl.java",
+      "sha256": "f4e344e8042c4639089dccfaa1dfc1b2de0a5f3a8573b644e974c5ba6332a58f"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/blogapi/src/main/java/com/sopromadze/blogapi/service/impl/TagServiceImpl.java",
+      "sha256": "8735e3269a15d9e9c359ba6a292a6fd59fbd50cc1de00784436686e0dcb8ea7a"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/blogapi/src/main/java/com/sopromadze/blogapi/service/impl/TodoServiceImpl.java",
+      "sha256": "3304bc59a5fe5a858da7e808596938bb844c9dacbb999ea10656e154278206e5"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/blogapi/src/main/java/com/sopromadze/blogapi/service/impl/UserServiceImpl.java",
+      "sha256": "82e2e1f32573ef09b2ec4cf47c6b3091a71a0cf14148a30d785d925766a11166"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/blogapi/src/main/java/com/sopromadze/blogapi/utils/AppConstants.java",
+      "sha256": "6f2b3960b1a7481e507148578f7bc697d889b01b7024ce9627105f3644051f6e"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/blogapi/src/main/java/com/sopromadze/blogapi/utils/AppUtils.java",
+      "sha256": "4373f913870f9b2d18eb5ddcafc9288bc3ad724ff4139c0f7fd02db13ea43586"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/features-service/src/main/java/org/javiermf/features/Application.java",
+      "sha256": "088fa327302651441c4de79a9ca18fdd0fbe4d167f43c5df1517ef990facd6b3"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/features-service/src/main/java/org/javiermf/features/CORSFilter.java",
+      "sha256": "fc4d5d0b690a7d7c427f0b0cdc5a986c840911adbb9e6ea291ec9802b161ade8"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/features-service/src/main/java/org/javiermf/features/JerseyConfig.java",
+      "sha256": "924d0cb7ef58aea91e385220cecad929327e12cd93fdc0a4379012ec5646ed65"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/features-service/src/main/java/org/javiermf/features/daos/ProductsConfigurationsDAO.java",
+      "sha256": "deb177bcbbfe28f44f765a35d2caa7e4593cd0f200e517a5922dfc2043398d6b"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/features-service/src/main/java/org/javiermf/features/daos/ProductsDAO.java",
+      "sha256": "858c7d33ca23889475ff7ace510fef1d9fdae7c50195a2605336d513f787e603"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/features-service/src/main/java/org/javiermf/features/exceptions/DuplicatedObjectException.java",
+      "sha256": "79219235672bb2a0373321ea99ef1b2834ef2908a845286d88e684737c58c4d5"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/features-service/src/main/java/org/javiermf/features/exceptions/ObjectNotFoundException.java",
+      "sha256": "d98ac02815299f22b0c87283b1b50a178415e6fd300c292faeb94f569d2ac75a"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/features-service/src/main/java/org/javiermf/features/exceptions/WrongProductConfigurationException.java",
+      "sha256": "6c253a192508b52a7a51c3a2b6efce7361c228109224d7330ca6175555046c04"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/features-service/src/main/java/org/javiermf/features/models/Feature.java",
+      "sha256": "b7288c1535c187f6897426860682f756f9452009b173d922d5f4957ac36887ad"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/features-service/src/main/java/org/javiermf/features/models/Product.java",
+      "sha256": "df75294f90ead07a23a00cf6f01fb0e88ae40e37dbd4bc9bc277dfac81f7e9d2"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/features-service/src/main/java/org/javiermf/features/models/ProductConfiguration.java",
+      "sha256": "034a941c7bf517297de4985b273b6c381128368a18f3358df53b5ffda96e5fc4"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/features-service/src/main/java/org/javiermf/features/models/constraints/ConstraintExcludes.java",
+      "sha256": "7e31b649e3e024e03f18e631eff706fd6123ceccd08b0e6c150c5abd328aeae6"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/features-service/src/main/java/org/javiermf/features/models/constraints/ConstraintRequires.java",
+      "sha256": "206a5931f04ac90a906eec1d3524a8a2a3238550799ae3323dd653dc3ed13346"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/features-service/src/main/java/org/javiermf/features/models/constraints/FeatureConstraint.java",
+      "sha256": "bc5668c7c65a41cc047c934acfc20d2410fd82fb82605e7b4f31dabcc85eb15d"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/features-service/src/main/java/org/javiermf/features/models/evaluation/ConfigurationEvaluator.java",
+      "sha256": "8b9c4c52503ef53880e21e08b8e4c73cf552d5866697459bc37aaf2f518c5f52"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/features-service/src/main/java/org/javiermf/features/models/evaluation/EvaluationResult.java",
+      "sha256": "61826c398aa5e55c44862f28034f06b713116d5d1c0734efe24545058bf15324"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/features-service/src/main/java/org/javiermf/features/services/ProductsConfigurationsService.java",
+      "sha256": "dfb32aefdd5b6ddf3e2983042e45ab5771b09592cf86d57c9a0411e940de013b"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/features-service/src/main/java/org/javiermf/features/services/ProductsService.java",
+      "sha256": "b4fae4fd6593b1648e76696c0d4397c5a77bc2d1a79e57bbb904cc6178e95af0"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/features-service/src/main/java/org/javiermf/features/services/rest/ProductsConfigurationFeaturesResource.java",
+      "sha256": "49c634f4bcfeeca0af00cfedabfed31120dbc0b96a8307073a18aa12ccc18cff"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/features-service/src/main/java/org/javiermf/features/services/rest/ProductsConfigurationResource.java",
+      "sha256": "b2336943274604269941d58071333a6797f96c98f9b7720d8e64afcf95ef8f45"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/features-service/src/main/java/org/javiermf/features/services/rest/ProductsConstraintsResource.java",
+      "sha256": "f9221cbba098b4339957b857cbf27923f73ae8ce6892f685d4d79c032f1e5cfc"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/features-service/src/main/java/org/javiermf/features/services/rest/ProductsFeaturesResource.java",
+      "sha256": "7c4019bc0cd6b3f2d05f919c60cd5c7f4659373ed4ed1162f9219f3214207915"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/features-service/src/main/java/org/javiermf/features/services/rest/ProductsResource.java",
+      "sha256": "b9d8efbbf12718e6484c760f6ad106f3f535281d0e8ee1a9990c06db9c968764"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/user-management/LICENSE",
+      "sha256": "776cd6c8ed2388df8fafaee982d04bfa851ec93f2dad5af3d3ff75799df05bee"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/user-management/README.md",
+      "sha256": "c23f654db25cb6600d2574e33f2253798c4d6cdeabfc56eda41a0c9e31614fdd"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/user-management/src/main/java/com/giassi/microservice/demo2/Microservice2Application.java",
+      "sha256": "732ba38e2f828949cb94b737bf6e040b0e0e2560cd93f9d2c021561f694dc96c"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/user-management/src/main/java/com/giassi/microservice/demo2/configuration/SwaggerConfiguration.java",
+      "sha256": "6aa5945d1043fdf103795ea6d7700d55fd2ebb77405d94fe72de132edc70a1b3"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/user-management/src/main/java/com/giassi/microservice/demo2/rest/GlobalExceptionHandler.java",
+      "sha256": "729240b8fd7e6b8864cc4b1f20bc2b3a50462625079ad9a6fc39bcfe271a4450"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/user-management/src/main/java/com/giassi/microservice/demo2/rest/LoginRestController.java",
+      "sha256": "551578729153011477ad554c628a370af0a096de68f3a0e86daa250b1e1d6918"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/user-management/src/main/java/com/giassi/microservice/demo2/rest/RBACRestController.java",
+      "sha256": "ca8a2fed963675d60659f57ca2b4cab98d19df13f78339f2a3747faff5fc615f"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/user-management/src/main/java/com/giassi/microservice/demo2/rest/RegisterRestController.java",
+      "sha256": "17b89e2c803a3f5e15e75cff62da19d978c76ad55d2d8902f6400fe28addb1c7"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/user-management/src/main/java/com/giassi/microservice/demo2/rest/UserRestController.java",
+      "sha256": "a7ac07042ab1c78e67135d998c61e95ec4136ee32fc7f0c83004c38c843ebf43"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/user-management/src/main/java/com/giassi/microservice/demo2/rest/users/dtos/AddressDTO.java",
+      "sha256": "b6ae636a6ee733093d9414029f8fb1e83f2f7688208a7cd191c42b19209f82f7"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/user-management/src/main/java/com/giassi/microservice/demo2/rest/users/dtos/ContactDTO.java",
+      "sha256": "ccc38cf67c7426f055e31e3c0278fe5f35b9e3e623c715b7a567c2b99dedc75e"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/user-management/src/main/java/com/giassi/microservice/demo2/rest/users/dtos/PermissionDTO.java",
+      "sha256": "fcbf7ba9d62b65546349c738c36e0b6a8ef3b181691a572b2dc4a0488b6bc53f"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/user-management/src/main/java/com/giassi/microservice/demo2/rest/users/dtos/RoleDTO.java",
+      "sha256": "1903162aceb2e789b46a5106e8e69d6e7ca22b5c6f2bc321be990eb706bee091"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/user-management/src/main/java/com/giassi/microservice/demo2/rest/users/dtos/UserDTO.java",
+      "sha256": "6beef053865404f6c2b1734d244ed9e39aa72288bc8d4943d6196216f0355541"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/user-management/src/main/java/com/giassi/microservice/demo2/rest/users/dtos/UserListDTO.java",
+      "sha256": "b4798f00b055a79cd3e8bfff6dc3dff3250f4e3f254f3eacbdcba07e94d827ae"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/user-management/src/main/java/com/giassi/microservice/demo2/rest/users/dtos/requests/CreateOrUpdateUserDTO.java",
+      "sha256": "e4ef535840a2ca081b37fba2c6406e51f4fe10c7e5cb770c9fe2ca9260660b40"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/user-management/src/main/java/com/giassi/microservice/demo2/rest/users/dtos/requests/LoginRequestDTO.java",
+      "sha256": "095d11e8ffc0f8da5e401825cfe4b7e4057eeb936b89be5adfcf92cc2421cc4d"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/user-management/src/main/java/com/giassi/microservice/demo2/rest/users/dtos/requests/RegisterUserAccountDTO.java",
+      "sha256": "da39cd5ec31c755e8cc143897832a673568893f7f24f20112134f56438038ece"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/user-management/src/main/java/com/giassi/microservice/demo2/rest/users/entities/Address.java",
+      "sha256": "5be98040e5172463543ece609a3ea76997f393d38c9fc6197a74f44fa29ffd99"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/user-management/src/main/java/com/giassi/microservice/demo2/rest/users/entities/Contact.java",
+      "sha256": "984bf23022b760ff73e799ec46e47f410953102c14b65260c185ea0597ce3200"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/user-management/src/main/java/com/giassi/microservice/demo2/rest/users/entities/Gender.java",
+      "sha256": "51b83bcf4d4642035739390228cf7c11115dd7c098875ad7419d930f29479217"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/user-management/src/main/java/com/giassi/microservice/demo2/rest/users/entities/Permission.java",
+      "sha256": "20502e39fcfbd0179e8f6a247fd2ddcf947f755c65affe9160732d9a7845ba4d"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/user-management/src/main/java/com/giassi/microservice/demo2/rest/users/entities/Role.java",
+      "sha256": "38610d421372c00337452c998c98510bcba8b6e7bdd626b800ff301d6c8fffae"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/user-management/src/main/java/com/giassi/microservice/demo2/rest/users/entities/User.java",
+      "sha256": "ce63071165609a03148582ddcace5fc6c6ba4f847698251b7e606ea6cd478d1a"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/user-management/src/main/java/com/giassi/microservice/demo2/rest/users/exceptions/ErrorDetails.java",
+      "sha256": "f524debfb76b7f000f0600609b9ba0c07c8918c06a8b60c196830294522131fb"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/user-management/src/main/java/com/giassi/microservice/demo2/rest/users/exceptions/InvalidConfigurationException.java",
+      "sha256": "0725f501c048a4fcb7f96e773a3147d0bf1be57a375f540d4acac7967eec81f3"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/user-management/src/main/java/com/giassi/microservice/demo2/rest/users/exceptions/InvalidEmailException.java",
+      "sha256": "18481cc52442ddc30b450d168500cd9c4b01e575d46e0b9691ca5ee4848664b2"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/user-management/src/main/java/com/giassi/microservice/demo2/rest/users/exceptions/InvalidGenderException.java",
+      "sha256": "65712cbd9f5f6e6cb98a150323dc3307313b7da23b5fb8ed3ed08f0e36b83d4e"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/user-management/src/main/java/com/giassi/microservice/demo2/rest/users/exceptions/InvalidLoginException.java",
+      "sha256": "d8b9eaa042f75266f25205975c400a2280fd053c6184278e993256ec39d51765"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/user-management/src/main/java/com/giassi/microservice/demo2/rest/users/exceptions/InvalidPermissionDataException.java",
+      "sha256": "28366b831f4cf1f66fb615642413fe647773ba6cc9a44fb4c53c85eab6a707a4"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/user-management/src/main/java/com/giassi/microservice/demo2/rest/users/exceptions/InvalidRoleDataException.java",
+      "sha256": "21bacac321d8b5f4836354e658ddd3ba4045a42d792d1d65c5cd1306c64465ab"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/user-management/src/main/java/com/giassi/microservice/demo2/rest/users/exceptions/InvalidRoleIdentifierException.java",
+      "sha256": "c05b527f028ae4ea3ec9a8492e19eb9c0f0690bf2558609921fe7fa6bdccb764"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/user-management/src/main/java/com/giassi/microservice/demo2/rest/users/exceptions/InvalidUserDataException.java",
+      "sha256": "4b25365bd40b97f11a377114b35d5769b85ee2560364330e8a6af81f933e2aa3"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/user-management/src/main/java/com/giassi/microservice/demo2/rest/users/exceptions/InvalidUserIdentifierException.java",
+      "sha256": "614a3890b144227ee7a344436b19c03271d3189a8072684744e96e67b8f0c380"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/user-management/src/main/java/com/giassi/microservice/demo2/rest/users/exceptions/InvalidUsernameException.java",
+      "sha256": "7c2d699aee0410b137b801336a88e937e64a1ff7922c44f225be31df15c93095"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/user-management/src/main/java/com/giassi/microservice/demo2/rest/users/exceptions/PermissionInUseException.java",
+      "sha256": "f99ba3a8fc43cedfe883af23e1c3f1967848d89b3c5561ebe315b7333bba03d5"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/user-management/src/main/java/com/giassi/microservice/demo2/rest/users/exceptions/PermissionNotFoundException.java",
+      "sha256": "29e3e08c9b996a76627496aa14118878679306f47861bd0c8330f60f2874e1d0"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/user-management/src/main/java/com/giassi/microservice/demo2/rest/users/exceptions/RoleInUseException.java",
+      "sha256": "558bca3a7c92e4be7d22760112c76c274beed514c13d8e8f61a4426b78018d8a"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/user-management/src/main/java/com/giassi/microservice/demo2/rest/users/exceptions/RoleNotFoundException.java",
+      "sha256": "c6044e2c10872539bc110585196803a5965ba4d37b3048b4b17dc55142d8695e"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/user-management/src/main/java/com/giassi/microservice/demo2/rest/users/exceptions/UserIsSecuredException.java",
+      "sha256": "dd77afedc7598d14ad1f9bafca440fafd48df720f0472526527a9bc6d17c8f7a"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/user-management/src/main/java/com/giassi/microservice/demo2/rest/users/exceptions/UserNotFoundException.java",
+      "sha256": "6a980d43aabecd9cb17b354631e1f8436729484589ad10c2d787a3a42a5898c9"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/user-management/src/main/java/com/giassi/microservice/demo2/rest/users/repositories/AddressRepository.java",
+      "sha256": "c2ce87c4eaa6faa40ffe8b69f021db7b278a939c1628257471b2c7d1531d92f4"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/user-management/src/main/java/com/giassi/microservice/demo2/rest/users/repositories/ContactRepository.java",
+      "sha256": "14b9de1a99ef0bd9ce01d795ca7c8b44374348f9b7b7abcd50444793cefca689"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/user-management/src/main/java/com/giassi/microservice/demo2/rest/users/repositories/PermissionRepository.java",
+      "sha256": "5b960ab4fe87634b03fd9f6c4024606583bfb3d2ee60eb224b721711196a006b"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/user-management/src/main/java/com/giassi/microservice/demo2/rest/users/repositories/RoleRepository.java",
+      "sha256": "10db6365405df12cbfae4845d4eec8cc1144fee9e78d930b52e49fbf07aeb113"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/user-management/src/main/java/com/giassi/microservice/demo2/rest/users/repositories/UserRepository.java",
+      "sha256": "bc251a2e9c70cdd02b3a569c52ce25059792595c1cd24ca0d291132063f53bb0"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/user-management/src/main/java/com/giassi/microservice/demo2/rest/users/services/EncryptionService.java",
+      "sha256": "37163f56c68f52792589149d0de6931c19cac28ea8942352fed3bb50b3310702"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/user-management/src/main/java/com/giassi/microservice/demo2/rest/users/services/PermissionService.java",
+      "sha256": "9b2ba3780a10f9a89bb17d8d0c1820a5bf0c3501fdf0da71dc2f849527df458a"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/user-management/src/main/java/com/giassi/microservice/demo2/rest/users/services/RoleService.java",
+      "sha256": "7c6b57beded5cc0f1cb9dd5310afcef30f85961682cc4a3fe3930fa3f15d75f9"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/user-management/src/main/java/com/giassi/microservice/demo2/rest/users/services/UserService.java",
+      "sha256": "a3aa836a3daffb98c6b5e986d1bc418bc8814f9214bc51140a3f941bd1cfe357"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/user-management/src/main/java/com/giassi/microservice/demo2/rest/users/services/validation/EmailValidator.java",
+      "sha256": "f27967703e007b1d3bf8c684da9223014a538733d58efce469ae1cbb99217062"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/user-management/src/main/java/com/giassi/microservice/demo2/rest/users/services/validation/PasswordValidator.java",
+      "sha256": "43393726a6d68291906396ababe719789003aa5767c09a9b318b419a574c194c"
+    },
+    {
+      "path": "jdk_8_maven/cs/rest/original/user-management/src/main/java/com/giassi/microservice/demo2/rest/users/services/validation/PhoneValidator.java",
+      "sha256": "7e7b53e07b81fcdee505fb17d62b33bec1a7c300a3efae77fb881308694bc5b1"
+    },
+    {
+      "path": "openapi-swagger/blogapi.json",
+      "sha256": "7690b1ede0fbb1386726e9911dbf7ba9e25b6ba7216132e55ccb28b653828f76"
+    },
+    {
+      "path": "openapi-swagger/features-service.json",
+      "sha256": "a496b74c1d421a8f4657d449a082e00941b42702ddf23ebfaaf3a0ca66395508"
+    },
+    {
+      "path": "openapi-swagger/user-management.json",
+      "sha256": "2a06d105821b54e7141534ca76f083e9bb112363ebf939b5e88912356a6b40a4"
+    }
+  ],
+  "executed_source": false
+}

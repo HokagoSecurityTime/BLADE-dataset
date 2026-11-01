@@ -1,0 +1,50 @@
+1	manual_review_required	0.55	ConnectToken protects file retrieval but files has no vault or individual ownership binding.
+4	manual_review_required	0.55	Device unregistration offers Basic or bearer authentication but ERD contains only error-response fields.
+7	manual_review_required	0.55	Creating an app under account_id and inferred accountId does not distinguish personal ownership from organization tenancy.
+10	manual_review_required	0.55	Reactor rules expose appId and projectId but the requested app-to-caller authorization relationship is unspecified.
+13	manual_review_required	0.55	Updating a rule requires bearer authentication but projectId and appId are unverified lookup hints.
+16	manual_review_required	0.55	Account-holder balance listing has authenticated access but only pagination and balanceAccounts response fields.
+19	manual_review_required	0.55	Document owner is inferred with no verified subject relation or lookup binding.
+22	manual_review_required	0.55	Legal-entity organization and individual describe entity variants rather than a proved caller authorization relationship.
+25	manual_review_required	0.50	UserID token management suggests user scope but security is unknown and token ERD lacks an ownership key.
+28	manual_review_required	0.50	Removing a user's authorization category has unknown security and only error-response columns.
+31	manual_review_required	0.50	Deleting a category from an authorization definition has no role evidence and only error-response fields.
+34	manual_review_required	0.55	Monitor resourceOwner is an inferred response field; OAuth does not establish its relation to the caller.
+37	manual_review_required	0.55	Workspace alert-manager definition has HMAC authentication but no tenant lookup columns.
+40	manual_review_required	0.55	Workspace logging configuration is authenticated but its single wrapper does not establish tenant binding.
+43	manual_review_required	0.55	Workspace rule-group listing has a nested path but only list and pagination fields in ERD.
+46	manual_review_required	0.55	Workspace retrieval lacks a verified workspace primary key or caller-tenant relation.
+49	manual_review_required	0.50	Event user_id is inferred and security is unknown, so an ownership lookup is unverified.
+52	manual_review_required	0.50	Import invalidation identifies operation_id but response uuid is not a proved lookup key and security is unknown.
+55	manual_review_required	0.55	Empty security permits anonymous authentication but does not prove unrestricted DAG-run note modification.
+58	manual_review_required	0.55	Clocking records expose project_id and user_id without verified keys or evidence choosing tenant versus individual authorization.
+61	manual_review_required	0.55	Company integration-setting creation is authenticated but ERD lacks a company relationship.
+64	manual_review_required	0.55	Company form-template listing has a tenant-like path and only pagination fields, not a verified tenant lookup.
+67	manual_review_required	0.55	Company integration-feature listing requires authentication but pagination fields do not establish company authorization.
+70	manual_review_required	0.55	Deleting a stream thumbnail requires bearer authentication; the public response flag does not authorize this mutation.
+73	manual_review_required	0.55	Attribute creation requires API and store keys but no explicit ownership, role or tenant policy is supplied.
+76	manual_review_required	0.55	Basket customer is flattened response data with ambiguous id fields rather than a proved ownership lookup.
+79	manual_review_required	0.50	Artifact createdBy is provenance in inferred metadata and does not establish ownership enforcement.
+82	manual_review_required	0.50	Artifact version metadata update has unknown security and no ownership or tenant columns.
+85	manual_review_required	0.55	Bill created_by occurs in flattened accounting data without a verified caller relation or database key.
+88	manual_review_required	0.55	Customer account and created_by are ambiguous accounting metadata rather than verified access-control relationships.
+91	manual_review_required	0.55	Invoice-item created_by and account fields do not establish owner-only authorization or a verified lookup.
+94	manual_review_required	0.50	Project API creation has unknown security and no project-to-caller binding in the inferred ERD.
+97	manual_review_required	0.50	Project API-version spec creation supplies descriptive fields but no verified tenant authorization relationship.
+100	manual_review_required	0.55	Dealer retrieval requires authentication but neither unrestricted access nor a caller ownership policy is evidenced.
+103	manual_review_required	0.55	Crash-count analytics includes owner_name in the path but only aggregates, leaving ownership binding unresolved.
+106	manual_review_required	0.55	Crash-group totals are owner-scoped by path but no owner lookup is present in the aggregate ERD.
+109	manual_review_required	0.55	Build detail includes owner_name in the URL but response id lacks a verified owner relationship.
+112	manual_review_required	0.55	Build download has owner_name context but the sole uri column cannot support an ownership lookup.
+115	manual_review_required	0.55	Crash-group update is token-authenticated; owner_name is only a path hint without a verified ownership relation.
+118	manual_review_required	0.55	App-category retrieval requires bearer authentication and supplies taxonomy relationships without an explicit authorization policy.
+121	manual_review_required	0.55	App-info update has app relationships but no verified caller ownership or required role evidence.
+124	manual_review_required	0.55	Document permissions are opaque values; JWT and Project schemes do not resolve object authorization.
+127	manual_review_required	0.55	Team retrieval has inferred $id but no verified primary key or caller-tenant mapping.
+130	manual_review_required	0.55	Team-membership creation exposes roles, userId and teamId without evidence selecting a caller role or tenant lookup.
+133	manual_review_required	0.55	Classification inclusion identifiers and API-key authentication do not establish a specific authorization policy.
+136	manual_review_required	0.50	Song-similarity lookup has unknown security and no affirmative unrestricted-access statement.
+139	manual_review_required	0.50	Individual electronic-address lookup has partyId and addressId but no verified party relationship or security requirements.
+142	manual_review_required	0.55	Registration-token or OAuth alternatives authenticate client update without specifying owner or role authorization.
+145	manual_review_required	0.55	Summary associates the sub-user key with an account, but response fields provide no key-to-account lookup or caller mapping.
+148	manual_review_required	0.55	BBC group metadata uses API-key authentication and heterogeneous fields without affirmative unrestricted-access evidence.

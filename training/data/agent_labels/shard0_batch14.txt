@@ -1,0 +1,56 @@
+1860|manual_review_required|0.55|Domain DKIM rotation has key-state fields but no verified domain owner or administrator requirement.
+1863|manual_review_required|0.55|DNS server inspection requires API key without a concrete allowed role or owner relation.
+1866|manual_review_required|0.55|DNS zone account field is inferred administrative metadata without verified caller-account semantics.
+1869|manual_review_required|0.55|DNS cryptokey creation lacks zone-owner or authorized administrator evidence despite API authentication.
+1872|manual_review_required|0.55|Project rule author denotes change provenance, not a verified caller/project authorization relationship.
+1875|manual_review_required|0.55|Crawl author is an opaque attribution field without proven owner-only read rights.
+1878|manual_review_required|0.55|Rule export projectId filter and author metadata do not verify tenant or owner access.
+1881|manual_review_required|0.55|Action update has channel/function identifiers without a caller ownership binding.
+1884|manual_review_required|0.55|Adding a channel user returns target userId, not the actor authorized to manage channel membership.
+1887|manual_review_required|0.55|Company board-member companyId identifies the researched business, not an application tenant.
+1890|manual_review_required|0.55|Company registry overview companyId is a subject identifier, not verified caller tenancy; public access is unstated.
+1893|manual_review_required|0.55|Test created_by is provenance and bucket-level shared access is unresolved by inferred fields.
+1896|manual_review_required|0.55|Team integrations return data/meta only without verified team membership or tenant lookup.
+1899|manual_review_required|0.55|District search uses appID/appKey without a concrete tier or affirmative unrestricted-access rule.
+1902|manual_review_required|0.55|Processed document analysis has job/config identifiers without document-owner authorization evidence.
+1905|manual_review_required|0.55|Artist reference record has no substantive access statement; unknown security does not establish public access.
+1908|manual_review_required|0.55|Setlist-version metadata contains no affirmative unrestricted-access or caller-policy statement.
+1911|manual_review_required|0.55|User-edited setlists describe edit history without a self-only or explicit public read rule.
+1914|manual_review_required|0.55|Property ownerName is real-estate ownership and privateRemarks may be restricted; API caller authorization is unspecified.
+1917|manual_review_required|0.55|Anonymization key values expose sensitive mapping context without an allowed caller or owner relationship.
+1920|manual_review_required|0.55|Import-session userId suggests initiator identity but verified session ownership and read policy are absent.
+1923|manual_review_required|0.55|Project owner path identifies a namespace but project fields lack a verified caller owner or tenant lookup.
+1926|manual_review_required|0.55|Template comments user attribution does not determine reader rights to the owner-nested template.
+1929|manual_review_required|0.55|Tax settlement filters identify tax entities without a verified caller authorization relationship.
+1932|manual_review_required|0.55|Transaction customer_id and sub_account_id represent financial actors without specifying who may confirm it.
+1935|manual_review_required|0.55|Message customerid suggests account scope but id/messageid ambiguity and caller-customer mapping remain unverified.
+1938|manual_review_required|0.55|Series episode summary requires JWT without an evidenced public or concrete membership policy.
+1941|manual_review_required|0.55|Strategy-builder rule retrieval has generic secured authentication without a caller role or ownership rule.
+1944|manual_review_required|0.55|Trading account orders expose account data but no verified caller account binding.
+1947|manual_review_required|0.55|Command accountid and computer fields do not establish caller ownership or administrative authority.
+1950|manual_review_required|0.55|Latest feed download uses key query but lacks a specified access tier or unrestricted-access declaration.
+1953|manual_review_required|0.55|Route audit history returns pagination/results without a route-owner or allowed-role policy.
+1956|manual_review_required|0.55|API-definition org_id and gateway authentication settings describe managed API configuration, not caller management authorization.
+1959|manual_review_required|0.55|Creating a custom API token returns key/status but no authorized caller role or owner binding.
+1962|manual_review_required|0.55|Invitation group, inviter and target user imply multiple actors without a defined deletion rule.
+1965|manual_review_required|0.55|Comment user is opaque and no verified author lookup or moderator alternative is documented for deletion.
+1968|manual_review_required|0.55|Event owner_id describes event ownership without establishing owner-only reading or verified lookup.
+1971|manual_review_required|0.55|Map visibility and owner_id imply conditional sharing, not a demonstrated uniform owner-only read policy.
+1974|manual_review_required|0.55|Map attachment user describes uploaded content; map-level upload rights and owner binding are unspecified.
+1977|manual_review_required|0.55|Member retrieval supplies only opaque member data with no self/admin/public authorization rule.
+1980|manual_review_required|0.55|Scheduled override team/user assignments describe duty subjects, not authorization to inspect the assignment.
+1983|manual_review_required|0.55|Override assignment update has team/user fields without an allowed scheduler role or verified tenant lookup.
+1986|manual_review_required|0.55|User contact-device update lacks a verified device-to-caller ownership relation; api-public names an API surface only.
+1989|manual_review_required|0.55|User contact-phone deletion has no owner lookup or authorized administrator evidence.
+1992|manual_review_required|0.55|Presence analytics requires accessKey/secretKey but no stream-owner mapping or concrete caller role.
+1995|manual_review_required|0.55|Webscan metrics use API authentication without scan owner or tenant evidence.
+1998|manual_review_required|0.55|Site update secret/admin URL fields are target credentials, not a caller administrator role or ownership proof.
+2001|manual_review_required|0.55|Continuing a site backup exposes target credentials/state without caller ownership or role authorization.
+2004|manual_review_required|0.55|New website log userid records an actor, not proof the caller owns idx_site or may create logs there.
+2007|manual_review_required|0.55|Site-debug log userid is event attribution without a verified reader-to-site authorization relation.
+2010|manual_review_required|0.55|Air-quality coordinates and key query do not specify an unrestricted endpoint or concrete subscription tier.
+2013|manual_review_required|0.55|Document-reference lookup exposes title/URI without affirmative unrestricted access or owner rules.
+2016|manual_review_required|0.55|Live-stream infrastructure metrics require keys but no verified stream-owner or permitted role.
+2019|manual_review_required|0.55|Catalog article product fields do not explicitly declare unrestricted API access.
+2022|manual_review_required|0.55|User update contains company/userId but does not establish self-service versus administrator access or verified identity binding.
+2025|manual_review_required|0.55|Marking a message unread operates on user-specific state but message fields lack a caller-owner lookup.

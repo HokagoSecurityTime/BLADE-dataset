@@ -1,0 +1,12 @@
+split,security_state,N,public,role_required,membership_required,tenant_match,owner_match,owner_or_admin,manual_review_required
+train_v1,declared,339,0,102,25,32,122,1,57
+train_v1,explicitly_anonymous,4,4,0,0,0,0,0,0
+train_v1,unknown,128,23,10,4,8,12,10,61
+val_v1,declared,38,0,18,1,3,12,0,4
+val_v1,explicitly_anonymous,2,2,0,0,0,0,0,0
+val_v1,unknown,12,1,2,0,0,0,0,9
+test_v30,declared,64,17,8,0,2,31,2,4
+test_v30,unknown,205,49,43,4,6,83,9,11
+train_v2_draft,declared,710,12,139,33,32,158,1,335
+train_v2_draft,explicitly_anonymous,4,4,0,0,0,0,0,0
+train_v2_draft,unknown,257,31,22,22,20,24,31,107

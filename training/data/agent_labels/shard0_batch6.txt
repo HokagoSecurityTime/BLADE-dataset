@@ -1,0 +1,50 @@
+660|manual_review_required|0.55|Device userId filter and authentication lack a device-owner lookup in the result envelope.
+663|manual_review_required|0.55|Checkout-field update gives configuration metadata without caller-role or owner requirements.
+666|manual_review_required|0.55|Customer-category results contain customer identity data but no caller relation or public rule.
+669|manual_review_required|0.55|Publicly-accessible tag conflicts with bearer and tenant checkout mutation; object authorization cannot be inferred.
+672|manual_review_required|0.55|Publicly-accessible delivery API tag does not prove arbitrary callers may mutate an identified order's location state.
+675|manual_review_required|0.55|Realm client-scope update requires access_token without a concrete administrative role or tenant binding.
+678|manual_review_required|0.55|Client authorization-permission configuration lacks an evidenced caller role or realm ownership relationship.
+681|manual_review_required|0.55|Child allowance query identifies kidUserId without specifying parental versus self access or lookup relation.
+684|manual_review_required|0.55|Customer branch CompanyName is address metadata, not a verified tenant identifier.
+687|manual_review_required|0.55|Diary company branch details have OID and CompanyName without a caller organization binding.
+690|manual_review_required|0.55|Project deletion has a project id but no verified caller tenant relation or ownership requirement.
+693|manual_review_required|0.55|Project query-job results contain flattened project information without a verified authorized tenant lookup.
+696|manual_review_required|0.55|OAuth client update uses account read_write permission, not a concrete role or verified account-owner relation.
+699|manual_review_required|0.55|RapidAPI-authenticated image retrieval supplies no owner or affirmative public policy.
+702|manual_review_required|0.55|Podcast search filters and paginated results do not affirm unrestricted access; security is unspecified.
+705|manual_review_required|0.55|Collective-action messages return an envelope without action-owner or provider-role evidence.
+708|manual_review_required|0.55|Bulk status user_id suggests initiator identity but bulk_id lookup and caller authority remain unverified.
+711|manual_review_required|0.55|Bundle-product option retrieval supplies no affirmative unrestricted-access or caller authorization rule.
+714|manual_review_required|0.55|Mine-cart gift-message mutation is self-scoped, but itemId cannot be reliably bound to customer_id in the flattened message schema.
+717|manual_review_required|0.55|Global auth config contains admin credentials as data, not a specified caller administrator role.
+720|manual_review_required|0.55|Exporter location includes teams and tenant but the flattened relation does not verify caller tenancy.
+723|manual_review_required|0.55|Pausing workflow emails returns problem fields without workflow-owner or role authorization evidence.
+726|manual_review_required|0.55|Address key createdBy records provenance while read/write fields do not specify caller access conditions.
+729|manual_review_required|0.55|Account profile has privacy/locked flags and bearer authentication but no clear self-only or public reading policy.
+732|manual_review_required|0.55|Following another account acts on a relationship, not ownership of the target account; relationship owner lookup is absent.
+735|manual_review_required|0.55|Identity-proof provider fields are external identity metadata, not tenant ownership or an explicit public-access rule.
+738|manual_review_required|0.55|Private note belongs to a caller-target relationship, but the route id identifies the target and no note-owner binding is supplied.
+741|manual_review_required|0.55|Unblock route and Block summary conflict, and relationship-level authorization cannot be represented by target-account ownership.
+744|manual_review_required|0.55|Annotation createdBy expresses scientific provenance rather than a demonstrated owner-only read condition.
+747|manual_review_required|0.55|Ontology annotation creators are provenance data; neither public access nor caller ownership is explicitly established.
+750|manual_review_required|0.55|Ontology gene listing contains scientific identifiers without affirmative unrestricted-access evidence.
+753|manual_review_required|0.55|Article-fan list gives voters/count but no stated public or caller-specific access rule.
+756|manual_review_required|0.55|Newsletter creator_id indicates attribution without a verified creator-only retrieval rule.
+759|manual_review_required|0.55|User followers retrieval lacks explicit public or self-only authorization evidence.
+762|manual_review_required|0.55|Network update requires API authentication without an organization or owner binding.
+765|manual_review_required|0.55|Network-client user is device context, not proof of caller ownership over network telemetry.
+768|manual_review_required|0.55|Filter-file user_id suggests ownership, but the inferred id/user relation lacks verified lookup or access semantics.
+771|manual_review_required|0.55|User profile results return a paging envelope with no verified profile ownership mapping.
+774|manual_review_required|0.55|Import-job start has user scope, which is a token permission rather than a demonstrated application role.
+777|manual_review_required|0.55|Test-result user scope does not establish test ownership or a concrete caller role requirement.
+780|manual_review_required|0.55|Project prediction without storage supplies a Project field but no caller tenant binding.
+783|manual_review_required|0.55|API-key project image classification lacks a verified project-to-caller tenant relationship.
+786|manual_review_required|0.55|Texture account/accountId and private flag do not establish unrestricted access or a verified owner binding.
+789|manual_review_required|0.55|Installer organization device profiles expose only id/name, insufficient for tenant authorization lookup.
+792|manual_review_required|0.55|Device provision role is a device attribute; organization/site paths do not verify caller role or tenancy.
+795|manual_review_required|0.55|Organization security-policy listing has id/name only without a verified caller organization relationship.
+798|manual_review_required|0.55|Site org_id suggests tenancy, but create/update by site_name has no verified caller tenant binding or key relation.
+801|manual_review_required|0.55|Map org_id and site_id suggest nested tenancy but map_id/id flattening leaves lookup and caller relationship unverified.
+804|manual_review_required|0.55|Case model associations expose scientific search results without an affirmative public-access statement.
+807|manual_review_required|0.55|Project-document quote requires default scope but returns project envelope without tenant ownership evidence.

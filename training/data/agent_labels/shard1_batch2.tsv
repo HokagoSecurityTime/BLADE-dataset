@@ -1,0 +1,50 @@
+151	manual_review_required	0.55	Master-brand listing uses an API key and heterogeneous media metadata without an explicit unrestricted-access policy.
+154	manual_review_required	0.55	Programme metadata includes embargo and availability fields; API-key authentication does not resolve access restrictions.
+157	manual_review_required	0.55	Broadcast service metadata has API-key security but no affirmative unrestricted access or caller-policy statement.
+160	manual_review_required	0.55	Raw episode retrieval includes embargo and publication-rights metadata without a stated object authorization policy.
+163	manual_review_required	0.50	Order accountId is both a path and response field but its personal-versus-tenant meaning and caller binding remain unspecified.
+166	manual_review_required	0.50	Order history uses accountId context but only history wrappers in ERD and unknown security.
+169	manual_review_required	0.50	Changing a marketplace order refers to your order but the only errors column supplies no account ownership lookup.
+172	manual_review_required	0.50	Webhook id_user is inferred; Administration tag alone does not establish a required admin role.
+175	manual_review_required	0.50	Review Poster and UserID describe response authorship without a stated owner-only update rule or verified binding.
+178	manual_review_required	0.55	Summary explicitly forbids reading another owner's recipe, but flattened Poster/UserID and RecipeID in inferred steps do not verify the lookup binding.
+181	manual_review_required	0.50	Adding a recipe note exposes UserID in response data but neither ownership semantics nor lookup binding is specified.
+184	manual_review_required	0.50	Cash-payment update has financial identifiers but unknown security and no caller authorization relation.
+187	manual_review_required	0.50	Customer ledger data includes account fields without identifying the authenticated caller's ownership or tenancy.
+190	manual_review_required	0.50	Customer opening-balance retrieval has only monetary response fields and unknown authorization.
+193	manual_review_required	0.50	Payment update includes bank and supplier identifiers but no owner or tenant authorization evidence.
+196	manual_review_required	0.50	CustomerId and Company in an address response do not prove that the API caller owns that customer record.
+199	manual_review_required	0.50	Customer-by-id retrieval has no verified subject key or authentication requirements.
+202	manual_review_required	0.50	Adding a customer address exposes CustomerId but no verified caller-to-customer authorization relation.
+205	manual_review_required	0.50	Order creation in a Billbee account has flattened buyer and customer data but no defined caller access rule.
+208	manual_review_required	0.55	Document organization is billing metadata, not verified tenant identity or database lookup evidence.
+211	manual_review_required	0.55	Document tax-submission status requires an API key but the response has no ownership mapping.
+214	manual_review_required	0.55	repository:admin is an OAuth permission rather than a proved application role or administrator bypass.
+217	manual_review_required	0.55	Commit-comment user is inferred authorship metadata; repository scope does not prove owner-only mutation.
+220	manual_review_required	0.50	Commit report reporter is descriptive and security is unknown, leaving access policy unresolved.
+223	manual_review_required	0.50	Bulk report-annotation mutation has workspace context but no tenant lookup or explicit role policy.
+226	manual_review_required	0.55	Commit build-status retrieval has repository authentication alternatives but no specified object authorization.
+229	manual_review_required	0.55	Transit arrival lookup requires an API key; public-looking transit data alone does not prove unrestricted API access.
+232	manual_review_required	0.50	Container-group inspection has unknown security and no owner or tenant columns.
+235	manual_review_required	0.55	Export status includes username and project_slug in the path but no verified caller or tenant binding in job fields.
+238	manual_review_required	0.55	Collaboration role and created_by fields describe a resource and do not specify the calling user's required role.
+241	manual_review_required	0.55	Comment created_by identifies possible authorship, not a verified owner-only read policy or lookup.
+244	manual_review_required	0.55	Enterprise device-pin listing has OAuth security but pagination-only ERD cannot resolve tenant or admin authorization.
+247	manual_review_required	0.55	Sanctions-report retrieval uses a user key but report ownership is absent from supplied data.
+250	manual_review_required	0.55	Product provider is supplier metadata rather than a proved tenant field; user-key authentication gives no policy.
+253	manual_review_required	0.55	Sending SMS uses Basic authentication without a concrete role, membership tier or object-owner requirement.
+256	manual_review_required	0.55	Webhook update includes contactEmailAddress but no verified ownership relationship or caller policy.
+259	manual_review_required	0.55	Leaderboard summary references signed-in friends, while membershipType is a game identifier rather than a required subscription tier.
+262	manual_review_required	0.55	Team-member user retrieval exposes admin flags but neither a verified subject key nor an admin-only policy.
+265	manual_review_required	0.55	Call-recording retrieval uses Basic authentication without any supplied call owner binding.
+268	manual_review_required	0.50	NFT owner is blockchain ownership data, not caller authorization, and API security is unknown.
+271	manual_review_required	0.50	Polygon NFT-owner lookup has unknown API access requirements; on-chain owner does not identify the authorized caller.
+274	manual_review_required	0.50	Tron account balance query lacks explicit unrestricted-access evidence despite its blockchain resource identifiers.
+277	manual_review_required	0.55	Conversation creator and tenant fields are inferred; WRITE and MANAGE scopes do not establish admin or owner permissions.
+280	manual_review_required	0.55	Group-participant removal has OAuth permission scopes but no verified owner or tenant rule.
+283	manual_review_required	0.55	Message creatorId describes authorship; READ_CONVERSATIONS does not establish owner-only message access.
+286	manual_review_required	0.55	Conversation-item listing supplies creatorId on items but no caller-to-conversation authorization relation.
+289	manual_review_required	0.50	Organization update has an inferred id without verified tenant binding or specified security.
+292	manual_review_required	0.50	Organization addon-provider update has provider metadata but no proved organization authorization rule.
+295	manual_review_required	0.50	Organization addon-plan listing exposes prices, not required caller membership tiers, and security is unknown.
+298	manual_review_required	0.50	Organization plan update has no verified tenant lookup or required role evidence.

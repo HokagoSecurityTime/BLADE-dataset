@@ -1,0 +1,22 @@
+{
+  "current_train": {
+    "records": 764,
+    "excluded_unique": 177,
+    "reasons": {
+      "human_error_above_20_percent_low_band": 73,
+      "public_declared": 123,
+      "api_owner_or_admin": 11,
+      "membership_below_0.9": 6
+    }
+  },
+  "full_v5": {
+    "records": 2027,
+    "excluded_unique": 216,
+    "reasons": {
+      "public_declared": 154,
+      "human_error_above_20_percent_low_band": 82,
+      "api_owner_or_admin": 12,
+      "membership_below_0.9": 6
+    }
+  }
+}

@@ -1,0 +1,50 @@
+601	manual_review_required	0.50	Key details have user_token input but limits and purchase metadata do not establish caller ownership or membership authorization.
+604	manual_review_required	0.55	Hotel rate-plan listing requires an API key and provides no affirmative unrestricted-access evidence.
+607	manual_review_required	0.55	Account-number account_id is inferred without a verified caller-account relation or personal-versus-tenant distinction.
+610	manual_review_required	0.55	Transfer approval exposes account and approval metadata but no required role or verified ownership lookup.
+613	manual_review_required	0.55	Bank account update has entity_id but no supplied caller identity mapping or verified tenant binding.
+616	manual_review_required	0.50	Authorization listing can filter by user or org but only wrapper fields are available to establish access policy.
+619	manual_review_required	0.50	Authorization update has both orgID and userID with opaque permissions and no verified choice of authorization subject.
+622	manual_review_required	0.50	Bucket orgID, owners and members indicate multiple access relationships without a verified lookup or specified policy.
+625	manual_review_required	0.50	Removing a bucket member has user path context but only error-response columns and unknown security.
+628	manual_review_required	0.55	Key-value mutation has authentication alternatives but no supplied ownership, tenant or role requirement.
+631	manual_review_required	0.55	Brokerage order modification is account-scoped but returned order fields do not establish caller-account authorization.
+634	manual_review_required	0.55	Channel analytics posts expose facilitator and moderator metadata without defining the caller's required role or object access.
+637	manual_review_required	0.55	Account managing_account is an inferred relationship with no verified caller mapping for update authorization.
+640	manual_review_required	0.55	Contact consuming_account and managing_account are competing account relationships with unspecified authorization semantics.
+643	manual_review_required	0.55	Organization category listing has only a categories wrapper, insufficient for a verified tenant lookup.
+646	manual_review_required	0.55	Organization discounts require READ:PRODUCT but discount fields lack a verified organization-to-caller binding.
+649	manual_review_required	0.55	Discount update uses WRITE:PRODUCT permission, not a caller role, and supplies no tenant lookup relation.
+652	manual_review_required	0.55	Import status has organization path context but no organization field in the inferred status record.
+655	manual_review_required	0.55	Products visible in POS are not necessarily unrestricted API resources; organization authorization is unspecified.
+658	manual_review_required	0.55	Similar-artist lookup uses CustomAuthentication and userId filtering without a specific object authorization rule.
+661	manual_review_required	0.55	Device UserId and LastUserId are ambiguous inferred device metadata, not a verified ownership lookup.
+664	manual_review_required	0.50	Custom-field retrieval has unknown security and no affirmative unrestricted-access or caller-policy evidence.
+667	manual_review_required	0.50	Adding customers to a category exposes customer data but no caller role or verified account ownership relationship.
+670	manual_review_required	0.55	Publicly-accessible tag conflicts with unresolved checkout and tenant object context; available-time fields cannot establish unrestricted authorization.
+673	manual_review_required	0.55	Publicly-accessible tag does not prove arbitrary callers may change delivery state for an order; no object authorization evidence is supplied.
+676	manual_review_required	0.55	Client-scope roles are objects being changed, not a demonstrated caller role; realm-to-caller authorization is unresolved.
+679	manual_review_required	0.50	Payment-session customer and merchant data are flattened and security is unknown, leaving ownership binding ambiguous.
+682	manual_review_required	0.55	User-list isAdmin filter is not an administrator requirement; auth-key security alone does not select a supported policy.
+685	manual_review_required	0.50	Appointment CreatedBy is provenance alongside Staff and LinkedGuest, not a verified owner-only access relationship.
+688	manual_review_required	0.55	Analysis project is descriptive response data without a verified tenant relationship to the access-token caller.
+691	manual_review_required	0.55	Project retrieval has inferred id but no verified tenant primary key or caller-project authorization mapping.
+694	manual_review_required	0.55	Account-event username identifies possible activity provenance rather than a verified event-owner authorization relation.
+697	manual_review_required	0.55	OAuth-client secret reset has account permissions but no caller-owner binding; public is a client attribute.
+700	manual_review_required	0.50	Curated podcast metadata lacks affirmative unrestricted-access evidence despite public-looking content.
+703	manual_review_required	0.50	Benefit-in-kind deletion has employer context but unknown security and wrapper-only response data.
+706	manual_review_required	0.50	Concept employee detail exposes personal information without any supplied caller authorization relationship.
+709	manual_review_required	0.50	Bundle-product option update has unknown security and no ownership or caller role evidence.
+712	manual_review_required	0.50	Guest-cart gift-card mutation is not inherently unrestricted; supplied fields lack cart authorization semantics.
+715	manual_review_required	0.50	Cart response mixes customer_id, company_id and creator_id without verified keys or a clear individual-versus-tenant policy.
+718	manual_review_required	0.55	Global auth-module adminUsername configures an upstream account rather than proving the API caller requires admin role.
+721	manual_review_required	0.55	Data-exporter tenant and teams fields are inferred location metadata, not a verified caller authorization relationship.
+724	manual_review_required	0.55	Starting automation emails requires Basic authentication but only generic result fields describe the response.
+727	manual_review_required	0.55	Address-key createdBy is provenance and read/write booleans do not establish the caller's ownership rule.
+730	manual_review_required	0.55	Blocking another account changes a caller relationship, not ownership of the target account, and no supported lookup is provided.
+733	manual_review_required	0.55	Follower visibility depends on account-owner settings, so bearer authentication and account ID do not imply public or owner-only access.
+736	manual_review_required	0.55	Summary limits lists to those the caller created, but lists lack an owner field and the path identifies another account.
+739	manual_review_required	0.55	Featuring an account on a public profile is an authenticated mutation, not unrestricted access to the target account.
+742	manual_review_required	0.55	Unfollowing an account changes a caller relationship and does not establish ownership of the target account object.
+745	manual_review_required	0.50	Annotation createdBy is scientific provenance rather than caller ownership; security remains unknown.
+748	manual_review_required	0.50	Gene lookup has scientific identifiers but no affirmative unrestricted API-access statement.

@@ -1,0 +1,651 @@
+﻿id,source,method,path,security_state,핸들러 코드(전체),OAS operation 발췌,현재 label,label_before_override,사유 분류,모델 rationale 원문,reviewer_label,reviewer_confidence,reviewer_note
+gitea:get:/gitignore/templates,opensource,GET,/gitignore/templates,declared,"// ---- route middleware chain (api.go): sudo()
+
+// sudo(): site admins may impersonate another user via ?sudo=; non-admins get 403 only when they try to sudo. Not an authorization rule for the endpoint.
+
+// ---- handler misc.ListGitignoresTemplates (routers/api/v1/misc/gitignore.go:17-27)
+func ListGitignoresTemplates(ctx *context.APIContext) {
+	ctx.JSON(http.StatusOK, repo_module.Gitignores)
+}","{
+ ""summary"": ""Returns a list of all gitignore templates"",
+ ""operationId"": ""listGitignoresTemplates""
+}",public,,declared ∧ public (override 없음),"description: 핸들러가 인증 없이 모든 gitignore 템플릿을 반환하며, 인증이 필요한 조건이 명시되지 않음; 판단: 익명 접근이 허용되는 긍정 근거가 있어 public 선택",,,
+gitea:get:/orgs,opensource,GET,/orgs,declared,"// ---- route middleware chain (api.go): sudo(), tokenRequiresScopes(auth_model.AccessTokenScopeCategoryOrganization)
+
+// sudo(): site admins may impersonate another user via ?sudo=; non-admins get 403 only when they try to sudo. Not an authorization rule for the endpoint.
+
+// tokenRequiresScopes(category): OAuth2/access-token scope check (read for GET, write for mutations). Not a user-object relationship check.
+
+// ---- handler org.GetAll (routers/api/v1/org/org.go:192-243)
+func GetAll(ctx *context.APIContext) {
+
+	vMode := []api.VisibleType{api.VisibleTypePublic}
+	if ctx.IsSigned {
+		vMode = append(vMode, api.VisibleTypeLimited)
+		if ctx.Doer.IsAdmin {
+			vMode = append(vMode, api.VisibleTypePrivate)
+		}
+	}
+
+	listOptions := utils.GetListOptions(ctx)
+
+	searchOpts := user_model.SearchUserOptions{
+		Actor:       ctx.Doer,
+		ListOptions: listOptions,
+		Types:       []user_model.UserType{user_model.UserTypeOrganization},
+		OrderBy:     db.SearchOrderByAlphabetically,
+		Visible:     vMode,
+	}
+	searchOpts.ApplyPublicOnly(ctx.PublicOnly)
+
+	// ...
+}","{
+ ""summary"": ""Get list of organizations"",
+ ""operationId"": ""orgGetAll"",
+ ""parameters"": [
+  {
+   ""name"": ""page"",
+   ""in"": ""query"",
+   ""required"": null
+  },
+  {
+   ""name"": ""limit"",
+   ""in"": ""query"",
+   ""required"": null
+  }
+ ]
+}",public,,declared ∧ public (override 없음),"description: 핸들러가 인증된 사용자에게도 공개된 조직 목록을 반환하며, 비관리자는 sudo 시도 시에만 403을 받음; 판단: 인증 없이 접근 가능한 조직 목록을 제공하므로 public 선택",,,
+gitea:get:/repos/{owner}/{repo}/actions/workflows/{workflow_id},opensource,GET,/repos/{owner}/{repo}/actions/workflows/{workflow_id},declared,"// ---- route middleware chain (api.go): sudo(), tokenRequiresScopes(auth_model.AccessTokenScopeCategoryRepository), repoAssignment(), checkTokenPublicOnly(), context.ReferencesGitRepo(), reqToken(), reqRepoReader(unit.TypeActions)
+
+// sudo(): site admins may impersonate another user via ?sudo=; non-admins get 403 only when they try to sudo. Not an authorization rule for the endpoint.
+
+// tokenRequiresScopes(category): OAuth2/access-token scope check (read for GET, write for mutations). Not a user-object relationship check.
+
+// repoAssignment() (api.go): resolves {username}/{reponame}; computes ctx.Repo.Permission = access_model.GetUserRepoPermission(doer, repo); anonymous or unauthorized doer on a private repo -> 404; public repo readable by anyone.
+
+// checkTokenPublicOnly(): tokens restricted to public-only may not access private resources.
+
+// context.ReferencesGitRepo(): opens the git repository for ctx.Repo; no authorization.
+
+// reqToken(): authentication only — the request must be signed in with a token (401 otherwise). No authorization.
+
+func reqRepoReader(unitType unit.Type) func(ctx *context.APIContext) {
+	return func(ctx *context.APIContext) {
+		if !ctx.Repo.Permission.CanRead(unitType) && !ctx.IsUserRepoAdmin() && !ctx.IsUserSiteAdmin() {
+			ctx.APIError(http.StatusForbidden, ""user should have specific read permission or be a repo admin or a site admin"")
+			return
+		}
+	}
+}
+
+// ---- handler repo.ActionsGetWorkflow (routers/api/v1/repo/action.go:903-951)
+func ActionsGetWorkflow(ctx *context.APIContext) {
+
+	workflowID := ctx.PathParam(""workflow_id"")
+	workflow, err := convert.GetActionWorkflow(ctx, ctx.Repo.GitRepo, ctx.Repo.Repository, workflowID)
+	if err != nil {
+		if errors.Is(err, util.ErrNotExist) {
+			ctx.APIError(http.StatusNotFound, err.Error())
+		} else {
+			ctx.APIErrorInternal(err)
+		}
+		return
+	}
+
+	ctx.JSON(http.StatusOK, workflow)
+}","{
+ ""summary"": ""Get a workflow"",
+ ""operationId"": ""ActionsGetWorkflow"",
+ ""parameters"": [
+  {
+   ""name"": ""owner"",
+   ""in"": ""path"",
+   ""required"": true
+  },
+  {
+   ""name"": ""repo"",
+   ""in"": ""path"",
+   ""required"": true
+  },
+  {
+   ""name"": ""workflow_id"",
+   ""in"": ""path"",
+   ""required"": true
+  }
+ ]
+}",public,,declared ∧ public (override 없음),description: public repo readable by anyone; 판단: 인증 없이도 접근 가능한 공개 리포지토리의 긍정 근거가 코드에 있어 public 선택,,,
+gitea:get:/repos/{owner}/{repo}/collaborators,opensource,GET,/repos/{owner}/{repo}/collaborators,declared,"// ---- route middleware chain (api.go): sudo(), tokenRequiresScopes(auth_model.AccessTokenScopeCategoryRepository), repoAssignment(), checkTokenPublicOnly(), reqToken(), reqAnyRepoReader()
+
+// sudo(): site admins may impersonate another user via ?sudo=; non-admins get 403 only when they try to sudo. Not an authorization rule for the endpoint.
+
+// tokenRequiresScopes(category): OAuth2/access-token scope check (read for GET, write for mutations). Not a user-object relationship check.
+
+// repoAssignment() (api.go): resolves {username}/{reponame}; computes ctx.Repo.Permission = access_model.GetUserRepoPermission(doer, repo); anonymous or unauthorized doer on a private repo -> 404; public repo readable by anyone.
+
+// checkTokenPublicOnly(): tokens restricted to public-only may not access private resources.
+
+// reqToken(): authentication only — the request must be signed in with a token (401 otherwise). No authorization.
+
+func reqAnyRepoReader() func(ctx *context.APIContext) {
+	return func(ctx *context.APIContext) {
+		if !ctx.Repo.Permission.HasAnyUnitAccess() && !ctx.IsUserSiteAdmin() {
+			ctx.APIError(http.StatusForbidden, ""user should have any permission to read repository or permissions of site admin"")
+			return
+		}
+	}
+}
+
+// ---- handler repo.ListCollaborators (routers/api/v1/repo/collaborators.go:27-74)
+func ListCollaborators(ctx *context.APIContext) {
+
+	collaborators, total, err := repo_model.GetCollaborators(ctx, &repo_model.FindCollaborationOptions{
+		ListOptions: utils.GetListOptions(ctx),
+		RepoID:      ctx.Repo.Repository.ID,
+	})
+	if err != nil {
+		ctx.APIErrorInternal(err)
+		return
+	}
+
+	users := make([]*api.User, len(collaborators))
+	for i, collaborator := range collaborators {
+		users[i] = convert.ToUser(ctx, collaborator.User, ctx.Doer)
+	}
+
+	ctx.SetTotalCountHeader(total)
+	ctx.JSON(http.StatusOK, users)
+}","{
+ ""summary"": ""List a repository's collaborators"",
+ ""operationId"": ""repoListCollaborators"",
+ ""parameters"": [
+  {
+   ""name"": ""owner"",
+   ""in"": ""path"",
+   ""required"": true
+  },
+  {
+   ""name"": ""repo"",
+   ""in"": ""path"",
+   ""required"": true
+  },
+  {
+   ""name"": ""page"",
+   ""in"": ""query"",
+   ""required"": null
+  },
+  {
+   ""name"": ""limit"",
+   ""in"": ""query"",
+   ""required"": null
+  }
+ ]
+}",public,,declared ∧ public (override 없음),description: public repo readable by anyone; 판단: 공개 리포지토리는 인증 없이 접근 가능하므로 public 선택,,,
+gitea:get:/repos/{owner}/{repo}/keys,opensource,GET,/repos/{owner}/{repo}/keys,declared,"// ---- route middleware chain (api.go): sudo(), tokenRequiresScopes(auth_model.AccessTokenScopeCategoryRepository), repoAssignment(), checkTokenPublicOnly(), reqToken(), reqAdmin()
+
+// sudo(): site admins may impersonate another user via ?sudo=; non-admins get 403 only when they try to sudo. Not an authorization rule for the endpoint.
+
+// tokenRequiresScopes(category): OAuth2/access-token scope check (read for GET, write for mutations). Not a user-object relationship check.
+
+// repoAssignment() (api.go): resolves {username}/{reponame}; computes ctx.Repo.Permission = access_model.GetUserRepoPermission(doer, repo); anonymous or unauthorized doer on a private repo -> 404; public repo readable by anyone.
+
+// checkTokenPublicOnly(): tokens restricted to public-only may not access private resources.
+
+// reqToken(): authentication only — the request must be signed in with a token (401 otherwise). No authorization.
+
+func reqAdmin() func(ctx *context.APIContext) {
+	return func(ctx *context.APIContext) {
+		if !ctx.IsUserRepoAdmin() && !ctx.IsUserSiteAdmin() {
+			ctx.APIError(http.StatusForbidden, ""user should be an owner or a collaborator with admin write of a repository"")
+			return
+		}
+	}
+}
+
+// ---- handler repo.ListDeployKeys (routers/api/v1/repo/key.go:43-105)
+func ListDeployKeys(ctx *context.APIContext) {
+
+	opts := deploykey_model.ListDeployKeysOptions{
+		ListOptions: utils.GetListOptions(ctx),
+		RepoID:      ctx.Repo.Repository.ID,
+		KeyID:       ctx.FormInt64(""key_id""),
+		Fingerprint: ctx.FormString(""fingerprint""),
+	}
+
+	keys, count, err := db.FindAndCount[deploykey_model.DeployKey](ctx, opts)
+	if err != nil {
+		ctx.APIErrorInternal(err)
+		return
+	}
+
+	apiDeployKeys := make([]*api.DeployKey, len(keys))
+	for i := range keys {
+		apiDeployKeys[i] = convert.ToDeployKey(ctx, ctx.Repo.Repository, keys[i])
+		if ctx.Doer.IsAdmin || ((ctx.Repo.Repository.ID == keys[i].RepoID) && (ctx.Doer.ID == ctx.Repo.Owner.ID)) {
+			apiDeployKeys[i], _ = appendPrivateInformation(ctx, apiDeployKeys[i], keys[i], ctx.Repo.Repository)
+		}
+	// ...
+}","{
+ ""summary"": ""List a repository's keys"",
+ ""operationId"": ""repoListKeys"",
+ ""parameters"": [
+  {
+   ""name"": ""owner"",
+   ""in"": ""path"",
+   ""required"": true
+  },
+  {
+   ""name"": ""repo"",
+   ""in"": ""path"",
+   ""required"": true
+  },
+  {
+   ""name"": ""key_id"",
+   ""in"": ""query"",
+   ""required"": null
+  },
+  {
+   ""name"": ""fingerprint"",
+   ""in"": ""query"",
+   ""required"": null
+  },
+  {
+   ""name"": ""page"",
+   ""in"": ""query"",
+   ""required"": null
+  },
+  {
+   ""name"": ""limit"",
+   ""in"": ""query"",
+   ""required"": null
+  }
+ ]
+}",public,,declared ∧ public (override 없음),description: public repo readable by anyone; 판단: 공개 리포지토리에 대한 접근이 인증 없이 가능하므로 public 선택,,,
+gitea:get:/repos/{owner}/{repo}/notifications,opensource,GET,/repos/{owner}/{repo}/notifications,declared,"// ---- route middleware chain (api.go): sudo(), tokenRequiresScopes(auth_model.AccessTokenScopeCategoryNotification), repoAssignment(), checkTokenPublicOnly(), reqToken()
+
+// sudo(): site admins may impersonate another user via ?sudo=; non-admins get 403 only when they try to sudo. Not an authorization rule for the endpoint.
+
+// tokenRequiresScopes(category): OAuth2/access-token scope check (read for GET, write for mutations). Not a user-object relationship check.
+
+// repoAssignment() (api.go): resolves {username}/{reponame}; computes ctx.Repo.Permission = access_model.GetUserRepoPermission(doer, repo); anonymous or unauthorized doer on a private repo -> 404; public repo readable by anyone.
+
+// checkTokenPublicOnly(): tokens restricted to public-only may not access private resources.
+
+// reqToken(): authentication only — the request must be signed in with a token (401 otherwise). No authorization.
+
+// ---- handler notify.ListRepoNotifications (routers/api/v1/notify/repo.go:47-132)
+func ListRepoNotifications(ctx *context.APIContext) {
+	opts := getFindNotificationOptions(ctx)
+	if ctx.Written() {
+		return
+	}
+	opts.RepoID = ctx.Repo.Repository.ID
+
+	totalCount, err := db.Count[activities_model.Notification](ctx, opts)
+	if err != nil {
+		ctx.APIErrorInternal(err)
+		return
+	}
+
+	nl, err := db.Find[activities_model.Notification](ctx, opts)
+	if err != nil {
+		ctx.APIErrorInternal(err)
+		return
+	}
+	err = activities_model.NotificationList(nl).LoadAttributes(ctx)
+	if err != nil {
+		ctx.APIErrorInternal(err)
+	// ...
+}","{
+ ""summary"": ""List users's notification threads on a specific repo"",
+ ""operationId"": ""notifyGetRepoList"",
+ ""parameters"": [
+  {
+   ""name"": ""owner"",
+   ""in"": ""path"",
+   ""required"": true
+  },
+  {
+   ""name"": ""repo"",
+   ""in"": ""path"",
+   ""required"": true
+  },
+  {
+   ""name"": ""all"",
+   ""in"": ""query"",
+   ""required"": null
+  },
+  {
+   ""name"": ""status-types"",
+   ""in"": ""query"",
+   ""required"": null
+  },
+  {
+   ""name"": ""subject-type"",
+   ""in"": ""query"",
+   ""required"": null
+  },
+  {
+   ""name"": ""since"",
+   ""in"": ""query"",
+   ""required"": null
+  },
+  {
+   ""name"": ""before"",
+   ""in"": ""query"",
+   ""required"": null
+  },
+  {
+   ""name"": ""page"",
+   ""in"": ""query"",
+   ""required"": null
+  },
+  {
+   ""name"": ""limit"",
+   ""in"": ""query"",
+   ""required"": null
+  }
+ ]
+}",public,,declared ∧ public (override 없음),description: public repo readable by anyone; 판단: 공개 리포지토리에 대한 접근이 인증 없이 가능하므로 public 선택,,,
+gitea:get:/repos/{owner}/{repo}/teams,opensource,GET,/repos/{owner}/{repo}/teams,declared,"// ---- route middleware chain (api.go): sudo(), tokenRequiresScopes(auth_model.AccessTokenScopeCategoryRepository), repoAssignment(), checkTokenPublicOnly(), reqToken(), reqAnyRepoReader()
+
+// sudo(): site admins may impersonate another user via ?sudo=; non-admins get 403 only when they try to sudo. Not an authorization rule for the endpoint.
+
+// tokenRequiresScopes(category): OAuth2/access-token scope check (read for GET, write for mutations). Not a user-object relationship check.
+
+// repoAssignment() (api.go): resolves {username}/{reponame}; computes ctx.Repo.Permission = access_model.GetUserRepoPermission(doer, repo); anonymous or unauthorized doer on a private repo -> 404; public repo readable by anyone.
+
+// checkTokenPublicOnly(): tokens restricted to public-only may not access private resources.
+
+// reqToken(): authentication only — the request must be signed in with a token (401 otherwise). No authorization.
+
+func reqAnyRepoReader() func(ctx *context.APIContext) {
+	return func(ctx *context.APIContext) {
+		if !ctx.Repo.Permission.HasAnyUnitAccess() && !ctx.IsUserSiteAdmin() {
+			ctx.APIError(http.StatusForbidden, ""user should have any permission to read repository or permissions of site admin"")
+			return
+		}
+	}
+}
+
+// ---- handler repo.ListTeams (routers/api/v1/repo/teams.go:18-59)
+func ListTeams(ctx *context.APIContext) {
+
+	if !ctx.Repo.Owner.IsOrganization() {
+		ctx.APIError(http.StatusMethodNotAllowed, ""repo is not owned by an organization"")
+		return
+	}
+
+	teams, err := organization.GetRepoTeams(ctx, ctx.Repo.Repository.OwnerID, ctx.Repo.Repository.ID)
+	if err != nil {
+		ctx.APIErrorInternal(err)
+		return
+	}
+
+	apiTeams, err := convert.ToTeams(ctx, teams, false)
+	if err != nil {
+		ctx.APIErrorInternal(err)
+		return
+	}
+
+	ctx.JSON(http.StatusOK, apiTeams)
+}","{
+ ""summary"": ""List a repository's teams"",
+ ""operationId"": ""repoListTeams"",
+ ""parameters"": [
+  {
+   ""name"": ""owner"",
+   ""in"": ""path"",
+   ""required"": true
+  },
+  {
+   ""name"": ""repo"",
+   ""in"": ""path"",
+   ""required"": true
+  }
+ ]
+}",public,,declared ∧ public (override 없음),description: public repo readable by anyone; 판단: 공개 리포지토리에 대한 접근이 인증 없이 가능하므로 public 선택,,,
+gitea:get:/repos/{owner}/{repo}/times,opensource,GET,/repos/{owner}/{repo}/times,declared,"// ---- route middleware chain (api.go): sudo(), tokenRequiresScopes(auth_model.AccessTokenScopeCategoryRepository), repoAssignment(), checkTokenPublicOnly(), mustEnableIssues, reqToken()
+
+// sudo(): site admins may impersonate another user via ?sudo=; non-admins get 403 only when they try to sudo. Not an authorization rule for the endpoint.
+
+// tokenRequiresScopes(category): OAuth2/access-token scope check (read for GET, write for mutations). Not a user-object relationship check.
+
+// repoAssignment() (api.go): resolves {username}/{reponame}; computes ctx.Repo.Permission = access_model.GetUserRepoPermission(doer, repo); anonymous or unauthorized doer on a private repo -> 404; public repo readable by anyone.
+
+// checkTokenPublicOnly(): tokens restricted to public-only may not access private resources.
+
+// mustEnableIssues: feature/unit enabled check (404 when the unit is disabled); not a caller check.
+
+// reqToken(): authentication only — the request must be signed in with a token (401 otherwise). No authorization.
+
+// ---- handler repo.ListTrackedTimesByRepository (routers/api/v1/repo/issue_tracked_time.go:462-577)
+func ListTrackedTimesByRepository(ctx *context.APIContext) {
+
+	if !ctx.Repo.Repository.IsTimetrackerEnabled(ctx) {
+		ctx.APIError(http.StatusBadRequest, ""time tracking disabled"")
+		return
+	}
+
+	opts := &issues_model.FindTrackedTimesOptions{
+		ListOptions:  utils.GetListOptions(ctx),
+		RepositoryID: ctx.Repo.Repository.ID,
+	}
+
+	// ...
+	qUser := ctx.FormTrim(""user"")
+	if qUser != """" {
+		user, err := user_model.GetUserByName(ctx, qUser)
+		if user_model.IsErrUserNotExist(err) {
+			ctx.APIError(http.StatusNotFound, err.Error())
+			return
+		} else if err != nil {
+			ctx.APIErrorInternal(err)
+			return
+	// ...
+	}
+
+	cantSetUser := !ctx.Doer.IsAdmin &&
+		opts.UserID != ctx.Doer.ID &&
+		!ctx.IsUserRepoWriter([]unit.Type{unit.TypeIssues})
+
+	if cantSetUser {
+		if opts.UserID == 0 {
+			opts.UserID = ctx.Doer.ID
+		} else {
+			ctx.APIError(http.StatusForbidden, ""query by user not allowed; not enough rights"")
+			return
+		}
+	// ...
+
+	ctx.SetTotalCountHeader(count)
+	ctx.JSON(http.StatusOK, convert.ToTrackedTimeList(ctx, ctx.Doer, trackedTimes))
+}","{
+ ""summary"": ""List a repo's tracked times"",
+ ""operationId"": ""repoTrackedTimes"",
+ ""parameters"": [
+  {
+   ""name"": ""owner"",
+   ""in"": ""path"",
+   ""required"": true
+  },
+  {
+   ""name"": ""repo"",
+   ""in"": ""path"",
+   ""required"": true
+  },
+  {
+   ""name"": ""user"",
+   ""in"": ""query"",
+   ""required"": null
+  },
+  {
+   ""name"": ""since"",
+   ""in"": ""query"",
+   ""required"": null
+  },
+  {
+   ""name"": ""before"",
+   ""in"": ""query"",
+   ""required"": null
+  },
+  {
+   ""name"": ""page"",
+   ""in"": ""query"",
+   ""required"": null
+  },
+  {
+   ""name"": ""limit"",
+   ""in"": ""query"",
+   ""required"": null
+  }
+ ]
+}",public,,declared ∧ public (override 없음),description: public repo readable by anyone; 판단: 인증 없이도 접근 가능한 공개 리포지토리의 긍정 근거가 코드에 있어 public 선택,,,
+gitea:get:/topics/search,opensource,GET,/topics/search,declared,"// ---- route middleware chain (api.go): sudo(), tokenRequiresScopes(auth_model.AccessTokenScopeCategoryRepository)
+
+// sudo(): site admins may impersonate another user via ?sudo=; non-admins get 403 only when they try to sudo. Not an authorization rule for the endpoint.
+
+// tokenRequiresScopes(category): OAuth2/access-token scope check (read for GET, write for mutations). Not a user-object relationship check.
+
+// ---- handler repo.TopicSearch (routers/api/v1/repo/topic.go:264-312)
+func TopicSearch(ctx *context.APIContext) {
+
+	opts := &repo_model.FindTopicOptions{
+		Keyword:     ctx.FormString(""q""),
+		ListOptions: utils.GetListOptions(ctx),
+	}
+
+	topics, total, err := db.FindAndCount[repo_model.Topic](ctx, opts)
+	if err != nil {
+		ctx.APIErrorInternal(err)
+		return
+	}
+
+	topicResponses := make([]*api.TopicResponse, len(topics))
+	for i, topic := range topics {
+		topicResponses[i] = convert.ToTopicResponse(topic)
+	}
+
+	ctx.SetTotalCountHeader(total)
+	ctx.JSON(http.StatusOK, api.TopicListResponse{
+		Topics: topicResponses,
+	// ...
+}","{
+ ""summary"": ""search topics via keyword"",
+ ""operationId"": ""topicSearch"",
+ ""parameters"": [
+  {
+   ""name"": ""q"",
+   ""in"": ""query"",
+   ""required"": true
+  },
+  {
+   ""name"": ""page"",
+   ""in"": ""query"",
+   ""required"": null
+  },
+  {
+   ""name"": ""limit"",
+   ""in"": ""query"",
+   ""required"": null
+  }
+ ]
+}",public,,declared ∧ public (override 없음),description: 핸들러가 인증·인가 검사 없이 객체를 반환한다; 판단: 익명 허용의 긍정 근거가 코드에 있어 public 선택,,,
+gitea:get:/user/keys,opensource,GET,/user/keys,declared,"// ---- route middleware chain (api.go): sudo(), tokenRequiresScopes(auth_model.AccessTokenScopeCategoryUser), reqToken(), contextAuthenticatedUser(), checkTokenPublicOnly(), rejectPublicOnly()
+
+// sudo(): site admins may impersonate another user via ?sudo=; non-admins get 403 only when they try to sudo. Not an authorization rule for the endpoint.
+
+// tokenRequiresScopes(category): OAuth2/access-token scope check (read for GET, write for mutations). Not a user-object relationship check.
+
+// reqToken(): authentication only — the request must be signed in with a token (401 otherwise). No authorization.
+
+// contextAuthenticatedUser(): sets ctx.ContextUser = ctx.Doer (the authenticated user itself).
+
+// checkTokenPublicOnly(): tokens restricted to public-only may not access private resources.
+
+// rejectPublicOnly(): public-only tokens are rejected (403).
+
+// ---- handler user.ListMyPublicKeys (routers/api/v1/user/key.go:102-130)
+func ListMyPublicKeys(ctx *context.APIContext) {
+
+	listPublicKeys(ctx, ctx.Doer)
+}","{
+ ""summary"": ""List the authenticated user's public keys"",
+ ""operationId"": ""userCurrentListKeys"",
+ ""parameters"": [
+  {
+   ""name"": ""fingerprint"",
+   ""in"": ""query"",
+   ""required"": null
+  },
+  {
+   ""name"": ""page"",
+   ""in"": ""query"",
+   ""required"": null
+  },
+  {
+   ""name"": ""limit"",
+   ""in"": ""query"",
+   ""required"": null
+  }
+ ]
+}",public,,declared ∧ public (override 없음),"description: 요청자는 인증된 사용자이며, public 키 목록을 반환하는 핸들러가 인증된 사용자만 접근 가능하다고 명시되어 있음; 판단: 인증된 사용자에 대한 접근이므로 public으로 선택",,,
+gitea:get:/users/{username}/keys,opensource,GET,/users/{username}/keys,declared,"// ---- route middleware chain (api.go): sudo(), tokenRequiresScopes(auth_model.AccessTokenScopeCategoryUser), reqToken(), context.UserAssignmentAPI(), checkTokenPublicOnly(), individualPermsChecker
+
+// sudo(): site admins may impersonate another user via ?sudo=; non-admins get 403 only when they try to sudo. Not an authorization rule for the endpoint.
+
+// tokenRequiresScopes(category): OAuth2/access-token scope check (read for GET, write for mutations). Not a user-object relationship check.
+
+// reqToken(): authentication only — the request must be signed in with a token (401 otherwise). No authorization.
+
+// context.UserAssignmentAPI(): resolves {username} into ctx.ContextUser (404 if missing); no authorization.
+
+// checkTokenPublicOnly(): tokens restricted to public-only may not access private resources.
+
+// individualPermsChecker: a user with restricted visibility is only visible to admins/self; otherwise no effect.
+
+// ---- handler user.ListPublicKeys (routers/api/v1/user/key.go:133-164)
+func ListPublicKeys(ctx *context.APIContext) {
+
+	listPublicKeys(ctx, ctx.ContextUser)
+}","{
+ ""summary"": ""List the given user's public keys"",
+ ""operationId"": ""userListKeys"",
+ ""parameters"": [
+  {
+   ""name"": ""username"",
+   ""in"": ""path"",
+   ""required"": true
+  },
+  {
+   ""name"": ""fingerprint"",
+   ""in"": ""query"",
+   ""required"": null
+  },
+  {
+   ""name"": ""page"",
+   ""in"": ""query"",
+   ""required"": null
+  },
+  {
+   ""name"": ""limit"",
+   ""in"": ""query"",
+   ""required"": null
+  }
+ ]
+}",public,,declared ∧ public (override 없음),"description: 요청은 인증이 필요하지만, public-only 토큰이 접근할 수 없는 자원에 대한 제한이 명시되어 있지 않음; 판단: 인증 후 공개 키 목록을 반환하므로 public으로 선택",,,
+gitea:post:/markdown,opensource,POST,/markdown,declared,"// ---- route middleware chain (api.go): sudo(), reqToken()
+
+// sudo(): site admins may impersonate another user via ?sudo=; non-admins get 403 only when they try to sudo. Not an authorization rule for the endpoint.
+
+// reqToken(): authentication only — the request must be signed in with a token (401 otherwise). No authorization.
+
+// ---- handler misc.Markdown (routers/api/v1/misc/markup.go:43-65)
+func Markdown(ctx *context.APIContext) {
+
+	form := web.GetForm[*api.MarkdownOption](ctx)
+	mode := util.Iif(form.Wiki, ""wiki"", form.Mode) //nolint:staticcheck // form.Wiki is deprecated
+	common.RenderMarkup(ctx.Base, ctx.Repo, mode, form.Text, form.Context, """")
+}","{
+ ""summary"": ""Render a markdown document as HTML"",
+ ""operationId"": ""renderMarkdown""
+}",public,,declared ∧ public (override 없음),"description: 요청은 인증을 요구하지만, 특정 인가 조건이 없고, 인증 후 모든 사용자가 접근할 수 있는 것으로 보임; 판단: 인증이 필요하나 인가 조건이 없으므로 public 선택",,,

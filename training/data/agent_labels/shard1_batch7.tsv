@@ -1,0 +1,50 @@
+901	manual_review_required	0.50	User password change has old/new password fields but no explicit caller authorization or verified user lookup.
+904	manual_review_required	0.55	Appointment customerId and bookedBy are inferred relationships without evidence selecting the authorized caller or lookup.
+907	manual_review_required	0.55	Rescheduling exposes customer and booking metadata but OAuth scope alone does not establish owner-only mutation.
+910	manual_review_required	0.50	Engine availability summary does not affirm unrestricted access and response lacks an owner authorization relation.
+913	manual_review_required	0.50	Fine-tune organization_id is an inferred tenant hint without verified caller binding or specified security.
+916	manual_review_required	0.55	Account balance lookup uses accounts OAuth scope but response wrappers lack an owner or tenant lookup.
+919	manual_review_required	0.55	Account offers require OAuth while the inferred response supplies no caller-account authorization mapping.
+922	manual_review_required	0.55	Account product retrieval has only product wrappers and OAuth scope, not a verified ownership relationship.
+925	manual_review_required	0.55	Account statements have authentication evidence but no verified caller-to-account authorization binding.
+928	manual_review_required	0.55	Account transaction listing supplies only nested result wrappers and cannot establish an ownership lookup.
+931	manual_review_required	0.55	Anonymous security alternative does not prove unrestricted bank transaction access; account ownership remains unresolved.
+934	manual_review_required	0.55	Consent authorization involves PSU identification and SCA challenges, so anonymous authentication alternative does not establish public authorization.
+937	manual_review_required	0.55	Signing-basket PSU update includes SCA challenge flows and unresolved object authorization despite an anonymous security alternative.
+940	manual_review_required	0.55	App-version access, allow and restrict are opaque data; developerId has no verified caller mapping.
+943	manual_review_required	0.55	Developer retrieval requires Basic authentication without a verified self-access or administrator policy.
+946	manual_review_required	0.55	Empty security does not alone authorize unrestricted deletion of a policy module; no explicit caller policy is supplied.
+949	manual_review_required	0.50	Legislative event listing has an apikey parameter and unknown effective security, not affirmative public-access evidence.
+952	manual_review_required	0.55	Worker capability listing requires Basic authentication with no concrete caller role or object-owner requirement.
+955	manual_review_required	0.55	Organization owner_email and owner_name are CRM metadata without verified caller or workspace authorization binding.
+958	manual_review_required	0.50	Collection is_public is a variable response flag, not an affirmative unrestricted-read guarantee for every collection.
+961	manual_review_required	0.50	Draft-registration institution retrieval has unknown security and no verified draft authorization relationship.
+964	manual_review_required	0.50	Affiliated-user listing describes institutional relationships but supplies no unrestricted-access statement or tenant binding.
+967	manual_review_required	0.50	Abuse ticket reporter is attribution and does not establish caller ownership or verified lookup semantics.
+970	manual_review_required	0.50	Certificate email resend exposes accountId but no verified certificate-account-to-caller relationship.
+973	manual_review_required	0.50	Customer external-account binding returns key material without a verified customer authorization lookup.
+976	manual_review_required	0.50	Parliamentary bill-stage metadata is public-looking but the supplied snippet does not affirm unrestricted API access.
+979	manual_review_required	0.50	Patient information has nested group and practitioner fields without a verified patient-self or clinician authorization rule.
+982	manual_review_required	0.50	Saving patient surgeries involves user and group IDs with no verified access mapping or required clinical role.
+985	manual_review_required	0.50	User observations have inferred group data but no verified user-to-caller ownership binding.
+988	manual_review_required	0.55	Payment-link accountId, merchantId and userId imply several subjects without a verified authorization choice.
+991	manual_review_required	0.55	Company custom-field definitions require WebLinkAPI scope but lack any verified company-tenant lookup.
+994	manual_review_required	0.55	Employee payroll data has company and employee context without a verified caller-company or self-access relation.
+997	manual_review_required	0.55	Employee benefit mutation provides only benefit fields and no tenant or caller-role authorization evidence.
+1000	manual_review_required	0.55	Employee earnings update has company path context but no verified company lookup or payroll-role requirement.
+1003	manual_review_required	0.55	Emergency-contact update supplies contact fields without verified employee-owner or company authorization.
+1006	manual_review_required	0.50	Employer patch exposes financial and HMRC configuration but no explicit caller authorization or tenant key.
+1009	manual_review_required	0.50	Employer CIS tagging has unknown security and only tag/link data without a verified tenant binding.
+1012	manual_review_required	0.55	PDF-template update requires JWT authentication but inferred template fields lack owner or workspace relationships.
+1015	manual_review_required	0.55	Financial-account update has developer-key authentication without a verified account owner relation.
+1018	manual_review_required	0.55	Category update requires a developer key but supplies no caller ownership or tenant access evidence.
+1021	manual_review_required	0.50	Chart axis datatype retrieval has unknown security and no affirmative unrestricted-access statement.
+1024	manual_review_required	0.50	Chart plot-type metadata has no supplied caller policy or explicit unrestricted API-access evidence.
+1027	manual_review_required	0.55	Jira Cloud project priorities expose only id and name, insufficient to bind the project to the JWT caller.
+1030	manual_review_required	0.55	Jira Server project priorities have JWT authentication but no tenant lookup or explicit caller role.
+1033	manual_review_required	0.55	Target site and changed_by describe scanned resource and provenance, not a verified caller authorization relation.
+1036	manual_review_required	0.55	Folder retrieval requires cd:full permission but no verified folder owner or tenant binding is supplied.
+1039	manual_review_required	0.55	EPG batch retrieval is OAuth-protected without a specified caller-object authorization relationship.
+1042	manual_review_required	0.55	Segment listing uses cd:full scope but episodeId filtering does not establish ownership or a role requirement.
+1045	manual_review_required	0.50	Transit departure data includes token and signature inputs while effective security is unknown, not affirmatively unrestricted.
+1048	manual_review_required	0.50	Ticket outlet listing includes authentication-like query parameters and no explicit public API-access statement.

@@ -1,0 +1,8 @@
+{
+  "authorized_override": "continue_full_despite_manual_rate; nonanonymous_mutation_public_flag_only",
+  "at": "2026-10-19T07:50:46.482209+00:00",
+  "pilot_sha256": "d3cd26d22e9b4a341c0e26fa782a93ee895ee42103261f443f1abebc354c8f98",
+  "pilot_implementation_sha256": "218cdcda601a6f3d7145152808e68d9c3fa535ece1b6c28f543193db530f3674",
+  "current_implementation_sha256": "6a17bcf59d58d5d535f7ad33bf7380f3dbb02a42db1aa0ae6f2ba81801a8ffa0",
+  "prompt_sha256": "35019e0c8af1c61935a3de8c87c4edfac79b7fa81107808988d8aff6c9881723"
+}

@@ -1,0 +1,19 @@
+{
+  "prompt_version": "policy-label-v3.0.1",
+  "prompt_sha256": "d0913c27b5de185e7dd5734c111cb731f45e28ebca81fed787ff3914d02833ef",
+  "input_sha256": "291933c2b0b6fe9811df697b139b894d2d29399119cdd2aa81cda60c40b96376",
+  "model": "gpt-4o-mini",
+  "temperature": 0,
+  "condition": "oas_code",
+  "records": 440,
+  "started_at": "2026-10-27T15:09:36.730077+00:00",
+  "completed_at": "2026-10-27T15:11:52.128522+00:00",
+  "output_sha256": "a400488a3194f4c583c4c7d0ab028d2d70059862d286233b22ae1eb763d6b2ae",
+  "usage": {
+    "api_responses": 449,
+    "input_tokens": 1417555,
+    "cached_input_tokens": 782080,
+    "output_tokens": 30471,
+    "estimated_usd": 0.1723
+  }
+}

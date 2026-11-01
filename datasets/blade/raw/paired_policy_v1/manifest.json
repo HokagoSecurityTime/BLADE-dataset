@@ -1,0 +1,68 @@
+[
+  {
+    "path": "realworld_django/conduit/apps/articles/views.py",
+    "repository": "gothinkster/django-realworld-example-app",
+    "commit": "29c9d42831fa0cfc5a4aa7561f674396eacf20a2",
+    "sha256": "925b4352745073771fa14c14ec5617004200fcef2003f7e7e8df5a04e9f083ff"
+  },
+  {
+    "path": "realworld_django/conduit/apps/articles/urls.py",
+    "repository": "gothinkster/django-realworld-example-app",
+    "commit": "29c9d42831fa0cfc5a4aa7561f674396eacf20a2",
+    "sha256": "e6f93f314eab98ebe438b1900bd3b4c626692cb61629c5e92957b5b1ed86e5f5"
+  },
+  {
+    "path": "realworld_django/conduit/apps/authentication/views.py",
+    "repository": "gothinkster/django-realworld-example-app",
+    "commit": "29c9d42831fa0cfc5a4aa7561f674396eacf20a2",
+    "sha256": "8895854da40e8bd4c1705d973287927610dbe15e3ed046c611b8b6d1b556a2b4"
+  },
+  {
+    "path": "realworld_django/conduit/settings.py",
+    "repository": "gothinkster/django-realworld-example-app",
+    "commit": "29c9d42831fa0cfc5a4aa7561f674396eacf20a2",
+    "sha256": "4adc87dfe8b915d370d18745b3b8f6f252ebd2a0f3920f68d12812fc7d312e5f"
+  },
+  {
+    "path": "realworld_django/README.md",
+    "repository": "gothinkster/django-realworld-example-app",
+    "commit": "29c9d42831fa0cfc5a4aa7561f674396eacf20a2",
+    "sha256": "b8dbcad27bc1a9082f51077a0024d207cb886178f9c7916b532e57d62a390351"
+  },
+  {
+    "path": "realworld_spec/specs/api/openapi.yml",
+    "repository": "gothinkster/realworld",
+    "commit": "ebbcdeb8d55b42a3a613c787560498b8ef10003f",
+    "sha256": "227d6983874850d35a883f4486b455cedbb272a0c103008595873c94ae1600ac"
+  },
+  {
+    "path": "realworld_spec/specs/api/hurl/errors_authorization.hurl",
+    "repository": "gothinkster/realworld",
+    "commit": "ebbcdeb8d55b42a3a613c787560498b8ef10003f",
+    "sha256": "ee6e64b4bff8b253cc8e2189b7abf9f5b4cfe24c5cfdfc8c415567ea928bdb2f"
+  },
+  {
+    "path": "realworld_spec/specs/api/hurl/articles.hurl",
+    "repository": "gothinkster/realworld",
+    "commit": "ebbcdeb8d55b42a3a613c787560498b8ef10003f",
+    "sha256": "9fd8dad11a38629dc33770ee34ad60eb1320e3e0f20b04da4f6b71b7778a8e3d"
+  },
+  {
+    "path": "realworld_spec/README.md",
+    "repository": "gothinkster/realworld",
+    "commit": "ebbcdeb8d55b42a3a613c787560498b8ef10003f",
+    "sha256": "5a0813d74d6d2ba2f20c194c2d8889790b2fe9ce4db645a438b0f8562d6e0e1c"
+  },
+  {
+    "path": "realworld_django/conduit/apps/articles/serializers.py",
+    "repository": "gothinkster/django-realworld-example-app",
+    "commit": "29c9d42831fa0cfc5a4aa7561f674396eacf20a2",
+    "sha256": "94a57ef604b65f93e182297dc0ddfa86deda72057f21beb8cae1415f6bab2bc4"
+  },
+  {
+    "path": "realworld_django/requirements.txt",
+    "repository": "gothinkster/django-realworld-example-app",
+    "commit": "29c9d42831fa0cfc5a4aa7561f674396eacf20a2",
+    "sha256": "8b9c67ceb78fd3988dad6c0dfa2a383b702e135a1d7714afed00794d324a07d1"
+  }
+]

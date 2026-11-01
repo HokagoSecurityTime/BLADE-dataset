@@ -1,0 +1,39 @@
+{
+  "records": 1256,
+  "viewsets": 147,
+  "unresolved": 3,
+  "unresolved_keys": [
+    "authentication-check:",
+    "schema:",
+    "status:"
+  ],
+  "proposed_subset": 185,
+  "proposed_by_reason": {
+    "nonstandard": 43,
+    "permission_override": 8,
+    "users_app": 56,
+    "representative_model": 97
+  },
+  "by_app": {
+    "authentication-check": 1,
+    "circuits": 101,
+    "core": 28,
+    "dcim": 481,
+    "extras": 180,
+    "ipam": 172,
+    "schema": 1,
+    "status": 1,
+    "tenancy": 54,
+    "users": 56,
+    "virtualization": 64,
+    "vpn": 90,
+    "wireless": 27
+  },
+  "tag": "v4.7.3",
+  "commit": "3cd2c1d6469caed6c50e80eddd4cde863e0e2cf5",
+  "license": "Apache-2.0",
+  "output_sha256": "911e5941fcc1aa1573dd93851eae24e91f45aded27ebd5cab460d5fdbc6b7a1e",
+  "oas_sha256": "5aa15593aa680deba436be982980abf93768bc1b52fabceeb37634d872909086",
+  "local_clone_deleted": "2026-10-21 after extraction",
+  "reproduce": "git clone --depth 1 --branch v4.7.3 https://github.com/netbox-community/netbox.git datasets/blade/raw/opensource/netbox && git -C datasets/blade/raw/opensource/netbox rev-parse HEAD  # expect 3cd2c1d6469caed6c50e80eddd4cde863e0e2cf5"
+}

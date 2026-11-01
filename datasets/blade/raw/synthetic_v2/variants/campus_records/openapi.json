@@ -1,0 +1,490 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "campus_records_variants",
+    "version": "1.0.0",
+    "description": "script-generated static projection (no framework export)"
+  },
+  "paths": {
+    "/fixtures/campus_records/transcripts/drafts/authonly/{item_id}": {
+      "get": {
+        "summary": "Campus Records Drafts Authonly",
+        "description": "Authentication only; no requester-object relationship or role check is implemented, so no concrete label is supported.",
+        "operationId": "campus_records_drafts_authonly",
+        "parameters": [
+          {
+            "name": "item_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Fixture record",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/fixtures/campus_records/transcripts/drafts/extauth/{item_id}": {
+      "get": {
+        "summary": "Campus Records Drafts Extauth",
+        "description": "Authentication only; no requester-object relationship or role check is implemented, so no concrete label is supported. Authentication is enforced outside the handler.",
+        "operationId": "campus_records_drafts_extauth",
+        "parameters": [
+          {
+            "name": "item_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Fixture record",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/fixtures/campus_records/transcripts/drafts/extguard/{item_id}": {
+      "get": {
+        "summary": "Campus Records Drafts Extguard",
+        "description": "Only the record owner may read it. Authentication is enforced outside the handler; the authorization check is inside.",
+        "operationId": "campus_records_drafts_extguard",
+        "parameters": [
+          {
+            "name": "item_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Fixture record",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/fixtures/campus_records/transcripts/shared/authonly/{item_id}": {
+      "get": {
+        "summary": "Campus Records Shared Authonly",
+        "description": "Authentication only; no requester-object relationship or role check is implemented, so no concrete label is supported.",
+        "operationId": "campus_records_shared_authonly",
+        "parameters": [
+          {
+            "name": "item_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Fixture record",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/fixtures/campus_records/transcripts/shared/extauth/{item_id}": {
+      "get": {
+        "summary": "Campus Records Shared Extauth",
+        "description": "Authentication only; no requester-object relationship or role check is implemented, so no concrete label is supported. Authentication is enforced outside the handler.",
+        "operationId": "campus_records_shared_extauth",
+        "parameters": [
+          {
+            "name": "item_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Fixture record",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/fixtures/campus_records/transcripts/shared/extguard/{item_id}": {
+      "get": {
+        "summary": "Campus Records Shared Extguard",
+        "description": "The record owner or an administrator may read it. Authentication is enforced outside the handler; the authorization check is inside.",
+        "operationId": "campus_records_shared_extguard",
+        "parameters": [
+          {
+            "name": "item_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Fixture record",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/fixtures/campus_records/transcripts/workspace/authonly/{item_id}": {
+      "get": {
+        "summary": "Campus Records Workspace Authonly",
+        "description": "Authentication only; no requester-object relationship or role check is implemented, so no concrete label is supported.",
+        "operationId": "campus_records_workspace_authonly",
+        "parameters": [
+          {
+            "name": "item_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Fixture record",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/fixtures/campus_records/transcripts/workspace/extauth/{item_id}": {
+      "get": {
+        "summary": "Campus Records Workspace Extauth",
+        "description": "Authentication only; no requester-object relationship or role check is implemented, so no concrete label is supported. Authentication is enforced outside the handler.",
+        "operationId": "campus_records_workspace_extauth",
+        "parameters": [
+          {
+            "name": "item_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Fixture record",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/fixtures/campus_records/transcripts/workspace/extguard/{item_id}": {
+      "get": {
+        "summary": "Campus Records Workspace Extguard",
+        "description": "Caller and record must share a tenant. Authentication is enforced outside the handler; the authorization check is inside.",
+        "operationId": "campus_records_workspace_extguard",
+        "parameters": [
+          {
+            "name": "item_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Fixture record",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/fixtures/campus_records/transcripts/audit/authonly/{item_id}": {
+      "get": {
+        "summary": "Campus Records Audit Authonly",
+        "description": "Authentication only; no requester-object relationship or role check is implemented, so no concrete label is supported.",
+        "operationId": "campus_records_audit_authonly",
+        "parameters": [
+          {
+            "name": "item_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Fixture record",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/fixtures/campus_records/transcripts/audit/extauth/{item_id}": {
+      "get": {
+        "summary": "Campus Records Audit Extauth",
+        "description": "Authentication only; no requester-object relationship or role check is implemented, so no concrete label is supported. Authentication is enforced outside the handler.",
+        "operationId": "campus_records_audit_extauth",
+        "parameters": [
+          {
+            "name": "item_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Fixture record",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/fixtures/campus_records/transcripts/audit/extguard/{item_id}": {
+      "get": {
+        "summary": "Campus Records Audit Extguard",
+        "description": "Only administrators may read this operational resource. Authentication is enforced outside the handler; the authorization check is inside.",
+        "operationId": "campus_records_audit_extguard",
+        "parameters": [
+          {
+            "name": "item_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Fixture record",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

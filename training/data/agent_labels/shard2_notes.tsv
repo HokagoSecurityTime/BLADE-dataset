@@ -1,0 +1,675 @@
+2	Channel presence history exposes only error/status columns, not a channel ownership binding.
+5	Device registration update has only an error response schema and no owner lookup evidence.
+8	App keys expose appId but bearer authentication does not establish the caller's app authorization.
+11	Reactor rule projectId describes a target configuration, not a verified caller tenant binding.
+14	App accountId is an inferred owner/tenant hint without verified lookup or caller relationship.
+17	Balance account accountHolderId does not establish an authenticated subject relationship.
+20	Document owner is an untyped response property without a verified ownership binding.
+23	Payment instrument group balancePlatform is not a proven tenant relationship.
+26	Authorization category userID filtering lacks security and a usable ownership schema.
+29	Adding category visibility for userID has only an error schema and no caller authorization rules.
+32	MediaObject resourceOwner is inferred response data without verified subject binding.
+35	Monitor resourceOwner and allowUnauthenticatedPings do not prove authorization for monitor replacement.
+38	Workspace alert definition identifies workspaceId but exposes only data and clientToken.
+41	Workspace logging update has no tenant lookup columns despite the workspace path.
+44	Rule group namespace returns a wrapper without verified workspace ownership mapping.
+47	Archive rule system_global and rule_id do not specify a caller authorization policy.
+50	Image userId is a response hint with no verified mapping from imageId to a subject.
+53	DAG owners and anonymous security conflict with assuming unrestricted DAG updates.
+56	Anonymous task-state update security does not establish unrestricted object authorization.
+59	Company id and created_by_id do not prove company-to-caller tenant membership.
+62	Company integration setting company_id is inferred and its tenant lookup binding is unverified.
+65	Company form-template deletion returns only data and success without lookup evidence.
+68	Live stream public is a resource attribute, not evidence that this authenticated management endpoint is unrestricted.
+71	Video listing is bearer-authenticated but has no evidenced owner, role or membership restriction.
+74	Attribute assignment requires two API keys but gives no group ownership or role rule.
+77	Artifact createdBy is inferred metadata without a verified artifact-owner binding.
+80	Version createdBy does not establish ownership of the parent artifact being versioned.
+83	Global artifact metadata createdBy is not a verified subject or database lookup relation.
+86	Credit note account, customer and created_by have ambiguous personal versus tenant ownership semantics.
+89	Customer update response exposes an id wrapper but no ownership or tenant evidence.
+92	Invoice customer and created_by are flattened response hints without a verified owner lookup.
+95	Deployment project path indicates nesting but no verified project tenant mapping.
+98	Artifact creation under a project has unknown security and no tenant binding.
+101	Car listing attributes require authentication but do not establish unrestricted or owner-specific access.
+104	Crash models have an owner_name path but no corresponding subject lookup schema.
+107	Azure subscription deletion has only an error response and an ambiguous owner_name binding.
+110	Build cancellation has an owner_name path but the build schema lacks a verified owner relation.
+113	Build log wrapper provides no lookup mapping for owner_name and build_id.
+116	Crash user_email and user_name describe crash data, not necessarily authorization ownership.
+119	App localization bearer authentication and response id do not establish app ownership.
+122	Session userId suggests ownership but the inferred schema does not verify sessionId-to-subject lookup.
+125	File permissions are flattened metadata without the actual access policy or ownership binding.
+128	Team update identifies teamId but does not prove caller tenant membership or a database key.
+131	Membership roles, teamId and userId do not identify which caller role may update the membership.
+134	Episode listing requires an API key but the returned wrapper has no policy-specific evidence.
+137	Individual partyId is not proven to represent the authenticated subject.
+140	Electronic address id lacks a verified relationship to partyId or the authenticated subject.
+143	JWT issuance requires API credentials and is not affirmative evidence of an unrestricted function.
+146	Premium valuation tags suggest subscription gating, but Developer Plan Or Greater conflicts with an unambiguous required tier.
+149	Image feed API-key authentication and flattened author metadata do not establish an ownership policy.
+152	People feed author is flattened programme metadata rather than a verified caller ownership relation.
+155	Promotion author metadata and API-key security do not establish a permitted role or tenant scope.
+158	Raw brand author metadata does not prove ownership of the requested pid.
+161	Episode ancestors expose flattened author data without a verified episode ownership binding.
+164	Order merchant-info clearing has only an errors schema despite an accountId path.
+167	Order change sourceUserId is audit metadata, not a verified order owner lookup.
+170	Connection logs identify id_user but return only a wrapper with no verified connection-owner binding.
+173	Summary requires the original reply poster, but flattened Poster/UserID and unverified ID binding cannot safely define the lookup.
+176	Review replies contain poster metadata but retrieval authorization and review-owner binding are unspecified.
+179	Summary explicitly rejects other owners, but flattened Poster/UserID and RecipeID do not verify a database owner lookup.
+182	Bank account details have no authenticated owner or tenant relationship in the supplied schema.
+185	Cash receipt customerId is a business customer reference without proven caller ownership.
+188	Customer ownerTypeId is an unspecified type field rather than a verified owner identifier.
+191	Customer opening balance transactions lack the customer-to-subject lookup relation.
+194	Customer address CustomerId is inferred and does not prove caller ownership of the address.
+197	Address update CustomerId lacks a verified subject relationship or lookup binding.
+200	Customer update metadata contains no verified authenticated-subject mapping.
+203	Customer orders return a paging wrapper without a verified order or tenant lookup.
+206	Order Buyer, Customer and Seller fields are flattened and yield competing ownership interpretations.
+209	Document organization metadata is inferred and lacks a verified caller tenant mapping.
+212	Deleting document payments exposes payment data without document ownership evidence.
+215	Repository admin OAuth scope is not an application admin role or a proven workspace tenant binding.
+218	Commit application property returns only attributes and leaves security and ownership unknown.
+221	Report reporter is provenance metadata, not a proven owner binding for the workspace repository.
+224	Report annotation uuid has no verified ownership relation to workspace or caller.
+227	Commit build-status OAuth repository permission does not establish workspace tenancy or object ownership.
+230	Route details are API-key protected with no affirmative unrestricted-access or caller-role policy.
+233	Container inspection exposes infrastructure configuration but no caller authorization binding.
+236	Removing a domain restriction exemption suggests privileged administration but supplies no specific caller role or object binding.
+239	Collaboration role and created_by describe the collaboration rather than a verified update permission.
+242	Comment created_by is inferred metadata without a verified comment-owner lookup.
+245	Company announcement retrieval requires a user key but has no object ownership or public-access rule.
+248	Document availability provider and subjectId do not establish a caller tenant or subscription policy.
+251	Catalog is a token scope and the truncated playback restriction description does not identify a membership tier.
+254	Message sending requires basic authentication but no policy-specific role or owner binding is supplied.
+257	Content author metadata is flattened and security is unknown, so neither ownership nor public access is established.
+260	Reporting requires both players to have participated in activityId, a relationship not represented by a usable owner lookup.
+263	Broadcast call listing returns only a pagination wrapper without broadcast ownership evidence.
+266	NFT metadata API keys authenticate access but do not establish unrestricted or token-owner-only authorization.
+269	NFT owner is blockchain asset metadata, not a proven caller authorization requirement.
+272	NFT URI lookup has unknown security and no affirmative unrestricted-access evidence.
+275	Conversation creatorId and creatorTenantId suggest competing scopes; OAuth manage permissions do not resolve the binding.
+278	Adding community participants has creator and tenant hints but no verified caller access relation.
+281	Group participant changes expose creator metadata without proving owner-only or tenant-only access.
+284	Conversation retrieval has creatorId and creatorTenantId but no verified caller-participant policy.
+287	Message creation creatorId describes the message author, not authorization to the parent conversation.
+290	Organization addon-provider creation lacks a verified organization-to-caller relationship.
+293	Organization provider features have only name, type and value with no tenant lookup.
+296	Provider plans are resources being created, not evidence of a caller subscription requirement.
+299	Organization plan feature update has no verified tenant key or caller authorization.
+302	Student contact district and student are inferred response references without a verified access policy.
+305	Guest grant metadata does not establish the caller's grant to retrieve guestId.
+308	Email campaign update lacks security information and any verified owner relation.
+311	Export status authentication and exports:read scope do not identify object ownership.
+314	Company cash-flow report exposes companyName but no companyId tenant lookup mapping.
+317	Company data-integrity detail response is a paging wrapper without a tenant binding.
+320	Company Excel-report status gives job state without a verified company-to-caller relation.
+323	Company connection account categories return only a wrapper and no verified tenant lookup.
+326	Account category update accountRef does not establish caller ownership of the company connection.
+329	Betting lines are API-key protected and no unrestricted access policy is explicitly supplied.
+332	Player metrics team is a sports entity rather than a proven authorization tenant.
+335	Account servicepack describes the account but does not specify an allowed subscription or subject binding.
+338	SSL certificate request detail has no verified owner, tenant or role policy.
+341	Deleted settings identify configId but basic authentication does not establish ownership of that configuration.
+344	Flag listing exposes configId without a verified caller relationship.
+347	Integration-link update identifies environment and setting but provides no ownership schema.
+350	Setting creatorEmail is audit metadata and does not prove authorization to replace the setting.
+353	OIDC token exchange accepts id_token; anonymous security alone does not make credential issuance unrestricted.
+356	Clip update uses bearer authentication but the response schema has no verified owner binding.
+359	Inbox API-key roles and user describe a generated credential, not a proven caller permission.
+362	Connection scope is configuration metadata and no caller authorization relation is specified.
+365	Contribution anonymous-submission flag does not authorize deletion; flattened user and moderator remain ambiguous.
+368	Export owner is inferred metadata with no verified lookup key or subject relation.
+371	Tag retrieval has unknown security and no affirmative public-access evidence.
+374	Green energy dispatch has unknown security and no explicit unrestricted-access policy.
+377	My-user video rating clearly scopes to the caller but the rating schema lacks a user lookup column.
+380	Two-factor confirmation uses OTP and request tokens without an owner lookup or supported role rule.
+383	Company details identify a legal entity but do not establish it as the caller's tenant.
+386	Registration settings update has no verified owner or caller permission evidence.
+389	Historical exchange-rate authentication does not establish a public or subscription-specific policy.
+392	Conversation posting depends on token-bubble participation, with user_a and user_b not resolving a single owner lookup.
+395	Group message metadata uses token-bubble visibility rules not represented by the pagination-only schema.
+398	Article organization_id is inferred input data and does not establish a verified tenant binding.
+401	Similar-record search requires an API key but lacks explicit unrestricted-access evidence.
+404	Admin path and Admin tag explicitly place user anonymization in administrative access.
+407	Admin path and Admin tag explicitly identify suspension as an administrative operation.
+410	Category group_permissions and can_edit are response metadata without the actual required caller permission.
+413	Exec process user is the execution identity, not a proven authorization owner of the inspection endpoint.
+416	Domain search security is unspecified and the api_key query does not define a supported policy label.
+419	Template retrieval is API-key protected but lacks verified ownership or public-access evidence.
+422	Group createdBy is flattened user metadata and groupRoles does not specify the caller's required role.
+425	Adding group members lacks an explicit caller role and a verified ownership binding despite createdBy.
+428	Deleted node createdBy and deletedBy are competing audit identities without a verified owner lookup.
+431	Billing-profile doctor is a response reference; OAuth billing scopes do not prove subject ownership.
+434	Clinical note field values lack the doctor-to-caller or patient access relationship.
+437	Custom policy sell.account scope does not establish an owner or tenant lookup from custom_policy_id.
+440	Charge-station update has only a result wrapper with no station ownership evidence.
+443	Vehicle charging returns only a result wrapper without vehicle-to-subject authorization evidence.
+446	Fixing log messages identifies logId but has no verified owner or tenant schema.
+449	Order details expose AccessToken and billing data without a supported owner lookup or explicit public rule.
+452	Pad copying requires an API key but response code/data/message do not identify caller authorization.
+455	Application descriptor provider metadata does not verify authorization to the application package.
+458	Commission audit reports are described as reports but API-key requirements lack explicit unrestricted-access policy evidence.
+461	Account export account_id is inferred report metadata without a verified caller binding.
+464	Private article authors endpoint supplies authors but no article ownership lookup.
+467	API-key user_id filtering and permission_set do not establish whether the caller may list another user's keys.
+470	Automation-run user_id filter has no response owner column or verified caller relation.
+473	Payment batch metadata identifies batchUuid but has no verified subject ownership.
+476	User role is response data and no self-only access or admin bypass is specified.
+479	Score user, organization, collaborator ACLs and sharingKey imply multiple access alternatives without a resolvable single policy.
+482	Forking a score has sharingKey and collaborator ACL metadata rather than proven owner-only access.
+485	Track creator is inferred metadata and score sharingKey leaves authorization alternatives unspecified.
+488	The operation is explicitly tagged Public and retrieves group-topic reply metadata without a stated owner-only restriction.
+491	Public tag coexists with group privacy, roles and membership metadata whose effect on group visibility is unspecified.
+494	The operation is explicitly tagged Public and returns adjacent-photo metadata without an ownership restriction.
+497	Submission auth-user hashes are authentication audit fields rather than a verified data-request owner lookup.
+500	PDF submission status has no owner mapping despite authenticated access and submission_id.
+503	The game admin billingDetails path explicitly identifies an administrative billing operation.
+506	Collaborator OAuth scope is not an application role and the deeply nested resource returns only Id.
+509	API createdBy is inferred creator metadata without a verified ownership binding.
+512	Version createdBy and updatedBy are audit metadata without verified API authorization.
+515	API version relations contain only relation arrays and no ownership lookup evidence.
+518	Order ordered_by and licensee_name do not establish an authenticated-subject lookup.
+521	Admin path, admin tag and adminEditHook operation identify administrative hook management.
+524	Organization hook path indicates nesting but no verified caller organization binding.
+527	Organization label update has no organization key or verified caller tenant mapping in its schema.
+530	Repository owner path does not identify whether the owner is a person or organization or verify hook lookup.
+533	App webhook delivery installation_id and repository_id do not establish caller authorization.
+536	Token account, user and site_admin fields are flattened credential metadata, not an admin bypass or owner lookup.
+539	Gist public flag varies by object and flattened owner does not prove retrieval authorization.
+542	Gist comment user describes the comment author, not permission to comment on the parent gist.
+545	Brand creation parent identifies an account path without a verified caller tenant relation.
+548	Account update buyer OAuth scopes authenticate permission but do not verify subject or tenant matching.
+551	Budget accountId is an inferred reference and no verified account-to-caller relation is supplied.
+554	Direct deal accountId and buyerAccountId are competing account relationships without an authorization binding.
+557	Post retrieval has unknown security and publication metadata alone does not affirm unrestricted API access.
+560	Account role manager/worker flags describe the target user and do not identify the updater's required role.
+563	Account owner, managers and workers imply multiple access relationships without a verified binding.
+566	Account billing data owner is an inferred reference and does not establish permitted caller access.
+569	Creating account managers supplies a user shape but no required caller role or tenant lookup.
+572	Device aliases return a pagination wrapper with no trackingId ownership binding.
+575	Bulk upload status lacks any job-to-subject relationship despite bearer authentication.
+578	Datacenter location metadata and unknown security do not establish unrestricted endpoint access.
+581	Media syndication listing has many filters but neither explicit public-access policy nor a verified owner relation.
+584	Extension definition developer API key does not establish ownership of appId or definitionId.
+587	SKU planning report lacks security and an authorization relationship for planningLevelId.
+590	API-key privilege enumeration returns only a wrapper and does not prove caller authority over key.
+593	Organization changelog returns only pagination data without a verified organization tenant binding.
+596	Study owner_name and reference_owner are attribution metadata without a verified subject relationship.
+599	Configuration creation uses key and user_token but does not supply a supported ownership or role policy.
+602	Booking contactId and hotelId are business references without a verified caller relationship.
+605	Hotel rate-plan hotelId is an inferred business reference rather than a proven caller tenant identifier.
+608	Account statement account_id is inferred and lacks a verified caller account binding.
+611	Transfer source and destination accounts plus approval metadata leave the authorization subject unresolved.
+614	Account closing entity_id is not a verified owner or tenant relation to the caller.
+617	Authorization deletion returns only an error schema with no caller-role or ownership evidence.
+620	Bucket deletion has unknown security and only an error schema, so no object policy can be established.
+623	Added label orgID describes the label and does not prove authorization to the parent bucket.
+626	Item location_id is a physical-location reference rather than a verified ownership identifier.
+629	Order cancellation account path lacks an account column or verified caller account binding.
+632	Course permission update names a target userEmail but does not specify the caller's required authority.
+635	Account deletion preconditions concern service dependencies, not caller ownership or tenant authorization.
+638	Account managing_account is inferred and does not prove the caller's relationship to the target account.
+641	Contact consuming_account and managing_account give competing relationships without a caller binding.
+644	Organization category creation returns only categories and lacks a tenant lookup binding.
+647	Organization discount creation has no organization column despite the organizationUuid path.
+650	Organization image listing returns only imageUrls with no verified tenant lookup.
+653	Organization import status lacks a tenant binding; WRITE:PRODUCT is a permission scope only.
+656	Product creation updatedBy is audit metadata and does not establish organization authorization.
+659	Artist userId personalizes media data but the flattened response provides no verified owner policy.
+662	Checkout custom-field retrieval has unknown security and no owner or tenant relationship.
+665	Custom-field option update supplies only id and value, with no caller authorization evidence.
+668	Publicly-accessible tag conflicts with bearer security and customer/tenant checkout data, leaving authorization ambiguous.
+671	Publicly-accessible can describe network exposure; changing delivery pool hours lacks affirmative unrestricted authorization evidence.
+674	Authentication-flow management uses an access token but supplies no explicit required role or realm tenant binding.
+677	Client certificate generation exposes key-format options without a verified realm or client authorization relation.
+680	Payment session customer and organization fields are flattened with no verified caller ownership binding.
+683	User update enableAdmin is an input capability, not proof of an admin bypass or allowed caller role.
+686	Appointment StaffID identifies staff metadata but does not prove the caller owns the appointment.
+689	Project analysis project field is an inferred nested object with no verified tenant lookup.
+692	Query-job status identifies a job but no user, role or tenant relationship.
+695	Login username is audit data and account:read_only does not establish a subject lookup.
+698	Database-backup list returns only a wrapper with no instance ownership relation.
+701	Podcast metadata and unknown security do not prove unrestricted endpoint authorization.
+704	Benefit-in-kind update has no caller role or employer ownership mapping in its response wrapper.
+707	Bulk status user_id is inferred metadata without a verified bulkUuid lookup relationship.
+710	Bundle product children have unknown security and no affirmative public or owner policy.
+713	Mine path indicates current-user cart context, but gift-message entity_id/itemId binding remains ambiguous.
+716	Assigning customer to cart supplies target customerId, not verified ownership of cartId.
+719	Certificate subject names identify cryptographic subjects, not the authenticated owner of certificate management.
+722	Automation list/store fields describe workflow configuration without a verified caller relation.
+725	Starting workflow email returns only a problem-detail schema without object authorization evidence.
+728	Summary says private-note mutation on a GET relationships operation, creating contradictory semantics and no owner lookup.
+731	Account featured-tag retrieval is authenticated but no owner-only or public policy is specified.
+734	Following visibility depends on the account owner's hiding setting, not a supported fixed ownership rule.
+737	Muting a target account modifies the caller's relationship, which lacks a verified caller-key lookup in the response.
+740	Account statuses include varying visibility and privacy fields without a resolved access policy.
+743	Annotation createdBy is scientific provenance metadata, not a verified owner access requirement.
+746	Annotation creator and accession filters do not establish ownership or explicit public authorization.
+749	Gene allele metadata has unknown security and no affirmative unrestricted-access evidence.
+752	Article author and is_locked imply content metadata but do not specify ownership or subscription access.
+755	Publication creator and editors do not establish whether this information endpoint is restricted to either.
+758	User article listing provides only associated_articles and no verified owner mapping or public rule.
+761	Document author is content attribution and primaryKey is a configuration parameter, not proof of authorization.
+764	Network Bluetooth update requires an API key without network-to-caller ownership evidence.
+767	Meshery application user_id is inferred and does not verify caller ownership or a lookup binding.
+770	Meshery pattern user_id is inferred metadata without a verified subject relation.
+773	JWT user scope is not itself an application role and job ownership is unspecified.
+776	JWT admin scope alone cannot be converted into an admin role; secret access policy remains unverified.
+779	Prediction Project is response metadata without a verified project tenant relation.
+782	No-store prediction projectId specifies model selection rather than proven tenant authorization.
+785	Classification project and API-key security do not establish caller tenancy or ownership.
+788	Installer alarm-template listing has an organization path but no organization lookup columns.
+791	Claiming installer devices returns result arrays without a verified organization tenant binding.
+794	Installer RF templates contain id/name only and no caller organization relation.
+797	Installer site locations do not establish authorization to their enclosing org_id.
+800	Map import site_id is inferred output and does not verify the enclosing organization relationship.
+803	Case disease associations have unknown security and a wrapper without explicit unrestricted access evidence.
+806	Disease phenotype associations provide research metadata but no affirmative public-access policy.
+809	Project subscription is the requested resource; plan_name does not prove a required caller membership tier.
+812	Metric aggregates require an access token but provide no specific role, owner or tenant policy.
+815	Bank account endpoint returns a wrapper without an account-to-caller ownership binding.
+818	Bank account parties response supplies no verified subject relationship despite account scope authentication.
+821	Standing orders response lacks account owner columns or a verified account lookup.
+824	Statement transactions return a paging wrapper without verified account or statement ownership.
+827	Token UTXO metadata issuer and userData describe blockchain content without explicit API authorization.
+830	Asteroid scientific metadata has unknown security rather than affirmative unrestricted endpoint evidence.
+833	User weather stations imply user scope, but the body wrapper provides no device-owner lookup.
+836	Circuit termination site/provider references do not establish a caller tenant relation.
+839	Circuit-type listing uses bearer authentication without a specific role or object policy.
+842	Circuit tenant filters do not prove enforced tenant matching and the response is only pagination.
+845	Circuit tenant is inferred nested response data without a verified caller tenant or lookup binding.
+848	Circuit termination site is a physical site reference without verified authorization semantics.
+851	Circuit tenant field is an inferred hint, not a verified subject-to-tenant mapping.
+854	Provider account and site filters do not establish caller tenancy in the returned wrapper.
+857	Provider account and admin_contact are configuration metadata rather than a proven admin role or owner lookup.
+860	Account API-secret retrieval has only id/timestamp and no verified account-subject relationship.
+863	Audit-event account_id, accountId and user_id represent event context with ambiguous authorization ownership.
+866	Workgroup project file tags return a result wrapper without a tenant lookup binding.
+869	Project file retrieval identifies workgroup and file but has no corresponding ownership columns.
+872	Project team-member invitation lacks an explicit caller role and verified project access relation.
+875	Client workgroup retrieval provides no lookup columns to resolve the two workgroup identities.
+878	Creditor account is payment destination metadata rather than a verified caller owner identifier.
+881	Requisition accounts and institution_id lack a verified subject ownership relationship.
+884	Block update has unknown security and no ownership or tenant field.
+887	Database created_by and Author are flattened metadata without a verified database-owner relationship.
+890	Page Author is an arbitrary content property and database_id does not establish caller access.
+893	Subscription plan is the resource being read and does not prove a required membership tier.
+896	Consumer classification batch has no security or verified owner relation in its status response.
+899	Receipt company/customer fields describe invoice parties without verified register-to-caller authorization.
+902	Recovery-question change uses password data without a verified userId lookup or role rule.
+905	Appointment customerId, bookedBy and businessName provide competing attribution without a caller binding.
+908	Appointment reservation booking fields do not specify ownership or the allowed caller role.
+911	File deletion returns only id/deleted/object and leaves caller authorization unknown.
+914	Fine-tune organization_id is inferred metadata and no verified caller tenant lookup is supplied.
+917	Account beneficiary response is a paging wrapper without owner binding; accounts scope is only permission.
+920	Account parties expose a wrapper and no verified account-to-subject relationship.
+923	Scheduled-payment listing lacks account owner columns or a verified caller relationship.
+926	Statement retrieval lacks a verified statement/account ownership lookup in the wrapper schema.
+929	Anonymous security alternative conflicts with account ownerName data and does not establish unrestricted account authorization.
+932	Anonymous authentication alternative does not prove unrestricted transaction access amid debtor/creditor account data.
+935	Consent authorization updates involve PSU authentication challenges; anonymous security does not establish unrestricted consent modification.
+938	App-version allow/restrict and developerId fields do not resolve the caller's access to the version.
+941	Payment on behalf of a user has userId but does not prove the caller must equal that user or identify a verified lookup.
+944	Service action listing has unknown security and no affirmative public or caller-role policy.
+947	Committee listing provides only pagination and unknown security, with no explicit unrestricted-access statement.
+950	Jurisdiction listing has an API-key query but no specified caller role or public policy.
+953	Workspace member activity update has no workspace or member lookup fields despite its nested path.
+956	DICOM instance PrivateCreator is medical metadata, not the authenticated authorization owner.
+959	Comment user and can_edit are relationship metadata without a verified read-access policy.
+962	File current_user_can_comment/delete_allowed describe capabilities but do not specify retrieval authorization.
+965	License metadata has unknown security and no affirmative unrestricted-access statement.
+968	Certificate organization is certificate-subject metadata rather than a proven authorization tenant.
+971	Certificate entitlement search does not identify a membership tier or verified caller ownership.
+974	Bill listing contains public-looking legislative metadata, but supplied OAS does not affirm unrestricted API access.
+977	Division voting results have unknown security and no explicit unrestricted API access statement.
+980	Patient user/group path and flattened patient data do not establish caller ownership or clinician authorization.
+983	Observation heading userId has no corresponding verified subject lookup in the heading schema.
+986	Patient-entered observation path names userId but flattened group data does not verify an owner relation.
+989	Payment link accountId, merchantId and userId are competing ownership hints without a verified caller binding.
+992	Employee creation returns employeeId only and no company tenant lookup.
+995	Employee companyName, reviewer and supervisor fields do not establish the updater's company access.
+998	Direct-deposit account numbers are payment data, not authorization owner identifiers for company/employee access.
+1001	Employee earnings schema lacks company or employee lookup columns and any explicit caller policy.
+1004	Employee local-tax response contains tax settings without a verified company/employee access binding.
+1007	Employer contact and bank information does not prove caller tenancy or an employer lookup key.
+1010	Employer CIS tags return only links and no tenant binding.
+1013	Template copy uses JWT authentication but no template owner relation or required role is supplied.
+1016	Account transaction_account is flattened financial metadata without a verified caller account relationship.
+1019	Currency information requires a developer key but has no explicit public or policy-specific authorization rule.
+1022	Chart data has chartId but unknown security and no owner relation.
+1025	Account event is_admin, created_by, assignee and reporter are event payload fields rather than a caller access policy.
+1028	Jira Cloud project status listing contains id/name only without a verified project tenant relation.
+1031	Jira Server project status listing lacks a project lookup or caller access relationship.
+1034	Target changed_by and scan-site credentials describe target configuration rather than caller authorization.
+1037	Episode customerId is an inferred attribution field without a verified subject binding.
+1040	Piece contributor is content attribution and episodeId is not a verified ownership relation.
+1043	Spot insertion customerId is inferred metadata with no verified caller relationship.
+1046	Disruption modes have unknown security and token/signature queries do not define a supported authorization policy.
+1049	Mailing-list contact creation lacks directory or list ownership columns and an explicit caller rule.
+1052	Game trailers have unknown security and no affirmative public-access evidence.
+1055	Store details have no explicit unrestricted authorization or owner-only access evidence.
+1058	Attachment relatedId/relatedType leave authorization relationship ambiguous despite key/JWT authentication.
+1061	Bank account customerId is inferred customer data without a verified caller-owner relationship.
+1064	Coupon redemption customerId is a business reference rather than a proven subject lookup.
+1067	Credential customerId is a target account reference and does not specify who may create or update it.
+1070	Service inventory source_id is a source reference without a verified tenant or owner relation.
+1073	Advisory public_date describes publication timing and RhIdentity authentication does not establish unrestricted access.
+1076	System package listing returns a wrapper without inventory ownership or tenant binding.
+1079	Property owner is real-estate information, not a proven API caller ownership requirement.
+1082	Review write_reviews scope grants a permission but the body/rating/title schema lacks owner lookup evidence.
+1085	getPublicClusterInfo naming suggests public metadata, but Basic/Bearer requirements leave unrestricted access unclear.
+1088	Change request detail returns action/data/rules without a verified owner or required caller role.
+1091	Credential ACL and creator audit fields do not supply a usable caller authorization binding.
+1094	Key created_by and organization_id are inferred hints and do not resolve who may rotate it.
+1097	Organization export-token rotation has an inferred organization id but no verified caller tenant relationship.
+1100	Scan template creator, organization, site and ACL fields imply multiple unresolved access relationships.
+1103	User client_admin and org_roles describe the target user rather than the caller allowed to reset lockout.
+1106	Dataset deletion organizationId is inferred response metadata without a verified tenant lookup.
+1109	Model deletion organizationId is inferred metadata and not a verified caller organization relation.
+1112	CRM account owner and creator are sales assignment fields without a verified authorization lookup.
+1115	Action user and user_guid filtering do not prove caller ownership of action results.
+1118	Call user is inferred activity attribution without an explicit owner-only restriction.
+1121	Activity user_guid is an audit/filter identity without a verified caller binding.
+1124	Batch label processing schema contains output options, not batch ownership evidence.
+1127	Script tag account_id is inferred and the read scope does not verify caller account ownership.
+1130	Inline script tag account_id lacks a verified subject or tenant relation despite write permission scope.
+1133	Audio descriptor listing supplies only pagination under basic/access-code authentication without a supported policy rule.
+1136	Collection owners/editors/viewers and role_assignments imply ACL alternatives, not a verified single owner or role policy.
+1139	Alert teamId is inferred metadata and lacks a verified caller team lookup.
+1142	Annotation userId identifies an annotation author, not authorization to retrieve the enclosing alert.
+1145	Alert overview teamId and users are flattened metadata without a verified tenant binding.
+1148	Category listing teamId path has no corresponding tenant column in the category schema.
+1151	Authenticated-user summary identifies self context but company lookup and authorization binding remain unspecified.
+1154	Check-in CompanyMonitor scope does not establish an application role or a verified user/company relation.
+1157	Emergency declaration identifies a user and company but the inferred schema does not resolve caller authorization.
+1160	Ending monitoring has CompanyMonitor permission alternatives and no verified owner or tenant lookup.
+1163	Itinerary update user/company fields are flattened and the scope does not prove a caller role.
+1166	Device action listing gives action options without device owner or explicit unrestricted-access evidence.
+1169	Summary explicitly requires subuser assignment to the caller, but the schema has no parent-user assignment column.
+1172	Organization member role/userId describe the invited member and do not identify the inviter's authority.
+1175	Organization audit projectId/userId are filters rather than verified organization ownership columns.
+1178	Organization integration credentials provide no caller organization binding or explicit required role.
+1181	Organization import job status lacks an organization column and verified lookup relation.
+1184	Summary explicitly scopes social connection to authenticated user, but the schema lacks a connection-owner column.
+1187	Following user_id is the target followed account, not an ownership match with the caller.
+1190	Playlist user_id, sharing and embeddable_by imply visibility variants without a verified access policy.
+1193	Track sharing/access and client-ID authentication do not establish unrestricted or owner-only access.
+1196	Comment user_id describes the new author, not authorization to the target track.
+1199	My-contract delivery has a self-context path but only a cargo/contract wrapper without owner lookup.
+1202	Spin music metadata requires token authentication and no specific owner, role or public policy is provided.
+1205	Shopping-item username and hash are inferred response fields without a verified caller identity binding.
+1208	Recipe search author is a search filter, not ownership; API-key security does not specify a policy label.
+1211	Player TeamID identifies a sports team, not an authorization tenant.
+1214	Projected statistics TeamID is a sports entity and API-key authentication provides no tenant policy.
+1217	Season statistics TeamID is sports metadata rather than caller tenancy.
+1220	Album available_markets and restrictions indicate possible access conditions not resolved by OAuth authentication.
+1223	Audiobook chapter pagination and OAuth authentication do not identify a required subscription tier or owner.
+1226	Summary scopes comments to access-token user, but toId targets the reply recipient and flattened owner/user_id binding is ambiguous.
+1229	User inbox requires read_inbox scope but the response has no verified user-owner lookup.
+1232	Unread notifications require read_inbox scope without a verified subject binding for path id.
+1235	Top answers include owner and editor metadata, while the summary does not affirm unrestricted API authorization.
+1238	Top-tag user_id identifies the target user but does not prove a self-only or unrestricted access rule.
+1241	Legal entity tenant_id and public flag imply unresolved visibility alternatives without verified caller tenancy.
+1244	Administration legal_entity_id is an inferred reference without caller authorization semantics.
+1247	Campaign sender_id is message attribution and does not verify who may update the campaign.
+1250	Channel memberships, grants, teams and creator fields imply complex ACLs without a resolvable single policy label.
+1253	Channel update grants, team and created_by are flattened metadata without an explicit owner or role binding.
+1256	External bank-account deletion has account path but no corresponding owner/tenant lookup fields.
+1259	External-account deletion returns only currency/deleted/id/object and no caller account binding.
+1262	Application-fee refund fee reference is not a verified ownership relation to the authenticated caller.
+1265	Application-fee refunds return a list wrapper without a verified account or owner relation.
+1268	Annotation update identifies two resources but supplies no owner, tenant or required caller role.
+1271	Message-attempt listing returns only pagination and lacks app/message authorization evidence.
+1274	Card metadata has unknown security and no explicit unrestricted API access policy.
+1277	Authentication provider organization_id is inferred and lacks a verified caller tenant binding.
+1280	Billing group organization_id is response metadata rather than a verified tenant lookup.
+1283	Call-control application settings have no owner or tenant relationship despite bearer authentication.
+1286	Car-park occupancy has unknown security and no affirmative unrestricted API policy.
+1289	Event awards require an API key but no supported owner, role or public rule is specified.
+1292	Dam racing results use basic authentication without a specific subscription tier or authorization policy.
+1295	Horse results require basic authentication but no explicit membership tier or public-access statement is supplied.
+1298	Summary explicitly describes a private user denylist, but the schema lacks an owner field or verified denylist key binding.
+1301	Event images have unknown security and no explicit unrestricted access evidence.
+1304	Gym article gymId and createdUser are business metadata without a verified caller relation.
+1307	Package status update userName is a query input and the boolean result provides no ownership binding.
+1310	Payment-state lookup identifies requestId but provides no owner relationship or explicit public policy.
+1313	Device accumulator deviceId identifies the device without an authenticated owner mapping.
+1316	Personal-list creation implies user context but has no user ownership column or verified path binding.
+1319	Personal-list item addition returns only item arrays without verified list ownership.
+1322	Post user_id is author metadata and no owner-only read or affirmative public access is specified.
+1325	Search by user_id is a content filter rather than proof of caller identity matching.
+1328	Device agent details lack security and a verified device-owner relationship.
+1331	Check detail pagination has no verified subject or account relationship.
+1334	Report created_by is inferred creator metadata without a verified owner lookup.
+1337	Survey metadata requires basic authentication but has no specified owner or role policy.
+1340	User follow check has self context but webchannel_id is the target channel and no caller binding is provided.
+1343	Address account_sid and accountSid_authToken suggest account context but do not verify tenant-versus-personal binding.
+1346	Address account_sid is inferred response data without a verified caller account relationship.
+1349	Application account_sid and public_application_connect_enabled do not establish retrieval authorization.
+1352	Authorized-connect-app permissions describe the app grant rather than a verified caller account lookup.
+1355	Available phone-number listing has AccountSid path but only a paging wrapper and no tenant binding.
+1358	Calendar event owner is a flattened relationship and attendee access alternatives are unspecified.
+1361	Email history receiver and sender create competing access subjects without a verified binding.
+1364	Direct-message participant_id and user-token authentication imply conversation access, but the wrapper lacks participant lookup evidence.
+1367	List update write scope and updated boolean do not establish list ownership.
+1370	Space creator_id, host_ids and ticket status indicate varying relationships without a verified fixed access policy.
+1373	Webhook logs return pagination only and no verified webhook-owner mapping.
+1376	Funding payorId and sourceAccountId are payment references without a verified caller relationship.
+1379	Login verification requires email/token evidence; anonymous security does not imply unrestricted token issuance.
+1382	DNS creator and teamId filter are inferred hints without verified owner or tenant matching.
+1385	Edge config creator and teamId do not resolve a verified caller ownership or organization binding.
+1388	Mybookings uses voucher/email filters and flattened userId without a verified authenticated-subject lookup.
+1391	Video privacy, purchases and user metadata indicate access variants; broad OAuth scopes do not resolve them.
+1394	Channel category listing requires OAuth permissions without an explicit unrestricted or owner-specific policy.
+1397	Moderator is the requested resource, not a proven required caller role; account metadata does not resolve authorization.
+1400	Channel followers are resource data and broad scopes do not imply subscription membership or ownership.
+1403	Activity ownerUser, customer and projectOwnerGuid are competing inferred relationships without verified access semantics.
+1406	Activity participantGuid is a target participant reference, not a verified caller ownership binding.
+1409	Address createdBy/customer are flattened references without a verified subject or tenant relationship.
+1412	Customer location corporateId and warehouse references do not establish the caller's tenant or ownership.
+1415	Sales order ownerId/projectId/customer are inferred hints and no definitive owner-versus-tenant binding is supplied.
+1418	Sales order line branch/supplier/projectTaskId do not establish caller authorization to the order.
+1421	Environment ownerId and organizationId both appear in flattened data without a verified lookup or policy precedence.
+1424	Environment archive has competing ownerId and organizationId hints with no verified authorization binding.
+1427	Environment heartbeat-token ownerId and organizationId are inferred hints without verified access rules.
+1430	Environment start has both owner and organization metadata but no verified binding or policy precedence.
+1433	Switch credentials username identifies the monitored device login, not the API caller's ownership.
+1436	Brocade switch username/password are device credentials and do not establish caller access.
+1439	SNMP username and passwords are configuration values rather than a proven authorization identity.
+1442	Cisco switch device credentials do not define caller owner, tenant or role authorization.
+1445	Cisco SNMP configuration username is a protocol credential, not the caller ownership key.
+1448	Album-comment author and groupId are flattened metadata with unspecified mutation authorization.
+1451	Album review user metadata does not imply owner-only retrieval and public access is not explicit.
+1454	Artist-comment author data lacks a verified comment-to-subject lookup or access policy.
+1457	Creating artist comments returns author metadata but does not establish caller authorization to the artist resource.
+1460	Account location detail has no account column or verified tenant relationship.
+1463	Your-account call logs imply account scope but the wrapper provides no verified account-owner lookup.
+1466	Self-call termination has accountId/userId hints but no verified identity binding or personal-versus-account precedence.
+1469	Self-call unhold has inferred accountId/userId fields and unresolved lookup semantics.
+1472	Self-call voicemail transfer contains competing accountId/userId hints without verified authorization binding.
+1475	Catalog attachment update requires app credentials but has no owner or tenant lookup.
+1478	Event ticket issuer scope and issuerId filter do not identify a caller role or verified issuer relationship.
+1481	Flight-class issuerName is display metadata and issuer OAuth scope does not prove ownership lookup.
+1484	Asset deletion declares only a read scope, and createdBy lacks a verified authorization binding.
+1487	Dataset deletion declares a read scope and inferred createdBy does not resolve authorization.
+1490	Deployment-environment organizationId is inferred metadata without a verified caller tenant relationship.
+1493	Document createdBy/updatedBy are audit data and do not prove ownership for patching.
+1496	Job update returns code/message/values only, with no caller access evidence.
+1499	The __admin mapping namespace describes management API location but gives no explicit required application role.
+1502	Timesheet EmployeeID is a business reference without a verified caller subject relation.
+1505	Duplicating customer invoice customerId does not establish whether caller is that customer or billing staff.
+1508	Provider invoice providerId is a vendor reference without a verified caller ownership or tenant binding.
+1511	Historical account balances return only account wrapper and unknown security.
+1514	Transaction summary accountId is a query filter with no verified caller account relationship.
+1517	Provider detail is a wrapper with unknown security and no affirmative public-access evidence.
+1520	Budget account details lack a user or tenant reference despite authenticated nested budget path.
+1523	Budget category grouping is financial organization, not a verified authorization tenant relationship.
+1526	Webhook ownerId and teamId filter imply competing personal/team ownership without verified lookup evidence.
+1529	Podcast author/ownerEmail/ownerName are publishing metadata without a verified API subject mapping.
+1532	Episode author is attribution metadata and no podcast ownership binding is supplied.
+1535	Account billing address update lacks account lookup or explicit caller-role evidence.
+1538	Locked account settings are configuration values and do not identify who may retrieve them.
+1541	Account options update supplies billing settings without verified owner/tenant authorization.
+1544	Phone account setup exposes emergency address and extension only, without caller account binding.
+1547	Plan information is the account resource being read, not an explicit required caller membership tier.
+1550	Email template createdBy is inferred audit metadata without a verified owner-only access rule.
+1553	Notification requiredAuth config describes outbound callout security rather than caller authorization.
+1556	Bulk-job file CreatedById is inferred audit data and does not verify access to the parent job.
+1559	Custom record CreatedById/UpdatedById are audit fields without verified ownership lookup.
+1562	Dashboard block username path has no corresponding owner column or verified subject mapping.
+1565	Dashboard username path suggests a user context but schema lacks an owner lookup field.
+1568	Feed visibility/shared_with indicate multiple access alternatives without a resolved owner-only rule.
+1571	Feed data feed_id/group_id do not establish a verified relationship to path username.
+1574	Feed chart response has only metadata and no verified username ownership binding.
+1577	Artistic-image task response contains image URLs without a verified task owner relation.
+1580	Flight-order ownerOfficeId identifies an office, not a verified API caller subject or tenant binding.
+1583	Collaborator deletion returns only message/modelState without explicit caller role or owner lookup.
+1586	User deletion provides no self-only or admin requirement and no usable user lookup schema.
+1589	Article attachment creator and impersonator references are audit identities without a verified authorization policy.
+1592	Billing-code department is configuration data rather than a verified tenant or caller role.
+1595	Expense UserIDFK/ProjectIDFK names suggest relationships but response-derived schema does not verify keys or caller access.
+1598	Payment AccountIDFK and CustomerIDFK are inferred business references with ambiguous caller ownership.
+1601	Support plan cancellation concerns a subscription resource and does not specify a required caller membership tier.
+1604	Domain-controller tenantId is inferred and user_impersonation scope does not prove tenant matching.
+1607	Playlist popularity statistics have unknown security and no explicit unrestricted access rule.
+1610	My-music favourite mutation has self context but a response wrapper without caller ownership binding.
+1613	Transaction void response lacks account/owner relation or an explicit caller role.
+1616	Order customer and seller describe competing business parties without a verified access policy.
+1619	Screenshot status API-key authentication and shared_url do not establish owner-only or unrestricted access.
+1622	Status update user_id is inferred metadata without a verified subject lookup for queue movement.
+1625	Data-type namespace is a logical namespace rather than a verified caller tenant relationship.
+1628	Schema namespace and user access credentials do not establish a specific ownership policy.
+1631	Organizer attendee listing organizerkey is inferred event metadata and lacks a verified caller binding.
+1634	Admin namespace suggests management but the system cache operation supplies no explicit application-role requirement.
+1637	E-commerce customerId is a business customer target and not a proven caller identity.
+1640	Order customerId and privateAdminNotes do not prove owner-only access or an admin bypass.
+1643	CRM account ownership describes a business attribute and relation/user are flattened ambiguous references.
+1646	CRM call relation account/project/user fields do not identify a verified authorization owner.
+1649	CRM comment relation user/account/project metadata lacks a verified subject binding.
+1652	Job skills are occupation metadata but supplied security is unknown rather than explicitly public.
+1655	Price provider/providerNetworkIds refer to transport suppliers, not verified caller tenants.
+1658	Provider resource metadata does not establish caller tenancy or explicit unrestricted API access.
+1661	Protein query returns research pagination data with unknown authorization requirements.
+1664	Record search wskey and view metadata do not supply an explicit public-access or caller policy.
+1667	Market statistics have unknown security and no affirmative unrestricted endpoint statement.
+1670	Character attributes require skills scope but provide no character-to-authenticated-subject lookup.
+1673	Character calendar event data lacks a verified owner binding despite character OAuth scope.
+1676	Utility consent concerns a document and plan choice, not a caller membership tier or verified owner mapping.
+1679	Check performed-by/entity/organization data are risk-assessment metadata without a resolved caller authorization relation.
+1682	Sentiment document id identifies analysis input, while user-key authentication alone supplies no supported policy label.
+1685	Training organizers array does not establish which organizer is the caller or a verified owner lookup.
+1688	Account webinars return only a wrapper with no account-to-caller binding.
+1691	Authenticated user requests group access, so existing tenant matching would be inappropriate and no other supported policy is specified.
+1694	Summary limits members to those viewable by the caller but does not define the required visibility rule.
+1697	Group member access_level describes the target member, not the updater's required role.
+1700	Hook deletion has no explicit admin requirement or owner relation despite token authentication.
+1703	Hotel availability business metadata lacks explicit unrestricted access or caller authorization evidence.
+1706	Reservation cancellation response contains fee/status data without a verified owner lookup.
+1709	Summary explicitly excludes the free plan and requires donation, establishing a donor membership requirement.
+1712	Podcast author is content attribution and partner/API-key authentication does not establish owner access.
+1715	User account reference is inferred and no self-only or administrative retrieval rule is supplied.
+1718	Functionality action result has no owner or tenant lookup despite token authentication.
+1721	Team invoice-item path has no team lookup column or verified caller team relation.
+1724	Email user is an inferred reference and public flag does not establish who may update the address.
+1727	Credit-card customer is an inferred payment reference and namespace does not establish caller ownership.
+1730	Invoice items reference invoice but lack namespace/tenant or authenticated-owner binding.
+1733	Lab-test definition lookup has unknown security and no explicit unrestricted authorization statement.
+1736	Location public_content scope is a permission label rather than affirmative unrestricted object authorization.
+1739	Removing current user's like scopes a relationship, but the response wrapper contains no caller/like lookup.
+1742	Relay configuration creator roles and policy are metadata without the required caller permission.
+1745	Audit-log member.role describes an event actor, not the caller permitted to read the event.
+1748	Project-dependent flags return a wrapper without verified caller project tenancy.
+1751	Participation projectId and userId are competing inferred relationships without a verified caller binding.
+1754	Organization unit id/parentId establish hierarchy metadata but not caller tenant membership.
+1757	Project orgId and createdBy are inferred and do not resolve authorization to create under orgid.
+1760	Project createdBy/orgId metadata provides no verified personal-versus-tenant authorization binding.
+1763	Participant deletion returns only error fields and no organization/project access relationship.
+1766	County tier2 path may denote API version/service tier but does not explicitly require a membership tier.
+1769	Authorization client_username/password are credential payload data, not proof of caller ownership.
+1772	Ride destination update requires rides.request permission but has no ride owner lookup columns.
+1775	Administrative division is geographic data, not an application admin role; authentication policy remains unspecified.
+1778	Merchant transfer partnerId path has only a response wrapper with no verified tenant binding.
+1781	Partner notification registration names business partners but lacks a verified caller-partner access relation.
+1784	Market vehicle models have unknown security and no affirmative unrestricted API policy.
+1787	Artist albums require a key but no public, owner or specific membership policy is supplied.
+1790	Server owner is inferred and optional role_id scheme does not identify an allowed application role.
+1793	Account-user update userid is a target user and no verified caller ownership or role requirement is supplied.
+1796	User role retrieval returns the target role, not the required caller role; server access remains unspecified.
+1799	Account holding accountId is a financial reference without a verified authenticated owner relation.
+1802	Holding update fields omit account ownership and caller authority for the enclosing account.
+1805	Savings strategy accountId links business data but does not verify caller identity matching.
+1808	Fact-finder account owner/ownerDependentId are financial-planning parties, not proven API caller identities.
+1811	Account owner_ids and roles_allowed describe unresolved multiple access alternatives rather than a single verified rule.
+1814	Pro requirement applies only to granular scopes, not all environment-variable creation; account authorization remains unspecified.
+1817	Environment updated_by is audit metadata and does not establish account access for setting a value.
+1820	Build status identifies deploy_id but no verified caller or tenant relationship.
+1823	Dataset record search requires API-key/basic authentication without an explicit public or tenant policy.
+1826	Currency issuer organization is issuer metadata, not an authorization tenant or explicit public rule.
+1829	Organization directory site/source_register_org are descriptive fields without verified caller tenancy or public-access evidence.
+1832	Clinical-trial document organisation denotes trial/business metadata without an API authorization policy.
+1835	Trial source record public_title describes a field, not an explicit unrestricted access rule.
+1838	Analysis plug-in IsBrowsable and configuration fields do not establish authorization to read it.
+1841	Competitor companyId is a query target and no supported caller policy follows from user-key authentication.
+1844	CompanyPremiumAPI names a product endpoint but does not explicitly require a caller subscription tier.
+1847	Account is_paying describes the account being deleted, not a caller membership requirement or ownership proof.
+1850	User roles filter and response roles describe target users, not the searching caller's required role.
+1853	User account/roles metadata does not specify caller authority to update another user.
+1856	Event free flag describes event pricing and does not make authenticated API retrieval unrestricted.
+1859	Domain DNS configuration lacks a verified caller domain ownership relation.
+1862	SPF verification result supplies no domain-to-subject lookup or explicit required caller role.
+1865	TSIG key creation uses an API key but lacks server ownership or a stated caller role.
+1868	DNS zone account is inferred metadata and does not verify caller authorization to server/zone.
+1871	Rule author is change attribution and projectId is a filter without a verified tenant relation.
+1874	Crawl author is attribution metadata and projectId does not establish enforced caller tenancy.
+1877	ExplainUrl project is an inferred relationship without a verified caller tenant binding.
+1880	Action channelId/functionId describe configuration and no owner or tenant access relation is supplied.
+1883	Channel userId identifies a target user record without a verified caller matching policy.
+1886	Channel function metadata has no corresponding owner or tenant lookup columns.
+1889	Company economy companyId is a business-information target, not proof of caller tenancy.
+1892	Bucket team is inferred data and api:read scope does not verify a caller team relationship.
+1895	Team agents have no team column or verified caller binding despite team:read permission.
+1898	School rankings app credentials and unknown security do not establish unrestricted authorization.
+1901	Collection analysis job/configuration identifiers lack a verified owner or caller access rule.
+1904	User-entity creation config_id identifies configuration but no ownership binding is supplied.
+1907	Venue search has unknown security and no explicit unrestricted-access statement.
+1910	User attended-setlist list has no owner lookup or explicit public policy.
+1913	Open-house ownerName and agent metadata concern real-estate parties rather than authenticated caller ownership.
+1916	Player statistics accountId and username identify the player being queried, not a proven caller ownership constraint.
+1919	JPEG insertion into a study identifies studyid but does not provide patient/study authorization binding.
+1922	Integration owner path can denote a user or organization, and schema supplies only enabled/id/name.
+1925	Anonymous authentication alternative and owner template path do not alone prove unrestricted template-version visibility.
+1928	Private-template visibility retrieval returns only private boolean without verified owner binding.
+1931	Transaction customer_id and sub_account_id are inferred commercial references without a verified caller relation.
+1934	SMS batch customerid is inferred and JWT authentication does not establish ownership lookup.
+1937	Language metadata requires JWT authentication but no explicit public or policy-specific access rule is supplied.
+1940	Trading strategy author, owner and permissions are unresolved ACL metadata without verified lookup semantics.
+1943	Trading account accountid identifies the account itself but not its authenticated owner.
+1946	Trade account is an inferred financial reference with no verified caller authorization binding.
+1949	Transit-feed version listing key query and unknown security do not affirm unrestricted access.
+1952	Cluster change log returns a pagination wrapper without a verified tenant or owner relation.
+1955	Listener zone_key/domain_keys identify routing topology rather than caller tenancy or ownership.
+1958	Health endpoint returns per-API usage, quota and key-failure metrics, not an unrestricted liveness probe.
+1961	Attachment user and map_id are inferred relationships without a verified deletion authority.
+1964	Invitation invited_by_user and user are distinct subjects and acceptance authorization is not bound to a verified key.
+1967	Event owner_id/user are inferred and do not establish a verified delete authorization lookup.
+1970	Map owner_id is a response hint and visibility does not prove the caller may delete it.
+1973	Map attachments have map_id/user references without a verified read authorization policy.
+1976	Advisor company and plan describe the advisor rather than caller tenancy or required membership.
+1979	API-public namespace and scheduled override user do not establish unrestricted access or ownership.
+1982	Override assignment team/user are scheduling relationships, not verified caller authorization bindings.
+1985	User contact device has no subject column or verified owner lookup for user/contactId.
+1988	Contact email lookup names a user but the response provides no verified ownership relationship.
+1991	Analysis accessKey/secretKey query credentials and payload wrapper do not define object authorization.
+1994	Classifier key credentials authenticate access but wrapper fields lack owner, tenant or caller-role evidence.
+1997	Site admin_url and capability flags are configuration metadata, not a required caller admin role.
+2000	Site backup canBackup is response capability metadata without a verified owner or caller role binding.
+2003	Site log userid is an audit actor field rather than a proven read-access owner.
+2006	Site validation log userid is attribution data without verified caller ownership of the site.
+2009	Air-quality location parameters select geography and key query does not provide explicit unrestricted authorization evidence.
+2012	Document authorID denotes literary attribution, not authenticated API ownership; public access is not explicit.
+2015	Live-stream connection and playback fields do not establish caller ownership despite API/access-key authentication.
+2018	Article review customerNickname is attribution metadata and no explicit unrestricted-access rule is supplied.
+2021	User company/userId data does not establish self-only retrieval or a verified caller tenant binding.
+2024	Message unread update has messageId but no owner/recipient lookup or explicit caller policy.

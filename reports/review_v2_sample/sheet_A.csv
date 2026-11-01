@@ -1,0 +1,1303 @@
+﻿id,source,method,path,security_state,핸들러 코드(전체),OAS operation 발췌,현재 label,label_before_override,사유 분류,모델 rationale 원문,reviewer_label,reviewer_confidence,reviewer_note
+gitea:post:/user/emails,opensource,POST,/user/emails,declared,"// ---- route middleware chain (api.go): sudo(), tokenRequiresScopes(auth_model.AccessTokenScopeCategoryUser), reqToken(), contextAuthenticatedUser(), checkTokenPublicOnly(), rejectPublicOnly()
+
+// sudo(): site admins may impersonate another user via ?sudo=; non-admins get 403 only when they try to sudo. Not an authorization rule for the endpoint.
+
+// tokenRequiresScopes(category): OAuth2/access-token scope check (read for GET, write for mutations). Not a user-object relationship check.
+
+// reqToken(): authentication only — the request must be signed in with a token (401 otherwise). No authorization.
+
+// contextAuthenticatedUser(): sets ctx.ContextUser = ctx.Doer (the authenticated user itself).
+
+// checkTokenPublicOnly(): tokens restricted to public-only may not access private resources.
+
+// rejectPublicOnly(): public-only tokens are rejected (403).
+
+// ---- handler user.AddEmail (routers/api/v1/user/email.go:43-91)
+func AddEmail(ctx *context.APIContext) {
+
+	if user_model.IsFeatureDisabledWithLoginType(ctx.Doer, setting.UserFeatureManageCredentials) {
+		ctx.APIErrorNotFound(""emails are not allowed to be changed"")
+		return
+	}
+
+	form := web.GetForm[*api.CreateEmailOption](ctx)
+	if len(form.Emails) == 0 {
+		ctx.APIError(http.StatusUnprocessableEntity, ""Email list empty"")
+		return
+	}
+
+	if err := user_service.AddEmailAddresses(ctx, ctx.Doer, form.Emails); err != nil {
+		ctx.APIErrorAuto(err)
+		return
+	}
+
+	emails, err := user_model.GetEmailAddresses(ctx, ctx.Doer.ID)
+	if err != nil {
+		ctx.APIErrorInternal(err)
+	// ...
+}","{
+ ""summary"": ""Add email addresses"",
+ ""operationId"": ""userAddEmail""
+}",manual_review_required,,(가) 요청자-객체 관계 미확인,"description: 요청자는 인증이 필요하지만, 특정 사용자 객체와의 관계나 추가 인가 조건이 명확하지 않음; 판단: 접근 조건이 확정되지 않아 보류",,,
+gitea:get:/packages/{owner}/{type}/{name}/{version}/files,opensource,GET,/packages/{owner}/{type}/{name}/{version}/files,declared,"// ---- route middleware chain (api.go): sudo(), reqToken(), tokenRequiresScopes(auth_model.AccessTokenScopeCategoryPackage), context.UserAssignmentAPI(), context.PackageAssignmentAPI(), reqPackageAccess(perm.AccessModeRead), checkTokenPublicOnly()
+
+// sudo(): site admins may impersonate another user via ?sudo=; non-admins get 403 only when they try to sudo. Not an authorization rule for the endpoint.
+
+// reqToken(): authentication only — the request must be signed in with a token (401 otherwise). No authorization.
+
+// tokenRequiresScopes(category): OAuth2/access-token scope check (read for GET, write for mutations). Not a user-object relationship check.
+
+// context.UserAssignmentAPI(): resolves {username} into ctx.ContextUser (404 if missing); no authorization.
+
+// context.PackageAssignmentAPI(): services/context helper (request context setup).
+
+func reqPackageAccess(accessMode perm.AccessMode) func(ctx *context.APIContext) {
+	return func(ctx *context.APIContext) {
+		if ctx.Package.AccessMode < accessMode && !ctx.IsUserSiteAdmin() {
+			ctx.APIError(http.StatusForbidden, ""user should have specific permission or be a site admin"")
+			return
+		}
+	}
+}
+
+// checkTokenPublicOnly(): tokens restricted to public-only may not access private resources.
+
+// ---- handler packages.ListPackageFiles (routers/api/v1/packages/package.go:195-234)
+func ListPackageFiles(ctx *context.APIContext) {
+
+	apiPackageFiles := make([]*api.PackageFile, 0, len(ctx.Package.Descriptor.Files))
+	for _, pfd := range ctx.Package.Descriptor.Files {
+		apiPackageFiles = append(apiPackageFiles, convert.ToPackageFile(pfd))
+	}
+
+	ctx.JSON(http.StatusOK, apiPackageFiles)
+}","{
+ ""summary"": ""Gets all files of a package"",
+ ""operationId"": ""listPackageFiles"",
+ ""parameters"": [
+  {
+   ""name"": ""owner"",
+   ""in"": ""path"",
+   ""required"": true
+  },
+  {
+   ""name"": ""type"",
+   ""in"": ""path"",
+   ""required"": true
+  },
+  {
+   ""name"": ""name"",
+   ""in"": ""path"",
+   ""required"": true
+  },
+  {
+   ""name"": ""version"",
+   ""in"": ""path"",
+   ""required"": true
+  }
+ ]
+}",manual_review_required,,(가) 요청자-객체 관계 미확인,"description: 다양한 인증 및 권한 검사 과정이 포함되어 있으나, 특정 소유자나 그룹 구성원 관계가 명시되지 않음; 판단: 접근 조건이 명확히 정의되지 않아 보류",,,
+gitea:get:/packages/{owner},opensource,GET,/packages/{owner},declared,"// ---- route middleware chain (api.go): sudo(), reqToken(), tokenRequiresScopes(auth_model.AccessTokenScopeCategoryPackage), context.UserAssignmentAPI(), context.PackageAssignmentAPI(), reqPackageAccess(perm.AccessModeRead), checkTokenPublicOnly()
+
+// sudo(): site admins may impersonate another user via ?sudo=; non-admins get 403 only when they try to sudo. Not an authorization rule for the endpoint.
+
+// reqToken(): authentication only — the request must be signed in with a token (401 otherwise). No authorization.
+
+// tokenRequiresScopes(category): OAuth2/access-token scope check (read for GET, write for mutations). Not a user-object relationship check.
+
+// context.UserAssignmentAPI(): resolves {username} into ctx.ContextUser (404 if missing); no authorization.
+
+// context.PackageAssignmentAPI(): services/context helper (request context setup).
+
+func reqPackageAccess(accessMode perm.AccessMode) func(ctx *context.APIContext) {
+	return func(ctx *context.APIContext) {
+		if ctx.Package.AccessMode < accessMode && !ctx.IsUserSiteAdmin() {
+			ctx.APIError(http.StatusForbidden, ""user should have specific permission or be a site admin"")
+			return
+		}
+	}
+}
+
+// checkTokenPublicOnly(): tokens restricted to public-only may not access private resources.
+
+// ---- handler packages.ListPackages (routers/api/v1/packages/package.go:22-74)
+func ListPackages(ctx *context.APIContext) {
+
+	listOptions := utils.GetListOptions(ctx)
+
+	apiPackages, count, err := searchPackages(ctx, &packages.PackageSearchOptions{
+		OwnerID:    ctx.Package.Owner.ID,
+		Type:       packages.Type(ctx.FormTrim(""type"")),
+		Name:       packages.SearchValue{Value: ctx.FormTrim(""q"")},
+		IsInternal: optional.Some(false),
+		Paginator:  &listOptions,
+	})
+	if err != nil {
+		ctx.APIErrorInternal(err)
+		return
+	}
+
+	ctx.SetLinkHeader(count, listOptions.PageSize)
+	ctx.SetTotalCountHeader(count)
+	ctx.JSON(http.StatusOK, apiPackages)
+}","{
+ ""summary"": ""Gets all packages of an owner"",
+ ""operationId"": ""listPackages"",
+ ""parameters"": [
+  {
+   ""name"": ""owner"",
+   ""in"": ""path"",
+   ""required"": true
+  },
+  {
+   ""name"": ""page"",
+   ""in"": ""query"",
+   ""required"": null
+  },
+  {
+   ""name"": ""limit"",
+   ""in"": ""query"",
+   ""required"": null
+  },
+  {
+   ""name"": ""type"",
+   ""in"": ""query"",
+   ""required"": null
+  },
+  {
+   ""name"": ""q"",
+   ""in"": ""query"",
+   ""required"": null
+  }
+ ]
+}",manual_review_required,,(가) 요청자-객체 관계 미확인,"description: 다양한 인증 및 권한 검사 과정이 포함되어 있으나, 요청자와 객체 간의 관계를 명확히 확인할 수 있는 조건이 부족함; 판단: 접근 조건이 확정되지 않아 보류",,,
+gitea:get:/user/blocks/{username},opensource,GET,/user/blocks/{username},declared,"// ---- route middleware chain (api.go): sudo(), tokenRequiresScopes(auth_model.AccessTokenScopeCategoryUser), reqToken(), contextAuthenticatedUser(), checkTokenPublicOnly(), rejectPublicOnly(), context.UserAssignmentAPI(), checkTokenPublicOnly()
+
+// sudo(): site admins may impersonate another user via ?sudo=; non-admins get 403 only when they try to sudo. Not an authorization rule for the endpoint.
+
+// tokenRequiresScopes(category): OAuth2/access-token scope check (read for GET, write for mutations). Not a user-object relationship check.
+
+// reqToken(): authentication only — the request must be signed in with a token (401 otherwise). No authorization.
+
+// contextAuthenticatedUser(): sets ctx.ContextUser = ctx.Doer (the authenticated user itself).
+
+// checkTokenPublicOnly(): tokens restricted to public-only may not access private resources.
+
+// rejectPublicOnly(): public-only tokens are rejected (403).
+
+// context.UserAssignmentAPI(): resolves {username} into ctx.ContextUser (404 if missing); no authorization.
+
+// ---- handler user.CheckUserBlock (routers/api/v1/user/block.go:33-50)
+func CheckUserBlock(ctx *context.APIContext) {
+
+	shared.CheckUserBlock(ctx, ctx.Doer)
+}","{
+ ""summary"": ""Check if a user is blocked by the authenticated user"",
+ ""operationId"": ""userCheckUserBlock"",
+ ""parameters"": [
+  {
+   ""name"": ""username"",
+   ""in"": ""path"",
+   ""required"": true
+  }
+ ]
+}",manual_review_required,,(가) 요청자-객체 관계 미확인,"description: 요청자는 인증된 사용자여야 하며, 특정 사용자 차단 여부를 확인하는 조건이 명시되어 있으나, 접근 조건이 명확히 정의되지 않음; 판단: 인증만 확인하고 요청자-객체 관계가 불확실하여 보류",,,
+gitea:get:/user/actions/runners/{runner_id},opensource,GET,/user/actions/runners/{runner_id},declared,"// ---- route middleware chain (api.go): sudo(), tokenRequiresScopes(auth_model.AccessTokenScopeCategoryUser), reqToken(), contextAuthenticatedUser(), checkTokenPublicOnly(), rejectPublicOnly(), reqToken()
+
+// sudo(): site admins may impersonate another user via ?sudo=; non-admins get 403 only when they try to sudo. Not an authorization rule for the endpoint.
+
+// tokenRequiresScopes(category): OAuth2/access-token scope check (read for GET, write for mutations). Not a user-object relationship check.
+
+// reqToken(): authentication only — the request must be signed in with a token (401 otherwise). No authorization.
+
+// contextAuthenticatedUser(): sets ctx.ContextUser = ctx.Doer (the authenticated user itself).
+
+// checkTokenPublicOnly(): tokens restricted to public-only may not access private resources.
+
+// rejectPublicOnly(): public-only tokens are rejected (403).
+
+// ---- handler user.GetRunner (routers/api/v1/user/runners.go:52-72)
+func GetRunner(ctx *context.APIContext) {
+	shared.GetRunner(ctx, ctx.Doer.ID, 0, ctx.PathParamInt64(""runner_id""))
+}","{
+ ""summary"": ""Get a user-level runner"",
+ ""operationId"": ""getUserRunner"",
+ ""parameters"": [
+  {
+   ""name"": ""runner_id"",
+   ""in"": ""path"",
+   ""required"": true
+  }
+ ]
+}",manual_review_required,,(가) 요청자-객체 관계 미확인,"description: 요청자는 인증이 필요하지만, 특정 객체에 대한 접근 조건이 명확히 정의되지 않음; 판단: 인증만 확인하고 요청자-객체 관계가 불확실하여 보류",,,
+gitea:patch:/user/actions/runners/{runner_id},opensource,PATCH,/user/actions/runners/{runner_id},declared,"// ---- route middleware chain (api.go): sudo(), tokenRequiresScopes(auth_model.AccessTokenScopeCategoryUser), reqToken(), contextAuthenticatedUser(), checkTokenPublicOnly(), rejectPublicOnly(), reqToken()
+
+// sudo(): site admins may impersonate another user via ?sudo=; non-admins get 403 only when they try to sudo. Not an authorization rule for the endpoint.
+
+// tokenRequiresScopes(category): OAuth2/access-token scope check (read for GET, write for mutations). Not a user-object relationship check.
+
+// reqToken(): authentication only — the request must be signed in with a token (401 otherwise). No authorization.
+
+// contextAuthenticatedUser(): sets ctx.ContextUser = ctx.Doer (the authenticated user itself).
+
+// checkTokenPublicOnly(): tokens restricted to public-only may not access private resources.
+
+// rejectPublicOnly(): public-only tokens are rejected (403).
+
+// ---- handler user.UpdateRunner (routers/api/v1/user/runners.go:98-126)
+func UpdateRunner(ctx *context.APIContext) {
+	shared.UpdateRunner(ctx, ctx.Doer.ID, 0, ctx.PathParamInt64(""runner_id""))
+}","{
+ ""summary"": ""Update a user-level runner"",
+ ""operationId"": ""updateUserRunner"",
+ ""parameters"": [
+  {
+   ""name"": ""runner_id"",
+   ""in"": ""path"",
+   ""required"": true
+  }
+ ]
+}",manual_review_required,,(가) 요청자-객체 관계 미확인,"description: 요청은 인증을 요구하지만, 특정 사용자 객체와의 관계나 접근 조건이 명확히 정의되지 않음; 판단: 인증만 확인하고 요청자-객체 관계가 불확실하므로 보류",,,
+gitea:get:/repos/{owner}/{repo}/issues/{index}/subscriptions/check,opensource,GET,/repos/{owner}/{repo}/issues/{index}/subscriptions/check,declared,"// ---- route middleware chain (api.go): sudo(), tokenRequiresScopes(auth_model.AccessTokenScopeCategoryIssue), repoAssignment(), checkTokenPublicOnly(), mustEnableIssuesOrPulls, reqToken()
+
+// sudo(): site admins may impersonate another user via ?sudo=; non-admins get 403 only when they try to sudo. Not an authorization rule for the endpoint.
+
+// tokenRequiresScopes(category): OAuth2/access-token scope check (read for GET, write for mutations). Not a user-object relationship check.
+
+// repoAssignment() (api.go): resolves {username}/{reponame}; computes ctx.Repo.Permission = access_model.GetUserRepoPermission(doer, repo); anonymous or unauthorized doer on a private repo -> 404; public repo readable by anyone.
+
+// checkTokenPublicOnly(): tokens restricted to public-only may not access private resources.
+
+// mustEnableIssuesOrPulls: feature/unit enabled check (404 when the unit is disabled); not a caller check.
+
+// reqToken(): authentication only — the request must be signed in with a token (401 otherwise). No authorization.
+
+// ---- handler repo.CheckIssueSubscription (routers/api/v1/repo/issue_subscription.go:157-212)
+func CheckIssueSubscription(ctx *context.APIContext) {
+
+	issue, err := issues_model.GetIssueByIndex(ctx, ctx.Repo.Repository.ID, ctx.PathParamInt64(""index""))
+	if err != nil {
+		if issues_model.IsErrIssueNotExist(err) {
+			ctx.APIErrorNotFound()
+		} else {
+			ctx.APIErrorInternal(err)
+		}
+
+		return
+	}
+
+	watching, err := issues_model.CheckIssueWatch(ctx, ctx.Doer, issue)
+	if err != nil {
+		ctx.APIErrorInternal(err)
+		return
+	}
+	ctx.JSON(http.StatusOK, api.WatchInfo{
+		Subscribed:    watching,
+		Ignored:       !watching,
+	// ...
+}","{
+ ""summary"": ""Check if user is subscribed to an issue"",
+ ""operationId"": ""issueCheckSubscription"",
+ ""parameters"": [
+  {
+   ""name"": ""owner"",
+   ""in"": ""path"",
+   ""required"": true
+  },
+  {
+   ""name"": ""repo"",
+   ""in"": ""path"",
+   ""required"": true
+  },
+  {
+   ""name"": ""index"",
+   ""in"": ""path"",
+   ""required"": true
+  }
+ ]
+}",manual_review_required,,(가) 요청자-객체 관계 미확인,"description: 요청자는 인증이 필요하지만, 특정 사용자-객체 관계나 권한 검사가 명확히 정의되지 않음; 판단: 인증만 확인하고 요청자-객체 관계가 불확실하여 보류",,,
+gitea:post:/user/gpg_keys,opensource,POST,/user/gpg_keys,declared,"// ---- route middleware chain (api.go): sudo(), tokenRequiresScopes(auth_model.AccessTokenScopeCategoryUser), reqToken(), contextAuthenticatedUser(), checkTokenPublicOnly(), rejectPublicOnly()
+
+// sudo(): site admins may impersonate another user via ?sudo=; non-admins get 403 only when they try to sudo. Not an authorization rule for the endpoint.
+
+// tokenRequiresScopes(category): OAuth2/access-token scope check (read for GET, write for mutations). Not a user-object relationship check.
+
+// reqToken(): authentication only — the request must be signed in with a token (401 otherwise). No authorization.
+
+// contextAuthenticatedUser(): sets ctx.ContextUser = ctx.Doer (the authenticated user itself).
+
+// checkTokenPublicOnly(): tokens restricted to public-only may not access private resources.
+
+// rejectPublicOnly(): public-only tokens are rejected (403).
+
+// ---- handler user.CreateGPGKey (routers/api/v1/user/gpg_key.go:251-273)
+func CreateGPGKey(ctx *context.APIContext) {
+
+	form := web.GetForm[*api.CreateGPGKeyOption](ctx)
+	CreateUserGPGKey(ctx, *form, ctx.Doer.ID)
+}","{
+ ""summary"": ""Create a GPG key"",
+ ""operationId"": ""userCurrentPostGPGKey""
+}",manual_review_required,,(가) 요청자-객체 관계 미확인,"description: 요청은 인증을 요구하지만, 특정 사용자 객체와의 관계를 명확히 확인할 수 없음; 판단: 인증만으로는 접근 조건을 확정할 수 없으므로 보류",,,
+gitea:get:/user/following,opensource,GET,/user/following,declared,"// ---- route middleware chain (api.go): sudo(), tokenRequiresScopes(auth_model.AccessTokenScopeCategoryUser), reqToken(), contextAuthenticatedUser(), checkTokenPublicOnly()
+
+// sudo(): site admins may impersonate another user via ?sudo=; non-admins get 403 only when they try to sudo. Not an authorization rule for the endpoint.
+
+// tokenRequiresScopes(category): OAuth2/access-token scope check (read for GET, write for mutations). Not a user-object relationship check.
+
+// reqToken(): authentication only — the request must be signed in with a token (401 otherwise). No authorization.
+
+// contextAuthenticatedUser(): sets ctx.ContextUser = ctx.Doer (the authenticated user itself).
+
+// checkTokenPublicOnly(): tokens restricted to public-only may not access private resources.
+
+// ---- handler user.ListMyFollowing (routers/api/v1/user/follower.go:106-126)
+func ListMyFollowing(ctx *context.APIContext) {
+
+	listUserFollowing(ctx, ctx.Doer)
+}","{
+ ""summary"": ""List the users that the authenticated user is following"",
+ ""operationId"": ""userCurrentListFollowing"",
+ ""parameters"": [
+  {
+   ""name"": ""page"",
+   ""in"": ""query"",
+   ""required"": null
+  },
+  {
+   ""name"": ""limit"",
+   ""in"": ""query"",
+   ""required"": null
+  }
+ ]
+}",manual_review_required,,(가) 요청자-객체 관계 미확인,"description: 요청자는 인증된 사용자여야 하며, 접근 조건이 명확히 정의되지 않음; 판단: 인증만 확인하고 요청자-객체 관계가 불확실하여 보류",,,
+gitea:post:/user/hooks,opensource,POST,/user/hooks,declared,"// ---- route middleware chain (api.go): sudo(), tokenRequiresScopes(auth_model.AccessTokenScopeCategoryUser), reqToken(), contextAuthenticatedUser(), checkTokenPublicOnly(), reqWebhooksEnabled(), rejectPublicOnly()
+
+// sudo(): site admins may impersonate another user via ?sudo=; non-admins get 403 only when they try to sudo. Not an authorization rule for the endpoint.
+
+// tokenRequiresScopes(category): OAuth2/access-token scope check (read for GET, write for mutations). Not a user-object relationship check.
+
+// reqToken(): authentication only — the request must be signed in with a token (401 otherwise). No authorization.
+
+// contextAuthenticatedUser(): sets ctx.ContextUser = ctx.Doer (the authenticated user itself).
+
+// checkTokenPublicOnly(): tokens restricted to public-only may not access private resources.
+
+func reqWebhooksEnabled() func(ctx *context.APIContext) {
+	return func(ctx *context.APIContext) {
+		if setting.DisableWebhooks {
+			ctx.APIError(http.StatusForbidden, ""webhooks disabled by administrator"")
+			return
+		}
+	}
+}
+
+// rejectPublicOnly(): public-only tokens are rejected (403).
+
+// ---- handler user.CreateHook (routers/api/v1/user/hook.go:79-102)
+func CreateHook(ctx *context.APIContext) {
+
+	utils.AddOwnerHook(
+		ctx,
+		ctx.Doer,
+		web.GetForm[*api.CreateHookOption](ctx),
+	)
+}","{
+ ""summary"": ""Create a hook"",
+ ""operationId"": ""userCreateHook""
+}",manual_review_required,,(가) 인증만 확인·인가 조건 없음,"description: 요청에 대한 인증은 필요하지만, 특정 인가 조건이 명확하지 않음; 판단: 여러 인증 방식이 존재하나, 실제 접근 조건이 불확실하여 보류",,,
+gitea:patch:/user/hooks/{id},opensource,PATCH,/user/hooks/{id},declared,"// ---- route middleware chain (api.go): sudo(), tokenRequiresScopes(auth_model.AccessTokenScopeCategoryUser), reqToken(), contextAuthenticatedUser(), checkTokenPublicOnly(), reqWebhooksEnabled(), rejectPublicOnly()
+
+// sudo(): site admins may impersonate another user via ?sudo=; non-admins get 403 only when they try to sudo. Not an authorization rule for the endpoint.
+
+// tokenRequiresScopes(category): OAuth2/access-token scope check (read for GET, write for mutations). Not a user-object relationship check.
+
+// reqToken(): authentication only — the request must be signed in with a token (401 otherwise). No authorization.
+
+// contextAuthenticatedUser(): sets ctx.ContextUser = ctx.Doer (the authenticated user itself).
+
+// checkTokenPublicOnly(): tokens restricted to public-only may not access private resources.
+
+func reqWebhooksEnabled() func(ctx *context.APIContext) {
+	return func(ctx *context.APIContext) {
+		if setting.DisableWebhooks {
+			ctx.APIError(http.StatusForbidden, ""webhooks disabled by administrator"")
+			return
+		}
+	}
+}
+
+// rejectPublicOnly(): public-only tokens are rejected (403).
+
+// ---- handler user.EditHook (routers/api/v1/user/hook.go:105-134)
+func EditHook(ctx *context.APIContext) {
+
+	utils.EditOwnerHook(
+		ctx,
+		ctx.Doer,
+		web.GetForm[*api.EditHookOption](ctx),
+		ctx.PathParamInt64(""id""),
+	)
+}","{
+ ""summary"": ""Update a hook"",
+ ""operationId"": ""userEditHook"",
+ ""parameters"": [
+  {
+   ""name"": ""id"",
+   ""in"": ""path"",
+   ""required"": true
+  }
+ ]
+}",manual_review_required,,(가) 인증만 확인·인가 조건 없음,"description: 요청은 인증을 요구하지만, 특정 인가 조건이 명확하지 않음; 판단: 여러 인증 방식이 존재하나, 실제 접근 조건이 불확실하여 보류",,,
+gitea:delete:/user/blocks/{username},opensource,DELETE,/user/blocks/{username},declared,"// ---- route middleware chain (api.go): sudo(), tokenRequiresScopes(auth_model.AccessTokenScopeCategoryUser), reqToken(), contextAuthenticatedUser(), checkTokenPublicOnly(), rejectPublicOnly(), context.UserAssignmentAPI(), checkTokenPublicOnly()
+
+// sudo(): site admins may impersonate another user via ?sudo=; non-admins get 403 only when they try to sudo. Not an authorization rule for the endpoint.
+
+// tokenRequiresScopes(category): OAuth2/access-token scope check (read for GET, write for mutations). Not a user-object relationship check.
+
+// reqToken(): authentication only — the request must be signed in with a token (401 otherwise). No authorization.
+
+// contextAuthenticatedUser(): sets ctx.ContextUser = ctx.Doer (the authenticated user itself).
+
+// checkTokenPublicOnly(): tokens restricted to public-only may not access private resources.
+
+// rejectPublicOnly(): public-only tokens are rejected (403).
+
+// context.UserAssignmentAPI(): resolves {username} into ctx.ContextUser (404 if missing); no authorization.
+
+// ---- handler user.UnblockUser (routers/api/v1/user/block.go:77-96)
+func UnblockUser(ctx *context.APIContext) {
+
+	shared.UnblockUser(ctx, ctx.Doer, ctx.Doer)
+}","{
+ ""summary"": ""Unblock a user"",
+ ""operationId"": ""userUnblockUser"",
+ ""parameters"": [
+  {
+   ""name"": ""username"",
+   ""in"": ""path"",
+   ""required"": true
+  }
+ ]
+}",manual_review_required,,(가) 인증만 확인·인가 조건 없음,"description: 요청자는 인증이 필요하지만, 특정 사용자와의 관계나 권한 검사가 명확히 정의되지 않음; 판단: 접근 조건이 확정되지 않아 보류",,,
+gitea:post:/org/{org}/repos,opensource,POST,/org/{org}/repos,declared,"// ---- route middleware chain (api.go): sudo(), // FIXME: we need org in context
+			tokenRequiresScopes(auth_model.AccessTokenScopeCategoryOrganization, auth_model.AccessTokenScopeCategoryRepository), reqToken()
+
+// sudo(): site admins may impersonate another user via ?sudo=; non-admins get 403 only when they try to sudo. Not an authorization rule for the endpoint.
+
+// // FIXME: we need org in context
+			tokenRequiresScopes(auth_model.AccessTokenScopeCategoryOrganization, auth_model.AccessTokenScopeCategoryRepository): middleware defined outside api.go or as a local variable (not resolved).
+
+// reqToken(): authentication only — the request must be signed in with a token (401 otherwise). No authorization.
+
+// ---- handler repo.CreateOrgRepoDeprecated (routers/api/v1/repo/repo.go:430-460)
+func CreateOrgRepoDeprecated(ctx *context.APIContext) {
+
+	CreateOrgRepo(ctx)
+}","{
+ ""summary"": ""Create a repository in an organization"",
+ ""operationId"": ""createOrgRepoDeprecated"",
+ ""parameters"": [
+  {
+   ""name"": ""org"",
+   ""in"": ""path"",
+   ""required"": true
+  }
+ ]
+}",manual_review_required,,(가) 인증만 확인·인가 조건 없음,"description: 요청은 인증을 요구하지만, 인가 조건이 명확하지 않음; 판단: 여러 인증 방식이 있으나, 실제 접근 조건이 불확실하여 보류",,,
+gitea:get:/user/orgs,opensource,GET,/user/orgs,declared,"// ---- route middleware chain (api.go): sudo(), reqToken(), tokenRequiresScopes(auth_model.AccessTokenScopeCategoryUser, auth_model.AccessTokenScopeCategoryOrganization), checkTokenPublicOnly()
+
+// sudo(): site admins may impersonate another user via ?sudo=; non-admins get 403 only when they try to sudo. Not an authorization rule for the endpoint.
+
+// reqToken(): authentication only — the request must be signed in with a token (401 otherwise). No authorization.
+
+// tokenRequiresScopes(category): OAuth2/access-token scope check (read for GET, write for mutations). Not a user-object relationship check.
+
+// checkTokenPublicOnly(): tokens restricted to public-only may not access private resources.
+
+// ---- handler org.ListMyOrgs (routers/api/v1/org/org.go:63-85)
+func ListMyOrgs(ctx *context.APIContext) {
+
+	listUserOrgs(ctx, ctx.Doer)
+}","{
+ ""summary"": ""List the current user's organizations"",
+ ""operationId"": ""orgListCurrentUserOrgs"",
+ ""parameters"": [
+  {
+   ""name"": ""page"",
+   ""in"": ""query"",
+   ""required"": null
+  },
+  {
+   ""name"": ""limit"",
+   ""in"": ""query"",
+   ""required"": null
+  }
+ ]
+}",manual_review_required,,(가) 인증만 확인·인가 조건 없음,"description: 요청자는 인증이 필요하지만, 특정 사용자 객체와의 관계를 확인할 수 있는 조건이 명시되어 있지 않음; 판단: 접근 조건이 확정되지 않아 보류",,,
+gitea:delete:/repos/{owner}/{repo}/issues/{index}/reactions,opensource,DELETE,/repos/{owner}/{repo}/issues/{index}/reactions,declared,"// ---- route middleware chain (api.go): sudo(), tokenRequiresScopes(auth_model.AccessTokenScopeCategoryIssue), repoAssignment(), checkTokenPublicOnly(), mustEnableIssuesOrPulls, reqToken()
+
+// sudo(): site admins may impersonate another user via ?sudo=; non-admins get 403 only when they try to sudo. Not an authorization rule for the endpoint.
+
+// tokenRequiresScopes(category): OAuth2/access-token scope check (read for GET, write for mutations). Not a user-object relationship check.
+
+// repoAssignment() (api.go): resolves {username}/{reponame}; computes ctx.Repo.Permission = access_model.GetUserRepoPermission(doer, repo); anonymous or unauthorized doer on a private repo -> 404; public repo readable by anyone.
+
+// checkTokenPublicOnly(): tokens restricted to public-only may not access private resources.
+
+// mustEnableIssuesOrPulls: feature/unit enabled check (404 when the unit is disabled); not a caller check.
+
+// reqToken(): authentication only — the request must be signed in with a token (401 otherwise). No authorization.
+
+// ---- handler repo.DeleteIssueReaction (routers/api/v1/repo/issue_reaction.go:357-395)
+func DeleteIssueReaction(ctx *context.APIContext) {
+	form := web.GetForm[*api.EditReactionOption](ctx)
+	changeIssueReaction(ctx, *form, false)
+}","{
+ ""summary"": ""Remove a reaction from an issue"",
+ ""operationId"": ""issueDeleteIssueReaction"",
+ ""parameters"": [
+  {
+   ""name"": ""owner"",
+   ""in"": ""path"",
+   ""required"": true
+  },
+  {
+   ""name"": ""repo"",
+   ""in"": ""path"",
+   ""required"": true
+  },
+  {
+   ""name"": ""index"",
+   ""in"": ""path"",
+   ""required"": true
+  }
+ ]
+}",manual_review_required,,(가) 인증만 확인·인가 조건 없음,"description: 요청은 인증을 요구하지만, 실제 접근 조건이 명확하지 않음; 판단: 여러 인증 방식이 존재하나, 인가 조건이 불확실하여 보류",,,
+gitea:delete:/repos/{owner}/{repo}/issues/{index}/dependencies,opensource,DELETE,/repos/{owner}/{repo}/issues/{index}/dependencies,declared,"// ---- route middleware chain (api.go): sudo(), tokenRequiresScopes(auth_model.AccessTokenScopeCategoryIssue), repoAssignment(), checkTokenPublicOnly(), mustEnableIssuesOrPulls, reqToken(), mustNotBeArchived
+
+// sudo(): site admins may impersonate another user via ?sudo=; non-admins get 403 only when they try to sudo. Not an authorization rule for the endpoint.
+
+// tokenRequiresScopes(category): OAuth2/access-token scope check (read for GET, write for mutations). Not a user-object relationship check.
+
+// repoAssignment() (api.go): resolves {username}/{reponame}; computes ctx.Repo.Permission = access_model.GetUserRepoPermission(doer, repo); anonymous or unauthorized doer on a private repo -> 404; public repo readable by anyone.
+
+// checkTokenPublicOnly(): tokens restricted to public-only may not access private resources.
+
+// mustEnableIssuesOrPulls: feature/unit enabled check (404 when the unit is disabled); not a caller check.
+
+// reqToken(): authentication only — the request must be signed in with a token (401 otherwise). No authorization.
+
+// mustNotBeArchived: 403 when the repository is archived (feature state, not a caller check).
+
+// ---- handler repo.RemoveIssueDependency (routers/api/v1/repo/issue_dependency.go:206-264)
+func RemoveIssueDependency(ctx *context.APIContext) {
+
+	// ...
+	target := getParamsIssue(ctx)
+	if ctx.Written() {
+		return
+	}
+
+	// ...
+	form := web.GetForm[*api.IssueMeta](ctx)
+	dependency := getFormIssue(ctx, form)
+	if ctx.Written() {
+		return
+	}
+
+	dependencyPerm := getPermissionForRepo(ctx, dependency.Repo)
+	if ctx.Written() {
+		return
+	}
+
+	removeIssueDependency(ctx, target, dependency, ctx.Repo.Permission, *dependencyPerm)
+	if ctx.Written() {
+		return
+	}
+
+	ctx.JSON(http.StatusCreated, convert.ToAPIIssue(ctx, ctx.Doer, target))
+}","{
+ ""summary"": ""Remove an issue dependency"",
+ ""operationId"": ""issueRemoveIssueDependencies"",
+ ""parameters"": [
+  {
+   ""name"": ""owner"",
+   ""in"": ""path"",
+   ""required"": true
+  },
+  {
+   ""name"": ""repo"",
+   ""in"": ""path"",
+   ""required"": true
+  },
+  {
+   ""name"": ""index"",
+   ""in"": ""path"",
+   ""required"": true
+  }
+ ]
+}",manual_review_required,,(가) 인증만 확인·인가 조건 없음,"description: 다양한 미들웨어가 포함되어 있으며, 인증은 요구되지만 특정 인가 조건이 명확하지 않음; 판단: 접근 조건이 확정되지 않아 보류",,,
+gitea:put:/repos/{owner}/{repo}/notifications,opensource,PUT,/repos/{owner}/{repo}/notifications,declared,"// ---- route middleware chain (api.go): sudo(), tokenRequiresScopes(auth_model.AccessTokenScopeCategoryNotification), repoAssignment(), checkTokenPublicOnly(), reqToken()
+
+// sudo(): site admins may impersonate another user via ?sudo=; non-admins get 403 only when they try to sudo. Not an authorization rule for the endpoint.
+
+// tokenRequiresScopes(category): OAuth2/access-token scope check (read for GET, write for mutations). Not a user-object relationship check.
+
+// repoAssignment() (api.go): resolves {username}/{reponame}; computes ctx.Repo.Permission = access_model.GetUserRepoPermission(doer, repo); anonymous or unauthorized doer on a private repo -> 404; public repo readable by anyone.
+
+// checkTokenPublicOnly(): tokens restricted to public-only may not access private resources.
+
+// reqToken(): authentication only — the request must be signed in with a token (401 otherwise). No authorization.
+
+// ---- handler notify.ReadRepoNotifications (routers/api/v1/notify/repo.go:135-227)
+func ReadRepoNotifications(ctx *context.APIContext) {
+
+	lastRead := int64(0)
+	qLastRead := ctx.FormTrim(""last_read_at"")
+	if len(qLastRead) > 0 {
+		tmpLastRead, err := time.Parse(time.RFC3339, qLastRead)
+		if err != nil {
+			ctx.APIError(http.StatusBadRequest, err.Error())
+			return
+		}
+		if !tmpLastRead.IsZero() {
+			lastRead = tmpLastRead.Unix()
+		}
+	}
+
+	opts := &activities_model.FindNotificationOptions{
+		UserID:            ctx.Doer.ID,
+		RepoID:            ctx.Repo.Repository.ID,
+		UpdatedBeforeUnix: lastRead,
+	}
+
+	// ...
+	}
+
+	updated, err := notifications.SetManyNotificationStatuses(ctx, nl, ctx.Doer, targetStatus)
+	if err != nil {
+		ctx.APIErrorInternal(err)
+	// ...
+}","{
+ ""summary"": ""Mark notification threads as read, pinned or unread on a specific repo"",
+ ""operationId"": ""notifyReadRepoList"",
+ ""parameters"": [
+  {
+   ""name"": ""owner"",
+   ""in"": ""path"",
+   ""required"": true
+  },
+  {
+   ""name"": ""repo"",
+   ""in"": ""path"",
+   ""required"": true
+  },
+  {
+   ""name"": ""all"",
+   ""in"": ""query"",
+   ""required"": null
+  },
+  {
+   ""name"": ""status-types"",
+   ""in"": ""query"",
+   ""required"": null
+  },
+  {
+   ""name"": ""to-status"",
+   ""in"": ""query"",
+   ""required"": null
+  },
+  {
+   ""name"": ""last_read_at"",
+   ""in"": ""query"",
+   ""required"": null
+  }
+ ]
+}",manual_review_required,,(가) 인증만 확인·인가 조건 없음,"description: 요청은 인증을 요구하지만, 실제 접근 조건이 명확하지 않음; 판단: 인증만 확인하고 요청자-객체 관계나 역할 검사가 확인되지 않으므로 보류",,,
+gitea:get:/notifications/threads/{id},opensource,GET,/notifications/threads/{id},declared,"// ---- route middleware chain (api.go): sudo(), tokenRequiresScopes(auth_model.AccessTokenScopeCategoryNotification), rejectPublicOnly(), reqToken()
+
+// sudo(): site admins may impersonate another user via ?sudo=; non-admins get 403 only when they try to sudo. Not an authorization rule for the endpoint.
+
+// tokenRequiresScopes(category): OAuth2/access-token scope check (read for GET, write for mutations). Not a user-object relationship check.
+
+// rejectPublicOnly(): public-only tokens are rejected (403).
+
+// reqToken(): authentication only — the request must be signed in with a token (401 otherwise). No authorization.
+
+// ---- handler notify.GetThread (routers/api/v1/notify/threads.go:19-51)
+func GetThread(ctx *context.APIContext) {
+
+	n := getThread(ctx)
+	if n == nil {
+		return
+	}
+	if err := n.LoadAttributes(ctx); err != nil && !issues_model.IsErrCommentNotExist(err) {
+		ctx.APIErrorInternal(err)
+		return
+	}
+
+	ctx.JSON(http.StatusOK, convert.ToNotificationThread(ctx, n))
+}","{
+ ""summary"": ""Get notification thread by ID"",
+ ""operationId"": ""notifyGetThread"",
+ ""parameters"": [
+  {
+   ""name"": ""id"",
+   ""in"": ""path"",
+   ""required"": true
+  }
+ ]
+}",manual_review_required,,(가) 인증만 확인·인가 조건 없음,"description: 요청은 인증을 요구하지만, 실제 접근 조건이 명확하지 않음; 판단: 인증만으로는 접근 조건을 확정할 수 없으므로 보류",,,
+gitea:get:/repos/{owner}/{repo}/teams/{team},opensource,GET,/repos/{owner}/{repo}/teams/{team},declared,"// ---- route middleware chain (api.go): sudo(), tokenRequiresScopes(auth_model.AccessTokenScopeCategoryRepository), repoAssignment(), checkTokenPublicOnly(), reqToken(), reqAnyRepoReader()
+
+// sudo(): site admins may impersonate another user via ?sudo=; non-admins get 403 only when they try to sudo. Not an authorization rule for the endpoint.
+
+// tokenRequiresScopes(category): OAuth2/access-token scope check (read for GET, write for mutations). Not a user-object relationship check.
+
+// repoAssignment() (api.go): resolves {username}/{reponame}; computes ctx.Repo.Permission = access_model.GetUserRepoPermission(doer, repo); anonymous or unauthorized doer on a private repo -> 404; public repo readable by anyone.
+
+// checkTokenPublicOnly(): tokens restricted to public-only may not access private resources.
+
+// reqToken(): authentication only — the request must be signed in with a token (401 otherwise). No authorization.
+
+func reqAnyRepoReader() func(ctx *context.APIContext) {
+	return func(ctx *context.APIContext) {
+		if !ctx.Repo.Permission.HasAnyUnitAccess() && !ctx.IsUserSiteAdmin() {
+			ctx.APIError(http.StatusForbidden, ""user should have any permission to read repository or permissions of site admin"")
+			return
+		}
+	}
+}
+
+// ---- handler repo.IsTeam (routers/api/v1/repo/teams.go:62-113)
+func IsTeam(ctx *context.APIContext) {
+
+	if !ctx.Repo.Owner.IsOrganization() {
+		ctx.APIError(http.StatusMethodNotAllowed, ""repo is not owned by an organization"")
+		return
+	}
+
+	team := getTeamByParam(ctx)
+	if team == nil {
+		return
+	}
+
+	if repo_service.HasRepository(ctx, team, ctx.Repo.Repository.ID) {
+		apiTeam, err := convert.ToTeam(ctx, team)
+		if err != nil {
+			ctx.APIErrorInternal(err)
+			return
+		}
+		ctx.JSON(http.StatusOK, apiTeam)
+		return
+	}
+	// ...
+}","{
+ ""summary"": ""Check if a team is assigned to a repository"",
+ ""operationId"": ""repoCheckTeam"",
+ ""parameters"": [
+  {
+   ""name"": ""owner"",
+   ""in"": ""path"",
+   ""required"": true
+  },
+  {
+   ""name"": ""repo"",
+   ""in"": ""path"",
+   ""required"": true
+  },
+  {
+   ""name"": ""team"",
+   ""in"": ""path"",
+   ""required"": true
+  }
+ ]
+}",manual_review_required,,(가) 인증만 확인·인가 조건 없음,"description: 요청자가 팀을 확인하기 위해 인증이 필요하지만, 팀과 리포지토리 간의 관계가 명확히 정의되지 않음; 판단: 접근 조건이 확정되지 않아 보류",,,
+gitea:patch:/repos/{owner}/{repo}/issues/comments/{id},opensource,PATCH,/repos/{owner}/{repo}/issues/comments/{id},declared,"// ---- route middleware chain (api.go): sudo(), tokenRequiresScopes(auth_model.AccessTokenScopeCategoryIssue), repoAssignment(), checkTokenPublicOnly(), mustEnableIssuesOrPulls, mustNotBeArchived, reqToken()
+
+// sudo(): site admins may impersonate another user via ?sudo=; non-admins get 403 only when they try to sudo. Not an authorization rule for the endpoint.
+
+// tokenRequiresScopes(category): OAuth2/access-token scope check (read for GET, write for mutations). Not a user-object relationship check.
+
+// repoAssignment() (api.go): resolves {username}/{reponame}; computes ctx.Repo.Permission = access_model.GetUserRepoPermission(doer, repo); anonymous or unauthorized doer on a private repo -> 404; public repo readable by anyone.
+
+// checkTokenPublicOnly(): tokens restricted to public-only may not access private resources.
+
+// mustEnableIssuesOrPulls: feature/unit enabled check (404 when the unit is disabled); not a caller check.
+
+// mustNotBeArchived: 403 when the repository is archived (feature state, not a caller check).
+
+// reqToken(): authentication only — the request must be signed in with a token (401 otherwise). No authorization.
+
+// ---- handler repo.EditIssueComment (routers/api/v1/repo/issue_comment.go:474-517)
+func EditIssueComment(ctx *context.APIContext) {
+
+	form := web.GetForm[*api.EditIssueCommentOption](ctx)
+	editIssueComment(ctx, *form)
+}","{
+ ""summary"": ""Edit a comment"",
+ ""operationId"": ""issueEditComment"",
+ ""parameters"": [
+  {
+   ""name"": ""owner"",
+   ""in"": ""path"",
+   ""required"": true
+  },
+  {
+   ""name"": ""repo"",
+   ""in"": ""path"",
+   ""required"": true
+  },
+  {
+   ""name"": ""id"",
+   ""in"": ""path"",
+   ""required"": true
+  }
+ ]
+}",manual_review_required,,(가) 인증만 확인·인가 조건 없음,"description: 다양한 미들웨어가 포함되어 있으며, 인증은 요구되지만 특정 인가 조건이 명시되지 않음; 판단: 접근 조건이 명확하지 않아 보류",,,
+gitea:post:/repos/{owner}/{repo}/forks,opensource,POST,/repos/{owner}/{repo}/forks,declared,"// ---- route middleware chain (api.go): sudo(), tokenRequiresScopes(auth_model.AccessTokenScopeCategoryRepository), repoAssignment(), checkTokenPublicOnly(), reqToken(), reqRepoReader(unit.TypeCode)
+
+// sudo(): site admins may impersonate another user via ?sudo=; non-admins get 403 only when they try to sudo. Not an authorization rule for the endpoint.
+
+// tokenRequiresScopes(category): OAuth2/access-token scope check (read for GET, write for mutations). Not a user-object relationship check.
+
+// repoAssignment() (api.go): resolves {username}/{reponame}; computes ctx.Repo.Permission = access_model.GetUserRepoPermission(doer, repo); anonymous or unauthorized doer on a private repo -> 404; public repo readable by anyone.
+
+// checkTokenPublicOnly(): tokens restricted to public-only may not access private resources.
+
+// reqToken(): authentication only — the request must be signed in with a token (401 otherwise). No authorization.
+
+func reqRepoReader(unitType unit.Type) func(ctx *context.APIContext) {
+	return func(ctx *context.APIContext) {
+		if !ctx.Repo.Permission.CanRead(unitType) && !ctx.IsUserRepoAdmin() && !ctx.IsUserSiteAdmin() {
+			ctx.APIError(http.StatusForbidden, ""user should have specific read permission or be a repo admin or a site admin"")
+			return
+		}
+	}
+}
+
+// ---- handler repo.CreateFork (routers/api/v1/repo/fork.go:118-181)
+func CreateFork(ctx *context.APIContext) {
+
+	form := web.GetForm[*api.CreateForkOption](ctx)
+	forkOwner := ctx.Doer // user/org that will own the fork
+	if form.Organization != nil {
+		org := prepareDoerCreateRepoInOrg(ctx, *form.Organization)
+		if ctx.Written() {
+			return
+		}
+		forkOwner = org.AsUser()
+	}
+
+	repo := ctx.Repo.Repository
+	name := optional.FromPtr(form.Name).ValueOrDefault(repo.Name)
+	fork, err := repo_service.ForkRepository(ctx, ctx.Doer, forkOwner, repo_service.ForkRepoOptions{
+		BaseRepo:    repo,
+		Name:        name,
+		Description: repo.Description,
+	})
+	if err != nil {
+		if errors.Is(err, util.ErrAlreadyExist) || repo_model.IsErrReachLimitOfRepo(err) {
+			ctx.APIError(http.StatusConflict, err.Error())
+		} else if errors.Is(err, user_model.ErrBlockedUser) {
+			ctx.APIError(http.StatusForbidden, err.Error())
+		} else {
+			ctx.APIErrorInternal(err)
+	// ...
+
+	// ...
+	ctx.JSON(http.StatusAccepted, convert.ToRepo(ctx, fork, access_model.Permission{AccessMode: perm.AccessModeOwner}))
+}","{
+ ""summary"": ""Fork a repository"",
+ ""operationId"": ""createFork"",
+ ""parameters"": [
+  {
+   ""name"": ""owner"",
+   ""in"": ""path"",
+   ""required"": true
+  },
+  {
+   ""name"": ""repo"",
+   ""in"": ""path"",
+   ""required"": true
+  }
+ ]
+}",manual_review_required,,(가) 인증만 확인·인가 조건 없음,"description: 요청자는 인증이 필요하지만, 특정 권한이나 역할에 대한 조건이 명확히 정의되지 않음; 판단: 접근 조건이 확정되지 않아 보류",,,
+gitea:post:/user/avatar,opensource,POST,/user/avatar,declared,"// ---- route middleware chain (api.go): sudo(), tokenRequiresScopes(auth_model.AccessTokenScopeCategoryUser), reqToken(), contextAuthenticatedUser(), checkTokenPublicOnly(), rejectPublicOnly()
+
+// sudo(): site admins may impersonate another user via ?sudo=; non-admins get 403 only when they try to sudo. Not an authorization rule for the endpoint.
+
+// tokenRequiresScopes(category): OAuth2/access-token scope check (read for GET, write for mutations). Not a user-object relationship check.
+
+// reqToken(): authentication only — the request must be signed in with a token (401 otherwise). No authorization.
+
+// contextAuthenticatedUser(): sets ctx.ContextUser = ctx.Doer (the authenticated user itself).
+
+// checkTokenPublicOnly(): tokens restricted to public-only may not access private resources.
+
+// rejectPublicOnly(): public-only tokens are rejected (403).
+
+// ---- handler user.UpdateAvatar (routers/api/v1/user/avatar.go:17-46)
+func UpdateAvatar(ctx *context.APIContext) {
+	form := web.GetForm[*api.UpdateUserAvatarOption](ctx)
+
+	content, err := base64.StdEncoding.DecodeString(form.Image)
+	if err != nil {
+		ctx.APIError(http.StatusBadRequest, err.Error())
+		return
+	}
+
+	err = user_service.UploadAvatar(ctx, ctx.Doer, content)
+	if err != nil {
+		ctx.APIErrorInternal(err)
+		return
+	}
+
+	ctx.Status(http.StatusNoContent)
+}","{
+ ""summary"": ""Update Avatar"",
+ ""operationId"": ""userUpdateAvatar""
+}",manual_review_required,,(가) 인증만 확인·인가 조건 없음,"description: 요청은 인증을 요구하지만, 특정 사용자 객체와의 관계나 접근 조건이 명확히 정의되지 않음; 판단: 인증만으로는 충분한 인가 조건을 확인할 수 없어 보류",,,
+gitea:post:/markdown/raw,opensource,POST,/markdown/raw,declared,"// ---- route middleware chain (api.go): sudo(), reqToken()
+
+// sudo(): site admins may impersonate another user via ?sudo=; non-admins get 403 only when they try to sudo. Not an authorization rule for the endpoint.
+
+// reqToken(): authentication only — the request must be signed in with a token (401 otherwise). No authorization.
+
+// ---- handler misc.MarkdownRaw (routers/api/v1/misc/markup.go:68-90)
+func MarkdownRaw(ctx *context.APIContext) {
+	textBytes, _ := io.ReadAll(io.LimitReader(ctx.Req.Body, setting.UI.MaxDisplayFileSize))
+	common.RenderMarkup(ctx.Base, ctx.Repo, ""markdown"", util.UnsafeBytesToString(textBytes), """", """")
+}","{
+ ""summary"": ""Render raw markdown as HTML"",
+ ""operationId"": ""renderMarkdownRaw""
+}",manual_review_required,,(가) 인증만 확인·인가 조건 없음,description: 인증만 요구하고 인가 조건이 명시되지 않음; 판단: 접근 조건이 확정되지 않아 보류,,,
+gitea:get:/notifications/new,opensource,GET,/notifications/new,declared,"// ---- route middleware chain (api.go): sudo(), tokenRequiresScopes(auth_model.AccessTokenScopeCategoryNotification), rejectPublicOnly(), reqToken()
+
+// sudo(): site admins may impersonate another user via ?sudo=; non-admins get 403 only when they try to sudo. Not an authorization rule for the endpoint.
+
+// tokenRequiresScopes(category): OAuth2/access-token scope check (read for GET, write for mutations). Not a user-object relationship check.
+
+// rejectPublicOnly(): public-only tokens are rejected (403).
+
+// reqToken(): authentication only — the request must be signed in with a token (401 otherwise). No authorization.
+
+// ---- handler notify.NewAvailable (routers/api/v1/notify/notifications.go:18-36)
+func NewAvailable(ctx *context.APIContext) {
+
+	total, err := db.Count[activities_model.Notification](ctx, activities_model.FindNotificationOptions{
+		UserID: ctx.Doer.ID,
+		Status: []activities_model.NotificationStatus{activities_model.NotificationStatusUnread},
+	})
+	if err != nil {
+		ctx.APIError(http.StatusUnprocessableEntity, err.Error())
+		return
+	}
+
+	ctx.JSON(http.StatusOK, api.NotificationCount{New: total})
+}","{
+ ""summary"": ""Check if unread notifications exist"",
+ ""operationId"": ""notifyNewAvailable""
+}",manual_review_required,,(가) 인증만 확인·인가 조건 없음,"description: 요청은 인증을 요구하지만, 실제 접근 조건이 명확하지 않음; 판단: 인증만 확인하고 요청자-객체 관계나 역할 검사가 확인되지 않으므로 보류",,,
+gitea:put:/user/blocks/{username},opensource,PUT,/user/blocks/{username},declared,"// ---- route middleware chain (api.go): sudo(), tokenRequiresScopes(auth_model.AccessTokenScopeCategoryUser), reqToken(), contextAuthenticatedUser(), checkTokenPublicOnly(), rejectPublicOnly(), context.UserAssignmentAPI(), checkTokenPublicOnly()
+
+// sudo(): site admins may impersonate another user via ?sudo=; non-admins get 403 only when they try to sudo. Not an authorization rule for the endpoint.
+
+// tokenRequiresScopes(category): OAuth2/access-token scope check (read for GET, write for mutations). Not a user-object relationship check.
+
+// reqToken(): authentication only — the request must be signed in with a token (401 otherwise). No authorization.
+
+// contextAuthenticatedUser(): sets ctx.ContextUser = ctx.Doer (the authenticated user itself).
+
+// checkTokenPublicOnly(): tokens restricted to public-only may not access private resources.
+
+// rejectPublicOnly(): public-only tokens are rejected (403).
+
+// context.UserAssignmentAPI(): resolves {username} into ctx.ContextUser (404 if missing); no authorization.
+
+// ---- handler user.BlockUser (routers/api/v1/user/block.go:52-75)
+func BlockUser(ctx *context.APIContext) {
+
+	shared.BlockUser(ctx, ctx.Doer)
+}","{
+ ""summary"": ""Block a user"",
+ ""operationId"": ""userBlockUser"",
+ ""parameters"": [
+  {
+   ""name"": ""username"",
+   ""in"": ""path"",
+   ""required"": true
+  },
+  {
+   ""name"": ""note"",
+   ""in"": ""query"",
+   ""required"": null
+  }
+ ]
+}",manual_review_required,,(가) 인증만 확인·인가 조건 없음,"description: 요청자는 인증이 필요하지만, 특정 사용자 객체와의 관계를 확인할 수 있는 조건이 명시되어 있지 않음; 판단: 접근 조건이 명확하지 않아 보류",,,
+gitea:get:/user/gpg_keys,opensource,GET,/user/gpg_keys,declared,"// ---- route middleware chain (api.go): sudo(), tokenRequiresScopes(auth_model.AccessTokenScopeCategoryUser), reqToken(), contextAuthenticatedUser(), checkTokenPublicOnly(), rejectPublicOnly()
+
+// sudo(): site admins may impersonate another user via ?sudo=; non-admins get 403 only when they try to sudo. Not an authorization rule for the endpoint.
+
+// tokenRequiresScopes(category): OAuth2/access-token scope check (read for GET, write for mutations). Not a user-object relationship check.
+
+// reqToken(): authentication only — the request must be signed in with a token (401 otherwise). No authorization.
+
+// contextAuthenticatedUser(): sets ctx.ContextUser = ctx.Doer (the authenticated user itself).
+
+// checkTokenPublicOnly(): tokens restricted to public-only may not access private resources.
+
+// rejectPublicOnly(): public-only tokens are rejected (403).
+
+// ---- handler user.ListMyGPGKeys (routers/api/v1/user/gpg_key.go:76-100)
+func ListMyGPGKeys(ctx *context.APIContext) {
+
+	listGPGKeys(ctx, ctx.Doer.ID, utils.GetListOptions(ctx))
+}","{
+ ""summary"": ""List the authenticated user's GPG keys"",
+ ""operationId"": ""userCurrentListGPGKeys"",
+ ""parameters"": [
+  {
+   ""name"": ""page"",
+   ""in"": ""query"",
+   ""required"": null
+  },
+  {
+   ""name"": ""limit"",
+   ""in"": ""query"",
+   ""required"": null
+  }
+ ]
+}",manual_review_required,,(가) 인증만 확인·인가 조건 없음,"description: 요청자는 인증된 사용자여야 하며, 인증 후에만 GPG 키 목록을 조회할 수 있음; 판단: 인증만 확인하고 요청자-객체 관계나 역할 검사가 확인되지 않으므로 보류",,,
+gitea:post:/repos/{owner}/{repo}/transfer/reject,opensource,POST,/repos/{owner}/{repo}/transfer/reject,declared,"// ---- route middleware chain (api.go): sudo(), tokenRequiresScopes(auth_model.AccessTokenScopeCategoryRepository), repoAssignment(), checkTokenPublicOnly(), reqToken()
+
+// sudo(): site admins may impersonate another user via ?sudo=; non-admins get 403 only when they try to sudo. Not an authorization rule for the endpoint.
+
+// tokenRequiresScopes(category): OAuth2/access-token scope check (read for GET, write for mutations). Not a user-object relationship check.
+
+// repoAssignment() (api.go): resolves {username}/{reponame}; computes ctx.Repo.Permission = access_model.GetUserRepoPermission(doer, repo); anonymous or unauthorized doer on a private repo -> 404; public repo readable by anyone.
+
+// checkTokenPublicOnly(): tokens restricted to public-only may not access private resources.
+
+// reqToken(): authentication only — the request must be signed in with a token (401 otherwise). No authorization.
+
+// ---- handler repo.RejectTransfer (routers/api/v1/repo/transfer.go:181-220)
+func RejectTransfer(ctx *context.APIContext) {
+
+	err := repo_service.RejectRepositoryTransfer(ctx, ctx.Repo.Repository, ctx.Doer)
+	if err != nil {
+		switch {
+		case repo_model.IsErrNoPendingTransfer(err):
+			ctx.APIError(http.StatusNotFound, err.Error())
+		case errors.Is(err, util.ErrPermissionDenied):
+			ctx.APIError(http.StatusForbidden, err.Error())
+		default:
+			ctx.APIErrorInternal(err)
+		}
+		return
+	}
+
+	ctx.JSON(http.StatusOK, convert.ToRepo(ctx, ctx.Repo.Repository, ctx.Repo.Permission))
+}","{
+ ""summary"": ""Reject a repo transfer"",
+ ""operationId"": ""rejectRepoTransfer"",
+ ""parameters"": [
+  {
+   ""name"": ""owner"",
+   ""in"": ""path"",
+   ""required"": true
+  },
+  {
+   ""name"": ""repo"",
+   ""in"": ""path"",
+   ""required"": true
+  }
+ ]
+}",manual_review_required,,(가) 인증만 확인·인가 조건 없음,"description: 요청자는 인증이 필요하지만, 실제 접근 조건이 명확하지 않음; 판단: 여러 인증 방식이 존재하나, 인가 조건이 불확실하여 보류",,,
+gitea:get:/teams/{id}/repos,opensource,GET,/teams/{id}/repos,declared,"// ---- route middleware chain (api.go): sudo(), tokenRequiresScopes(auth_model.AccessTokenScopeCategoryOrganization), orgAssignment(false, true), reqToken(), checkTokenPublicOnly(), reqTeamReadAccess()
+
+// sudo(): site admins may impersonate another user via ?sudo=; non-admins get 403 only when they try to sudo. Not an authorization rule for the endpoint.
+
+// tokenRequiresScopes(category): OAuth2/access-token scope check (read for GET, write for mutations). Not a user-object relationship check.
+
+// orgAssignment() (api.go): resolves {org} (and optional team) into ctx.Org; no authorization by itself.
+
+// reqToken(): authentication only — the request must be signed in with a token (401 otherwise). No authorization.
+
+// checkTokenPublicOnly(): tokens restricted to public-only may not access private resources.
+
+func reqTeamReadAccess() func(ctx *context.APIContext) {
+	return func(ctx *context.APIContext) {
+		orgID, privileged, ok := teamAccessPrivileged(ctx)
+		if !ok || privileged {
+			return
+		}
+		if ctx.Org.Organization == nil {
+			setting.PanicInDevOrTesting(""reqTeamReadAccess: organization not loaded"")
+			ctx.APIErrorInternal(errors.New(""reqTeamReadAccess: organization not loaded""))
+			return
+		}
+
+		visible, err := ctx.Org.Team.CanNonMemberReadMeta(ctx, ctx.Org.Organization.AsUser(), ctx.Doer)
+		if err != nil {
+			ctx.APIErrorInternal(err)
+			return
+		}
+		if !visible {
+			// Not admitted by visibility: 403 for org members, 404 otherwise.
+			denyNonTeamMember(ctx, orgID)
+		}
+	}
+}
+
+// ---- handler org.GetTeamRepos (routers/api/v1/org/team.go:518-585)
+func GetTeamRepos(ctx *context.APIContext) {
+
+	team := ctx.Org.Team
+	listOptions := utils.GetListOptions(ctx)
+	// ...
+	searchOpts := &repo_model.SearchTeamRepoOptions{
+		ListOptions: listOptions,
+		TeamID:      team.ID,
+		PublicOnly:  ctx.PublicOnly,
+	}
+	teamRepos, err := repo_model.GetTeamRepositories(ctx, searchOpts)
+	if err != nil {
+		ctx.APIErrorInternal(err)
+		return
+	}
+	count, err := repo_model.CountTeamRepositories(ctx, searchOpts)
+	if err != nil {
+		ctx.APIErrorInternal(err)
+		return
+	}
+	repos := make([]*api.Repository, 0, len(teamRepos))
+	for _, repo := range teamRepos {
+		permission, err := access_model.GetDoerRepoPermission(ctx, repo, ctx.Doer)
+		if err != nil {
+			ctx.APIErrorInternal(err)
+	// ...
+}","{
+ ""summary"": ""List a team's repos"",
+ ""operationId"": ""orgListTeamRepos"",
+ ""parameters"": [
+  {
+   ""name"": ""id"",
+   ""in"": ""path"",
+   ""required"": true
+  },
+  {
+   ""name"": ""page"",
+   ""in"": ""query"",
+   ""required"": null
+  },
+  {
+   ""name"": ""limit"",
+   ""in"": ""query"",
+   ""required"": null
+  }
+ ]
+}",manual_review_required,,(가) 접근 조건 미명시(일반),"description: reqTeamReadAccess 함수에서 팀 비회원의 접근을 제한하는 조건이 명시되어 있으나, 구체적인 접근 조건이 명확하지 않음; 판단: 팀 구성원 여부와 관련된 조건이 독립적으로 확인되지 않아 보류",,,
+gitea:get:/teams/{id}/activities/feeds,opensource,GET,/teams/{id}/activities/feeds,declared,"// ---- route middleware chain (api.go): sudo(), tokenRequiresScopes(auth_model.AccessTokenScopeCategoryOrganization), orgAssignment(false, true), reqToken(), checkTokenPublicOnly(), reqTeamReadAccess()
+
+// sudo(): site admins may impersonate another user via ?sudo=; non-admins get 403 only when they try to sudo. Not an authorization rule for the endpoint.
+
+// tokenRequiresScopes(category): OAuth2/access-token scope check (read for GET, write for mutations). Not a user-object relationship check.
+
+// orgAssignment() (api.go): resolves {org} (and optional team) into ctx.Org; no authorization by itself.
+
+// reqToken(): authentication only — the request must be signed in with a token (401 otherwise). No authorization.
+
+// checkTokenPublicOnly(): tokens restricted to public-only may not access private resources.
+
+func reqTeamReadAccess() func(ctx *context.APIContext) {
+	return func(ctx *context.APIContext) {
+		orgID, privileged, ok := teamAccessPrivileged(ctx)
+		if !ok || privileged {
+			return
+		}
+		if ctx.Org.Organization == nil {
+			setting.PanicInDevOrTesting(""reqTeamReadAccess: organization not loaded"")
+			ctx.APIErrorInternal(errors.New(""reqTeamReadAccess: organization not loaded""))
+			return
+		}
+
+		visible, err := ctx.Org.Team.CanNonMemberReadMeta(ctx, ctx.Org.Organization.AsUser(), ctx.Doer)
+		if err != nil {
+			ctx.APIErrorInternal(err)
+			return
+		}
+		if !visible {
+			// Not admitted by visibility: 403 for org members, 404 otherwise.
+			denyNonTeamMember(ctx, orgID)
+		}
+	}
+}
+
+// ---- handler org.ListTeamActivityFeeds (routers/api/v1/org/team.go:843-895)
+func ListTeamActivityFeeds(ctx *context.APIContext) {
+
+	listOptions := utils.GetListOptions(ctx)
+
+	opts := activities_model.GetFeedsOptions{
+		RequestedTeam:  ctx.Org.Team,
+		Actor:          ctx.Doer,
+		IncludePrivate: true,
+		Date:           ctx.FormString(""date""),
+		ListOptions:    listOptions,
+	}
+	// ...
+	opts.ApplyPublicOnly(ctx.PublicOnly)
+
+	feeds, count, err := feed_service.GetFeeds(ctx, opts)
+	if err != nil {
+		ctx.APIErrorInternal(err)
+		return
+	}
+	ctx.SetLinkHeader(count, listOptions.PageSize)
+	ctx.SetTotalCountHeader(count)
+	ctx.JSON(http.StatusOK, convert.ToActivities(ctx, feeds, ctx.Doer))
+}","{
+ ""summary"": ""List a team's activity feeds"",
+ ""operationId"": ""orgListTeamActivityFeeds"",
+ ""parameters"": [
+  {
+   ""name"": ""id"",
+   ""in"": ""path"",
+   ""required"": true
+  },
+  {
+   ""name"": ""date"",
+   ""in"": ""query"",
+   ""required"": null
+  },
+  {
+   ""name"": ""page"",
+   ""in"": ""query"",
+   ""required"": null
+  },
+  {
+   ""name"": ""limit"",
+   ""in"": ""query"",
+   ""required"": null
+  }
+ ]
+}",manual_review_required,,(가) 접근 조건 미명시(일반),description: reqTeamReadAccess 함수에서 비구조적 접근 조건이 확인됨; 판단: 접근 조건이 명확하지 않아 보류,,,
+gitea:get:/settings/attachment,opensource,GET,/settings/attachment,declared,"// ---- route middleware chain (api.go): sudo()
+
+// sudo(): site admins may impersonate another user via ?sudo=; non-admins get 403 only when they try to sudo. Not an authorization rule for the endpoint.
+
+// ---- handler settings.GetGeneralAttachmentSettings (routers/api/v1/settings/settings.go:71-86)
+func GetGeneralAttachmentSettings(ctx *context.APIContext) {
+	ctx.JSON(http.StatusOK, api.GeneralAttachmentSettings{
+		Enabled:      setting.Attachment.Enabled,
+		AllowedTypes: setting.Attachment.AllowedTypes,
+		MaxFiles:     setting.Attachment.MaxFiles,
+		MaxSize:      setting.Attachment.MaxSize,
+	})
+}","{
+ ""summary"": ""Get instance's global settings for Attachment"",
+ ""operationId"": ""getGeneralAttachmentSettings""
+}",manual_review_required,,(가) 접근 조건 미명시(일반),"description: 요청자가 sudo를 시도할 경우에만 403을 반환하며, 이는 인가 규칙이 아닌 미들웨어 설명; 판단: 접근 조건이 명확하지 않으므로 보류",,,

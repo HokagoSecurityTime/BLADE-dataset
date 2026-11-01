@@ -1,0 +1,490 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "copper_wallet_variants",
+    "version": "1.0.0",
+    "description": "script-generated static projection (no framework export)"
+  },
+  "paths": {
+    "/fixtures/copper_wallet/transfers/drafts/authonly/{item_id}": {
+      "get": {
+        "summary": "Copper Wallet Drafts Authonly",
+        "description": "Authentication only; no requester-object relationship or role check is implemented, so no concrete label is supported.",
+        "operationId": "copper_wallet_drafts_authonly",
+        "parameters": [
+          {
+            "name": "item_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Fixture record",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/fixtures/copper_wallet/transfers/drafts/extauth/{item_id}": {
+      "get": {
+        "summary": "Copper Wallet Drafts Extauth",
+        "description": "Authentication only; no requester-object relationship or role check is implemented, so no concrete label is supported. Authentication is enforced outside the handler.",
+        "operationId": "copper_wallet_drafts_extauth",
+        "parameters": [
+          {
+            "name": "item_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Fixture record",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/fixtures/copper_wallet/transfers/drafts/extguard/{item_id}": {
+      "get": {
+        "summary": "Copper Wallet Drafts Extguard",
+        "description": "Only the record owner may read it. Authentication is enforced outside the handler; the authorization check is inside.",
+        "operationId": "copper_wallet_drafts_extguard",
+        "parameters": [
+          {
+            "name": "item_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Fixture record",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/fixtures/copper_wallet/transfers/shared/authonly/{item_id}": {
+      "get": {
+        "summary": "Copper Wallet Shared Authonly",
+        "description": "Authentication only; no requester-object relationship or role check is implemented, so no concrete label is supported.",
+        "operationId": "copper_wallet_shared_authonly",
+        "parameters": [
+          {
+            "name": "item_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Fixture record",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/fixtures/copper_wallet/transfers/shared/extauth/{item_id}": {
+      "get": {
+        "summary": "Copper Wallet Shared Extauth",
+        "description": "Authentication only; no requester-object relationship or role check is implemented, so no concrete label is supported. Authentication is enforced outside the handler.",
+        "operationId": "copper_wallet_shared_extauth",
+        "parameters": [
+          {
+            "name": "item_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Fixture record",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/fixtures/copper_wallet/transfers/shared/extguard/{item_id}": {
+      "get": {
+        "summary": "Copper Wallet Shared Extguard",
+        "description": "The record owner or an administrator may read it. Authentication is enforced outside the handler; the authorization check is inside.",
+        "operationId": "copper_wallet_shared_extguard",
+        "parameters": [
+          {
+            "name": "item_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Fixture record",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/fixtures/copper_wallet/transfers/workspace/authonly/{item_id}": {
+      "get": {
+        "summary": "Copper Wallet Workspace Authonly",
+        "description": "Authentication only; no requester-object relationship or role check is implemented, so no concrete label is supported.",
+        "operationId": "copper_wallet_workspace_authonly",
+        "parameters": [
+          {
+            "name": "item_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Fixture record",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/fixtures/copper_wallet/transfers/workspace/extauth/{item_id}": {
+      "get": {
+        "summary": "Copper Wallet Workspace Extauth",
+        "description": "Authentication only; no requester-object relationship or role check is implemented, so no concrete label is supported. Authentication is enforced outside the handler.",
+        "operationId": "copper_wallet_workspace_extauth",
+        "parameters": [
+          {
+            "name": "item_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Fixture record",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/fixtures/copper_wallet/transfers/workspace/extguard/{item_id}": {
+      "get": {
+        "summary": "Copper Wallet Workspace Extguard",
+        "description": "Caller and record must share a tenant. Authentication is enforced outside the handler; the authorization check is inside.",
+        "operationId": "copper_wallet_workspace_extguard",
+        "parameters": [
+          {
+            "name": "item_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Fixture record",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/fixtures/copper_wallet/transfers/audit/authonly/{item_id}": {
+      "get": {
+        "summary": "Copper Wallet Audit Authonly",
+        "description": "Authentication only; no requester-object relationship or role check is implemented, so no concrete label is supported.",
+        "operationId": "copper_wallet_audit_authonly",
+        "parameters": [
+          {
+            "name": "item_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Fixture record",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/fixtures/copper_wallet/transfers/audit/extauth/{item_id}": {
+      "get": {
+        "summary": "Copper Wallet Audit Extauth",
+        "description": "Authentication only; no requester-object relationship or role check is implemented, so no concrete label is supported. Authentication is enforced outside the handler.",
+        "operationId": "copper_wallet_audit_extauth",
+        "parameters": [
+          {
+            "name": "item_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Fixture record",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/fixtures/copper_wallet/transfers/audit/extguard/{item_id}": {
+      "get": {
+        "summary": "Copper Wallet Audit Extguard",
+        "description": "Only administrators may read this operational resource. Authentication is enforced outside the handler; the authorization check is inside.",
+        "operationId": "copper_wallet_audit_extguard",
+        "parameters": [
+          {
+            "name": "item_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Fixture record",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

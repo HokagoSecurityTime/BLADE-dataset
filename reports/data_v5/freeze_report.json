@@ -1,0 +1,115 @@
+{
+ "data_version": "data-v5",
+ "composition": "data-v4 (train_v4 + val_v4) + data-v5 rule-labeled additions (Dendrite, NodeBB, Taiga)",
+ "review": {
+  "reviewed": 90,
+  "compared": 88,
+  "agree": 88,
+  "rate": 1.0,
+  "disagreements": [],
+  "sheet_column_agree": 86,
+  "now_excluded": [
+   {
+    "id": "v5-dendrite-e3f2d2d68f",
+    "sheet_rule": "role_required",
+    "review": "role_required",
+    "reason": "ambiguous:role_or_self_after_membership_row"
+   },
+   {
+    "id": "v5-dendrite-34e5d58eaa",
+    "sheet_rule": "role_required",
+    "review": "manual_review_required",
+    "reason": "ambiguous:event_auth_power_level_dependent"
+   }
+  ]
+ },
+ "v5_split": {
+  "train": 296,
+  "val": 32,
+  "train_dist": {
+   "role_required": 106,
+   "owner_match": 76,
+   "manual_review_required": 30,
+   "public": 26,
+   "membership_required": 17,
+   "owner_or_admin": 41
+  },
+  "val_dist": {
+   "owner_match": 9,
+   "membership_required": 2,
+   "manual_review_required": 3,
+   "public": 2,
+   "role_required": 12,
+   "owner_or_admin": 4
+  },
+  "by_project": {
+   "dendrite": {
+    "train": 95,
+    "val": 10
+   },
+   "nodebb": {
+    "train": 98,
+    "val": 11
+   },
+   "taiga": {
+    "train": 103,
+    "val": 11
+   }
+  }
+ },
+ "sft": {
+  "train": 1274,
+  "val": 179,
+  "manual_train": 163,
+  "manual_train_ratio": 0.1279,
+  "over_4096": []
+ },
+ "integrity": {
+  "hold_in_concrete": [],
+  "meta_text": [],
+  "file_path": [],
+  "test_overlap": [],
+  "test_v5_candidate_overlap": []
+ },
+ "hashes": {
+  "data_version": "data-v5",
+  "sources": {
+   "train_sft_v4.jsonl": "5178c35e7c6bd66e7dfcc44ca603c26bb2319edc85b86abe4679646a3b93a593",
+   "val_sft_v4.jsonl": "52d0187e8f1d048ddae8bbb2c24b39c14d2e1a65b2519cdb1b934b10b9884bff",
+   "test_v30_inputs.jsonl": "d65f25b966f61131c0ba5a2341798e56dcd2d3b8da73e9f5d03eb3cd6b0f119a",
+   "test_v31_supp_inputs.jsonl": "97e618e770bbf9950d6846869901819db36fce486d8999d69eb73e286e2a056c",
+   "policy_label_v3.0.1.md": "d0913c27b5de185e7dd5734c111cb731f45e28ebca81fed787ff3914d02833ef",
+   "train_v4.jsonl": "1729f79dd1c06408846e4083b2e82fdace113166c0f92fea32e293441791966c",
+   "val_v4.jsonl": "2b3362b6adcc6da13b0d1c71fcf671b9700f54fedcd57bb6f55010f3c63c9105",
+   "candidates_train_v5.jsonl": "f82067e0a3e120129b58680211d49c175645ef5e2e53315f4d6eb772ef717f55"
+  },
+  "test_v5": {
+   "frozen_at_data_v5_freeze": false,
+   "note": "test_v5_inputs.jsonl is verified by run_train.py against data_v5/test_v5_manifest.json (frozen separately, after this bundle); no test_v5 label was read while building data-v5 (candidate keys only: test_v5_candidate_overlap = 0 asserted)"
+  },
+  "generated": {
+   "train_sft_v5.jsonl": "2351afe93518f6e29c95ab9305a15b5a1cda7bd6e3c6d18bec7e8e3d45c3216b",
+   "val_sft_v5.jsonl": "0df4642f439c812d4e7b9f5ca968c89fd966703bfc59229d6f7ea7f83115748f",
+   "test_v30_inputs.jsonl": "d65f25b966f61131c0ba5a2341798e56dcd2d3b8da73e9f5d03eb3cd6b0f119a",
+   "test_v31_supp_inputs.jsonl": "97e618e770bbf9950d6846869901819db36fce486d8999d69eb73e286e2a056c",
+   "policy_label_v3.0.1.md": "d0913c27b5de185e7dd5734c111cb731f45e28ebca81fed787ff3914d02833ef"
+  },
+  "counts": {
+   "train": 1274,
+   "val": 179
+  },
+  "format": "same as data_v3 (system=prompt v3.0.1; user=\"Return JSON.\\n\"+payload; assistant=label JSON)",
+  "max_seq_len": 4096,
+  "datasets": {
+   "train_v5_rule_labeled.jsonl": "6f2e02f933a88cbb84a6d8c7ea57f42a81b2c3d8db62d4559c20217209876988",
+   "train_v5_selected.jsonl": "12f45304c9f4a1884a09dc62ca877b8e04da21c0f6a20751109742c5bc1f8e8d",
+   "train_v5_pool.jsonl": "d5916fb43ea34c81b69aca2f3d252c175cada01156aa8ec59d99c2631acc0ebf",
+   "train_v5.jsonl": "528b36907768de8d6b4253fbcb587254b5009cb33f6d38bb35e79bd3b03c6344",
+   "val_v5.jsonl": "43d53150be7bba9564f21bfddbc225b8ebbd99bcd86a6f30e96ad898f15c81e9",
+   "train_v5_manifest.json": "95efb605c79f46081550f08c8d41d985c4fda6bb85cd09b77d43f677e2ff7659",
+   "rule_label_v5.py": "daa28db3992b2d2bfd4a99a863c1b8d3d86045fdde52e6d9f66d1f2d8fcd7c67",
+   "v5_train_review_reviewed.xlsx": "4d70711494bf63ad0a0644e75967f236a204b5799b8dd67847aa508a010d519b"
+  }
+ },
+ "hashes_file_sha": "39c302c5fb33d1b1506487678cd15f40cc83ffd59435449522786388554753ac"
+}

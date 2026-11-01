@@ -1,0 +1,44 @@
+{
+ "hard_cut_views": [
+  "update_realm",
+  "update_stream_backend"
+ ],
+ "excluded": [
+  [
+   "POST",
+   "/real-time",
+   "documentation-only pseudo path for the real-time events API overview (no operationId, no route)"
+  ],
+  [
+   "POST",
+   "/rest-error-handling",
+   "documentation-only pseudo path describing common error responses (no route)"
+  ],
+  [
+   "POST",
+   "/zulip-outgoing-webhook",
+   "describes the payload Zulip sends to outgoing webhook bots; not an endpoint served by Zulip"
+  ]
+ ],
+ "unmatched": [],
+ "gen_skipped": [
+  [
+   "PATCH",
+   "/api/v1/settings/display",
+   "intentionally_undocumented alias of a documented endpoint"
+  ],
+  [
+   "PATCH",
+   "/api/v1/settings/notifications",
+   "intentionally_undocumented alias of a documented endpoint"
+  ],
+  [
+   "GET",
+   "/json/self-hosted-billing",
+   "outside API prefix (billing/other)"
+  ]
+ ],
+ "n": 193,
+ "n_spec": 158,
+ "n_gen": 35
+}

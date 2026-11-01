@@ -1,0 +1,50 @@
+1560|manual_review_required|0.55|Current-user blocks are explicitly scoped, but blocks lack a username/dashboard owner lookup.
+1563|manual_review_required|0.55|Username/dashboard block update lacks a verified block-to-caller relationship in its layout fields.
+1566|manual_review_required|0.55|Dashboard update has username route but no owner identifier or verified dashboard key binding.
+1569|manual_review_required|0.55|Feed shared_with/groups and visibility imply shared access; username nesting does not prove exclusive owner rights.
+1572|manual_review_required|0.55|Feed data creation has feed_id/group_id without a verified caller owner relationship.
+1575|manual_review_required|0.55|Me license usage is authenticated by servicekey but no concrete subscription requirement or object lookup is supplied.
+1578|manual_review_required|0.55|Object-detection task has UserSecurity but result URLs lack a task-owner relationship.
+1581|manual_review_required|0.55|Hotel-offer pricing metadata does not affirm unrestricted API access or a caller policy.
+1584|manual_review_required|0.55|Collaborator roles are returned subject attributes, not a stated required caller role.
+1587|manual_review_required|0.55|User roles are opaque output data and do not establish self/admin access.
+1590|manual_review_required|0.55|Article-tag createdByResourceID is provenance, not verified reader ownership or public authorization.
+1593|manual_review_required|0.55|CompanyID identifies a CRM company; contact scope does not prove it is the caller tenant.
+1596|manual_review_required|0.55|Expense user/project filters and UserID results do not establish self-only or manager access.
+1599|manual_review_required|0.55|ProjectOwnerUserIDFK and CompanyIDFK names suggest relationships but the inferred schema does not verify foreign keys or caller authorization.
+1602|manual_review_required|0.55|Support-plan status concerns a subscription resource, not a demonstrated required caller membership tier.
+1605|manual_review_required|0.55|Directory server-alert listing has user_impersonation permission but no verified service owner or administrator role.
+1608|manual_review_required|0.55|Music popularity results provide no affirmative unrestricted-access or caller authorization statement.
+1611|manual_review_required|0.55|Payment billing/card fields do not specify caller ownership or an allowed financial role.
+1614|manual_review_required|0.55|Adding a profile card returns customer_code without verified profile-to-caller ownership.
+1617|manual_review_required|0.55|Batch status uses API key but gives no owner relationship for batch id.
+1620|manual_review_required|0.55|Sharing a screenshot mutates visibility but no screenshot-owner lookup or permission rule is supplied.
+1623|manual_review_required|0.55|Status-update user_id and profile_id suggest authorship but no verified caller authority over the social profile.
+1626|manual_review_required|0.55|Flow connection_role describes integration configuration, not the authenticated caller's application role.
+1629|manual_review_required|0.55|Meeting passwordRequired and key metadata suggest access controls without defining owner or attendee authorization.
+1632|manual_review_required|0.55|Group members are opaque and no caller group-membership or tenant rule is stated.
+1635|manual_review_required|0.55|Session endpoint under admin path returns user_id but does not explicitly require administrator role or verify caller-subject binding.
+1638|manual_review_required|0.55|Customer update contains billing company and customer-group data without defining caller management rights.
+1641|manual_review_required|0.55|Order customerId identifies a buyer, while admin notes and fulfillment updates leave merchant-versus-buyer authorization unresolved.
+1644|manual_review_required|0.55|Account mutation has id-only schema without verified owner or tenant relationship.
+1647|manual_review_required|0.55|Campaign generic relation graph includes account/user/project but no governing caller authorization relation.
+1650|manual_review_required|0.55|Contact generic relations include many entities without a verified owner or tenant rule.
+1653|manual_review_required|0.55|Area provider is geographic-service metadata rather than a proven caller tenant; public access is not stated.
+1656|manual_review_required|0.55|Rental provider/network identifiers describe suppliers and do not establish caller tenancy or unrestricted access.
+1659|manual_review_required|0.55|ChEMBL activity search contains scientific data but no affirmative unrestricted-access statement.
+1662|manual_review_required|0.55|PubChem bioassay search lacks explicit public authorization despite scientific subject matter.
+1665|manual_review_required|0.55|Translation query uses wskey with no concrete caller tier or unrestricted-access rule.
+1668|manual_review_required|0.55|Alliance creator_id denotes game provenance, not reader ownership; missing security does not establish public access.
+1671|manual_review_required|0.55|Character blueprints require read scope but response lacks character-to-caller ownership lookup.
+1674|manual_review_required|0.55|Calendar owner_type may be person or group and differs from requested character, leaving the governing access relationship unclear.
+1677|manual_review_required|0.55|Utility-plan switching is document-specific but no document-owner relation or authorized role is supplied.
+1680|manual_review_required|0.55|Sound id/name/URL metadata does not explicitly establish unrestricted retrieval.
+1683|manual_review_required|0.55|Topic detection is API-key processing rather than a proven owner, role or membership requirement.
+1686|manual_review_required|0.55|Training organizer list identifies organizers but does not specify who may inspect them or an ownership binding.
+1689|manual_review_required|0.55|Group projects include public visibility, shared groups and owner objects, implying mixed access rather than a single verified tenant rule.
+1692|manual_review_required|0.55|Approving group access exposes granted access_level, not the caller's required role or a verified group-owner lookup.
+1695|manual_review_required|0.55|Adding group members returns target access_level without defining caller authorization to manage the group.
+1698|manual_review_required|0.55|Group project listing mixes public/shared visibility and creator metadata without a single proven caller access rule.
+1701|manual_review_required|0.55|Event organizers/groups are metadata with no explicit public or owner-only read requirement.
+1704|manual_review_required|0.55|Booking customer/company filters and envelope do not establish caller ownership or tenant matching.
+1707|manual_review_required|0.55|Hotel daily rates are filtered catalog data without an affirmative public or caller-tier policy.

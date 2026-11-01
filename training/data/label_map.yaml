@@ -1,0 +1,28 @@
+version: 1
+# Only identity mappings are known until the actual source taxonomy is supplied.
+# Unknown source labels are quarantined, never silently mapped to manual review.
+# For an ambiguous label use: source_name: [owner_match, owner_or_admin]
+# Replace that list with one chosen target only after the user's decision.
+mapping:
+  public: public
+  role_required: role_required
+  membership_required: membership_required
+  tenant_match: tenant_match
+  owner_match: owner_match
+  owner_or_admin: owner_or_admin
+  manual_review_required: manual_review_required
+# Canonical field -> dotted source field. Adjust after inspecting the real source.
+fields:
+  id: id
+  service: service
+  method: method
+  path: path
+  oas_snippet: oas_snippet
+  erd_snippet: erd_snippet
+  controller_signals: controller_signals
+  label: label
+  rationale: rationale
+  framework: framework
+source:
+  description: Not supplied
+  license: Not supplied

@@ -1,0 +1,5 @@
+split,group,N,public,role_required,membership_required,tenant_match,owner_match,owner_or_admin,manual_review_required,manual_ratio
+train_v1,APIs.guru description 비어 있음,112,1,27,2,6,47,0,29,25.9%
+train_v1,APIs.guru security_state=unknown,68,15,2,0,0,4,0,47,69.1%
+val_v1,APIs.guru description 비어 있음,6,0,1,0,0,1,0,4,66.7%
+val_v1,APIs.guru security_state=unknown,12,1,2,0,0,0,0,9,75.0%

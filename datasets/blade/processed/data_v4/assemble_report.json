@@ -1,0 +1,77 @@
+{
+ "projects": {
+  "zulip": {
+   "split": "train",
+   "candidates": 193,
+   "kept": 187
+  },
+  "label_studio": {
+   "split": "train",
+   "candidates": 253,
+   "kept": 253
+  },
+  "chatwoot": {
+   "split": "test",
+   "candidates": 86,
+   "kept": 86
+  },
+  "chamilo": {
+   "split": "test",
+   "candidates": 69,
+   "kept": 69
+  },
+  "flowise": {
+   "split": "test",
+   "candidates": 67,
+   "kept": 67
+  },
+  "multitenant_lab": {
+   "split": "test",
+   "candidates": 6,
+   "kept": 6
+  },
+  "generic_university": {
+   "split": "test",
+   "candidates": 35,
+   "kept": 35
+  }
+ },
+ "duplicates": [],
+ "internal_duplicates": [
+  {
+   "project": "zulip",
+   "method": "GET",
+   "path": "/api/v1/users/{user_id}"
+  },
+  {
+   "project": "zulip",
+   "method": "PATCH",
+   "path": "/api/v1/users/{user_id}"
+  },
+  {
+   "project": "zulip",
+   "method": "GET",
+   "path": "/avatar/{email}"
+  },
+  {
+   "project": "zulip",
+   "method": "GET",
+   "path": "/avatar/{email}/medium"
+  }
+ ],
+ "missing": [],
+ "excluded": [
+  {
+   "project": "zulip",
+   "method": "PATCH",
+   "path": "/api/v1/streams/{stream_id}",
+   "reason": "excerpt truncated, later permission checks missing"
+  },
+  {
+   "project": "zulip",
+   "method": "PATCH",
+   "path": "/api/v1/realm",
+   "reason": "excerpt truncated, later permission checks missing"
+  }
+ ]
+}

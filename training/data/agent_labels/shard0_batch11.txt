@@ -1,0 +1,50 @@
+1410|manual_review_required|0.55|Address creator/customer are flattened objects and customers:write does not establish caller ownership.
+1413|manual_review_required|0.55|Sales-order customerId filter and paging output lack a verified customer-to-caller relationship.
+1416|manual_review_required|0.55|Commission salesPersonId identifies a beneficiary, not necessarily the authorized reader of the sales order.
+1419|manual_review_required|0.55|Environment ownerId, organizationId and nested repository owner imply competing relationships without a verified policy.
+1422|manual_review_required|0.55|Environment callback has owner/organization metadata but may be service-driven; permitted actor is unspecified.
+1425|manual_review_required|0.55|Environment export exposes ownerId and organizationId without resolving personal-versus-tenant authorization.
+1428|manual_review_required|0.55|Environment notification body has message fields only without authorized caller or owner binding.
+1431|manual_review_required|0.55|Environment update stream mixes owner and organization identifiers without verified access semantics.
+1434|manual_review_required|0.55|SNMP username/password configure a device, not the caller's ownership or application role.
+1437|manual_review_required|0.55|Switch update credentials belong to a data source and do not identify its authorized operator.
+1440|manual_review_required|0.55|Firewall credential username is target configuration, not verified caller ownership.
+1443|manual_review_required|0.55|Cisco source update has device credentials without caller-owner or administrator-role evidence.
+1446|manual_review_required|0.55|Dell source credential metadata does not specify who may inspect the device configuration.
+1449|manual_review_required|0.55|Album-comment author/group metadata expresses attribution without an explicit public or owner-only read policy.
+1452|manual_review_required|0.55|Creating an album review supplies a new user attribution, not proof the caller must own the album.
+1455|manual_review_required|0.55|Artist catalog retrieval lacks affirmative unrestricted-access or caller-role evidence.
+1458|manual_review_required|0.55|Account details expose address/id but no verified caller account or tenant relationship.
+1461|manual_review_required|0.55|Account extension user fields describe extension subjects, not a verified caller-account authorization rule.
+1464|manual_review_required|0.55|Account-user listing returns a paging envelope without tenant lookup or required administrative role.
+1467|manual_review_required|0.55|Self-call route suggests individual scope, but accountId/userId coexist and the inferred lookup is unverified.
+1470|manual_review_required|0.55|Holding a self call has both accountId and userId without a verified caller-subject binding.
+1473|manual_review_required|0.55|Gift-list IsPublic, member lists and userId imply mixed visibility/shared access not resolved by the snippet.
+1476|manual_review_required|0.55|Brand update requires app credentials but supplies no caller role or object-owner rule.
+1479|manual_review_required|0.55|Ticket-class issuerName is descriptive and issuer scope is permission, not a verified owner or application role.
+1482|manual_review_required|0.55|Anonymous app-client deletion conflicts with creator/secret-bearing object signals; unrestricted mutation is not established.
+1485|manual_review_required|0.55|Asset createdBy is provenance and read scope does not prove exclusive creator access or verified lookup.
+1488|manual_review_required|0.55|Dataset creator and PII indicator do not specify caller access; read scope alone is insufficient.
+1491|manual_review_required|0.55|Document DELETE is paired with read scope and creator/dataset metadata, leaving authorization ambiguous.
+1494|manual_review_required|0.55|Workflow-filtered logs require read permission but lack caller ownership or tenant mapping.
+1497|manual_review_required|0.55|Enabling a job returns generic code/message without a verified job owner or allowed role.
+1500|manual_review_required|0.55|__admin stub mapping route names a management API but no application administrator role is evidenced; embedded credentials describe mocked requests.
+1503|manual_review_required|0.55|Chart-of-accounts deletion concerns ledger configuration, not a caller account; settings scope does not prove a role.
+1506|manual_review_required|0.55|Duplicated invoice customerId is a billing counterparty, not a verified caller owner or tenant.
+1509|manual_review_required|0.55|View permissions/sharedGroups are opaque ACLs without a concrete caller role or ownership mapping.
+1512|manual_review_required|0.55|Account details contain only an opaque account field, insufficient for caller authorization lookup.
+1515|manual_review_required|0.55|Provider-account preference update has linkedProviderAccountId without verified caller ownership semantics.
+1518|manual_review_required|0.55|Budget account listing returns an envelope without budget-to-caller ownership.
+1521|manual_review_required|0.55|Budget-account transactions lack a verified caller relationship in the response envelope.
+1524|manual_review_required|0.55|Payee location under a budget has payee_id but no budget owner binding.
+1527|manual_review_required|0.55|Domain summary names authenticated user, but creator/customerId and optional teamId leave owner-versus-team lookup unresolved.
+1530|manual_review_required|0.55|Episode author is content attribution, not a verified right to create episodes in the selected podcast.
+1533|manual_review_required|0.55|Subaccount owner_id suggests a person but organizational hierarchy and caller authorization remain unverified.
+1536|manual_review_required|0.55|Account billing invoices return only currency/invoices without verified account ownership.
+1539|manual_review_required|0.55|Locked meeting settings are configurable features, not an explicit caller administrator or tenant requirement.
+1542|manual_review_required|0.55|Changing account owner supplies the new email without the existing-owner or authorized administrator relation.
+1545|manual_review_required|0.55|Account SIP-trunk assignment lacks account-to-caller binding and an allowed operator role.
+1548|manual_review_required|0.55|Event-trigger metadata does not identify owner, tenant or permitted reader role.
+1551|manual_review_required|0.55|Email-template createdBy/updatedBy are audit attributes rather than verified creator-only update authorization.
+1554|manual_review_required|0.55|Notification creator and outgoing callout credentials do not establish the caller's authority to update definitions.
+1557|manual_review_required|0.55|Custom-record CreatedById records provenance but generic object/id routing leaves ownership lookup and access rules unverified.

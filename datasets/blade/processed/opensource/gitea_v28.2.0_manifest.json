@@ -1,0 +1,163 @@
+{
+  "routes_parsed": 481,
+  "oas_operations": 537,
+  "records": 455,
+  "unmatched_routes": 26,
+  "handler_unresolved": 0,
+  "by_package": {
+    "misc": 14,
+    "settings": 4,
+    "token": 2,
+    "notify": 7,
+    "user": 76,
+    "shared": 1,
+    "repo": 259,
+    "org": 50,
+    "packages": 9,
+    "admin": 33
+  },
+  "route_authentication": 341,
+  "with_route_authorization": 265,
+  "handler_authz_lines_gt0": 251,
+  "oas_unmatched_ops": 82,
+  "tag": "v28.2.0",
+  "commit": "829b49c1ae96015e345f9d2a0eb1ea7acd5f31e1",
+  "license": "MIT",
+  "output_sha256": "3e28db6d3a93a5085149b7e3b72735328f3aef64c428ed8f2f47c289b7fa9a0a",
+  "api_go_sha256": "9ff970b8fb8095ce9c9aacd7a0c4de80149f4123d815a5519c0c1f3b8d366308",
+  "oas_sha256": "c797dc2a94e070c19ea823cb4396829f234a745a7a8c90b4a686b91cbc4d278e",
+  "unmatched": [
+    {
+      "method": "GET",
+      "path": "/actions/secrets",
+      "handler": "act.ListActionsSecrets"
+    },
+    {
+      "method": "PUT",
+      "path": "/actions/secrets/{secretname}",
+      "handler": "act.CreateOrUpdateSecret"
+    },
+    {
+      "method": "DELETE",
+      "path": "/actions/secrets/{secretname}",
+      "handler": "act.DeleteSecret"
+    },
+    {
+      "method": "GET",
+      "path": "/actions/variables",
+      "handler": "act.ListVariables"
+    },
+    {
+      "method": "GET",
+      "path": "/actions/variables/{variablename}",
+      "handler": "act.GetVariable"
+    },
+    {
+      "method": "DELETE",
+      "path": "/actions/variables/{variablename}",
+      "handler": "act.DeleteVariable"
+    },
+    {
+      "method": "POST",
+      "path": "/actions/variables/{variablename}",
+      "handler": "act.CreateVariable"
+    },
+    {
+      "method": "PUT",
+      "path": "/actions/variables/{variablename}",
+      "handler": "act.UpdateVariable"
+    },
+    {
+      "method": "GET",
+      "path": "/actions/runners",
+      "handler": "act.ListRunners"
+    },
+    {
+      "method": "POST",
+      "path": "/actions/runners/registration-token",
+      "handler": "act.CreateRegistrationToken"
+    },
+    {
+      "method": "GET",
+      "path": "/actions/runners/{runner_id}",
+      "handler": "act.GetRunner"
+    },
+    {
+      "method": "DELETE",
+      "path": "/actions/runners/{runner_id}",
+      "handler": "act.DeleteRunner"
+    },
+    {
+      "method": "PATCH",
+      "path": "/actions/runners/{runner_id}",
+      "handler": "act.UpdateRunner"
+    },
+    {
+      "method": "GET",
+      "path": "/actions/runs",
+      "handler": "act.ListWorkflowRuns"
+    },
+    {
+      "method": "GET",
+      "path": "/actions/jobs",
+      "handler": "act.ListWorkflowJobs"
+    },
+    {
+      "method": "GET",
+      "path": "/swagger",
+      "handler": "func(ctx *context.APIContext) {\n\t\t\t\tctx.Redirect(setting.AppSubURL + \"/api/swagger\")\n\t\t\t}"
+    },
+    {
+      "method": "GET",
+      "path": "/nodeinfo",
+      "handler": "activitypub.NotImplemented"
+    },
+    {
+      "method": "ANY",
+      "path": "/activitypub/*",
+      "handler": "activitypub.NotImplemented"
+    },
+    {
+      "method": "POST",
+      "path": "/repos/{username}/{reponame}/markup",
+      "handler": "misc.Markup"
+    },
+    {
+      "method": "POST",
+      "path": "/repos/{username}/{reponame}/markdown",
+      "handler": "misc.Markdown"
+    },
+    {
+      "method": "POST",
+      "path": "/repos/{username}/{reponame}/markdown/raw",
+      "handler": "misc.MarkdownRaw"
+    },
+    {
+      "method": "GET",
+      "path": "/repos/{username}/{reponame}/commits/{sha}",
+      "handler": "repo.GetSingleCommit"
+    },
+    {
+      "method": "GET",
+      "path": "/repos/{username}/{reponame}/commits/{sha}.{diffType:diff|patch}",
+      "handler": "repo.DownloadCommitDiffOrPatch"
+    },
+    {
+      "method": "GET",
+      "path": "/repos/{username}/{reponame}/contents-ext",
+      "handler": "repo.GetContentsExt"
+    },
+    {
+      "method": "GET",
+      "path": "/repos/{username}/{reponame}/actions/artifacts/{artifact_id}/zip/raw",
+      "handler": "repo.DownloadArtifactRaw"
+    },
+    {
+      "method": "GET",
+      "path": "/admin/users/{username}/orgs",
+      "handler": "org.ListUserOrgs"
+    }
+  ],
+  "local_clone_deleted": "2026-10-21 after extraction",
+  "reproduce": "git clone --depth 1 --branch v28.2.0 https://github.com/go-gitea/gitea.git datasets/blade/raw/opensource/gitea && git -C datasets/blade/raw/opensource/gitea rev-parse HEAD  # expect 829b49c1ae96015e345f9d2a0eb1ea7acd5f31e1"
+}

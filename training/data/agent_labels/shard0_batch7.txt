@@ -1,0 +1,50 @@
+810|manual_review_required|0.55|Anonymous bucket security coexists with read/write permissions, so unrestricted object access is not established.
+813|manual_review_required|0.55|Metric time series requires accessToken but lacks a metric owner or tenant relationship.
+816|manual_review_required|0.55|Bank-balance scope permits account access but the envelope does not bind accountId to caller identity or consent.
+819|manual_review_required|0.55|Account-party response gives PartyId without a verified caller-party ownership relationship.
+822|manual_review_required|0.55|Account statements expose pagination metadata without account-owner or consent binding.
+825|manual_review_required|0.55|Bank transaction listing has account scopes but no verified account-to-caller lookup.
+828|manual_review_required|0.55|Blockchain transaction data lacks affirmative unrestricted-access evidence despite public-chain semantics.
+831|manual_review_required|0.55|Public tag appears with station/thermostat read scopes and device identifiers, leaving private-versus-public measurements ambiguous.
+834|manual_review_required|0.55|Setting a person at home has camera-write permission but no verified home/person authorization relationship.
+837|manual_review_required|0.55|Circuit termination site/provider data does not establish a caller tenant for updating infrastructure.
+840|manual_review_required|0.55|Circuit-type reading requires bearer authentication without a concrete role or public policy.
+843|manual_review_required|0.55|Circuit tenant/provider/site are flattened objects without verified caller-tenant matching semantics.
+846|manual_review_required|0.55|Provider-network provider field may identify a supplier, not the authenticated tenant; access policy is unspecified.
+849|manual_review_required|0.55|Circuit-termination update has site/device fields but no verified owner or tenant lookup.
+852|manual_review_required|0.55|Circuit update includes opaque tenant and provider objects without a verified caller relationship.
+855|manual_review_required|0.55|Provider account and admin_contact are supplier details, not a demonstrated caller administrator role.
+858|manual_review_required|0.55|Account secret retrieval uses basic authentication but the secrets envelope lacks a verified account-owner relation.
+861|manual_review_required|0.55|Application update exposes keys/webhooks but no caller ownership or role requirement.
+864|manual_review_required|0.55|Conversation member user_id identifies members rather than proving who may list the conversation membership.
+867|manual_review_required|0.55|Workgroup/project file listing returns result/status only without tenant ownership mapping.
+870|manual_review_required|0.55|Workgroup project spec retrieval lacks usable object-to-tenant schema beyond nesting.
+873|manual_review_required|0.55|Workgroup spec-type fields provide only result/status without a verified caller relationship.
+876|manual_review_required|0.55|Bank account owner_name is descriptive text, insufficient to compare caller subject or establish verified ownership.
+879|manual_review_required|0.55|Payment creditor/debtor account objects leave caller ownership and consent authorization unresolved.
+882|manual_review_required|0.55|Block created_by is creator attribution and does not establish exclusive deletion rights in a shared workspace.
+885|manual_review_required|0.55|Block-child listing provides pagination without parent workspace or caller authorization evidence.
+888|manual_review_required|0.55|Database query returns paginated results without a verified database owner or tenant relationship.
+891|manual_review_required|0.55|User profile retrieval does not state self-only, administrative or unrestricted access.
+894|manual_review_required|0.55|Updating a subscription-plan object does not mean the caller must hold that plan; management authorization is unspecified.
+897|manual_review_required|0.55|Comments-by-user listing uses API authentication but no explicit public or caller-owner read rule.
+900|manual_review_required|0.55|Setting recovery credentials identifies userId but lacks the user identity lookup and authorized caller condition.
+903|manual_review_required|0.55|Appointment deletion has customerId, bookedBy and resources without defining who may cancel or delete it.
+906|manual_review_required|0.55|Appointment cancellation exposes customer and booking actors but no verified governing owner relationship.
+909|manual_review_required|0.55|Location-filtered booking fields require API scope without specifying a role, tier or owner policy.
+912|manual_review_required|0.55|File metadata lacks owner/project relation; unknown security does not establish unrestricted file inspection.
+915|manual_review_required|0.55|Account retrieval uses PSU accounts scope but only an envelope, not a verified caller-account mapping.
+918|manual_review_required|0.55|Account direct debits expose a response envelope without account ownership or consent binding.
+921|manual_review_required|0.55|Party AccountRole and BeneficialOwnership are financial subject attributes, not application caller roles or verified ownership.
+924|manual_review_required|0.55|Standing-order list identifies the account but provides no owner lookup or explicit consent relationship.
+927|manual_review_required|0.55|Statement transactions have account/statement nesting without a verified caller-account authorization relation.
+930|manual_review_required|0.55|Anonymous authentication alternative does not make financial account balances unrestricted; ownership/consent is unresolved.
+933|manual_review_required|0.55|Consent request ownerName and access scopes describe financial authorization state, not unrestricted access despite anonymous alternative.
+936|manual_review_required|0.55|Signing-basket authorization starts an object-specific banking flow; empty security alone does not permit arbitrary basket access.
+939|manual_review_required|0.55|App-version developerId and allow/restrict fields imply configurable access without a verified caller-owner rule.
+942|manual_review_required|0.55|Refund acts on behalf of a user and has developer/user IDs, so owner-only or administrator authorization cannot be assumed.
+945|manual_review_required|0.55|Action help content is descriptive but no affirmative unrestricted-access statement is supplied.
+948|manual_review_required|0.55|Committee memberships describe legislative structure, not a caller subscription; API access policy remains unspecified.
+951|manual_review_required|0.55|Build-request diff project/source fields indicate package context rather than verified caller tenant authorization.
+954|manual_review_required|0.55|Workspace-member note update has body-only schema without note-owner or tenant lookup.
+957|manual_review_required|0.55|Modality worklist query identifies medical infrastructure but supplies no permitted caller or ownership rule.

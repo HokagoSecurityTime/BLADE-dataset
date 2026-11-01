@@ -1,0 +1,12 @@
+{
+  "target": "test_v2_extra",
+  "prompt_version": "policy-label-v3.0.1",
+  "prompt_sha256": "d0913c27b5de185e7dd5734c111cb731f45e28ebca81fed787ff3914d02833ef",
+  "input_sha256": "54d669c6aa405a72766144fbeef4c13f3af7a3c71defc30bdcc0b9866635fab5",
+  "records": 56,
+  "model": "gpt-4o-mini",
+  "temperature": 0,
+  "condition": "oas_code",
+  "reference_only": true,
+  "started_at": "2026-10-21T12:36:38.025172+00:00"
+}

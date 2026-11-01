@@ -1,0 +1,718 @@
+{
+  "seed": 42,
+  "design": "purposive_stratified_pilot_not_population_random_sample",
+  "manual_allocation": {
+    "owner": 16,
+    "tenant": 16,
+    "both": 16,
+    "path_only": 16,
+    "none": 15
+  },
+  "ids": [
+    "apisguru:autodealerdata.com:get:/listings",
+    "apisguru:autodealerdata.com:get:/valuation",
+    "apisguru:conjur.local:post:/authn-azure/{service_id}/{account}/{login}/authenticate",
+    "apisguru:dev.to:get:/api/articles",
+    "apisguru:discourse.local:delete:/admin/users/{id}.json",
+    "apisguru:discourse.local:put:/admin/users/{id}/anonymize.json",
+    "apisguru:discourse.local:post:/admin/users/{id}/log_out.json",
+    "apisguru:discourse.local:put:/admin/users/{id}/suspend.json",
+    "apisguru:flickr.com:get:/rest?method=flickr.favorites.getContext",
+    "apisguru:flickr.com:get:/rest?method=flickr.groups.discuss.replies.getInfo",
+    "apisguru:flickr.com:get:/rest?method=flickr.groups.discuss.topics.getInfo",
+    "apisguru:flickr.com:get:/rest?method=flickr.groups.pools.getContext",
+    "apisguru:flickr.com:get:/rest?method=flickr.photolist.getContext",
+    "apisguru:flickr.com:get:/rest?method=flickr.photos.getContext",
+    "apisguru:gitea.io:patch:/admin/hooks/{id}",
+    "apisguru:gitea.io:get:/admin/users",
+    "apisguru:slack.com:get:/admin.conversations.getConversationPrefs",
+    "apisguru:evetech.net:get:/characters/{character_id}/",
+    "apisguru:gitlab.com:post:/v3/groups/{id}/projects/{project_id}",
+    "apisguru:hillbillysoftware.com:get:/Magnets/ByIMDB/{AccessToken}/{imdbID}",
+    "apisguru:opto22.com:get:/v1/data-store/devices/{id}/tags",
+    "apisguru:bigoven.com:put:/recipe/review/replies/{replyId}",
+    "apisguru:bigoven.com:get:/recipe/steps/{id}",
+    "apisguru:bigoven.com:get:/recipe/{id}",
+    "apisguru:bufferapp.com:post:/updates/{id}/move_to_top{mediaTypeExtension}",
+    "apisguru:circuitsandbox.net:post:/conversations/{convId}/messages",
+    "apisguru:appcenter.ms:get:/v0.1/apps/{owner_name}/{app_name}/crash_groups/{crash_group_id}/crashes",
+    "apisguru:simplyrets.com:get:/openhouses",
+    "apisguru:mastodon.local:get:/api/v1/accounts/{id}/following",
+    "apisguru:jumpseller.com:post:/customer_categories/{id}/customers.json",
+    "apisguru:github.com:post:/gists/{gist_id}/comments",
+    "apisguru:contribly.com:get:/form-responses/{id}",
+    "apisguru:runscope.com:put:/buckets/{bucketKey}/tests/{testId}",
+    "apisguru:circuitsandbox.net:delete:/conversations/group/{convId}/participants",
+    "apisguru:illumidesk.com:patch:/v1/users/{user}/emails/{email_id}/",
+    "apisguru:vocadb.net:post:/api/albums/comments/{commentId}",
+    "apisguru:chaingateway.io:get:/v2/bsc/nfts/{contract}/owner/{token_id}",
+    "apisguru:tyk.com:get:/tyk/apis/{apiID}",
+    "apisguru:stoplight.io:put:/versions/{versionId}/import",
+    "apisguru:amazonaws.com:get:/workspaces/{workspaceId}",
+    "apisguru:adyen.com:get:/paymentInstruments/{id}",
+    "apisguru:collegefootballdata.com:get:/play/stats",
+    "apisguru:microsoft.com:post:/{projectId}/classify/iterations/{publishedName}/url",
+    "apisguru:mist.com:post:/api/v1/installer/orgs/{org_id}/sites/{site_name}/maps/import",
+    "apisguru:azure.com:get:/providers/Microsoft.ADHybridHealthService/addsservices/{serviceName}/servicemembers/{serviceMemberId}",
+    "apisguru:watchful.li:get:/sites/{id}",
+    "apisguru:adyen.com:patch:/legalEntities/{id}",
+    "apisguru:payments.service.gov.uk:get:/v1/payments/{paymentId}",
+    "apisguru:microsoft.com:post:/{projectId}/image/nostore",
+    "apisguru:openfintech.io:get:/organizations/{id}",
+    "apisguru:sportsdata.io:get:/{format}/MembershipsByTeam/{teamid}",
+    "apisguru:mist.com:put:/api/v1/installer/orgs/{org_id}/devices/{device_mac}",
+    "apisguru:telnyx.com:patch:/authentication_providers/{id}",
+    "apisguru:visma.com:patch:/v1/activities/{guid}",
+    "apisguru:mastodon.local:get:/api/v1/accounts/{id}/statuses",
+    "apisguru:learnifier.com:patch:/orgunits/{orgid}/projects/{projectid}",
+    "apisguru:pendo.io:delete:/users/{id}",
+    "apisguru:ably.net:post:/accounts/{account_id}/apps",
+    "apisguru:data2crm.com:get:/application/entity/comment/{comment_id}",
+    "apisguru:learnifier.com:get:/orgunits/{orgid}/projects/{projectid}",
+    "apisguru:flat.io:get:/scores/{score}/collaborators",
+    "apisguru:yodlee.com:put:/accounts/{accountId}",
+    "apisguru:shop-pro.jp:put:/v1/inline_script_tags/{inlineScriptTagId}.json",
+    "apisguru:openbankingproject.ch:get:/v1/consents/{consentId}",
+    "apisguru:flat.io:get:/scores/{score}",
+    "apisguru:gsmtasks.com:put:/account_roles/{id}/",
+    "apisguru:data2crm.com:get:/application/entity/contact/{contact_id}",
+    "apisguru:openbankingproject.ch:get:/v1/accounts/{account-id}/transactions",
+    "apisguru:billbee.io:post:/api/v1/customers/{id}/addresses",
+    "apisguru:beezup.com:post:/orders/v3/{marketplaceTechnicalCode}/{accountId}/{beezUPOrderId}/setMerchantOrderInfo",
+    "apisguru:noosh.com:get:/1.1/workgroups/{workgroup_id}/projects/{project_id}/fileTags",
+    "apisguru:biapi.pro:get:/users/{id_user}/connections/{id_connection}/logs",
+    "apisguru:nbg.gr:get:/accounts/{accountId}/parties",
+    "apisguru:mist.com:post:/api/v1/installer/orgs/{org_id}/devices/{device_mac}/{image_name}",
+    "apisguru:zoom.us:patch:/accounts/{accountId}/lock_settings",
+    "apisguru:interactivebrokers.com:get:/accounts/{account}/orders/{CustomerOrderId}",
+    "apisguru:apigee.local:post:/v1/projects/{project}/locations/{location}/apis/{api}/versions",
+    "apisguru:owler.com:get:/v1/company/competitorpremium/id/{companyId}",
+    "apisguru:paylocity.com:put:/v2/companies/{companyId}/employees/{employeeId}/additionalRates",
+    "apisguru:trakt.tv:put:/users/{id}/lists/{list_id}",
+    "apisguru:bitbucket.org:post:/repositories/{workspace}/{repo_slug}/commit/{commit}/reports/{reportId}/annotations",
+    "apisguru:nexmo.com:get:/accounts/{api_key}/secrets/{secret_id}",
+    "apisguru:appwrite.io:put:/teams/{teamId}",
+    "apisguru:twilio.com:get:/2010-04-01/Accounts/{AccountSid}/Applications.json",
+    "apisguru:izettle.com:get:/organizations/{organizationUuid}/import/status",
+    "apisguru:evetech.net:get:/characters/{character_id}/attributes/",
+    "apisguru:deutschebahn.com:get:/providernetworks/{providernetworkUID}/categories",
+    "apisguru:openstates.org:get:/committees",
+    "apisguru:zuora.com:get:/events/event-triggers/{id}",
+    "apisguru:gerermesaffaires.com:get:/hub/business-groups/{Id}/menus",
+    "apisguru:pims.io:get:/events/{event_id}",
+    "apisguru:billingo.hu:get:/documents/{id}/online-szamla",
+    "apisguru:apple.com:get:/v1/appInfoLocalizations/{id}",
+    "apisguru:instagram.com:delete:/media/{media-id}/likes",
+    "apisguru:ideal-postcodes.co.uk:post:/keys/{key}/configs/{config}",
+    "apisguru:zoomconnect.com:put:/api/rest/v1/messages/{messageId}/markUnread",
+    "apisguru:medium.com:get:/article/{article_id}/fans",
+    "apisguru:box.com:delete:/device_pinners/{device_pinner_id}",
+    "apisguru:impala.travel:get:/hotels/{hotelId}/rate-plans/{ratePlanId}",
+    "apisguru:chaingateway.io:post:/v2/polygon/webhooks/notifications/failed/{notification_id}"
+  ],
+  "records": [
+    {
+      "id": "apisguru:autodealerdata.com:get:/listings",
+      "source_sha256": "372d1b67975d3bdcda1a2a83f5d333e357a29ead076445850e91b8ffaaed256d",
+      "signal_class": "none",
+      "selection_reason": "existing_direct_decision"
+    },
+    {
+      "id": "apisguru:autodealerdata.com:get:/valuation",
+      "source_sha256": "372d1b67975d3bdcda1a2a83f5d333e357a29ead076445850e91b8ffaaed256d",
+      "signal_class": "none",
+      "selection_reason": "existing_direct_decision"
+    },
+    {
+      "id": "apisguru:conjur.local:post:/authn-azure/{service_id}/{account}/{login}/authenticate",
+      "source_sha256": "78e9af4213ffb3ba05e25f24caa29564018a6e8c8ff97092f31a5288d1c9b810",
+      "signal_class": "path_only",
+      "selection_reason": "existing_direct_decision"
+    },
+    {
+      "id": "apisguru:dev.to:get:/api/articles",
+      "source_sha256": "6cd57b7934719cfde7005493954fc4d12d5e09bc35d3c893f5a84e5e7d5a84a6",
+      "signal_class": "both",
+      "selection_reason": "existing_direct_decision"
+    },
+    {
+      "id": "apisguru:discourse.local:delete:/admin/users/{id}.json",
+      "source_sha256": "539eba7fb8346b2c7020b5a56e814c4d67aa86951be22f802ffbd18b2c53cff6",
+      "signal_class": "path_only",
+      "selection_reason": "existing_direct_decision"
+    },
+    {
+      "id": "apisguru:discourse.local:put:/admin/users/{id}/anonymize.json",
+      "source_sha256": "539eba7fb8346b2c7020b5a56e814c4d67aa86951be22f802ffbd18b2c53cff6",
+      "signal_class": "owner",
+      "selection_reason": "existing_direct_decision"
+    },
+    {
+      "id": "apisguru:discourse.local:post:/admin/users/{id}/log_out.json",
+      "source_sha256": "539eba7fb8346b2c7020b5a56e814c4d67aa86951be22f802ffbd18b2c53cff6",
+      "signal_class": "path_only",
+      "selection_reason": "existing_direct_decision"
+    },
+    {
+      "id": "apisguru:discourse.local:put:/admin/users/{id}/suspend.json",
+      "source_sha256": "539eba7fb8346b2c7020b5a56e814c4d67aa86951be22f802ffbd18b2c53cff6",
+      "signal_class": "owner",
+      "selection_reason": "existing_direct_decision"
+    },
+    {
+      "id": "apisguru:flickr.com:get:/rest?method=flickr.favorites.getContext",
+      "source_sha256": "7920d5829cbececacc66dce6441c7b078cdf32977835e33abfcdb79808f16532",
+      "signal_class": "owner",
+      "selection_reason": "existing_direct_decision"
+    },
+    {
+      "id": "apisguru:flickr.com:get:/rest?method=flickr.groups.discuss.replies.getInfo",
+      "source_sha256": "7920d5829cbececacc66dce6441c7b078cdf32977835e33abfcdb79808f16532",
+      "signal_class": "owner",
+      "selection_reason": "existing_direct_decision"
+    },
+    {
+      "id": "apisguru:flickr.com:get:/rest?method=flickr.groups.discuss.topics.getInfo",
+      "source_sha256": "7920d5829cbececacc66dce6441c7b078cdf32977835e33abfcdb79808f16532",
+      "signal_class": "owner",
+      "selection_reason": "existing_direct_decision"
+    },
+    {
+      "id": "apisguru:flickr.com:get:/rest?method=flickr.groups.pools.getContext",
+      "source_sha256": "7920d5829cbececacc66dce6441c7b078cdf32977835e33abfcdb79808f16532",
+      "signal_class": "owner",
+      "selection_reason": "existing_direct_decision"
+    },
+    {
+      "id": "apisguru:flickr.com:get:/rest?method=flickr.photolist.getContext",
+      "source_sha256": "7920d5829cbececacc66dce6441c7b078cdf32977835e33abfcdb79808f16532",
+      "signal_class": "owner",
+      "selection_reason": "existing_direct_decision"
+    },
+    {
+      "id": "apisguru:flickr.com:get:/rest?method=flickr.photos.getContext",
+      "source_sha256": "7920d5829cbececacc66dce6441c7b078cdf32977835e33abfcdb79808f16532",
+      "signal_class": "owner",
+      "selection_reason": "existing_direct_decision"
+    },
+    {
+      "id": "apisguru:gitea.io:patch:/admin/hooks/{id}",
+      "source_sha256": "f999e5e0c20d65d925b22e65d01a819d315a1f277fbb103fc85cf7c498696b7b",
+      "signal_class": "none",
+      "selection_reason": "existing_direct_decision"
+    },
+    {
+      "id": "apisguru:gitea.io:get:/admin/users",
+      "source_sha256": "f999e5e0c20d65d925b22e65d01a819d315a1f277fbb103fc85cf7c498696b7b",
+      "signal_class": "none",
+      "selection_reason": "existing_direct_decision"
+    },
+    {
+      "id": "apisguru:slack.com:get:/admin.conversations.getConversationPrefs",
+      "source_sha256": "94bfd59e49f34151ba1dcf481854d645bf440349f30fc9e285c0d0f544cef4db",
+      "signal_class": "owner",
+      "selection_reason": "existing_direct_decision"
+    },
+    {
+      "id": "apisguru:evetech.net:get:/characters/{character_id}/",
+      "source_sha256": "fd55af0ffb9281a6aed973da893e81edec85cbc3533dfbbc4ff914e0357c5d28",
+      "signal_class": "none",
+      "selection_reason": "existing_direct_decision"
+    },
+    {
+      "id": "apisguru:gitlab.com:post:/v3/groups/{id}/projects/{project_id}",
+      "source_sha256": "b6a33e41741fa5ed76f05da0b54e3dea9552df249075a8a4719e75bb0cee0394",
+      "signal_class": "both",
+      "selection_reason": "existing_direct_decision"
+    },
+    {
+      "id": "apisguru:hillbillysoftware.com:get:/Magnets/ByIMDB/{AccessToken}/{imdbID}",
+      "source_sha256": "67f537d688638ac100a56351fcc17c7fcb1f89dedfdbbb3d8eede98dbe983904",
+      "signal_class": "none",
+      "selection_reason": "existing_direct_decision"
+    },
+    {
+      "id": "apisguru:opto22.com:get:/v1/data-store/devices/{id}/tags",
+      "source_sha256": "7e440ef769d6527d170986a59cd735c4c0b0bd5183f217b63e73dfd6e3465c94",
+      "signal_class": "none",
+      "selection_reason": "existing_direct_decision"
+    },
+    {
+      "id": "apisguru:bigoven.com:put:/recipe/review/replies/{replyId}",
+      "source_sha256": "888f4409645bb40aefb122c0813feef9c7f35e3e75871e4d91d9c211eff24843",
+      "signal_class": "owner",
+      "selection_reason": "mandatory_explicit_owner_bigoven"
+    },
+    {
+      "id": "apisguru:bigoven.com:get:/recipe/steps/{id}",
+      "source_sha256": "888f4409645bb40aefb122c0813feef9c7f35e3e75871e4d91d9c211eff24843",
+      "signal_class": "owner",
+      "selection_reason": "mandatory_explicit_owner_bigoven"
+    },
+    {
+      "id": "apisguru:bigoven.com:get:/recipe/{id}",
+      "source_sha256": "888f4409645bb40aefb122c0813feef9c7f35e3e75871e4d91d9c211eff24843",
+      "signal_class": "owner",
+      "selection_reason": "mandatory_explicit_owner_bigoven"
+    },
+    {
+      "id": "apisguru:bufferapp.com:post:/updates/{id}/move_to_top{mediaTypeExtension}",
+      "source_sha256": "3bc4d19e37f733ca768ac1b798f8683f63734f01ebab5467f4f0b008fa4000a7",
+      "signal_class": "owner",
+      "selection_reason": "stratified_manual"
+    },
+    {
+      "id": "apisguru:circuitsandbox.net:post:/conversations/{convId}/messages",
+      "source_sha256": "3046588b42e8c45fe2dd77058967a4543e406699da8bfbd3f847318894f23bd0",
+      "signal_class": "owner",
+      "selection_reason": "stratified_manual"
+    },
+    {
+      "id": "apisguru:appcenter.ms:get:/v0.1/apps/{owner_name}/{app_name}/crash_groups/{crash_group_id}/crashes",
+      "source_sha256": "cb09942599f2dbb460aafd2fc759636959e3113c2929b5d9f038d12d7bde1b4a",
+      "signal_class": "owner",
+      "selection_reason": "stratified_manual"
+    },
+    {
+      "id": "apisguru:simplyrets.com:get:/openhouses",
+      "source_sha256": "bd2a3a4678392bfe4658b2e4a2729b26abd8fc529cf1f6ea03b795da11108be2",
+      "signal_class": "owner",
+      "selection_reason": "stratified_manual"
+    },
+    {
+      "id": "apisguru:mastodon.local:get:/api/v1/accounts/{id}/following",
+      "source_sha256": "e188ffe3b52264d66c06ea0828faa91f0b1514c105b63dcb01a3794c84230b91",
+      "signal_class": "owner",
+      "selection_reason": "stratified_manual"
+    },
+    {
+      "id": "apisguru:jumpseller.com:post:/customer_categories/{id}/customers.json",
+      "source_sha256": "3296967dace6e2e977915cd19e9adcfbb7f33f3c337db66783593a9f51f4b1d3",
+      "signal_class": "owner",
+      "selection_reason": "stratified_manual"
+    },
+    {
+      "id": "apisguru:github.com:post:/gists/{gist_id}/comments",
+      "source_sha256": "e43ce12b73a36230a1bb3fbf21c3d95fb173877685b94037e60783c2d49a0396",
+      "signal_class": "owner",
+      "selection_reason": "stratified_manual"
+    },
+    {
+      "id": "apisguru:contribly.com:get:/form-responses/{id}",
+      "source_sha256": "d67df5aab268109b6ee623ff84d2b3cd0ab00d7f7e93436844895ddaffe12476",
+      "signal_class": "owner",
+      "selection_reason": "stratified_manual"
+    },
+    {
+      "id": "apisguru:runscope.com:put:/buckets/{bucketKey}/tests/{testId}",
+      "source_sha256": "c5956bcdf01669d886834b67c68ccaf97b070749336bd563e16ef54d5a77d377",
+      "signal_class": "owner",
+      "selection_reason": "stratified_manual"
+    },
+    {
+      "id": "apisguru:circuitsandbox.net:delete:/conversations/group/{convId}/participants",
+      "source_sha256": "3046588b42e8c45fe2dd77058967a4543e406699da8bfbd3f847318894f23bd0",
+      "signal_class": "owner",
+      "selection_reason": "stratified_manual"
+    },
+    {
+      "id": "apisguru:illumidesk.com:patch:/v1/users/{user}/emails/{email_id}/",
+      "source_sha256": "45e858acdc96ff004eeed037af051c79c0dd9d46175a9f0c763225584f17ba00",
+      "signal_class": "owner",
+      "selection_reason": "stratified_manual"
+    },
+    {
+      "id": "apisguru:vocadb.net:post:/api/albums/comments/{commentId}",
+      "source_sha256": "c0929eae5e74580e803f3355c2b2eb09c4a5cbac4832fca23757b9c02d308613",
+      "signal_class": "owner",
+      "selection_reason": "stratified_manual"
+    },
+    {
+      "id": "apisguru:chaingateway.io:get:/v2/bsc/nfts/{contract}/owner/{token_id}",
+      "source_sha256": "fa3a43a7bff70e29ba016f0955b4252f092af5c0958b50329fd049591844d266",
+      "signal_class": "owner",
+      "selection_reason": "stratified_manual"
+    },
+    {
+      "id": "apisguru:tyk.com:get:/tyk/apis/{apiID}",
+      "source_sha256": "4dc9093605a2f164d3c4823c70510e46f09f3460edf657d700c22d10e2cb3f5f",
+      "signal_class": "tenant",
+      "selection_reason": "stratified_manual"
+    },
+    {
+      "id": "apisguru:stoplight.io:put:/versions/{versionId}/import",
+      "source_sha256": "9943eba30b412cb83392574edf6156e692f1289c2f575c37d326b65a7477d160",
+      "signal_class": "tenant",
+      "selection_reason": "stratified_manual"
+    },
+    {
+      "id": "apisguru:amazonaws.com:get:/workspaces/{workspaceId}",
+      "source_sha256": "94f1a7e5fd89a3a077390514cf0076e75969da7f09dcfb7cabccf8f768ba0841",
+      "signal_class": "tenant",
+      "selection_reason": "stratified_manual"
+    },
+    {
+      "id": "apisguru:adyen.com:get:/paymentInstruments/{id}",
+      "source_sha256": "88b07f130bdac58f47831d63a7becb96f81317246a4139e630aaac56b099db8e",
+      "signal_class": "tenant",
+      "selection_reason": "stratified_manual"
+    },
+    {
+      "id": "apisguru:collegefootballdata.com:get:/play/stats",
+      "source_sha256": "d974bb3a6245db945044e2b254f31724fa728c43965e7393fda2ef84ec33c541",
+      "signal_class": "tenant",
+      "selection_reason": "stratified_manual"
+    },
+    {
+      "id": "apisguru:microsoft.com:post:/{projectId}/classify/iterations/{publishedName}/url",
+      "source_sha256": "db8ae12495a65d2f88aa5b50103a8e1e29abcf526c74ea276638f58e2e00b7c9",
+      "signal_class": "tenant",
+      "selection_reason": "stratified_manual"
+    },
+    {
+      "id": "apisguru:mist.com:post:/api/v1/installer/orgs/{org_id}/sites/{site_name}/maps/import",
+      "source_sha256": "03d5578bd1725fec1582d395c962abd76b20c187980e81f3a415dbbbe73e2bde",
+      "signal_class": "tenant",
+      "selection_reason": "stratified_manual"
+    },
+    {
+      "id": "apisguru:azure.com:get:/providers/Microsoft.ADHybridHealthService/addsservices/{serviceName}/servicemembers/{serviceMemberId}",
+      "source_sha256": "14cb7da6fa3e98833bf2cbbfaa853493b56b10ad91c92508701fd49beee94bdd",
+      "signal_class": "tenant",
+      "selection_reason": "stratified_manual"
+    },
+    {
+      "id": "apisguru:watchful.li:get:/sites/{id}",
+      "source_sha256": "5e39365c8fb82de9ff7e13fb93094a1520ea8dc3c93bfb2ededf818b4b3c1fbf",
+      "signal_class": "tenant",
+      "selection_reason": "stratified_manual"
+    },
+    {
+      "id": "apisguru:adyen.com:patch:/legalEntities/{id}",
+      "source_sha256": "88b07f130bdac58f47831d63a7becb96f81317246a4139e630aaac56b099db8e",
+      "signal_class": "tenant",
+      "selection_reason": "stratified_manual"
+    },
+    {
+      "id": "apisguru:payments.service.gov.uk:get:/v1/payments/{paymentId}",
+      "source_sha256": "f8e5d03e84fa7652f6d20c2b2b569cc72edbccb29ae1bd7dd72edfa3c1d71dc9",
+      "signal_class": "tenant",
+      "selection_reason": "stratified_manual"
+    },
+    {
+      "id": "apisguru:microsoft.com:post:/{projectId}/image/nostore",
+      "source_sha256": "a5adc70072dcf02bb455b178ea887b1a730f18387ae4f5e83da7e2018f590af8",
+      "signal_class": "tenant",
+      "selection_reason": "stratified_manual"
+    },
+    {
+      "id": "apisguru:openfintech.io:get:/organizations/{id}",
+      "source_sha256": "c96b88641056aaf7d25819bf92be153e6c3d9f3fd9160220919a418304f70780",
+      "signal_class": "tenant",
+      "selection_reason": "stratified_manual"
+    },
+    {
+      "id": "apisguru:sportsdata.io:get:/{format}/MembershipsByTeam/{teamid}",
+      "source_sha256": "ce685c5d525540ddef97450093936772d4835661befc6c2acc139d6f2bb1104e",
+      "signal_class": "tenant",
+      "selection_reason": "stratified_manual"
+    },
+    {
+      "id": "apisguru:mist.com:put:/api/v1/installer/orgs/{org_id}/devices/{device_mac}",
+      "source_sha256": "03d5578bd1725fec1582d395c962abd76b20c187980e81f3a415dbbbe73e2bde",
+      "signal_class": "tenant",
+      "selection_reason": "stratified_manual"
+    },
+    {
+      "id": "apisguru:telnyx.com:patch:/authentication_providers/{id}",
+      "source_sha256": "052503b5c6e1cf4a84a678012304d808c895aec9a7dc0cdc7d55758e04097581",
+      "signal_class": "tenant",
+      "selection_reason": "stratified_manual"
+    },
+    {
+      "id": "apisguru:visma.com:patch:/v1/activities/{guid}",
+      "source_sha256": "c3d09a1e190347c12e55bbb74c14e90e444c8d9b5bf36317693f068daaad42de",
+      "signal_class": "both",
+      "selection_reason": "stratified_manual"
+    },
+    {
+      "id": "apisguru:mastodon.local:get:/api/v1/accounts/{id}/statuses",
+      "source_sha256": "e188ffe3b52264d66c06ea0828faa91f0b1514c105b63dcb01a3794c84230b91",
+      "signal_class": "both",
+      "selection_reason": "stratified_manual"
+    },
+    {
+      "id": "apisguru:learnifier.com:patch:/orgunits/{orgid}/projects/{projectid}",
+      "source_sha256": "4e6e36a3f2c9440b05640e8ee31860357050109cf6c13fc9ba9e4580f3e3c73d",
+      "signal_class": "both",
+      "selection_reason": "stratified_manual"
+    },
+    {
+      "id": "apisguru:pendo.io:delete:/users/{id}",
+      "source_sha256": "d7a51b8db924448dd1005234215cafd30274e99de330f151c1cff43a8bb1f8e3",
+      "signal_class": "both",
+      "selection_reason": "stratified_manual"
+    },
+    {
+      "id": "apisguru:ably.net:post:/accounts/{account_id}/apps",
+      "source_sha256": "3531ad015f47bbbc12bb362528693631dcc754a1a727a3ec885142290b693505",
+      "signal_class": "both",
+      "selection_reason": "stratified_manual"
+    },
+    {
+      "id": "apisguru:data2crm.com:get:/application/entity/comment/{comment_id}",
+      "source_sha256": "e635030754070021eb1b3fe605b401c1c26145c117b060c58e9055ce817e91ce",
+      "signal_class": "both",
+      "selection_reason": "stratified_manual"
+    },
+    {
+      "id": "apisguru:learnifier.com:get:/orgunits/{orgid}/projects/{projectid}",
+      "source_sha256": "4e6e36a3f2c9440b05640e8ee31860357050109cf6c13fc9ba9e4580f3e3c73d",
+      "signal_class": "both",
+      "selection_reason": "stratified_manual"
+    },
+    {
+      "id": "apisguru:flat.io:get:/scores/{score}/collaborators",
+      "source_sha256": "1216465966b46ec7aee6fa66029ba411f24e136e52183d00d77adcdcb18ab4e7",
+      "signal_class": "both",
+      "selection_reason": "stratified_manual"
+    },
+    {
+      "id": "apisguru:yodlee.com:put:/accounts/{accountId}",
+      "source_sha256": "7db0ab90d05973bcf126be50a7f841c3f640f9e5ac9e6f72670acccb6e6e5547",
+      "signal_class": "both",
+      "selection_reason": "stratified_manual"
+    },
+    {
+      "id": "apisguru:shop-pro.jp:put:/v1/inline_script_tags/{inlineScriptTagId}.json",
+      "source_sha256": "8b941cdc4ed70f9926fdb25959a35c7e35ae18a9df12510b23c17baf6deaab92",
+      "signal_class": "both",
+      "selection_reason": "stratified_manual"
+    },
+    {
+      "id": "apisguru:openbankingproject.ch:get:/v1/consents/{consentId}",
+      "source_sha256": "bd8916cca9c6ba44ca92610289a0eda85b0e50543040634cb968098d5dfd8734",
+      "signal_class": "both",
+      "selection_reason": "stratified_manual"
+    },
+    {
+      "id": "apisguru:flat.io:get:/scores/{score}",
+      "source_sha256": "1216465966b46ec7aee6fa66029ba411f24e136e52183d00d77adcdcb18ab4e7",
+      "signal_class": "both",
+      "selection_reason": "stratified_manual"
+    },
+    {
+      "id": "apisguru:gsmtasks.com:put:/account_roles/{id}/",
+      "source_sha256": "38ecd32a8a55b7848c767ce81c8eaf773bfbc9ffc0d4ed78095655b255a63fdb",
+      "signal_class": "both",
+      "selection_reason": "stratified_manual"
+    },
+    {
+      "id": "apisguru:data2crm.com:get:/application/entity/contact/{contact_id}",
+      "source_sha256": "e635030754070021eb1b3fe605b401c1c26145c117b060c58e9055ce817e91ce",
+      "signal_class": "both",
+      "selection_reason": "stratified_manual"
+    },
+    {
+      "id": "apisguru:openbankingproject.ch:get:/v1/accounts/{account-id}/transactions",
+      "source_sha256": "bd8916cca9c6ba44ca92610289a0eda85b0e50543040634cb968098d5dfd8734",
+      "signal_class": "both",
+      "selection_reason": "stratified_manual"
+    },
+    {
+      "id": "apisguru:billbee.io:post:/api/v1/customers/{id}/addresses",
+      "source_sha256": "9ea28bfa5cc39c74a6eff669a198c94ecdb6f7f01a4b62c08fe7a24689abc329",
+      "signal_class": "both",
+      "selection_reason": "stratified_manual"
+    },
+    {
+      "id": "apisguru:beezup.com:post:/orders/v3/{marketplaceTechnicalCode}/{accountId}/{beezUPOrderId}/setMerchantOrderInfo",
+      "source_sha256": "6b5bee34cee366f01cd5f25e594a37666f0ffef206edeb49895a71be7bec8e84",
+      "signal_class": "path_only",
+      "selection_reason": "stratified_manual"
+    },
+    {
+      "id": "apisguru:noosh.com:get:/1.1/workgroups/{workgroup_id}/projects/{project_id}/fileTags",
+      "source_sha256": "b182beab61752e986538a92f63a9d26d68110b7f4c4137a3c1f9222d73acb98c",
+      "signal_class": "path_only",
+      "selection_reason": "stratified_manual"
+    },
+    {
+      "id": "apisguru:biapi.pro:get:/users/{id_user}/connections/{id_connection}/logs",
+      "source_sha256": "b12d273ee129808d224faddf10d1cdaf363c3eac3e12df20ca0869dad8353180",
+      "signal_class": "path_only",
+      "selection_reason": "stratified_manual"
+    },
+    {
+      "id": "apisguru:nbg.gr:get:/accounts/{accountId}/parties",
+      "source_sha256": "ee8011037de28247a81826163bfad24d4f109fcc2b145a05dfda7bfab5bc6cf7",
+      "signal_class": "path_only",
+      "selection_reason": "stratified_manual"
+    },
+    {
+      "id": "apisguru:mist.com:post:/api/v1/installer/orgs/{org_id}/devices/{device_mac}/{image_name}",
+      "source_sha256": "03d5578bd1725fec1582d395c962abd76b20c187980e81f3a415dbbbe73e2bde",
+      "signal_class": "path_only",
+      "selection_reason": "stratified_manual"
+    },
+    {
+      "id": "apisguru:zoom.us:patch:/accounts/{accountId}/lock_settings",
+      "source_sha256": "aedbc6d5fcd7d407aae578aefc394d3cb6016bd52bd12027de328810d04af4a7",
+      "signal_class": "path_only",
+      "selection_reason": "stratified_manual"
+    },
+    {
+      "id": "apisguru:interactivebrokers.com:get:/accounts/{account}/orders/{CustomerOrderId}",
+      "source_sha256": "d92afb30106d2363456e8747df1a19a3d55dd30d31886510e6ea02c601d43ef3",
+      "signal_class": "path_only",
+      "selection_reason": "stratified_manual"
+    },
+    {
+      "id": "apisguru:apigee.local:post:/v1/projects/{project}/locations/{location}/apis/{api}/versions",
+      "source_sha256": "a7b7a344aad5bf4fd100ad76a59ddf70d6d23f9d52b6e2da06b9254b37d343f4",
+      "signal_class": "path_only",
+      "selection_reason": "stratified_manual"
+    },
+    {
+      "id": "apisguru:owler.com:get:/v1/company/competitorpremium/id/{companyId}",
+      "source_sha256": "71fbab362ead449eb9c1a8f79872841426fa19efef48bb58c75d2b8b9a2801af",
+      "signal_class": "path_only",
+      "selection_reason": "stratified_manual"
+    },
+    {
+      "id": "apisguru:paylocity.com:put:/v2/companies/{companyId}/employees/{employeeId}/additionalRates",
+      "source_sha256": "e1e6ea359b01d0afadf17c968814c4af498f7269ff02dc9572b0ce1e2fa2273a",
+      "signal_class": "path_only",
+      "selection_reason": "stratified_manual"
+    },
+    {
+      "id": "apisguru:trakt.tv:put:/users/{id}/lists/{list_id}",
+      "source_sha256": "c71bce2ff6ba2746273b0c2fe09892bebb930da8b6f08b043ba678c93cd145cc",
+      "signal_class": "path_only",
+      "selection_reason": "stratified_manual"
+    },
+    {
+      "id": "apisguru:bitbucket.org:post:/repositories/{workspace}/{repo_slug}/commit/{commit}/reports/{reportId}/annotations",
+      "source_sha256": "c87208e661d8a2a229fc514fd099db81dc06155ca5562d2e02ce2462acdad99b",
+      "signal_class": "path_only",
+      "selection_reason": "stratified_manual"
+    },
+    {
+      "id": "apisguru:nexmo.com:get:/accounts/{api_key}/secrets/{secret_id}",
+      "source_sha256": "a65a57b23eba0aaeeb3bbba46699542bd12864ccc326731a2b419c8d0f73b899",
+      "signal_class": "path_only",
+      "selection_reason": "stratified_manual"
+    },
+    {
+      "id": "apisguru:appwrite.io:put:/teams/{teamId}",
+      "source_sha256": "16a8c561316cd8f0ea970e59b729a061917ac450db17d2539a93a2fb2e8739ac",
+      "signal_class": "path_only",
+      "selection_reason": "stratified_manual"
+    },
+    {
+      "id": "apisguru:twilio.com:get:/2010-04-01/Accounts/{AccountSid}/Applications.json",
+      "source_sha256": "fabc22c4e250a91da2bbd32acabd55c191c6573bc5b78edcf7b524902967cbae",
+      "signal_class": "path_only",
+      "selection_reason": "stratified_manual"
+    },
+    {
+      "id": "apisguru:izettle.com:get:/organizations/{organizationUuid}/import/status",
+      "source_sha256": "6cced946cc730e53a35067d7b9caad14403a024e7cef7132a183bdf6754b3873",
+      "signal_class": "path_only",
+      "selection_reason": "stratified_manual"
+    },
+    {
+      "id": "apisguru:evetech.net:get:/characters/{character_id}/attributes/",
+      "source_sha256": "fd55af0ffb9281a6aed973da893e81edec85cbc3533dfbbc4ff914e0357c5d28",
+      "signal_class": "none",
+      "selection_reason": "stratified_manual"
+    },
+    {
+      "id": "apisguru:deutschebahn.com:get:/providernetworks/{providernetworkUID}/categories",
+      "source_sha256": "afd5c5d97df9f2c9e12a454ac0924a960867f765aa9720e1d6124851e320527a",
+      "signal_class": "none",
+      "selection_reason": "stratified_manual"
+    },
+    {
+      "id": "apisguru:openstates.org:get:/committees",
+      "source_sha256": "148c9b1d27e7d1997720e782c06fea9fd4f7764a92291eab9d115e1174a27f40",
+      "signal_class": "none",
+      "selection_reason": "stratified_manual"
+    },
+    {
+      "id": "apisguru:zuora.com:get:/events/event-triggers/{id}",
+      "source_sha256": "cf5f6e1c01ffa41671caa9f4e1aff7ca12a88d05d0d8ae6426a8acffd1b78a07",
+      "signal_class": "none",
+      "selection_reason": "stratified_manual"
+    },
+    {
+      "id": "apisguru:gerermesaffaires.com:get:/hub/business-groups/{Id}/menus",
+      "source_sha256": "1867cb31c18da452ebe73ac1000736346ae035ef45021cfac7bc09bbb74b441e",
+      "signal_class": "none",
+      "selection_reason": "stratified_manual"
+    },
+    {
+      "id": "apisguru:pims.io:get:/events/{event_id}",
+      "source_sha256": "4bc485f9451023ded0069bf45b0aac839083033870afc47af9072cd9c503a3db",
+      "signal_class": "none",
+      "selection_reason": "stratified_manual"
+    },
+    {
+      "id": "apisguru:billingo.hu:get:/documents/{id}/online-szamla",
+      "source_sha256": "2e75e258d2319f48275a93781309616019989481f33894cdb3d4cef2c0345760",
+      "signal_class": "none",
+      "selection_reason": "stratified_manual"
+    },
+    {
+      "id": "apisguru:apple.com:get:/v1/appInfoLocalizations/{id}",
+      "source_sha256": "152e33e952716303d75a32b0528b7512b3b17994d40dec3c6b015aaf607d0f80",
+      "signal_class": "none",
+      "selection_reason": "stratified_manual"
+    },
+    {
+      "id": "apisguru:instagram.com:delete:/media/{media-id}/likes",
+      "source_sha256": "2e22d43d14b0ae0aa15b7353e3e0cc0197a4ddf419477ee52bdc869248356628",
+      "signal_class": "none",
+      "selection_reason": "stratified_manual"
+    },
+    {
+      "id": "apisguru:ideal-postcodes.co.uk:post:/keys/{key}/configs/{config}",
+      "source_sha256": "c1c525a0cadd276463f2b387893da740104d6195e8508d266ee7df2b05873e32",
+      "signal_class": "none",
+      "selection_reason": "stratified_manual"
+    },
+    {
+      "id": "apisguru:zoomconnect.com:put:/api/rest/v1/messages/{messageId}/markUnread",
+      "source_sha256": "bdb1f86477e3e9d27685752ac6c03edf456786cf7306c83d55f017f670886056",
+      "signal_class": "none",
+      "selection_reason": "stratified_manual"
+    },
+    {
+      "id": "apisguru:medium.com:get:/article/{article_id}/fans",
+      "source_sha256": "5b5085589c0b8a437b0d6f35fc032d2e40c979a14bafafbe926671a4479d241b",
+      "signal_class": "none",
+      "selection_reason": "stratified_manual"
+    },
+    {
+      "id": "apisguru:box.com:delete:/device_pinners/{device_pinner_id}",
+      "source_sha256": "db0a7353fc46c4b6d96103c522f14f3d464bfff0660f2e5a831e5433637bad05",
+      "signal_class": "none",
+      "selection_reason": "stratified_manual"
+    },
+    {
+      "id": "apisguru:impala.travel:get:/hotels/{hotelId}/rate-plans/{ratePlanId}",
+      "source_sha256": "0aef5586368143943313f89890efca14ba8268eaf927dbf79651b2fc9889835c",
+      "signal_class": "none",
+      "selection_reason": "stratified_manual"
+    },
+    {
+      "id": "apisguru:chaingateway.io:post:/v2/polygon/webhooks/notifications/failed/{notification_id}",
+      "source_sha256": "fa3a43a7bff70e29ba016f0955b4252f092af5c0958b50329fd049591844d266",
+      "signal_class": "none",
+      "selection_reason": "stratified_manual"
+    }
+  ],
+  "input_sha256": "ce7ec1526be311ec8e61f93cc4b90c2e61bc4df46f6362f3593292f354f9d996",
+  "previous_labels_sha256": "008bd84fe2e569580517598b5e5c6cc9a365f8d8380a31e0461285ef7883e647",
+  "enriched_sha256": "ed6e2b2d36f0edc57ceb8878e0e2b67bf8b7a5f7a57a11499aba132bb56dd0f5"
+}

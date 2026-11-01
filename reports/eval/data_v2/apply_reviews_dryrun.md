@@ -1,0 +1,164 @@
+# apply_reviews_v2 dry-run
+
+```json
+{
+  "mode": "dry-run",
+  "kappa_gate": {
+    "pairs": 0,
+    "status": "not_enough_filled_pairs (need >=10); gate skipped"
+  },
+  "summit_club": {
+    "confirmed": 0,
+    "corrections_vs_design": {},
+    "invalid": []
+  },
+  "test_v2_extra": {
+    "candidates": 56,
+    "confirmed": 0,
+    "excluded": 0,
+    "unconfirmed": 56,
+    "invalid_cells": [],
+    "support": {
+      "public": 0,
+      "role_required": 0,
+      "membership_required": 0,
+      "tenant_match": 0,
+      "owner_match": 0,
+      "owner_or_admin": 0,
+      "manual_review_required": 0
+    },
+    "manual_share": null,
+    "llm_agreement": null
+  },
+  "netbox_heldout": {
+    "candidates": 185,
+    "confirmed": 0,
+    "excluded": 0,
+    "unconfirmed": 185,
+    "invalid_cells": [],
+    "support": {
+      "public": 0,
+      "role_required": 0,
+      "membership_required": 0,
+      "tenant_match": 0,
+      "owner_match": 0,
+      "owner_or_admin": 0,
+      "manual_review_required": 0
+    },
+    "manual_share": null,
+    "llm_agreement": null,
+    "by_priority": {
+      "1": {
+        "confirmed": 0,
+        "candidates": 50
+      },
+      "2": {
+        "confirmed": 0,
+        "candidates": 54
+      },
+      "3": {
+        "confirmed": 0,
+        "candidates": 81
+      }
+    },
+    "concrete_support": {
+      "public": 0,
+      "role_required": 0,
+      "membership_required": 0,
+      "tenant_match": 0,
+      "owner_match": 0,
+      "owner_or_admin": 0
+    },
+    "note": ""
+  },
+  "train_v2": {
+    "records": 705,
+    "label_dist": {
+      "public": 47,
+      "role_required": 161,
+      "membership_required": 55,
+      "tenant_match": 52,
+      "owner_match": 182,
+      "owner_or_admin": 32,
+      "manual_review_required": 176
+    },
+    "by_origin": {
+      "data-v1": {
+        "records": 471,
+        "labels": {
+          "public": 27,
+          "role_required": 112,
+          "membership_required": 29,
+          "tenant_match": 40,
+          "owner_match": 134,
+          "owner_or_admin": 11,
+          "manual_review_required": 118
+        }
+      },
+      "synthetic_v2": {
+        "records": 129,
+        "labels": {
+          "public": 8,
+          "role_required": 12,
+          "membership_required": 18,
+          "tenant_match": 12,
+          "owner_match": 12,
+          "owner_or_admin": 21,
+          "manual_review_required": 46
+        }
+      },
+      "gitea": {
+        "records": 105,
+        "labels": {
+          "public": 12,
+          "role_required": 37,
+          "membership_required": 8,
+          "tenant_match": 0,
+          "owner_match": 36,
+          "owner_or_admin": 0,
+          "manual_review_required": 12
+        }
+      }
+    },
+    "manual_share": 0.2496,
+    "concrete": 529,
+    "manual_target": 176,
+    "fixed_manual": 164,
+    "fixed_manual_breakdown": {
+      "data_v1": 118,
+      "synthetic_v2": 46
+    },
+    "gitea_visibility_manual_selected": 12,
+    "gitea_visibility_selected_by_label_before": {
+      "manual_review_required": 5,
+      "public": 7
+    },
+    "quota_note": "remaining 12 slots filled with 12 Gitea visibility_dependent manual (stratified by label_before_override)",
+    "pool": 350,
+    "pool_reasons": {
+      "gitea_owner_or_admin_pending_review": 84,
+      "manual_quota_visibility": 84,
+      "manual_quota_gitea_model_manual": 182
+    },
+    "gitea_share": 0.1489,
+    "stats": {
+      "gitea_ownadmin_pooled": 84,
+      "gitea_visibility_override": 53
+    },
+    "ownadmin_review": {
+      "reviewed": 0,
+      "decisions": {},
+      "invalid": []
+    },
+    "include_gitea_ownadmin": false,
+    "val": "val_v30.jsonl unchanged (52)",
+    "services": 186
+  },
+  "gitea_overrides": 0,
+  "v30_overrides": 0,
+  "invalid_cells": {
+    "gitea": [],
+    "v30": []
+  }
+}
+```

@@ -1,0 +1,50 @@
+451	manual_review_required	0.50	Work-type lookup has unknown security and only Id, Title and CreatedOn fields.
+454	manual_review_required	0.55	Creating a nongroup pad requires an API key but has no explicit owner, role or membership authorization rule.
+457	manual_review_required	0.50	Notification subscriptionType describes notification routing rather than a required subscription tier; security is unknown.
+460	manual_review_required	0.55	Candidate history is descriptive electoral data but supplied API-key requirements do not establish unrestricted access.
+463	manual_review_required	0.55	Private article update contains authors and group_id without a verified account-owner binding or caller access rule.
+466	manual_review_required	0.50	Notification-export detail has unknown security and lacks owner or tenant relationships.
+469	manual_review_required	0.50	API-key user_id is response-derived and permission_set is opaque, leaving mutation authorization and lookup unresolved.
+472	manual_review_required	0.50	Automation has user_id, user_ids and group_ids without evidence selecting individual or group authorization.
+475	manual_review_required	0.55	Payment customer and merchant identifiers describe transaction data but do not establish caller ownership.
+478	manual_review_required	0.55	Current-user profile is self-scoped but has no input object identifier; public_profile OAuth scope does not make the endpoint public.
+481	manual_review_required	0.55	Collaborator ACL flags and sharingKey imply multiple possible access paths without a supported verified ownership or role policy.
+484	manual_review_required	0.55	Score track creator is provenance, while sharingKey and OAuth permissions do not establish a single owner lookup.
+487	manual_review_required	0.55	Summary explicitly filters favorite photos by caller permission, so Public tag does not justify unrestricted access.
+490	manual_review_required	0.50	Group topic listing is tagged Public but privacy metadata and unknown effective security leave unrestricted access unproven.
+493	manual_review_required	0.50	Person response mixes public and private-looking user fields; Public tag alone cannot resolve caller authorization.
+496	manual_review_required	0.55	Photo visibility, owner and permissions indicate conditional access; Public tag does not establish unrestricted retrieval.
+499	manual_review_required	0.55	Expiring a PDF submission requires token Basic authentication but lacks a supplied submission-owner relation.
+502	manual_review_required	0.55	Game admin billing path suggests privilege but does not explicitly establish a caller role or game ownership binding.
+505	manual_review_required	0.55	Private-space invitation requires collaborator OAuth scope, not a proven application role, and ERD lacks ownership mapping.
+508	manual_review_required	0.55	Space modification has collaborator, owner and robot scopes without verified roles or a space-owner lookup.
+511	manual_review_required	0.50	Creating an API version has unknown security and only descriptive version fields.
+514	manual_review_required	0.50	Linked API relations include generated example keys without a verified caller access relationship.
+517	manual_review_required	0.55	Similar-image retrieval uses API-key or OAuth authentication without affirmative unrestricted-access evidence.
+520	manual_review_required	0.55	Admin hook retrieval has several authentication alternatives but no explicit caller role or verified object binding.
+523	manual_review_required	0.55	Notification response includes repository owner, permissions and recipient, leaving the actual notification access relationship ambiguous.
+526	manual_review_required	0.55	Organization label retrieval has org context but no tenant column or verified caller-organization mapping.
+529	manual_review_required	0.55	Git-hook retrieval has owner in the path but no owner relationship in the returned hook fields.
+532	manual_review_required	0.55	Repository-hook editing uses owner path context without a verified repository-owner lookup or admin-bypass evidence.
+535	manual_review_required	0.50	Installation-token permissions describe granted capabilities, not the caller authorization required to mint the token.
+538	manual_review_required	0.50	Scoped-token response mixes account, user and installation permissions without verified caller authorization semantics.
+541	manual_review_required	0.50	Gist comments include author details but no affirmative public-access statement or verified ownership requirement.
+544	manual_review_required	0.50	Updating a gist comment exposes author data but does not specify owner-only editing or a verified lookup.
+547	manual_review_required	0.55	Ad-exchange account update has buyer OAuth scopes but no verified caller-account ownership or tenant mapping.
+550	manual_review_required	0.55	Billing accountId is a response-derived account hint that does not distinguish individual ownership from tenant authorization.
+553	manual_review_required	0.55	Budget update uses accountId and billingId without a verified relationship to caller identity.
+556	manual_review_required	0.50	Newsletter image retrieval has unknown security and no affirmative unrestricted-access statement.
+559	manual_review_required	0.55	Account-role record includes user and manager flags but does not define the caller's required role or ownership rule.
+562	manual_review_required	0.55	Notifying an account-role object has token authentication without a verified account/user access relationship.
+565	manual_review_required	0.55	Account owner and managers are inferred response fields, insufficient to select owner-only versus tenant authorization.
+568	manual_review_required	0.55	Account-manager listing has account context but no caller-account binding in manager contact fields.
+571	manual_review_required	0.55	Starting an account payment setup intent provides only payment_method_id, not an ownership lookup.
+574	manual_review_required	0.55	Device-rule listing requires bearer authentication but returns only pagination and data wrappers.
+577	manual_review_required	0.50	Certificate-action listing has unknown security and no ownership fields in pagination response data.
+580	manual_review_required	0.50	Government campaign metadata has unknown API security and no affirmative unrestricted-access statement.
+583	manual_review_required	0.50	Tagged media retrieval supplies pagination metadata without explicit public access or caller authorization evidence.
+586	manual_review_required	0.50	Organization-model lookup is administration-tagged but has no explicit caller role or tenant lookup relationship.
+589	manual_review_required	0.55	API-key privilege listing authenticates the request but pagination fields do not reveal the authorized caller relationship.
+592	manual_review_required	0.55	Organization billing positions have tenant-like path context but only billing amounts in ERD.
+595	manual_review_required	0.55	Document ownerOrganizationId and sharing visibility are inferred hints without a verified organization lookup or authorization rule.
+598	manual_review_required	0.50	Address extraction includes an api_key query parameter but unknown security and no explicit unrestricted-access evidence.

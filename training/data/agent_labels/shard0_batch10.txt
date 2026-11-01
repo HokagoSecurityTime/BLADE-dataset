@@ -1,0 +1,50 @@
+1260|manual_review_required|0.55|External-account account/customer links do not verify caller ownership or tenant semantics.
+1263|manual_review_required|0.55|Fee belongs to the requesting account, but account/application fields do not establish which identifier matches caller sub or tenant.
+1266|manual_review_required|0.55|Fee refund targets the original account but refund schema lacks the collector's verified authorization binding.
+1269|manual_review_required|0.55|Report schedule log has JWT authentication without report owner or authorized role evidence.
+1272|manual_review_required|0.55|Application endpoint listing returns pagination only, not app-owner authorization.
+1275|manual_review_required|0.55|Daily scoring company/device filters and result envelope do not establish tenant access or a caller role.
+1278|manual_review_required|0.55|Authentication-provider organization_id hints tenancy without verified caller organization binding.
+1281|manual_review_required|0.55|Billing-group organization_id is inferred response data, not a verified tenant lookup.
+1284|manual_review_required|0.55|Bike-point geographic details do not explicitly establish unrestricted API access.
+1287|manual_review_required|0.55|Arrival/departure predictions have no affirmative unrestricted-access or caller-policy statement.
+1290|manual_review_required|0.55|Event performance metrics require API authentication without an evidenced public or membership policy.
+1293|manual_review_required|0.55|Damsire analysis uses basic authentication but no required subscription tier or public rule is supplied.
+1296|manual_review_required|0.55|Summary explicitly says private user allowlist, but name/description schema lacks its ID-to-user ownership lookup.
+1299|manual_review_required|0.55|Classification details include licensed-content option without an explicit unrestricted-access rule.
+1302|manual_review_required|0.55|Event publishing returns validation fields without a permitted publisher role or object owner.
+1305|manual_review_required|0.55|Article search gymId is a filter and generic result fields do not prove tenant authorization.
+1308|manual_review_required|0.55|Babel cancellation prepares transaction/address data without a specified authorized wallet-owner relationship.
+1311|manual_review_required|0.55|Token verification issuer data does not state unrestricted endpoint access or a caller policy.
+1314|manual_review_required|0.55|Driver user/device/group filters and basic authentication do not define a verified owner or tenant relation.
+1317|manual_review_required|0.55|Reordering user lists suggests self scope, but rank-only schema cannot bind caller to route user.
+1320|manual_review_required|0.55|Personal-list removal describes owner context but supplies item types without a verified list-owner lookup.
+1323|manual_review_required|0.55|Post display author/group metadata and user_can_reply do not specify a simple owner-only read rule.
+1326|manual_review_required|0.55|Hardware application energy statistics lack caller ownership or role requirements.
+1329|manual_review_required|0.55|Energy-usage restrictedRights signals access limitations without identifying the permitted owner or role.
+1332|manual_review_required|0.55|Continuous-check owner_document_id is the checked subject's identity, not necessarily the caller's authorized ownership.
+1335|manual_review_required|0.55|Batch-report created_by suggests provenance but report id/creator lookup and upload authorization remain unverified.
+1338|manual_review_required|0.55|Checking followed person concerns a caller-person relationship, without a stored relationship owner mapping.
+1341|manual_review_required|0.55|Following a webchannel does not require ownership of that channel; caller relationship lookup is absent.
+1344|manual_review_required|0.55|Account address dependent numbers return a paging envelope without a verified account authorization binding.
+1347|manual_review_required|0.55|Summary restricts applications to requesting account, but the envelope lacks account lookup and personal-versus-tenant identity mapping.
+1350|manual_review_required|0.55|Application account_sid suggests account scope without verified caller-subject or tenant semantics.
+1353|manual_review_required|0.55|Available-number countries are account-authenticated but provide no concrete authorization policy or tenant lookup.
+1356|manual_review_required|0.55|Account number search returns paging data without a verified caller-account mapping.
+1359|manual_review_required|0.55|Calendar owner is an opaque relationship and attendees imply shared access, leaving update rights unresolved.
+1362|manual_review_required|0.55|Health answer patient and creator metadata do not resolve patient-versus-clinician reading authorization.
+1365|manual_review_required|0.55|List deletion requires write scope but result envelope supplies no verified list-owner binding.
+1368|manual_review_required|0.55|List-member retrieval allows multiple token schemes but does not specify list visibility or owner restrictions.
+1371|manual_review_required|0.55|Account transaction envelope lacks a verified account-to-caller ownership relation.
+1374|manual_review_required|0.55|Job cancellation identifies jobid with API token but lacks ownership lookup or allowed-role evidence.
+1377|manual_review_required|0.55|Payor-filtered webhooks return a page envelope without payor authorization semantics.
+1380|manual_review_required|0.55|Deployment check creator and teamId filter suggest scope without a verified check-to-tenant relationship.
+1383|manual_review_required|0.55|Edge-config creator and teamId filter do not prove a unique personal or organizational access rule.
+1386|manual_review_required|0.55|Edge-config update status fields lack an owner/team lookup despite teamId query.
+1389|manual_review_required|0.55|Past booking userId and voucher/email lookup allow multiple access mechanisms not resolved into a verified owner rule.
+1392|manual_review_required|0.55|Channel privacy/view and user objects require visibility-specific rules; public OAuth scope alone does not establish public access.
+1395|manual_review_required|0.55|Moderator list contains user account metadata but does not mean the caller must be a moderator or owner.
+1398|manual_review_required|0.55|Private-channel allowed-user list represents an ACL; caller authority to inspect it is unspecified.
+1401|manual_review_required|0.55|Activity deletion scope and error response do not identify owner or tenant authorization.
+1404|manual_review_required|0.55|Recurring activity exception reset provides only errors without activity ownership evidence.
+1407|manual_review_required|0.55|Activity-type createdBy records configuration provenance, not exclusive read ownership or a required caller role.

@@ -1,0 +1,50 @@
+510|manual_review_required|0.55|API createdBy records authorship but supplies no verified caller ownership or update restriction.
+513|manual_review_required|0.55|API version createdBy and updatedBy do not establish who is authorized to update the version.
+516|manual_review_required|0.55|Same-series image retrieval uses API/OAuth authentication but has only a result envelope and no access policy.
+519|manual_review_required|0.55|GIF user attribution and API-key authentication do not affirm unrestricted or owner-only access.
+522|role_required|0.80|User search is explicitly an admin operation under the admin route and tag, with no selected user object.
+525|manual_review_required|0.55|Organization hook update lacks an organization key in the inferred hook schema and no verified tenant binding.
+528|manual_review_required|0.55|Search explicitly respects accessible repositories, but its shared ACL cannot be reduced to owner, role or a named membership tier.
+531|manual_review_required|0.55|Repository hook retrieval identifies owner/repo in the route but lacks a verified caller-owner relationship.
+534|manual_review_required|0.55|Installation belongs to the authenticated application, not necessarily an individual or tenant principal supported by these labels.
+537|manual_review_required|0.55|Application token checking mixes app, account and user metadata without specifying caller authorization.
+540|manual_review_required|0.55|Gist owner is a flattened object and id fields are ambiguous; public visibility does not establish update authorization.
+543|manual_review_required|0.55|Gist-comment user and author association express attribution, while actual read restrictions are unspecified.
+546|manual_review_required|0.55|Ad-exchange account lookup has buyer OAuth scopes but no caller-subject or tenant identity mapping.
+549|manual_review_required|0.55|Creative accountId suggests account scope but personal-versus-organization ownership and lookup binding remain unverified.
+552|manual_review_required|0.55|Budget update specifies accountId/billingId, without proving the caller's account ownership relation.
+555|manual_review_required|0.55|Aquifer data requires bearer authentication and provides no affirmative unrestricted-access policy.
+558|manual_review_required|0.55|Service media metadata has a resource key but no explicit public or caller authorization rule.
+561|manual_review_required|0.55|Account-role update includes user/account and manager flags, which describe the target rather than an allowed caller role.
+564|manual_review_required|0.55|Account owner, managers and workers indicate multiple actors without a defined update authorization rule or verified lookup.
+567|manual_review_required|0.55|Changing account owner supplies only the new owner field, not the existing-owner lookup or permitted actor.
+570|manual_review_required|0.55|Account payment-method update lacks a verified caller account relationship despite token authentication.
+573|manual_review_required|0.55|Sensor-rule device associations return a paging envelope without rule ownership evidence.
+576|manual_review_required|0.55|Certificate inspection has domain names and used_by metadata but no verified owner or public policy.
+579|manual_review_required|0.55|Firewall action details expose operational state without caller ownership or role requirements.
+582|manual_review_required|0.55|Source retrieval returns a generic results envelope with unknown security and no object authorization binding.
+585|manual_review_required|0.55|Developer API authentication for app functions does not establish a user role or app-owner lookup.
+588|manual_review_required|0.55|API key createdBy and organizationId suggest competing creator/tenant relations without a verified governing access rule.
+591|manual_review_required|0.55|Organization billing returns listing only, preventing a verified tenant lookup for organizationId.
+594|manual_review_required|0.55|Organization document listing has owner filter but only pagination fields, insufficient for verified owner/tenant authorization.
+597|manual_review_required|0.55|Substance dataset retrieval provides scientific data fields without affirmative unrestricted-access evidence.
+600|manual_review_required|0.55|Config mutation uses user_token query but lacks a verified config-owner relationship.
+603|manual_review_required|0.55|Hotel details require API-key authentication and do not state public access or caller membership rules.
+606|manual_review_required|0.55|Account-number account_id is a financial-account link, not a verified caller subject or tenant binding.
+609|manual_review_required|0.55|Transfer source/destination accounts and approver fields leave authorized account relationships unresolved.
+612|manual_review_required|0.55|Bank account entity_id identifies a business entity but does not prove caller ownership or tenant matching.
+615|manual_review_required|0.55|ACH company_name and account_number are payment data rather than verified caller-tenant identifiers.
+618|manual_review_required|0.55|Authorization has both orgID and userID with opaque permissions, so creator/tenant access cannot be selected safely.
+621|manual_review_required|0.55|Bucket orgID and members/owners links suggest organizational ACLs without a verified caller-to-tenant binding.
+624|manual_review_required|0.55|Bucket-label deletion returns only error fields without bucket authorization or lookup evidence.
+627|manual_review_required|0.55|Key-value listing accepts authentication schemes but supplies no role, tier or object-owner policy.
+630|manual_review_required|0.55|Trading order is account-nested but lacks an account column or verified caller account relation.
+633|manual_review_required|0.55|Comment moderator/facilitator metadata describes content participants, not a required caller role.
+636|manual_review_required|0.55|Account managing_account and billing details leave individual-versus-tenant access and lookup unverified.
+639|manual_review_required|0.55|Connection billing/consuming/managing accounts and role_assignments imply multiple access relationships not resolved by the snippet.
+642|manual_review_required|0.55|Contact consuming/managing accounts suggest shared administration without a verified single-tenant rule.
+645|manual_review_required|0.55|Organization category rename has name-only schema; WRITE scope does not establish a tenant binding.
+648|manual_review_required|0.55|Organization-nested discount has uuid but no verified organization ownership relation.
+651|manual_review_required|0.55|Organization import status exposes job state without a caller-to-organization lookup.
+654|manual_review_required|0.55|Organization library collections lack tenant identifiers or a verified caller access rule.
+657|manual_review_required|0.55|Product-slug creation has organization route and product fields but no verified tenant authorization binding.

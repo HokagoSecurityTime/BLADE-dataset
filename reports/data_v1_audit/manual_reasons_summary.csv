@@ -1,0 +1,4 @@
+split,manual,info_gap,info_gap_ratio,hard,hard_ratio,unclassified,unclassified_ratio
+train_v1,118,102,86.4%,16,13.6%,0,0.0%
+val_v1,13,11,84.6%,1,7.7%,1,7.7%
+train_v2_draft,442,220,49.8%,220,49.8%,2,0.5%

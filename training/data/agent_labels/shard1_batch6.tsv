@@ -1,0 +1,50 @@
+751	manual_review_required	0.50	Gene keyword search has unknown security and no affirmative unrestricted-access evidence.
+754	manual_review_required	0.50	List author is attribution in inferred response data, not a verified owner-only read policy.
+757	manual_review_required	0.50	User profile retrieval has unknown security; membership timestamps and author flags do not define caller authorization.
+760	manual_review_required	0.50	Book author describes indexed content rather than caller ownership; document replacement authorization is unspecified.
+763	manual_review_required	0.55	Network allAdmins controls alert destinations rather than proving a caller admin-role requirement.
+766	manual_review_required	0.55	Splash isAuthorized describes client network access, not the API caller's authority to change it.
+769	manual_review_required	0.55	Filter user_id is an inferred ownership hint without verified key binding or explicit owner-only read semantics.
+772	manual_review_required	0.55	Nearest-location lookup requires an API key without affirmative unrestricted API-access evidence.
+775	manual_review_required	0.55	Service conformance metrics require JWT authentication but have no supplied caller authorization relationship.
+778	manual_review_required	0.55	Text-operation result URL originates from another operation, but no verified caller ownership or access rule is supplied.
+781	manual_review_required	0.50	Image prediction uses projectId but inferred Project field does not establish caller-project authorization.
+784	manual_review_required	0.55	Image classification requires an API key but project metadata does not verify tenant access semantics.
+787	manual_review_required	0.50	Skin accountId and private fields imply possible access conditions without a specified caller policy or verified binding.
+790	manual_review_required	0.55	Installer device listing is organization-scoped but its coordinate fields lack a tenant lookup or explicit installer-role requirement.
+793	manual_review_required	0.55	Installer image upload has organization context and only file/json fields, leaving tenant and role authorization unresolved.
+796	manual_review_required	0.55	Organization site-group listing includes inferred id and name but no verified caller-tenant relationship.
+799	manual_review_required	0.55	Installer maps contain org_id and site_id but inferred nested metadata does not prove a tenant authorization lookup.
+802	manual_review_required	0.55	Map update has organization and site hints without verified database binding or explicit allowed installer role.
+805	manual_review_required	0.50	Case phenotype associations have unknown security and no affirmative unrestricted-access statement.
+808	manual_review_required	0.55	Deleting a project subscription targets a billing object; plan_name is not a required caller membership tier.
+811	manual_review_required	0.55	Dimension values require an access token while response wrappers provide no object authorization evidence.
+814	manual_review_required	0.55	Monitoring timeseries is token-authenticated without a supplied ownership, role or tenant access rule.
+817	manual_review_required	0.55	Account beneficiaries require OAuth and client identification but only wrapper fields are available for account binding.
+820	manual_review_required	0.55	Scheduled-payment retrieval has account scope but lacks a verified account-owner or tenant lookup.
+823	manual_review_required	0.55	Account statement retrieval has two resource identifiers and OAuth permissions without a verified authorization relationship.
+826	manual_review_required	0.50	Bridge-service profile has unknown security and no affirmative unrestricted-access or caller-policy statement.
+829	manual_review_required	0.50	Blockchain token metadata is public-looking content but supplied text does not affirm unrestricted API access.
+832	manual_review_required	0.55	Camera events require camera permissions but home_id and event_id have no corresponding ownership fields.
+835	manual_review_required	0.55	Circuit termination site is infrastructure metadata, not a verified tenant identity relation.
+838	manual_review_required	0.55	Cable-path retrieval has site and provider-network data without a specified caller authorization rule.
+841	manual_review_required	0.55	Circuit-type update requires bearer authentication but no supplied concrete role or object-owner policy.
+844	manual_review_required	0.55	Circuit tenant, provider and site are inferred data without a verified caller-tenant lookup.
+847	manual_review_required	0.55	Circuit-termination listing filters site but pagination-only response fields do not establish tenant authorization.
+850	manual_review_required	0.55	Circuit-termination update exposes site metadata but no verified caller-site or organization mapping.
+853	manual_review_required	0.55	Circuit tenant is an inferred response relationship, insufficient for a verified tenant authorization lookup.
+856	manual_review_required	0.55	Provider account and admin_contact are provider metadata, not proof of caller ownership or administrator requirements.
+859	manual_review_required	0.55	Creating an account API secret has Basic authentication but no supplied account-to-caller binding.
+862	manual_review_required	0.55	Application retrieval exposes capabilities and privacy options without a verified owner or tenant relationship.
+865	manual_review_required	0.55	Conversation member creation includes initiator, member_id and user_id without a single verified authorization subject.
+868	manual_review_required	0.50	Project file upload has workgroup context but result-only ERD and unknown security.
+871	manual_review_required	0.50	Project-spec update lacks a verified workgroup or project authorization relation.
+874	manual_review_required	0.55	Current-user automatic invitations are self-scoped, but result wrappers cannot express the required user/workgroup lookup.
+877	manual_review_required	0.55	Institution metadata requires JWT authentication without affirmative unrestricted access or a caller policy.
+880	manual_review_required	0.55	Payment submission exposes debtor and creditor account data but no verified relationship between caller and payment owner.
+883	manual_review_required	0.50	Block retrieval has unknown security and no ownership or workspace authorization fields.
+886	manual_review_required	0.50	Database created_by and Author are provenance or user-defined properties, not verified owner-only access evidence.
+889	manual_review_required	0.50	Page created_by and parent are inferred metadata without a verified caller permission relationship.
+892	manual_review_required	0.50	Transfer source and destination subaccounts have unknown security and no specified caller ownership relationship.
+895	manual_review_required	0.50	Law detail lookup has public-looking content but no explicit unrestricted API access and only result wrappers.
+898	manual_review_required	0.55	Receipt company and register identifiers describe transaction data without a verified caller-tenant authorization binding.

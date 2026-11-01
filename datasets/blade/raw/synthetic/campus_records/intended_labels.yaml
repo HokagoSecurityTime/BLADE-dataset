@@ -1,0 +1,88 @@
+service: campus_records
+endpoints:
+- id: campus_records_catalogue_0
+  method: GET
+  path: /fixtures/campus_records/transcripts/catalogue/current/{item_id}
+  label: public
+  vulnerable: false
+  reason: Intentionally anonymous reference catalogue.
+- id: campus_records_catalogue_1
+  method: GET
+  path: /fixtures/campus_records/transcripts/catalogue/archive/{item_id}
+  label: public
+  vulnerable: false
+  reason: Intentionally anonymous reference catalogue.
+- id: campus_records_drafts_0
+  method: GET
+  path: /fixtures/campus_records/transcripts/drafts/current/{item_id}
+  label: owner_match
+  vulnerable: false
+  reason: Only the record owner may read it.
+- id: campus_records_drafts_1
+  method: GET
+  path: /fixtures/campus_records/transcripts/drafts/archive/{item_id}
+  label: owner_match
+  vulnerable: true
+  reason: Only the record owner may read it.
+- id: campus_records_shared_0
+  method: GET
+  path: /fixtures/campus_records/transcripts/shared/current/{item_id}
+  label: owner_or_admin
+  vulnerable: false
+  reason: The record owner or an administrator may read it.
+- id: campus_records_shared_1
+  method: GET
+  path: /fixtures/campus_records/transcripts/shared/archive/{item_id}
+  label: owner_or_admin
+  vulnerable: true
+  reason: The record owner or an administrator may read it.
+- id: campus_records_workspace_0
+  method: GET
+  path: /fixtures/campus_records/transcripts/workspace/current/{item_id}
+  label: tenant_match
+  vulnerable: false
+  reason: Caller and record must share a tenant.
+- id: campus_records_workspace_1
+  method: GET
+  path: /fixtures/campus_records/transcripts/workspace/archive/{item_id}
+  label: tenant_match
+  vulnerable: true
+  reason: Caller and record must share a tenant.
+- id: campus_records_audit_0
+  method: GET
+  path: /fixtures/campus_records/transcripts/audit/current/{item_id}
+  label: role_required
+  vulnerable: false
+  reason: Only administrators may read this operational resource.
+- id: campus_records_audit_1
+  method: GET
+  path: /fixtures/campus_records/transcripts/audit/archive/{item_id}
+  label: role_required
+  vulnerable: true
+  reason: Only administrators may read this operational resource.
+- id: campus_records_subscription_0
+  method: GET
+  path: /fixtures/campus_records/transcripts/subscription/current/{item_id}
+  label: membership_required
+  vulnerable: false
+  reason: A premium plan is required.
+- id: campus_records_subscription_1
+  method: GET
+  path: /fixtures/campus_records/transcripts/subscription/archive/{item_id}
+  label: membership_required
+  vulnerable: true
+  reason: A premium plan is required.
+- id: campus_records_disputed_0
+  method: GET
+  path: /fixtures/campus_records/transcripts/disputed/current/{item_id}
+  label: manual_review_required
+  vulnerable: false
+  reason: Conflicting owner and tenant requirements are deliberately unresolved; deny
+    pending review.
+- id: campus_records_disputed_1
+  method: GET
+  path: /fixtures/campus_records/transcripts/disputed/archive/{item_id}
+  label: manual_review_required
+  vulnerable: false
+  reason: Conflicting owner and tenant requirements are deliberately unresolved; deny
+    pending review.

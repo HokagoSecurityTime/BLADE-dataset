@@ -1,0 +1,213 @@
+{
+  "stage": "B",
+  "seed": 42,
+  "input_sha256": "c8a63209c1da62409fc0efaac3b6cc53f0d50f2b949023cadcc52cdd9574199f",
+  "output_sha256": "ce7ec1526be311ec8e61f93cc4b90c2e61bc4df46f6362f3593292f354f9d996",
+  "input_records": 4333,
+  "final_records": 2027,
+  "service_count": 370,
+  "service_records_max": 15,
+  "none_services_at_cap4": 121,
+  "services_at_source_cap15": 16,
+  "incomplete": 125,
+  "raw_signal_incomplete": 126,
+  "source_duplicate_keys": 24,
+  "combinations": [
+    {
+      "signal_class": "owner",
+      "has_security": false,
+      "count": 169
+    },
+    {
+      "signal_class": "owner",
+      "has_security": true,
+      "count": 258
+    },
+    {
+      "signal_class": "tenant",
+      "has_security": false,
+      "count": 49
+    },
+    {
+      "signal_class": "tenant",
+      "has_security": true,
+      "count": 111
+    },
+    {
+      "signal_class": "both",
+      "has_security": false,
+      "count": 88
+    },
+    {
+      "signal_class": "both",
+      "has_security": true,
+      "count": 154
+    },
+    {
+      "signal_class": "path_only",
+      "has_security": false,
+      "count": 112
+    },
+    {
+      "signal_class": "path_only",
+      "has_security": true,
+      "count": 286
+    },
+    {
+      "signal_class": "none",
+      "has_security": false,
+      "count": 350
+    },
+    {
+      "signal_class": "none",
+      "has_security": true,
+      "count": 450
+    }
+  ],
+  "methods": {
+    "DELETE": 84,
+    "GET": 1304,
+    "PATCH": 131,
+    "POST": 290,
+    "PUT": 218
+  },
+  "quota_attempts": [
+    {
+      "quotas": {
+        "true": 450,
+        "false": 350
+      },
+      "final_count": 2027
+    }
+  ],
+  "signal_before_dedup": 1243,
+  "none_small_excluded": 831,
+  "none_eligible": {
+    "true": 1312,
+    "false": 947
+  },
+  "none_quotas": {
+    "true": 450,
+    "false": 350
+  },
+  "none_selected_before_dedup": {
+    "true": 450,
+    "false": 350
+  },
+  "selected_before_dedup": 2043,
+  "selected_duplicates_removed": 16,
+  "removed_duplicates": [
+    {
+      "source_line": 1170,
+      "id": "apisguru:googleapis.com:get:/accounts/{id}",
+      "service": "googleapis.com",
+      "method": "GET",
+      "path": "/accounts/{id}"
+    },
+    {
+      "source_line": 1171,
+      "id": "apisguru:googleapis.com:patch:/accounts/{id}",
+      "service": "googleapis.com",
+      "method": "PATCH",
+      "path": "/accounts/{id}"
+    },
+    {
+      "source_line": 1172,
+      "id": "apisguru:googleapis.com:put:/accounts/{id}",
+      "service": "googleapis.com",
+      "method": "PUT",
+      "path": "/accounts/{id}"
+    },
+    {
+      "source_line": 1178,
+      "id": "apisguru:googleapis.com:get:/creatives/{accountId}/{buyerCreativeId}",
+      "service": "googleapis.com",
+      "method": "GET",
+      "path": "/creatives/{accountId}/{buyerCreativeId}"
+    },
+    {
+      "source_line": 1301,
+      "id": "apisguru:ideaconsult.net:get:/enm/{db}/investigation",
+      "service": "ideaconsult.net",
+      "method": "GET",
+      "path": "/enm/{db}/investigation"
+    },
+    {
+      "source_line": 1715,
+      "id": "apisguru:microsoft.com:post:/{projectId}/image",
+      "service": "microsoft.com",
+      "method": "POST",
+      "path": "/{projectId}/image"
+    },
+    {
+      "source_line": 1716,
+      "id": "apisguru:microsoft.com:post:/{projectId}/image/nostore",
+      "service": "microsoft.com",
+      "method": "POST",
+      "path": "/{projectId}/image/nostore"
+    },
+    {
+      "source_line": 1717,
+      "id": "apisguru:microsoft.com:post:/{projectId}/url",
+      "service": "microsoft.com",
+      "method": "POST",
+      "path": "/{projectId}/url"
+    },
+    {
+      "source_line": 1718,
+      "id": "apisguru:microsoft.com:post:/{projectId}/url/nostore",
+      "service": "microsoft.com",
+      "method": "POST",
+      "path": "/{projectId}/url/nostore"
+    },
+    {
+      "source_line": 2584,
+      "id": "apisguru:sportsdata.io:get:/{format}/Player/{playerid}",
+      "service": "sportsdata.io",
+      "method": "GET",
+      "path": "/{format}/Player/{playerid}"
+    },
+    {
+      "source_line": 2589,
+      "id": "apisguru:sportsdata.io:get:/{format}/TeamGameStatsBySeason/{season}/{teamid}/{numberofgames}",
+      "service": "sportsdata.io",
+      "method": "GET",
+      "path": "/{format}/TeamGameStatsBySeason/{season}/{teamid}/{numberofgames}"
+    },
+    {
+      "source_line": 2590,
+      "id": "apisguru:sportsdata.io:get:/{format}/Player/{playerid}",
+      "service": "sportsdata.io",
+      "method": "GET",
+      "path": "/{format}/Player/{playerid}"
+    },
+    {
+      "source_line": 2591,
+      "id": "apisguru:sportsdata.io:get:/{format}/TeamGameStatsBySeason/{season}/{teamid}/{numberofgames}",
+      "service": "sportsdata.io",
+      "method": "GET",
+      "path": "/{format}/TeamGameStatsBySeason/{season}/{teamid}/{numberofgames}"
+    },
+    {
+      "source_line": 3354,
+      "id": "apisguru:azure.com:delete:/subscriptions/{subscriptionId}/providers/Microsoft.Addons/supportProviders/{providerName}/supportPlanTypes/{planTypeName}",
+      "service": "azure.com",
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.Addons/supportProviders/{providerName}/supportPlanTypes/{planTypeName}"
+    },
+    {
+      "source_line": 3355,
+      "id": "apisguru:azure.com:get:/subscriptions/{subscriptionId}/providers/Microsoft.Addons/supportProviders/{providerName}/supportPlanTypes/{planTypeName}",
+      "service": "azure.com",
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.Addons/supportProviders/{providerName}/supportPlanTypes/{planTypeName}"
+    },
+    {
+      "source_line": 3356,
+      "id": "apisguru:azure.com:put:/subscriptions/{subscriptionId}/providers/Microsoft.Addons/supportProviders/{providerName}/supportPlanTypes/{planTypeName}",
+      "service": "azure.com",
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.Addons/supportProviders/{providerName}/supportPlanTypes/{planTypeName}"
+    }
+  ]
+}

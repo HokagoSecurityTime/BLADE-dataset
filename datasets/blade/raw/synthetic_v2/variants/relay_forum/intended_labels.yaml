@@ -1,0 +1,217 @@
+service: relay_forum
+variant_of: relay_forum
+partition: train_only
+oas_status: original_export
+endpoints:
+- id: relay_forum_drafts_authonly
+  method: GET
+  path: /fixtures/relay_forum/threads/drafts/authonly/{item_id}
+  label: manual_review_required
+  vulnerable: true
+  reason: Authentication only; no requester-object relationship or role check is implemented,
+    so no concrete label is supported.
+  variant_kind: authonly
+  base_label: owner_match
+  auth_style: inline
+- id: relay_forum_drafts_extauth
+  method: GET
+  path: /fixtures/relay_forum/threads/drafts/extauth/{item_id}
+  label: manual_review_required
+  vulnerable: true
+  reason: Authentication only; no requester-object relationship or role check is implemented,
+    so no concrete label is supported. Authentication is enforced outside the handler.
+  variant_kind: extauth
+  base_label: owner_match
+  auth_style: external
+- id: relay_forum_drafts_extguard
+  method: GET
+  path: /fixtures/relay_forum/threads/drafts/extguard/{item_id}
+  label: owner_match
+  vulnerable: false
+  reason: Only the record owner may read it. Authentication is enforced outside the
+    handler; the authorization check is inside.
+  variant_kind: extguard
+  base_label: owner_match
+  auth_style: external
+- id: relay_forum_shared_authonly
+  method: GET
+  path: /fixtures/relay_forum/threads/shared/authonly/{item_id}
+  label: manual_review_required
+  vulnerable: true
+  reason: Authentication only; no requester-object relationship or role check is implemented,
+    so no concrete label is supported.
+  variant_kind: authonly
+  base_label: owner_or_admin
+  auth_style: inline
+- id: relay_forum_shared_extauth
+  method: GET
+  path: /fixtures/relay_forum/threads/shared/extauth/{item_id}
+  label: manual_review_required
+  vulnerable: true
+  reason: Authentication only; no requester-object relationship or role check is implemented,
+    so no concrete label is supported. Authentication is enforced outside the handler.
+  variant_kind: extauth
+  base_label: owner_or_admin
+  auth_style: external
+- id: relay_forum_shared_extguard
+  method: GET
+  path: /fixtures/relay_forum/threads/shared/extguard/{item_id}
+  label: owner_or_admin
+  vulnerable: false
+  reason: The record owner or an administrator may read it. Authentication is enforced
+    outside the handler; the authorization check is inside.
+  variant_kind: extguard
+  base_label: owner_or_admin
+  auth_style: external
+- id: relay_forum_moderation_authonly
+  method: GET
+  path: /fixtures/relay_forum/threads/moderation/authonly/{item_id}
+  label: manual_review_required
+  vulnerable: true
+  reason: Authentication only; no requester-object relationship or role check is implemented,
+    so no concrete label is supported.
+  variant_kind: authonly
+  base_label: owner_or_admin
+  auth_style: inline
+- id: relay_forum_moderation_extauth
+  method: GET
+  path: /fixtures/relay_forum/threads/moderation/extauth/{item_id}
+  label: manual_review_required
+  vulnerable: true
+  reason: Authentication only; no requester-object relationship or role check is implemented,
+    so no concrete label is supported. Authentication is enforced outside the handler.
+  variant_kind: extauth
+  base_label: owner_or_admin
+  auth_style: external
+- id: relay_forum_moderation_extguard
+  method: GET
+  path: /fixtures/relay_forum/threads/moderation/extguard/{item_id}
+  label: owner_or_admin
+  vulnerable: false
+  reason: The record owner or an administrator may read it. Authentication is enforced
+    outside the handler; the authorization check is inside.
+  variant_kind: extguard
+  base_label: owner_or_admin
+  auth_style: external
+- id: relay_forum_workspace_authonly
+  method: GET
+  path: /fixtures/relay_forum/threads/workspace/authonly/{item_id}
+  label: manual_review_required
+  vulnerable: true
+  reason: Authentication only; no requester-object relationship or role check is implemented,
+    so no concrete label is supported.
+  variant_kind: authonly
+  base_label: tenant_match
+  auth_style: inline
+- id: relay_forum_workspace_extauth
+  method: GET
+  path: /fixtures/relay_forum/threads/workspace/extauth/{item_id}
+  label: manual_review_required
+  vulnerable: true
+  reason: Authentication only; no requester-object relationship or role check is implemented,
+    so no concrete label is supported. Authentication is enforced outside the handler.
+  variant_kind: extauth
+  base_label: tenant_match
+  auth_style: external
+- id: relay_forum_workspace_extguard
+  method: GET
+  path: /fixtures/relay_forum/threads/workspace/extguard/{item_id}
+  label: tenant_match
+  vulnerable: false
+  reason: Caller and record must share a tenant. Authentication is enforced outside
+    the handler; the authorization check is inside.
+  variant_kind: extguard
+  base_label: tenant_match
+  auth_style: external
+- id: relay_forum_audit_authonly
+  method: GET
+  path: /fixtures/relay_forum/threads/audit/authonly/{item_id}
+  label: manual_review_required
+  vulnerable: true
+  reason: Authentication only; no requester-object relationship or role check is implemented,
+    so no concrete label is supported.
+  variant_kind: authonly
+  base_label: role_required
+  auth_style: inline
+- id: relay_forum_audit_extauth
+  method: GET
+  path: /fixtures/relay_forum/threads/audit/extauth/{item_id}
+  label: manual_review_required
+  vulnerable: true
+  reason: Authentication only; no requester-object relationship or role check is implemented,
+    so no concrete label is supported. Authentication is enforced outside the handler.
+  variant_kind: extauth
+  base_label: role_required
+  auth_style: external
+- id: relay_forum_audit_extguard
+  method: GET
+  path: /fixtures/relay_forum/threads/audit/extguard/{item_id}
+  label: role_required
+  vulnerable: false
+  reason: Only administrators may read this operational resource. Authentication is
+    enforced outside the handler; the authorization check is inside.
+  variant_kind: extguard
+  base_label: role_required
+  auth_style: external
+- id: relay_forum_roster_authonly
+  method: GET
+  path: /fixtures/relay_forum/threads/roster/authonly/{item_id}
+  label: manual_review_required
+  vulnerable: true
+  reason: Authentication only; no requester-object relationship or role check is implemented,
+    so no concrete label is supported.
+  variant_kind: authonly
+  base_label: membership_required
+  auth_style: inline
+- id: relay_forum_roster_extauth
+  method: GET
+  path: /fixtures/relay_forum/threads/roster/extauth/{item_id}
+  label: manual_review_required
+  vulnerable: true
+  reason: Authentication only; no requester-object relationship or role check is implemented,
+    so no concrete label is supported. Authentication is enforced outside the handler.
+  variant_kind: extauth
+  base_label: membership_required
+  auth_style: external
+- id: relay_forum_roster_extguard
+  method: GET
+  path: /fixtures/relay_forum/threads/roster/extguard/{item_id}
+  label: membership_required
+  vulnerable: false
+  reason: Only members of the group that owns the record ((caller_id, record.group_id)
+    in memberships) may read it. Tenant and subscription are not checked. Authentication
+    is enforced outside the handler; the authorization check is inside.
+  variant_kind: extguard
+  base_label: membership_required
+  auth_style: external
+- id: relay_forum_pins_authonly
+  method: GET
+  path: /fixtures/relay_forum/threads/pins/authonly/{item_id}
+  label: manual_review_required
+  vulnerable: true
+  reason: Authentication only; no requester-object relationship or role check is implemented,
+    so no concrete label is supported.
+  variant_kind: authonly
+  base_label: membership_required
+  auth_style: inline
+- id: relay_forum_pins_extauth
+  method: GET
+  path: /fixtures/relay_forum/threads/pins/extauth/{item_id}
+  label: manual_review_required
+  vulnerable: true
+  reason: Authentication only; no requester-object relationship or role check is implemented,
+    so no concrete label is supported. Authentication is enforced outside the handler.
+  variant_kind: extauth
+  base_label: membership_required
+  auth_style: external
+- id: relay_forum_pins_extguard
+  method: GET
+  path: /fixtures/relay_forum/threads/pins/extguard/{item_id}
+  label: membership_required
+  vulnerable: false
+  reason: Only members of the group that owns the record ((caller_id, record.group_id)
+    in memberships) may read it. Tenant and subscription are not checked. Authentication
+    is enforced outside the handler; the authorization check is inside.
+  variant_kind: extguard
+  base_label: membership_required
+  auth_style: external

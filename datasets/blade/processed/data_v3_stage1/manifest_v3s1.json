@@ -1,0 +1,314 @@
+{
+ "data_version": "data-v3-stage1",
+ "built_by": "training/data/build_data_v3_pairs.py",
+ "seed": 42,
+ "frozen": false,
+ "repositories": {
+  "rw_spring": {
+   "repo": "gothinkster/spring-boot-realworld-example-app",
+   "commit": "ee17e31aafe733d98c4853c8b9a74d7f2f6c924a",
+   "lang": "java",
+   "framework": "Spring Boot",
+   "license": "MIT",
+   "stars": 1596,
+   "split": "train",
+   "oas": "generated",
+   "why": "RealWorld Spring, most stars",
+   "clone_dir": "datasets/blade/raw/opensource/gothinkster_spring-boot-realworld-example-app"
+  },
+  "rw_express": {
+   "repo": "gothinkster/node-express-realworld-example-app",
+   "commit": "30b68e1e881462b2f4164ea09ab4c4f5699c7b0b",
+   "lang": "typescript",
+   "framework": "Express",
+   "license": "none declared",
+   "stars": 3797,
+   "split": "train",
+   "oas": "generated",
+   "why": "RealWorld Express/Node, most stars",
+   "clone_dir": "datasets/blade/raw/opensource/gothinkster_node-express-realworld-example-app"
+  },
+  "rw_django": {
+   "repo": "Sean-Miningah/realWorld-DjangoRestFramework",
+   "commit": "8e4729aaee0a3deef8fcf5ca53a02b1565440c97",
+   "lang": "python",
+   "framework": "Django REST Framework",
+   "license": "see repository",
+   "stars": 66,
+   "split": "val",
+   "oas": "generated",
+   "why": "RealWorld Django by stars after gothinkster/django-realworld-example-app (1648 stars, 0 explicit authorization checks -> nothing to pair)",
+   "clone_dir": "datasets/blade/raw/opensource/Sean-Miningah_realWorld-DjangoRestFramework"
+  },
+  "rw_flask": {
+   "repo": "gothinkster/flask-realworld-example-app",
+   "commit": "4b95fb2227dfeb5dd1a45d89b2bf48630b93fd28",
+   "lang": "python",
+   "framework": "Flask",
+   "license": "MIT",
+   "stars": 899,
+   "split": "train",
+   "oas": "generated",
+   "why": "RealWorld Flask, most stars",
+   "clone_dir": "datasets/blade/raw/opensource/gothinkster_flask-realworld-example-app"
+  },
+  "rw_rails": {
+   "repo": "gothinkster/rails-realworld-example-app",
+   "commit": "a2ae4fff78b3337683cea988c023281dcb5551b9",
+   "lang": "ruby",
+   "framework": "Rails",
+   "license": "none declared",
+   "stars": 423,
+   "split": "train",
+   "oas": "generated",
+   "why": "RealWorld Rails, most stars",
+   "clone_dir": "datasets/blade/raw/opensource/gothinkster_rails-realworld-example-app"
+  },
+  "rw_gin": {
+   "repo": "gothinkster/golang-gin-realworld-example-app",
+   "commit": "626c372d259472148d93303f74aa9b9a1cdcef24",
+   "lang": "go",
+   "framework": "Gin",
+   "license": "MIT",
+   "stars": 2718,
+   "split": "train",
+   "oas": "generated",
+   "why": "RealWorld Go, most stars",
+   "clone_dir": "datasets/blade/raw/opensource/gothinkster_golang-gin-realworld-example-app"
+  },
+  "fastapi_tpl": {
+   "repo": "fastapi/full-stack-fastapi-template",
+   "commit": "f4bcfaba7c85be3c6332cc74a20819f586dcdbc6",
+   "lang": "python",
+   "framework": "FastAPI",
+   "license": "MIT",
+   "stars": 46068,
+   "split": "val",
+   "oas": "generated",
+   "why": "superuser dependency and owner-or-superuser checks; earlier used as isolated eval (external_paired_v29) -> kept out of train",
+   "clone_dir": "datasets/blade/raw/opensource/fastapi_full-stack-fastapi-template"
+  },
+  "petclinic_rest": {
+   "repo": "spring-petclinic/spring-petclinic-rest",
+   "commit": "afc8fc1d3b8ec8de69414482b3bd70a1da78cb95",
+   "lang": "java",
+   "framework": "Spring Boot",
+   "license": "Apache-2.0",
+   "stars": 631,
+   "split": "train",
+   "oas": "repository_spec",
+   "oas_file": "src/main/resources/openapi.yml",
+   "why": "@PreAuthorize role checks on every protected handler (petclinic.security.enable=false by default; intended policy still the annotation)",
+   "clone_dir": "datasets/blade/raw/opensource/spring-petclinic_spring-petclinic-rest"
+  }
+ },
+ "source_files": [
+  {
+   "repo": "fastapi_tpl",
+   "file": "backend/app/api/deps.py",
+   "sha256": "3dd8f84589467ce49d467297f3078e72c9cadd8f3f029395eb13c38d0a1a2c62"
+  },
+  {
+   "repo": "fastapi_tpl",
+   "file": "backend/app/api/routes/items.py",
+   "sha256": "e710b3e160bff038f079d99afff92d1d3f85b461e6e87db78f918027bf56c2b1"
+  },
+  {
+   "repo": "fastapi_tpl",
+   "file": "backend/app/api/routes/login.py",
+   "sha256": "3bd3232ba76cd7abc1f78d4aaa78e1f250bb0e1590c79ed48b89a2b703afb34d"
+  },
+  {
+   "repo": "fastapi_tpl",
+   "file": "backend/app/api/routes/users.py",
+   "sha256": "b7de1ea3fd10ba5ac80f14ab37b6bcad0840f8bc60c53d5f237623be9feae97a"
+  },
+  {
+   "repo": "fastapi_tpl",
+   "file": "backend/app/api/routes/utils.py",
+   "sha256": "a7cbdfc35873a5347ca55c313b97248f6fc8f13e86eea8dd404494ea3389dba4"
+  },
+  {
+   "repo": "petclinic_rest",
+   "file": "src/main/java/org/springframework/samples/petclinic/rest/controller/v1/OwnerRestControllerV1.java",
+   "sha256": "6c60d6af024732b3fc35fe4d87f35d934691d3a3d231b685ec1a46afe9b8d280"
+  },
+  {
+   "repo": "petclinic_rest",
+   "file": "src/main/java/org/springframework/samples/petclinic/rest/controller/v1/PetRestControllerV1.java",
+   "sha256": "647d83a39ceb73d6daee613a47b63ad6f8c9bfac1fa6f0b186d1e9da3fe7c0aa"
+  },
+  {
+   "repo": "petclinic_rest",
+   "file": "src/main/java/org/springframework/samples/petclinic/rest/controller/v1/PetTypeRestControllerV1.java",
+   "sha256": "649bebaba881bedcb9db0e3f2b483f38329d78f6fdaea7732eddcf6f787fc998"
+  },
+  {
+   "repo": "petclinic_rest",
+   "file": "src/main/java/org/springframework/samples/petclinic/rest/controller/v1/SpecialtyRestControllerV1.java",
+   "sha256": "3f2f53bdb2e1fbcfe2b93da0641f6a6251afdaa86bb9cc7f28ab1e227c663991"
+  },
+  {
+   "repo": "petclinic_rest",
+   "file": "src/main/java/org/springframework/samples/petclinic/rest/controller/v1/UserRestControllerV1.java",
+   "sha256": "e1516653c80bfc71d187743e2d9e61c5502cb47c0d32dd9ba192fb4e03efdea3"
+  },
+  {
+   "repo": "petclinic_rest",
+   "file": "src/main/java/org/springframework/samples/petclinic/rest/controller/v1/VetRestControllerV1.java",
+   "sha256": "c5b49ab3233c4c71386ca4953e3182668bfa5bfa319965979e68579cb7c89af9"
+  },
+  {
+   "repo": "petclinic_rest",
+   "file": "src/main/java/org/springframework/samples/petclinic/rest/controller/v1/VisitRestControllerV1.java",
+   "sha256": "8578d8cfbf5a799ff064d1c1d3bf5a93c469ba1cab306f6cd2a778f697ff0e3e"
+  },
+  {
+   "repo": "petclinic_rest",
+   "file": "src/main/java/org/springframework/samples/petclinic/rest/controller/v2/OwnerRestControllerV2.java",
+   "sha256": "a612959ee0688ffc99820bc425c4aed90fa36c80f2d6c328fdea675a962fd4ac"
+  },
+  {
+   "repo": "petclinic_rest",
+   "file": "src/main/java/org/springframework/samples/petclinic/rest/controller/v2/PetRestControllerV2.java",
+   "sha256": "a648e4918db5eb8cd90ccc5d64b25fc141478ae94c4d273adab7f53541193cce"
+  },
+  {
+   "repo": "rw_django",
+   "file": "articles/views.py",
+   "sha256": "6bfa044c927d3f199a36f399d1070d6507428deb2108659ddd939c87b35cd059"
+  },
+  {
+   "repo": "rw_express",
+   "file": "src/app/routes/article/article.controller.ts",
+   "sha256": "69d28a4d4c909747fd471464cb3297476e627e75e1e81a1de55f07a0ea071297"
+  },
+  {
+   "repo": "rw_express",
+   "file": "src/app/routes/article/article.service.ts",
+   "sha256": "148f6ac31efa339fb6885ae16ca2bef5b9ea93e5d1705974dda99e37a636c7de"
+  },
+  {
+   "repo": "rw_flask",
+   "file": "conduit/articles/views.py",
+   "sha256": "a4bfcdc0db215bff8ed46fffb77983581231861fb4bd12bd682d8517b93b0702"
+  },
+  {
+   "repo": "rw_gin",
+   "file": "articles/routers.go",
+   "sha256": "7fd149a0a1ea58789bb35408313ee85dc481bcda6d4a0b00f98220ca6f05f795"
+  },
+  {
+   "repo": "rw_rails",
+   "file": "app/controllers/articles_controller.rb",
+   "sha256": "1b341035cda0244384a843ecf91f69439a4b91b0118382a1dea8b70d7e882c4f"
+  },
+  {
+   "repo": "rw_rails",
+   "file": "app/controllers/comments_controller.rb",
+   "sha256": "fe71a561c7d71d27853d9e7910cb8636f8e1ca255e982e7cd3ac20b0388246e7"
+  },
+  {
+   "repo": "rw_spring",
+   "file": "src/main/java/io/spring/api/ArticleApi.java",
+   "sha256": "cd326b27635f56008aadf7d866cc36e8a37e8dd46bd86761a099a44a592d0784"
+  },
+  {
+   "repo": "rw_spring",
+   "file": "src/main/java/io/spring/api/CommentsApi.java",
+   "sha256": "c73a9aab33c40a33b8c0b192e65ac6c6c338365c52ffba262822e64f7dcf35fa"
+  },
+  {
+   "repo": "rw_spring",
+   "file": "src/main/java/io/spring/core/service/AuthorizationService.java",
+   "sha256": "c5e46540d772c763c9610103ffe57908f295315ae44b7a8ec39d1f3a8ee12ef1"
+  }
+ ],
+ "outputs": {
+  "datasets/blade/processed/data_v3_stage1/pairs_train_v3s1.jsonl": {
+   "records": 102,
+   "sha256": "fddf09bf1b046cea83a2227e98870831f0df58ad0ba3e6011a27cb6d83fb6418"
+  },
+  "datasets/blade/processed/data_v3_stage1/pairs_val_v3s1.jsonl": {
+   "records": 24,
+   "sha256": "b3816655df0d01f6a9c2e248ffc443a48229644eca080b5ef02b1b98c4553265"
+  }
+ },
+ "test_v30_services": [
+  "DVWS-node",
+  "Pixi",
+  "VAmPI",
+  "beacon_iot",
+  "crAPI",
+  "folio_wiki",
+  "juice-shop",
+  "quill_blog",
+  "summit_club"
+ ],
+ "optional_repos_in_test_v30": {
+  "vAPI": false,
+  "DVRestaurant": false
+ },
+ "detection": {
+  "hits": 109,
+  "adopted": 82,
+  "excluded": 27
+ },
+ "excluded": [],
+ "exclusion_rules": [
+  {
+   "repo": "rw_spring",
+   "file": "src/main/java/io/spring/graphql/ArticleMutation.java",
+   "pattern": ".",
+   "reason": "GraphQL mutation: no REST route / OAS operation"
+  },
+  {
+   "repo": "rw_spring",
+   "file": "src/main/java/io/spring/graphql/CommentMutation.java",
+   "pattern": ".",
+   "reason": "GraphQL mutation: no REST route / OAS operation"
+  },
+  {
+   "repo": "rw_spring",
+   "file": null,
+   "pattern": "^import ",
+   "reason": "import line"
+  },
+  {
+   "repo": "rw_flask",
+   "file": "conduit/articles/views.py",
+   "pattern": "author=current_user\\.profile\\)$",
+   "reason": "make_article: sets the author of a new article, not a check"
+  },
+  {
+   "repo": "rw_express",
+   "file": "src/app/routes/auth/auth.service.ts",
+   "pattern": "throw new HttpException\\(403",
+   "reason": "login credential failure (403), not an authorization check"
+  },
+  {
+   "repo": "fastapi_tpl",
+   "file": "backend/app/api/routes/items.py",
+   "pattern": "if current_user\\.is_superuser:",
+   "reason": "read_items: list scoping branch (superuser sees all, others own) — no removable check line"
+  },
+  {
+   "repo": "fastapi_tpl",
+   "file": "backend/app/api/routes/users.py",
+   "pattern": "if current_user\\.is_superuser:|status_code=403, detail=\"Super users are not allowed",
+   "reason": "delete_user_me / delete_user: self-delete guard for superusers, not an access check"
+  },
+  {
+   "repo": "fastapi_tpl",
+   "file": null,
+   "pattern": "get_current_active_superuser,$|import .*get_current_active_superuser",
+   "reason": "import line"
+  },
+  {
+   "repo": "petclinic_rest",
+   "file": null,
+   "pattern": "^import ",
+   "reason": "import line"
+  }
+ ]
+}

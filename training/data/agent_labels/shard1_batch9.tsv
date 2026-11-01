@@ -1,0 +1,50 @@
+1201	manual_review_required	0.55	Show metadata has token authentication without explicit unrestricted access or caller ownership evidence.
+1204	manual_review_required	0.55	Meal-plan username and hash suggest user context but no verified item-owner lookup or caller identity mapping is supplied.
+1207	manual_review_required	0.55	Meal-plan template has username path context but no corresponding owner field or verified authorization binding.
+1210	manual_review_required	0.55	Recipe information requires an API key and provides no affirmative unrestricted-access statement.
+1213	manual_review_required	0.55	Game box-score retrieval uses API-key authentication without an explicit public API-access guarantee.
+1216	manual_review_required	0.55	TeamID identifies a sports team, not an authorization tenant; API access policy beyond key authentication is unspecified.
+1219	manual_review_required	0.55	Memberships refer to players on teams rather than required caller subscription tiers or tenant membership.
+1222	manual_review_required	0.55	Audiobook authors are content attribution and OAuth authentication does not specify a caller membership or unrestricted-access policy.
+1225	manual_review_required	0.55	Summary requires write_access token for editing, but flattened owner/user_id fields do not verify an ownership lookup.
+1228	manual_review_required	0.50	Comment author and reply-to identifiers describe conversations, not a verified caller ownership restriction or explicit public access.
+1231	manual_review_required	0.55	User notifications explicitly require read_inbox token, but no user ownership field supports a verified lookup.
+1234	manual_review_required	0.55	Private reputation history requires private_info token, while inferred user_id lacks a verified subject lookup.
+1237	manual_review_required	0.50	User top-tag statistics are descriptive, but no affirmative unrestricted API-access statement is supplied.
+1240	manual_review_required	0.55	Version import exposes both projectId and workspaceId without a verified tenant authorization binding.
+1243	manual_review_required	0.55	Tax-identifier update has legal-entity context but no verified caller-entity access relationship.
+1246	manual_review_required	0.55	Invoice legal_entity_id and external_user_id are inferred relationships without a verified authorization choice.
+1249	manual_review_required	0.55	Campaign sender_id and multiple authentication alternatives do not establish a verified owner or role policy.
+1252	manual_review_required	0.55	Channel grants, team and created_by are opaque or inferred access hints without a verified single policy binding.
+1255	manual_review_required	0.55	Channel event response mixes creator, team, moderator and user fields without establishing the calling user's authorization rule.
+1258	manual_review_required	0.55	Bank account belongs to a Custom account, but that business relationship does not verify caller ownership or tenant identity.
+1261	manual_review_required	0.55	External-account update targets a Custom account's bank object without a verified caller-account authorization mapping.
+1264	manual_review_required	0.55	Application-fee refund has account data and authentication but no explicit caller role or verified ownership lookup.
+1267	manual_review_required	0.55	Credit-note customer denotes billing subject, not a verified relation to the API caller.
+1270	manual_review_required	0.55	Endpoint-attempt listing has app context but pagination-only ERD cannot establish caller ownership.
+1273	manual_review_required	0.50	Card dex metadata has unknown security and no affirmative unrestricted-access evidence.
+1276	manual_review_required	0.55	Address customer_reference is descriptive data rather than a verified owner identifier for the bearer caller.
+1279	manual_review_required	0.55	Authentication-provider organization_id is inferred and does not verify a tenant lookup or required admin role.
+1282	manual_review_required	0.55	Billing-group organization_id is a tenant hint without verified caller mapping or database key evidence.
+1285	manual_review_required	0.50	Transit arrival predictions have unknown security and no affirmative unrestricted API-access statement.
+1288	manual_review_required	0.55	Robotics teams are competition entities rather than access-control tenants, and API-key authentication gives no specific policy.
+1291	manual_review_required	0.55	Event metadata requires an API key without affirmative unrestricted-access evidence.
+1294	manual_review_required	0.55	Damsire racing results require Basic authentication without a supplied subscription tier or unrestricted-access policy.
+1297	manual_review_required	0.55	Datacenter risk details require bearer authentication but no concrete caller role or owner policy is supplied.
+1300	manual_review_required	0.50	Event public-sales fields and clientVisibility filters do not affirm unrestricted API authorization.
+1303	manual_review_required	0.50	Language-family metadata has unknown security and no affirmative unrestricted-access statement.
+1306	manual_review_required	0.55	Package detail requires bearer authentication while result wrappers supply no ownership or role evidence.
+1309	manual_review_required	0.50	Token-burn transaction data has addresses but no specified API access policy or verified caller ownership relationship.
+1312	manual_review_required	0.55	Device update includes groupId and contact without a verified owner or tenant authorization mapping.
+1315	manual_review_required	0.55	Tracking event has device and position identifiers without any caller ownership or tenant relationship.
+1318	manual_review_required	0.55	Personal-list update has user path context but no owner field or verified user-list lookup.
+1321	manual_review_required	0.55	Reordering a user's list provides only rank data, insufficient for a verified ownership lookup.
+1324	manual_review_required	0.55	User-post listing requires an API key but pagination and group filters do not establish owner-only or unrestricted access.
+1327	manual_review_required	0.50	Monitored-device restrictedRights indicates possible access constraints without specifying a supported caller policy.
+1330	manual_review_required	0.55	Background-check owner_document_id identifies a checked subject, not a verified API caller ownership relation.
+1333	manual_review_required	0.55	Continuous-check update contains subject identity data without a verified caller-to-check authorization binding.
+1336	manual_review_required	0.55	Survey interviews require Basic authentication but have no supplied owner or tenant relationship.
+1339	manual_review_required	0.55	Following a person changes the caller's relationship to another entity rather than ownership of that target person.
+1342	manual_review_required	0.55	Account-address listing uses account authentication but wrappers lack a verified caller-account lookup.
+1345	manual_review_required	0.55	Address account_sid is an inferred account relation without a verified mapping to caller identity.
+1348	manual_review_required	0.55	Creating an application within your account is account-scoped, but no verified subject-to-account lookup distinguishes owner from tenant.

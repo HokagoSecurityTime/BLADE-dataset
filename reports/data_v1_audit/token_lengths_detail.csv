@@ -1,0 +1,2029 @@
+split,cond,id,tokens
+train_v1,oas(학습 입력),apisguru:ably.net:get:/accounts/{account_id}/apps,2950
+train_v1,oas(학습 입력),apisguru:ably.net:get:/apps/{app_id}/rules,3144
+train_v1,oas(학습 입력),apisguru:ably.net:get:/apps/{app_id}/rules/{rule_id},3108
+train_v1,oas(학습 입력),apisguru:ably.net:patch:/apps/{app_id}/rules/{rule_id},3082
+train_v1,oas(학습 입력),apisguru:ably.net:patch:/apps/{id},2922
+train_v1,oas(학습 입력),apisguru:ably.net:post:/accounts/{account_id}/apps,2915
+train_v1,oas(학습 입력),apisguru:ably.net:post:/apps/{app_id}/rules,3102
+train_v1,oas(학습 입력),apisguru:adafruit.com:get:/{username}/dashboards/{dashboard_id}/blocks,3371
+train_v1,oas(학습 입력),apisguru:adyen.com:get:/balanceAccounts/{id}/paymentInstruments,3381
+train_v1,oas(학습 입력),apisguru:alertersystem.com:patch:/api/monitor/{id},3068
+train_v1,oas(학습 입력),apisguru:apache.org:patch:/dags/{dag_id}/dagRuns/{dag_run_id}/setNote,2971
+train_v1,oas(학습 입력),apisguru:api2cart.com:get:/attribute.group.list.json,2971
+train_v1,oas(학습 입력),apisguru:apideck.com:delete:/accounting/customers/{id},2907
+train_v1,oas(학습 입력),apisguru:apideck.com:get:/accounting/invoice-items/{id},3131
+train_v1,oas(학습 입력),apisguru:apigee.net:get:/dealer/heavy-equipment/{id},2968
+train_v1,oas(학습 입력),apisguru:appcenter.ms:get:/v0.1/apps/{owner_name}/{app_name}/crash_groups/{crash_group_id}/crashes,3253
+train_v1,oas(학습 입력),apisguru:apple.com:patch:/v1/appInfos/{id},3221
+train_v1,oas(학습 입력),apisguru:appveyor.com:get:/buildjobs/{jobId}/artifacts,2891
+train_v1,oas(학습 입력),apisguru:appwrite.io:get:/account/sessions/{sessionId},3007
+train_v1,oas(학습 입력),apisguru:appwrite.io:post:/teams/{teamId}/memberships,3149
+train_v1,oas(학습 입력),apisguru:appwrite.io:put:/storage/files/{fileId},2943
+train_v1,oas(학습 입력),apisguru:appwrite.io:put:/teams/{teamId},2921
+train_v1,oas(학습 입력),apisguru:asuarez.dev:get:/similarity/by_song,3053
+train_v1,oas(학습 입력),apisguru:avaza.com:get:/api/ExpenseSummary,2962
+train_v1,oas(학습 입력),apisguru:avaza.com:get:/api/Payment,3115
+train_v1,oas(학습 입력),apisguru:avaza.com:get:/api/Payment/{id},3004
+train_v1,oas(학습 입력),apisguru:avaza.com:get:/api/Project/{id},3132
+train_v1,oas(학습 입력),apisguru:azure.com:get:/providers/Microsoft.ADHybridHealthService/addsservices/{serviceName}/servicemembers/{serviceMemberId},3193
+train_v1,oas(학습 입력),apisguru:azure.com:get:/providers/Microsoft.ADHybridHealthService/addsservices/{serviceName}/servicemembers/{serviceMemberId}/alerts,3214
+train_v1,oas(학습 입력),apisguru:bbc.com:get:/schedules,3390
+train_v1,oas(학습 입력),apisguru:bbc.com:get:/services,3360
+train_v1,oas(학습 입력),apisguru:bbc.com:get:/v1/brands/{pid}/franchises/,3287
+train_v1,oas(학습 입력),apisguru:bigoven.com:get:/recipe/steps/{id},3122
+train_v1,oas(학습 입력),apisguru:bigoven.com:get:/recipe/{id},3121
+train_v1,oas(학습 입력),apisguru:bigoven.com:post:/recipe/{recipeId}/note,2932
+train_v1,oas(학습 입력),apisguru:bigoven.com:put:/recipe/review/replies/{replyId},2941
+train_v1,oas(학습 입력),apisguru:bigredcloud.com:get:/v1/customers/{itemId}/openingBalance,2924
+train_v1,oas(학습 입력),apisguru:bigredcloud.com:get:/v1/customers/{itemId}/openingBalanceList,2951
+train_v1,oas(학습 입력),apisguru:bigredcloud.com:get:/v1/customers/{itemId}/quotes,3208
+train_v1,oas(학습 입력),apisguru:bigredcloud.com:put:/v1/cashReceipts/{id},2897
+train_v1,oas(학습 입력),apisguru:bitbucket.org:get:/repositories/{workspace}/{repo_slug}/branch-restrictions/{id},3211
+train_v1,oas(학습 입력),apisguru:bitbucket.org:get:/repositories/{workspace}/{repo_slug}/commit/{commit}/comments/{comment_id},3098
+train_v1,oas(학습 입력),apisguru:bitbucket.org:get:/repositories/{workspace}/{repo_slug}/commit/{commit}/reports/{reportId}/annotations,3018
+train_v1,oas(학습 입력),apisguru:bitbucket.org:get:/repositories/{workspace}/{repo_slug}/commit/{commit}/statuses/build/{key},2994
+train_v1,oas(학습 입력),apisguru:bitbucket.org:put:/repositories/{workspace}/{repo_slug}/branch-restrictions/{id},3263
+train_v1,oas(학습 입력),apisguru:bitbucket.org:put:/repositories/{workspace}/{repo_slug}/commit/{commit}/comments/{comment_id},3042
+train_v1,oas(학습 입력),apisguru:bitbucket.org:put:/repositories/{workspace}/{repo_slug}/commit/{commit}/statuses/build/{key},3043
+train_v1,oas(학습 입력),apisguru:bkk.hu:get:/{dialect}/api/where/route-details-for-stop,3195
+train_v1,oas(학습 입력),apisguru:box.com:get:/collaborations/{collaboration_id},3213
+train_v1,oas(학습 입력),apisguru:box.com:get:/enterprises/{enterprise_id}/device_pinners,3022
+train_v1,oas(학습 입력),apisguru:box.com:put:/collaborations/{collaboration_id},3239
+train_v1,oas(학습 입력),apisguru:box.com:put:/comments/{comment_id},2946
+train_v1,oas(학습 입력),apisguru:brex.io:get:/api/v1/company/announcement/{id},2929
+train_v1,oas(학습 입력),apisguru:bulksms.com:post:/messages,3926
+train_v1,oas_code(학습 입력),campus_records_audit_0,3038
+train_v1,oas_code(학습 입력),campus_records_audit_1,3029
+train_v1,oas_code(학습 입력),campus_records_catalogue_0,2976
+train_v1,oas_code(학습 입력),campus_records_catalogue_1,2976
+train_v1,oas_code(학습 입력),campus_records_disputed_0,3039
+train_v1,oas_code(학습 입력),campus_records_disputed_1,3039
+train_v1,oas_code(학습 입력),campus_records_drafts_0,3043
+train_v1,oas_code(학습 입력),campus_records_drafts_1,3031
+train_v1,oas_code(학습 입력),campus_records_shared_0,3053
+train_v1,oas_code(학습 입력),campus_records_shared_1,3031
+train_v1,oas_code(학습 입력),campus_records_subscription_0,3075
+train_v1,oas_code(학습 입력),campus_records_subscription_1,3066
+train_v1,oas_code(학습 입력),campus_records_workspace_0,3042
+train_v1,oas_code(학습 입력),campus_records_workspace_1,3028
+train_v1,oas(학습 입력),apisguru:circuitsandbox.net:delete:/conversations/community/{convId}/participants,3027
+train_v1,oas(학습 입력),apisguru:circuitsandbox.net:delete:/conversations/group/{convId}/participants,3019
+train_v1,oas(학습 입력),apisguru:circuitsandbox.net:get:/conversations/label/{labelId},3050
+train_v1,oas(학습 입력),apisguru:circuitsandbox.net:get:/conversations/messages/{itemId},3155
+train_v1,oas(학습 입력),apisguru:circuitsandbox.net:get:/conversations/{convId}/items,3207
+train_v1,oas(학습 입력),apisguru:circuitsandbox.net:post:/conversations/community/{convId}/join,3045
+train_v1,oas(학습 입력),apisguru:circuitsandbox.net:post:/conversations/community/{convId}/participants,3000
+train_v1,oas(학습 입력),apisguru:circuitsandbox.net:post:/conversations/group/{convId}/participants,3005
+train_v1,oas(학습 입력),apisguru:circuitsandbox.net:post:/conversations/{convId}/messages,3192
+train_v1,oas(학습 입력),apisguru:circuitsandbox.net:put:/conversations/community/{convId},3002
+train_v1,oas(학습 입력),apisguru:circuitsandbox.net:put:/conversations/group/{convId},2990
+train_v1,oas(학습 입력),apisguru:citrixonline.com:get:/Groups/{groupKey},2919
+train_v1,oas(학습 입력),apisguru:citrixonline.com:get:/organizers/{organizerKey},2952
+train_v1,oas(학습 입력),apisguru:citrixonline.com:get:/organizers/{organizerKey}/attendees,3002
+train_v1,oas(학습 입력),apisguru:clearblade.com:get:/admin/v/4/session/{systemKey}/user,3123
+train_v1,oas(학습 입력),apisguru:clever-cloud.com:get:/organisations/{id}/addonproviders/{providerId}/plans/{planId},2945
+train_v1,oas(학습 입력),apisguru:clever.com:get:/contacts/{id},2935
+train_v1,oas(학습 입력),apisguru:clickmeter.com:get:/aggregated/summary/datapoints,3072
+train_v1,oas(학습 입력),apisguru:clickmeter.com:post:/account/guests/{guestId},3103
+train_v1,oas(학습 입력),apisguru:codat.io:get:/data/companies/{companyId}/connections/{connectionId}/assess/accounts/{accountId}/categories,2982
+train_v1,oas(학습 입력),apisguru:collegefootballdata.com:get:/play/stats,3020
+train_v1,oas(학습 입력),apisguru:collegefootballdata.com:get:/player/usage,2995
+train_v1,oas(학습 입력),apisguru:collegefootballdata.com:get:/ppa/players/games,2989
+train_v1,oas(학습 입력),apisguru:collegefootballdata.com:get:/ppa/players/season,3095
+train_v1,oas(학습 입력),apisguru:configcat.com:get:/v1/configs/{configId}/environments/{environmentId}/values,3340
+train_v1,oas(학습 입력),apisguru:configcat.com:get:/v1/environments/{environmentId},3126
+train_v1,oas(학습 입력),apisguru:configcat.com:patch:/v1/environments/{environmentId}/settings/{settingId}/value,3759
+train_v1,oas(학습 입력),apisguru:conjur.local:post:/authn-azure/{service_id}/{account}/{login}/authenticate,3142
+train_v1,oas(학습 입력),apisguru:conjur.local:post:/authn-jwt/{service_id}/{account}/authenticate,2942
+train_v1,oas(학습 입력),apisguru:conjur.local:post:/authn-oidc/{service_id}/{account}/authenticate,2977
+train_v1,oas(학습 입력),apisguru:contentgroove.com:get:/webhook_subscriptions/{id},3028
+train_v1,oas(학습 입력),apisguru:contract-p.fit:get:/auth/api-key/inbox/{inbox_id},2938
+train_v1,oas(학습 입력),apisguru:contract-p.fit:get:/auth/api-key/{key},2924
+train_v1,oas(학습 입력),apisguru:contract-p.fit:get:/connections/{connection_id},2921
+train_v1,oas(학습 입력),apisguru:contract-p.fit:patch:/auth/api-key/{key},2947
+train_v1,oas(학습 입력),apisguru:contract-p.fit:post:/auth/api-key/inbox/{inbox_id},3008
+train_v1,oas(학습 입력),apisguru:contract-p.fit:post:/documents/{document_id}/reprocess,3153
+train_v1,oas(학습 입력),apisguru:contribly.com:get:/exports/{id},2919
+train_v1,oas_code(학습 입력),copper_wallet_audit_0,3009
+train_v1,oas_code(학습 입력),copper_wallet_audit_1,3001
+train_v1,oas_code(학습 입력),copper_wallet_catalogue_0,2950
+train_v1,oas_code(학습 입력),copper_wallet_catalogue_1,2950
+train_v1,oas_code(학습 입력),copper_wallet_disputed_0,3010
+train_v1,oas_code(학습 입력),copper_wallet_disputed_1,3010
+train_v1,oas_code(학습 입력),copper_wallet_drafts_0,3015
+train_v1,oas_code(학습 입력),copper_wallet_drafts_1,3003
+train_v1,oas_code(학습 입력),copper_wallet_shared_0,3024
+train_v1,oas_code(학습 입력),copper_wallet_shared_1,3003
+train_v1,oas_code(학습 입력),copper_wallet_subscription_0,3046
+train_v1,oas_code(학습 입력),copper_wallet_subscription_1,3038
+train_v1,oas_code(학습 입력),copper_wallet_workspace_0,3013
+train_v1,oas_code(학습 입력),copper_wallet_workspace_1,3000
+train_v1,oas(학습 입력),apisguru:cpy.re:get:/api/v1/users/me/videos/imports,3229
+train_v1,oas(학습 입력),apisguru:crossbrowsertesting.com:get:/screenshots/{target_screenshot_test_id}/{target_version_id}/comparison/parallel/{base_version_id},3221
+train_v1,oas(학습 입력),apisguru:daniweb.com:patch:/conversations/{ID}/statuses,3387
+train_v1,oas(학습 입력),apisguru:daniweb.com:post:/audiences/{ID}/memberships,3242
+train_v1,oas(학습 입력),apisguru:daniweb.com:post:/conversations/{ID}/searches,3350
+train_v1,oas(학습 입력),apisguru:deutschebahn.com:get:/areas/{areaUID},3103
+train_v1,oas(학습 입력),apisguru:deutschebahn.com:get:/providernetworks/{uid},3132
+train_v1,oas(학습 입력),apisguru:digitalnz.org:get:/records/{record_id}.{format},3040
+train_v1,oas(학습 입력),apisguru:docker.com:get:/containers/{id}/json,3093
+train_v1,oas(학습 입력),apisguru:drchrono.com:get:/api/comm_logs/{id},2952
+train_v1,oas(학습 입력),apisguru:edrv.io:patch:/v1/commands/{id}/variables,2902
+train_v1,oas(학습 입력),apisguru:elmah.io:get:/v3/deployments/{id},2931
+train_v1,oas(학습 입력),apisguru:elmah.io:get:/v3/messages/{logId}/{id},3056
+train_v1,oas(학습 입력),apisguru:elmah.io:post:/v3/messages/{logId}/_fix,2897
+train_v1,oas(학습 입력),apisguru:evetech.net:get:/alliances/{alliance_id}/,2981
+train_v1,oas(학습 입력),apisguru:evetech.net:get:/characters/{character_id}/,2981
+train_v1,oas(학습 입력),apisguru:evetech.net:get:/characters/{character_id}/attributes/,3003
+train_v1,oas(학습 입력),apisguru:evetech.net:get:/characters/{character_id}/blueprints/,2997
+train_v1,oas(학습 입력),apisguru:evetech.net:get:/characters/{character_id}/bookmarks/,3029
+train_v1,oas(학습 입력),apisguru:evetech.net:get:/characters/{character_id}/calendar/,3037
+train_v1,oas(학습 입력),apisguru:evetech.net:get:/characters/{character_id}/calendar/{event_id}/,3018
+train_v1,oas(학습 입력),apisguru:figshare.com:get:/account/articles/export,2940
+train_v1,oas(학습 입력),apisguru:figshare.com:get:/account/articles/{article_id},3137
+train_v1,oas(학습 입력),apisguru:files.com:get:/api_keys,2982
+train_v1,oas(학습 입력),apisguru:fire.com:get:/v1/directdebits/{directDebitUuid},3018
+train_v1,oas(학습 입력),apisguru:fire.com:get:/v1/payments/{paymentUuid},3273
+train_v1,oas(학습 입력),apisguru:flat.io:get:/collections/{collection},3224
+train_v1,oas(학습 입력),apisguru:flat.io:get:/scores/{score},3187
+train_v1,oas(학습 입력),apisguru:flat.io:get:/scores/{score}/collaborators,3214
+train_v1,oas(학습 입력),apisguru:flat.io:get:/scores/{score}/collaborators/{collaborator},3102
+train_v1,oas(학습 입력),apisguru:flat.io:get:/scores/{score}/tracks,2984
+train_v1,oas(학습 입력),apisguru:flat.io:get:/scores/{score}/tracks/{track},2965
+train_v1,oas(학습 입력),apisguru:flat.io:post:/scores/{score}/fork,3221
+train_v1,oas(학습 입력),apisguru:flickr.com:get:/rest?method=flickr.favorites.getList,3197
+train_v1,oas(학습 입력),apisguru:flickr.com:get:/rest?method=flickr.photos.getInfo,3127
+train_v1,oas(학습 입력),apisguru:frankiefinancial.io:post:/document/{documentId}/utility/process/compare,3548
+train_v1,oas(학습 입력),apisguru:gerermesaffaires.com:get:/hub/business-groups/{Id}/menus,2945
+train_v1,oas(학습 입력),apisguru:gerermesaffaires.com:post:/business-groups/{id}/spaces/{spaceId}/legal-entities/{personId}/customers/{folderId}/guest-in-space,2931
+train_v1,oas(학습 입력),apisguru:gerermesaffaires.com:post:/business-groups/{id}/spaces/{spaceId}/legal-entities/{personId}/customers/{folderId}/spaces,2911
+train_v1,oas(학습 입력),apisguru:giphy.com:get:/gifs/{gifId},3239
+train_v1,oas(학습 입력),apisguru:gitea.io:get:/repos/issues/search,3277
+train_v1,oas(학습 입력),apisguru:gitea.io:get:/repos/{owner}/{repo}/hooks/{id},2955
+train_v1,oas(학습 입력),apisguru:gitea.io:patch:/orgs/{org}/hooks/{id},2950
+train_v1,oas(학습 입력),apisguru:github.com:get:/app/hook/deliveries/{delivery_id},3020
+train_v1,oas(학습 입력),apisguru:gitlab.com:get:/v3/groups/{id},3158
+train_v1,oas(학습 입력),apisguru:gitlab.com:get:/v3/groups/{id}/issues,3125
+train_v1,oas(학습 입력),apisguru:gitlab.com:get:/v3/groups/{id}/members,2963
+train_v1,oas(학습 입력),apisguru:gitlab.com:post:/v3/groups/{id}/projects/{project_id},3192
+train_v1,oas(학습 입력),apisguru:googleapis.com:get:/billinginfo/{accountId},2941
+train_v1,oas(학습 입력),apisguru:googleapis.com:get:/creatives/{accountId}/{buyerCreativeId},3130
+train_v1,oas(학습 입력),apisguru:googleapis.com:get:/directdeals/{id},2977
+train_v1,oas(학습 입력),apisguru:googleapis.com:patch:/billinginfo/{accountId}/{billingId},2980
+train_v1,oas(학습 입력),apisguru:googleapis.com:put:/billinginfo/{accountId}/{billingId},2974
+train_v1,oas(학습 입력),apisguru:gsmtasks.com:post:/accounts/{id}/managers/,2901
+train_v1,oas(학습 입력),apisguru:here.com:get:/aliases/v2/{trackingId},2963
+train_v1,oas(학습 입력),apisguru:hetras-certification.net:post:/api/booking/v0/bookings/{confirmationId}/reservations/{reservationNumber}/cancel,3023
+train_v1,oas(학습 입력),apisguru:hhs.gov:get:/resources/media.json,3507
+train_v1,oas(학습 입력),apisguru:id4i.de:get:/api/v1/apikeys/{key},2920
+train_v1,oas(학습 입력),apisguru:id4i.de:get:/api/v1/apikeys/{key}/privileges,2910
+train_v1,oas(학습 입력),apisguru:id4i.de:get:/api/v1/changelog/organization/{organizationId}/,2960
+train_v1,oas(학습 입력),apisguru:illumidesk.com:get:/v1/teams/{team}/billing/invoices/{id}/,2970
+train_v1,oas(학습 입력),apisguru:illumidesk.com:get:/v1/users/{user}/emails/{email_id}/,2912
+train_v1,oas(학습 입력),apisguru:illumidesk.com:get:/v1/{namespace}/billing/cards/{id}/,2963
+train_v1,oas(학습 입력),apisguru:illumidesk.com:patch:/v1/users/{user}/emails/{email_id}/,2920
+train_v1,oas(학습 입력),apisguru:illumidesk.com:patch:/v1/{namespace}/billing/cards/{id}/,2979
+train_v1,oas(학습 입력),apisguru:illumidesk.com:put:/v1/users/{user}/emails/{email_id}/,2918
+train_v1,oas(학습 입력),apisguru:illumidesk.com:put:/v1/{namespace}/billing/cards/{id}/,2963
+train_v1,oas(학습 입력),apisguru:increase.com:get:/account_transfers/{account_transfer_id},2975
+train_v1,oas(학습 입력),apisguru:increase.com:post:/account_transfers/{account_transfer_id}/approve,2977
+train_v1,oas(학습 입력),apisguru:increase.com:post:/account_transfers/{account_transfer_id}/cancel,2977
+train_v1,oas(학습 입력),apisguru:influxdata.com:get:/buckets/{bucketID},3004
+train_v1,oas(학습 입력),apisguru:instagram.com:delete:/media/{media-id}/comments/{comment-id},2954
+train_v1,oas(학습 입력),apisguru:instagram.com:delete:/media/{media-id}/likes,2928
+train_v1,oas(학습 입력),apisguru:intellifi.nl:put:/kvpairs/{id},2921
+train_v1,oas(학습 입력),apisguru:interactivebrokers.com:put:/accounts/{account}/orders/{CustomerOrderId},2984
+train_v1,oas(학습 입력),apisguru:ix-api.net:patch:/accounts/{id},3051
+train_v1,oas(학습 입력),apisguru:izettle.com:get:/organizations/{organizationUuid}/library,3520
+train_v1,oas(학습 입력),apisguru:izettle.com:get:/organizations/{organizationUuid}/products,3123
+train_v1,oas(학습 입력),apisguru:izettle.com:post:/organizations/{organizationUuid}/categories/v2,2893
+train_v1,oas(학습 입력),apisguru:izettle.com:post:/organizations/{organizationUuid}/products,3084
+train_v1,oas(학습 입력),apisguru:jellyfin.local:get:/Artists/{itemId}/Similar,3222
+train_v1,oas(학습 입력),apisguru:jellyfin.local:get:/Artists/{name},3095
+train_v1,oas(학습 입력),apisguru:jumpseller.com:post:/customer_categories/{id}/customers.json,3234
+train_v1,oas(학습 입력),apisguru:kumpeapps.com:get:/kkid/allowance,3015
+train_v1,oas(학습 입력),apisguru:kumpeapps.com:get:/kkid/userlist,3153
+train_v1,oas(학습 입력),apisguru:kumpeapps.com:put:/kkid/userlist,3118
+train_v1,oas(학습 입력),apisguru:launchdarkly.com:get:/account/relay-auto-configs/{id},3083
+train_v1,oas(학습 입력),apisguru:launchdarkly.com:patch:/account/relay-auto-configs/{id},3083
+train_v1,oas(학습 입력),apisguru:launchdarkly.com:post:/account/relay-auto-configs/{id}/reset,3092
+train_v1,oas(학습 입력),apisguru:learnifier.com:patch:/orgunits/{orgid},2887
+train_v1,oas(학습 입력),apisguru:learnifier.com:post:/orgunits/{orgid}/projects/{projectid}/participants,2928
+train_v1,oas(학습 입력),apisguru:lgtm.com:delete:/projects/{project-id},2984
+train_v1,oas(학습 입력),apisguru:lgtm.com:get:/analyses/{analysis-id},3140
+train_v1,oas(학습 입력),apisguru:lgtm.com:get:/analyses/{project-id}/commits/{commit-id},3114
+train_v1,oas(학습 입력),apisguru:lgtm.com:get:/queryjobs/{queryjob-id}/results/{project-id},3055
+train_v1,oas(학습 입력),apisguru:linode.com:post:/account/oauth-clients/{clientId}/reset-secret,3012
+train_v1,oas(학습 입력),apisguru:linode.com:put:/account/oauth-clients/{clientId},2958
+train_v1,oas(학습 입력),apisguru:listennotes.com:get:/curated_podcasts/{id},3257
+train_v1,oas(학습 입력),apisguru:listennotes.com:get:/podcasts/{id},3169
+train_v1,oas(학습 입력),apisguru:loket.nl:delete:/providers/employers/benefitinkindtypes/{benefitInKindTypeId},2979
+train_v1,oas(학습 입력),apisguru:loket.nl:put:/providers/employers/benefitinkindtypes/{benefitInKindTypeId},2972
+train_v1,oas(학습 입력),apisguru:lyft.com:get:/rides/{id},3124
+train_v1,oas(학습 입력),apisguru:lyft.com:get:/rides/{id}/receipt,3011
+train_v1,oas(학습 입력),apisguru:magento.com:put:/V1/carts/{cartId},2904
+train_v1,oas(학습 입력),apisguru:maif.local:patch:/api/data-exporter-configs/{dataExporterConfigId},3064
+train_v1,oas(학습 입력),apisguru:mailchimp.com:get:/automations/{workflow_id},3180
+train_v1,oas(학습 입력),apisguru:mailchimp.com:post:/automations/{workflow_id}/actions/start-all-emails,2896
+train_v1,oas(학습 입력),apisguru:mastodon.local:get:/api/v1/accounts/{id}/followers,3145
+train_v1,oas(학습 입력),apisguru:mastodon.local:get:/api/v1/accounts/{id}/following,3150
+train_v1,oas(학습 입력),apisguru:mastodon.local:get:/api/v1/accounts/{id}/statuses,3214
+train_v1,oas(학습 입력),apisguru:mastodon.local:post:/api/v1/accounts/{id}/block,2967
+train_v1,oas(학습 입력),apisguru:mastodon.local:post:/api/v1/accounts/{id}/follow,2952
+train_v1,oas(학습 입력),apisguru:mastodon.local:post:/api/v1/accounts/{id}/mute,2975
+train_v1,oas(학습 입력),apisguru:mastodon.local:post:/api/v1/accounts/{id}/note,2946
+train_v1,oas(학습 입력),apisguru:mcw.edu:get:/annotations/reference/{refRgdId},3026
+train_v1,oas(학습 입력),apisguru:mcw.edu:get:/annotations/{accId}/{speciesTypeKey}/{includeChildren},3065
+train_v1,oas(학습 입력),apisguru:mcw.edu:get:/genes/annotation/{accId}/{speciesTypeKey},3019
+train_v1,oas(학습 입력),apisguru:meraki.com:get:/networks/{networkId}/clients,3025
+train_v1,oas(학습 입력),apisguru:mercedes-benz.com:get:/markets/{marketId}/classes/{classId},2956
+train_v1,oas(학습 입력),apisguru:mercedes-benz.com:get:/markets/{marketId}/models/{modelId}/configurations/{configurationId}/images/components/paint,3000
+train_v1,oas(학습 입력),apisguru:meshery.local:get:/api/application/{id},2928
+train_v1,oas(학습 입력),apisguru:meshery.local:get:/api/filter/file/{id},2943
+train_v1,oas(학습 입력),apisguru:meshery.local:get:/api/filter/{id},2940
+train_v1,oas(학습 입력),apisguru:meshery.local:get:/api/pattern/{id},2938
+train_v1,oas(학습 입력),apisguru:microcks.local:get:/secrets/{id},2909
+train_v1,oas(학습 입력),apisguru:microsoft.com:post:/{projectId}/classify/iterations/{publishedName}/image/nostore,2970
+train_v1,oas(학습 입력),apisguru:mist.com:get:/api/v1/installer/orgs/{org_id}/devices,2946
+train_v1,oas(학습 입력),apisguru:mist.com:get:/api/v1/installer/orgs/{org_id}/sites/{site_name}/maps,3186
+train_v1,oas(학습 입력),apisguru:mist.com:post:/api/v1/installer/orgs/{org_id}/sites/{site_name}/maps/import,3058
+train_v1,oas(학습 입력),apisguru:nbg.gr:get:/accounts/{accountId}/scheduled-payments,3143
+train_v1,oas(학습 입력),apisguru:netatmo.net:get:/getmeasure,3003
+train_v1,oas(학습 입력),apisguru:netatmo.net:get:/getstationsdata,3302
+train_v1,oas(학습 입력),apisguru:netbox.dev:get:/circuits/circuit-terminations/{id}/paths/,3074
+train_v1,oas(학습 입력),apisguru:netbox.dev:get:/circuits/circuit-types/,3285
+train_v1,oas(학습 입력),apisguru:netlify.com:delete:/accounts/{account_id}/env/{key},2937
+train_v1,oas(학습 입력),apisguru:nexmo.com:get:/events/{id},3090
+train_v1,oas(학습 입력),apisguru:noosh.com:post:/1.1/workgroups/{workgroup_id}/projects/{project_id}/files,3014
+train_v1,oas(학습 입력),apisguru:noosh.com:post:/1.1/workgroups/{workgroup_id}/projects/{project_id}/teammembers,3036
+train_v1,oas(학습 입력),apisguru:noosh.com:put:/1.1/workgroups/{workgroup_id}/projects/{project_id}/specs/{spec_id},2950
+train_v1,oas(학습 입력),apisguru:nordigen.com:get:/api/v2/accounts/{id}/,2954
+train_v1,oas(학습 입력),apisguru:nordigen.com:get:/api/v2/payments/{id}/,3073
+train_v1,oas(학습 입력),apisguru:npr.org:get:/v2/organizations/{orgId}/categories/{category}/recommendations,3213
+train_v1,oas(학습 입력),apisguru:onsched.com:delete:/consumer/v1/appointments/{id},3205
+train_v1,oas(학습 입력),apisguru:onsched.com:get:/consumer/v1/appointments/{id},3153
+train_v1,oas(학습 입력),apisguru:onsched.com:put:/consumer/v1/appointments/{id}/book,3225
+train_v1,oas(학습 입력),apisguru:onsched.com:put:/consumer/v1/appointments/{id}/cancel,3174
+train_v1,oas(학습 입력),apisguru:onsched.com:put:/consumer/v1/appointments/{id}/reschedule,3414
+train_v1,oas(학습 입력),apisguru:openbanking.org.uk:get:/accounts/{AccountId}/offers,3078
+train_v1,oas(학습 입력),apisguru:openbanking.org.uk:get:/accounts/{AccountId}/party,3154
+train_v1,oas(학습 입력),apisguru:openbanking.org.uk:get:/accounts/{AccountId}/scheduled-payments,3161
+train_v1,oas(학습 입력),apisguru:openbanking.org.uk:get:/accounts/{AccountId}/standing-orders,3296
+train_v1,oas(학습 입력),apisguru:openbanking.org.uk:get:/accounts/{AccountId}/statements,3306
+train_v1,oas(학습 입력),apisguru:openbanking.org.uk:get:/accounts/{AccountId}/statements/{StatementId}/transactions,3314
+train_v1,oas(학습 입력),apisguru:openbanking.org.uk:get:/accounts/{AccountId}/transactions,3298
+train_v1,oas(학습 입력),apisguru:openbankingproject.ch:get:/v1/accounts/{account-id}/balances,3070
+train_v1,oas(학습 입력),apisguru:openbankingproject.ch:get:/v1/accounts/{account-id}/transactions,3287
+train_v1,oas(학습 입력),apisguru:openbankingproject.ch:get:/v1/accounts/{account-id}/transactions/{transactionId},3465
+train_v1,oas(학습 입력),apisguru:openbankingproject.ch:post:/v1/consents/{consentId}/authorisations,3604
+train_v1,oas(학습 입력),apisguru:openchannel.io:get:/apps/{appId}/versions/{version},2906
+train_v1,oas(학습 입력),apisguru:openfintech.io:get:/payment-providers/{id},3030
+train_v1,oas(학습 입력),apisguru:opensuse.org:post:/request/{id}?cmd=diff,3269
+train_v1,oas(학습 입력),apisguru:opentrials.local:get:/documents/{id},3149
+train_v1,oas(학습 입력),apisguru:opentrials.local:get:/trials/{trialId}/records/{id},2982
+train_v1,oas(학습 입력),apisguru:opto22.com:get:/v1/data-store/devices/{id}/tags,2909
+train_v1,oas_code(학습 입력),orbit_tickets_audit_0,3006
+train_v1,oas_code(학습 입력),orbit_tickets_audit_1,2999
+train_v1,oas_code(학습 입력),orbit_tickets_catalogue_0,2962
+train_v1,oas_code(학습 입력),orbit_tickets_catalogue_1,2962
+train_v1,oas_code(학습 입력),orbit_tickets_disputed_0,3008
+train_v1,oas_code(학습 입력),orbit_tickets_disputed_1,3008
+train_v1,oas_code(학습 입력),orbit_tickets_drafts_0,3013
+train_v1,oas_code(학습 입력),orbit_tickets_drafts_1,3002
+train_v1,oas_code(학습 입력),orbit_tickets_shared_0,3021
+train_v1,oas_code(학습 입력),orbit_tickets_shared_1,3001
+train_v1,oas_code(학습 입력),orbit_tickets_subscription_0,3043
+train_v1,oas_code(학습 입력),orbit_tickets_subscription_1,3036
+train_v1,oas_code(학습 입력),orbit_tickets_workspace_0,3010
+train_v1,oas_code(학습 입력),orbit_tickets_workspace_1,2998
+train_v1,oas(학습 입력),apisguru:parliament.uk:get:/data/Divisions/groupedbyparty,3005
+train_v1,oas(학습 입력),apisguru:paylocity.com:get:/v2/companies/{companyId}/employees/{employeeId},3231
+train_v1,oas(학습 입력),apisguru:paylocity.com:get:/v2/companies/{companyId}/employees/{employeeId}/earnings/{earningCode},3051
+train_v1,oas(학습 입력),apisguru:payrun.io:get:/Employer/{EmployerId}/CisLineTypes,2954
+train_v1,oas(학습 입력),apisguru:pendo.io:delete:/accounts/{id},2929
+train_v1,oas(학습 입력),apisguru:pendo.io:delete:/users/{id},2984
+train_v1,oas(학습 입력),apisguru:powerdns.local:get:/servers/{server_id}/zones,3129
+train_v1,oas(학습 입력),apisguru:powerdns.local:post:/servers/{server_id}/zones,3116
+train_v1,oas(학습 입력),apisguru:presalytics.io:get:/Charts/AxisDataTypes/TypeId/{type_id},2923
+train_v1,oas(학습 입력),apisguru:presalytics.io:get:/Charts/ChartUpdate/{id},2903
+train_v1,oas(학습 입력),apisguru:probely.com:get:/targets/{id}/,3133
+train_v1,oas(학습 입력),apisguru:probely.com:patch:/targets/{id}/,3130
+train_v1,oas(학습 입력),apisguru:probely.com:put:/targets/{id}/,3138
+train_v1,oas(학습 입력),apisguru:prss.org:get:/api/v2/episodes/{id},2947
+train_v1,oas(학습 입력),apisguru:prss.org:get:/api/v2/programs/{id},2907
+train_v1,oas(학습 입력),apisguru:prss.org:get:/api/v2/spotinsertions/{id},2927
+train_v1,oas(학습 입력),apisguru:rebilly.com:get:/coupons-redemptions/{id},2940
+train_v1,oas(학습 입력),apisguru:rebilly.com:patch:/bank-accounts/{id},3145
+train_v1,oas_code(학습 입력),relay_forum_audit_0,3008
+train_v1,oas_code(학습 입력),relay_forum_audit_1,3001
+train_v1,oas_code(학습 입력),relay_forum_catalogue_0,2964
+train_v1,oas_code(학습 입력),relay_forum_catalogue_1,2964
+train_v1,oas_code(학습 입력),relay_forum_council_0,3057
+train_v1,oas_code(학습 입력),relay_forum_council_1,3057
+train_v1,oas_code(학습 입력),relay_forum_drafts_0,3015
+train_v1,oas_code(학습 입력),relay_forum_drafts_1,3004
+train_v1,oas_code(학습 입력),relay_forum_moderation_0,3027
+train_v1,oas_code(학습 입력),relay_forum_moderation_1,3007
+train_v1,oas_code(학습 입력),relay_forum_pins_0,3043
+train_v1,oas_code(학습 입력),relay_forum_pins_1,3024
+train_v1,oas_code(학습 입력),relay_forum_roster_0,3046
+train_v1,oas_code(학습 입력),relay_forum_roster_1,3027
+train_v1,oas_code(학습 입력),relay_forum_shared_0,3023
+train_v1,oas_code(학습 입력),relay_forum_shared_1,3003
+train_v1,oas_code(학습 입력),relay_forum_workspace_0,3012
+train_v1,oas_code(학습 입력),relay_forum_workspace_1,3000
+train_v1,oas(학습 입력),apisguru:reverb.com:post:/my/orders/selling/{id}/ship,2890
+train_v1,oas(학습 입력),apisguru:ritc.io:get:/apps/channels/{channel_id}/users/{user_id},2933
+train_v1,oas(학습 입력),apisguru:ritc.io:post:/apps/channels/{channel_id}/users/{user_id},2929
+train_v1,oas(학습 입력),apisguru:roaring.io:get:/company-credit-decision,2931
+train_v1,oas(학습 입력),apisguru:rudder.example.local:post:/changeRequests/{changeRequestId}/accept,2965
+train_v1,oas(학습 입력),apisguru:rumble.run:delete:/account/tasks/templates/{scan_template_id},3029
+train_v1,oas(학습 입력),apisguru:rumble.run:get:/account/credentials/{credential_id},2985
+train_v1,oas(학습 입력),apisguru:rumble.run:get:/account/orgs/{org_id},3011
+train_v1,oas(학습 입력),apisguru:rumble.run:patch:/account/users/{user_id},2957
+train_v1,oas(학습 입력),apisguru:runscope.com:get:/buckets/{bucketKey},2926
+train_v1,oas(학습 입력),apisguru:runscope.com:put:/buckets/{bucketKey}/tests/{testId},3188
+train_v1,oas(학습 입력),apisguru:schooldigger.com:get:/v2.0/districts,3482
+train_v1,oas(학습 입력),apisguru:schooldigger.com:get:/v2.0/schools,3383
+train_v1,oas(학습 입력),apisguru:semantria.com:get:/document/processed.{content_type},3270
+train_v1,oas(학습 입력),apisguru:setlist.fm:get:/1.0/search/setlists,3375
+train_v1,oas(학습 입력),apisguru:setlist.fm:get:/1.0/user/{userId}/edited,3364
+train_v1,oas(학습 입력),apisguru:shipengine.com:get:/v1/connections/carriers/{carrier_name}/{carrier_id}/settings,3054
+train_v1,oas(학습 입력),apisguru:shop-pro.jp:get:/appstore/v1/script_tags/{scriptTagId}.json,2966
+train_v1,oas(학습 입력),apisguru:shop-pro.jp:get:/v1/inline_script_tags/{inlineScriptTagId}.json,2988
+train_v1,oas(학습 입력),apisguru:shop-pro.jp:put:/appstore/v1/script_tags/{scriptTagId}.json,2951
+train_v1,oas(학습 입력),apisguru:shop-pro.jp:put:/v1/inline_script_tags/{inlineScriptTagId}.json,2981
+train_v1,oas(학습 입력),apisguru:shotstack.io:get:/assets/{id},3021
+train_v1,oas(학습 입력),apisguru:shutterstock.com:get:/v2/audio/collections/{id}/items,2984
+train_v1,oas(학습 입력),apisguru:shutterstock.com:get:/v2/audio/licenses,3183
+train_v1,oas(학습 입력),apisguru:shutterstock.com:patch:/v2/catalog/collections/{collection_id},3102
+train_v1,oas(학습 입력),apisguru:signl4.com:post:/alerts/{alertId}/close,3099
+train_v1,oas(학습 입력),apisguru:slack.com:get:/admin.conversations.getConversationPrefs,2946
+train_v1,oas(학습 입력),apisguru:slack.com:get:/admin.conversations.getTeams,2929
+train_v1,oas(학습 입력),apisguru:slmonitor.com:get:/api/v2.1/companies/{companyId}/me,3135
+train_v1,oas(학습 입력),apisguru:slmonitor.com:get:/api/v2.1/companies/{companyId}/users,3174
+train_v1,oas(학습 입력),apisguru:slmonitor.com:get:/api/v2.1/companies/{companyId}/users/{uniqueUserId},3156
+train_v1,oas(학습 입력),apisguru:slmonitor.com:post:/api/v2.1/companies/{companyId}/users/{uniqueUserId}/checkin,3148
+train_v1,oas(학습 입력),apisguru:slmonitor.com:post:/api/v2.1/companies/{companyId}/users/{uniqueUserId}/checkin-audio,3167
+train_v1,oas(학습 입력),apisguru:slmonitor.com:post:/api/v2.1/companies/{companyId}/users/{uniqueUserId}/checkin-text,3153
+train_v1,oas(학습 입력),apisguru:slmonitor.com:post:/api/v2.1/companies/{companyId}/users/{uniqueUserId}/emergency,3134
+train_v1,oas(학습 입력),apisguru:slmonitor.com:post:/api/v2.1/companies/{companyId}/users/{uniqueUserId}/emergency-audio,3147
+train_v1,oas(학습 입력),apisguru:slmonitor.com:post:/api/v2.1/companies/{companyId}/users/{uniqueUserId}/emergency-text,3138
+train_v1,oas(학습 입력),apisguru:slmonitor.com:post:/api/v2.1/companies/{companyId}/users/{uniqueUserId}/end-audio,3138
+train_v1,oas(학습 입력),apisguru:slmonitor.com:post:/api/v2.1/companies/{companyId}/users/{uniqueUserId}/location,3151
+train_v1,oas(학습 입력),apisguru:slmonitor.com:put:/api/v2.1/companies/{companyId}/users/{uniqueUserId}/itinerary,3139
+train_v1,oas(학습 입력),apisguru:slmonitor.com:put:/api/v2.1/companies/{companyId}/users/{uniqueUserId}/itinerary-file,3144
+train_v1,oas(학습 입력),apisguru:snyk.io:post:/group/{groupId}/tags/delete,2892
+train_v1,oas(학습 입력),apisguru:snyk.io:post:/org/{orgId}/integrations/{integrationId}/clone,2970
+train_v1,oas(학습 입력),apisguru:soundcloud.com:get:/me/connections/{connection_id},2912
+train_v1,oas(학습 입력),apisguru:soundcloud.com:get:/me/followers/{follower_id},3054
+train_v1,oas(학습 입력),apisguru:soundcloud.com:get:/me/followings/{user_id},3035
+train_v1,oas(학습 입력),apisguru:soundcloud.com:get:/me/playlists/{playlist_id},3078
+train_v1,oas(학습 입력),apisguru:soundcloud.com:get:/me/tracks/{track_id},3068
+train_v1,oas(학습 입력),apisguru:spacetraders.io:post:/my/contracts/{contractId}/deliver,3102
+train_v1,oas(학습 입력),apisguru:spoonacular.com:delete:/mealplanner/{username}/items/{id},2896
+train_v1,oas(학습 입력),apisguru:spoonacular.com:delete:/mealplanner/{username}/shopping-list/items/{id},2904
+train_v1,oas(학습 입력),apisguru:spoonacular.com:delete:/mealplanner/{username}/templates/{id},2905
+train_v1,oas(학습 입력),apisguru:spotify.com:put:/me/player/play,2919
+train_v1,oas(학습 입력),apisguru:stackexchange.com:get:/me/comments/{toId},3189
+train_v1,oas(학습 입력),apisguru:stackexchange.com:get:/users/{id}/top-question-tags,3006
+train_v1,oas(학습 입력),apisguru:storecove.com:patch:/legal_entities/{id},3204
+train_v1,oas(학습 입력),apisguru:stream-io-api.com:delete:/channels/{type}/{id},3233
+train_v1,oas(학습 입력),apisguru:stream-io-api.com:post:/channels/{type}/{id}/call,2992
+train_v1,oas(학습 입력),apisguru:stream-io-api.com:post:/channels/{type}/{id}/event,3293
+train_v1,oas(학습 입력),apisguru:stripe.com:delete:/v1/accounts/{account}/bank_accounts/{id},2923
+train_v1,oas(학습 입력),apisguru:stripe.com:delete:/v1/accounts/{account}/external_accounts/{id},2928
+train_v1,oas(학습 입력),apisguru:stripe.com:get:/v1/accounts/{account}/bank_accounts/{id},3236
+train_v1,oas(학습 입력),apisguru:stripe.com:get:/v1/accounts/{account}/external_accounts/{id},3235
+train_v1,oas(학습 입력),apisguru:stripe.com:get:/v1/application_fees/{id},3254
+train_v1,oas(학습 입력),apisguru:stripe.com:get:/v1/application_fees/{id}/refunds,3415
+train_v1,oas(학습 입력),apisguru:stripe.com:get:/v1/credit_notes/{id},3209
+train_v1,oas(학습 입력),apisguru:stripe.com:post:/v1/accounts/{account}/bank_accounts/{id},3315
+train_v1,oas(학습 입력),apisguru:stripe.com:post:/v1/accounts/{account}/external_accounts/{id},3332
+train_v1,oas(학습 입력),apisguru:telnyx.com:get:/authentication_providers/{id},2994
+train_v1,oas(학습 입력),apisguru:telnyx.com:get:/billing_groups/{id},2915
+train_v1,oas(학습 입력),apisguru:telnyx.com:patch:/authentication_providers/{id},2999
+train_v1,oas(학습 입력),apisguru:telnyx.com:patch:/billing_groups/{id},2919
+train_v1,oas(학습 입력),apisguru:theracingapi.com:get:/v1/damsires/{damsire_id}/results,3347
+train_v1,oas(학습 입력),apisguru:thesmsworks.co.uk:get:/messages/{messageid},2990
+train_v1,oas(학습 입력),apisguru:threatjammer.com:get:/v1/denylist/private/{denylist_id},3529
+train_v1,oas(학습 입력),apisguru:threatjammer.com:put:/v1/allowlist/private/{allowlist_id},3310
+train_v1,oas(학습 입력),apisguru:ticketmaster.com:get:/discovery/v2/events,3382
+train_v1,oas(학습 입력),apisguru:trakt.tv:post:/users/{id}/lists/{list_id}/items,3193
+train_v1,oas(학습 입력),apisguru:transitfeeds.com:get:/getFeedVersions,3279
+train_v1,oas(학습 입력),apisguru:transitfeeds.com:get:/getLatestFeedVersion,3285
+train_v1,oas(학습 입력),apisguru:truora.com:get:/v1/checks/{check_id},3480
+train_v1,oas(학습 입력),apisguru:truora.com:post:/v1/reports/{report_id}/upload,3267
+train_v1,oas(학습 입력),apisguru:truora.com:put:/v1/continuous-checks/{continuous_check_id},3202
+train_v1,oas(학습 입력),apisguru:turbinelabs.io:delete:/listener/{listenerKey},2937
+train_v1,oas(학습 입력),apisguru:twilio.com:get:/2010-04-01/Accounts/{AccountSid}/AvailablePhoneNumbers/{CountryCode}.json,2919
+train_v1,oas(학습 입력),apisguru:uebermaps.com:delete:/comments/{id},2941
+train_v1,oas(학습 입력),apisguru:up.com.au:get:/accounts/{accountId}/transactions,3425
+train_v1,oas(학습 입력),apisguru:vercel.com:patch:/v1/domains/records/{recordId},2932
+train_v1,oas(학습 입력),apisguru:viator.com:get:/booking/mybookings,3254
+train_v1,oas(학습 입력),apisguru:viator.com:get:/booking/pastbooking,3469
+train_v1,oas(학습 입력),apisguru:vimeo.com:get:/channels/{channel_id}/moderators/{user_id},3174
+train_v1,oas(학습 입력),apisguru:vimeo.com:get:/channels/{channel_id}/privacy/users,3246
+train_v1,oas(학습 입력),apisguru:vimeo.com:patch:/channels/{channel_id},3229
+train_v1,oas(학습 입력),apisguru:vimeo.com:patch:/channels/{channel_id}/moderators,3168
+train_v1,oas(학습 입력),apisguru:vimeo.com:put:/channels/{channel_id}/privacy/users,3180
+train_v1,oas(학습 입력),apisguru:visma.com:get:/v1/activitytypes/{guid},2985
+train_v1,oas(학습 입력),apisguru:visma.com:get:/v1/addresses/{guid},3071
+train_v1,oas(학습 입력),apisguru:visma.com:get:/v1/bankaccounts,3078
+train_v1,oas(학습 입력),apisguru:visma.com:patch:/v1/activities/{guid},3166
+train_v1,oas(학습 입력),apisguru:visma.com:patch:/v1/activitytypes/{guid},3020
+train_v1,oas(학습 입력),apisguru:visma.com:patch:/v1/addresses/{guid},3110
+train_v1,oas(학습 입력),apisguru:visma.net:get:/api/v3/SalesOrders/{type},3106
+train_v1,oas(학습 입력),apisguru:visma.net:get:/api/v3/SalesOrders/{type}/{orderId},3191
+train_v1,oas(학습 입력),apisguru:visma.net:get:/api/v3/SalesOrders/{type}/{orderId}/discounts,3000
+train_v1,oas(학습 입력),apisguru:visma.net:get:/api/v3/SalesOrders/{type}/{orderId}/lines/{lineId},3120
+train_v1,oas(학습 입력),apisguru:vmware.local:put:/data-sources/arista-switches/{id},2951
+train_v1,oas(학습 입력),apisguru:vmware.local:put:/data-sources/arista-switches/{id}/snmp-config,3004
+train_v1,oas(학습 입력),apisguru:vmware.local:put:/data-sources/brocade-switches/{id},2953
+train_v1,oas(학습 입력),apisguru:vmware.local:put:/data-sources/brocade-switches/{id}/snmp-config,2999
+train_v1,oas(학습 입력),apisguru:vonage.com:get:/accounts/{account_id}/call-logs,3205
+train_v1,oas(학습 입력),apisguru:vonage.com:get:/api/accounts/{account_id}/extensions,3100
+train_v1,oas(학습 입력),apisguru:vonage.com:get:/api/accounts/{account_id}/extensions/{extension_number},3121
+train_v1,oas(학습 입력),apisguru:vtex.local:get:/api/addon/pvt/giftlist/get/{listId},3132
+train_v1,oas(학습 입력),apisguru:walletobjects.googleapis.com:get:/walletobjects/v1/eventTicketClass,3598
+train_v1,oas(학습 입력),apisguru:walletobjects.googleapis.com:patch:/walletobjects/v1/flightClass/{resourceId},3529
+train_v1,oas(학습 입력),apisguru:walletobjects.googleapis.com:post:/walletobjects/v1/eventTicketObject/{resourceId}/modifyLinkedOfferObjects,3550
+train_v1,oas(학습 입력),apisguru:watchful.li:get:/sites/{id}/extensions,2926
+train_v1,oas(학습 입력),apisguru:webflow.com:delete:/datasets/{datasetId},2956
+train_v1,oas(학습 입력),apisguru:webflow.com:delete:/documents/{documentId},3024
+train_v1,oas(학습 입력),apisguru:webflow.com:get:/datasets/{datasetId},2951
+train_v1,oas(학습 입력),apisguru:webflow.com:get:/deploymentEnvironments/{deploymentEnvironmentId},2915
+train_v1,oas(학습 입력),apisguru:webflow.com:get:/documents/{documentId},3008
+train_v1,oas(학습 입력),apisguru:webflow.com:patch:/datasets/{datasetId},2945
+train_v1,oas(학습 입력),apisguru:webflow.com:patch:/documents/{documentId},3008
+train_v1,oas(학습 입력),apisguru:xero.com:delete:/Accounts/{AccountID},3040
+train_v1,oas(학습 입력),apisguru:xtrf.eu:get:/accounting/customers/invoices/{invoiceId},2954
+train_v1,oas(학습 입력),apisguru:xtrf.eu:get:/accounting/providers/invoices/{invoiceId},2926
+train_v1,oas(학습 입력),apisguru:xtrf.eu:post:/accounting/customers/invoices/{invoiceId}/duplicate,2946
+train_v1,oas(학습 입력),apisguru:yodlee.com:get:/providers,4050
+train_v1,oas(학습 입력),apisguru:youneedabudget.com:get:/budgets/{budget_id}/accounts,3059
+train_v1,oas(학습 입력),apisguru:youneedabudget.com:get:/budgets/{budget_id}/accounts/{account_id},3017
+train_v1,oas(학습 입력),apisguru:zeit.co:get:/v4/domains/{name},3076
+train_v1,oas(학습 입력),apisguru:zeno.fm:put:/api/v2/podcasts/{podcastKey},2969
+train_v1,oas(학습 입력),apisguru:zoom.us:get:/accounts/{accountId}/plans,3371
+train_v1,oas(학습 입력),apisguru:zoom.us:patch:/accounts/{accountId}/phone/settings,2955
+train_v1,oas(학습 입력),apisguru:zoom.us:post:/accounts/{accountId}/phone/sip_trunk/trunks,3027
+train_v1,oas(학습 입력),apisguru:zoomconnect.com:put:/api/rest/v1/messages/{messageId}/markUnread,3065
+val_v1,oas(학습 입력),apisguru:dev.to:get:/api/articles,3215
+val_v1,oas(학습 입력),apisguru:dev.to:get:/api/pages/{id},2928
+val_v1,oas(학습 입력),apisguru:dracoon.team:delete:/v4/groups/{group_id}/users,3213
+val_v1,oas(학습 입력),apisguru:dracoon.team:get:/v4/eventlog/events,3490
+val_v1,oas(학습 입력),apisguru:dracoon.team:get:/v4/groups/{group_id},3189
+val_v1,oas(학습 입력),apisguru:dracoon.team:get:/v4/nodes/files/uploads/{upload_id},3817
+val_v1,oas(학습 입력),apisguru:dracoon.team:post:/v4/groups/{group_id}/users,3200
+val_v1,oas(학습 입력),apisguru:dracoon.team:put:/v4/groups/{group_id},3219
+val_v1,oas(학습 입력),apisguru:dracoon.team:put:/v4/nodes/comments/{comment_id},3208
+val_v1,oas(학습 입력),apisguru:ebay.com:get:/fulfillment_policy,3690
+val_v1,oas(학습 입력),apisguru:ebi.ac.uk:get:/assays,2997
+val_v1,oas(학습 입력),apisguru:ijenko.net:get:/account/users/{userId},2929
+val_v1,oas(학습 입력),apisguru:impala.travel:get:/bookings/{bookingId},3474
+val_v1,oas(학습 입력),apisguru:impala.travel:get:/hotels/{hotelId},3367
+val_v1,oas(학습 입력),apisguru:impala.travel:get:/hotels/{hotelId}/rate-plans,3696
+val_v1,oas(학습 입력),apisguru:impala.travel:get:/hotels/{hotelId}/rate-plans/{ratePlanId},3431
+val_v1,oas(학습 입력),apisguru:iqualify.com:get:/offerings/{offeringId}/analytics/channels/{channelId}/comments,3013
+val_v1,oas(학습 입력),apisguru:iqualify.com:post:/courses/{rootContentId}/permissions/{userEmail},2907
+val_v1,oas(학습 입력),apisguru:just-eat.co.uk:get:/checkout/{tenant}/{checkoutId},3106
+val_v1,oas(학습 입력),apisguru:n-auth.com:get:/servers/{serverid}/sessions/,2983
+val_v1,oas(학습 입력),apisguru:n-auth.com:get:/servers/{serverid}/users/{userid}/role/,2911
+val_v1,oas(학습 입력),apisguru:n-auth.com:post:/servers/{serverid}/users/{userid}/role/,2917
+val_v1,oas(학습 입력),apisguru:n-auth.com:put:/servers/{serverid}/,2975
+val_v1,oas(학습 입력),apisguru:n-auth.com:put:/servers/{serverid}/accounts/{accountid}/,2952
+val_v1,oas(학습 입력),apisguru:n-auth.com:put:/servers/{serverid}/accounts/{accountid}/user,2946
+val_v1,oas(학습 입력),apisguru:notion.com:patch:/v1/databases/{id},3103
+val_v1,oas(학습 입력),apisguru:osf.io:get:/institutions/{institution_id}/users/,3206
+val_v1,oas(학습 입력),apisguru:owler.com:get:/v1/company/id/{companyId},3172
+val_v1,oas(학습 입력),apisguru:patientview.org:get:/patient/{userId}/basic,3399
+val_v1,oas(학습 입력),apisguru:pay1.de:put:/v1/payment-links/{linkId},3050
+val_v1,oas(학습 입력),apisguru:salesforce.local:delete:/v2/language/datasets/{datasetId},2931
+val_v1,oas(학습 입력),apisguru:salesforce.local:delete:/v2/language/models/{modelId},2931
+val_v1,oas(학습 입력),apisguru:salesforce.local:delete:/v2/vision/datasets/{datasetId},2940
+val_v1,oas(학습 입력),apisguru:salesforce.local:get:/v2/language/deletion/{id},2959
+val_v1,oas(학습 입력),apisguru:svix.com:get:/api/v1/app/{app_id}/attempt/endpoint/{endpoint_id}/,3000
+val_v1,oas(학습 입력),apisguru:trashnothing.com:get:/posts/{post_id},3008
+val_v1,oas(학습 입력),apisguru:trashnothing.com:get:/users/{user_id}/posts,3155
+val_v1,oas(학습 입력),apisguru:trashnothing.com:get:/users/{user_id}/posts/search,3200
+val_v1,oas(학습 입력),apisguru:twitter.com:delete:/2/lists/{id},2929
+val_v1,oas(학습 입력),apisguru:twitter.com:get:/2/lists/{id},3186
+val_v1,oas(학습 입력),apisguru:twitter.com:get:/2/lists/{id}/members,3363
+val_v1,oas(학습 입력),apisguru:twitter.com:get:/2/spaces/{id},3162
+val_v1,oas(학습 입력),apisguru:twitter.com:put:/2/lists/{id},2936
+val_v1,oas(학습 입력),apisguru:victorops.com:delete:/api-public/v1/overrides/{publicId}/assignments/{policySlug},2952
+val_v1,oas(학습 입력),apisguru:victorops.com:delete:/api-public/v1/user/{user}/contact-methods/emails/{contactId},2945
+val_v1,oas(학습 입력),apisguru:victorops.com:put:/api-public/v1/maintenancemode/{maintenancemodeid}/end,2981
+val_v1,oas(학습 입력),apisguru:wowza.com:get:/live_streams/{id}/stats,3224
+val_v1,oas(학습 입력),apisguru:zalando.com:get:/articles/{articleId},3102
+val_v1,oas(학습 입력),apisguru:zuora.com:get:/notifications/history/tasks/{id},2952
+val_v1,oas(학습 입력),apisguru:zuora.com:get:/objects/jobs/{id},2997
+val_v1,oas(학습 입력),apisguru:zuora.com:post:/objects/jobs/{id}/files,3048
+val_v1,oas(학습 입력),apisguru:zuora.com:put:/events/event-triggers/{id},2910
+test_v30,oas,b98a2ab3b50a679bfa16,2828
+test_v30,oas_code,b98a2ab3b50a679bfa16,3060
+test_v30,oas,a3b2d062cdb1162b5997,2822
+test_v30,oas_code,a3b2d062cdb1162b5997,2890
+test_v30,oas,4af8a0694ed2e327e0db,2846
+test_v30,oas_code,4af8a0694ed2e327e0db,3184
+test_v30,oas,759eb32d69ab1820e44d,2832
+test_v30,oas_code,759eb32d69ab1820e44d,3007
+test_v30,oas,f40e37d667e9313cbb3e,2822
+test_v30,oas_code,f40e37d667e9313cbb3e,2890
+test_v30,oas,e0a91b1fbd877d1fd12c,2839
+test_v30,oas_code,e0a91b1fbd877d1fd12c,2906
+test_v30,oas,c47f96241d6d7fc93158,2816
+test_v30,oas_code,c47f96241d6d7fc93158,2919
+test_v30,oas,ff8c5eda79000fa6687f,2814
+test_v30,oas_code,ff8c5eda79000fa6687f,3140
+test_v30,oas,7f3a2148b6be2455ba76,2817
+test_v30,oas_code,7f3a2148b6be2455ba76,3213
+test_v30,oas,8a8d61e2f627c4a1102e,2809
+test_v30,oas_code,8a8d61e2f627c4a1102e,3138
+test_v30,oas,b3906a959a0b669047ba,2817
+test_v30,oas_code,b3906a959a0b669047ba,3190
+test_v30,oas,217a26a0ed334f7297d0,2815
+test_v30,oas_code,217a26a0ed334f7297d0,3116
+test_v30,oas,2463648df20db46705c1,2832
+test_v30,oas_code,2463648df20db46705c1,3005
+test_v30,oas,aae57acca0e9317e81c1,2830
+test_v30,oas_code,aae57acca0e9317e81c1,3004
+test_v30,oas,149fc53d41cf49d52bb9,2883
+test_v30,oas_code,149fc53d41cf49d52bb9,3210
+test_v30,oas,9a7d3d59efab53f32063,2866
+test_v30,oas_code,9a7d3d59efab53f32063,3007
+test_v30,oas,887fef961a2a2394c816,2799
+test_v30,oas_code,887fef961a2a2394c816,2892
+test_v30,oas,acdc8447219278841824,2843
+test_v30,oas_code,acdc8447219278841824,2980
+test_v30,oas,d93acb187b6c273464f0,2822
+test_v30,oas_code,d93acb187b6c273464f0,3031
+test_v30,oas,d0afe4b052514b189dfa,2859
+test_v30,oas_code,d0afe4b052514b189dfa,3026
+test_v30,oas,5928631c56d36ced026a,2918
+test_v30,oas_code,5928631c56d36ced026a,3141
+test_v30,oas,c3203410c4072686beaa,2847
+test_v30,oas_code,c3203410c4072686beaa,2997
+test_v30,oas,240a92b7ee284506eb3f,2796
+test_v30,oas_code,240a92b7ee284506eb3f,2892
+test_v30,oas,15af38ebe8faf15c930f,2855
+test_v30,oas_code,15af38ebe8faf15c930f,3164
+test_v30,oas,860383f68102b772bb99,2864
+test_v30,oas_code,860383f68102b772bb99,3178
+test_v30,oas,6bca6097b26cf226f405,2906
+test_v30,oas_code,6bca6097b26cf226f405,3216
+test_v30,oas,cdd3d3e140b0b509bcd3,2842
+test_v30,oas_code,cdd3d3e140b0b509bcd3,3173
+test_v30,oas,a0f5f54a6d4c22bb18e7,2976
+test_v30,oas_code,a0f5f54a6d4c22bb18e7,3282
+test_v30,oas,af6e2ae1b29132ee1d77,2902
+test_v30,oas_code,af6e2ae1b29132ee1d77,3201
+test_v30,oas,d42ed128370ce4d3ce71,2886
+test_v30,oas_code,d42ed128370ce4d3ce71,3210
+test_v30,oas,7a19e5a3a9eb0d5947f3,2844
+test_v30,oas_code,7a19e5a3a9eb0d5947f3,3156
+test_v30,oas,c085f5d6b9f87dd6d4a1,2819
+test_v30,oas_code,c085f5d6b9f87dd6d4a1,2937
+test_v30,oas,cd33a23103c412ea5651,2862
+test_v30,oas_code,cd33a23103c412ea5651,3112
+test_v30,oas,324601a8dc9e9ea969bb,2934
+test_v30,oas_code,324601a8dc9e9ea969bb,3230
+test_v30,oas,0797f5bb072770d50159,2823
+test_v30,oas_code,0797f5bb072770d50159,3169
+test_v30,oas,3dc50d2c3650a204001d,2829
+test_v30,oas_code,3dc50d2c3650a204001d,3137
+test_v30,oas,d72193f9a1b7d79700d0,2817
+test_v30,oas_code,d72193f9a1b7d79700d0,2974
+test_v30,oas,bc1dce3621c7da44ddfe,2810
+test_v30,oas_code,bc1dce3621c7da44ddfe,2960
+test_v30,oas,58e3df2930d0ce4c3175,2811
+test_v30,oas_code,58e3df2930d0ce4c3175,3014
+test_v30,oas,875c33706a68c4c9a61a,2797
+test_v30,oas_code,875c33706a68c4c9a61a,2945
+test_v30,oas,61f662463e13765b9478,2825
+test_v30,oas_code,61f662463e13765b9478,2985
+test_v30,oas,be8b11cdbabe4486aeda,2827
+test_v30,oas_code,be8b11cdbabe4486aeda,2993
+test_v30,oas,7e3f8c20d798e8b34143,2827
+test_v30,oas_code,7e3f8c20d798e8b34143,3020
+test_v30,oas,bb532c95786f45e07314,2809
+test_v30,oas_code,bb532c95786f45e07314,2929
+test_v30,oas,769288e3cd1d5d4c117d,2797
+test_v30,oas_code,769288e3cd1d5d4c117d,3003
+test_v30,oas,dcc8f1be82d40ee3d5cf,2821
+test_v30,oas_code,dcc8f1be82d40ee3d5cf,3026
+test_v30,oas,abbb3b1e9239779e76f2,2800
+test_v30,oas_code,abbb3b1e9239779e76f2,3006
+test_v30,oas,c917e3e10dce94cc245c,2828
+test_v30,oas_code,c917e3e10dce94cc245c,2998
+test_v30,oas,fc9dac901542ca88d688,2820
+test_v30,oas_code,fc9dac901542ca88d688,2989
+test_v30,oas,5a72ac6384c12b441687,2823
+test_v30,oas_code,5a72ac6384c12b441687,3041
+test_v30,oas,312256166232634f8b1b,2802
+test_v30,oas_code,312256166232634f8b1b,3019
+test_v30,oas,4de2f44349d88f3d6b3a,2837
+test_v30,oas_code,4de2f44349d88f3d6b3a,2999
+test_v30,oas,97abea85e395e6649df4,2816
+test_v30,oas_code,97abea85e395e6649df4,2977
+test_v30,oas,2c0c5b01954059e821bf,2800
+test_v30,oas_code,2c0c5b01954059e821bf,2946
+test_v30,oas,d8c5cf5eb0bfbd488219,2830
+test_v30,oas_code,d8c5cf5eb0bfbd488219,2990
+test_v30,oas,580f801a0d75c34f1331,2799
+test_v30,oas_code,580f801a0d75c34f1331,2924
+test_v30,oas,0aa2fbdb066b3d771316,2798
+test_v30,oas_code,0aa2fbdb066b3d771316,2917
+test_v30,oas,d553cdd9276767f1b1bc,2817
+test_v30,oas_code,d553cdd9276767f1b1bc,3128
+test_v30,oas,6224f0ab777c554bb796,2862
+test_v30,oas_code,6224f0ab777c554bb796,3197
+test_v30,oas,956a6feb1b1f65eb5a9a,2823
+test_v30,oas_code,956a6feb1b1f65eb5a9a,3135
+test_v30,oas,0f7dacc4c4c5dc50ad69,2827
+test_v30,oas_code,0f7dacc4c4c5dc50ad69,3151
+test_v30,oas,e878000888f7f413f8b0,2888
+test_v30,oas_code,e878000888f7f413f8b0,3218
+test_v30,oas,79d4449bddc16ef5992f,2831
+test_v30,oas_code,79d4449bddc16ef5992f,3081
+test_v30,oas,0b0918598294090d14c3,2865
+test_v30,oas_code,0b0918598294090d14c3,3041
+test_v30,oas,fed0409de548b760d467,2881
+test_v30,oas_code,fed0409de548b760d467,3225
+test_v30,oas,267af32d80a0676db11d,2800
+test_v30,oas_code,267af32d80a0676db11d,3120
+test_v30,oas,df4bec349a3613906e39,2799
+test_v30,oas_code,df4bec349a3613906e39,3125
+test_v30,oas,839cbd23124f4c9278ad,2799
+test_v30,oas_code,839cbd23124f4c9278ad,2860
+test_v30,oas,f39152044579211bc61a,2800
+test_v30,oas_code,f39152044579211bc61a,2861
+test_v30,oas,cffea7522dac244d677f,2800
+test_v30,oas_code,cffea7522dac244d677f,2861
+test_v30,oas,8f823c91369626ba6d9f,2798
+test_v30,oas_code,8f823c91369626ba6d9f,2859
+test_v30,oas,7881b143ae63fc60a35e,2796
+test_v30,oas_code,7881b143ae63fc60a35e,3063
+test_v30,oas,d03dd5bb033fde20a6b9,2800
+test_v30,oas_code,d03dd5bb033fde20a6b9,3117
+test_v30,oas,48784a817ce60824dbc1,2795
+test_v30,oas_code,48784a817ce60824dbc1,3201
+test_v30,oas,cc7aabb324d891f2d312,2799
+test_v30,oas_code,cc7aabb324d891f2d312,3285
+test_v30,oas,a786e652a128f7d49fcb,2797
+test_v30,oas_code,a786e652a128f7d49fcb,2854
+test_v30,oas,939ca4cd3f9e9e8b27df,2796
+test_v30,oas_code,939ca4cd3f9e9e8b27df,3074
+test_v30,oas,bb8c80531d0fc1d9caed,2800
+test_v30,oas_code,bb8c80531d0fc1d9caed,3069
+test_v30,oas,7cf042f2cfd8f56045a3,2796
+test_v30,oas_code,7cf042f2cfd8f56045a3,2857
+test_v30,oas,5861cf111a0a131186d5,2796
+test_v30,oas_code,5861cf111a0a131186d5,2889
+test_v30,oas,13b3024516b002a3d17d,2800
+test_v30,oas_code,13b3024516b002a3d17d,2942
+test_v30,oas,6c0c7e81f4263be705bd,2796
+test_v30,oas_code,6c0c7e81f4263be705bd,2857
+test_v30,oas,9c760e36b50d4ee7a2d9,2794
+test_v30,oas_code,9c760e36b50d4ee7a2d9,2851
+test_v30,oas,7ff76e2ecef4c5c31665,2798
+test_v30,oas_code,7ff76e2ecef4c5c31665,2855
+test_v30,oas,447fc0aa6c34613756ff,2797
+test_v30,oas_code,447fc0aa6c34613756ff,3108
+test_v30,oas,be9b12fb6e4c31c1d823,2799
+test_v30,oas_code,be9b12fb6e4c31c1d823,3168
+test_v30,oas,f01502b9ee6e82ca7e9e,2798
+test_v30,oas_code,f01502b9ee6e82ca7e9e,2986
+test_v30,oas,bc7fd5ac27c130eb1670,2796
+test_v30,oas_code,bc7fd5ac27c130eb1670,2969
+test_v30,oas,ed50adacf184ba6ddcba,2795
+test_v30,oas_code,ed50adacf184ba6ddcba,3058
+test_v30,oas,76f7d58a66bcc80fa70e,2796
+test_v30,oas_code,76f7d58a66bcc80fa70e,3067
+test_v30,oas,286fba309233af2275a4,2800
+test_v30,oas_code,286fba309233af2275a4,3124
+test_v30,oas,c199be4494217f7a301b,2796
+test_v30,oas_code,c199be4494217f7a301b,3188
+test_v30,oas,0a3ece0464909469b61e,2800
+test_v30,oas_code,0a3ece0464909469b61e,3090
+test_v30,oas,3e5864573bebca5a8458,2796
+test_v30,oas_code,3e5864573bebca5a8458,2896
+test_v30,oas,c64b7f4c9538c700b710,2796
+test_v30,oas_code,c64b7f4c9538c700b710,3186
+test_v30,oas,3adb00c6de54a6331736,2796
+test_v30,oas_code,3adb00c6de54a6331736,3049
+test_v30,oas,7364a223f5e100dd73b2,2797
+test_v30,oas_code,7364a223f5e100dd73b2,3211
+test_v30,oas,4014be5658e0ee17ea1e,2797
+test_v30,oas_code,4014be5658e0ee17ea1e,3108
+test_v30,oas,e502084b4f925dbf28e4,2796
+test_v30,oas_code,e502084b4f925dbf28e4,3133
+test_v30,oas,905507d01b81ba5eb1f0,2796
+test_v30,oas_code,905507d01b81ba5eb1f0,2932
+test_v30,oas,e574b8ba6eacb5d7c83c,2796
+test_v30,oas_code,e574b8ba6eacb5d7c83c,3451
+test_v30,oas,16f4b2d20c0ba89ed279,2795
+test_v30,oas_code,16f4b2d20c0ba89ed279,2931
+test_v30,oas,bbaf2ce2f276bd2f4679,2797
+test_v30,oas_code,bbaf2ce2f276bd2f4679,2854
+test_v30,oas,4033e696c5dc2d5b3aa2,2796
+test_v30,oas_code,4033e696c5dc2d5b3aa2,3296
+test_v30,oas,af9828d3c503f11fb3fe,2796
+test_v30,oas_code,af9828d3c503f11fb3fe,2853
+test_v30,oas,39034afdb110cdb9defc,2795
+test_v30,oas_code,39034afdb110cdb9defc,2852
+test_v30,oas,063fa7598db37c095700,2796
+test_v30,oas_code,063fa7598db37c095700,2857
+test_v30,oas,ed9b8680702e673060d4,2796
+test_v30,oas_code,ed9b8680702e673060d4,2853
+test_v30,oas,1b6a93b2cd2fddfc5d01,2796
+test_v30,oas_code,1b6a93b2cd2fddfc5d01,2857
+test_v30,oas,0cd1ae74896420dd9abe,2794
+test_v30,oas_code,0cd1ae74896420dd9abe,3026
+test_v30,oas,9400cf3c01d33fe952da,2798
+test_v30,oas_code,9400cf3c01d33fe952da,3235
+test_v30,oas,179edeb6b4389d232d5d,2795
+test_v30,oas_code,179edeb6b4389d232d5d,3349
+test_v30,oas,f0ca27ba6aba3b33b9d2,2795
+test_v30,oas_code,f0ca27ba6aba3b33b9d2,3303
+test_v30,oas,3f60ffc8151aba598d58,2797
+test_v30,oas_code,3f60ffc8151aba598d58,3142
+test_v30,oas,4ee6439b95fb9a2c4bb8,2797
+test_v30,oas_code,4ee6439b95fb9a2c4bb8,3217
+test_v30,oas,812cccd2e9c35add2146,2798
+test_v30,oas_code,812cccd2e9c35add2146,3209
+test_v30,oas,cd10794910422bd9dcf8,2801
+test_v30,oas_code,cd10794910422bd9dcf8,3238
+test_v30,oas,eb5692e50c0e12db6ca9,2794
+test_v30,oas_code,eb5692e50c0e12db6ca9,3157
+test_v30,oas,9416b7189d811cbb7daa,2798
+test_v30,oas_code,9416b7189d811cbb7daa,3419
+test_v30,oas,745151104eb860a9e9ec,2796
+test_v30,oas_code,745151104eb860a9e9ec,3264
+test_v30,oas,eef733c4cdf73432c9bc,2796
+test_v30,oas_code,eef733c4cdf73432c9bc,3198
+test_v30,oas,2787243a5db7dfb178b4,2796
+test_v30,oas_code,2787243a5db7dfb178b4,3655
+test_v30,oas,c88cdff9970205a15244,2795
+test_v30,oas_code,c88cdff9970205a15244,3246
+test_v30,oas,cb7b63f3b0b2e2e8e967,2796
+test_v30,oas_code,cb7b63f3b0b2e2e8e967,3176
+test_v30,oas,b99ce3da978a18ab2017,2800
+test_v30,oas_code,b99ce3da978a18ab2017,2936
+test_v30,oas,7b6e2731e933a52a9070,2800
+test_v30,oas_code,7b6e2731e933a52a9070,3213
+test_v30,oas,a15c48c2351014fde76c,2799
+test_v30,oas_code,a15c48c2351014fde76c,2860
+test_v30,oas,20048ada164e23252369,2800
+test_v30,oas_code,20048ada164e23252369,2861
+test_v30,oas,c1eb8e1b4c0183b6c75b,2800
+test_v30,oas_code,c1eb8e1b4c0183b6c75b,2861
+test_v30,oas,4e0c68cd981acbfe4a95,2798
+test_v30,oas_code,4e0c68cd981acbfe4a95,2859
+test_v30,oas,383ff20e485d08b7aab2,2806
+test_v30,oas_code,383ff20e485d08b7aab2,3110
+test_v30,oas,fbe864fbd2d924117550,2802
+test_v30,oas_code,fbe864fbd2d924117550,3113
+test_v30,oas,6c5807ef29707164f73b,2800
+test_v30,oas_code,6c5807ef29707164f73b,3081
+test_v30,oas,314ffc8290ffcff7031e,2797
+test_v30,oas_code,314ffc8290ffcff7031e,3190
+test_v30,oas,dc4019dd63bac3b0e405,2795
+test_v30,oas_code,dc4019dd63bac3b0e405,3264
+test_v30,oas,fad2ffd19dad19055370,2810
+test_v30,oas_code,fad2ffd19dad19055370,3337
+test_v30,oas,43e7d3752b50b3dfdd1b,2801
+test_v30,oas_code,43e7d3752b50b3dfdd1b,3087
+test_v30,oas,2168150bddc48ce3a0c8,2793
+test_v30,oas_code,2168150bddc48ce3a0c8,2861
+test_v30,oas,5cb15a9c2cc08fcaa9f2,2795
+test_v30,oas_code,5cb15a9c2cc08fcaa9f2,2939
+test_v30,oas,a1be3b47f9420231f409,2796
+test_v30,oas_code,a1be3b47f9420231f409,3057
+test_v30,oas,af52b958d71fa4458e1e,2797
+test_v30,oas_code,af52b958d71fa4458e1e,3059
+test_v30,oas,ae718aeadf0285be8850,2796
+test_v30,oas_code,ae718aeadf0285be8850,2945
+test_v30,oas,95a588720a50160e0c3e,2795
+test_v30,oas_code,95a588720a50160e0c3e,3043
+test_v30,oas,2289e5bc9d8ead4e8818,2794
+test_v30,oas_code,2289e5bc9d8ead4e8818,2938
+test_v30,oas,d2d3003f1edf061ec6ed,2796
+test_v30,oas_code,d2d3003f1edf061ec6ed,3065
+test_v30,oas,6c897f7eae36dd117c6b,2814
+test_v30,oas,c3b2f10f95579d73a8b3,2819
+test_v30,oas,0e1637db083f68e499d4,2797
+test_v30,oas_code,0e1637db083f68e499d4,3077
+test_v30,oas,4eb2737b7dc7b31720fe,2841
+test_v30,oas,90b7d387b719e9937263,2797
+test_v30,oas_code,90b7d387b719e9937263,3248
+test_v30,oas,81ad27320942026fa518,2815
+test_v30,oas_code,81ad27320942026fa518,3513
+test_v30,oas,5b4104eb0ef8a0531dbd,2872
+test_v30,oas_code,5b4104eb0ef8a0531dbd,3169
+test_v30,oas,c31d0a5bb5c879e094f3,2821
+test_v30,oas_code,c31d0a5bb5c879e094f3,3180
+test_v30,oas,bcfa59eea899fc11ba4f,2822
+test_v30,oas_code,bcfa59eea899fc11ba4f,3151
+test_v30,oas,32447425974cf6f24467,2870
+test_v30,oas_code,32447425974cf6f24467,3159
+test_v30,oas,3fb5f18e981183405c13,2824
+test_v30,oas_code,3fb5f18e981183405c13,3791
+test_v30,oas,f98a05bef6af6ac52df9,2822
+test_v30,oas_code,f98a05bef6af6ac52df9,3841
+test_v30,oas,4dc92bf6452cc6671184,2865
+test_v30,oas_code,4dc92bf6452cc6671184,3142
+test_v30,oas,e8437c5320794a594af6,2809
+test_v30,oas_code,e8437c5320794a594af6,3198
+test_v30,oas,c250b480c9ec5ee55617,2936
+test_v30,oas_code,c250b480c9ec5ee55617,3251
+test_v30,oas,bbfd5bfc671dc4af42c5,2937
+test_v30,oas_code,bbfd5bfc671dc4af42c5,3258
+test_v30,oas,fd938e89d9362deb8656,2811
+test_v30,oas_code,fd938e89d9362deb8656,3098
+test_v30,oas,9a4f29e70cdc281a0357,2800
+test_v30,oas_code,9a4f29e70cdc281a0357,3303
+test_v30,oas,0f5b4d569c99d8d9c870,2800
+test_v30,oas_code,0f5b4d569c99d8d9c870,3326
+test_v30,oas,b92cea1a3f110420ee85,2800
+test_v30,oas_code,b92cea1a3f110420ee85,2963
+test_v30,oas,b036005643c333b5e7ae,2799
+test_v30,oas_code,b036005643c333b5e7ae,3026
+test_v30,oas,eed3687a2d41f8658232,2801
+test_v30,oas_code,eed3687a2d41f8658232,2980
+test_v30,oas,5e6b124fedb6105ffbd0,2793
+test_v30,oas_code,5e6b124fedb6105ffbd0,3003
+test_v30,oas,a843efb3b237cbef2026,2794
+test_v30,oas_code,a843efb3b237cbef2026,2941
+test_v30,oas,0293603d276a2bdbefe0,2795
+test_v30,oas_code,0293603d276a2bdbefe0,3336
+test_v30,oas,8854d7bfa8e6100efee9,2801
+test_v30,oas_code,8854d7bfa8e6100efee9,3246
+test_v30,oas,bf900bef2d12400d0880,2794
+test_v30,oas_code,bf900bef2d12400d0880,2936
+test_v30,oas,28fa5fab6338ef186954,2794
+test_v30,oas_code,28fa5fab6338ef186954,2947
+test_v30,oas,7ab0a0779b998f445f3c,2795
+test_v30,oas_code,7ab0a0779b998f445f3c,2950
+test_v30,oas,2f8f43be0ee49cc83b1e,2795
+test_v30,oas_code,2f8f43be0ee49cc83b1e,2949
+test_v30,oas,93b3678d43a24b94f1c3,2798
+test_v30,oas_code,93b3678d43a24b94f1c3,2922
+test_v30,oas,1e7e10e8d4827df5e28a,2795
+test_v30,oas_code,1e7e10e8d4827df5e28a,3108
+test_v30,oas,64fd25809d678710b6f3,2809
+test_v30,oas,01df9f46f6e721fa4cb0,2815
+test_v30,oas_code,01df9f46f6e721fa4cb0,2919
+test_v30,oas,ab9da003ee3dbde8e544,2809
+test_v30,oas_code,ab9da003ee3dbde8e544,3660
+test_v30,oas,a3f4eb9a86fa08f2ad71,2816
+test_v30,oas_code,a3f4eb9a86fa08f2ad71,2961
+test_v30,oas,680ac46b983584d4552d,2795
+test_v30,oas_code,680ac46b983584d4552d,2999
+test_v30,oas,25fd1086a6999340c575,2795
+test_v30,oas_code,25fd1086a6999340c575,3101
+test_v30,oas,bf2d1601b02281b85536,2794
+test_v30,oas_code,bf2d1601b02281b85536,3206
+test_v30,oas,7292860512c06eed2ffd,2810
+test_v30,oas_code,7292860512c06eed2ffd,3589
+test_v30,oas,6309b77a47e9b994f9fe,2798
+test_v30,oas_code,6309b77a47e9b994f9fe,3090
+test_v30,oas,a15a54f7818a6cf25d98,2803
+test_v30,oas_code,a15a54f7818a6cf25d98,2935
+test_v30,oas,963209fb55865d6f2acf,2794
+test_v30,oas_code,963209fb55865d6f2acf,3002
+test_v30,oas,c4993c51f6be6657d771,2797
+test_v30,oas_code,c4993c51f6be6657d771,2899
+test_v30,oas,06ba24e97fdcb059ad92,2797
+test_v30,oas_code,06ba24e97fdcb059ad92,2978
+test_v30,oas,ffe188e6f24418c23676,2803
+test_v30,oas_code,ffe188e6f24418c23676,2926
+test_v30,oas,be2ff7c9ec46320a97af,2799
+test_v30,oas_code,be2ff7c9ec46320a97af,3067
+test_v30,oas,d0ab15d66e0643031f91,2801
+test_v30,oas_code,d0ab15d66e0643031f91,2997
+test_v30,oas,91d2105d144e1805a5b2,2796
+test_v30,oas_code,91d2105d144e1805a5b2,2975
+test_v30,oas,7093260288fd7266a210,2798
+test_v30,oas_code,7093260288fd7266a210,3098
+test_v30,oas,50730915ce2378191bee,2801
+test_v30,oas_code,50730915ce2378191bee,2873
+test_v30,oas,f8fd9992a61819c2c4af,2797
+test_v30,oas_code,f8fd9992a61819c2c4af,2985
+test_v30,oas,4d8caf213fb70649fc0f,2799
+test_v30,oas_code,4d8caf213fb70649fc0f,3002
+test_v30,oas,0a8fb9b5c84b26b19826,2794
+test_v30,oas_code,0a8fb9b5c84b26b19826,2920
+test_v30,oas,0f7af84126bd72a56bd5,2794
+test_v30,oas_code,0f7af84126bd72a56bd5,3060
+test_v30,oas,a40f8db8b12527fda084,2798
+test_v30,oas_code,a40f8db8b12527fda084,3163
+test_v30,oas,3f37f7f30c7bc18f180a,2796
+test_v30,oas_code,3f37f7f30c7bc18f180a,3145
+test_v30,oas,208819689993254cc920,2796
+test_v30,oas_code,208819689993254cc920,3183
+test_v30,oas,60c95e757a6b732073ae,2797
+test_v30,oas_code,60c95e757a6b732073ae,3010
+test_v30,oas,e48aca1abec6c374bfa1,2799
+test_v30,oas_code,e48aca1abec6c374bfa1,3105
+test_v30,oas,29a91ef41063c0221266,2798
+test_v30,oas_code,29a91ef41063c0221266,3095
+test_v30,oas,26c60d2fb9155d63f00c,2797
+test_v30,oas_code,26c60d2fb9155d63f00c,3121
+test_v30,oas,2e45bdad0431b35cfbf5,2796
+test_v30,oas_code,2e45bdad0431b35cfbf5,3096
+test_v30,oas,90e39b6520bac57f8f52,2799
+test_v30,oas_code,90e39b6520bac57f8f52,3002
+test_v30,oas,1d45c0e2ac7bb00728b3,2799
+test_v30,oas_code,1d45c0e2ac7bb00728b3,3147
+test_v30,oas,a4f0cd98076a7ed61adf,2803
+test_v30,oas_code,a4f0cd98076a7ed61adf,2937
+test_v30,oas,quill_blog_catalogue_0,2827
+test_v30,oas_code,quill_blog_catalogue_0,2884
+test_v30,oas,quill_blog_catalogue_1,2827
+test_v30,oas_code,quill_blog_catalogue_1,2884
+test_v30,oas,quill_blog_drafts_0,2829
+test_v30,oas_code,quill_blog_drafts_0,2895
+test_v30,oas,quill_blog_drafts_1,2829
+test_v30,oas_code,quill_blog_drafts_1,2884
+test_v30,oas,quill_blog_shared_0,2828
+test_v30,oas_code,quill_blog_shared_0,2903
+test_v30,oas,quill_blog_shared_1,2828
+test_v30,oas_code,quill_blog_shared_1,2883
+test_v30,oas,quill_blog_workspace_0,2826
+test_v30,oas_code,quill_blog_workspace_0,2893
+test_v30,oas,quill_blog_workspace_1,2826
+test_v30,oas_code,quill_blog_workspace_1,2881
+test_v30,oas,quill_blog_audit_0,2827
+test_v30,oas_code,quill_blog_audit_0,2889
+test_v30,oas,quill_blog_audit_1,2827
+test_v30,oas_code,quill_blog_audit_1,2882
+test_v30,oas,quill_blog_subscription_0,2825
+test_v30,oas_code,quill_blog_subscription_0,2887
+test_v30,oas,quill_blog_subscription_1,2825
+test_v30,oas_code,quill_blog_subscription_1,2880
+test_v30,oas,quill_blog_disputed_0,2834
+test_v30,oas_code,quill_blog_disputed_0,2889
+test_v30,oas,quill_blog_disputed_1,2834
+test_v30,oas_code,quill_blog_disputed_1,2889
+test_v30,oas,folio_wiki_catalogue_0,2819
+test_v30,oas_code,folio_wiki_catalogue_0,2875
+test_v30,oas,folio_wiki_catalogue_1,2819
+test_v30,oas_code,folio_wiki_catalogue_1,2875
+test_v30,oas,folio_wiki_drafts_0,2821
+test_v30,oas_code,folio_wiki_drafts_0,2893
+test_v30,oas,folio_wiki_drafts_1,2821
+test_v30,oas_code,folio_wiki_drafts_1,2881
+test_v30,oas,folio_wiki_shared_0,2821
+test_v30,oas_code,folio_wiki_shared_0,2902
+test_v30,oas,folio_wiki_shared_1,2821
+test_v30,oas_code,folio_wiki_shared_1,2881
+test_v30,oas,folio_wiki_workspace_0,2819
+test_v30,oas_code,folio_wiki_workspace_0,2892
+test_v30,oas,folio_wiki_workspace_1,2819
+test_v30,oas_code,folio_wiki_workspace_1,2879
+test_v30,oas,folio_wiki_audit_0,2820
+test_v30,oas_code,folio_wiki_audit_0,2888
+test_v30,oas,folio_wiki_audit_1,2820
+test_v30,oas_code,folio_wiki_audit_1,2880
+test_v30,oas,folio_wiki_subscription_0,2818
+test_v30,oas_code,folio_wiki_subscription_0,2886
+test_v30,oas,folio_wiki_subscription_1,2818
+test_v30,oas_code,folio_wiki_subscription_1,2878
+test_v30,oas,folio_wiki_disputed_0,2826
+test_v30,oas_code,folio_wiki_disputed_0,2887
+test_v30,oas,folio_wiki_disputed_1,2826
+test_v30,oas_code,folio_wiki_disputed_1,2887
+test_v30,oas,beacon_iot_catalogue_0,2823
+test_v30,oas_code,beacon_iot_catalogue_0,2889
+test_v30,oas,beacon_iot_catalogue_1,2823
+test_v30,oas_code,beacon_iot_catalogue_1,2889
+test_v30,oas,beacon_iot_drafts_0,2825
+test_v30,oas_code,beacon_iot_drafts_0,2900
+test_v30,oas,beacon_iot_drafts_1,2825
+test_v30,oas_code,beacon_iot_drafts_1,2881
+test_v30,oas,beacon_iot_shared_0,2825
+test_v30,oas_code,beacon_iot_shared_0,2909
+test_v30,oas,beacon_iot_shared_1,2825
+test_v30,oas_code,beacon_iot_shared_1,2881
+test_v30,oas,beacon_iot_workspace_0,2823
+test_v30,oas_code,beacon_iot_workspace_0,2899
+test_v30,oas,beacon_iot_workspace_1,2823
+test_v30,oas_code,beacon_iot_workspace_1,2879
+test_v30,oas,beacon_iot_audit_0,2824
+test_v30,oas_code,beacon_iot_audit_0,2895
+test_v30,oas,beacon_iot_audit_1,2824
+test_v30,oas_code,beacon_iot_audit_1,2880
+test_v30,oas,beacon_iot_subscription_0,2822
+test_v30,oas_code,beacon_iot_subscription_0,2893
+test_v30,oas,beacon_iot_subscription_1,2822
+test_v30,oas_code,beacon_iot_subscription_1,2878
+test_v30,oas,beacon_iot_disputed_0,2830
+test_v30,oas_code,beacon_iot_disputed_0,2894
+test_v30,oas,beacon_iot_disputed_1,2830
+test_v30,oas_code,beacon_iot_disputed_1,2894
+test_v30,oas,summit_club_catalogue_0,2834
+test_v30,oas_code,summit_club_catalogue_0,2903
+test_v30,oas,summit_club_catalogue_1,2834
+test_v30,oas_code,summit_club_catalogue_1,2903
+test_v30,oas,summit_club_drafts_0,2836
+test_v30,oas_code,summit_club_drafts_0,2914
+test_v30,oas,summit_club_drafts_1,2836
+test_v30,oas_code,summit_club_drafts_1,2903
+test_v30,oas,summit_club_shared_0,2835
+test_v30,oas_code,summit_club_shared_0,2922
+test_v30,oas,summit_club_shared_1,2835
+test_v30,oas_code,summit_club_shared_1,2902
+test_v30,oas,summit_club_workspace_0,2833
+test_v30,oas_code,summit_club_workspace_0,2912
+test_v30,oas,summit_club_workspace_1,2833
+test_v30,oas_code,summit_club_workspace_1,2900
+test_v30,oas,summit_club_audit_0,2834
+test_v30,oas_code,summit_club_audit_0,2908
+test_v30,oas,summit_club_audit_1,2834
+test_v30,oas_code,summit_club_audit_1,2901
+test_v30,oas,summit_club_roster_0,2859
+test_v30,oas_code,summit_club_roster_0,2945
+test_v30,oas,summit_club_roster_1,2859
+test_v30,oas_code,summit_club_roster_1,2926
+test_v30,oas,summit_club_gear_0,2857
+test_v30,oas_code,summit_club_gear_0,2943
+test_v30,oas,summit_club_gear_1,2857
+test_v30,oas_code,summit_club_gear_1,2924
+test_v30,oas,summit_club_council_0,2855
+test_v30,oas_code,summit_club_council_0,2955
+test_v30,oas,summit_club_council_1,2855
+test_v30,oas_code,summit_club_council_1,2955
+train_v2_draft,oas,apisguru:ably.net:get:/accounts/{account_id}/apps,2950
+train_v2_draft,oas,apisguru:ably.net:get:/apps/{app_id}/rules,3144
+train_v2_draft,oas,apisguru:ably.net:get:/apps/{app_id}/rules/{rule_id},3108
+train_v2_draft,oas,apisguru:ably.net:patch:/apps/{app_id}/rules/{rule_id},3082
+train_v2_draft,oas,apisguru:ably.net:patch:/apps/{id},2922
+train_v2_draft,oas,apisguru:ably.net:post:/accounts/{account_id}/apps,2915
+train_v2_draft,oas,apisguru:ably.net:post:/apps/{app_id}/rules,3102
+train_v2_draft,oas,apisguru:adafruit.com:get:/{username}/dashboards/{dashboard_id}/blocks,3371
+train_v2_draft,oas,apisguru:adyen.com:get:/balanceAccounts/{id}/paymentInstruments,3381
+train_v2_draft,oas,apisguru:alertersystem.com:patch:/api/monitor/{id},3068
+train_v2_draft,oas,apisguru:apache.org:patch:/dags/{dag_id}/dagRuns/{dag_run_id}/setNote,2971
+train_v2_draft,oas,apisguru:api2cart.com:get:/attribute.group.list.json,2955
+train_v2_draft,oas,apisguru:apideck.com:delete:/accounting/customers/{id},2907
+train_v2_draft,oas,apisguru:apideck.com:get:/accounting/invoice-items/{id},3131
+train_v2_draft,oas,apisguru:apigee.net:get:/dealer/heavy-equipment/{id},2970
+train_v2_draft,oas,apisguru:appcenter.ms:get:/v0.1/apps/{owner_name}/{app_name}/crash_groups/{crash_group_id}/crashes,3253
+train_v2_draft,oas,apisguru:apple.com:patch:/v1/appInfos/{id},3221
+train_v2_draft,oas,apisguru:appveyor.com:get:/buildjobs/{jobId}/artifacts,2891
+train_v2_draft,oas,apisguru:appwrite.io:get:/account/sessions/{sessionId},3007
+train_v2_draft,oas,apisguru:appwrite.io:post:/teams/{teamId}/memberships,3149
+train_v2_draft,oas,apisguru:appwrite.io:put:/storage/files/{fileId},2943
+train_v2_draft,oas,apisguru:appwrite.io:put:/teams/{teamId},2921
+train_v2_draft,oas,apisguru:asuarez.dev:get:/similarity/by_song,3053
+train_v2_draft,oas,apisguru:avaza.com:get:/api/ExpenseSummary,2962
+train_v2_draft,oas,apisguru:avaza.com:get:/api/Payment,3115
+train_v2_draft,oas,apisguru:avaza.com:get:/api/Payment/{id},3004
+train_v2_draft,oas,apisguru:avaza.com:get:/api/Project/{id},3132
+train_v2_draft,oas,apisguru:azure.com:get:/providers/Microsoft.ADHybridHealthService/addsservices/{serviceName}/servicemembers/{serviceMemberId},3193
+train_v2_draft,oas,apisguru:azure.com:get:/providers/Microsoft.ADHybridHealthService/addsservices/{serviceName}/servicemembers/{serviceMemberId}/alerts,3214
+train_v2_draft,oas,apisguru:bbc.com:get:/schedules,3390
+train_v2_draft,oas,apisguru:bbc.com:get:/services,3360
+train_v2_draft,oas,apisguru:bbc.com:get:/v1/brands/{pid}/franchises/,3287
+train_v2_draft,oas,apisguru:bigoven.com:get:/recipe/steps/{id},3122
+train_v2_draft,oas,apisguru:bigoven.com:get:/recipe/{id},3121
+train_v2_draft,oas,apisguru:bigoven.com:post:/recipe/{recipeId}/note,2932
+train_v2_draft,oas,apisguru:bigoven.com:put:/recipe/review/replies/{replyId},2941
+train_v2_draft,oas,apisguru:bigredcloud.com:get:/v1/customers/{itemId}/openingBalance,2924
+train_v2_draft,oas,apisguru:bigredcloud.com:get:/v1/customers/{itemId}/openingBalanceList,2951
+train_v2_draft,oas,apisguru:bigredcloud.com:get:/v1/customers/{itemId}/quotes,3208
+train_v2_draft,oas,apisguru:bigredcloud.com:put:/v1/cashReceipts/{id},2897
+train_v2_draft,oas,apisguru:bitbucket.org:get:/repositories/{workspace}/{repo_slug}/branch-restrictions/{id},3211
+train_v2_draft,oas,apisguru:bitbucket.org:get:/repositories/{workspace}/{repo_slug}/commit/{commit}/comments/{comment_id},3098
+train_v2_draft,oas,apisguru:bitbucket.org:get:/repositories/{workspace}/{repo_slug}/commit/{commit}/reports/{reportId}/annotations,3018
+train_v2_draft,oas,apisguru:bitbucket.org:get:/repositories/{workspace}/{repo_slug}/commit/{commit}/statuses/build/{key},2994
+train_v2_draft,oas,apisguru:bitbucket.org:put:/repositories/{workspace}/{repo_slug}/branch-restrictions/{id},3263
+train_v2_draft,oas,apisguru:bitbucket.org:put:/repositories/{workspace}/{repo_slug}/commit/{commit}/comments/{comment_id},3042
+train_v2_draft,oas,apisguru:bitbucket.org:put:/repositories/{workspace}/{repo_slug}/commit/{commit}/statuses/build/{key},3043
+train_v2_draft,oas,apisguru:bkk.hu:get:/{dialect}/api/where/route-details-for-stop,3195
+train_v2_draft,oas,apisguru:box.com:get:/collaborations/{collaboration_id},3213
+train_v2_draft,oas,apisguru:box.com:get:/enterprises/{enterprise_id}/device_pinners,3022
+train_v2_draft,oas,apisguru:box.com:put:/collaborations/{collaboration_id},3239
+train_v2_draft,oas,apisguru:box.com:put:/comments/{comment_id},2946
+train_v2_draft,oas,apisguru:brex.io:get:/api/v1/company/announcement/{id},2918
+train_v2_draft,oas,apisguru:bulksms.com:post:/messages,3926
+train_v2_draft,oas_code,campus_records_audit_0,3032
+train_v2_draft,oas_code,campus_records_audit_1,3023
+train_v2_draft,oas_code,campus_records_catalogue_0,2970
+train_v2_draft,oas_code,campus_records_catalogue_1,2970
+train_v2_draft,oas_code,campus_records_disputed_0,3033
+train_v2_draft,oas_code,campus_records_disputed_1,3033
+train_v2_draft,oas_code,campus_records_drafts_0,3037
+train_v2_draft,oas_code,campus_records_drafts_1,3025
+train_v2_draft,oas_code,campus_records_shared_0,3047
+train_v2_draft,oas_code,campus_records_shared_1,3025
+train_v2_draft,oas_code,campus_records_subscription_0,3031
+train_v2_draft,oas_code,campus_records_subscription_1,3022
+train_v2_draft,oas_code,campus_records_workspace_0,3036
+train_v2_draft,oas_code,campus_records_workspace_1,3022
+train_v2_draft,oas,apisguru:circuitsandbox.net:delete:/conversations/community/{convId}/participants,3027
+train_v2_draft,oas,apisguru:circuitsandbox.net:delete:/conversations/group/{convId}/participants,3019
+train_v2_draft,oas,apisguru:circuitsandbox.net:get:/conversations/label/{labelId},3050
+train_v2_draft,oas,apisguru:circuitsandbox.net:get:/conversations/messages/{itemId},3155
+train_v2_draft,oas,apisguru:circuitsandbox.net:get:/conversations/{convId}/items,3207
+train_v2_draft,oas,apisguru:circuitsandbox.net:post:/conversations/community/{convId}/join,3045
+train_v2_draft,oas,apisguru:circuitsandbox.net:post:/conversations/community/{convId}/participants,3000
+train_v2_draft,oas,apisguru:circuitsandbox.net:post:/conversations/group/{convId}/participants,3005
+train_v2_draft,oas,apisguru:circuitsandbox.net:post:/conversations/{convId}/messages,3192
+train_v2_draft,oas,apisguru:circuitsandbox.net:put:/conversations/community/{convId},3002
+train_v2_draft,oas,apisguru:circuitsandbox.net:put:/conversations/group/{convId},2990
+train_v2_draft,oas,apisguru:citrixonline.com:get:/Groups/{groupKey},2919
+train_v2_draft,oas,apisguru:citrixonline.com:get:/organizers/{organizerKey},2952
+train_v2_draft,oas,apisguru:citrixonline.com:get:/organizers/{organizerKey}/attendees,3002
+train_v2_draft,oas,apisguru:clearblade.com:get:/admin/v/4/session/{systemKey}/user,3123
+train_v2_draft,oas,apisguru:clever-cloud.com:get:/organisations/{id}/addonproviders/{providerId}/plans/{planId},2945
+train_v2_draft,oas,apisguru:clever.com:get:/contacts/{id},2935
+train_v2_draft,oas,apisguru:clickmeter.com:get:/aggregated/summary/datapoints,3072
+train_v2_draft,oas,apisguru:clickmeter.com:post:/account/guests/{guestId},3103
+train_v2_draft,oas,apisguru:codat.io:get:/data/companies/{companyId}/connections/{connectionId}/assess/accounts/{accountId}/categories,2971
+train_v2_draft,oas,apisguru:collegefootballdata.com:get:/play/stats,3020
+train_v2_draft,oas,apisguru:collegefootballdata.com:get:/player/usage,2995
+train_v2_draft,oas,apisguru:collegefootballdata.com:get:/ppa/players/games,2989
+train_v2_draft,oas,apisguru:collegefootballdata.com:get:/ppa/players/season,3095
+train_v2_draft,oas,apisguru:configcat.com:get:/v1/configs/{configId}/environments/{environmentId}/values,3340
+train_v2_draft,oas,apisguru:configcat.com:get:/v1/environments/{environmentId},3126
+train_v2_draft,oas,apisguru:configcat.com:patch:/v1/environments/{environmentId}/settings/{settingId}/value,3759
+train_v2_draft,oas,apisguru:conjur.local:post:/authn-azure/{service_id}/{account}/{login}/authenticate,3142
+train_v2_draft,oas,apisguru:conjur.local:post:/authn-jwt/{service_id}/{account}/authenticate,2942
+train_v2_draft,oas,apisguru:conjur.local:post:/authn-oidc/{service_id}/{account}/authenticate,2977
+train_v2_draft,oas,apisguru:contentgroove.com:get:/webhook_subscriptions/{id},3028
+train_v2_draft,oas,apisguru:contract-p.fit:get:/auth/api-key/inbox/{inbox_id},2938
+train_v2_draft,oas,apisguru:contract-p.fit:get:/auth/api-key/{key},2924
+train_v2_draft,oas,apisguru:contract-p.fit:get:/connections/{connection_id},2921
+train_v2_draft,oas,apisguru:contract-p.fit:patch:/auth/api-key/{key},2947
+train_v2_draft,oas,apisguru:contract-p.fit:post:/auth/api-key/inbox/{inbox_id},3008
+train_v2_draft,oas,apisguru:contract-p.fit:post:/documents/{document_id}/reprocess,3153
+train_v2_draft,oas,apisguru:contribly.com:get:/exports/{id},2919
+train_v2_draft,oas_code,copper_wallet_audit_0,3003
+train_v2_draft,oas_code,copper_wallet_audit_1,2995
+train_v2_draft,oas_code,copper_wallet_catalogue_0,2944
+train_v2_draft,oas_code,copper_wallet_catalogue_1,2944
+train_v2_draft,oas_code,copper_wallet_disputed_0,3004
+train_v2_draft,oas_code,copper_wallet_disputed_1,3004
+train_v2_draft,oas_code,copper_wallet_drafts_0,3009
+train_v2_draft,oas_code,copper_wallet_drafts_1,2997
+train_v2_draft,oas_code,copper_wallet_shared_0,3018
+train_v2_draft,oas_code,copper_wallet_shared_1,2997
+train_v2_draft,oas_code,copper_wallet_subscription_0,3002
+train_v2_draft,oas_code,copper_wallet_subscription_1,2994
+train_v2_draft,oas_code,copper_wallet_workspace_0,3007
+train_v2_draft,oas_code,copper_wallet_workspace_1,2994
+train_v2_draft,oas,apisguru:cpy.re:get:/api/v1/users/me/videos/imports,3229
+train_v2_draft,oas,apisguru:crossbrowsertesting.com:get:/screenshots/{target_screenshot_test_id}/{target_version_id}/comparison/parallel/{base_version_id},3221
+train_v2_draft,oas,apisguru:daniweb.com:patch:/conversations/{ID}/statuses,3387
+train_v2_draft,oas,apisguru:daniweb.com:post:/audiences/{ID}/memberships,3242
+train_v2_draft,oas,apisguru:daniweb.com:post:/conversations/{ID}/searches,3350
+train_v2_draft,oas,apisguru:deutschebahn.com:get:/areas/{areaUID},3103
+train_v2_draft,oas,apisguru:deutschebahn.com:get:/providernetworks/{uid},3132
+train_v2_draft,oas,apisguru:digitalnz.org:get:/records/{record_id}.{format},3040
+train_v2_draft,oas,apisguru:docker.com:get:/containers/{id}/json,3093
+train_v2_draft,oas,apisguru:drchrono.com:get:/api/comm_logs/{id},2952
+train_v2_draft,oas,apisguru:edrv.io:patch:/v1/commands/{id}/variables,2902
+train_v2_draft,oas,apisguru:elmah.io:get:/v3/deployments/{id},2931
+train_v2_draft,oas,apisguru:elmah.io:get:/v3/messages/{logId}/{id},3056
+train_v2_draft,oas,apisguru:elmah.io:post:/v3/messages/{logId}/_fix,2897
+train_v2_draft,oas,apisguru:evetech.net:get:/alliances/{alliance_id}/,2981
+train_v2_draft,oas,apisguru:evetech.net:get:/characters/{character_id}/,2981
+train_v2_draft,oas,apisguru:evetech.net:get:/characters/{character_id}/attributes/,3003
+train_v2_draft,oas,apisguru:evetech.net:get:/characters/{character_id}/blueprints/,2997
+train_v2_draft,oas,apisguru:evetech.net:get:/characters/{character_id}/bookmarks/,3029
+train_v2_draft,oas,apisguru:evetech.net:get:/characters/{character_id}/calendar/,3037
+train_v2_draft,oas,apisguru:evetech.net:get:/characters/{character_id}/calendar/{event_id}/,3018
+train_v2_draft,oas,apisguru:figshare.com:get:/account/articles/export,2940
+train_v2_draft,oas,apisguru:figshare.com:get:/account/articles/{article_id},3137
+train_v2_draft,oas,apisguru:files.com:get:/api_keys,2982
+train_v2_draft,oas,apisguru:fire.com:get:/v1/directdebits/{directDebitUuid},3018
+train_v2_draft,oas,apisguru:fire.com:get:/v1/payments/{paymentUuid},3273
+train_v2_draft,oas,apisguru:flat.io:get:/collections/{collection},3224
+train_v2_draft,oas,apisguru:flat.io:get:/scores/{score},3187
+train_v2_draft,oas,apisguru:flat.io:get:/scores/{score}/collaborators,3214
+train_v2_draft,oas,apisguru:flat.io:get:/scores/{score}/collaborators/{collaborator},3102
+train_v2_draft,oas,apisguru:flat.io:get:/scores/{score}/tracks,2984
+train_v2_draft,oas,apisguru:flat.io:get:/scores/{score}/tracks/{track},2965
+train_v2_draft,oas,apisguru:flat.io:post:/scores/{score}/fork,3221
+train_v2_draft,oas,apisguru:flickr.com:get:/rest?method=flickr.favorites.getList,3197
+train_v2_draft,oas,apisguru:flickr.com:get:/rest?method=flickr.photos.getInfo,3127
+train_v2_draft,oas,apisguru:frankiefinancial.io:post:/document/{documentId}/utility/process/compare,3548
+train_v2_draft,oas,apisguru:gerermesaffaires.com:get:/hub/business-groups/{Id}/menus,2945
+train_v2_draft,oas,apisguru:gerermesaffaires.com:post:/business-groups/{id}/spaces/{spaceId}/legal-entities/{personId}/customers/{folderId}/guest-in-space,2931
+train_v2_draft,oas,apisguru:gerermesaffaires.com:post:/business-groups/{id}/spaces/{spaceId}/legal-entities/{personId}/customers/{folderId}/spaces,2911
+train_v2_draft,oas,apisguru:giphy.com:get:/gifs/{gifId},3239
+train_v2_draft,oas,apisguru:gitea.io:get:/repos/issues/search,3277
+train_v2_draft,oas,apisguru:gitea.io:get:/repos/{owner}/{repo}/hooks/{id},2955
+train_v2_draft,oas,apisguru:gitea.io:patch:/orgs/{org}/hooks/{id},2950
+train_v2_draft,oas,apisguru:github.com:get:/app/hook/deliveries/{delivery_id},3020
+train_v2_draft,oas,apisguru:gitlab.com:get:/v3/groups/{id},3158
+train_v2_draft,oas,apisguru:gitlab.com:get:/v3/groups/{id}/issues,3125
+train_v2_draft,oas,apisguru:gitlab.com:get:/v3/groups/{id}/members,2963
+train_v2_draft,oas,apisguru:gitlab.com:post:/v3/groups/{id}/projects/{project_id},3192
+train_v2_draft,oas,apisguru:googleapis.com:get:/billinginfo/{accountId},2941
+train_v2_draft,oas,apisguru:googleapis.com:get:/creatives/{accountId}/{buyerCreativeId},3130
+train_v2_draft,oas,apisguru:googleapis.com:get:/directdeals/{id},2977
+train_v2_draft,oas,apisguru:googleapis.com:patch:/billinginfo/{accountId}/{billingId},2980
+train_v2_draft,oas,apisguru:googleapis.com:put:/billinginfo/{accountId}/{billingId},2974
+train_v2_draft,oas,apisguru:gsmtasks.com:post:/accounts/{id}/managers/,2901
+train_v2_draft,oas,apisguru:here.com:get:/aliases/v2/{trackingId},2963
+train_v2_draft,oas,apisguru:hetras-certification.net:post:/api/booking/v0/bookings/{confirmationId}/reservations/{reservationNumber}/cancel,3023
+train_v2_draft,oas,apisguru:hhs.gov:get:/resources/media.json,3507
+train_v2_draft,oas,apisguru:id4i.de:get:/api/v1/apikeys/{key},2920
+train_v2_draft,oas,apisguru:id4i.de:get:/api/v1/apikeys/{key}/privileges,2910
+train_v2_draft,oas,apisguru:id4i.de:get:/api/v1/changelog/organization/{organizationId}/,2960
+train_v2_draft,oas,apisguru:illumidesk.com:get:/v1/teams/{team}/billing/invoices/{id}/,2970
+train_v2_draft,oas,apisguru:illumidesk.com:get:/v1/users/{user}/emails/{email_id}/,2912
+train_v2_draft,oas,apisguru:illumidesk.com:get:/v1/{namespace}/billing/cards/{id}/,2963
+train_v2_draft,oas,apisguru:illumidesk.com:patch:/v1/users/{user}/emails/{email_id}/,2920
+train_v2_draft,oas,apisguru:illumidesk.com:patch:/v1/{namespace}/billing/cards/{id}/,2979
+train_v2_draft,oas,apisguru:illumidesk.com:put:/v1/users/{user}/emails/{email_id}/,2918
+train_v2_draft,oas,apisguru:illumidesk.com:put:/v1/{namespace}/billing/cards/{id}/,2963
+train_v2_draft,oas,apisguru:increase.com:get:/account_transfers/{account_transfer_id},2975
+train_v2_draft,oas,apisguru:increase.com:post:/account_transfers/{account_transfer_id}/approve,2977
+train_v2_draft,oas,apisguru:increase.com:post:/account_transfers/{account_transfer_id}/cancel,2977
+train_v2_draft,oas,apisguru:influxdata.com:get:/buckets/{bucketID},3004
+train_v2_draft,oas,apisguru:instagram.com:delete:/media/{media-id}/comments/{comment-id},2954
+train_v2_draft,oas,apisguru:instagram.com:delete:/media/{media-id}/likes,2928
+train_v2_draft,oas,apisguru:intellifi.nl:put:/kvpairs/{id},2921
+train_v2_draft,oas,apisguru:interactivebrokers.com:put:/accounts/{account}/orders/{CustomerOrderId},2984
+train_v2_draft,oas,apisguru:ix-api.net:patch:/accounts/{id},3051
+train_v2_draft,oas,apisguru:izettle.com:get:/organizations/{organizationUuid}/library,3520
+train_v2_draft,oas,apisguru:izettle.com:get:/organizations/{organizationUuid}/products,3123
+train_v2_draft,oas,apisguru:izettle.com:post:/organizations/{organizationUuid}/categories/v2,2893
+train_v2_draft,oas,apisguru:izettle.com:post:/organizations/{organizationUuid}/products,3084
+train_v2_draft,oas,apisguru:jellyfin.local:get:/Artists/{itemId}/Similar,3222
+train_v2_draft,oas,apisguru:jellyfin.local:get:/Artists/{name},3095
+train_v2_draft,oas,apisguru:jumpseller.com:post:/customer_categories/{id}/customers.json,3234
+train_v2_draft,oas,apisguru:kumpeapps.com:get:/kkid/allowance,3015
+train_v2_draft,oas,apisguru:kumpeapps.com:get:/kkid/userlist,3153
+train_v2_draft,oas,apisguru:kumpeapps.com:put:/kkid/userlist,3118
+train_v2_draft,oas,apisguru:launchdarkly.com:get:/account/relay-auto-configs/{id},3083
+train_v2_draft,oas,apisguru:launchdarkly.com:patch:/account/relay-auto-configs/{id},3083
+train_v2_draft,oas,apisguru:launchdarkly.com:post:/account/relay-auto-configs/{id}/reset,3092
+train_v2_draft,oas,apisguru:learnifier.com:patch:/orgunits/{orgid},2887
+train_v2_draft,oas,apisguru:learnifier.com:post:/orgunits/{orgid}/projects/{projectid}/participants,2928
+train_v2_draft,oas,apisguru:lgtm.com:delete:/projects/{project-id},2984
+train_v2_draft,oas,apisguru:lgtm.com:get:/analyses/{analysis-id},3140
+train_v2_draft,oas,apisguru:lgtm.com:get:/analyses/{project-id}/commits/{commit-id},3114
+train_v2_draft,oas,apisguru:lgtm.com:get:/queryjobs/{queryjob-id}/results/{project-id},3055
+train_v2_draft,oas,apisguru:linode.com:post:/account/oauth-clients/{clientId}/reset-secret,3012
+train_v2_draft,oas,apisguru:linode.com:put:/account/oauth-clients/{clientId},2958
+train_v2_draft,oas,apisguru:listennotes.com:get:/curated_podcasts/{id},3257
+train_v2_draft,oas,apisguru:listennotes.com:get:/podcasts/{id},3169
+train_v2_draft,oas,apisguru:loket.nl:delete:/providers/employers/benefitinkindtypes/{benefitInKindTypeId},2979
+train_v2_draft,oas,apisguru:loket.nl:put:/providers/employers/benefitinkindtypes/{benefitInKindTypeId},2972
+train_v2_draft,oas,apisguru:lyft.com:get:/rides/{id},3124
+train_v2_draft,oas,apisguru:lyft.com:get:/rides/{id}/receipt,3011
+train_v2_draft,oas,apisguru:magento.com:put:/V1/carts/{cartId},2904
+train_v2_draft,oas,apisguru:maif.local:patch:/api/data-exporter-configs/{dataExporterConfigId},3064
+train_v2_draft,oas,apisguru:mailchimp.com:get:/automations/{workflow_id},3177
+train_v2_draft,oas,apisguru:mailchimp.com:post:/automations/{workflow_id}/actions/start-all-emails,2896
+train_v2_draft,oas,apisguru:mastodon.local:get:/api/v1/accounts/{id}/followers,3145
+train_v2_draft,oas,apisguru:mastodon.local:get:/api/v1/accounts/{id}/following,3150
+train_v2_draft,oas,apisguru:mastodon.local:get:/api/v1/accounts/{id}/statuses,3214
+train_v2_draft,oas,apisguru:mastodon.local:post:/api/v1/accounts/{id}/block,2967
+train_v2_draft,oas,apisguru:mastodon.local:post:/api/v1/accounts/{id}/follow,2952
+train_v2_draft,oas,apisguru:mastodon.local:post:/api/v1/accounts/{id}/mute,2975
+train_v2_draft,oas,apisguru:mastodon.local:post:/api/v1/accounts/{id}/note,2946
+train_v2_draft,oas,apisguru:mcw.edu:get:/annotations/reference/{refRgdId},3026
+train_v2_draft,oas,apisguru:mcw.edu:get:/annotations/{accId}/{speciesTypeKey}/{includeChildren},3065
+train_v2_draft,oas,apisguru:mcw.edu:get:/genes/annotation/{accId}/{speciesTypeKey},3019
+train_v2_draft,oas,apisguru:meraki.com:get:/networks/{networkId}/clients,3028
+train_v2_draft,oas,apisguru:mercedes-benz.com:get:/markets/{marketId}/classes/{classId},2956
+train_v2_draft,oas,apisguru:mercedes-benz.com:get:/markets/{marketId}/models/{modelId}/configurations/{configurationId}/images/components/paint,3000
+train_v2_draft,oas,apisguru:meshery.local:get:/api/application/{id},2928
+train_v2_draft,oas,apisguru:meshery.local:get:/api/filter/file/{id},2943
+train_v2_draft,oas,apisguru:meshery.local:get:/api/filter/{id},2940
+train_v2_draft,oas,apisguru:meshery.local:get:/api/pattern/{id},2938
+train_v2_draft,oas,apisguru:microcks.local:get:/secrets/{id},2909
+train_v2_draft,oas,apisguru:microsoft.com:post:/{projectId}/classify/iterations/{publishedName}/image/nostore,2970
+train_v2_draft,oas,apisguru:mist.com:get:/api/v1/installer/orgs/{org_id}/devices,2946
+train_v2_draft,oas,apisguru:mist.com:get:/api/v1/installer/orgs/{org_id}/sites/{site_name}/maps,3186
+train_v2_draft,oas,apisguru:mist.com:post:/api/v1/installer/orgs/{org_id}/sites/{site_name}/maps/import,3058
+train_v2_draft,oas,apisguru:nbg.gr:get:/accounts/{accountId}/scheduled-payments,3143
+train_v2_draft,oas,apisguru:netatmo.net:get:/getmeasure,3003
+train_v2_draft,oas,apisguru:netatmo.net:get:/getstationsdata,3302
+train_v2_draft,oas,apisguru:netbox.dev:get:/circuits/circuit-terminations/{id}/paths/,3074
+train_v2_draft,oas,apisguru:netbox.dev:get:/circuits/circuit-types/,3285
+train_v2_draft,oas,apisguru:netlify.com:delete:/accounts/{account_id}/env/{key},2937
+train_v2_draft,oas,apisguru:nexmo.com:get:/events/{id},3090
+train_v2_draft,oas,apisguru:noosh.com:post:/1.1/workgroups/{workgroup_id}/projects/{project_id}/files,3014
+train_v2_draft,oas,apisguru:noosh.com:post:/1.1/workgroups/{workgroup_id}/projects/{project_id}/teammembers,3036
+train_v2_draft,oas,apisguru:noosh.com:put:/1.1/workgroups/{workgroup_id}/projects/{project_id}/specs/{spec_id},2950
+train_v2_draft,oas,apisguru:nordigen.com:get:/api/v2/accounts/{id}/,2954
+train_v2_draft,oas,apisguru:nordigen.com:get:/api/v2/payments/{id}/,3073
+train_v2_draft,oas,apisguru:npr.org:get:/v2/organizations/{orgId}/categories/{category}/recommendations,3213
+train_v2_draft,oas,apisguru:onsched.com:delete:/consumer/v1/appointments/{id},3205
+train_v2_draft,oas,apisguru:onsched.com:get:/consumer/v1/appointments/{id},3153
+train_v2_draft,oas,apisguru:onsched.com:put:/consumer/v1/appointments/{id}/book,3225
+train_v2_draft,oas,apisguru:onsched.com:put:/consumer/v1/appointments/{id}/cancel,3174
+train_v2_draft,oas,apisguru:onsched.com:put:/consumer/v1/appointments/{id}/reschedule,3414
+train_v2_draft,oas,apisguru:openbanking.org.uk:get:/accounts/{AccountId}/offers,3071
+train_v2_draft,oas,apisguru:openbanking.org.uk:get:/accounts/{AccountId}/party,3154
+train_v2_draft,oas,apisguru:openbanking.org.uk:get:/accounts/{AccountId}/scheduled-payments,3161
+train_v2_draft,oas,apisguru:openbanking.org.uk:get:/accounts/{AccountId}/standing-orders,3296
+train_v2_draft,oas,apisguru:openbanking.org.uk:get:/accounts/{AccountId}/statements,3306
+train_v2_draft,oas,apisguru:openbanking.org.uk:get:/accounts/{AccountId}/statements/{StatementId}/transactions,3314
+train_v2_draft,oas,apisguru:openbanking.org.uk:get:/accounts/{AccountId}/transactions,3298
+train_v2_draft,oas,apisguru:openbankingproject.ch:get:/v1/accounts/{account-id}/balances,3070
+train_v2_draft,oas,apisguru:openbankingproject.ch:get:/v1/accounts/{account-id}/transactions,3287
+train_v2_draft,oas,apisguru:openbankingproject.ch:get:/v1/accounts/{account-id}/transactions/{transactionId},3465
+train_v2_draft,oas,apisguru:openbankingproject.ch:post:/v1/consents/{consentId}/authorisations,3604
+train_v2_draft,oas,apisguru:openchannel.io:get:/apps/{appId}/versions/{version},2906
+train_v2_draft,oas,apisguru:openfintech.io:get:/payment-providers/{id},3030
+train_v2_draft,oas,apisguru:opensuse.org:post:/request/{id}?cmd=diff,3269
+train_v2_draft,oas,apisguru:opentrials.local:get:/documents/{id},3149
+train_v2_draft,oas,apisguru:opentrials.local:get:/trials/{trialId}/records/{id},2982
+train_v2_draft,oas,apisguru:opto22.com:get:/v1/data-store/devices/{id}/tags,2909
+train_v2_draft,oas_code,orbit_tickets_audit_0,3000
+train_v2_draft,oas_code,orbit_tickets_audit_1,2993
+train_v2_draft,oas_code,orbit_tickets_catalogue_0,2956
+train_v2_draft,oas_code,orbit_tickets_catalogue_1,2956
+train_v2_draft,oas_code,orbit_tickets_disputed_0,3002
+train_v2_draft,oas_code,orbit_tickets_disputed_1,3002
+train_v2_draft,oas_code,orbit_tickets_drafts_0,3007
+train_v2_draft,oas_code,orbit_tickets_drafts_1,2996
+train_v2_draft,oas_code,orbit_tickets_shared_0,3015
+train_v2_draft,oas_code,orbit_tickets_shared_1,2995
+train_v2_draft,oas_code,orbit_tickets_subscription_0,2999
+train_v2_draft,oas_code,orbit_tickets_subscription_1,2992
+train_v2_draft,oas_code,orbit_tickets_workspace_0,3004
+train_v2_draft,oas_code,orbit_tickets_workspace_1,2992
+train_v2_draft,oas,apisguru:parliament.uk:get:/data/Divisions/groupedbyparty,3005
+train_v2_draft,oas,apisguru:paylocity.com:get:/v2/companies/{companyId}/employees/{employeeId},3231
+train_v2_draft,oas,apisguru:paylocity.com:get:/v2/companies/{companyId}/employees/{employeeId}/earnings/{earningCode},3051
+train_v2_draft,oas,apisguru:payrun.io:get:/Employer/{EmployerId}/CisLineTypes,2954
+train_v2_draft,oas,apisguru:pendo.io:delete:/accounts/{id},2929
+train_v2_draft,oas,apisguru:pendo.io:delete:/users/{id},2984
+train_v2_draft,oas,apisguru:powerdns.local:get:/servers/{server_id}/zones,3129
+train_v2_draft,oas,apisguru:powerdns.local:post:/servers/{server_id}/zones,3116
+train_v2_draft,oas,apisguru:presalytics.io:get:/Charts/AxisDataTypes/TypeId/{type_id},2923
+train_v2_draft,oas,apisguru:presalytics.io:get:/Charts/ChartUpdate/{id},2903
+train_v2_draft,oas,apisguru:probely.com:get:/targets/{id}/,3133
+train_v2_draft,oas,apisguru:probely.com:patch:/targets/{id}/,3130
+train_v2_draft,oas,apisguru:probely.com:put:/targets/{id}/,3138
+train_v2_draft,oas,apisguru:prss.org:get:/api/v2/episodes/{id},2947
+train_v2_draft,oas,apisguru:prss.org:get:/api/v2/programs/{id},2907
+train_v2_draft,oas,apisguru:prss.org:get:/api/v2/spotinsertions/{id},2927
+train_v2_draft,oas,apisguru:rebilly.com:get:/coupons-redemptions/{id},2940
+train_v2_draft,oas,apisguru:rebilly.com:patch:/bank-accounts/{id},3145
+train_v2_draft,oas_code,relay_forum_audit_0,3002
+train_v2_draft,oas_code,relay_forum_audit_1,2995
+train_v2_draft,oas_code,relay_forum_catalogue_0,2958
+train_v2_draft,oas_code,relay_forum_catalogue_1,2958
+train_v2_draft,oas_code,relay_forum_council_0,3051
+train_v2_draft,oas_code,relay_forum_council_1,3051
+train_v2_draft,oas_code,relay_forum_drafts_0,3009
+train_v2_draft,oas_code,relay_forum_drafts_1,2998
+train_v2_draft,oas_code,relay_forum_moderation_0,3021
+train_v2_draft,oas_code,relay_forum_moderation_1,3001
+train_v2_draft,oas_code,relay_forum_pins_0,3037
+train_v2_draft,oas_code,relay_forum_pins_1,3018
+train_v2_draft,oas_code,relay_forum_roster_0,3040
+train_v2_draft,oas_code,relay_forum_roster_1,3021
+train_v2_draft,oas_code,relay_forum_shared_0,3017
+train_v2_draft,oas_code,relay_forum_shared_1,2997
+train_v2_draft,oas_code,relay_forum_workspace_0,3006
+train_v2_draft,oas_code,relay_forum_workspace_1,2994
+train_v2_draft,oas,apisguru:reverb.com:post:/my/orders/selling/{id}/ship,2890
+train_v2_draft,oas,apisguru:ritc.io:get:/apps/channels/{channel_id}/users/{user_id},2933
+train_v2_draft,oas,apisguru:ritc.io:post:/apps/channels/{channel_id}/users/{user_id},2929
+train_v2_draft,oas,apisguru:roaring.io:get:/company-credit-decision,2931
+train_v2_draft,oas,apisguru:rudder.example.local:post:/changeRequests/{changeRequestId}/accept,2965
+train_v2_draft,oas,apisguru:rumble.run:delete:/account/tasks/templates/{scan_template_id},3029
+train_v2_draft,oas,apisguru:rumble.run:get:/account/credentials/{credential_id},2985
+train_v2_draft,oas,apisguru:rumble.run:get:/account/orgs/{org_id},3011
+train_v2_draft,oas,apisguru:rumble.run:patch:/account/users/{user_id},2957
+train_v2_draft,oas,apisguru:runscope.com:get:/buckets/{bucketKey},2926
+train_v2_draft,oas,apisguru:runscope.com:put:/buckets/{bucketKey}/tests/{testId},3188
+train_v2_draft,oas,apisguru:schooldigger.com:get:/v2.0/districts,3482
+train_v2_draft,oas,apisguru:schooldigger.com:get:/v2.0/schools,3383
+train_v2_draft,oas,apisguru:semantria.com:get:/document/processed.{content_type},3270
+train_v2_draft,oas,apisguru:setlist.fm:get:/1.0/search/setlists,3375
+train_v2_draft,oas,apisguru:setlist.fm:get:/1.0/user/{userId}/edited,3364
+train_v2_draft,oas,apisguru:shipengine.com:get:/v1/connections/carriers/{carrier_name}/{carrier_id}/settings,3054
+train_v2_draft,oas,apisguru:shop-pro.jp:get:/appstore/v1/script_tags/{scriptTagId}.json,2966
+train_v2_draft,oas,apisguru:shop-pro.jp:get:/v1/inline_script_tags/{inlineScriptTagId}.json,2988
+train_v2_draft,oas,apisguru:shop-pro.jp:put:/appstore/v1/script_tags/{scriptTagId}.json,2951
+train_v2_draft,oas,apisguru:shop-pro.jp:put:/v1/inline_script_tags/{inlineScriptTagId}.json,2981
+train_v2_draft,oas,apisguru:shotstack.io:get:/assets/{id},3021
+train_v2_draft,oas,apisguru:shutterstock.com:get:/v2/audio/collections/{id}/items,2984
+train_v2_draft,oas,apisguru:shutterstock.com:get:/v2/audio/licenses,3183
+train_v2_draft,oas,apisguru:shutterstock.com:patch:/v2/catalog/collections/{collection_id},3102
+train_v2_draft,oas,apisguru:signl4.com:post:/alerts/{alertId}/close,3099
+train_v2_draft,oas,apisguru:slack.com:get:/admin.conversations.getConversationPrefs,2946
+train_v2_draft,oas,apisguru:slack.com:get:/admin.conversations.getTeams,2929
+train_v2_draft,oas,apisguru:slmonitor.com:get:/api/v2.1/companies/{companyId}/me,3135
+train_v2_draft,oas,apisguru:slmonitor.com:get:/api/v2.1/companies/{companyId}/users,3174
+train_v2_draft,oas,apisguru:slmonitor.com:get:/api/v2.1/companies/{companyId}/users/{uniqueUserId},3156
+train_v2_draft,oas,apisguru:slmonitor.com:post:/api/v2.1/companies/{companyId}/users/{uniqueUserId}/checkin,3148
+train_v2_draft,oas,apisguru:slmonitor.com:post:/api/v2.1/companies/{companyId}/users/{uniqueUserId}/checkin-audio,3167
+train_v2_draft,oas,apisguru:slmonitor.com:post:/api/v2.1/companies/{companyId}/users/{uniqueUserId}/checkin-text,3153
+train_v2_draft,oas,apisguru:slmonitor.com:post:/api/v2.1/companies/{companyId}/users/{uniqueUserId}/emergency,3134
+train_v2_draft,oas,apisguru:slmonitor.com:post:/api/v2.1/companies/{companyId}/users/{uniqueUserId}/emergency-audio,3147
+train_v2_draft,oas,apisguru:slmonitor.com:post:/api/v2.1/companies/{companyId}/users/{uniqueUserId}/emergency-text,3138
+train_v2_draft,oas,apisguru:slmonitor.com:post:/api/v2.1/companies/{companyId}/users/{uniqueUserId}/end-audio,3138
+train_v2_draft,oas,apisguru:slmonitor.com:post:/api/v2.1/companies/{companyId}/users/{uniqueUserId}/location,3151
+train_v2_draft,oas,apisguru:slmonitor.com:put:/api/v2.1/companies/{companyId}/users/{uniqueUserId}/itinerary,3139
+train_v2_draft,oas,apisguru:slmonitor.com:put:/api/v2.1/companies/{companyId}/users/{uniqueUserId}/itinerary-file,3144
+train_v2_draft,oas,apisguru:snyk.io:post:/group/{groupId}/tags/delete,2892
+train_v2_draft,oas,apisguru:snyk.io:post:/org/{orgId}/integrations/{integrationId}/clone,2970
+train_v2_draft,oas,apisguru:soundcloud.com:get:/me/connections/{connection_id},2912
+train_v2_draft,oas,apisguru:soundcloud.com:get:/me/followers/{follower_id},3054
+train_v2_draft,oas,apisguru:soundcloud.com:get:/me/followings/{user_id},3035
+train_v2_draft,oas,apisguru:soundcloud.com:get:/me/playlists/{playlist_id},3078
+train_v2_draft,oas,apisguru:soundcloud.com:get:/me/tracks/{track_id},3068
+train_v2_draft,oas,apisguru:spacetraders.io:post:/my/contracts/{contractId}/deliver,3102
+train_v2_draft,oas,apisguru:spoonacular.com:delete:/mealplanner/{username}/items/{id},2896
+train_v2_draft,oas,apisguru:spoonacular.com:delete:/mealplanner/{username}/shopping-list/items/{id},2904
+train_v2_draft,oas,apisguru:spoonacular.com:delete:/mealplanner/{username}/templates/{id},2905
+train_v2_draft,oas,apisguru:spotify.com:put:/me/player/play,2919
+train_v2_draft,oas,apisguru:stackexchange.com:get:/me/comments/{toId},3189
+train_v2_draft,oas,apisguru:stackexchange.com:get:/users/{id}/top-question-tags,3006
+train_v2_draft,oas,apisguru:storecove.com:patch:/legal_entities/{id},3204
+train_v2_draft,oas,apisguru:stream-io-api.com:delete:/channels/{type}/{id},3233
+train_v2_draft,oas,apisguru:stream-io-api.com:post:/channels/{type}/{id}/call,2992
+train_v2_draft,oas,apisguru:stream-io-api.com:post:/channels/{type}/{id}/event,3293
+train_v2_draft,oas,apisguru:stripe.com:delete:/v1/accounts/{account}/bank_accounts/{id},2923
+train_v2_draft,oas,apisguru:stripe.com:delete:/v1/accounts/{account}/external_accounts/{id},2928
+train_v2_draft,oas,apisguru:stripe.com:get:/v1/accounts/{account}/bank_accounts/{id},3236
+train_v2_draft,oas,apisguru:stripe.com:get:/v1/accounts/{account}/external_accounts/{id},3235
+train_v2_draft,oas,apisguru:stripe.com:get:/v1/application_fees/{id},3254
+train_v2_draft,oas,apisguru:stripe.com:get:/v1/application_fees/{id}/refunds,3415
+train_v2_draft,oas,apisguru:stripe.com:get:/v1/credit_notes/{id},3209
+train_v2_draft,oas,apisguru:stripe.com:post:/v1/accounts/{account}/bank_accounts/{id},3315
+train_v2_draft,oas,apisguru:stripe.com:post:/v1/accounts/{account}/external_accounts/{id},3332
+train_v2_draft,oas,apisguru:telnyx.com:get:/authentication_providers/{id},2994
+train_v2_draft,oas,apisguru:telnyx.com:get:/billing_groups/{id},2915
+train_v2_draft,oas,apisguru:telnyx.com:patch:/authentication_providers/{id},2999
+train_v2_draft,oas,apisguru:telnyx.com:patch:/billing_groups/{id},2919
+train_v2_draft,oas,apisguru:theracingapi.com:get:/v1/damsires/{damsire_id}/results,3347
+train_v2_draft,oas,apisguru:thesmsworks.co.uk:get:/messages/{messageid},2990
+train_v2_draft,oas,apisguru:threatjammer.com:get:/v1/denylist/private/{denylist_id},3529
+train_v2_draft,oas,apisguru:threatjammer.com:put:/v1/allowlist/private/{allowlist_id},3310
+train_v2_draft,oas,apisguru:ticketmaster.com:get:/discovery/v2/events,3382
+train_v2_draft,oas,apisguru:trakt.tv:post:/users/{id}/lists/{list_id}/items,3193
+train_v2_draft,oas,apisguru:transitfeeds.com:get:/getFeedVersions,3279
+train_v2_draft,oas,apisguru:transitfeeds.com:get:/getLatestFeedVersion,3285
+train_v2_draft,oas,apisguru:truora.com:get:/v1/checks/{check_id},3480
+train_v2_draft,oas,apisguru:truora.com:post:/v1/reports/{report_id}/upload,3267
+train_v2_draft,oas,apisguru:truora.com:put:/v1/continuous-checks/{continuous_check_id},3202
+train_v2_draft,oas,apisguru:turbinelabs.io:delete:/listener/{listenerKey},2937
+train_v2_draft,oas,apisguru:twilio.com:get:/2010-04-01/Accounts/{AccountSid}/AvailablePhoneNumbers/{CountryCode}.json,2919
+train_v2_draft,oas,apisguru:uebermaps.com:delete:/comments/{id},2941
+train_v2_draft,oas,apisguru:up.com.au:get:/accounts/{accountId}/transactions,3425
+train_v2_draft,oas,apisguru:vercel.com:patch:/v1/domains/records/{recordId},2932
+train_v2_draft,oas,apisguru:viator.com:get:/booking/mybookings,3254
+train_v2_draft,oas,apisguru:viator.com:get:/booking/pastbooking,3469
+train_v2_draft,oas,apisguru:vimeo.com:get:/channels/{channel_id}/moderators/{user_id},3174
+train_v2_draft,oas,apisguru:vimeo.com:get:/channels/{channel_id}/privacy/users,3246
+train_v2_draft,oas,apisguru:vimeo.com:patch:/channels/{channel_id},3229
+train_v2_draft,oas,apisguru:vimeo.com:patch:/channels/{channel_id}/moderators,3168
+train_v2_draft,oas,apisguru:vimeo.com:put:/channels/{channel_id}/privacy/users,3180
+train_v2_draft,oas,apisguru:visma.com:get:/v1/activitytypes/{guid},2985
+train_v2_draft,oas,apisguru:visma.com:get:/v1/addresses/{guid},3071
+train_v2_draft,oas,apisguru:visma.com:get:/v1/bankaccounts,3078
+train_v2_draft,oas,apisguru:visma.com:patch:/v1/activities/{guid},3166
+train_v2_draft,oas,apisguru:visma.com:patch:/v1/activitytypes/{guid},3020
+train_v2_draft,oas,apisguru:visma.com:patch:/v1/addresses/{guid},3110
+train_v2_draft,oas,apisguru:visma.net:get:/api/v3/SalesOrders/{type},3106
+train_v2_draft,oas,apisguru:visma.net:get:/api/v3/SalesOrders/{type}/{orderId},3191
+train_v2_draft,oas,apisguru:visma.net:get:/api/v3/SalesOrders/{type}/{orderId}/discounts,3000
+train_v2_draft,oas,apisguru:visma.net:get:/api/v3/SalesOrders/{type}/{orderId}/lines/{lineId},3120
+train_v2_draft,oas,apisguru:vmware.local:put:/data-sources/arista-switches/{id},2951
+train_v2_draft,oas,apisguru:vmware.local:put:/data-sources/arista-switches/{id}/snmp-config,3004
+train_v2_draft,oas,apisguru:vmware.local:put:/data-sources/brocade-switches/{id},2953
+train_v2_draft,oas,apisguru:vmware.local:put:/data-sources/brocade-switches/{id}/snmp-config,2999
+train_v2_draft,oas,apisguru:vonage.com:get:/accounts/{account_id}/call-logs,3205
+train_v2_draft,oas,apisguru:vonage.com:get:/api/accounts/{account_id}/extensions,3100
+train_v2_draft,oas,apisguru:vonage.com:get:/api/accounts/{account_id}/extensions/{extension_number},3121
+train_v2_draft,oas,apisguru:vtex.local:get:/api/addon/pvt/giftlist/get/{listId},3132
+train_v2_draft,oas,apisguru:walletobjects.googleapis.com:get:/walletobjects/v1/eventTicketClass,3598
+train_v2_draft,oas,apisguru:walletobjects.googleapis.com:patch:/walletobjects/v1/flightClass/{resourceId},3529
+train_v2_draft,oas,apisguru:walletobjects.googleapis.com:post:/walletobjects/v1/eventTicketObject/{resourceId}/modifyLinkedOfferObjects,3550
+train_v2_draft,oas,apisguru:watchful.li:get:/sites/{id}/extensions,2926
+train_v2_draft,oas,apisguru:webflow.com:delete:/datasets/{datasetId},2956
+train_v2_draft,oas,apisguru:webflow.com:delete:/documents/{documentId},3024
+train_v2_draft,oas,apisguru:webflow.com:get:/datasets/{datasetId},2951
+train_v2_draft,oas,apisguru:webflow.com:get:/deploymentEnvironments/{deploymentEnvironmentId},2915
+train_v2_draft,oas,apisguru:webflow.com:get:/documents/{documentId},3008
+train_v2_draft,oas,apisguru:webflow.com:patch:/datasets/{datasetId},2945
+train_v2_draft,oas,apisguru:webflow.com:patch:/documents/{documentId},3008
+train_v2_draft,oas,apisguru:xero.com:delete:/Accounts/{AccountID},3040
+train_v2_draft,oas,apisguru:xtrf.eu:get:/accounting/customers/invoices/{invoiceId},2954
+train_v2_draft,oas,apisguru:xtrf.eu:get:/accounting/providers/invoices/{invoiceId},2926
+train_v2_draft,oas,apisguru:xtrf.eu:post:/accounting/customers/invoices/{invoiceId}/duplicate,2946
+train_v2_draft,oas,apisguru:yodlee.com:get:/providers,4050
+train_v2_draft,oas,apisguru:youneedabudget.com:get:/budgets/{budget_id}/accounts,3059
+train_v2_draft,oas,apisguru:youneedabudget.com:get:/budgets/{budget_id}/accounts/{account_id},3017
+train_v2_draft,oas,apisguru:zeit.co:get:/v4/domains/{name},3076
+train_v2_draft,oas,apisguru:zeno.fm:put:/api/v2/podcasts/{podcastKey},2969
+train_v2_draft,oas,apisguru:zoom.us:get:/accounts/{accountId}/plans,3371
+train_v2_draft,oas,apisguru:zoom.us:patch:/accounts/{accountId}/phone/settings,2955
+train_v2_draft,oas,apisguru:zoom.us:post:/accounts/{accountId}/phone/sip_trunk/trunks,3027
+train_v2_draft,oas,apisguru:zoomconnect.com:put:/api/rest/v1/messages/{messageId}/markUnread,3065
+train_v2_draft,oas_code,orbit_tickets_drafts_authonly,3052
+train_v2_draft,oas_code,orbit_tickets_drafts_extauth,3111
+train_v2_draft,oas_code,orbit_tickets_drafts_extguard,3107
+train_v2_draft,oas_code,orbit_tickets_shared_authonly,3046
+train_v2_draft,oas_code,orbit_tickets_shared_extauth,3105
+train_v2_draft,oas_code,orbit_tickets_shared_extguard,3115
+train_v2_draft,oas_code,orbit_tickets_workspace_authonly,3046
+train_v2_draft,oas_code,orbit_tickets_workspace_extauth,3105
+train_v2_draft,oas_code,orbit_tickets_workspace_extguard,3102
+train_v2_draft,oas_code,orbit_tickets_audit_authonly,3048
+train_v2_draft,oas_code,orbit_tickets_audit_extauth,3107
+train_v2_draft,oas_code,orbit_tickets_audit_extguard,3099
+train_v2_draft,oas_code,copper_wallet_drafts_authonly,3039
+train_v2_draft,oas_code,copper_wallet_drafts_extauth,3105
+train_v2_draft,oas_code,copper_wallet_drafts_extguard,3108
+train_v2_draft,oas_code,copper_wallet_shared_authonly,3033
+train_v2_draft,oas_code,copper_wallet_shared_extauth,3099
+train_v2_draft,oas_code,copper_wallet_shared_extguard,3114
+train_v2_draft,oas_code,copper_wallet_workspace_authonly,3033
+train_v2_draft,oas_code,copper_wallet_workspace_extauth,3099
+train_v2_draft,oas_code,copper_wallet_workspace_extguard,3103
+train_v2_draft,oas_code,copper_wallet_audit_authonly,3035
+train_v2_draft,oas_code,copper_wallet_audit_extauth,3101
+train_v2_draft,oas_code,copper_wallet_audit_extguard,3100
+train_v2_draft,oas_code,campus_records_drafts_authonly,3071
+train_v2_draft,oas_code,campus_records_drafts_extauth,3049
+train_v2_draft,oas_code,campus_records_drafts_extguard,3050
+train_v2_draft,oas_code,campus_records_shared_authonly,3065
+train_v2_draft,oas_code,campus_records_shared_extauth,3043
+train_v2_draft,oas_code,campus_records_shared_extguard,3057
+train_v2_draft,oas_code,campus_records_workspace_authonly,3065
+train_v2_draft,oas_code,campus_records_workspace_extauth,3043
+train_v2_draft,oas_code,campus_records_workspace_extguard,3046
+train_v2_draft,oas_code,campus_records_audit_authonly,3067
+train_v2_draft,oas_code,campus_records_audit_extauth,3045
+train_v2_draft,oas_code,campus_records_audit_extguard,3043
+train_v2_draft,oas_code,relay_forum_drafts_authonly,3056
+train_v2_draft,oas_code,relay_forum_drafts_extauth,3115
+train_v2_draft,oas_code,relay_forum_drafts_extguard,3111
+train_v2_draft,oas_code,relay_forum_shared_authonly,3050
+train_v2_draft,oas_code,relay_forum_shared_extauth,3109
+train_v2_draft,oas_code,relay_forum_shared_extguard,3119
+train_v2_draft,oas_code,relay_forum_moderation_authonly,3055
+train_v2_draft,oas_code,relay_forum_moderation_extauth,3114
+train_v2_draft,oas_code,relay_forum_moderation_extguard,3124
+train_v2_draft,oas_code,relay_forum_workspace_authonly,3050
+train_v2_draft,oas_code,relay_forum_workspace_extauth,3109
+train_v2_draft,oas_code,relay_forum_workspace_extguard,3106
+train_v2_draft,oas_code,relay_forum_audit_authonly,3052
+train_v2_draft,oas_code,relay_forum_audit_extauth,3111
+train_v2_draft,oas_code,relay_forum_audit_extguard,3103
+train_v2_draft,oas_code,relay_forum_roster_authonly,3056
+train_v2_draft,oas_code,relay_forum_roster_extauth,3115
+train_v2_draft,oas_code,relay_forum_roster_extguard,3165
+train_v2_draft,oas_code,relay_forum_pins_authonly,3052
+train_v2_draft,oas_code,relay_forum_pins_extauth,3111
+train_v2_draft,oas_code,relay_forum_pins_extguard,3161
+train_v2_draft,oas_code,harbor_manifests_catalogue_0,3053
+train_v2_draft,oas_code,harbor_manifests_catalogue_1,3053
+train_v2_draft,oas_code,harbor_manifests_drafts_0,3069
+train_v2_draft,oas_code,harbor_manifests_drafts_1,3070
+train_v2_draft,oas_code,harbor_manifests_shared_0,3079
+train_v2_draft,oas_code,harbor_manifests_shared_1,3071
+train_v2_draft,oas_code,harbor_manifests_moderation_0,3083
+train_v2_draft,oas_code,harbor_manifests_moderation_1,3075
+train_v2_draft,oas_code,harbor_manifests_workspace_0,3072
+train_v2_draft,oas_code,harbor_manifests_workspace_1,3066
+train_v2_draft,oas_code,harbor_manifests_audit_0,3055
+train_v2_draft,oas_code,harbor_manifests_audit_1,3067
+train_v2_draft,oas_code,harbor_manifests_roster_0,3126
+train_v2_draft,oas_code,harbor_manifests_roster_1,3116
+train_v2_draft,oas_code,harbor_manifests_pins_0,3123
+train_v2_draft,oas_code,harbor_manifests_pins_1,3113
+train_v2_draft,oas_code,harbor_manifests_council_0,3133
+train_v2_draft,oas_code,harbor_manifests_council_1,3133
+train_v2_draft,oas_code,pixel_gallery_catalogue_0,3032
+train_v2_draft,oas_code,pixel_gallery_catalogue_1,3032
+train_v2_draft,oas_code,pixel_gallery_drafts_0,3072
+train_v2_draft,oas_code,pixel_gallery_drafts_1,3068
+train_v2_draft,oas_code,pixel_gallery_shared_0,3077
+train_v2_draft,oas_code,pixel_gallery_shared_1,3067
+train_v2_draft,oas_code,pixel_gallery_moderation_0,3082
+train_v2_draft,oas_code,pixel_gallery_moderation_1,3072
+train_v2_draft,oas_code,pixel_gallery_workspace_0,3069
+train_v2_draft,oas_code,pixel_gallery_workspace_1,3062
+train_v2_draft,oas_code,pixel_gallery_audit_0,3062
+train_v2_draft,oas_code,pixel_gallery_audit_1,3064
+train_v2_draft,oas_code,pixel_gallery_roster_0,3121
+train_v2_draft,oas_code,pixel_gallery_roster_1,3114
+train_v2_draft,oas_code,pixel_gallery_pins_0,3117
+train_v2_draft,oas_code,pixel_gallery_pins_1,3110
+train_v2_draft,oas_code,pixel_gallery_council_0,3126
+train_v2_draft,oas_code,pixel_gallery_council_1,3126
+train_v2_draft,oas_code,meadow_plots_catalogue_0,3046
+train_v2_draft,oas_code,meadow_plots_catalogue_1,3046
+train_v2_draft,oas_code,meadow_plots_drafts_0,3095
+train_v2_draft,oas_code,meadow_plots_drafts_1,3065
+train_v2_draft,oas_code,meadow_plots_shared_0,3100
+train_v2_draft,oas_code,meadow_plots_shared_1,3063
+train_v2_draft,oas_code,meadow_plots_moderation_0,3107
+train_v2_draft,oas_code,meadow_plots_moderation_1,3070
+train_v2_draft,oas_code,meadow_plots_workspace_0,3091
+train_v2_draft,oas_code,meadow_plots_workspace_1,3058
+train_v2_draft,oas_code,meadow_plots_audit_0,3053
+train_v2_draft,oas_code,meadow_plots_audit_1,3060
+train_v2_draft,oas_code,meadow_plots_roster_0,3149
+train_v2_draft,oas_code,meadow_plots_roster_1,3111
+train_v2_draft,oas_code,meadow_plots_pins_0,3144
+train_v2_draft,oas_code,meadow_plots_pins_1,3106
+train_v2_draft,oas_code,meadow_plots_council_0,3153
+train_v2_draft,oas_code,meadow_plots_council_1,3153
+train_v2_draft,oas_code,atlas_leases_catalogue_0,3033
+train_v2_draft,oas_code,atlas_leases_catalogue_1,3033
+train_v2_draft,oas_code,atlas_leases_drafts_0,3049
+train_v2_draft,oas_code,atlas_leases_drafts_1,3050
+train_v2_draft,oas_code,atlas_leases_shared_0,3060
+train_v2_draft,oas_code,atlas_leases_shared_1,3051
+train_v2_draft,oas_code,atlas_leases_moderation_0,3064
+train_v2_draft,oas_code,atlas_leases_moderation_1,3055
+train_v2_draft,oas_code,atlas_leases_workspace_0,3052
+train_v2_draft,oas_code,atlas_leases_workspace_1,3046
+train_v2_draft,oas_code,atlas_leases_audit_0,3034
+train_v2_draft,oas_code,atlas_leases_audit_1,3047
+train_v2_draft,oas_code,atlas_leases_roster_0,3109
+train_v2_draft,oas_code,atlas_leases_roster_1,3096
+train_v2_draft,oas_code,atlas_leases_pins_0,3106
+train_v2_draft,oas_code,atlas_leases_pins_1,3093
+train_v2_draft,oas_code,atlas_leases_council_0,3116
+train_v2_draft,oas_code,atlas_leases_council_1,3116
+train_v2_draft,oas_code,gitea:get:/version,3077
+train_v2_draft,oas_code,gitea:get:/signing-key.gpg,3101
+train_v2_draft,oas_code,gitea:get:/signing-key.pub,3078
+train_v2_draft,oas_code,gitea:post:/markup,3169
+train_v2_draft,oas_code,gitea:post:/markdown,3167
+train_v2_draft,oas_code,gitea:post:/markdown/raw,3135
+train_v2_draft,oas_code,gitea:get:/gitignore/templates,3099
+train_v2_draft,oas_code,gitea:get:/gitignore/templates/{name},3158
+train_v2_draft,oas_code,gitea:get:/licenses,3186
+train_v2_draft,oas_code,gitea:get:/licenses/{name},3249
+train_v2_draft,oas_code,gitea:get:/label/templates,3114
+train_v2_draft,oas_code,gitea:get:/label/templates/{name},3171
+train_v2_draft,oas_code,gitea:get:/settings/ui,3124
+train_v2_draft,oas_code,gitea:get:/settings/api,3170
+train_v2_draft,oas_code,gitea:get:/settings/attachment,3140
+train_v2_draft,oas_code,gitea:get:/settings/repository,3179
+train_v2_draft,oas_code,gitea:get:/token,3270
+train_v2_draft,oas_code,gitea:delete:/token,3195
+train_v2_draft,oas_code,gitea:get:/notifications,3319
+train_v2_draft,oas_code,gitea:put:/notifications,3428
+train_v2_draft,oas_code,gitea:get:/notifications/new,3266
+train_v2_draft,oas_code,gitea:get:/notifications/threads/{id},3242
+train_v2_draft,oas_code,gitea:patch:/notifications/threads/{id},3334
+train_v2_draft,oas_code,gitea:get:/users/search,3539
+train_v2_draft,oas_code,gitea:get:/users/{username},3354
+train_v2_draft,oas_code,gitea:get:/users/{username}/heatmap,3250
+train_v2_draft,oas_code,gitea:get:/users/{username}/repos,3329
+train_v2_draft,oas_code,gitea:get:/users/{username}/projects,3845
+train_v2_draft,oas_code,gitea:post:/users/{username}/tokens,3653
+train_v2_draft,oas_code,gitea:get:/users/{username}/activities/feeds,3435
+train_v2_draft,oas_code,gitea:get:/users/{username}/keys,3259
+train_v2_draft,oas_code,gitea:get:/users/{username}/gpg_keys,3269
+train_v2_draft,oas_code,gitea:get:/users/{username}/followers,3256
+train_v2_draft,oas_code,gitea:get:/users/{username}/following,3264
+train_v2_draft,oas_code,gitea:get:/users/{username}/following/{target},3324
+train_v2_draft,oas_code,gitea:get:/users/{username}/starred,3424
+train_v2_draft,oas_code,gitea:get:/users/{username}/subscriptions,3337
+train_v2_draft,oas_code,gitea:get:/user,3222
+train_v2_draft,oas_code,gitea:get:/user/settings,3233
+train_v2_draft,oas_code,gitea:patch:/user/settings,3427
+train_v2_draft,oas_code,gitea:get:/user/emails,3317
+train_v2_draft,oas_code,gitea:post:/user/emails,3383
+train_v2_draft,oas_code,gitea:delete:/user/emails,3383
+train_v2_draft,oas_code,gitea:put:/user/actions/secrets/{secretname},3383
+train_v2_draft,oas_code,gitea:delete:/user/actions/secrets/{secretname},3314
+train_v2_draft,oas_code,gitea:get:/user/actions/variables,3402
+train_v2_draft,oas_code,gitea:get:/user/actions/variables/{variablename},3359
+train_v2_draft,oas_code,gitea:delete:/user/actions/variables/{variablename},3274
+train_v2_draft,oas_code,gitea:post:/user/actions/variables/{variablename},3417
+train_v2_draft,oas_code,gitea:put:/user/actions/variables/{variablename},3371
+train_v2_draft,oas_code,gitea:get:/user/actions/runners,3226
+train_v2_draft,oas_code,gitea:post:/user/actions/runners/registration-token,3247
+train_v2_draft,oas_code,gitea:get:/user/actions/runners/{runner_id},3257
+train_v2_draft,oas_code,gitea:delete:/user/actions/runners/{runner_id},3243
+train_v2_draft,oas_code,gitea:patch:/user/actions/runners/{runner_id},3257
+train_v2_draft,oas_code,gitea:get:/user/actions/runs,3255
+train_v2_draft,oas_code,gitea:get:/user/actions/jobs,3243
+train_v2_draft,oas_code,gitea:get:/user/followers,3211
+train_v2_draft,oas_code,gitea:get:/user/following,3217
+train_v2_draft,oas_code,gitea:get:/user/following/{username},3258
+train_v2_draft,oas_code,gitea:put:/user/following/{username},3323
+train_v2_draft,oas_code,gitea:delete:/user/following/{username},3277
+train_v2_draft,oas_code,gitea:get:/user/keys,3244
+train_v2_draft,oas_code,gitea:post:/user/keys,3243
+train_v2_draft,oas_code,gitea:get:/user/keys/{id},3373
+train_v2_draft,oas_code,gitea:delete:/user/keys/{id},3490
+train_v2_draft,oas_code,gitea:get:/user/applications/oauth2,3398
+train_v2_draft,oas_code,gitea:post:/user/applications/oauth2,3498
+train_v2_draft,oas_code,gitea:delete:/user/applications/oauth2/{id},3428
+train_v2_draft,oas_code,gitea:patch:/user/applications/oauth2/{id},3511
+train_v2_draft,oas_code,gitea:get:/user/applications/oauth2/{id},3370
+train_v2_draft,oas_code,gitea:get:/user/gpg_keys,3261
+train_v2_draft,oas_code,gitea:post:/user/gpg_keys,3256
+train_v2_draft,oas_code,gitea:get:/user/gpg_keys/{id},3366
+train_v2_draft,oas_code,gitea:delete:/user/gpg_keys/{id},3335
+train_v2_draft,oas_code,gitea:get:/user/gpg_key_token,3249
+train_v2_draft,oas_code,gitea:post:/user/gpg_key_verify,3485
+train_v2_draft,oas_code,gitea:get:/user/repos,3423
+train_v2_draft,oas_code,gitea:post:/user/repos,3286
+train_v2_draft,oas_code,gitea:get:/user/starred,3378
+train_v2_draft,oas_code,gitea:get:/user/starred/{owner}/{repo},3410
+train_v2_draft,oas_code,gitea:put:/user/starred/{owner}/{repo},3460
+train_v2_draft,oas_code,gitea:delete:/user/starred/{owner}/{repo},3423
+train_v2_draft,oas_code,gitea:get:/user/times,3432
+train_v2_draft,oas_code,gitea:get:/user/stopwatches,3380
+train_v2_draft,oas_code,gitea:get:/user/subscriptions,3280
+train_v2_draft,oas_code,gitea:get:/user/teams,3358
+train_v2_draft,oas_code,gitea:get:/user/hooks,3328
+train_v2_draft,oas_code,gitea:post:/user/hooks,3322
+train_v2_draft,oas_code,gitea:get:/user/hooks/{id},3407
+train_v2_draft,oas_code,gitea:patch:/user/hooks/{id},3340
+train_v2_draft,oas_code,gitea:delete:/user/hooks/{id},3339
+train_v2_draft,oas_code,gitea:post:/user/avatar,3325
+train_v2_draft,oas_code,gitea:delete:/user/avatar,3252
+train_v2_draft,oas_code,gitea:get:/user/blocks,3230
+train_v2_draft,oas_code,gitea:get:/user/blocks/{username},3290
+train_v2_draft,oas_code,gitea:put:/user/blocks/{username},3268
+train_v2_draft,oas_code,gitea:delete:/user/blocks/{username},3272
+train_v2_draft,oas_code,gitea:post:/org/{org}/repos,3196
+train_v2_draft,oas_code,gitea:get:/repositories/{id},3311
+train_v2_draft,oas_code,gitea:get:/repos/search,3503
+train_v2_draft,oas_code,gitea:post:/repos/migrate,3720
+train_v2_draft,oas_code,gitea:get:/repos/{owner}/{repo}/compare/{basehead},3508
+train_v2_draft,oas_code,gitea:get:/repos/{owner}/{repo},3332
+train_v2_draft,oas_code,gitea:post:/repos/{template_owner}/{template_repo}/generate,3863
+train_v2_draft,oas_code,gitea:post:/repos/{owner}/{repo}/transfer,3885
+train_v2_draft,oas_code,gitea:post:/repos/{owner}/{repo}/transfer/accept,3415
+train_v2_draft,oas_code,gitea:post:/repos/{owner}/{repo}/transfer/reject,3375
+train_v2_draft,oas_code,gitea:get:/repos/{owner}/{repo}/actions/workflows,3473
+train_v2_draft,oas_code,gitea:get:/repos/{owner}/{repo}/actions/workflows/{workflow_id},3496
+train_v2_draft,oas_code,gitea:get:/repos/{owner}/{repo}/actions/workflows/{workflow_id}/runs,3668
+train_v2_draft,oas_code,gitea:put:/repos/{owner}/{repo}/actions/workflows/{workflow_id}/enable,3606
+train_v2_draft,oas_code,gitea:post:/repos/{owner}/{repo}/actions/workflows/{workflow_id}/dispatches,3909
+train_v2_draft,oas_code,gitea:get:/repos/{owner}/{repo}/hooks/git,3548
+train_v2_draft,oas_code,gitea:get:/repos/{owner}/{repo}/hooks,3592
+train_v2_draft,oas_code,gitea:post:/repos/{owner}/{repo}/hooks,3425
+train_v2_draft,oas_code,gitea:get:/repos/{owner}/{repo}/hooks/{id},3539
+train_v2_draft,oas_code,gitea:get:/repos/{owner}/{repo}/collaborators,3469
+train_v2_draft,oas_code,gitea:get:/repos/{owner}/{repo}/assignees,3421
+train_v2_draft,oas_code,gitea:get:/repos/{owner}/{repo}/assignees/{assignee},3412
+train_v2_draft,oas_code,gitea:get:/repos/{owner}/{repo}/reviewers,3509
+train_v2_draft,oas_code,gitea:get:/repos/{owner}/{repo}/teams,3458
+train_v2_draft,oas_code,gitea:get:/repos/{owner}/{repo}/teams/{team},3508
+train_v2_draft,oas_code,gitea:get:/repos/{owner}/{repo}/raw/{filepath},3494
+train_v2_draft,oas_code,gitea:get:/repos/{owner}/{repo}/media/{filepath},3576
+train_v2_draft,oas_code,gitea:get:/repos/{owner}/{repo}/forks,3407
+train_v2_draft,oas_code,gitea:post:/repos/{owner}/{repo}/forks,3647
+train_v2_draft,oas_code,gitea:post:/repos/{owner}/{repo}/merge-upstream,3628
+train_v2_draft,oas_code,gitea:get:/repos/{owner}/{repo}/branches,3579
+train_v2_draft,oas_code,gitea:get:/repos/{owner}/{repo}/branches/{branch},3595
+train_v2_draft,oas_code,gitea:put:/repos/{owner}/{repo}/branches/{branch},3793
+train_v2_draft,oas_code,gitea:get:/repos/{owner}/{repo}/branch_protections,3441
+train_v2_draft,oas_code,gitea:get:/repos/{owner}/{repo}/tags,3468
+train_v2_draft,oas_code,gitea:get:/repos/{owner}/{repo}/tags/{tag},3427
+train_v2_draft,oas_code,gitea:get:/repos/{owner}/{repo}/actions/tasks,3457
+train_v2_draft,oas_code,gitea:get:/repos/{owner}/{repo}/actions/runs/{run},3377
+train_v2_draft,oas_code,gitea:get:/repos/{owner}/{repo}/actions/runs/{run}/attempts/{attempt},3440
+train_v2_draft,oas_code,gitea:get:/repos/{owner}/{repo}/actions/runs/{run}/attempts/{attempt}/jobs,3445
+train_v2_draft,oas_code,gitea:post:/repos/{owner}/{repo}/actions/runs/{run}/force-cancel,3541
+train_v2_draft,oas_code,gitea:get:/repos/{owner}/{repo}/actions/runs/{run}/jobs,3517
+train_v2_draft,oas_code,gitea:get:/repos/{owner}/{repo}/actions/runs/{run}/logs,3436
+train_v2_draft,oas_code,gitea:get:/repos/{owner}/{repo}/actions/runs/{run}/artifacts,3549
+train_v2_draft,oas_code,gitea:get:/repos/{owner}/{repo}/actions/artifacts,3491
+train_v2_draft,oas_code,gitea:get:/repos/{owner}/{repo}/actions/artifacts/{artifact_id},3477
+train_v2_draft,oas_code,gitea:delete:/repos/{owner}/{repo}/actions/artifacts/{artifact_id},3574
+train_v2_draft,oas_code,gitea:get:/repos/{owner}/{repo}/actions/artifacts/{artifact_id}/zip,3530
+train_v2_draft,oas_code,gitea:get:/repos/{owner}/{repo}/keys,3567
+train_v2_draft,oas_code,gitea:get:/repos/{owner}/{repo}/times,3619
+train_v2_draft,oas_code,gitea:get:/repos/{owner}/{repo}/wiki/page/{pageName},3311
+train_v2_draft,oas_code,gitea:get:/repos/{owner}/{repo}/wiki/revisions/{pageName},3430
+train_v2_draft,oas_code,gitea:get:/repos/{owner}/{repo}/wiki/pages,3375
+train_v2_draft,oas_code,gitea:get:/repos/{owner}/{repo}/stargazers,3411
+train_v2_draft,oas_code,gitea:get:/repos/{owner}/{repo}/subscribers,3327
+train_v2_draft,oas_code,gitea:get:/repos/{owner}/{repo}/subscription,3402
+train_v2_draft,oas_code,gitea:put:/repos/{owner}/{repo}/subscription,3420
+train_v2_draft,oas_code,gitea:delete:/repos/{owner}/{repo}/subscription,3290
+train_v2_draft,oas_code,gitea:get:/repos/{owner}/{repo}/releases,3523
+train_v2_draft,oas_code,gitea:post:/repos/{owner}/{repo}/releases,3833
+train_v2_draft,oas_code,gitea:get:/repos/{owner}/{repo}/releases/latest,3471
+train_v2_draft,oas_code,gitea:get:/repos/{owner}/{repo}/releases/{id},3510
+train_v2_draft,oas_code,gitea:get:/repos/{owner}/{repo}/releases/{id}/assets,3506
+train_v2_draft,oas_code,gitea:get:/repos/{owner}/{repo}/releases/{id}/assets/{attachment_id},3528
+train_v2_draft,oas_code,gitea:get:/repos/{owner}/{repo}/releases/tags/{tag},3518
+train_v2_draft,oas_code,gitea:get:/repos/{owner}/{repo}/push_mirrors,3539
+train_v2_draft,oas_code,gitea:get:/repos/{owner}/{repo}/editorconfig/{filepath},3473
+train_v2_draft,oas_code,gitea:get:/repos/{owner}/{repo}/pulls,3717
+train_v2_draft,oas_code,gitea:post:/repos/{owner}/{repo}/pulls,3912
+train_v2_draft,oas_code,gitea:get:/repos/{owner}/{repo}/pulls/pinned,3617
+train_v2_draft,oas_code,gitea:post:/repos/{owner}/{repo}/pulls/comments/{id}/resolve,3472
+train_v2_draft,oas_code,gitea:post:/repos/{owner}/{repo}/pulls/comments/{id}/unresolve,3481
+train_v2_draft,oas_code,gitea:get:/repos/{owner}/{repo}/pulls/{index},3605
+train_v2_draft,oas_code,gitea:get:/repos/{owner}/{repo}/pulls/{index}.{diffType},3601
+train_v2_draft,oas_code,gitea:post:/repos/{owner}/{repo}/pulls/{index}/update,3809
+train_v2_draft,oas_code,gitea:get:/repos/{owner}/{repo}/pulls/{index}/commits,3594
+train_v2_draft,oas_code,gitea:get:/repos/{owner}/{repo}/pulls/{index}/files,3583
+train_v2_draft,oas_code,gitea:get:/repos/{owner}/{repo}/pulls/{index}/merge,3532
+train_v2_draft,oas_code,gitea:post:/repos/{owner}/{repo}/pulls/{index}/merge,4098
+train_v2_draft,oas_code,gitea:get:/repos/{owner}/{repo}/pulls/{index}/reviews,3619
+train_v2_draft,oas_code,gitea:post:/repos/{owner}/{repo}/pulls/{index}/reviews,3795
+train_v2_draft,oas_code,gitea:get:/repos/{owner}/{repo}/pulls/{index}/reviews/{id},3496
+train_v2_draft,oas_code,gitea:post:/repos/{owner}/{repo}/pulls/{index}/reviews/{id},3720
+train_v2_draft,oas_code,gitea:get:/repos/{owner}/{repo}/pulls/{index}/reviews/{id}/comments,3502
+train_v2_draft,oas_code,gitea:post:/repos/{owner}/{repo}/pulls/{index}/reviews/{id}/dismissals,3478
+train_v2_draft,oas_code,gitea:post:/repos/{owner}/{repo}/pulls/{index}/reviews/{id}/undismissals,3462
+train_v2_draft,oas_code,gitea:delete:/repos/{owner}/{repo}/pulls/{index}/requested_reviewers,3462
+train_v2_draft,oas_code,gitea:post:/repos/{owner}/{repo}/pulls/{index}/requested_reviewers,3461
+train_v2_draft,oas_code,gitea:post:/repos/{owner}/{repo}/pulls/{index}/comments/{id}/replies,3667
+train_v2_draft,oas_code,gitea:get:/repos/{owner}/{repo}/pulls/{base}/{head},3667
+train_v2_draft,oas_code,gitea:get:/repos/{owner}/{repo}/statuses/{sha},3381
+train_v2_draft,oas_code,gitea:get:/repos/{owner}/{repo}/commits,3597
+train_v2_draft,oas_code,gitea:get:/repos/{owner}/{repo}/git/commits/{sha},3467
+train_v2_draft,oas_code,gitea:get:/repos/{owner}/{repo}/git/commits/{sha}.{diffType},3505
+train_v2_draft,oas_code,gitea:get:/repos/{owner}/{repo}/git/refs,3371
+train_v2_draft,oas_code,gitea:get:/repos/{owner}/{repo}/git/refs/{ref},3388
+train_v2_draft,oas_code,gitea:get:/repos/{owner}/{repo}/git/trees/{sha},3529
+train_v2_draft,oas_code,gitea:get:/repos/{owner}/{repo}/git/blobs/{sha},3452
+train_v2_draft,oas_code,gitea:get:/repos/{owner}/{repo}/git/tags/{sha},3536
+train_v2_draft,oas_code,gitea:get:/repos/{owner}/{repo}/git/notes/{sha},3448
+train_v2_draft,oas_code,gitea:post:/repos/{owner}/{repo}/diffpatch,3531
+train_v2_draft,oas_code,gitea:get:/repos/{owner}/{repo}/contents,3412
+train_v2_draft,oas_code,gitea:get:/repos/{owner}/{repo}/contents/{filepath},3512
+train_v2_draft,oas_code,gitea:post:/repos/{owner}/{repo}/contents,3714
+train_v2_draft,oas_code,gitea:post:/repos/{owner}/{repo}/contents/{filepath},3682
+train_v2_draft,oas_code,gitea:put:/repos/{owner}/{repo}/contents/{filepath},3741
+train_v2_draft,oas_code,gitea:delete:/repos/{owner}/{repo}/contents/{filepath},3684
+train_v2_draft,oas_code,gitea:get:/repos/{owner}/{repo}/contents-ext/{filepath},3713
+train_v2_draft,oas_code,gitea:get:/repos/{owner}/{repo}/file-contents,3430
+train_v2_draft,oas_code,gitea:post:/repos/{owner}/{repo}/file-contents,3464
+train_v2_draft,oas_code,gitea:get:/repos/{owner}/{repo}/signing-key.gpg,3225
+train_v2_draft,oas_code,gitea:get:/repos/{owner}/{repo}/signing-key.pub,3214
+train_v2_draft,oas_code,gitea:get:/repos/{owner}/{repo}/topics,3448
+train_v2_draft,oas_code,gitea:get:/repos/{owner}/{repo}/issue_templates,3427
+train_v2_draft,oas_code,gitea:get:/repos/{owner}/{repo}/issue_config,3400
+train_v2_draft,oas_code,gitea:get:/repos/{owner}/{repo}/issue_config/validate,3456
+train_v2_draft,oas_code,gitea:get:/repos/{owner}/{repo}/languages,3400
+train_v2_draft,oas_code,gitea:get:/repos/{owner}/{repo}/licenses,3401
+train_v2_draft,oas_code,gitea:get:/repos/{owner}/{repo}/activities/feeds,3377
+train_v2_draft,oas_code,gitea:get:/repos/{owner}/{repo}/new_pin_allowed,3356
+train_v2_draft,oas_code,gitea:get:/repos/{owner}/{repo}/notifications,3407
+train_v2_draft,oas_code,gitea:put:/repos/{owner}/{repo}/notifications,3489
+train_v2_draft,oas_code,gitea:get:/repos/issues/search,3533
+train_v2_draft,oas_code,gitea:get:/repos/{owner}/{repo}/issues,3698
+train_v2_draft,oas_code,gitea:post:/repos/{owner}/{repo}/issues,3941
+train_v2_draft,oas_code,gitea:get:/repos/{owner}/{repo}/issues/pinned,3417
+train_v2_draft,oas_code,gitea:get:/repos/{owner}/{repo}/issues/comments,3420
+train_v2_draft,oas_code,gitea:get:/repos/{owner}/{repo}/issues/comments/{id},3395
+train_v2_draft,oas_code,gitea:patch:/repos/{owner}/{repo}/issues/comments/{id},3334
+train_v2_draft,oas_code,gitea:delete:/repos/{owner}/{repo}/issues/comments/{id},3294
+train_v2_draft,oas_code,gitea:get:/repos/{owner}/{repo}/issues/comments/{id}/reactions,3494
+train_v2_draft,oas_code,gitea:post:/repos/{owner}/{repo}/issues/comments/{id}/reactions,3325
+train_v2_draft,oas_code,gitea:delete:/repos/{owner}/{repo}/issues/comments/{id}/reactions,3328
+train_v2_draft,oas_code,gitea:get:/repos/{owner}/{repo}/issues/comments/{id}/assets,3358
+train_v2_draft,oas_code,gitea:post:/repos/{owner}/{repo}/issues/comments/{id}/assets,3712
+train_v2_draft,oas_code,gitea:get:/repos/{owner}/{repo}/issues/comments/{id}/assets/{attachment_id},3407
+train_v2_draft,oas_code,gitea:patch:/repos/{owner}/{repo}/issues/comments/{id}/assets/{attachment_id},3518
+train_v2_draft,oas_code,gitea:delete:/repos/{owner}/{repo}/issues/comments/{id}/assets/{attachment_id},3433
+train_v2_draft,oas_code,gitea:get:/repos/{owner}/{repo}/issues/{index},3366
+train_v2_draft,oas_code,gitea:post:/repos/{owner}/{repo}/issues/{index}/assignees,3340
+train_v2_draft,oas_code,gitea:delete:/repos/{owner}/{repo}/issues/{index}/assignees,3348
+train_v2_draft,oas_code,gitea:get:/repos/{owner}/{repo}/issues/{index}/assignees/{assignee},3419
+train_v2_draft,oas_code,gitea:get:/repos/{owner}/{repo}/issues/{index}/comments,3428
+train_v2_draft,oas_code,gitea:post:/repos/{owner}/{repo}/issues/{index}/comments,3575
+train_v2_draft,oas_code,gitea:patch:/repos/{owner}/{repo}/issues/{index}/comments/{id},3321
+train_v2_draft,oas_code,gitea:delete:/repos/{owner}/{repo}/issues/{index}/comments/{id},3302
+train_v2_draft,oas_code,gitea:get:/repos/{owner}/{repo}/issues/{index}/timeline,3548
+train_v2_draft,oas_code,gitea:get:/repos/{owner}/{repo}/issues/{index}/labels,3395
+train_v2_draft,oas_code,gitea:post:/repos/{owner}/{repo}/issues/{index}/labels,3465
+train_v2_draft,oas_code,gitea:put:/repos/{owner}/{repo}/issues/{index}/labels,3478
+train_v2_draft,oas_code,gitea:get:/repos/{owner}/{repo}/issues/{index}/times,3659
+train_v2_draft,oas_code,gitea:post:/repos/{owner}/{repo}/issues/{index}/times,3514
+train_v2_draft,oas_code,gitea:delete:/repos/{owner}/{repo}/issues/{index}/times,3507
+train_v2_draft,oas_code,gitea:post:/repos/{owner}/{repo}/issues/{index}/deadline,3509
+train_v2_draft,oas_code,gitea:post:/repos/{owner}/{repo}/issues/{index}/stopwatch/start,3418
+train_v2_draft,oas_code,gitea:post:/repos/{owner}/{repo}/issues/{index}/stopwatch/stop,3417
+train_v2_draft,oas_code,gitea:delete:/repos/{owner}/{repo}/issues/{index}/stopwatch/delete,3400
+train_v2_draft,oas_code,gitea:get:/repos/{owner}/{repo}/issues/{index}/subscriptions,3475
+train_v2_draft,oas_code,gitea:get:/repos/{owner}/{repo}/issues/{index}/subscriptions/check,3462
+train_v2_draft,oas_code,gitea:put:/repos/{owner}/{repo}/issues/{index}/subscriptions/{user},3301
+train_v2_draft,oas_code,gitea:delete:/repos/{owner}/{repo}/issues/{index}/subscriptions/{user},3288
+train_v2_draft,oas_code,gitea:get:/repos/{owner}/{repo}/issues/{index}/reactions,3495
+train_v2_draft,oas_code,gitea:post:/repos/{owner}/{repo}/issues/{index}/reactions,3318
+train_v2_draft,oas_code,gitea:delete:/repos/{owner}/{repo}/issues/{index}/reactions,3308
+train_v2_draft,oas_code,gitea:get:/repos/{owner}/{repo}/issues/{index}/assets,3346
+train_v2_draft,oas_code,gitea:post:/repos/{owner}/{repo}/issues/{index}/assets,3670
+train_v2_draft,oas_code,gitea:get:/repos/{owner}/{repo}/issues/{index}/assets/{attachment_id},3350
+train_v2_draft,oas_code,gitea:patch:/repos/{owner}/{repo}/issues/{index}/assets/{attachment_id},3507
+train_v2_draft,oas_code,gitea:delete:/repos/{owner}/{repo}/issues/{index}/assets/{attachment_id},3423
+train_v2_draft,oas_code,gitea:get:/repos/{owner}/{repo}/issues/{index}/dependencies,3691
+train_v2_draft,oas_code,gitea:post:/repos/{owner}/{repo}/issues/{index}/dependencies,3499
+train_v2_draft,oas_code,gitea:delete:/repos/{owner}/{repo}/issues/{index}/dependencies,3472
+train_v2_draft,oas_code,gitea:get:/repos/{owner}/{repo}/issues/{index}/blocks,3609
+train_v2_draft,oas_code,gitea:post:/repos/{owner}/{repo}/issues/{index}/blocks,3449
+train_v2_draft,oas_code,gitea:delete:/repos/{owner}/{repo}/issues/{index}/blocks,3465
+train_v2_draft,oas_code,gitea:get:/repos/{owner}/{repo}/labels,3334
+train_v2_draft,oas_code,gitea:post:/repos/{owner}/{repo}/labels,3513
+train_v2_draft,oas_code,gitea:get:/repos/{owner}/{repo}/labels/{id},3362
+train_v2_draft,oas_code,gitea:get:/repos/{owner}/{repo}/milestones,3414
+train_v2_draft,oas_code,gitea:post:/repos/{owner}/{repo}/milestones,3530
+train_v2_draft,oas_code,gitea:get:/repos/{owner}/{repo}/milestones/{id},3246
+train_v2_draft,oas_code,gitea:get:/packages/{owner}/{type}/{name},3505
+train_v2_draft,oas_code,gitea:get:/packages/{owner}/{type}/{name}/{version},3395
+train_v2_draft,oas_code,gitea:get:/packages/{owner}/{type}/{name}/{version}/files,3417
+train_v2_draft,oas_code,gitea:get:/packages/{owner}/{type}/{name}/-/latest,3572
+train_v2_draft,oas_code,gitea:post:/packages/{owner}/{type}/{name}/-/link/{repo_name},3657
+train_v2_draft,oas_code,gitea:post:/packages/{owner}/{type}/{name}/-/unlink,3549
+train_v2_draft,oas_code,gitea:get:/packages/{owner},3497
+train_v2_draft,oas_code,gitea:get:/user/orgs,3195
+train_v2_draft,oas_code,gitea:get:/users/{username}/orgs,3281
+train_v2_draft,oas_code,gitea:get:/users/{username}/orgs/{org}/permissions,3580
+train_v2_draft,oas_code,gitea:post:/orgs,3395
+train_v2_draft,oas_code,gitea:get:/orgs,3295
+train_v2_draft,oas_code,gitea:get:/orgs/{org},3264
+train_v2_draft,oas_code,gitea:patch:/orgs/{org},3698
+train_v2_draft,oas_code,gitea:delete:/orgs/{org},3533
+train_v2_draft,oas_code,gitea:post:/orgs/{org}/rename,3637
+train_v2_draft,oas_code,gitea:get:/orgs/{org}/repos,3216
+train_v2_draft,oas_code,gitea:post:/orgs/{org}/repos,3296
+train_v2_draft,oas_code,gitea:delete:/orgs/{org}/repos,3636
+train_v2_draft,oas_code,gitea:get:/orgs/{org}/members,3433
+train_v2_draft,oas_code,gitea:get:/orgs/{org}/members/{username},3597
+train_v2_draft,oas_code,gitea:delete:/orgs/{org}/members/{username},3724
+train_v2_draft,oas_code,gitea:get:/orgs/{org}/public_members,3346
+train_v2_draft,oas_code,gitea:get:/orgs/{org}/public_members/{username},3440
+train_v2_draft,oas_code,gitea:put:/orgs/{org}/public_members/{username},3763
+train_v2_draft,oas_code,gitea:delete:/orgs/{org}/public_members/{username},3752
+train_v2_draft,oas_code,gitea:get:/orgs/{org}/teams,3669
+train_v2_draft,oas_code,gitea:post:/orgs/{org}/teams,4015
+train_v2_draft,oas_code,gitea:get:/orgs/{org}/teams/search,3714
+train_v2_draft,oas_code,gitea:get:/orgs/{org}/labels,3474
+train_v2_draft,oas_code,gitea:post:/orgs/{org}/labels,3795
+train_v2_draft,oas_code,gitea:get:/orgs/{org}/labels/{id},3546
+train_v2_draft,oas_code,gitea:patch:/orgs/{org}/labels/{id},3815
+train_v2_draft,oas_code,gitea:delete:/orgs/{org}/labels/{id},3692
+train_v2_draft,oas_code,gitea:get:/orgs/{org}/hooks,3601
+train_v2_draft,oas_code,gitea:post:/orgs/{org}/hooks,3611
+train_v2_draft,oas_code,gitea:get:/orgs/{org}/hooks/{id},3671
+train_v2_draft,oas_code,gitea:patch:/orgs/{org}/hooks/{id},3628
+train_v2_draft,oas_code,gitea:delete:/orgs/{org}/hooks/{id},3619
+train_v2_draft,oas_code,gitea:post:/orgs/{org}/avatar,3600
+train_v2_draft,oas_code,gitea:delete:/orgs/{org}/avatar,3538
+train_v2_draft,oas_code,gitea:get:/orgs/{org}/activities/feeds,3416
+train_v2_draft,oas_code,gitea:get:/orgs/{org}/blocks,3512
+train_v2_draft,oas_code,gitea:get:/orgs/{org}/blocks/{username},3524
+train_v2_draft,oas_code,gitea:put:/orgs/{org}/blocks/{username},3517
+train_v2_draft,oas_code,gitea:delete:/orgs/{org}/blocks/{username},3529
+train_v2_draft,oas_code,gitea:patch:/teams/{id},3830
+train_v2_draft,oas_code,gitea:delete:/teams/{id},3529
+train_v2_draft,oas_code,gitea:get:/teams/{id},3504
+train_v2_draft,oas_code,gitea:get:/teams/{id}/members,3913
+train_v2_draft,oas_code,gitea:get:/teams/{id}/members/{username},3910
+train_v2_draft,oas_code,gitea:get:/teams/{id}/repos,3697
+train_v2_draft,oas_code,gitea:get:/teams/{id}/repos/{org}/{repo},3615
+train_v2_draft,oas_code,gitea:get:/teams/{id}/activities/feeds,3622
+train_v2_draft,oas_code,gitea:put:/teams/{id}/members/{username},3628
+train_v2_draft,oas_code,gitea:delete:/teams/{id}/members/{username},3592
+train_v2_draft,oas_code,gitea:put:/teams/{id}/repos/{org}/{repo},3417
+train_v2_draft,oas_code,gitea:delete:/teams/{id}/repos/{org}/{repo},3431
+train_v2_draft,oas_code,gitea:get:/admin/cron,3371
+train_v2_draft,oas_code,gitea:post:/admin/cron/{task},3292
+train_v2_draft,oas_code,gitea:get:/admin/orgs,3408
+train_v2_draft,oas_code,gitea:get:/admin/packages,3361
+train_v2_draft,oas_code,gitea:get:/admin/users,3566
+train_v2_draft,oas_code,gitea:post:/admin/users,3480
+train_v2_draft,oas_code,gitea:patch:/admin/users/{username},3597
+train_v2_draft,oas_code,gitea:delete:/admin/users/{username},3499
+train_v2_draft,oas_code,gitea:post:/admin/users/{username}/keys,3274
+train_v2_draft,oas_code,gitea:delete:/admin/users/{username}/keys/{id},3411
+train_v2_draft,oas_code,gitea:post:/admin/users/{username}/orgs,3396
+train_v2_draft,oas_code,gitea:post:/admin/users/{username}/repos,3270
+train_v2_draft,oas_code,gitea:post:/admin/users/{username}/rename,3426
+train_v2_draft,oas_code,gitea:get:/admin/users/{username}/badges,3315
+train_v2_draft,oas_code,gitea:post:/admin/users/{username}/badges,3332
+train_v2_draft,oas_code,gitea:delete:/admin/users/{username}/badges,3324
+train_v2_draft,oas_code,gitea:get:/admin/emails,3375
+train_v2_draft,oas_code,gitea:get:/admin/emails/search,3237
+train_v2_draft,oas_code,gitea:get:/admin/unadopted,3322
+train_v2_draft,oas_code,gitea:post:/admin/unadopted/{owner}/{repo},3483
+train_v2_draft,oas_code,gitea:delete:/admin/unadopted/{owner}/{repo},3449
+train_v2_draft,oas_code,gitea:get:/admin/hooks,3381
+train_v2_draft,oas_code,gitea:post:/admin/hooks,3239
+train_v2_draft,oas_code,gitea:get:/admin/hooks/{id},3346
+train_v2_draft,oas_code,gitea:patch:/admin/hooks/{id},3256
+train_v2_draft,oas_code,gitea:delete:/admin/hooks/{id},3287
+train_v2_draft,oas_code,gitea:get:/admin/actions/runners,3216
+train_v2_draft,oas_code,gitea:post:/admin/actions/runners/registration-token,3222
+train_v2_draft,oas_code,gitea:get:/admin/actions/runners/{runner_id},3244
+train_v2_draft,oas_code,gitea:delete:/admin/actions/runners/{runner_id},3237
+train_v2_draft,oas_code,gitea:patch:/admin/actions/runners/{runner_id},3239
+train_v2_draft,oas_code,gitea:get:/admin/actions/runs,3239
+train_v2_draft,oas_code,gitea:get:/admin/actions/jobs,3236
+train_v2_draft,oas_code,gitea:get:/topics/search,3280

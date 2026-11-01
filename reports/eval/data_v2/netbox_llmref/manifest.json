@@ -1,0 +1,12 @@
+{
+  "target": "netbox",
+  "prompt_version": "policy-label-v3.0.1",
+  "prompt_sha256": "d0913c27b5de185e7dd5734c111cb731f45e28ebca81fed787ff3914d02833ef",
+  "input_sha256": "911e5941fcc1aa1573dd93851eae24e91f45aded27ebd5cab460d5fdbc6b7a1e",
+  "records": 185,
+  "model": "gpt-4o-mini",
+  "temperature": 0,
+  "condition": "oas_code",
+  "reference_only": true,
+  "started_at": "2026-10-21T12:35:17.563825+00:00"
+}

@@ -1,0 +1,57 @@
+1089|manual_review_required|0.55|Change-request update returns generic rules/result without owner or authorized reviewer evidence.
+1092|manual_review_required|0.55|Group organization roles and creator email are target attributes, not a demonstrated caller requirement.
+1095|manual_review_required|0.55|Organization client_id and parent_id suggest nested accounts without verified caller tenant matching.
+1098|manual_review_required|0.55|SSO group mapping creator email describes provenance rather than authorization to inspect the mapping.
+1101|manual_review_required|0.55|User client_admin and org_roles describe the target, not necessarily the requesting user's required role.
+1104|manual_review_required|0.55|MFA reset requires bearer authentication but target client_admin fields do not prove administrator-only access.
+1107|manual_review_required|0.55|Dataset example upload has bearer authentication without dataset-owner or organization binding.
+1110|manual_review_required|0.55|Dataset deletion response organizationId belongs to a progress object and does not verify dataset tenant lookup.
+1113|manual_review_required|0.55|CRM account owner/creator are business assignment fields without a verified authorized caller relation.
+1116|manual_review_required|0.55|Action user/person references are opaque and do not establish owner-only retrieval.
+1119|manual_review_required|0.55|Email user filter and sender metadata do not resolve caller authorization over listed messages.
+1122|manual_review_required|0.55|Bulk job data exposes record/error fields without the job owner or a caller-role requirement.
+1125|manual_review_required|0.55|Carrier account_number is shipping-account data, not a verified caller ownership identifier.
+1128|manual_review_required|0.55|Script-tag account_id and write scope suggest account context but do not verify individual-versus-tenant authorization.
+1131|manual_review_required|0.55|Asset owner is an inferred property without verified lookup or reader authorization semantics.
+1134|manual_review_required|0.55|Audio collection uses view scope and share_code, but contents envelope does not specify owner or shared-access policy.
+1137|manual_review_required|0.55|Paged alerts userId filter and public_api scopes do not establish public access or caller ownership.
+1140|manual_review_required|0.55|Alert teamId suggests team scope, but acknowledgement authorization and tenant binding are unverified.
+1143|manual_review_required|0.55|Alert closing teamId and history fields do not specify who may close the team's alert.
+1146|manual_review_required|0.55|Undo acknowledgement includes users/teamId without resolving individual acknowledgement ownership versus team rights.
+1149|role_required|0.73|Conversation-preference retrieval is explicitly an admin-tagged administrative operation, beyond merely an admin-named OAuth scope.
+1152|manual_review_required|0.55|CompanyAdministrator/CompanyMonitor occur as scopes with an alternate Pin scheme, not a universally required application role.
+1155|manual_review_required|0.55|Company/user audio check-in has scope/Pin alternatives without verified self-versus-monitor authorization.
+1158|manual_review_required|0.55|Emergency audio reporting has company/user nesting but no verified caller subject or tenant binding.
+1161|manual_review_required|0.55|Ending user monitoring exposes company data and permission alternatives without resolving who may act on the user.
+1164|manual_review_required|0.55|Itinerary update has company/user nesting and alternate Pin authentication, not a proven single-role or owner rule.
+1167|manual_review_required|0.55|Folder meter values have no caller owner or tenant relationship and unknown security.
+1170|manual_review_required|0.55|Virtual tariff FolderId does not connect the folder to an authorized caller or tenant.
+1173|manual_review_required|0.55|Group settings requestAccess config describes access behavior without specifying the caller's group authorization.
+1176|manual_review_required|0.55|Organization dependency listing returns results/total only without a tenant lookup.
+1179|manual_review_required|0.55|Integration cloning references destination organization but lacks verified source/destination caller authorization.
+1182|manual_review_required|0.55|Organization integration settings contain PR assignees, not a verified caller tenant relation.
+1185|manual_review_required|0.55|Follower of authenticated user is an interpersonal relation; follower_id is not the caller and ownership lookup is absent.
+1188|manual_review_required|0.55|Me-playlist route and user_id suggest self scope, but flattened label/user identities leave the id-to-owner lookup unverified.
+1191|manual_review_required|0.55|Playlist user_id hints ownership, but inferred response fields do not verify an exclusive update right or unique lookup.
+1194|manual_review_required|0.55|Track user is flattened with id fields and no verified owner identifier for authorized updates.
+1197|manual_review_required|0.55|Track favoriters require ClientId; user plan fields are output attributes, not a caller membership requirement.
+1200|manual_review_required|0.55|Playlist persona/show filters and pagination do not establish caller ownership or a concrete role.
+1203|manual_review_required|0.55|Product nutrition details require an API key without affirmative unrestricted access or specified membership tier.
+1206|manual_review_required|0.55|Meal-plan template username/hash imply account context but no verified caller-name binding or lookup semantics.
+1209|manual_review_required|0.55|Analyzed recipe instructions require API authentication without a public declaration or caller-specific policy.
+1212|manual_review_required|0.55|TeamID names a sports team, not an application tenant; API access policy is otherwise unspecified.
+1215|manual_review_required|0.55|Player-stat TeamID is sporting context rather than caller tenancy, and no required tier is supplied.
+1218|manual_review_required|0.55|Historical memberships describe players joining teams, not the caller's subscription or tenant authorization.
+1221|manual_review_required|0.55|Artist catalog data uses OAuth but has no affirmative unrestricted-access or caller-policy statement.
+1224|manual_review_required|0.55|Me playback is caller-scoped but device_id ownership cannot be resolved from playback-body fields; scope is not a role.
+1227|manual_review_required|0.55|Creating a comment with write_access does not require ownership of the parent post; new-comment owner fields cannot authorize that parent.
+1230|manual_review_required|0.55|Inbox read scope and user route imply private access, but inbox items lack a caller-owner lookup for the path user.
+1233|manual_review_required|0.55|Retrieved privileges/reputation describe the target user, not a concrete required caller role or membership tier.
+1236|manual_review_required|0.55|User top-question attribution and community ownership do not establish owner-only reading or explicit public access.
+1239|manual_review_required|0.55|Twitter report creation uses API key without a specified caller role, tier or report owner relation.
+1242|manual_review_required|0.55|Legal entity tenant_id suggests tenancy, but inferred fields do not verify caller tenant matching for updates.
+1245|manual_review_required|0.55|Administration legal_entity_id provides business linkage without verified caller-tenant authorization.
+1248|manual_review_required|0.55|Campaign resume has sender/segment IDs and alternative auth schemes but no owner or role requirement.
+1251|manual_review_required|0.55|Channel grants, creator, members and teams imply configurable shared permissions rather than proven creator-only deletion.
+1254|manual_review_required|0.55|Channel-call creation provider denotes a call service, not caller tenant; channel access requirements are absent.
+1257|manual_review_required|0.55|External bank account has account/customer links without verified caller account semantics or lookup binding.

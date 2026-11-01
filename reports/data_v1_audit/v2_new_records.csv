@@ -1,0 +1,8 @@
+group,N,public,role_required,membership_required,tenant_match,owner_match,owner_or_admin,manual_review_required
+Gitea 라벨 원본 455,455,61,37,9,2,36,85,225
+Gitea train_v2_draft 포함 371(visibility override·owner_or_admin pool 후),371,12,37,8,0,36,0,278
+Gitea 구체 label(draft 내),93,12,37,8,0,36,0,0
+합성 보강 129(변형 57 + 신규 4종 72),129,8,12,18,12,12,21,46
+  └ 변형 authonly/extauth(manual 설계),38,0,0,0,0,0,0,38
+  └ 변형 extguard(구체 대조군),19,0,4,2,4,4,5,0
+  └ 신규 4종(Django/Nest/Gin/Rails),72,8,8,16,8,8,16,8

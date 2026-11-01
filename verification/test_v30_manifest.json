@@ -1,0 +1,64 @@
+{
+  "created_at": "2026-10-21T08:54:03.728410+00:00",
+  "base_test_sha256": "bd22c2580c2ddc2154974f76aa9e7aa2ca30bc6f8434e4960f3d3966093977fa",
+  "test_v30_sha256": "9bd47216575afc602b03afa20e617308dd9a97476c94e67a117eb17009afd5e2",
+  "records": 269,
+  "base_records": 253,
+  "added_records": 16,
+  "relabelled_ids": [
+    "beacon_iot_subscription_0",
+    "beacon_iot_subscription_1",
+    "folio_wiki_subscription_0",
+    "folio_wiki_subscription_1",
+    "quill_blog_subscription_0",
+    "quill_blog_subscription_1"
+  ],
+  "relabel_reason": "intended membership_required means premium plan (subscription tier); v3.0 defines membership_required as target group/team membership, so the record is manual_review_required (user decision 2026-10-21)",
+  "added_service": "summit_club",
+  "added_service_files_sha256": {
+    "datasets/blade/raw/synthetic/summit_club/__pycache__/app.cpython-311.pyc": "17071dc9829464dae505d05273fff0f1d39fb718c0f07089e7da4afbf7739ddc",
+    "datasets/blade/raw/synthetic/summit_club/app.py": "174604e6cc66b657c73efe5bc96e422efa4377ffc8c4bbd633857538129b5e83",
+    "datasets/blade/raw/synthetic/summit_club/Dockerfile": "cbc2d12679faded9204f584b7a6f1ebbaec0db0d6b18167325f3556911971337",
+    "datasets/blade/raw/synthetic/summit_club/export_openapi.py": "1b2a0626b86269353e641f4a9ebd03c9316ad283f49d1130d80fe681d86fc43c",
+    "datasets/blade/raw/synthetic/summit_club/intended_labels.yaml": "7339eece6b2d6e52dc5e74c6adee481de493fbf8ce160eaaccdb6961bc48daeb",
+    "datasets/blade/raw/synthetic/summit_club/model.py": "7cd7f8a36c9dde62ab851f94a65adfa1ce1973cac44c1a6a10b6ce8932b9eba3",
+    "datasets/blade/raw/synthetic/summit_club/openapi.json": "47dac0d2aeb9b69f2aa3a7657710b05b07aa0ce0eced4b650630de07a20b14d6",
+    "datasets/blade/raw/synthetic/summit_club/README.md": "b1f011d844a9b0a63a6c15b038943cd1120a540afbec6c5dbd2724035e0569c9",
+    "datasets/blade/raw/synthetic/summit_club/requirements.txt": "ed58f33ba0120a0986bdabd19a6be0c75ece9f7187abae199fadc122177a4879",
+    "datasets/blade/raw/synthetic/summit_club/schema.sql": "ec09d9fd307c4bde316f1a174122026caec71c3524a4da0c1cebe9bbc3e9f995"
+  },
+  "label_by_source": {
+    "manual_review_required": {
+      "vuln": 1,
+      "synthetic": 14
+    },
+    "membership_required": {
+      "vuln": 0,
+      "synthetic": 4
+    },
+    "owner_match": {
+      "vuln": 106,
+      "synthetic": 8
+    },
+    "owner_or_admin": {
+      "vuln": 3,
+      "synthetic": 8
+    },
+    "public": {
+      "vuln": 58,
+      "synthetic": 8
+    },
+    "role_required": {
+      "vuln": 43,
+      "synthetic": 8
+    },
+    "tenant_match": {
+      "vuln": 0,
+      "synthetic": 8
+    }
+  },
+  "byte_identical_policy": "all lines except the 6 relabelled records are the original test.jsonl bytes; summit_club records appended at the end",
+  "group_membership_semantics": "v3.0: (caller_id, record.group_id) in memberships",
+  "human_confirmed": false,
+  "frozen": true
+}

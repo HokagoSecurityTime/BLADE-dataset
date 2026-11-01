@@ -1,0 +1,273 @@
+{
+ "total": 432,
+ "labeled": 412,
+ "excluded": 20,
+ "by_rule": {
+  "G6_hold_visibility_branch": 46,
+  "G3_group_role": 73,
+  "G2_membership_self_action": 6,
+  "G2_membership_row": 13,
+  "G5_owner_or_room_role": 3,
+  "G6_hold_setting_dependent_visibility_branch": 4,
+  "G4_self_target": 83,
+  "G7_anonymous": 28,
+  "G3_global_role": 45,
+  "G6_hold_setting_dependent": 27,
+  "G5_owner_or_global_role": 1,
+  "G6_auth_only": 17,
+  "G6_hold_compound_and": 8,
+  "G5_owner_or_privileged": 48,
+  "G4_owner_field": 2,
+  "G5_owner_with_superuser_bypass": 3,
+  "G6_hold_compound_and_visibility_branch": 5
+ },
+ "excluded_reasons": {
+  "ambiguous:event_auth_power_level_dependent": 6,
+  "ambiguous:role_or_self_after_membership_row": 1,
+  "check_unlocated": 3,
+  "ambiguous:setting_with_self_target": 2,
+  "ambiguous:group_role,membership_row,self_target": 2,
+  "ambiguous:owner_or_privileged_with_membership_row": 1,
+  "ambiguous:membership_and_or_global_role": 1,
+  "ambiguous:global_role,group_role,owner_field": 2,
+  "conflict:anonymous_with_owner_field": 1,
+  "ambiguous:membership_row,owner_field": 1
+ },
+ "selection": {
+  "dendrite": {
+   "candidates": 136,
+   "rule_labeled": 125,
+   "excluded": {
+    "ambiguous": 8,
+    "check_unlocated": 3
+   },
+   "available": {
+    "role_required": 21,
+    "owner_match": 51,
+    "manual_review_required": 29,
+    "public": 13,
+    "membership_required": 7,
+    "owner_or_admin": 4
+   },
+   "selected": 125,
+   "selected_dist": {
+    "public": 13,
+    "role_required": 21,
+    "membership_required": 7,
+    "owner_match": 51,
+    "owner_or_admin": 4,
+    "manual_review_required": 29
+   }
+  },
+  "nodebb": {
+   "candidates": 146,
+   "rule_labeled": 139,
+   "excluded": {
+    "ambiguous": 7
+   },
+   "available": {
+    "role_required": 46,
+    "owner_or_admin": 18,
+    "manual_review_required": 44,
+    "membership_required": 11,
+    "owner_match": 15,
+    "public": 5
+   },
+   "selected": 139,
+   "selected_dist": {
+    "public": 5,
+    "role_required": 46,
+    "membership_required": 11,
+    "owner_match": 15,
+    "owner_or_admin": 18,
+    "manual_review_required": 44
+   }
+  },
+  "taiga": {
+   "candidates": 150,
+   "rule_labeled": 148,
+   "excluded": {
+    "conflict": 1,
+    "ambiguous": 1
+   },
+   "available": {
+    "manual_review_required": 34,
+    "role_required": 51,
+    "owner_or_admin": 33,
+    "owner_match": 19,
+    "public": 10,
+    "membership_required": 1
+   },
+   "selected": 148,
+   "selected_dist": {
+    "public": 10,
+    "role_required": 51,
+    "membership_required": 1,
+    "owner_match": 19,
+    "owner_or_admin": 33,
+    "manual_review_required": 34
+   }
+  }
+ },
+ "comment_family": {
+  "total": 20,
+  "kept": [
+   "v5-taiga-20c9fa16ab",
+   "v5-taiga-3480959392",
+   "v5-taiga-426661246e",
+   "v5-taiga-48eab61a34",
+   "v5-taiga-7efc52eaf5",
+   "v5-taiga-96a24a3801",
+   "v5-taiga-abaeb2806c",
+   "v5-taiga-d2badb5cbe",
+   "v5-taiga-f598ea7ee0",
+   "v5-taiga-fb3b854b63"
+  ],
+  "dropped": [
+   "v5-taiga-40da19996f",
+   "v5-taiga-43816bd148",
+   "v5-taiga-88e0fd6096",
+   "v5-taiga-a30893cd10",
+   "v5-taiga-a54a1e2c90",
+   "v5-taiga-abeabf0918",
+   "v5-taiga-d961c1b136",
+   "v5-taiga-dbfb0cf02d",
+   "v5-taiga-f28c32ff8a",
+   "v5-taiga-fc3e16f41a"
+  ]
+ },
+ "manual_quota": {
+  "concrete": 295,
+  "manual_available": 107,
+  "target": 33,
+  "subtype_available": {
+   "G6_auth_only": 17,
+   "G6_hold_compound_and": 8,
+   "G6_hold_compound_and_visibility_branch": 5,
+   "G6_hold_setting_dependent": 27,
+   "G6_hold_setting_dependent_visibility_branch": 4,
+   "G6_hold_visibility_branch": 46
+  },
+  "subtype_quota": {
+   "G6_auth_only": 5,
+   "G6_hold_compound_and": 3,
+   "G6_hold_compound_and_visibility_branch": 2,
+   "G6_hold_setting_dependent": 8,
+   "G6_hold_setting_dependent_visibility_branch": 1,
+   "G6_hold_visibility_branch": 14
+  },
+  "dropped": [
+   "v5-dendrite-11ef32658d",
+   "v5-dendrite-1d16352c84",
+   "v5-dendrite-22cac46328",
+   "v5-dendrite-2f342d1020",
+   "v5-dendrite-4583f2b0fe",
+   "v5-dendrite-719f326883",
+   "v5-dendrite-75a2c0926e",
+   "v5-dendrite-7647c795ca",
+   "v5-dendrite-768cc2979a",
+   "v5-dendrite-776277de96",
+   "v5-dendrite-77fc297b9a",
+   "v5-dendrite-799a00152e",
+   "v5-dendrite-7fe1ef6d3f",
+   "v5-dendrite-a316b47872",
+   "v5-dendrite-aca87ca3ab",
+   "v5-dendrite-ba798d56f6",
+   "v5-dendrite-cab2d9ef1f",
+   "v5-dendrite-d5c145f4ca",
+   "v5-dendrite-da62316c42",
+   "v5-dendrite-dbc56b433d",
+   "v5-nodebb-02bca3566f",
+   "v5-nodebb-0468eb82b6",
+   "v5-nodebb-24d796407a",
+   "v5-nodebb-2b04967d5f",
+   "v5-nodebb-31438c520a",
+   "v5-nodebb-40ae26eeb4",
+   "v5-nodebb-4cb5021d2f",
+   "v5-nodebb-556cbd84e9",
+   "v5-nodebb-751c20be17",
+   "v5-nodebb-7ac1e30e7e",
+   "v5-nodebb-7ccf2d6a0f",
+   "v5-nodebb-7e9fec2843",
+   "v5-nodebb-83c1baf667",
+   "v5-nodebb-89a3bf1887",
+   "v5-nodebb-8c402c2545",
+   "v5-nodebb-92a778d1e8",
+   "v5-nodebb-950f54be66",
+   "v5-nodebb-9a946f3769",
+   "v5-nodebb-a9f434a6eb",
+   "v5-nodebb-af1f7086e1",
+   "v5-nodebb-b2f1118dbf",
+   "v5-nodebb-b7de74b323",
+   "v5-nodebb-c87a0a49f2",
+   "v5-nodebb-d35de8dbf8",
+   "v5-nodebb-d3cbdc7ab3",
+   "v5-nodebb-dd920ba5b2",
+   "v5-nodebb-dfd2db24da",
+   "v5-nodebb-dff43c7b42",
+   "v5-nodebb-e252fad18f",
+   "v5-nodebb-f6a51ddbc2",
+   "v5-taiga-03a13dcc57",
+   "v5-taiga-072834fdeb",
+   "v5-taiga-148028b46c",
+   "v5-taiga-36093595b5",
+   "v5-taiga-3bfcd12c2d",
+   "v5-taiga-3cb0434e69",
+   "v5-taiga-41ab3a4fb0",
+   "v5-taiga-45769f7adc",
+   "v5-taiga-4d5df24059",
+   "v5-taiga-5f278ef86d",
+   "v5-taiga-67d8a6c89e",
+   "v5-taiga-875a323427",
+   "v5-taiga-97da23d4c5",
+   "v5-taiga-9d4e41876c",
+   "v5-taiga-9dd184b5d8",
+   "v5-taiga-b120ad4ba2",
+   "v5-taiga-b126d1b76d",
+   "v5-taiga-bc2cd889d9",
+   "v5-taiga-bda35d89b0",
+   "v5-taiga-c140d4ea0b",
+   "v5-taiga-de2111dd6e",
+   "v5-taiga-dfc0aef168",
+   "v5-taiga-f90a51046a",
+   "v5-taiga-f9990a0227"
+  ]
+ },
+ "pool": 84,
+ "selected_total": 328,
+ "selected_dist": {
+  "role_required": 118,
+  "owner_match": 85,
+  "manual_review_required": 33,
+  "public": 28,
+  "membership_required": 19,
+  "owner_or_admin": 45
+ },
+ "selected_by_project": {
+  "dendrite": {
+   "role_required": 21,
+   "owner_match": 51,
+   "manual_review_required": 9,
+   "public": 13,
+   "membership_required": 7,
+   "owner_or_admin": 4
+  },
+  "nodebb": {
+   "role_required": 46,
+   "owner_or_admin": 18,
+   "manual_review_required": 14,
+   "membership_required": 11,
+   "owner_match": 15,
+   "public": 5
+  },
+  "taiga": {
+   "manual_review_required": 10,
+   "role_required": 51,
+   "owner_or_admin": 23,
+   "owner_match": 19,
+   "public": 10,
+   "membership_required": 1
+  }
+ },
+ "manual_ratio": 0.1006
+}
