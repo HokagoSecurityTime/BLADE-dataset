@@ -34,10 +34,14 @@
 | Label Studio | https://github.com/HumanSignal/label-studio | `1.23.2` · `df96d79183156e556d91825d15fa7721f1145e1a` | Apache-2.0 | data-v4·v5 train/val |
 | Dendrite | https://github.com/matrix-org/dendrite | `v0.13.8` · `763c79f1421200c3fd74401fd68298bc00ecefbc` | Apache-2.0 | data-v5 train/val (meta.tag 오기는 DATA_CARD Errata 참조) |
 | Taiga (taiga-back) | https://github.com/taigaio/taiga-back | `6.10.2` · `4b023d8414fc675780c6aae9d541b538c5c71369` | MPL-2.0 | data-v5 train/val. MPL-2.0 3.1·3.2항에 따라 발췌 파일의 출처(저장소·커밋·파일·줄)를 레코드 meta에 기록했습니다 |
-| Chatwoot (`enterprise/` 제외) | https://github.com/chatwoot/chatwoot | `v4.19.1` · `caab07a8f00032d5205b5a5d7e2eb0ba2f3d2d82` | MIT | test_v31_supp (79). 후보 파일 `data/raw_v4/chatwoot/candidates.jsonl`은 공개, 동결 test 파일은 비공개(아래 3절 Flowise 사유) |
-| Rocket.Chat (`apps/meteor/ee/`·`ee/` 제외) | https://github.com/RocketChat/Rocket.Chat | `8.9.0` · `057a927d903c83b5d61cf236d650c4500ebb4b66` | MIT | test_v5 (157) |
-| Ghost | https://github.com/TryGhost/Ghost | `v6.73.0` · `5794cfd8daca61fd60cd8659acd6591ece3b7956` | MIT | test_v5 (69) |
-| Umami | https://github.com/umami-software/umami | `v3.4.1` · `559e3c607c23d2c72d9bd4f6481bda428255323c` | MIT | test_v5 (57) |
+| Chatwoot (`enterprise/` 제외) | https://github.com/chatwoot/chatwoot | `v4.19.1` · `caab07a8f00032d5205b5a5d7e2eb0ba2f3d2d82` | MIT | test_v31_supp (79). 후보 파일 `data/raw_v4/chatwoot/candidates.jsonl`은 공개, 동결 test 파일은 비공개(아래 3절 Flowise 사유). data-v7부터 train(78, `train_v7_public`에 코드 포함) |
+| Rocket.Chat (`apps/meteor/ee/`·`ee/` 제외) | https://github.com/RocketChat/Rocket.Chat | `8.9.0` · `057a927d903c83b5d61cf236d650c4500ebb4b66` | MIT | test_v5 (157); data-v7부터 train(155) |
+| Ghost | https://github.com/TryGhost/Ghost | `v6.73.0` · `5794cfd8daca61fd60cd8659acd6591ece3b7956` | MIT | test_v5 (69); data-v7부터 train |
+| Umami | https://github.com/umami-software/umami | `v3.4.1` · `559e3c607c23d2c72d9bd4f6481bda428255323c` | MIT | test_v5 (57); data-v7부터 train |
+| seahub (Seafile) | https://github.com/haiwen/seahub | `v14.0.9-server` · `0841826c` | Apache-2.0 | test_v6 (92) |
+| Redash | https://github.com/getredash/redash | `v26.9.0` · `42fdf9d4` | BSD-2-Clause | test_v6 (72) |
+| GlitchTip backend | https://gitlab.com/glitchtip/glitchtip-backend | `v6.2.6` · `d3039088` | MIT | test_v6 (70) |
+| Penpot | https://github.com/penpot/penpot | `2.18.5` · `f4456696` | MPL-2.0 | test_v6 (55). MPL-2.0 3.1·3.2항에 따라 발췌 파일의 출처(저장소·커밋·파일·줄)를 레코드 meta에 기록했습니다 |
 | EMB / WFD 벤치마크 Java 서비스(`datasets/blade/raw/source_pilot_wfd/`) | 각 폴더의 LICENSE 참조 | - | Apache-2.0 | 조건 추출 실험 fixture |
 | `datasets/blade/raw/external_conditions_v1/`, `external_paired_v29/`, `paired_policy_v1/`, `adapter_v3_holdout/` | 각 폴더의 LICENSE·README 참조 | - | 각 폴더 LICENSE | 어댑터 실험 fixture |
 
@@ -46,16 +50,16 @@
 | 출처 | 저장소 | 커밋 | 라이선스 | 처리 |
 |---|---|---|---|---|
 | DVWS-node (snoopysecurity) | https://github.com/snoopysecurity/dvws-node | `eb6e2886f2206b88bf709fe1fa311adc3ae3c34f` | GPL-3.0 | test_v30 25건: 공개 사본에서 `controller_text` 비움, `withheld_manifest.json`으로 복원 |
-| NodeBB | https://github.com/NodeBB/NodeBB | `v4.16.5` · `c3d8dc512292a376f19e06cb93512bdff2505102` | GPL-3.0 | data-v5 109건(train 98 · val 11): 코드 비움, `data_v5/train_v5_manifest.json`·`withheld_manifest.json` |
+| NodeBB | https://github.com/NodeBB/NodeBB | `v4.16.5` · `c3d8dc512292a376f19e06cb93512bdff2505102` | GPL-3.0 | data-v5·v7 109건(train 98 · val 11): 코드 비움, `data_v5/train_v5_manifest.json`·`withheld_manifest.json` |
 | RealWorld Node/Express | https://github.com/gothinkster/node-express-realworld-example-app | `30b68e1e881462b2f4164ea09ab4c4f5699c7b0b` | 미선언 | 코드 쌍 6건 코드 비움 |
 | RealWorld Rails | https://github.com/gothinkster/rails-realworld-example-app | `a2ae4fff78b3337683cea988c023281dcb5551b9` | 미선언 | 코드 쌍 6건 코드 비움 |
 | RealWorld NestJS (adr1enbe4udou1n) | https://github.com/adr1enbe4udou1n/nestjs-realworld-example-app | `d4ddf3fd9ebd9112f117c0c6b2c5de3a76815c0c` | 미선언 | 코드 쌍 6건 코드 비움 |
 | RealWorld Kotlin Spring | https://github.com/gothinkster/kotlin-spring-realworld-example-app | `848c29e3abfe1bd72001cc7d7a3227aebec96e9b` | 미선언 | 코드 쌍 6건 코드 비움 |
 | RealWorld Koa | https://github.com/gothinkster/koa-knex-realworld-example | `602e234139c453825eb3939cf24bdf00fc164e0e` | 미선언 | 코드 쌍 4건 코드 비움 |
-| Chamilo LMS | https://github.com/chamilo/chamilo-lms | `v2.0.0-RC.2` · `296654b9ce0e9b8d466808340a31c2666b9fc042` | GPL-3.0-or-later | test_v31_supp 58건: manifest 링크만, 후보 파일 미포함 |
-| Flowise | https://github.com/FlowiseAI/Flowise | `flowise@3.0.13` · `f0c1294173a55f26e0b972c39c0c16917f5ca9e7` | Apache-2.0, 단 발췌 53/60건이 `packages/server/src/enterprise/`(FlowiseAI 상용 라이선스) 포함 | test_v31_supp 60건: 링크만 |
-| Generic University (InsiderPhD) | https://github.com/InsiderPhD/Generic-University | `50dfa924b3a31d30c6d6c20373bc9f4dced8aac8` | 미선언 | test_v31_supp 21건: 링크만 |
-| cloud-security-multitenant-lab | https://github.com/RimaBenJaballah/cloud-security-multitenant-lab | `a428c4f85d479c932f49323ebc9b8c5e7e47f8fc` | 미선언 | test_v31_supp 4건: 링크만 |
+| Chamilo LMS | https://github.com/chamilo/chamilo-lms | `v2.0.0-RC.2` · `296654b9ce0e9b8d466808340a31c2666b9fc042` | GPL-3.0-or-later | test_v31_supp 58건: manifest 링크만, 후보 파일 미포함. data-v7 train 사본(`train_v7_public`)에서도 코드 비움(복원 규칙 없음, 링크·SHA만) |
+| Flowise | https://github.com/FlowiseAI/Flowise | `flowise@3.0.13` · `f0c1294173a55f26e0b972c39c0c16917f5ca9e7` | Apache-2.0, 단 발췌 53/60건이 `packages/server/src/enterprise/`(FlowiseAI 상용 라이선스) 포함 | test_v31_supp 60건: 링크만. data-v7 train 사본에서도 코드 비움(50건은 복원 규칙 없음) |
+| Generic University (InsiderPhD) | https://github.com/InsiderPhD/Generic-University | `50dfa924b3a31d30c6d6c20373bc9f4dced8aac8` | 미선언 | test_v31_supp 21건: 링크만. data-v7 train 사본에서도 코드 비움 |
+| cloud-security-multitenant-lab | https://github.com/RimaBenJaballah/cloud-security-multitenant-lab | `a428c4f85d479c932f49323ebc9b8c5e7e47f8fc` | 미선언 | test_v31_supp 4건: 링크만. data-v7 train 사본에서도 코드 비움 |
 | vAPI (roottusk) · Damn Vulnerable RESTaurant (theowni) | https://github.com/roottusk/vapi · https://github.com/theowni/Damn-Vulnerable-RESTaurant-API-Game | `67152695…` · `d32d0997…` | GPL-3.0 | 후보 조사만(동결 셋 미포함). 후보 파일 미포함 |
 
 ## 4. 제외한 출처
@@ -64,4 +68,4 @@ AGPL-3.0 프로젝트(launchbadge/realworld-axum-sqlx, Mattermost, Plane, Mastod
 
 ## 5. 라벨 생성에 쓴 모델
 
-APIs.guru 구간의 train 라벨은 OpenAI `gpt-4o-mini`(프롬프트 v3.0.1)로 생성했고, 코드 구간은 코드 규칙(`training/data/rule_label_v4.py`, `rule_label_v5.py`)과 사람 검수로 확정했습니다. 베이스라인·파인튜닝 베이스 모델은 Qwen2.5-7B-Instruct(Apache-2.0)입니다. 모델 가중치는 이 저장소에 없습니다.
+APIs.guru 구간의 train 라벨은 OpenAI `gpt-4o-mini`(프롬프트 v3.0.1)로 생성했고, 코드 구간은 코드 규칙(`training/data/rule_label_v4.py`, `rule_label_v5.py`)과 사람 검수로 확정했습니다. data-v7의 LLM 라벨 615행은 Claude(Anthropic)로 재판정했고(안내문 `datasets/blade/processed/data_v7/rejudge/REJUDGE_GUIDE.md`), test_v5·test_v6 정답은 AI(Claude) 1차 판정 + 사람 확인(test_v5) / A안(test_v6, DATA_CARD 참조)입니다. 베이스라인·파인튜닝 베이스 모델은 Qwen2.5-7B-Instruct(Apache-2.0)입니다. 모델 가중치는 이 저장소에 없고 프로젝트 저장소 Release `lora-v7`에 있습니다.

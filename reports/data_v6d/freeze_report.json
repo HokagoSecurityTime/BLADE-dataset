@@ -1,0 +1,245 @@
+{
+ "stats": {
+  "train": {
+   "rows": 1274,
+   "unchanged_lines": 1238,
+   "changed": 36,
+   "labels_v5": {
+    "owner_match": 447,
+    "tenant_match": 83,
+    "role_required": 326,
+    "manual_review_required": 163,
+    "public": 82,
+    "membership_required": 77,
+    "owner_or_admin": 96
+   },
+   "labels_v6d": {
+    "owner_match": 425,
+    "tenant_match": 83,
+    "role_required": 351,
+    "manual_review_required": 161,
+    "public": 82,
+    "membership_required": 75,
+    "owner_or_admin": 97
+   },
+   "manual_ratio_v5": 0.1279,
+   "manual_ratio_v6d": 0.1264,
+   "tokens_max_recount": 4085,
+   "over_4096": []
+  },
+  "val": {
+   "rows": 179,
+   "unchanged_lines": 173,
+   "changed": 6,
+   "labels_v5": {
+    "public": 13,
+    "role_required": 50,
+    "owner_match": 45,
+    "manual_review_required": 42,
+    "tenant_match": 8,
+    "membership_required": 8,
+    "owner_or_admin": 13
+   },
+   "labels_v6d": {
+    "public": 14,
+    "role_required": 52,
+    "owner_match": 46,
+    "manual_review_required": 39,
+    "tenant_match": 8,
+    "membership_required": 7,
+    "owner_or_admin": 13
+   },
+   "manual_ratio_v5": 0.2346,
+   "manual_ratio_v6d": 0.2179,
+   "tokens_max_recount": 4023,
+   "over_4096": []
+  }
+ },
+ "changes_summary": {
+  "label_changes": 36,
+  "rationale_replaced": 42,
+  "rows_touched": 42,
+  "by_sheet": {
+   "판정필요_코드": 4,
+   "변경예상_C2": 38
+  },
+  "label_shift": {
+   "owner_match->role_required": 23,
+   "manual_review_required->role_required": 5,
+   "membership_required->manual_review_required": 2,
+   "manual_review_required->owner_match": 2,
+   "manual_review_required->owner_or_admin": 1,
+   "owner_match->manual_review_required": 1,
+   "role_required->public": 1,
+   "membership_required->owner_match": 1
+  },
+  "by_project": {
+   "gitea": 36
+  },
+  "path_refs_stripped": [
+   "gitea:get:/orgs/{org}/members",
+   "gitea:get:/repos/{owner}/{repo}/issues/{index}/times",
+   "gitea:get:/repos/{owner}/{repo}/subscription",
+   "gitea:post:/repos/{owner}/{repo}/transfer"
+  ],
+  "prior_reviewed_changed": [
+   {
+    "id": "gitea:get:/teams/{id}/repos",
+    "prior": "data-v2 사람 검수(시트 A, 태그 ['VIS']): membership_required — review_sheet_reviewed.xlsx sheet A: VIS. reqTeamReadAccess: org owner/site admin 통과, 팀이 비멤버에게 공개면 통과, 아니면",
+    "to": "manual_review_required",
+    "evidence": "reqTeamReadAccess: privileged 통과 OR CanNonMemberReadMeta(가시성) 통과 OR 팀 멤버(denyNonTeamMember)"
+   }
+  ],
+  "draft_rejected": [
+   {
+    "id": "gitea:get:/user/hooks/{id}",
+    "draft": "owner_or_admin",
+    "final": "owner_match",
+    "memo": "확신도 중 / 초안 수용 N"
+   }
+  ],
+  "oas_candidates": 21,
+  "synthetic_english_kept": [
+   "atlas_leases_council_1",
+   "atlas_leases_council_0",
+   "relay_forum_council_0"
+  ]
+ },
+ "integrity": {
+  "changed_rows": {
+   "hold_in_concrete": [],
+   "meta": [],
+   "filepath": [],
+   "label_in_rationale_missing": []
+  },
+  "full_set": {
+   "v5": {
+    "hold_in_concrete": 0,
+    "meta": 0,
+    "filepath": 0
+   },
+   "v6d": {
+    "hold_in_concrete": 0,
+    "meta": 0,
+    "filepath": 0
+   }
+  },
+  "user_byte_identical": true,
+  "unchanged_lines_byte_identical": true,
+  "over_4096": [],
+  "tokens_max_recount": 4085,
+  "stale_token_field_v5": {
+   "n": 69,
+   "note": "gitea rows; data-v5 tokens field counted before the data-v3.1 meta cleanup; not used by training (run_train re-tokenises)"
+  }
+ },
+ "blind_audit": {
+  "reviewer": [
+   "Claude(AI)"
+  ],
+  "overall": {
+   "n": 68,
+   "mismatch": 28,
+   "rate": 0.4118,
+   "to_manual": 24
+  },
+  "by_kind": {
+   "코드": {
+    "n": 47,
+    "mismatch": 12,
+    "rate": 0.2553,
+    "to_manual": 9
+   },
+   "OAS-only": {
+    "n": 21,
+    "mismatch": 16,
+    "rate": 0.7619,
+    "to_manual": 15
+   }
+  },
+  "by_source": {
+   "APIs.guru": {
+    "n": 21,
+    "mismatch": 16,
+    "rate": 0.7619,
+    "to_manual": 15
+   },
+   "오픈소스 프로젝트": {
+    "n": 36,
+    "mismatch": 9,
+    "rate": 0.25,
+    "to_manual": 6
+   },
+   "합성": {
+    "n": 11,
+    "mismatch": 3,
+    "rate": 0.2727,
+    "to_manual": 3
+   }
+  },
+  "human_reviewed_rows": {
+   "n": 10,
+   "mismatch": 4,
+   "rate": 0.4,
+   "to_manual": 3
+  },
+  "confidence": {
+   "확신도 중": 21,
+   "확신도 상": 47
+  },
+  "transitions": {
+   "owner_match->manual_review_required": 8,
+   "tenant_match->manual_review_required": 5,
+   "role_required->manual_review_required": 5,
+   "owner_or_admin->manual_review_required": 3,
+   "public->manual_review_required": 2,
+   "tenant_match->owner_match": 1,
+   "owner_or_admin->owner_match": 1,
+   "manual_review_required->tenant_match": 1,
+   "manual_review_required->public": 1,
+   "membership_required->manual_review_required": 1
+  },
+  "rule": "사전 기록: 불일치율 > 5%면 한계로 기록, 전수 검수는 마감(2026-11-08 12:00 KST) 후",
+  "exceeds_5pct": true,
+  "applied_to_data": false
+ },
+ "outputs": {
+  "datasets/blade/processed/train_v6d.jsonl": {
+   "sha256": "aed2b275a76fa684e426a656fb04b1c934a29bc987f45a146fe1c244ced4d372",
+   "rows": 1277
+  },
+  "datasets/blade/processed/val_v6d.jsonl": {
+   "sha256": "159e01780eb2d8aa1710146d2c06533c20c81920a828a60b889ec6db221361cf",
+   "rows": 180
+  },
+  "training/lora/data_v6d/train_sft_v6d.jsonl": {
+   "sha256": "63c1768949a0e8c7f0747712c6a55e4fb492e1d03baeddfa111884f31ff65b98",
+   "rows": 1274
+  },
+  "training/lora/data_v6d/val_sft_v6d.jsonl": {
+   "sha256": "1a421c836032ff3c611f3a74380b519374393deb44519c1772db8049d7d671ee",
+   "rows": 179
+  },
+  "training/lora/data_v6d/data_v6d_hashes.json": {
+   "sha256": "82efda868e7bde511d0838e10bf0e8a5cc3e6aae577c68b15fcbf370a9d94b53",
+   "rows": null
+  },
+  "training/lora/data_v6d/test_v5_inputs.jsonl": {
+   "sha256": "9103cd3d5276ab425f577a2866291bf8e27e7a06a18bd725701989673dbe5d82",
+   "rows": 283
+  },
+  "reports/data_v6d/c1_changes.jsonl": {
+   "sha256": "6258a226a04fa03cbfbe2248ce6a2cec73109d52c20966256db118f9ec5442a4",
+   "rows": 42
+  },
+  "reports/data_v6d/c1_blind_audit.json": {
+   "sha256": "882fcb5a9af3a2b0097bc6ef7ab6ac4def052dbf02dd52e679c710759a393006",
+   "rows": null
+  },
+  "reports/data_v6d/oas_relabel_candidates_post_deadline.jsonl": {
+   "sha256": "bac1d5260a86489e4040fb90121349933cf83bf7d331ac936a27880bc685a8c9",
+   "rows": 21
+  }
+ },
+ "hashes_file_sha256": "82efda868e7bde511d0838e10bf0e8a5cc3e6aae577c68b15fcbf370a9d94b53"
+}

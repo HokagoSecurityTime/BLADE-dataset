@@ -1,0 +1,99 @@
+{
+ "name": "redash_g1b_boundary",
+ "created": "2026-11-03",
+ "purpose": "S9 보고에서 따로 집계할 Redash G1-b 경계 레코드(@require_admin + current_org → tenant_match 초안). 초안 기준이며 사람 확정 label은 동결본을 따른다.",
+ "g1b_require_admin": [
+  {
+   "id": "v6t-redash-c6736b5d1e",
+   "method": "POST",
+   "path": "/api/data_sources/{data_source_id}"
+  },
+  {
+   "id": "v6t-redash-b2e5b8a8de",
+   "method": "POST",
+   "path": "/api/data_sources"
+  },
+  {
+   "id": "v6t-redash-bc5625318c",
+   "method": "POST",
+   "path": "/api/data_sources/{data_source_id}/test"
+  },
+  {
+   "id": "v6t-redash-70a795c3cc",
+   "method": "GET",
+   "path": "/api/destinations/{destination_id}"
+  },
+  {
+   "id": "v6t-redash-15ce07a763",
+   "method": "POST",
+   "path": "/api/destinations"
+  },
+  {
+   "id": "v6t-redash-ac7ceb3932",
+   "method": "GET",
+   "path": "/api/events"
+  },
+  {
+   "id": "v6t-redash-1b069ab8d2",
+   "method": "POST",
+   "path": "/api/groups"
+  },
+  {
+   "id": "v6t-redash-491a067608",
+   "method": "POST",
+   "path": "/api/groups/{group_id}"
+  },
+  {
+   "id": "v6t-redash-58bda2d863",
+   "method": "POST",
+   "path": "/api/groups/{group_id}/members"
+  },
+  {
+   "id": "v6t-redash-7c3398fe3d",
+   "method": "DELETE",
+   "path": "/api/groups/{group_id}/members/{user_id}"
+  },
+  {
+   "id": "v6t-redash-2328d22c4e",
+   "method": "POST",
+   "path": "/api/groups/{group_id}/data_sources"
+  },
+  {
+   "id": "v6t-redash-e7e772bffd",
+   "method": "POST",
+   "path": "/api/settings/organization"
+  },
+  {
+   "id": "v6t-redash-8c869fdfb0",
+   "method": "POST",
+   "path": "/api/users"
+  },
+  {
+   "id": "v6t-redash-36e254a646",
+   "method": "POST",
+   "path": "/api/users/{user_id}/reset_password"
+  },
+  {
+   "id": "v6t-redash-f47584416d",
+   "method": "DELETE",
+   "path": "/api/users/{user_id}"
+  },
+  {
+   "id": "v6t-redash-4b1fde3c85",
+   "method": "POST",
+   "path": "/api/users/{user_id}/disable"
+  }
+ ],
+ "g1b_consistency_functional_permission": [
+  {
+   "id": "v6t-redash-56217e6b53",
+   "method": "GET",
+   "path": "/api/data_sources"
+  },
+  {
+   "id": "v6t-redash-1957a05c2e",
+   "method": "POST",
+   "path": "/api/dashboards"
+  }
+ ]
+}

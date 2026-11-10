@@ -1,0 +1,551 @@
+{
+ "seed": 42,
+ "n": 68,
+ "rule": "불일치율(확정 label ≠ label_current) > 5%면 한계로 기록, 전수 검수는 마감 후",
+ "key": {
+  "v4-label_studio-50b6fdccaf": {
+   "label_current": "owner_match",
+   "status": "후보 아님",
+   "candidate_rules": "",
+   "predicted_v31": "",
+   "human_review": "",
+   "reviewer": "A"
+  },
+  "orbit_tickets_shared_0": {
+   "label_current": "owner_or_admin",
+   "status": "후보 아님",
+   "candidate_rules": "",
+   "predicted_v31": "",
+   "human_review": "",
+   "reviewer": "A"
+  },
+  "campus_records_workspace_1": {
+   "label_current": "tenant_match",
+   "status": "후보 아님",
+   "candidate_rules": "",
+   "predicted_v31": "",
+   "human_review": "",
+   "reviewer": "B"
+  },
+  "gitea:get:/teams/{id}/members": {
+   "label_current": "membership_required",
+   "status": "유지 예상",
+   "candidate_rules": "G2-b",
+   "predicted_v31": "membership_required",
+   "human_review": "",
+   "reviewer": "A"
+  },
+  "gitea:delete:/user/actions/runners/{runner_id}": {
+   "label_current": "owner_match",
+   "status": "후보 아님",
+   "candidate_rules": "",
+   "predicted_v31": "",
+   "human_review": "",
+   "reviewer": "C"
+  },
+  "meadow_plots_audit_0": {
+   "label_current": "role_required",
+   "status": "후보 아님",
+   "candidate_rules": "",
+   "predicted_v31": "",
+   "human_review": "",
+   "reviewer": "C"
+  },
+  "apisguru:slmonitor.com:get:/api/v2.1/companies/{companyId}/me": {
+   "label_current": "tenant_match",
+   "status": "후보 아님",
+   "candidate_rules": "",
+   "predicted_v31": "",
+   "human_review": "",
+   "reviewer": "C"
+  },
+  "apisguru:openbanking.org.uk:get:/accounts/{AccountId}/scheduled-payments": {
+   "label_current": "role_required",
+   "status": "후보 아님",
+   "candidate_rules": "",
+   "predicted_v31": "",
+   "human_review": "",
+   "reviewer": "B"
+  },
+  "v5-taiga-32f3fa28da": {
+   "label_current": "role_required",
+   "status": "후보 아님",
+   "candidate_rules": "",
+   "predicted_v31": "",
+   "human_review": "",
+   "reviewer": "C"
+  },
+  "apisguru:mastodon.local:post:/api/v1/accounts/{id}/block": {
+   "label_current": "manual_review_required",
+   "status": "후보 아님",
+   "candidate_rules": "",
+   "predicted_v31": "",
+   "human_review": "",
+   "reviewer": "A"
+  },
+  "apisguru:iqualify.com:post:/courses/{rootContentId}/permissions/{userEmail}": {
+   "label_current": "role_required",
+   "status": "후보 아님",
+   "candidate_rules": "",
+   "predicted_v31": "",
+   "human_review": "",
+   "reviewer": "B"
+  },
+  "v4-zulip-bd453f90c5": {
+   "label_current": "owner_match",
+   "status": "후보 아님",
+   "candidate_rules": "",
+   "predicted_v31": "",
+   "human_review": "v4",
+   "reviewer": "A"
+  },
+  "apisguru:clickmeter.com:get:/aggregated/summary/datapoints": {
+   "label_current": "role_required",
+   "status": "후보 아님",
+   "candidate_rules": "",
+   "predicted_v31": "",
+   "human_review": "",
+   "reviewer": "C"
+  },
+  "apisguru:circuitsandbox.net:put:/conversations/community/{convId}": {
+   "label_current": "owner_match",
+   "status": "후보 아님",
+   "candidate_rules": "",
+   "predicted_v31": "",
+   "human_review": "",
+   "reviewer": "B"
+  },
+  "apisguru:nbg.gr:get:/accounts/{accountId}/scheduled-payments": {
+   "label_current": "manual_review_required",
+   "status": "후보 아님",
+   "candidate_rules": "",
+   "predicted_v31": "",
+   "human_review": "",
+   "reviewer": "A"
+  },
+  "meadow_plots_catalogue_0": {
+   "label_current": "public",
+   "status": "후보 아님",
+   "candidate_rules": "",
+   "predicted_v31": "",
+   "human_review": "",
+   "reviewer": "C"
+  },
+  "gitea:get:/notifications/threads/{id}": {
+   "label_current": "owner_or_admin",
+   "status": "후보 아님",
+   "candidate_rules": "",
+   "predicted_v31": "",
+   "human_review": "v2",
+   "reviewer": "C"
+  },
+  "v5-nodebb-603159e03d": {
+   "label_current": "role_required",
+   "status": "유지 예상",
+   "candidate_rules": "G3-a",
+   "predicted_v31": "role_required",
+   "human_review": "",
+   "reviewer": "A"
+  },
+  "apisguru:twitter.com:put:/2/lists/{id}": {
+   "label_current": "owner_match",
+   "status": "후보 아님",
+   "candidate_rules": "",
+   "predicted_v31": "",
+   "human_review": "",
+   "reviewer": "A"
+  },
+  "apisguru:circuitsandbox.net:get:/conversations/label/{labelId}": {
+   "label_current": "role_required",
+   "status": "후보 아님",
+   "candidate_rules": "",
+   "predicted_v31": "",
+   "human_review": "",
+   "reviewer": "A"
+  },
+  "v5-taiga-88b0b0422a": {
+   "label_current": "owner_or_admin",
+   "status": "유지 예상",
+   "candidate_rules": "G5",
+   "predicted_v31": "owner_or_admin",
+   "human_review": "v5",
+   "reviewer": "C"
+  },
+  "relay_forum_workspace_extguard": {
+   "label_current": "tenant_match",
+   "status": "후보 아님",
+   "candidate_rules": "",
+   "predicted_v31": "",
+   "human_review": "",
+   "reviewer": "C"
+  },
+  "v5-dendrite-4436506aca": {
+   "label_current": "owner_match",
+   "status": "후보 아님",
+   "candidate_rules": "",
+   "predicted_v31": "",
+   "human_review": "",
+   "reviewer": "A"
+  },
+  "v4-zulip-b447b39241": {
+   "label_current": "owner_match",
+   "status": "후보 아님",
+   "candidate_rules": "",
+   "predicted_v31": "",
+   "human_review": "",
+   "reviewer": "B"
+  },
+  "meadow_plots_shared_0": {
+   "label_current": "owner_or_admin",
+   "status": "후보 아님",
+   "candidate_rules": "",
+   "predicted_v31": "",
+   "human_review": "",
+   "reviewer": "B"
+  },
+  "v5-dendrite-3edc19fe72": {
+   "label_current": "manual_review_required",
+   "status": "유지 예상",
+   "candidate_rules": "G3-b/G6-c",
+   "predicted_v31": "manual_review_required",
+   "human_review": "",
+   "reviewer": "B"
+  },
+  "apisguru:impala.travel:get:/hotels/{hotelId}/rate-plans": {
+   "label_current": "role_required",
+   "status": "후보 아님",
+   "candidate_rules": "",
+   "predicted_v31": "",
+   "human_review": "",
+   "reviewer": "A"
+  },
+  "gitea:post:/admin/cron/{task}": {
+   "label_current": "role_required",
+   "status": "후보 아님",
+   "candidate_rules": "",
+   "predicted_v31": "",
+   "human_review": "",
+   "reviewer": "B"
+  },
+  "apisguru:appwrite.io:get:/account/sessions/{sessionId}": {
+   "label_current": "owner_match",
+   "status": "후보 아님",
+   "candidate_rules": "",
+   "predicted_v31": "",
+   "human_review": "",
+   "reviewer": "A"
+  },
+  "apisguru:transitfeeds.com:get:/getFeedVersions": {
+   "label_current": "public",
+   "status": "후보 아님",
+   "candidate_rules": "",
+   "predicted_v31": "",
+   "human_review": "",
+   "reviewer": "B"
+  },
+  "v4-zulip-c136426a13": {
+   "label_current": "manual_review_required",
+   "status": "유지 예상",
+   "candidate_rules": "G6-a",
+   "predicted_v31": "manual_review_required",
+   "human_review": "",
+   "reviewer": "C"
+  },
+  "v3s1b-72ef24a683a7-var": {
+   "label_current": "owner_match",
+   "status": "후보 아님",
+   "candidate_rules": "",
+   "predicted_v31": "",
+   "human_review": "v3",
+   "reviewer": "A"
+  },
+  "apisguru:telnyx.com:get:/billing_groups/{id}": {
+   "label_current": "tenant_match",
+   "status": "후보 아님",
+   "candidate_rules": "",
+   "predicted_v31": "",
+   "human_review": "",
+   "reviewer": "B"
+  },
+  "pixel_gallery_workspace_1": {
+   "label_current": "tenant_match",
+   "status": "후보 아님",
+   "candidate_rules": "",
+   "predicted_v31": "",
+   "human_review": "",
+   "reviewer": "B"
+  },
+  "v3s1b-31016899da51-orig": {
+   "label_current": "owner_match",
+   "status": "후보 아님",
+   "candidate_rules": "",
+   "predicted_v31": "",
+   "human_review": "",
+   "reviewer": "B"
+  },
+  "apisguru:mist.com:get:/api/v1/installer/orgs/{org_id}/sites/{site_name}/maps": {
+   "label_current": "tenant_match",
+   "status": "후보 아님",
+   "candidate_rules": "",
+   "predicted_v31": "",
+   "human_review": "",
+   "reviewer": "B"
+  },
+  "v4-zulip-17f59706ff": {
+   "label_current": "owner_match",
+   "status": "후보 아님",
+   "candidate_rules": "",
+   "predicted_v31": "",
+   "human_review": "",
+   "reviewer": "C"
+  },
+  "apisguru:noosh.com:put:/1.1/workgroups/{workgroup_id}/projects/{project_id}/specs/{spec_id}": {
+   "label_current": "manual_review_required",
+   "status": "후보 아님",
+   "candidate_rules": "",
+   "predicted_v31": "",
+   "human_review": "",
+   "reviewer": "B"
+  },
+  "v4-label_studio-68ee904450": {
+   "label_current": "tenant_match",
+   "status": "유지 예상",
+   "candidate_rules": "G1-b",
+   "predicted_v31": "tenant_match",
+   "human_review": "",
+   "reviewer": "A"
+  },
+  "v3s1b-770874ab6230-var": {
+   "label_current": "owner_match",
+   "status": "후보 아님",
+   "candidate_rules": "",
+   "predicted_v31": "",
+   "human_review": "v3",
+   "reviewer": "C"
+  },
+  "apisguru:wowza.com:get:/live_streams/{id}/stats": {
+   "label_current": "manual_review_required",
+   "status": "후보 아님",
+   "candidate_rules": "",
+   "predicted_v31": "",
+   "human_review": "",
+   "reviewer": "C"
+  },
+  "gitea:get:/repos/{owner}/{repo}/actions/workflows/{workflow_id}": {
+   "label_current": "manual_review_required",
+   "status": "유지 예상",
+   "candidate_rules": "G6-a",
+   "predicted_v31": "manual_review_required",
+   "human_review": "v2",
+   "reviewer": "B"
+  },
+  "copper_wallet_drafts_0": {
+   "label_current": "owner_match",
+   "status": "후보 아님",
+   "candidate_rules": "",
+   "predicted_v31": "",
+   "human_review": "",
+   "reviewer": "A"
+  },
+  "v5-dendrite-722fa58d2c": {
+   "label_current": "owner_match",
+   "status": "후보 아님",
+   "candidate_rules": "",
+   "predicted_v31": "",
+   "human_review": "",
+   "reviewer": "C"
+  },
+  "v5-taiga-10acdaf6b4": {
+   "label_current": "owner_or_admin",
+   "status": "유지 예상",
+   "candidate_rules": "G5",
+   "predicted_v31": "owner_or_admin",
+   "human_review": "",
+   "reviewer": "B"
+  },
+  "relay_forum_moderation_0": {
+   "label_current": "owner_or_admin",
+   "status": "후보 아님",
+   "candidate_rules": "",
+   "predicted_v31": "",
+   "human_review": "",
+   "reviewer": "A"
+  },
+  "v4-zulip-12d4569274": {
+   "label_current": "manual_review_required",
+   "status": "유지 예상",
+   "candidate_rules": "G6-a",
+   "predicted_v31": "manual_review_required",
+   "human_review": "",
+   "reviewer": "B"
+  },
+  "apisguru:jumpseller.com:post:/customer_categories/{id}/customers.json": {
+   "label_current": "manual_review_required",
+   "status": "후보 아님",
+   "candidate_rules": "",
+   "predicted_v31": "",
+   "human_review": "",
+   "reviewer": "B"
+  },
+  "v5-taiga-5be000012a": {
+   "label_current": "owner_or_admin",
+   "status": "유지 예상",
+   "candidate_rules": "G5",
+   "predicted_v31": "owner_or_admin",
+   "human_review": "",
+   "reviewer": "B"
+  },
+  "v3s1-030d06269626-orig": {
+   "label_current": "owner_match",
+   "status": "후보 아님",
+   "candidate_rules": "",
+   "predicted_v31": "",
+   "human_review": "v3",
+   "reviewer": "C"
+  },
+  "v3s1-d547a98a35e2-var": {
+   "label_current": "owner_match",
+   "status": "후보 아님",
+   "candidate_rules": "",
+   "predicted_v31": "",
+   "human_review": "v3",
+   "reviewer": "A"
+  },
+  "gitea:get:/orgs/{org}/repos": {
+   "label_current": "manual_review_required",
+   "status": "유지 예상",
+   "candidate_rules": "G7-b",
+   "predicted_v31": "manual_review_required",
+   "human_review": "",
+   "reviewer": "C"
+  },
+  "v4-label_studio-7f1fa29e66": {
+   "label_current": "tenant_match",
+   "status": "유지 예상",
+   "candidate_rules": "G1-b",
+   "predicted_v31": "tenant_match",
+   "human_review": "",
+   "reviewer": "B"
+  },
+  "v5-taiga-dfff600020": {
+   "label_current": "role_required",
+   "status": "유지 예상",
+   "candidate_rules": "G3-a",
+   "predicted_v31": "role_required",
+   "human_review": "",
+   "reviewer": "B"
+  },
+  "campus_records_shared_authonly": {
+   "label_current": "owner_or_admin",
+   "status": "후보 아님",
+   "candidate_rules": "",
+   "predicted_v31": "",
+   "human_review": "",
+   "reviewer": "A"
+  },
+  "apisguru:hhs.gov:get:/resources/media.json": {
+   "label_current": "public",
+   "status": "후보 아님",
+   "candidate_rules": "",
+   "predicted_v31": "",
+   "human_review": "",
+   "reviewer": "C"
+  },
+  "copper_wallet_subscription_1": {
+   "label_current": "manual_review_required",
+   "status": "후보 아님",
+   "candidate_rules": "",
+   "predicted_v31": "",
+   "human_review": "",
+   "reviewer": "C"
+  },
+  "v5-taiga-a55c179e8e": {
+   "label_current": "role_required",
+   "status": "유지 예상",
+   "candidate_rules": "G3-a",
+   "predicted_v31": "role_required",
+   "human_review": "",
+   "reviewer": "A"
+  },
+  "gitea:post:/markdown/raw": {
+   "label_current": "manual_review_required",
+   "status": "유지 예상",
+   "candidate_rules": "G3-b/G6-c",
+   "predicted_v31": "manual_review_required",
+   "human_review": "v2",
+   "reviewer": "C"
+  },
+  "gitea:get:/admin/actions/runners": {
+   "label_current": "role_required",
+   "status": "후보 아님",
+   "candidate_rules": "",
+   "predicted_v31": "",
+   "human_review": "",
+   "reviewer": "C"
+  },
+  "apisguru:kumpeapps.com:get:/kkid/userlist": {
+   "label_current": "membership_required",
+   "status": "후보 아님",
+   "candidate_rules": "",
+   "predicted_v31": "",
+   "human_review": "",
+   "reviewer": "A"
+  },
+  "apisguru:onsched.com:put:/consumer/v1/appointments/{id}/reschedule": {
+   "label_current": "owner_match",
+   "status": "후보 아님",
+   "candidate_rules": "",
+   "predicted_v31": "",
+   "human_review": "",
+   "reviewer": "C"
+  },
+  "v5-dendrite-517d068ff9": {
+   "label_current": "membership_required",
+   "status": "유지 예상",
+   "candidate_rules": "G2-b",
+   "predicted_v31": "membership_required",
+   "human_review": "",
+   "reviewer": "C"
+  },
+  "v3s1b-855b8ea4c5e9-var": {
+   "label_current": "owner_match",
+   "status": "후보 아님",
+   "candidate_rules": "",
+   "predicted_v31": "",
+   "human_review": "v3",
+   "reviewer": "A"
+  },
+  "v4-label_studio-ab051b1854": {
+   "label_current": "tenant_match",
+   "status": "유지 예상",
+   "candidate_rules": "G1-b",
+   "predicted_v31": "tenant_match",
+   "human_review": "",
+   "reviewer": "A"
+  },
+  "apisguru:viator.com:get:/booking/pastbooking": {
+   "label_current": "owner_match",
+   "status": "후보 아님",
+   "candidate_rules": "",
+   "predicted_v31": "",
+   "human_review": "",
+   "reviewer": "B"
+  },
+  "v4-label_studio-d3e445b8f7": {
+   "label_current": "tenant_match",
+   "status": "유지 예상",
+   "candidate_rules": "G1-b",
+   "predicted_v31": "tenant_match",
+   "human_review": "",
+   "reviewer": "B"
+  },
+  "v4-label_studio-4a210f3b22": {
+   "label_current": "tenant_match",
+   "status": "유지 예상",
+   "candidate_rules": "G1-b",
+   "predicted_v31": "tenant_match",
+   "human_review": "",
+   "reviewer": "A"
+  }
+ }
+}

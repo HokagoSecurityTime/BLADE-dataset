@@ -1,0 +1,76 @@
+{
+ "date": "2026-11-08",
+ "ai_sheet": "review\\test_v6_review_reviewed.xlsx",
+ "ai_sheet_sha256": "cd2b6ad7e86c8af7e12c43f366e29345b2f41df5e1a3f2358b32a3e7f84f7047",
+ "priority_sheet": "review\\test_v6_human_check_우선확인_사람판정.xlsx",
+ "priority_sheet_sha256": "2ed15453e6ee15041425e8a524069680917615eedc7914f833a050c962675a1c",
+ "audit_sheet": "review/test_v6_감사41_Claude판정_비교용.xlsx",
+ "audit_sheet_sha256": "b52241341d623dc66622ad82d6188822a94e4f2b3fa3ad1f803b9cd4dcc9680b",
+ "audit_human_sheet": "review/test_v6_audit41_mismatch.xlsx",
+ "final_sheet": "review\\test_v6_review_final.xlsx",
+ "final_sheet_sha256": "0bf36fb58d9bd8d087651797f32007d6e5063f8661027a0334a6683a5d2197b0",
+ "boundary_ids": [
+  "v6t-penpot-0366cd50c0",
+  "v6t-redash-e8133c143b",
+  "v6t-seahub-5569330cd5",
+  "v6t-redash-c89e256edf"
+ ],
+ "rows": 302,
+ "source_counts": {
+  "ai_single": 217,
+  "human_confirmed": 7,
+  "ai_double_confirmed": 78
+ },
+ "audit": {
+  "n": 41,
+  "agree": 38,
+  "human": 3
+ },
+ "label_changes": [
+  {
+   "id": "v6t-penpot-0366cd50c0",
+   "from_": "manual_review_required",
+   "to": "EXCLUDE",
+   "claude": "EXCLUDE",
+   "reason": "팀 역할 OR (admin-console 플래그 시) 조직 소유자 — 설정 의존 OR 경로. tenant 필터 아님. 보충 규약 5·create-team과 일관되게 제외",
+   "note": "EXCLUDE: 설정 의존 조직 소유자 OR 경로(보충 규약 5)"
+  },
+  {
+   "id": "v6t-penpot-05b0504832",
+   "from_": "role_required",
+   "to": "EXCLUDE",
+   "claude": "manual_review_required",
+   "reason": "플래그 의존 조직 설정 경로, penpot-0366cd50c0(delete-team)과 일관 → EXCLUDE (보충 규약 5) (사용자 판정 2026-11-08)",
+   "note": "EXCLUDE: 플래그 의존 조직 설정 경로(보충 규약 5), delete-team과 일관"
+  },
+  {
+   "id": "v6t-redash-e8133c143b",
+   "from_": "EXCLUDE",
+   "to": "tenant_match",
+   "claude": "tenant_match",
+   "reason": null,
+   "note": null
+  },
+  {
+   "id": "v6t-seahub-5569330cd5",
+   "from_": "EXCLUDE",
+   "to": "public",
+   "claude": "public",
+   "reason": "임포트 예시라서 따로 인증이 없는거 아닌가? 그래도 의도가 공개라면 나도 퍼블릭이 맞을듯",
+   "note": null
+  }
+ ],
+ "final_label_counts": {
+  "manual_review_required": 52,
+  "EXCLUDE": 13,
+  "membership_required": 37,
+  "owner_match": 59,
+  "owner_or_admin": 17,
+  "public": 21,
+  "role_required": 65,
+  "tenant_match": 38
+ },
+ "excluded": 13,
+ "exclusion_rate": 0.043,
+ "priority_overlap_with_audit": []
+}

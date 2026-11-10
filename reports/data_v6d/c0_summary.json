@@ -1,0 +1,381 @@
+{
+ "rows": 1453,
+ "dropped_from_sft": [
+  "v3s1b-01a377f65a6b-orig",
+  "v4-zulip-53bce36a36",
+  "v4-zulip-9fc47b3754",
+  "v4-label_studio-0cfa3eac15"
+ ],
+ "by_split_source": [
+  [
+   [
+    "train",
+    "APIs.guru"
+   ],
+   338
+  ],
+  [
+   [
+    "train",
+    "오픈소스 프로젝트"
+   ],
+   793
+  ],
+  [
+   [
+    "train",
+    "합성"
+   ],
+   143
+  ],
+  [
+   [
+    "val",
+    "APIs.guru"
+   ],
+   52
+  ],
+  [
+   [
+    "val",
+    "오픈소스 프로젝트"
+   ],
+   109
+  ],
+  [
+   [
+    "val",
+    "합성"
+   ],
+   18
+  ]
+ ],
+ "by_split_label_source": [
+  [
+   [
+    "train",
+    "LLM(gpt-4o-mini, v3.0.1)"
+   ],
+   535
+  ],
+  [
+   [
+    "train",
+    "규칙 라벨러 rule_label_v4"
+   ],
+   192
+  ],
+  [
+   [
+    "train",
+    "규칙 라벨러 rule_label_v5"
+   ],
+   296
+  ],
+  [
+   [
+    "train",
+    "규칙 라벨러(검사 줄 규칙, data-v3 1b)"
+   ],
+   108
+  ],
+  [
+   [
+    "train",
+    "합성 설계 intended_labels"
+   ],
+   143
+  ],
+  [
+   [
+    "val",
+    "LLM(gpt-4o-mini, v3.0.1)"
+   ],
+   80
+  ],
+  [
+   [
+    "val",
+    "규칙 라벨러 rule_label_v4"
+   ],
+   21
+  ],
+  [
+   [
+    "val",
+    "규칙 라벨러 rule_label_v5"
+   ],
+   32
+  ],
+  [
+   [
+    "val",
+    "규칙 라벨러(검사 줄 규칙, data-v3 1b)"
+   ],
+   28
+  ],
+  [
+   [
+    "val",
+    "합성 설계 intended_labels"
+   ],
+   18
+  ]
+ ],
+ "by_review": [
+  [
+   [
+    "train",
+    "v2"
+   ],
+   62
+  ],
+  [
+   [
+    "train",
+    "v3"
+   ],
+   93
+  ],
+  [
+   [
+    "train",
+    "v4"
+   ],
+   35
+  ],
+  [
+   [
+    "train",
+    "v5"
+   ],
+   65
+  ],
+  [
+   [
+    "train",
+    "없음"
+   ],
+   1019
+  ],
+  [
+   [
+    "val",
+    "v3"
+   ],
+   26
+  ],
+  [
+   [
+    "val",
+    "v4"
+   ],
+   5
+  ],
+  [
+   [
+    "val",
+    "v5"
+   ],
+   8
+  ],
+  [
+   [
+    "val",
+    "없음"
+   ],
+   140
+  ]
+ ],
+ "per_rule": {
+  "G1-b": 40,
+  "생성(절차5)": 21,
+  "G7-a": 60,
+  "G2-b": 40,
+  "G3-a": 148,
+  "G3-b/G6-c": 67,
+  "G5": 71,
+  "G6-a": 84,
+  "G7-b": 33,
+  "G1-c": 2,
+  "G4-c/G6-b": 11
+ },
+ "per_rule_change": {
+  "G5": 6,
+  "G3-a": 28,
+  "G3-b/G6-c": 3,
+  "G7-a": 1
+ },
+ "per_rule_question": {
+  "G1-b": 10,
+  "G2-b": 6,
+  "G3-a": 4,
+  "G3-b/G6-c": 2,
+  "G6-a": 35,
+  "G4-c/G6-b": 2,
+  "생성(절차5)": 2
+ },
+ "by_status": [
+  [
+   [
+    "train",
+    "변경 예상"
+   ],
+   28
+  ],
+  [
+   [
+    "train",
+    "유지 예상"
+   ],
+   411
+  ],
+  [
+   [
+    "train",
+    "판정 필요"
+   ],
+   52
+  ],
+  [
+   [
+    "train",
+    "후보 아님"
+   ],
+   783
+  ],
+  [
+   [
+    "val",
+    "변경 예상"
+   ],
+   5
+  ],
+  [
+   [
+    "val",
+    "유지 예상"
+   ],
+   54
+  ],
+  [
+   [
+    "val",
+    "판정 필요"
+   ],
+   9
+  ],
+  [
+   [
+    "val",
+    "후보 아님"
+   ],
+   111
+  ]
+ ],
+ "label_shift": [
+  [
+   "owner_match",
+   "role_required",
+   23
+  ],
+  [
+   "manual_review_required",
+   "role_required",
+   5
+  ],
+  [
+   "manual_review_required",
+   "owner_match",
+   2
+  ],
+  [
+   "owner_match",
+   "owner_or_admin",
+   1
+  ],
+  [
+   "role_required",
+   "public",
+   1
+  ],
+  [
+   "membership_required",
+   "owner_match",
+   1
+  ]
+ ],
+ "dist_now": {
+  "owner_match": 492,
+  "tenant_match": 91,
+  "role_required": 376,
+  "manual_review_required": 205,
+  "public": 95,
+  "membership_required": 85,
+  "owner_or_admin": 109
+ },
+ "dist_pred": {
+  "owner_match": 471,
+  "tenant_match": 91,
+  "role_required": 403,
+  "manual_review_required": 198,
+  "public": 96,
+  "membership_required": 84,
+  "owner_or_admin": 110
+ },
+ "overlap": {
+  "test_v30": {
+   "n": 269,
+   "key_overlap": 0,
+   "key_examples": [],
+   "service_overlap": []
+  },
+  "test_v31_supp(+excluded)": {
+   "n": 263,
+   "key_overlap": 0,
+   "key_examples": [],
+   "service_overlap": []
+  },
+  "test_v5(+excluded)": {
+   "n": 296,
+   "key_overlap": 0,
+   "key_examples": [],
+   "service_overlap": []
+  },
+  "test_v6_candidates": {
+   "n": 302,
+   "key_overlap": 0,
+   "key_examples": [],
+   "service_overlap": []
+  }
+ },
+ "c2": {
+  "label_change": 33,
+  "judge": 61,
+  "rationale_only": 13,
+  "template_regen": 2,
+  "free_text_rewrite": 92
+ },
+ "change_types": {
+  "v3.1 확장(당사자 OR 관리자)": 1,
+  "v3.1 규칙 변경(보류 3 → role_required)": 28,
+  "경계 명문화(보류 6·G4 본인 목록) → 기존 label 교정": 3,
+  "v3.1 규칙 변경(declared mutation) 또는 교정(GET)": 1
+ },
+ "question_kinds": {
+  "OAS 문구": 22,
+  "코드": 39
+ },
+ "rationale_flag_counts": {
+  "security 선언을 public 거부 근거로 사용": 4,
+  "AND 결합·복합 조건 보류": 20,
+  "구성원+역할을 보류 사유로": 2,
+  "조직 소유자를 owner로 해석": 24
+ },
+ "audit_n": 68,
+ "review_sets": {
+  "v5": 90,
+  "v4": 71,
+  "v3_pairs": 80
+ }
+}

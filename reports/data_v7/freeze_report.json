@@ -1,0 +1,308 @@
+{
+ "train": {
+  "n": 1540,
+  "counts": {
+   "public": 88,
+   "role_required": 425,
+   "membership_required": 138,
+   "tenant_match": 111,
+   "owner_match": 382,
+   "owner_or_admin": 132,
+   "manual_review_required": 264
+  },
+  "manual_ratio": 0.1714
+ },
+ "val": {
+  "n": 159,
+  "counts": {
+   "public": 14,
+   "role_required": 46,
+   "membership_required": 6,
+   "tenant_match": 6,
+   "owner_match": 38,
+   "owner_or_admin": 13,
+   "manual_review_required": 36
+  },
+  "manual_ratio": 0.2264
+ },
+ "v6d": {
+  "train": {
+   "n": 1274,
+   "counts": {
+    "public": 82,
+    "role_required": 351,
+    "membership_required": 75,
+    "tenant_match": 83,
+    "owner_match": 425,
+    "owner_or_admin": 97,
+    "manual_review_required": 161
+   },
+   "manual_ratio": 0.1264
+  },
+  "val": {
+   "n": 179,
+   "counts": {
+    "public": 14,
+    "role_required": 52,
+    "membership_required": 7,
+    "tenant_match": 8,
+    "owner_match": 46,
+    "owner_or_admin": 13,
+    "manual_review_required": 39
+   },
+   "manual_ratio": 0.2179
+  }
+ },
+ "pool": {
+  "n": 256,
+  "by_split": {
+   "train": 236,
+   "val": 20
+  },
+  "label_from": {
+   "owner_match": 113,
+   "tenant_match": 29,
+   "role_required": 88,
+   "membership_required": 12,
+   "public": 14
+  }
+ },
+ "changes": {
+  "n": 45,
+  "by_kind": {
+   "oas": 24,
+   "code": 21
+  },
+  "transitions": {
+   "membership_required->role_required": 5,
+   "role_required->owner_match": 4,
+   "membership_required->manual_review_required": 4,
+   "manual_review_required->role_required": 4,
+   "owner_or_admin->owner_match": 3,
+   "tenant_match->role_required": 3,
+   "owner_match->manual_review_required": 3,
+   "owner_or_admin->manual_review_required": 3,
+   "membership_required->owner_match": 2,
+   "tenant_match->owner_match": 2,
+   "membership_required->tenant_match": 2,
+   "manual_review_required->owner_match": 2,
+   "owner_match->tenant_match": 2,
+   "public->manual_review_required": 2,
+   "owner_match->role_required": 1,
+   "role_required->tenant_match": 1,
+   "role_required->manual_review_required": 1,
+   "manual_review_required->public": 1
+  },
+  "by_split": {
+   "train": 42,
+   "val": 3
+  }
+ },
+ "added": {
+  "n_rows": 505,
+  "included": 502,
+  "over_4096": [
+   "v4t-chatwoot-03a9708adc",
+   "v5t-rocketchat-2b42fcece3",
+   "v5t-rocketchat-a41ec34093"
+  ],
+  "by_set": {
+   "test_v31_supp": 221,
+   "test_v5": 281
+  },
+  "labels": {
+   "manual_review_required": 94,
+   "owner_or_admin": 41,
+   "role_required": 149,
+   "owner_match": 55,
+   "membership_required": 87,
+   "public": 21,
+   "tenant_match": 55
+  },
+  "by_project": {
+   "chamilo": 58,
+   "chatwoot": 78,
+   "flowise": 60,
+   "generic_university": 21,
+   "multitenant_lab": 4,
+   "ghost": 69,
+   "rocketchat": 155,
+   "umami": 57
+  },
+  "rationale_basis": {
+   "auth_summary_idents": 374,
+   "evidence_quote": 118,
+   "generic": 10
+  },
+  "tokens_max": 4136
+ },
+ "train_by_project": {
+  "gitea": 197,
+  "rocketchat": 155,
+  "synthetic": 143,
+  "zulip": 132,
+  "data_v3_pairs": 108,
+  "taiga": 103,
+  "apisguru": 102,
+  "nodebb": 98,
+  "dendrite": 95,
+  "chatwoot": 78,
+  "ghost": 69,
+  "label_studio": 60,
+  "flowise": 60,
+  "chamilo": 58,
+  "umami": 57,
+  "generic_university": 21,
+  "multitenant_lab": 4
+ },
+ "train_by_source": {
+  "test_v5_confirmed_label+template_v7": 281,
+  "test_v31_supp_confirmed_label+template_v7": 221,
+  "model_v301": 137,
+  "intended_labels": 121,
+  "rule_v5_G4_self_target": 74,
+  "rule_gitea_relabel_template": 67,
+  "rule_v5_G3_group_role": 67,
+  "rule_v3_variant_intended_policy": 47,
+  "rule_v4_zulip_target_is_requester": 45,
+  "rejudge_v7": 42,
+  "rule_v5_G3_global_role": 39,
+  "c1_review_v6d": 34,
+  "rule_v4_zulip_realm_admin": 34,
+  "rule_v5_G5_owner_or_privileged": 34,
+  "rule_v4_ls_active_organization_scope": 28,
+  "rule_v5_G7_anonymous": 26,
+  "rule_v4_zulip_or_branch_access": 23,
+  "rule_v3_owner_compare": 21,
+  "rule_authonly_intended_policy": 19,
+  "rule_v3_role_annotation": 14,
+  "rule_v4_ls_authenticated_only_no_object": 13,
+  "rule_v5_G6_hold_visibility_branch": 13,
+  "rule_v4_zulip_authenticated_only_no_object": 12,
+  "rule_v5_G2_membership_row": 12,
+  "rule_visibility_dependent": 9,
+  "rule_v3_self_only": 8,
+  "rule_v4_ls_current_user": 8,
+  "rule_v4_zulip_owner_or_admin_access": 7,
+  "rule_v5_G6_hold_setting_dependent": 7,
+  "rule_v3_self_or_admin": 6,
+  "rule_v4_zulip_conditional_anonymous": 6,
+  "human_review_v2": 5,
+  "rule_v4_ls_org_member_row": 5,
+  "rule_v4_zulip_no_user_profile_view": 5,
+  "rule_v5_G2_membership_self_action": 5,
+  "rule_security_declared_public": 4,
+  "rule_v5_G6_auth_only": 4,
+  "rule_subscription_relabel": 3,
+  "rule_v3_owner_filter": 3,
+  "rule_v3_form_request_owner": 3,
+  "rule_v3_owner_filter_unless_admin": 3,
+  "rule_v4_ls_simplejwt_token_view": 3,
+  "rule_v5_G5_owner_or_room_role": 3,
+  "rule_v5_G6_hold_compound_and": 3,
+  "rule_v5_G5_owner_with_superuser_bypass": 3,
+  "rule_v3_owner_or_parent_owner": 2,
+  "rule_v4_ls_allow_any": 2,
+  "rule_v5_G4_owner_field": 2,
+  "rule_v5_G6_hold_compound_and_visibility_branch": 2,
+  "rule_gitea_relabel_template_hold_stripped": 1,
+  "rule_v3_owner_or_instance_admin": 1,
+  "rule_v4_ls_existing_object_org_check": 1,
+  "rule_v5_G5_owner_or_global_role": 1,
+  "rule_v5_G6_hold_setting_dependent_visibility_branch": 1
+ },
+ "audit_rule_not_applied": 10,
+ "integrity": {
+  "full_set_v7": {
+   "hold_in_concrete": 0,
+   "meta": 0,
+   "filepath": 0
+  },
+  "full_set_v6d": {
+   "hold_in_concrete": 0,
+   "meta": 0,
+   "filepath": 0
+  },
+  "new_changed_rows_clean": true,
+  "user_byte_identical": true,
+  "test_v30_overlap": 0,
+  "tokens_max": 4085,
+  "unchanged_v6d_lines_kept": 1152
+ },
+ "human_check": {
+  "xlsx": "review\\data_v7_human_check.xlsx",
+  "changed": 45,
+  "blind": 31,
+  "rationale_sample": 50,
+  "key": "reports/data_v7/human_check_key.json"
+ },
+ "rejudge": {
+  "guide_sha256": "d734ce9a8852cf26b7e3c7dea543e5e712e5c81282f982be1fb5a90e7c294eaa",
+  "key_sha256": "b1c43d821907d64c4174318b67535fd00b4079222b13961825fc158c9cc2d8cb",
+  "outputs": {
+   "audit_rule_01.jsonl": "d335a82a04996156554207fb07e6514c21ceb4ac88bcbb87443b5831942aa7b6",
+   "code_gitea_01.jsonl": "debbb373da0252ef250492457fb78f556b99ac717363bf3f4ebe5628f40e1924",
+   "code_gitea_02.jsonl": "eafc1d34dfcb6faa371baa269554941083a596f2d19096dad12d9ed336449e8d",
+   "code_gitea_03.jsonl": "32ae444da171381f7c5d054e865ee7420cd953c22712b10e3464fc903c6fa545",
+   "code_gitea_04.jsonl": "0b1c9bedd3ec734898b7d69918c4ebe47cd3cf9d1099b134cd0a4cae1c2688df",
+   "code_gitea_05.jsonl": "f5b21e3bba10c7b4825a9d762a464f4e029a81c6f5a88ad7a164ccf90efcc838",
+   "code_gitea_06.jsonl": "8856dd3630c8f76005dd6c1a4a9c5b26f51d2b5b5ede28cfc73ae4b6fa9a09d5",
+   "code_gitea_07.jsonl": "f03e1c28dc78f8392d51db286aba44086c823f0a45822c5773f44d9e7b4cc375",
+   "code_gitea_08.jsonl": "9067d37b4425e1269a2770a106b2fa0d2572230777e98741870fd9e2a96ed28a",
+   "code_gitea_09.jsonl": "25f1be8ddbb01c67710cfe75c13412aa4c9b96aa0757fbfdc2136a5e5117a8cb",
+   "oas_apisguru_01.jsonl": "570f75560ce7280d1229c353fc712c7994178b8cf4b71964da2bd89524b6d748",
+   "oas_apisguru_02.jsonl": "20eba096b5188f1d95f37fb01a39204f15e109af76185fdc44fc48e268e72238",
+   "oas_apisguru_03.jsonl": "a1522f171c1086c1e49eb44310654c8d693a0db1d2ba947354233841cbc47659",
+   "oas_apisguru_04.jsonl": "10db9cf5c50394893bcc297b42fb2a6a4ebba1923bfc1c8afe2b06409aaea8d1",
+   "oas_apisguru_05.jsonl": "98280176facfb9cf12bb501564131029a3651d926a2e6a3f7e02d4e398b9fb37",
+   "oas_apisguru_06.jsonl": "67c601ddb38907207bdaa5e3efa1d89eba8716b25f25906467d9ddbadc471e94",
+   "oas_apisguru_07.jsonl": "c447eece568cf556ccd246f41392e6af6efe5058f651c7199151c36f38901cc1",
+   "oas_apisguru_08.jsonl": "000086061db533ac37f87d2d5ef5c69ba5019172db3875afe9d4ca6e2301f7ce",
+   "oas_apisguru_09.jsonl": "b74aa711cc18fff6f8622b68c2194b684bacc872028769ddba2168339263f9ca"
+  }
+ },
+ "outputs": {
+  "datasets/blade/processed/train_v7.jsonl": {
+   "sha256": "662b16405d5775c0ecfceb8361c53953751b554390c5f1f63e30bfdfbffa32db",
+   "rows": 1540
+  },
+  "datasets/blade/processed/val_v7.jsonl": {
+   "sha256": "cf04b4b3b8928985377a53a69905d0e1a343f705850e8694bc3f38286b9da325",
+   "rows": 159
+  },
+  "training/lora/data_v7/train_sft_v7.jsonl": {
+   "sha256": "6654f79afb8cc984b42944cf3b246111c06d7704b02809577fa85cd5630b6178",
+   "rows": 1540
+  },
+  "training/lora/data_v7/val_sft_v7.jsonl": {
+   "sha256": "2173171ed412b2b3949c1d21f29fec69bcdd5b7e4732e67ace4fb84bc2e57087",
+   "rows": 159
+  },
+  "training/lora/data_v7/data_v7_hashes.json": {
+   "sha256": "bd33f1bcf0f68ab5fe5b96195c0da3cf6affbb3486fb85bef542b3f77e88ba73",
+   "rows": null
+  },
+  "datasets/blade/processed/data_v7/train_v7_oas_manual_pool.jsonl": {
+   "sha256": "7e663b76526b3cbba1d36e2b03c84069bec72e037353e66c863ee2b2dd745688",
+   "rows": 256
+  },
+  "reports/data_v7/v7_changes.jsonl": {
+   "sha256": "4be15fad7791fbe494f0647faad116ce94cbe732312de0522279555bc890ee05",
+   "rows": 45
+  },
+  "reports/data_v7/added_rows_rationale.jsonl": {
+   "sha256": "dfd296d42b7fce0c3f97ea4004f519710154c45f0bc12d41d2671afd72eb9b33",
+   "rows": 505
+  },
+  "reports/data_v7/audit_rule_rows_not_applied.jsonl": {
+   "sha256": "8849be21a028a3a74fb2e038c8cff71e84f94abd7af2b7ba5cfa5026edd93f06",
+   "rows": 10
+  },
+  "review/data_v7_human_check.xlsx": {
+   "sha256": "b6a3d484abe700d62cdb59061effeea79c81b9d040b02fded6dd30f21508ac99",
+   "rows": null
+  }
+ },
+ "hashes_file_sha256": "bd33f1bcf0f68ab5fe5b96195c0da3cf6affbb3486fb85bef542b3f77e88ba73",
+ "tokenizer_sha256": "9c5ae00e602b8860cbd784ba82a8aa14e8feecec692e7076590d014d7b7fdafa"
+}

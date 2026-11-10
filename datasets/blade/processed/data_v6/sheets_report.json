@@ -1,0 +1,74 @@
+{
+ "rows": 302,
+ "sheet": "review/test_v6_review.xlsx",
+ "sha256": "529f77c11aafd6b85ab8dd4c3316d8f81a4ea21eed8e7c23e33afba91039263e",
+ "columns": [
+  "id",
+  "담당자",
+  "project",
+  "service",
+  "method",
+  "path",
+  "auth_summary",
+  "permission_doc",
+  "초안 label",
+  "초안 confidence",
+  "초안 EXCLUDE 후보",
+  "초안 근거 설명",
+  "근거(코드 줄·문서)",
+  "controller_text(입력 코드)",
+  "source permalink",
+  "확정 label",
+  "확정 근거",
+  "비고(EXCLUDE + 사유)"
+ ],
+ "per_reviewer": {
+  "검수자A": {
+   "manual_review_required": 16,
+   "membership_required": 13,
+   "owner_match": 21,
+   "public": 7,
+   "role_required": 23,
+   "owner_or_admin": 8,
+   "tenant_match": 13
+  },
+  "검수자B": {
+   "manual_review_required": 18,
+   "membership_required": 13,
+   "owner_match": 19,
+   "public": 9,
+   "role_required": 22,
+   "owner_or_admin": 8,
+   "tenant_match": 12
+  },
+  "검수자C": {
+   "manual_review_required": 17,
+   "membership_required": 11,
+   "owner_match": 21,
+   "owner_or_admin": 10,
+   "public": 5,
+   "role_required": 24,
+   "tenant_match": 12
+  }
+ },
+ "per_reviewer_project": {
+  "검수자A": {
+   "glitchtip": 25,
+   "penpot": 20,
+   "redash": 25,
+   "seahub": 31
+  },
+  "검수자B": {
+   "glitchtip": 24,
+   "penpot": 21,
+   "redash": 24,
+   "seahub": 32
+  },
+  "검수자C": {
+   "glitchtip": 24,
+   "penpot": 20,
+   "redash": 25,
+   "seahub": 31
+  }
+ }
+}

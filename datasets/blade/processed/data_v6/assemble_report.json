@@ -1,0 +1,129 @@
+{
+ "projects": {
+  "seahub": {
+   "candidates": 94,
+   "kept": 94,
+   "target": 90,
+   "draft_labels": {
+    "membership_required": 8,
+    "owner_or_admin": 9,
+    "manual_review_required": 17,
+    "tenant_match": 11,
+    "role_required": 22,
+    "owner_match": 23,
+    "public": 4
+   },
+   "exclude_candidates": 3,
+   "text_len_min": 532,
+   "text_len_max": 2985
+  },
+  "redash": {
+   "candidates": 74,
+   "kept": 74,
+   "target": 70,
+   "draft_labels": {
+    "manual_review_required": 16,
+    "owner_or_admin": 15,
+    "role_required": 3,
+    "tenant_match": 26,
+    "owner_match": 8,
+    "membership_required": 2,
+    "public": 4
+   },
+   "exclude_candidates": 3,
+   "text_len_min": 99,
+   "text_len_max": 2973
+  },
+  "glitchtip": {
+   "candidates": 73,
+   "kept": 73,
+   "target": 70,
+   "draft_labels": {
+    "public": 5,
+    "manual_review_required": 11,
+    "owner_match": 12,
+    "role_required": 17,
+    "membership_required": 27,
+    "owner_or_admin": 1
+   },
+   "exclude_candidates": 2,
+   "text_len_min": 533,
+   "text_len_max": 2890
+  },
+  "penpot": {
+   "candidates": 61,
+   "kept": 61,
+   "target": 60,
+   "draft_labels": {
+    "role_required": 27,
+    "owner_or_admin": 1,
+    "manual_review_required": 7,
+    "public": 8,
+    "owner_match": 18
+   },
+   "exclude_candidates": 4,
+   "text_len_min": 872,
+   "text_len_max": 2943
+  }
+ },
+ "duplicates": [],
+ "internal_duplicates": [],
+ "missing": [],
+ "invalid": [],
+ "share_violations": [],
+ "total": 302,
+ "draft_label_x_project": {
+  "seahub": {
+   "membership_required": 8,
+   "owner_or_admin": 9,
+   "manual_review_required": 17,
+   "tenant_match": 11,
+   "role_required": 22,
+   "owner_match": 23,
+   "public": 4
+  },
+  "redash": {
+   "manual_review_required": 16,
+   "owner_or_admin": 15,
+   "role_required": 3,
+   "tenant_match": 26,
+   "owner_match": 8,
+   "membership_required": 2,
+   "public": 4
+  },
+  "glitchtip": {
+   "public": 5,
+   "manual_review_required": 11,
+   "owner_match": 12,
+   "role_required": 17,
+   "membership_required": 27,
+   "owner_or_admin": 1
+  },
+  "penpot": {
+   "role_required": 27,
+   "owner_or_admin": 1,
+   "manual_review_required": 7,
+   "public": 8,
+   "owner_match": 18
+  }
+ },
+ "draft_label_total": {
+  "membership_required": 37,
+  "owner_or_admin": 26,
+  "manual_review_required": 51,
+  "tenant_match": 37,
+  "role_required": 69,
+  "owner_match": 61,
+  "public": 21
+ },
+ "exclude_candidates_total": 12,
+ "security_state": {
+  "declared": 276,
+  "explicitly_anonymous": 26
+ },
+ "anonymous_global_security_added": {
+  "seahub": 5,
+  "redash": 5,
+  "penpot": 10
+ }
+}

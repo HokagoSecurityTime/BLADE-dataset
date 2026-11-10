@@ -1,0 +1,82 @@
+{
+  "data_version": "data-v7",
+  "note": "data-v6d SFT rows with the 615 LLM-labelled rows re-judged (AI, REJUDGE_GUIDE) — 45 label changes applied with template rationale, 256 OAS-only newly-manual rows removed to train_v7_oas_manual_pool.jsonl (option B, train 236 + val 20) — plus test_v31_supp 222 + test_v5 283 (confirmed labels, template rationale from meta.auth_summary identifiers / code evidence present in the input) appended to train. test_v30 never added. User inputs byte-identical to the frozen sources. Prompt policy_label_v3.0.1.md (frozen). Evaluation of data-v7 models must not use test_v5 / test_v31_supp.",
+  "sources": {
+    "datasets/blade/processed/train_v6d.jsonl": "aed2b275a76fa684e426a656fb04b1c934a29bc987f45a146fe1c244ced4d372",
+    "datasets/blade/processed/val_v6d.jsonl": "159e01780eb2d8aa1710146d2c06533c20c81920a828a60b889ec6db221361cf",
+    "training/lora/data_v6d/train_sft_v6d.jsonl": "63c1768949a0e8c7f0747712c6a55e4fb492e1d03baeddfa111884f31ff65b98",
+    "training/lora/data_v6d/val_sft_v6d.jsonl": "1a421c836032ff3c611f3a74380b519374393deb44519c1772db8049d7d671ee",
+    "training/lora/data_v6d/data_v6d_hashes.json": "82efda868e7bde511d0838e10bf0e8a5cc3e6aae577c68b15fcbf370a9d94b53",
+    "training/lora/data_v5/test_v30_inputs.jsonl": "d65f25b966f61131c0ba5a2341798e56dcd2d3b8da73e9f5d03eb3cd6b0f119a",
+    "training/lora/data_v5/test_v31_supp_inputs.jsonl": "97e618e770bbf9950d6846869901819db36fce486d8999d69eb73e286e2a056c",
+    "training/lora/data_v5/test_v5_inputs.jsonl": "9103cd3d5276ab425f577a2866291bf8e27e7a06a18bd725701989673dbe5d82",
+    "training/lora/data_v5/policy_label_v3.0.1.md": "d0913c27b5de185e7dd5734c111cb731f45e28ebca81fed787ff3914d02833ef",
+    "datasets/blade/processed/data_v4/test_v31_supp.jsonl": "803d914902c7ca2042fd15d4a7852d42e71828e58d4ae4d3ac791fb868e63395",
+    "datasets/blade/processed/test_v5.jsonl": "7b8e4a940967ec474e0d5dbf6dcdbd6b7e04be439599c2a684664d6b9393fd9c",
+    "datasets/blade/processed/data_v5/test_v5_manifest.json": "57fd384f46e89e905209e627a7ff7fb9f312e22a7bed222639e91a80bd05fccd"
+  },
+  "rejudge": {
+    "guide_sha256": "d734ce9a8852cf26b7e3c7dea543e5e712e5c81282f982be1fb5a90e7c294eaa",
+    "key_sha256": "b1c43d821907d64c4174318b67535fd00b4079222b13961825fc158c9cc2d8cb",
+    "outputs": {
+      "audit_rule_01.jsonl": "d335a82a04996156554207fb07e6514c21ceb4ac88bcbb87443b5831942aa7b6",
+      "code_gitea_01.jsonl": "debbb373da0252ef250492457fb78f556b99ac717363bf3f4ebe5628f40e1924",
+      "code_gitea_02.jsonl": "eafc1d34dfcb6faa371baa269554941083a596f2d19096dad12d9ed336449e8d",
+      "code_gitea_03.jsonl": "32ae444da171381f7c5d054e865ee7420cd953c22712b10e3464fc903c6fa545",
+      "code_gitea_04.jsonl": "0b1c9bedd3ec734898b7d69918c4ebe47cd3cf9d1099b134cd0a4cae1c2688df",
+      "code_gitea_05.jsonl": "f5b21e3bba10c7b4825a9d762a464f4e029a81c6f5a88ad7a164ccf90efcc838",
+      "code_gitea_06.jsonl": "8856dd3630c8f76005dd6c1a4a9c5b26f51d2b5b5ede28cfc73ae4b6fa9a09d5",
+      "code_gitea_07.jsonl": "f03e1c28dc78f8392d51db286aba44086c823f0a45822c5773f44d9e7b4cc375",
+      "code_gitea_08.jsonl": "9067d37b4425e1269a2770a106b2fa0d2572230777e98741870fd9e2a96ed28a",
+      "code_gitea_09.jsonl": "25f1be8ddbb01c67710cfe75c13412aa4c9b96aa0757fbfdc2136a5e5117a8cb",
+      "oas_apisguru_01.jsonl": "570f75560ce7280d1229c353fc712c7994178b8cf4b71964da2bd89524b6d748",
+      "oas_apisguru_02.jsonl": "20eba096b5188f1d95f37fb01a39204f15e109af76185fdc44fc48e268e72238",
+      "oas_apisguru_03.jsonl": "a1522f171c1086c1e49eb44310654c8d693a0db1d2ba947354233841cbc47659",
+      "oas_apisguru_04.jsonl": "10db9cf5c50394893bcc297b42fb2a6a4ebba1923bfc1c8afe2b06409aaea8d1",
+      "oas_apisguru_05.jsonl": "98280176facfb9cf12bb501564131029a3651d926a2e6a3f7e02d4e398b9fb37",
+      "oas_apisguru_06.jsonl": "67c601ddb38907207bdaa5e3efa1d89eba8716b25f25906467d9ddbadc471e94",
+      "oas_apisguru_07.jsonl": "c447eece568cf556ccd246f41392e6af6efe5058f651c7199151c36f38901cc1",
+      "oas_apisguru_08.jsonl": "000086061db533ac37f87d2d5ef5c69ba5019172db3875afe9d4ca6e2301f7ce",
+      "oas_apisguru_09.jsonl": "b74aa711cc18fff6f8622b68c2194b684bacc872028769ddba2168339263f9ca"
+    }
+  },
+  "generated": {
+    "train_sft_v7.jsonl": "6654f79afb8cc984b42944cf3b246111c06d7704b02809577fa85cd5630b6178",
+    "val_sft_v7.jsonl": "2173171ed412b2b3949c1d21f29fec69bcdd5b7e4732e67ace4fb84bc2e57087",
+    "test_v30_inputs.jsonl": "d65f25b966f61131c0ba5a2341798e56dcd2d3b8da73e9f5d03eb3cd6b0f119a",
+    "policy_label_v3.0.1.md": "d0913c27b5de185e7dd5734c111cb731f45e28ebca81fed787ff3914d02833ef"
+  },
+  "counts": {
+    "train": 1540,
+    "val": 159,
+    "pool": 256,
+    "added": 502,
+    "added_over_4096": 3
+  },
+  "labels": {
+    "train": {
+      "public": 88,
+      "role_required": 425,
+      "membership_required": 138,
+      "tenant_match": 111,
+      "owner_match": 382,
+      "owner_or_admin": 132,
+      "manual_review_required": 264
+    },
+    "val": {
+      "public": 14,
+      "role_required": 46,
+      "membership_required": 6,
+      "tenant_match": 6,
+      "owner_match": 38,
+      "owner_or_admin": 13,
+      "manual_review_required": 36
+    }
+  },
+  "max_seq_len": 4096,
+  "tokenizer": {
+    "method": "tokenizers + manual Qwen2.5 chat template",
+    "tokenizer_json_sha256": "9c5ae00e602b8860cbd784ba82a8aa14e8feecec692e7076590d014d7b7fdafa"
+  },
+  "format": "system=prompt v3.0.1; user=\"Return JSON.\\n\"+payload; assistant=JSON {label, confidence, rationale, evidence_fields}"
+}

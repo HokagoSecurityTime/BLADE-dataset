@@ -6,7 +6,11 @@ scripts/rebuild_from_public.py can restore the byte-identical originals from loc
 
 Withheld: (1) DVWS-node (GPL-3.0) handler excerpts in test.jsonl / test_v30.jsonl / test_v30_inputs.jsonl,
           (2) data-v3 pair records from the five repositories with no declared license (code body withheld, records kept),
-          (3) NodeBB (GPL-3.0) in data-v5 copies (existing policy: links only).
+          (3) NodeBB (GPL-3.0) in data-v5 copies (existing policy: links only),
+          (4) data-v7 (2026-11-11 extension): the test_v31_supp rows that joined train_v7 from Chamilo (GPL-3.0-or-later),
+              Flowise (excerpts include packages/server/src/enterprise, FlowiseAI commercial license), Generic University and
+              cloud-security-multitenant-lab (no license declared) — same rule as the frozen test_v31_supp file (links only).
+              Chatwoot (MIT, enterprise/ excluded at extraction) and the test_v5 rows (Rocket.Chat · Ghost · Umami, MIT) stay public.
 SFT public copies drop the affected rows (the user message embeds the code).
 """
 from __future__ import annotations
@@ -25,6 +29,16 @@ UND = {  # project (meta.project) -> (clone dir under datasets/blade/raw/opensou
 }
 DVWS = dict(repository='https://github.com/snoopysecurity/dvws-node', commit='eb6e2886f2206b88bf709fe1fa311adc3ae3c34f', license='GPL-3.0', clone='datasets/blade/raw/vuln_apis/DVWS-node')
 NODEBB = dict(repository='https://github.com/NodeBB/NodeBB', commit='c3d8dc512292a376f19e06cb93512bdff2505102', license='GPL-3.0', clone='datasets/blade/raw/opensource/NodeBB_NodeBB')
+RESTRICTED = {  # data-v7 train rows from test_v31_supp (meta.project) whose code must not be redistributed; same policy as the frozen test_v31_supp file
+    'chamilo': dict(repository='https://github.com/chamilo/chamilo-lms', commit='296654b9ce0e9b8d466808340a31c2666b9fc042', license='GPL-3.0-or-later',
+                    clone='datasets/blade/raw/opensource/chamilo_chamilo-lms', reason='GPL-3.0-or-later (chamilo/chamilo-lms): excerpt withheld in public copy (test_v31_supp policy)'),
+    'flowise': dict(repository='https://github.com/FlowiseAI/Flowise', commit='f0c1294173a55f26e0b972c39c0c16917f5ca9e7', license='Apache-2.0 + LicenseRef-FlowiseAI-Commercial (packages/server/src/enterprise)',
+                    clone='datasets/blade/raw/opensource/FlowiseAI_Flowise', reason='FlowiseAI commercial license (enterprise/ code in excerpt): excerpt withheld in public copy (test_v31_supp policy)'),
+    'generic_university': dict(repository='https://github.com/InsiderPhD/Generic-University', commit='50dfa924b3a31d30c6d6c20373bc9f4dced8aac8', license='none declared',
+                               clone='datasets/blade/raw/opensource/InsiderPhD_Generic-University', reason='no license declared in repository: excerpt withheld in public copy (test_v31_supp policy)'),
+    'multitenant_lab': dict(repository='https://github.com/RimaBenJaballah/cloud-security-multitenant-lab', commit='a428c4f85d479c932f49323ebc9b8c5e7e47f8fc', license='none declared',
+                            clone='datasets/blade/raw/opensource/RimaBenJaballah_cloud-security-multitenant-lab', reason='no license declared in repository: excerpt withheld in public copy (test_v31_supp policy)'),
+}
 FROZEN = {  # AGENTS.md / DATA_CARD hashes of the originals
     'datasets/blade/processed/test.jsonl': 'bd22c2580c2ddc2154974f76aa9e7aa2ca30bc6f8434e4960f3d3966093977fa',
     'datasets/blade/processed/test_v30.jsonl': '9bd47216575afc602b03afa20e617308dd9a97476c94e67a117eb17009afd5e2',
@@ -44,6 +58,12 @@ FROZEN = {  # AGENTS.md / DATA_CARD hashes of the originals
     'training/lora/data_v5/val_sft_v5.jsonl': '0df4642f439c812d4e7b9f5ca968c89fd966703bfc59229d6f7ea7f83115748f',
     'training/lora/data_v4/test_v30_inputs.jsonl': 'd65f25b966f61131c0ba5a2341798e56dcd2d3b8da73e9f5d03eb3cd6b0f119a',
     'training/lora/data_v5/test_v30_inputs.jsonl': 'd65f25b966f61131c0ba5a2341798e56dcd2d3b8da73e9f5d03eb3cd6b0f119a',
+    # data-v7 (AGENTS.md "data-v7 동결" 2026-11-07)
+    'datasets/blade/processed/train_v7.jsonl': '662b16405d5775c0ecfceb8361c53953751b554390c5f1f63e30bfdfbffa32db',
+    'datasets/blade/processed/val_v7.jsonl': 'cf04b4b3b8928985377a53a69905d0e1a343f705850e8694bc3f38286b9da325',
+    'training/lora/data_v7/train_sft_v7.jsonl': '6654f79afb8cc984b42944cf3b246111c06d7704b02809577fa85cd5630b6178',
+    'training/lora/data_v7/val_sft_v7.jsonl': '2173171ed412b2b3949c1d21f29fec69bcdd5b7e4732e67ace4fb84bc2e57087',
+    'training/lora/data_v7/test_v30_inputs.jsonl': 'd65f25b966f61131c0ba5a2341798e56dcd2d3b8da73e9f5d03eb3cd6b0f119a',
 }
 UNHASHED_INPUTS = ['training/lora/data_v3/test_v30_inputs.jsonl', 'training/lora/data_v31/test_v30_inputs.jsonl']  # tracked, no frozen hash recorded
 sha = lambda b: hashlib.sha256(b).hexdigest()
@@ -58,6 +78,8 @@ def reason_of(r: dict, kind: str) -> str | None:
         return 'no license declared in repository: excerpt withheld in public copy'
     if meta.get('project') == 'nodebb':
         return 'GPL-3.0 (NodeBB): excerpt withheld in public copy (data-v5 policy)'
+    if meta.get('project') in RESTRICTED and r.get('source') == 'test_v31_supp':
+        return RESTRICTED[meta['project']]['reason']
     return None
 
 
@@ -69,6 +91,10 @@ def source_of(r: dict) -> dict:
         d, c = UND[meta['project']]
         assert meta.get('commit') == c, (r['id'], meta.get('commit'))
         return dict(repository='https://github.com/' + meta['project'], commit=c, license='none declared', clone='datasets/blade/raw/opensource/' + d)
+    if meta.get('project') in RESTRICTED:
+        d = RESTRICTED[meta['project']]
+        assert meta.get('commit') == d['commit'], (r['id'], meta.get('commit'))
+        return dict(repository=d['repository'], commit=d['commit'], license=d['license'], clone=d['clone'])
     assert meta.get('project') == 'nodebb' and meta.get('commit') == NODEBB['commit']
     return dict(repository=NODEBB['repository'], commit=NODEBB['commit'], license=NODEBB['license'], clone=NODEBB['clone'])
 
@@ -201,12 +227,14 @@ def main() -> None:
     for rel, kind in [('datasets/blade/processed/test.jsonl', 'test'), ('datasets/blade/processed/test_v30.jsonl', 'test'), ('datasets/blade/processed/train_v3a.jsonl', 'train'),
                       ('datasets/blade/processed/train_v3b.jsonl', 'train'), ('datasets/blade/processed/train_v31b.jsonl', 'train'), ('datasets/blade/processed/train_v4.jsonl', 'train'),
                       ('datasets/blade/processed/train_v5.jsonl', 'train'), ('datasets/blade/processed/val_v5.jsonl', 'train'),
-                      ('datasets/blade/processed/data_v3_stage1/pairs_train_v3s1.jsonl', 'train'), ('datasets/blade/processed/data_v3_stage1b/pairs_train_v3s1b.jsonl', 'train')]:
+                      ('datasets/blade/processed/data_v3_stage1/pairs_train_v3s1.jsonl', 'train'), ('datasets/blade/processed/data_v3_stage1b/pairs_train_v3s1b.jsonl', 'train'),
+                      ('datasets/blade/processed/train_v7.jsonl', 'train'), ('datasets/blade/processed/val_v7.jsonl', 'train')]:
         withhold_file(rel, kind, PUB / (Path(rel).stem + '_public.jsonl'))
 
     withheld_ids = set(rec_index)
     for rel in ['training/lora/data_v3/train_sft_v3a.jsonl', 'training/lora/data_v3/train_sft_v3b.jsonl', 'training/lora/data_v31/train_sft_v31b.jsonl', 'training/lora/data_v4/train_sft_v4.jsonl',
-                'training/lora/data_v5/train_sft_v5.jsonl', 'training/lora/data_v5/val_sft_v5.jsonl']:
+                'training/lora/data_v5/train_sft_v5.jsonl', 'training/lora/data_v5/val_sft_v5.jsonl',
+                'training/lora/data_v7/train_sft_v7.jsonl', 'training/lora/data_v7/val_sft_v7.jsonl']:
         raw = (ROOT / rel).read_text(encoding='utf-8').split('\n'); assert raw[-1] == ''
         keep, dropped = [], []
         for line in raw[:-1]:
@@ -237,7 +265,7 @@ def main() -> None:
     for e in manifest['records']: manifest['summary']['by_reason'][e['reason']] = manifest['summary']['by_reason'].get(e['reason'], 0) + 1
     (PUB / 'withheld_manifest.json').write_text(json.dumps(manifest, ensure_ascii=False, indent=1) + '\n', encoding='utf-8', newline='\n')
     excl = ['# Original files that contain license-restricted code excerpts. Exclude from any public export; ship the *_public copies and withheld_manifest.json instead.',
-            '# (files already in .gitignore for the same reason are listed too)'] + sorted(set(list(FROZEN) + UNHASHED_INPUTS + ['datasets/blade/processed/data_v5/candidates_train_v5.jsonl', 'datasets/blade/processed/data_v5/train_v5_rule_labeled.jsonl', 'datasets/blade/processed/data_v5/train_v5_selected.jsonl', 'datasets/blade/processed/data_v5/train_v5_pool.jsonl', 'data/raw_v5_train/nodebb/candidates.jsonl', 'reports/data_v3/review_pairs_v3s1.xlsx', 'reports/data_v3/review_pairs_v3s1_reviewed.xlsx', 'reports/data_v3/review_pairs_v3s1b.xlsx', 'reports/data_v3/review_pairs_v3s1b_reviewed.xlsx', 'review/v5_train_review.xlsx', 'review/v5_train_review_reviewed.xlsx']))
+            '# (files already in .gitignore for the same reason are listed too)'] + sorted(set(list(FROZEN) + UNHASHED_INPUTS + ['datasets/blade/processed/data_v5/candidates_train_v5.jsonl', 'datasets/blade/processed/data_v5/train_v5_rule_labeled.jsonl', 'datasets/blade/processed/data_v5/train_v5_selected.jsonl', 'datasets/blade/processed/data_v5/train_v5_pool.jsonl', 'data/raw_v5_train/nodebb/candidates.jsonl', 'datasets/blade/processed/data_v4/test_v31_supp.jsonl', 'training/lora/data_v4/test_v31_supp_inputs.jsonl', 'training/lora/data_v5/test_v31_supp_inputs.jsonl', 'reports/data_v3/review_pairs_v3s1.xlsx', 'reports/data_v3/review_pairs_v3s1_reviewed.xlsx', 'reports/data_v3/review_pairs_v3s1b.xlsx', 'reports/data_v3/review_pairs_v3s1b_reviewed.xlsx', 'review/v5_train_review.xlsx', 'review/v5_train_review_reviewed.xlsx']))
     (PUB / 'PUBLIC_EXCLUDE.txt').write_text('\n'.join(excl) + '\n', encoding='utf-8', newline='\n')
     after = {k: fsha(ROOT / k) for k in FROZEN}
     assert after == FROZEN, 'originals changed!'

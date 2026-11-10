@@ -1,0 +1,77 @@
+{
+ "rows": 625,
+ "llm": 615,
+ "llm_by_kind": {
+  "oas": 390,
+  "code": 225
+ },
+ "llm_by_split": {
+  "train": 535,
+  "val": 80
+ },
+ "audit_rule_extra": 10,
+ "extra_ids": [
+  "campus_records_workspace_1",
+  "campus_records_shared_authonly",
+  "pixel_gallery_workspace_1",
+  "v3s1b-770874ab6230-var",
+  "v4-label_studio-68ee904450",
+  "v4-zulip-c136426a13",
+  "v5-taiga-10acdaf6b4",
+  "v5-taiga-5be000012a",
+  "v3s1-d547a98a35e2-var",
+  "v3s1b-855b8ea4c5e9-var"
+ ],
+ "chunks": {
+  "code_gitea_01": 25,
+  "code_gitea_02": 25,
+  "code_gitea_03": 25,
+  "code_gitea_04": 25,
+  "code_gitea_05": 25,
+  "code_gitea_06": 25,
+  "code_gitea_07": 25,
+  "code_gitea_08": 25,
+  "code_gitea_09": 25,
+  "oas_apisguru_01": 45,
+  "oas_apisguru_02": 45,
+  "oas_apisguru_03": 45,
+  "oas_apisguru_04": 45,
+  "oas_apisguru_05": 45,
+  "oas_apisguru_06": 45,
+  "oas_apisguru_07": 45,
+  "oas_apisguru_08": 45,
+  "oas_apisguru_09": 30,
+  "audit_rule_01": 10
+ },
+ "user_chars": {
+  "code_gitea_01": 61048,
+  "code_gitea_02": 47918,
+  "code_gitea_03": 53863,
+  "code_gitea_04": 62516,
+  "code_gitea_05": 46674,
+  "code_gitea_06": 48500,
+  "code_gitea_07": 54042,
+  "code_gitea_08": 66465,
+  "code_gitea_09": 60219,
+  "oas_apisguru_01": 55015,
+  "oas_apisguru_02": 61794,
+  "oas_apisguru_03": 48865,
+  "oas_apisguru_04": 50598,
+  "oas_apisguru_05": 50228,
+  "oas_apisguru_06": 54946,
+  "oas_apisguru_07": 61980,
+  "oas_apisguru_08": 63178,
+  "oas_apisguru_09": 40930,
+  "audit_rule_01": 18365
+ },
+ "guide_chars": 13570,
+ "current_label_dist": {
+  "owner_match": 213,
+  "tenant_match": 35,
+  "role_required": 191,
+  "manual_review_required": 94,
+  "public": 41,
+  "membership_required": 34,
+  "owner_or_admin": 7
+ }
+}

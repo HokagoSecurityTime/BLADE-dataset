@@ -1,0 +1,50 @@
+{
+ "sheet": "review/test_v6_human_check.xlsx",
+ "sha256": "8bb43882573707f139d44256531c958cb0525955309ff1e3993125ddbf49bf03",
+ "date": "2026-11-04",
+ "priority": 44,
+ "priority_reasons": {
+  "confidence<0.7": 10,
+  "초안 대비 변경": 7,
+  "seahub owner_or_admin→manual": 4,
+  "EXCLUDE": 13,
+  "Redash G1-b 경계": 18
+ },
+ "priority_per_project": {
+  "glitchtip": 4,
+  "penpot": 7,
+  "redash": 24,
+  "seahub": 9
+ },
+ "priority_per_reviewer": {
+  "검수자A": 15,
+  "검수자B": 15,
+  "검수자C": 14
+ },
+ "audit": 41,
+ "audit_universe": 258,
+ "audit_per_project": {
+  "glitchtip": 10,
+  "penpot": 8,
+  "redash": 9,
+  "seahub": 14
+ },
+ "audit_per_label": {
+  "manual_review_required": 7,
+  "membership_required": 6,
+  "owner_match": 8,
+  "public": 4,
+  "role_required": 10,
+  "owner_or_admin": 3,
+  "tenant_match": 3
+ },
+ "audit_per_reviewer": {
+  "검수자A": 14,
+  "검수자B": 14,
+  "검수자C": 13
+ },
+ "covered": 85,
+ "total": 302,
+ "audit_key": "datasets/blade/processed/data_v6/review_ai/human_check_audit_key.json",
+ "rule": "감사 불일치 ≤ 5% → 나머지 AI 확정 수용; > 5% → 전수 사람 검수; 불일치 건은 사람 판정 우선"
+}

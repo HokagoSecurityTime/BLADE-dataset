@@ -1,0 +1,476 @@
+{
+ "name": "test_v6_human_check_audit_key",
+ "date": "2026-11-04",
+ "seed": 42,
+ "rate": 0.15,
+ "note": "블라인드 감사 정답키(AI 확정). 시트에는 넣지 않는다. 불일치율 = (사람 판정 ≠ AI 확정) / 감사 건수.",
+ "audit": [
+  {
+   "id": "v6t-glitchtip-196fbf241d",
+   "project": "glitchtip",
+   "method": "POST",
+   "path": "/api/embed/error-page/",
+   "ai_final_label": "manual_review_required",
+   "ai_confidence": 0.8,
+   "reviewer": "검수자A"
+  },
+  {
+   "id": "v6t-glitchtip-44e2cd4220",
+   "project": "glitchtip",
+   "method": "GET",
+   "path": "/api/0/organizations/{organization_slug}/issues/{issue_id}/events/",
+   "ai_final_label": "membership_required",
+   "ai_confidence": 0.9,
+   "reviewer": "검수자B"
+  },
+  {
+   "id": "v6t-glitchtip-b6adc9ed05",
+   "project": "glitchtip",
+   "method": "POST",
+   "path": "/api/0/projects/{organization_slug}/{project_slug}/keys/",
+   "ai_final_label": "membership_required",
+   "ai_confidence": 0.7,
+   "reviewer": "검수자C"
+  },
+  {
+   "id": "v6t-glitchtip-db1a17521f",
+   "project": "glitchtip",
+   "method": "PUT",
+   "path": "/api/0/projects/{organization_slug}/{project_slug}/alerts/{alert_id}/",
+   "ai_final_label": "membership_required",
+   "ai_confidence": 0.7,
+   "reviewer": "검수자A"
+  },
+  {
+   "id": "v6t-glitchtip-ebf25a6f90",
+   "project": "glitchtip",
+   "method": "POST",
+   "path": "/api/0/organizations/{organization_slug}/releases/",
+   "ai_final_label": "membership_required",
+   "ai_confidence": 0.85,
+   "reviewer": "검수자B"
+  },
+  {
+   "id": "v6t-glitchtip-01fe2e54c7",
+   "project": "glitchtip",
+   "method": "POST",
+   "path": "/api/0/users/{user_id}/emails/",
+   "ai_final_label": "owner_match",
+   "ai_confidence": 0.9,
+   "reviewer": "검수자C"
+  },
+  {
+   "id": "v6t-glitchtip-4ecdf3ddbc",
+   "project": "glitchtip",
+   "method": "POST",
+   "path": "/api/0/api-tokens/",
+   "ai_final_label": "owner_match",
+   "ai_confidence": 0.9,
+   "reviewer": "검수자A"
+  },
+  {
+   "id": "v6t-glitchtip-de06e9e4d1",
+   "project": "glitchtip",
+   "method": "GET",
+   "path": "/api/0/wizard/",
+   "ai_final_label": "public",
+   "ai_confidence": 0.95,
+   "reviewer": "검수자B"
+  },
+  {
+   "id": "v6t-glitchtip-98a944e9b8",
+   "project": "glitchtip",
+   "method": "DELETE",
+   "path": "/api/0/organizations/{organization_slug}/social-apps/{social_app_id}/",
+   "ai_final_label": "role_required",
+   "ai_confidence": 0.9,
+   "reviewer": "검수자C"
+  },
+  {
+   "id": "v6t-glitchtip-db2fd3245a",
+   "project": "glitchtip",
+   "method": "PUT",
+   "path": "/api/0/organizations/{organization_slug}/social-apps/{social_app_id}/",
+   "ai_final_label": "role_required",
+   "ai_confidence": 0.9,
+   "reviewer": "검수자A"
+  },
+  {
+   "id": "v6t-penpot-30c4fcfc6a",
+   "project": "penpot",
+   "method": "POST",
+   "path": "/api/rpc/command/delete-file-snapshot",
+   "ai_final_label": "manual_review_required",
+   "ai_confidence": 0.7,
+   "reviewer": "검수자B"
+  },
+  {
+   "id": "v6t-penpot-015644f146",
+   "project": "penpot",
+   "method": "POST",
+   "path": "/api/rpc/command/create-access-token",
+   "ai_final_label": "owner_match",
+   "ai_confidence": 0.85,
+   "reviewer": "검수자C"
+  },
+  {
+   "id": "v6t-penpot-0b3ec8d049",
+   "project": "penpot",
+   "method": "POST",
+   "path": "/api/rpc/command/update-profile-password",
+   "ai_final_label": "owner_match",
+   "ai_confidence": 0.9,
+   "reviewer": "검수자A"
+  },
+  {
+   "id": "v6t-penpot-c51966c2bb",
+   "project": "penpot",
+   "method": "POST",
+   "path": "/api/rpc/command/recover-profile",
+   "ai_final_label": "public",
+   "ai_confidence": 0.9,
+   "reviewer": "검수자B"
+  },
+  {
+   "id": "v6t-penpot-05b0504832",
+   "project": "penpot",
+   "method": "POST",
+   "path": "/api/rpc/command/create-team-invitations",
+   "ai_final_label": "role_required",
+   "ai_confidence": 0.8,
+   "reviewer": "검수자C"
+  },
+  {
+   "id": "v6t-penpot-208ccfcedb",
+   "project": "penpot",
+   "method": "POST",
+   "path": "/api/rpc/command/rename-file",
+   "ai_final_label": "role_required",
+   "ai_confidence": 0.9,
+   "reviewer": "검수자A"
+  },
+  {
+   "id": "v6t-penpot-f2ae8ddf0a",
+   "project": "penpot",
+   "method": "POST",
+   "path": "/api/rpc/command/create-file",
+   "ai_final_label": "role_required",
+   "ai_confidence": 0.9,
+   "reviewer": "검수자B"
+  },
+  {
+   "id": "v6t-penpot-f5beb13854",
+   "project": "penpot",
+   "method": "POST",
+   "path": "/api/rpc/command/move-files",
+   "ai_final_label": "role_required",
+   "ai_confidence": 0.85,
+   "reviewer": "검수자C"
+  },
+  {
+   "id": "v6t-redash-3228cfc80a",
+   "project": "redash",
+   "method": "POST",
+   "path": "/api/query_results",
+   "ai_final_label": "manual_review_required",
+   "ai_confidence": 0.85,
+   "reviewer": "검수자A"
+  },
+  {
+   "id": "v6t-redash-7bc4b5fc95",
+   "project": "redash",
+   "method": "POST",
+   "path": "/api/dashboards/{dashboard_id}",
+   "ai_final_label": "manual_review_required",
+   "ai_confidence": 0.9,
+   "reviewer": "검수자B"
+  },
+  {
+   "id": "v6t-redash-ae22fc5795",
+   "project": "redash",
+   "method": "GET",
+   "path": "/api/groups/{group_id}",
+   "ai_final_label": "membership_required",
+   "ai_confidence": 0.85,
+   "reviewer": "검수자C"
+  },
+  {
+   "id": "v6t-redash-59934812dd",
+   "project": "redash",
+   "method": "GET",
+   "path": "/api/dashboards/my",
+   "ai_final_label": "owner_match",
+   "ai_confidence": 0.85,
+   "reviewer": "검수자A"
+  },
+  {
+   "id": "v6t-redash-0912371e55",
+   "project": "redash",
+   "method": "DELETE",
+   "path": "/api/queries/{query_id}",
+   "ai_final_label": "owner_or_admin",
+   "ai_confidence": 0.9,
+   "reviewer": "검수자B"
+  },
+  {
+   "id": "v6t-redash-951953b98e",
+   "project": "redash",
+   "method": "POST",
+   "path": "/api/query_snippets/{snippet_id}",
+   "ai_final_label": "owner_or_admin",
+   "ai_confidence": 0.9,
+   "reviewer": "검수자C"
+  },
+  {
+   "id": "v6t-redash-577149efa7",
+   "project": "redash",
+   "method": "GET",
+   "path": "/api/config",
+   "ai_final_label": "public",
+   "ai_confidence": 0.9,
+   "reviewer": "검수자A"
+  },
+  {
+   "id": "v6t-redash-f6c9351817",
+   "project": "redash",
+   "method": "GET",
+   "path": "/api/data_sources/types",
+   "ai_final_label": "role_required",
+   "ai_confidence": 0.85,
+   "reviewer": "검수자B"
+  },
+  {
+   "id": "v6t-redash-6e4071eb2e",
+   "project": "redash",
+   "method": "GET",
+   "path": "/api/query_snippets/{snippet_id}",
+   "ai_final_label": "tenant_match",
+   "ai_confidence": 0.9,
+   "reviewer": "검수자C"
+  },
+  {
+   "id": "v6t-seahub-51a8bd4fb5",
+   "project": "seahub",
+   "method": "GET",
+   "path": "/api/v2.1/smart-link/",
+   "ai_final_label": "manual_review_required",
+   "ai_confidence": 0.9,
+   "reviewer": "검수자A"
+  },
+  {
+   "id": "v6t-seahub-79e3d304eb",
+   "project": "seahub",
+   "method": "PUT",
+   "path": "/api2/repos/{repo_id}/dir/shared_items/",
+   "ai_final_label": "manual_review_required",
+   "ai_confidence": 0.85,
+   "reviewer": "검수자B"
+  },
+  {
+   "id": "v6t-seahub-d1f95197b7",
+   "project": "seahub",
+   "method": "GET",
+   "path": "/api/v2.1/repos/{repo_id}/trash/",
+   "ai_final_label": "manual_review_required",
+   "ai_confidence": 0.9,
+   "reviewer": "검수자C"
+  },
+  {
+   "id": "v6t-seahub-a63a8816e2",
+   "project": "seahub",
+   "method": "GET",
+   "path": "/api/v2.1/groups/{group_id}/",
+   "ai_final_label": "membership_required",
+   "ai_confidence": 0.95,
+   "reviewer": "검수자A"
+  },
+  {
+   "id": "v6t-seahub-634eb73488",
+   "project": "seahub",
+   "method": "DELETE",
+   "path": "/api2/repos/{repo_id}/",
+   "ai_final_label": "owner_match",
+   "ai_confidence": 0.95,
+   "reviewer": "검수자B"
+  },
+  {
+   "id": "v6t-seahub-ccfac41deb",
+   "project": "seahub",
+   "method": "PUT",
+   "path": "/api2/repos/{repo_id}/owner/",
+   "ai_final_label": "owner_match",
+   "ai_confidence": 0.95,
+   "reviewer": "검수자C"
+  },
+  {
+   "id": "v6t-seahub-e6e470c13c",
+   "project": "seahub",
+   "method": "GET",
+   "path": "/api2/repos/{repo_id}/owner/",
+   "ai_final_label": "owner_match",
+   "ai_confidence": 0.95,
+   "reviewer": "검수자A"
+  },
+  {
+   "id": "v6t-seahub-0278cd9eef",
+   "project": "seahub",
+   "method": "DELETE",
+   "path": "/api/v2.1/shared-repos/{repo_id}/",
+   "ai_final_label": "owner_or_admin",
+   "ai_confidence": 0.75,
+   "reviewer": "검수자B"
+  },
+  {
+   "id": "v6t-seahub-7d5762a5a2",
+   "project": "seahub",
+   "method": "POST",
+   "path": "/api2/auth-token/",
+   "ai_final_label": "public",
+   "ai_confidence": 0.95,
+   "reviewer": "검수자C"
+  },
+  {
+   "id": "v6t-seahub-3e44ad2739",
+   "project": "seahub",
+   "method": "GET",
+   "path": "/api/v2.1/admin/organizations/",
+   "ai_final_label": "role_required",
+   "ai_confidence": 0.9,
+   "reviewer": "검수자A"
+  },
+  {
+   "id": "v6t-seahub-894073f718",
+   "project": "seahub",
+   "method": "POST",
+   "path": "/api/v2.1/admin/license/",
+   "ai_final_label": "role_required",
+   "ai_confidence": 0.95,
+   "reviewer": "검수자B"
+  },
+  {
+   "id": "v6t-seahub-af61378090",
+   "project": "seahub",
+   "method": "PUT",
+   "path": "/api/v2.1/groups/{group_id}/",
+   "ai_final_label": "role_required",
+   "ai_confidence": 0.9,
+   "reviewer": "검수자C"
+  },
+  {
+   "id": "v6t-seahub-1057f0d265",
+   "project": "seahub",
+   "method": "DELETE",
+   "path": "/api/v2.1/org/admin/links/{token}/",
+   "ai_final_label": "tenant_match",
+   "ai_confidence": 0.85,
+   "reviewer": "검수자A"
+  },
+  {
+   "id": "v6t-seahub-6e20b28e05",
+   "project": "seahub",
+   "method": "GET",
+   "path": "/api/v2.1/org/{org_id}/admin/groups/",
+   "ai_final_label": "tenant_match",
+   "ai_confidence": 0.75,
+   "reviewer": "검수자B"
+  }
+ ],
+ "strata": {
+  "manual_review_required|glitchtip": {
+   "size": 9,
+   "sampled": 1
+  },
+  "manual_review_required|penpot": {
+   "size": 5,
+   "sampled": 1
+  },
+  "manual_review_required|redash": {
+   "size": 16,
+   "sampled": 2
+  },
+  "manual_review_required|seahub": {
+   "size": 17,
+   "sampled": 3
+  },
+  "membership_required|glitchtip": {
+   "size": 26,
+   "sampled": 4
+  },
+  "membership_required|redash": {
+   "size": 2,
+   "sampled": 1
+  },
+  "membership_required|seahub": {
+   "size": 7,
+   "sampled": 1
+  },
+  "owner_match|glitchtip": {
+   "size": 12,
+   "sampled": 2
+  },
+  "owner_match|penpot": {
+   "size": 15,
+   "sampled": 2
+  },
+  "owner_match|redash": {
+   "size": 8,
+   "sampled": 1
+  },
+  "owner_match|seahub": {
+   "size": 22,
+   "sampled": 3
+  },
+  "owner_or_admin|glitchtip": {
+   "size": 1,
+   "sampled": 0
+  },
+  "owner_or_admin|redash": {
+   "size": 13,
+   "sampled": 2
+  },
+  "owner_or_admin|seahub": {
+   "size": 3,
+   "sampled": 1
+  },
+  "public|glitchtip": {
+   "size": 5,
+   "sampled": 1
+  },
+  "public|penpot": {
+   "size": 8,
+   "sampled": 1
+  },
+  "public|redash": {
+   "size": 4,
+   "sampled": 1
+  },
+  "public|seahub": {
+   "size": 3,
+   "sampled": 1
+  },
+  "role_required|glitchtip": {
+   "size": 16,
+   "sampled": 2
+  },
+  "role_required|penpot": {
+   "size": 26,
+   "sampled": 4
+  },
+  "role_required|redash": {
+   "size": 2,
+   "sampled": 1
+  },
+  "role_required|seahub": {
+   "size": 22,
+   "sampled": 3
+  },
+  "tenant_match|redash": {
+   "size": 5,
+   "sampled": 1
+  },
+  "tenant_match|seahub": {
+   "size": 11,
+   "sampled": 2
+  }
+ }
+}

@@ -1,0 +1,97 @@
+{
+ "name": "test_v6",
+ "frozen": "2026-11-08",
+ "records": 289,
+ "excluded": 13,
+ "exclusion_rate": 0.043,
+ "excluded_reasons": {
+  "EXCLUDE": 13
+ },
+ "sha256": {
+  "datasets/blade/processed/test_v6.jsonl": "872675957276d15777acde947ab99b6e4b9112941a8bedef404ffac9e20bc765",
+  "datasets/blade/processed/data_v6/test_v6_excluded.jsonl": "b66e8ac3a40a68e8252ac058bf26dc71190dcc969e150a7e6992d1e8de005136",
+  "training/lora/data_v6/test_v6_inputs.jsonl": "33d1aecdbd1a685416523eddf73722e105c2c761154a6bf95403fe1431435741",
+  "review/test_v6_review_final.xlsx": "0bf36fb58d9bd8d087651797f32007d6e5063f8661027a0334a6683a5d2197b0"
+ },
+ "label_x_project": {
+  "seahub": {
+   "manual_review_required": 21,
+   "membership_required": 8,
+   "owner_match": 23,
+   "owner_or_admin": 3,
+   "public": 4,
+   "role_required": 22,
+   "tenant_match": 11
+  },
+  "redash": {
+   "manual_review_required": 16,
+   "membership_required": 2,
+   "owner_match": 8,
+   "owner_or_admin": 13,
+   "tenant_match": 27,
+   "public": 4,
+   "role_required": 2
+  },
+  "glitchtip": {
+   "manual_review_required": 9,
+   "membership_required": 27,
+   "owner_match": 12,
+   "owner_or_admin": 1,
+   "public": 5,
+   "role_required": 16
+  },
+  "penpot": {
+   "manual_review_required": 6,
+   "owner_match": 16,
+   "public": 8,
+   "role_required": 25
+  }
+ },
+ "label_total": {
+  "manual_review_required": 52,
+  "membership_required": 37,
+  "owner_match": 59,
+  "owner_or_admin": 17,
+  "public": 21,
+  "role_required": 65,
+  "tenant_match": 38
+ },
+ "changed_from_draft": 7,
+ "sources": {
+  "seahub": {
+   "repository": "https://github.com/haiwen/seahub",
+   "commit": "0841826c7ce738caf92121d94d7741ba0f2373d5",
+   "tag": "v14.0.9-server",
+   "license": "Apache-2.0"
+  },
+  "redash": {
+   "repository": "https://github.com/getredash/redash",
+   "commit": "42fdf9d4a0fdb83841130ab78f69899a224f281b",
+   "tag": "v26.9.0",
+   "license": "BSD-2-Clause"
+  },
+  "glitchtip": {
+   "repository": "https://gitlab.com/glitchtip/glitchtip-backend",
+   "commit": "d3039088e913a591a8e6544a2d2fffc865a9711a",
+   "tag": "v6.2.6",
+   "license": "MIT"
+  },
+  "penpot": {
+   "repository": "https://github.com/penpot/penpot",
+   "commit": "f44566963daf61fce4d8608e7c5e8c27c5853a88",
+   "tag": "2.18.5",
+   "license": "MPL-2.0"
+  }
+ },
+ "review_sheet": "review/test_v6_review_final.xlsx",
+ "review_sheet_sha256": "0bf36fb58d9bd8d087651797f32007d6e5063f8661027a0334a6683a5d2197b0",
+ "label_status": {
+  "ai_single": 217,
+  "human_confirmed": 5,
+  "ai_double_confirmed": 67
+ },
+ "labeling": "A안(AGENTS.md 2026-11-08): AI 1차 확정 + 독립 AI 2차 검수(Claude) + 불일치·저확신 건 사람 확정; 건수는 label_status",
+ "rules": "AGENTS.md data-v4 검수 규약 G1~G8 + 작업 S0 test_v6 보충 1~8",
+ "eval": "eval-def v2 별도 조건(보조 구간); 주지표 불변. S9 전 추론 금지(scripts/testv6_guard.py)",
+ "inference_allowed_before": "S9"
+}

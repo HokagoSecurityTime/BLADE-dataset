@@ -3,6 +3,7 @@
 data/raw_v5_train/nodebb/candidates.jsonl
 datasets/blade/processed/data_v3_stage1/pairs_train_v3s1.jsonl
 datasets/blade/processed/data_v3_stage1b/pairs_train_v3s1b.jsonl
+datasets/blade/processed/data_v4/test_v31_supp.jsonl
 datasets/blade/processed/data_v5/candidates_train_v5.jsonl
 datasets/blade/processed/data_v5/train_v5_pool.jsonl
 datasets/blade/processed/data_v5/train_v5_rule_labeled.jsonl
@@ -14,7 +15,9 @@ datasets/blade/processed/train_v3a.jsonl
 datasets/blade/processed/train_v3b.jsonl
 datasets/blade/processed/train_v4.jsonl
 datasets/blade/processed/train_v5.jsonl
+datasets/blade/processed/train_v7.jsonl
 datasets/blade/processed/val_v5.jsonl
+datasets/blade/processed/val_v7.jsonl
 reports/data_v3/review_pairs_v3s1.xlsx
 reports/data_v3/review_pairs_v3s1_reviewed.xlsx
 reports/data_v3/review_pairs_v3s1b.xlsx
@@ -27,7 +30,12 @@ training/lora/data_v3/train_sft_v3b.jsonl
 training/lora/data_v31/test_v30_inputs.jsonl
 training/lora/data_v31/train_sft_v31b.jsonl
 training/lora/data_v4/test_v30_inputs.jsonl
+training/lora/data_v4/test_v31_supp_inputs.jsonl
 training/lora/data_v4/train_sft_v4.jsonl
 training/lora/data_v5/test_v30_inputs.jsonl
+training/lora/data_v5/test_v31_supp_inputs.jsonl
 training/lora/data_v5/train_sft_v5.jsonl
 training/lora/data_v5/val_sft_v5.jsonl
+training/lora/data_v7/test_v30_inputs.jsonl
+training/lora/data_v7/train_sft_v7.jsonl
+training/lora/data_v7/val_sft_v7.jsonl

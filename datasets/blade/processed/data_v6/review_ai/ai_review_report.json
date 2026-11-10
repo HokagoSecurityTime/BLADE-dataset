@@ -1,0 +1,197 @@
+{
+ "sheet": "review/test_v6_review_reviewed.xlsx",
+ "sha256": "cd2b6ad7e86c8af7e12c43f366e29345b2f41df5e1a3f2358b32a3e7f84f7047",
+ "source_sheet_sha256": "529f77c11aafd6b85ab8dd4c3316d8f81a4ea21eed8e7c23e33afba91039263e",
+ "reviewer": "Claude(AI)",
+ "date": "2026-11-04",
+ "total": 302,
+ "confirmed": 289,
+ "excluded": 13,
+ "exclusion_rate": 0.043,
+ "changed_from_draft": 7,
+ "final_labels": {
+  "manual_review_required": 53,
+  "membership_required": 37,
+  "owner_match": 59,
+  "owner_or_admin": 17,
+  "public": 20,
+  "role_required": 66,
+  "tenant_match": 37
+ },
+ "per_project": {
+  "glitchtip": 73,
+  "penpot": 61,
+  "redash": 74,
+  "seahub": 94
+ },
+ "excluded_per_project": {
+  "glitchtip": 3,
+  "penpot": 4,
+  "redash": 3,
+  "seahub": 3
+ },
+ "changes": [
+  {
+   "id": "v6t-glitchtip-ddcec75f81",
+   "project": "glitchtip",
+   "method": "POST",
+   "path": "/api/0/projects/{organization_slug}/{project_slug}/alerts/",
+   "draft": "manual_review_required",
+   "final": "membership_required"
+  },
+  {
+   "id": "v6t-penpot-f481c304cc",
+   "project": "penpot",
+   "method": "POST",
+   "path": "/api/rpc/command/delete-share-link",
+   "draft": "owner_or_admin",
+   "final": "manual_review_required"
+  },
+  {
+   "id": "v6t-penpot-0366cd50c0",
+   "project": "penpot",
+   "method": "POST",
+   "path": "/api/rpc/command/delete-team",
+   "draft": "role_required",
+   "final": "manual_review_required"
+  },
+  {
+   "id": "v6t-seahub-3122d01b69",
+   "project": "seahub",
+   "method": "POST",
+   "path": "/api2/repos/{repo_id}/dir/shared_items/",
+   "draft": "owner_or_admin",
+   "final": "manual_review_required"
+  },
+  {
+   "id": "v6t-seahub-ce756cd32e",
+   "project": "seahub",
+   "method": "DELETE",
+   "path": "/api/v2.1/groups/{group_id}/libraries/{repo_id}/",
+   "draft": "owner_or_admin",
+   "final": "manual_review_required"
+  },
+  {
+   "id": "v6t-seahub-ea131ec37a",
+   "project": "seahub",
+   "method": "POST",
+   "path": "/api/v2.1/wikis/",
+   "draft": "owner_or_admin",
+   "final": "manual_review_required"
+  },
+  {
+   "id": "v6t-seahub-ee93db4bed",
+   "project": "seahub",
+   "method": "DELETE",
+   "path": "/api2/groups/{group_id}/repos/{repo_id}/",
+   "draft": "owner_or_admin",
+   "final": "manual_review_required"
+  }
+ ],
+ "excludes": [
+  {
+   "id": "v6t-glitchtip-6e39a72eb4",
+   "project": "glitchtip",
+   "method": "POST",
+   "path": "/api/0/wizard-set-token/",
+   "draft": "manual_review_required",
+   "note": "EXCLUDE: owner_match(본인 데이터만 기록) vs manual(인증+해시 소지만) 경계, 의도 정책 미확정(G8)"
+  },
+  {
+   "id": "v6t-glitchtip-5134d5ccc4",
+   "project": "glitchtip",
+   "method": "GET",
+   "path": "/api/0/organizations/{organization_slug}/status-pages/",
+   "draft": "membership_required",
+   "note": "EXCLUDE: 경로 organization_slug 미사용 — 의도·구현 충돌(G8)"
+  },
+  {
+   "id": "v6t-glitchtip-15fb46bb6c",
+   "project": "glitchtip",
+   "method": "POST",
+   "path": "/api/0/organizations/{organization_slug}/members/{member_id}/set_owner/",
+   "draft": "role_required",
+   "note": "EXCLUDE: 대표 소유자(객체 소유자) OR OWNER 역할의 OR 결합 — role_required/owner_or_admin/manual 사이 경계(G8)"
+  },
+  {
+   "id": "v6t-penpot-6f25311275",
+   "project": "penpot",
+   "method": "POST",
+   "path": "/api/rpc/command/logout",
+   "draft": "manual_review_required",
+   "note": "EXCLUDE: public/owner_match/인증 절차 경계(G8) — ::rpc/auth false 익명은 no-op {}, 본인 세션만 삭제"
+  },
+  {
+   "id": "v6t-penpot-aa0040d46b",
+   "project": "penpot",
+   "method": "POST",
+   "path": "/api/rpc/command/get-error-reports",
+   "draft": "manual_review_required",
+   "note": "EXCLUDE: 토큰 스코프 vs 역할 경계(G8) — 운영자 부여 access-token perm 문자열이 유일한 조건"
+  },
+  {
+   "id": "v6t-penpot-371ab7ca88",
+   "project": "penpot",
+   "method": "POST",
+   "path": "/api/rpc/command/create-team",
+   "draft": "owner_match",
+   "note": "EXCLUDE: owner_match(본인 명의 생성)/manual(인증 전용·플래그 의존 조직 정책) 경계(G8)"
+  },
+  {
+   "id": "v6t-penpot-dbc2f272fd",
+   "project": "penpot",
+   "method": "POST",
+   "path": "/api/rpc/command/get-profile",
+   "draft": "owner_match",
+   "note": "EXCLUDE: public/owner_match 경계(G8) — 익명 스텁 반환 + 로그인 시 본인 프로필"
+  },
+  {
+   "id": "v6t-redash-e5349ac940",
+   "project": "redash",
+   "method": "GET",
+   "path": "/api/groups",
+   "draft": "owner_or_admin",
+   "note": "EXCLUDE: 거부 조건 없는 목록 범위 분기(admin→조직 전체 / 비admin→본인 소속 그룹). owner_or_admin·owner_match·tenant_match 사이 경계(G8)"
+  },
+  {
+   "id": "v6t-redash-e8133c143b",
+   "project": "redash",
+   "method": "GET",
+   "path": "/api/users/{user_id}",
+   "draft": "owner_or_admin",
+   "note": "EXCLUDE: 본인 OR 기본 기능 권한(list_users) 우회 - 관리자 우회가 아니어서 owner_or_admin·role_required·tenant_match 사이 경계(G8)"
+  },
+  {
+   "id": "v6t-redash-e077da6d0f",
+   "project": "redash",
+   "method": "GET",
+   "path": "/api/alerts",
+   "draft": "role_required",
+   "note": "EXCLUDE: role_required(G3, 기본 권한 list_alerts만 거부)와 manual(G6, Alert.all(group_ids) 데이터소스 그룹 ACL 범위) 사이 경계; current_org 필터 없음, 코드가 어느 쪽인지 정하지 않음"
+  },
+  {
+   "id": "v6t-seahub-2128098bf5",
+   "project": "seahub",
+   "method": "POST",
+   "path": "/api/v2.1/repos/{repo_id}/commits/{commit_id}/revert/",
+   "draft": "owner_or_admin",
+   "note": "EXCLUDE: owner_match·owner_or_admin·manual 경계 — 개인 저장소는 소유자 전용, 부서 소유 저장소는 그 부서의 그룹 관리자만 허용(seahub/api2/endpoints/repo_commit_revert.py:49-58). 부서 관리자를 그룹 소유 객체의 소유자 대리(G4)로 볼지 관리자 역할 우회(G5)로 볼지, 객체 유형별 다른 조건의 OR(G6)로 볼지 코드가 결정하지 않는다(G8)."
+  },
+  {
+   "id": "v6t-seahub-c6484c64a3",
+   "project": "seahub",
+   "method": "GET",
+   "path": "/api/v2.1/repos/{repo_id}/repo-api-tokens/",
+   "draft": "owner_or_admin",
+   "note": "EXCLUDE: owner_match·owner_or_admin 경계 — permission_check_admin_owner(seahub/repo_api_tokens/utils.py:34-37) = is_repo_owner OR is_group_repo_staff(seahub/utils/repo.py:350-359, 부서 소유 저장소의 부서 staff). revert와 같은 '소유자 OR 부서 소유 저장소의 부서 관리자' 패턴으로 라벨이 코드로 확정되지 않는다(G8)."
+  },
+  {
+   "id": "v6t-seahub-5569330cd5",
+   "project": "seahub",
+   "method": "GET",
+   "path": "/api/v2.1/group-members-import-example/",
+   "draft": "public",
+   "note": "EXCLUDE: 의도 정책 미확정(G8) — 같은 파일의 다른 7개 뷰는 모두 authentication_classes·permission_classes = (IsAuthenticated,)를 선언하는데 이 뷰만 throttle_classes만 있고(seahub/api2/endpoints/group_members.py:570-574), 호출처는 로그인 후 열리는 구성원 가져오기 대화상자 링크(frontend/src/components/dialog/import-members-dialog.js:54)뿐이다. 익명 허용이 의도인지 선언 누락인지 코드로 확정할 수 없어 public으로 넣지 않고 제외."
+  }
+ ]
+}
